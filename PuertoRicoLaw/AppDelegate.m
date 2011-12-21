@@ -7,16 +7,27 @@
 //
 
 #import "AppDelegate.h"
+#import "BookViewController.h"
+#import "BookData.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize navigationController = _navigationController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	BookData *bookData = [BookData sharedBookData];
+	if (bookData == nil) {
+		NSLog(@"Book Data failed to load");
+	}
+	
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+	// Override point for customization after application launch.
+	
+	BookViewController *bookController = [[BookViewController alloc] init];
+	self.navigationController = [[UINavigationController alloc] initWithRootViewController:bookController];
+	self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }

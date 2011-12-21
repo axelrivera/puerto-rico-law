@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bookList</key>
+	<array>
+		<dict>
+			<key>bookName</key>
+			<string>Constitution</string>
+			<key>bookTitle</key>
+			<string>Constitución del Estado Libre Asociado de Puerto Rico</string>
+			<key>bookDescription</key>
+			<string>Descripción Aqui</string>
+			<key>bookDir</key>
+			<string>constitution</string>
+		</dict>
+		<dict>
+			<key>bookName</key>
+			<string>EticaProfesional</string>
+			<key>bookTitle</key>
+			<string>Código de Etica Profesional</string>
+			<key>bookDescription</key>
+			<string>Descripción Aqui</string>
+			<key>bookDir</key>
+			<string>etica_profesional</string>
+		</dict>
+	</array>
+</dict>
+</plist>
