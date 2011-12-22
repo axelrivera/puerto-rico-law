@@ -51,6 +51,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	self.webView = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -147,11 +148,24 @@
 
 #pragma mark - UIWebView Delegate Methods
 
-- (BOOL)webView:(UIWebView *)webView
-shouldStartLoadWithRequest:(NSURLRequest *)request
- navigationType:(UIWebViewNavigationType)navigationType
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
 	return YES;
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
 
 @end

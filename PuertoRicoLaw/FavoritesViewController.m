@@ -9,6 +9,9 @@
 #import "FavoritesViewController.h"
 
 @implementation FavoritesViewController
+{
+	UISegmentedControl *segmentedControl_;
+}
 
 - (id)init
 {
@@ -36,6 +39,20 @@
 																			  style:UIBarButtonItemStyleDone
 																			 target:self
 																			 action:@selector(dismissAction:)];
+	
+	NSArray *segmentedControlItems = [NSArray arrayWithObjects:@"Leyes", @"Contenido", nil];
+	segmentedControl_ = [[UISegmentedControl alloc] initWithItems:segmentedControlItems];
+	segmentedControl_.segmentedControlStyle = UISegmentedControlStyleBar;
+	[segmentedControl_ setWidth:150.0 forSegmentAtIndex:0];
+	[segmentedControl_ setWidth:150.0 forSegmentAtIndex:1];
+	[segmentedControl_ addTarget:self action:@selector(controlAction:) forControlEvents:UIControlEventValueChanged];
+	
+	UIBarButtonItem *flexibleItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+																				  target:nil
+																				  action:nil];
+	UIBarButtonItem *segmentedItem = [[UIBarButtonItem alloc] initWithCustomView:segmentedControl_];
+	self.navigationController.toolbarHidden = NO;
+	[self setToolbarItems:[NSArray arrayWithObjects:flexibleItem, segmentedItem, flexibleItem, nil]];
 }
 
 - (void)viewDidUnload
@@ -43,11 +60,13 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	segmentedControl_ = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+	segmentedControl_.selectedSegmentIndex = 0;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -80,6 +99,11 @@
 - (void)dismissAction:(id)sender
 {
 	[self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)controlAction:(id)sender
+{
+	NSLog(@"Segmented Control Value Changed");
 }
 
 #pragma mark - Table view data source

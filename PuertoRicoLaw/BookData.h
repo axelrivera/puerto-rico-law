@@ -19,6 +19,7 @@
 
 - (void)loadBooks;
 - (void)addBook:(Book *)book;
+- (void)insertBook:(Book *)book atIndex:(NSInteger)index;
 - (void)removeBookAtIndex:(NSInteger)index;
 - (void)removeAllBooks;
 

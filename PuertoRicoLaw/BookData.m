@@ -48,7 +48,14 @@
 
 - (void)addBook:(Book *)book
 {
+	NSAssert([book isKindOfClass:[Book class]], @"Object is not a book");
 	[books_ addObject:book];
+}
+
+- (void)insertBook:(Book *)book atIndex:(NSInteger)index
+{
+	NSAssert([book isKindOfClass:[Book class]], @"Object is not a book");
+	[books_ insertObject:book atIndex:index];
 }
 
 - (void)removeBookAtIndex:(NSInteger)index

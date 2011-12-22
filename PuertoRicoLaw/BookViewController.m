@@ -22,6 +22,8 @@
 @implementation BookViewController
 {
 	BookData *bookData_;
+	UIBarButtonItem *searchItem_;
+	UIBarButtonItem *doneItem_;
 }
 
 - (id)init
@@ -47,14 +49,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[self.navigationController setToolbarHidden:NO];
+	self.navigationController.toolbarHidden = NO;
 	[self setToolbarItems:[self toolbarItemsArray]];
 	
-	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"magnify_mini.png"]
-																			  style:UIBarButtonItemStyleBordered
-																			 target:self
-																			 action:@selector(searchAction:)];
+	self.tableView.rowHeight = 48.0;
 	
+	searchItem_ = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"magnify_mini.png"]
+												   style:UIBarButtonItemStyleBordered
+												  target:self
+												  action:@selector(searchAction:)];
+	
+	doneItem_ = [[UIBarButtonItem alloc] initWithTitle:@"Terminar"
+												 style:UIBarButtonItemStyleDone
+												target:self
+												action:@selector(doneAction:)];
+	[self setEditing:NO animated:NO];
 }
 
 - (void)viewDidUnload
@@ -62,6 +71,8 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	searchItem_ = nil;
+	doneItem_ = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -105,7 +116,7 @@
 	UIBarButtonItem *listItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"list.png"]
 																	style:UIBarButtonItemStylePlain
 																   target:self
-																   action:@selector(listAction:)];
+																   action:@selector(doneAction:)];
 	
 	UIBarButtonItem *favoritesItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"star.png"]
 																 style:UIBarButtonItemStylePlain
@@ -128,6 +139,21 @@
 			nil];
 }
 
+#pragma mark - Parent Methods
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+	[super setEditing:editing animated:animated];
+	[self.tableView setEditing:editing animated:animated];
+	
+	if (editing) {
+		self.navigationItem.rightBarButtonItem = doneItem_;
+	} else {
+		self.navigationItem.rightBarButtonItem = searchItem_;
+	}
+	[self.tableView reloadData];
+}
+
 #pragma mark - Selector Actions
 
 - (void)searchAction:(id)sender
@@ -135,14 +161,14 @@
 	
 }
 
+- (void)doneAction:(id)sender
+{
+	[self setEditing:!self.isEditing animated:YES];
+}
+
 - (void)homeAction:(id)sender
 {
 	[self.navigationController popToRootViewControllerAnimated:YES];
-}
-
-- (void)listAction:(id)sender
-{
-	
 }
 
 - (void)favoritesAction:(id)sender
@@ -183,6 +209,12 @@
 	cell.textLabel.text = book.title;
 	cell.detailTextLabel.text = book.bookDescription;
 	
+	if (tableView.editing) {
+		cell.imageView.image = [UIImage imageNamed:@"star_cell.png"];
+	} else {
+		cell.imageView.image = nil;
+	}
+	
     return cell;
 }
 
@@ -200,6 +232,29 @@
 	sectionController.sectionDataSource = bookData_.currentBook.sections;
 	self.title = kHomeNavigationLabel;
 	[self.navigationController pushViewController:sectionController animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
+	  toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+	Book *book = [bookData_.books objectAtIndex:sourceIndexPath.row];
+    [bookData_ removeBookAtIndex:sourceIndexPath.row];
+    [bookData_ insertBook:book atIndex:destinationIndexPath.row];
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	return UITableViewCellEditingStyleNone;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	return YES;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	return YES;
 }
 
 @end

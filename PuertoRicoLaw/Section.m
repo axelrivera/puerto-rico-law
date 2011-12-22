@@ -53,4 +53,10 @@
 	return self;
 }
 
+- (void)dealloc
+{
+	book_ = nil;
+	parent_ = nil;
+}
+
 @end
