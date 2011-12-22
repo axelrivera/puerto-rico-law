@@ -12,6 +12,7 @@
 @implementation Book
 
 @synthesize name = name_;
+@synthesize shortName = shortName_;
 @synthesize title = title_;
 @synthesize bookDescription = bookDescription_;
 @synthesize directory = directory_;
@@ -22,6 +23,7 @@
 	self = [super init];
 	if (self) {
 		name_ = [dictionary objectForKey:kBookNameKey];
+		shortName_ = [dictionary objectForKey:kBookShortNameKey];
 		title_ = [dictionary objectForKey:kBookTitleKey];
 		bookDescription_ = [dictionary objectForKey:kBookDescriptionKey];
 		directory_ = [dictionary objectForKey:kBookDirectoryKey];

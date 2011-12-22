@@ -13,7 +13,7 @@
 
 @interface SectionListViewController : UITableViewController
 
-@property (weak, nonatomic) Book *book;
-@property (weak, nonatomic) Section *section;
+@property (strong, nonatomic) NSString *sectionTitle;
+@property (strong, nonatomic) NSArray *sectionDataSource;
 
 @end

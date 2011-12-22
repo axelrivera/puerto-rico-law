@@ -15,12 +15,15 @@
 	NSMutableArray *books_;
 }
 
+@synthesize currentBook = currentBook_;
+
 - (id)init
 {
 	self = [super init];
 	if (self) {
 		books_ = [NSMutableArray arrayWithCapacity:0];
 		[self loadBooks];
+		currentBook_ = nil;
 	}
 	return self;
 }

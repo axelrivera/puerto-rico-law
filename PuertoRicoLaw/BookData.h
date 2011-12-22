@@ -12,7 +12,8 @@
 
 @interface BookData : NSObject
 
-@property (nonatomic, readonly, strong) NSArray *books;
+@property (strong, nonatomic) Book *currentBook;
+@property (strong, nonatomic, readonly) NSArray *books;
 
 + (id)sharedBookData;
 

@@ -8,124 +8,149 @@
 
 /* Begin PBXBuildFile section */
 		1620F80114A196910070E512 /* FileHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1620F80014A196910070E512 /* FileHelpers.m */; };
-		164ED2E214A201D700C633C7 /* Constitution.plist in Resources */ = {isa = PBXBuildFile; fileRef = 164ED27914A201D700C633C7 /* Constitution.plist */; };
-		164ED35614A2082000C633C7 /* constitution_article_1_section_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2E514A2082000C633C7 /* constitution_article_1_section_1.html */; };
-		164ED35714A2082000C633C7 /* constitution_article_1_section_2.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2E614A2082000C633C7 /* constitution_article_1_section_2.html */; };
-		164ED35814A2082000C633C7 /* constitution_article_1_section_3.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2E714A2082000C633C7 /* constitution_article_1_section_3.html */; };
-		164ED35914A2082000C633C7 /* constitution_article_1_section_4.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2E814A2082000C633C7 /* constitution_article_1_section_4.html */; };
-		164ED35A14A2082000C633C7 /* constitution_article_2_section_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2EA14A2082000C633C7 /* constitution_article_2_section_1.html */; };
-		164ED35B14A2082000C633C7 /* constitution_article_2_section_10.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2EB14A2082000C633C7 /* constitution_article_2_section_10.html */; };
-		164ED35C14A2082000C633C7 /* constitution_article_2_section_11.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2EC14A2082000C633C7 /* constitution_article_2_section_11.html */; };
-		164ED35D14A2082000C633C7 /* constitution_article_2_section_12.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2ED14A2082000C633C7 /* constitution_article_2_section_12.html */; };
-		164ED35E14A2082000C633C7 /* constitution_article_2_section_13.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2EE14A2082000C633C7 /* constitution_article_2_section_13.html */; };
-		164ED35F14A2082000C633C7 /* constitution_article_2_section_14.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2EF14A2082000C633C7 /* constitution_article_2_section_14.html */; };
-		164ED36014A2082000C633C7 /* constitution_article_2_section_15.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2F014A2082000C633C7 /* constitution_article_2_section_15.html */; };
-		164ED36114A2082000C633C7 /* constitution_article_2_section_16.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2F114A2082000C633C7 /* constitution_article_2_section_16.html */; };
-		164ED36214A2082000C633C7 /* constitution_article_2_section_17.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2F214A2082000C633C7 /* constitution_article_2_section_17.html */; };
-		164ED36314A2082000C633C7 /* constitution_article_2_section_18.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2F314A2082000C633C7 /* constitution_article_2_section_18.html */; };
-		164ED36414A2082000C633C7 /* constitution_article_2_section_19.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2F414A2082000C633C7 /* constitution_article_2_section_19.html */; };
-		164ED36514A2082000C633C7 /* constitution_article_2_section_2.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2F514A2082000C633C7 /* constitution_article_2_section_2.html */; };
-		164ED36614A2082000C633C7 /* constitution_article_2_section_20.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2F614A2082000C633C7 /* constitution_article_2_section_20.html */; };
-		164ED36714A2082000C633C7 /* constitution_article_2_section_3.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2F714A2082000C633C7 /* constitution_article_2_section_3.html */; };
-		164ED36814A2082000C633C7 /* constitution_article_2_section_4.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2F814A2082000C633C7 /* constitution_article_2_section_4.html */; };
-		164ED36914A2082000C633C7 /* constitution_article_2_section_5.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2F914A2082000C633C7 /* constitution_article_2_section_5.html */; };
-		164ED36A14A2082000C633C7 /* constitution_article_2_section_6.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2FA14A2082000C633C7 /* constitution_article_2_section_6.html */; };
-		164ED36B14A2082000C633C7 /* constitution_article_2_section_7.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2FB14A2082000C633C7 /* constitution_article_2_section_7.html */; };
-		164ED36C14A2082000C633C7 /* constitution_article_2_section_8.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2FC14A2082000C633C7 /* constitution_article_2_section_8.html */; };
-		164ED36D14A2082000C633C7 /* constitution_article_2_section_9.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2FD14A2082000C633C7 /* constitution_article_2_section_9.html */; };
-		164ED36E14A2082000C633C7 /* constitution_article_3_section_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED2FF14A2082000C633C7 /* constitution_article_3_section_1.html */; };
-		164ED36F14A2082000C633C7 /* constitution_article_3_section_10.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED30014A2082000C633C7 /* constitution_article_3_section_10.html */; };
-		164ED37014A2082000C633C7 /* constitution_article_3_section_11.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED30114A2082000C633C7 /* constitution_article_3_section_11.html */; };
-		164ED37114A2082000C633C7 /* constitution_article_3_section_12.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED30214A2082000C633C7 /* constitution_article_3_section_12.html */; };
-		164ED37214A2082000C633C7 /* constitution_article_3_section_13.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED30314A2082000C633C7 /* constitution_article_3_section_13.html */; };
-		164ED37314A2082000C633C7 /* constitution_article_3_section_14.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED30414A2082000C633C7 /* constitution_article_3_section_14.html */; };
-		164ED37414A2082000C633C7 /* constitution_article_3_section_15.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED30514A2082000C633C7 /* constitution_article_3_section_15.html */; };
-		164ED37514A2082000C633C7 /* constitution_article_3_section_16.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED30614A2082000C633C7 /* constitution_article_3_section_16.html */; };
-		164ED37614A2082000C633C7 /* constitution_article_3_section_17.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED30714A2082000C633C7 /* constitution_article_3_section_17.html */; };
-		164ED37714A2082000C633C7 /* constitution_article_3_section_18.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED30814A2082000C633C7 /* constitution_article_3_section_18.html */; };
-		164ED37814A2082000C633C7 /* constitution_article_3_section_19.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED30914A2082000C633C7 /* constitution_article_3_section_19.html */; };
-		164ED37914A2082000C633C7 /* constitution_article_3_section_2.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED30A14A2082000C633C7 /* constitution_article_3_section_2.html */; };
-		164ED37A14A2082000C633C7 /* constitution_article_3_section_20.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED30B14A2082000C633C7 /* constitution_article_3_section_20.html */; };
-		164ED37B14A2082000C633C7 /* constitution_article_3_section_21.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED30C14A2082000C633C7 /* constitution_article_3_section_21.html */; };
-		164ED37C14A2082000C633C7 /* constitution_article_3_section_22.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED30D14A2082000C633C7 /* constitution_article_3_section_22.html */; };
-		164ED37D14A2082000C633C7 /* constitution_article_3_section_3.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED30E14A2082000C633C7 /* constitution_article_3_section_3.html */; };
-		164ED37E14A2082000C633C7 /* constitution_article_3_section_4.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED30F14A2082000C633C7 /* constitution_article_3_section_4.html */; };
-		164ED37F14A2082000C633C7 /* constitution_article_3_section_5.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED31014A2082000C633C7 /* constitution_article_3_section_5.html */; };
-		164ED38014A2082000C633C7 /* constitution_article_3_section_6.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED31114A2082000C633C7 /* constitution_article_3_section_6.html */; };
-		164ED38114A2082000C633C7 /* constitution_article_3_section_7.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED31214A2082000C633C7 /* constitution_article_3_section_7.html */; };
-		164ED38214A2082000C633C7 /* constitution_article_3_section_8.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED31314A2082000C633C7 /* constitution_article_3_section_8.html */; };
-		164ED38314A2082000C633C7 /* constitution_article_3_section_9.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED31414A2082000C633C7 /* constitution_article_3_section_9.html */; };
-		164ED38414A2082000C633C7 /* constitution_article_4_section_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED31614A2082000C633C7 /* constitution_article_4_section_1.html */; };
-		164ED38514A2082000C633C7 /* constitution_article_4_section_10.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED31714A2082000C633C7 /* constitution_article_4_section_10.html */; };
-		164ED38614A2082000C633C7 /* constitution_article_4_section_2.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED31814A2082000C633C7 /* constitution_article_4_section_2.html */; };
-		164ED38714A2082000C633C7 /* constitution_article_4_section_3.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED31914A2082000C633C7 /* constitution_article_4_section_3.html */; };
-		164ED38814A2082000C633C7 /* constitution_article_4_section_4.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED31A14A2082000C633C7 /* constitution_article_4_section_4.html */; };
-		164ED38914A2082000C633C7 /* constitution_article_4_section_5.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED31B14A2082000C633C7 /* constitution_article_4_section_5.html */; };
-		164ED38A14A2082000C633C7 /* constitution_article_4_section_6.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED31C14A2082000C633C7 /* constitution_article_4_section_6.html */; };
-		164ED38B14A2082000C633C7 /* constitution_article_4_section_7.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED31D14A2082000C633C7 /* constitution_article_4_section_7.html */; };
-		164ED38C14A2082000C633C7 /* constitution_article_4_section_8.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED31E14A2082000C633C7 /* constitution_article_4_section_8.html */; };
-		164ED38D14A2082000C633C7 /* constitution_article_4_section_9.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED31F14A2082000C633C7 /* constitution_article_4_section_9.html */; };
-		164ED38E14A2082000C633C7 /* constitution_article_5_section_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED32114A2082000C633C7 /* constitution_article_5_section_1.html */; };
-		164ED38F14A2082000C633C7 /* constitution_article_5_section_10.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED32214A2082000C633C7 /* constitution_article_5_section_10.html */; };
-		164ED39014A2082000C633C7 /* constitution_article_5_section_11.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED32314A2082000C633C7 /* constitution_article_5_section_11.html */; };
-		164ED39114A2082000C633C7 /* constitution_article_5_section_12.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED32414A2082000C633C7 /* constitution_article_5_section_12.html */; };
-		164ED39214A2082000C633C7 /* constitution_article_5_section_13.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED32514A2082000C633C7 /* constitution_article_5_section_13.html */; };
-		164ED39314A2082000C633C7 /* constitution_article_5_section_2.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED32614A2082000C633C7 /* constitution_article_5_section_2.html */; };
-		164ED39414A2082000C633C7 /* constitution_article_5_section_3.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED32714A2082000C633C7 /* constitution_article_5_section_3.html */; };
-		164ED39514A2082000C633C7 /* constitution_article_5_section_4.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED32814A2082000C633C7 /* constitution_article_5_section_4.html */; };
-		164ED39614A2082000C633C7 /* constitution_article_5_section_5.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED32914A2082000C633C7 /* constitution_article_5_section_5.html */; };
-		164ED39714A2082000C633C7 /* constitution_article_5_section_6.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED32A14A2082000C633C7 /* constitution_article_5_section_6.html */; };
-		164ED39814A2082000C633C7 /* constitution_article_5_section_7.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED32B14A2082000C633C7 /* constitution_article_5_section_7.html */; };
-		164ED39914A2082000C633C7 /* constitution_article_5_section_8.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED32C14A2082000C633C7 /* constitution_article_5_section_8.html */; };
-		164ED39A14A2082000C633C7 /* constitution_article_5_section_9.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED32D14A2082000C633C7 /* constitution_article_5_section_9.html */; };
-		164ED39B14A2082000C633C7 /* constitution_article_6_section_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED32F14A2082000C633C7 /* constitution_article_6_section_1.html */; };
-		164ED39C14A2082000C633C7 /* constitution_article_6_section_10.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED33014A2082000C633C7 /* constitution_article_6_section_10.html */; };
-		164ED39D14A2082000C633C7 /* constitution_article_6_section_11.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED33114A2082000C633C7 /* constitution_article_6_section_11.html */; };
-		164ED39E14A2082000C633C7 /* constitution_article_6_section_12.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED33214A2082000C633C7 /* constitution_article_6_section_12.html */; };
-		164ED39F14A2082000C633C7 /* constitution_article_6_section_13.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED33314A2082000C633C7 /* constitution_article_6_section_13.html */; };
-		164ED3A014A2082000C633C7 /* constitution_article_6_section_14.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED33414A2082000C633C7 /* constitution_article_6_section_14.html */; };
-		164ED3A114A2082000C633C7 /* constitution_article_6_section_15.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED33514A2082000C633C7 /* constitution_article_6_section_15.html */; };
-		164ED3A214A2082000C633C7 /* constitution_article_6_section_16.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED33614A2082000C633C7 /* constitution_article_6_section_16.html */; };
-		164ED3A314A2082000C633C7 /* constitution_article_6_section_17.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED33714A2082000C633C7 /* constitution_article_6_section_17.html */; };
-		164ED3A414A2082000C633C7 /* constitution_article_6_section_18.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED33814A2082000C633C7 /* constitution_article_6_section_18.html */; };
-		164ED3A514A2082000C633C7 /* constitution_article_6_section_19.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED33914A2082000C633C7 /* constitution_article_6_section_19.html */; };
-		164ED3A614A2082000C633C7 /* constitution_article_6_section_2.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED33A14A2082000C633C7 /* constitution_article_6_section_2.html */; };
-		164ED3A714A2082000C633C7 /* constitution_article_6_section_3.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED33B14A2082000C633C7 /* constitution_article_6_section_3.html */; };
-		164ED3A814A2082000C633C7 /* constitution_article_6_section_4.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED33C14A2082000C633C7 /* constitution_article_6_section_4.html */; };
-		164ED3A914A2082000C633C7 /* constitution_article_6_section_5.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED33D14A2082000C633C7 /* constitution_article_6_section_5.html */; };
-		164ED3AA14A2082000C633C7 /* constitution_article_6_section_6.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED33E14A2082000C633C7 /* constitution_article_6_section_6.html */; };
-		164ED3AB14A2082000C633C7 /* constitution_article_6_section_7.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED33F14A2082000C633C7 /* constitution_article_6_section_7.html */; };
-		164ED3AC14A2082000C633C7 /* constitution_article_6_section_8.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED34014A2082000C633C7 /* constitution_article_6_section_8.html */; };
-		164ED3AD14A2082000C633C7 /* constitution_article_6_section_9.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED34114A2082000C633C7 /* constitution_article_6_section_9.html */; };
-		164ED3AE14A2082000C633C7 /* constitution_article_7_section_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED34314A2082000C633C7 /* constitution_article_7_section_1.html */; };
-		164ED3AF14A2082000C633C7 /* constitution_article_7_section_2.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED34414A2082000C633C7 /* constitution_article_7_section_2.html */; };
-		164ED3B014A2082000C633C7 /* constitution_article_7_section_3.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED34514A2082000C633C7 /* constitution_article_7_section_3.html */; };
-		164ED3B114A2082000C633C7 /* constitution_article_8_section_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED34714A2082000C633C7 /* constitution_article_8_section_1.html */; };
-		164ED3B214A2082000C633C7 /* constitution_article_8_section_2.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED34814A2082000C633C7 /* constitution_article_8_section_2.html */; };
-		164ED3B314A2082000C633C7 /* constitution_article_9_section_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED34A14A2082000C633C7 /* constitution_article_9_section_1.html */; };
-		164ED3B414A2082000C633C7 /* constitution_article_9_section_10.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED34B14A2082000C633C7 /* constitution_article_9_section_10.html */; };
-		164ED3B514A2082000C633C7 /* constitution_article_9_section_2.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED34C14A2082000C633C7 /* constitution_article_9_section_2.html */; };
-		164ED3B614A2082000C633C7 /* constitution_article_9_section_3.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED34D14A2082000C633C7 /* constitution_article_9_section_3.html */; };
-		164ED3B714A2082000C633C7 /* constitution_article_9_section_4.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED34E14A2082000C633C7 /* constitution_article_9_section_4.html */; };
-		164ED3B814A2082000C633C7 /* constitution_article_9_section_5.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED34F14A2082000C633C7 /* constitution_article_9_section_5.html */; };
-		164ED3B914A2082000C633C7 /* constitution_article_9_section_6.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED35014A2082000C633C7 /* constitution_article_9_section_6.html */; };
-		164ED3BA14A2082000C633C7 /* constitution_article_9_section_7.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED35114A2082000C633C7 /* constitution_article_9_section_7.html */; };
-		164ED3BB14A2082000C633C7 /* constitution_article_9_section_8.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED35214A2082000C633C7 /* constitution_article_9_section_8.html */; };
-		164ED3BC14A2082000C633C7 /* constitution_article_9_section_9.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED35314A2082000C633C7 /* constitution_article_9_section_9.html */; };
-		164ED3BD14A2082000C633C7 /* constitution_preamble_index.html in Resources */ = {isa = PBXBuildFile; fileRef = 164ED35514A2082000C633C7 /* constitution_preamble_index.html */; };
+		164DF08614A294910087CBD2 /* constitution_article_1_section_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF01314A294900087CBD2 /* constitution_article_1_section_1.html */; };
+		164DF08714A294910087CBD2 /* constitution_article_1_section_2.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF01414A294900087CBD2 /* constitution_article_1_section_2.html */; };
+		164DF08814A294910087CBD2 /* constitution_article_1_section_3.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF01514A294900087CBD2 /* constitution_article_1_section_3.html */; };
+		164DF08914A294910087CBD2 /* constitution_article_1_section_4.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF01614A294900087CBD2 /* constitution_article_1_section_4.html */; };
+		164DF08A14A294910087CBD2 /* constitution_article_2_section_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF01814A294900087CBD2 /* constitution_article_2_section_1.html */; };
+		164DF08B14A294910087CBD2 /* constitution_article_2_section_10.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF01914A294900087CBD2 /* constitution_article_2_section_10.html */; };
+		164DF08C14A294910087CBD2 /* constitution_article_2_section_11.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF01A14A294900087CBD2 /* constitution_article_2_section_11.html */; };
+		164DF08D14A294910087CBD2 /* constitution_article_2_section_12.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF01B14A294900087CBD2 /* constitution_article_2_section_12.html */; };
+		164DF08E14A294910087CBD2 /* constitution_article_2_section_13.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF01C14A294900087CBD2 /* constitution_article_2_section_13.html */; };
+		164DF08F14A294910087CBD2 /* constitution_article_2_section_14.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF01D14A294900087CBD2 /* constitution_article_2_section_14.html */; };
+		164DF09014A294910087CBD2 /* constitution_article_2_section_15.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF01E14A294900087CBD2 /* constitution_article_2_section_15.html */; };
+		164DF09114A294910087CBD2 /* constitution_article_2_section_16.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF01F14A294900087CBD2 /* constitution_article_2_section_16.html */; };
+		164DF09214A294910087CBD2 /* constitution_article_2_section_17.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF02014A294900087CBD2 /* constitution_article_2_section_17.html */; };
+		164DF09314A294910087CBD2 /* constitution_article_2_section_18.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF02114A294900087CBD2 /* constitution_article_2_section_18.html */; };
+		164DF09414A294910087CBD2 /* constitution_article_2_section_19.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF02214A294900087CBD2 /* constitution_article_2_section_19.html */; };
+		164DF09514A294910087CBD2 /* constitution_article_2_section_2.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF02314A294900087CBD2 /* constitution_article_2_section_2.html */; };
+		164DF09614A294910087CBD2 /* constitution_article_2_section_20.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF02414A294900087CBD2 /* constitution_article_2_section_20.html */; };
+		164DF09714A294910087CBD2 /* constitution_article_2_section_3.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF02514A294900087CBD2 /* constitution_article_2_section_3.html */; };
+		164DF09814A294910087CBD2 /* constitution_article_2_section_4.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF02614A294900087CBD2 /* constitution_article_2_section_4.html */; };
+		164DF09914A294910087CBD2 /* constitution_article_2_section_5.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF02714A294900087CBD2 /* constitution_article_2_section_5.html */; };
+		164DF09A14A294910087CBD2 /* constitution_article_2_section_6.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF02814A294900087CBD2 /* constitution_article_2_section_6.html */; };
+		164DF09B14A294910087CBD2 /* constitution_article_2_section_7.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF02914A294900087CBD2 /* constitution_article_2_section_7.html */; };
+		164DF09C14A294910087CBD2 /* constitution_article_2_section_8.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF02A14A294900087CBD2 /* constitution_article_2_section_8.html */; };
+		164DF09D14A294910087CBD2 /* constitution_article_2_section_9.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF02B14A294900087CBD2 /* constitution_article_2_section_9.html */; };
+		164DF09E14A294910087CBD2 /* constitution_article_3_section_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF02D14A294900087CBD2 /* constitution_article_3_section_1.html */; };
+		164DF09F14A294910087CBD2 /* constitution_article_3_section_10.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF02E14A294900087CBD2 /* constitution_article_3_section_10.html */; };
+		164DF0A014A294910087CBD2 /* constitution_article_3_section_11.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF02F14A294900087CBD2 /* constitution_article_3_section_11.html */; };
+		164DF0A114A294910087CBD2 /* constitution_article_3_section_12.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF03014A294900087CBD2 /* constitution_article_3_section_12.html */; };
+		164DF0A214A294910087CBD2 /* constitution_article_3_section_13.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF03114A294900087CBD2 /* constitution_article_3_section_13.html */; };
+		164DF0A314A294910087CBD2 /* constitution_article_3_section_14.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF03214A294900087CBD2 /* constitution_article_3_section_14.html */; };
+		164DF0A414A294910087CBD2 /* constitution_article_3_section_15.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF03314A294900087CBD2 /* constitution_article_3_section_15.html */; };
+		164DF0A514A294910087CBD2 /* constitution_article_3_section_16.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF03414A294900087CBD2 /* constitution_article_3_section_16.html */; };
+		164DF0A614A294910087CBD2 /* constitution_article_3_section_17.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF03514A294900087CBD2 /* constitution_article_3_section_17.html */; };
+		164DF0A714A294910087CBD2 /* constitution_article_3_section_18.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF03614A294900087CBD2 /* constitution_article_3_section_18.html */; };
+		164DF0A814A294910087CBD2 /* constitution_article_3_section_19.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF03714A294900087CBD2 /* constitution_article_3_section_19.html */; };
+		164DF0A914A294910087CBD2 /* constitution_article_3_section_2.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF03814A294900087CBD2 /* constitution_article_3_section_2.html */; };
+		164DF0AA14A294910087CBD2 /* constitution_article_3_section_20.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF03914A294900087CBD2 /* constitution_article_3_section_20.html */; };
+		164DF0AB14A294910087CBD2 /* constitution_article_3_section_21.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF03A14A294900087CBD2 /* constitution_article_3_section_21.html */; };
+		164DF0AC14A294910087CBD2 /* constitution_article_3_section_22.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF03B14A294900087CBD2 /* constitution_article_3_section_22.html */; };
+		164DF0AD14A294910087CBD2 /* constitution_article_3_section_3.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF03C14A294900087CBD2 /* constitution_article_3_section_3.html */; };
+		164DF0AE14A294910087CBD2 /* constitution_article_3_section_4.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF03D14A294900087CBD2 /* constitution_article_3_section_4.html */; };
+		164DF0AF14A294910087CBD2 /* constitution_article_3_section_5.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF03E14A294900087CBD2 /* constitution_article_3_section_5.html */; };
+		164DF0B014A294910087CBD2 /* constitution_article_3_section_6.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF03F14A294900087CBD2 /* constitution_article_3_section_6.html */; };
+		164DF0B114A294910087CBD2 /* constitution_article_3_section_7.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF04014A294900087CBD2 /* constitution_article_3_section_7.html */; };
+		164DF0B214A294910087CBD2 /* constitution_article_3_section_8.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF04114A294900087CBD2 /* constitution_article_3_section_8.html */; };
+		164DF0B314A294910087CBD2 /* constitution_article_3_section_9.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF04214A294900087CBD2 /* constitution_article_3_section_9.html */; };
+		164DF0B414A294910087CBD2 /* constitution_article_4_section_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF04414A294900087CBD2 /* constitution_article_4_section_1.html */; };
+		164DF0B514A294910087CBD2 /* constitution_article_4_section_10.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF04514A294900087CBD2 /* constitution_article_4_section_10.html */; };
+		164DF0B614A294910087CBD2 /* constitution_article_4_section_2.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF04614A294900087CBD2 /* constitution_article_4_section_2.html */; };
+		164DF0B714A294910087CBD2 /* constitution_article_4_section_3.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF04714A294900087CBD2 /* constitution_article_4_section_3.html */; };
+		164DF0B814A294910087CBD2 /* constitution_article_4_section_4.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF04814A294900087CBD2 /* constitution_article_4_section_4.html */; };
+		164DF0B914A294910087CBD2 /* constitution_article_4_section_5.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF04914A294900087CBD2 /* constitution_article_4_section_5.html */; };
+		164DF0BA14A294910087CBD2 /* constitution_article_4_section_6.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF04A14A294900087CBD2 /* constitution_article_4_section_6.html */; };
+		164DF0BB14A294910087CBD2 /* constitution_article_4_section_7.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF04B14A294900087CBD2 /* constitution_article_4_section_7.html */; };
+		164DF0BC14A294910087CBD2 /* constitution_article_4_section_8.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF04C14A294900087CBD2 /* constitution_article_4_section_8.html */; };
+		164DF0BD14A294910087CBD2 /* constitution_article_4_section_9.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF04D14A294900087CBD2 /* constitution_article_4_section_9.html */; };
+		164DF0BE14A294910087CBD2 /* constitution_article_5_section_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF04F14A294900087CBD2 /* constitution_article_5_section_1.html */; };
+		164DF0BF14A294910087CBD2 /* constitution_article_5_section_10.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF05014A294900087CBD2 /* constitution_article_5_section_10.html */; };
+		164DF0C014A294910087CBD2 /* constitution_article_5_section_11.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF05114A294900087CBD2 /* constitution_article_5_section_11.html */; };
+		164DF0C114A294910087CBD2 /* constitution_article_5_section_12.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF05214A294900087CBD2 /* constitution_article_5_section_12.html */; };
+		164DF0C214A294910087CBD2 /* constitution_article_5_section_13.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF05314A294900087CBD2 /* constitution_article_5_section_13.html */; };
+		164DF0C314A294910087CBD2 /* constitution_article_5_section_2.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF05414A294900087CBD2 /* constitution_article_5_section_2.html */; };
+		164DF0C414A294910087CBD2 /* constitution_article_5_section_3.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF05514A294900087CBD2 /* constitution_article_5_section_3.html */; };
+		164DF0C514A294910087CBD2 /* constitution_article_5_section_4.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF05614A294900087CBD2 /* constitution_article_5_section_4.html */; };
+		164DF0C614A294910087CBD2 /* constitution_article_5_section_5.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF05714A294900087CBD2 /* constitution_article_5_section_5.html */; };
+		164DF0C714A294910087CBD2 /* constitution_article_5_section_6.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF05814A294900087CBD2 /* constitution_article_5_section_6.html */; };
+		164DF0C814A294910087CBD2 /* constitution_article_5_section_7.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF05914A294900087CBD2 /* constitution_article_5_section_7.html */; };
+		164DF0C914A294910087CBD2 /* constitution_article_5_section_8.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF05A14A294900087CBD2 /* constitution_article_5_section_8.html */; };
+		164DF0CA14A294910087CBD2 /* constitution_article_5_section_9.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF05B14A294900087CBD2 /* constitution_article_5_section_9.html */; };
+		164DF0CB14A294910087CBD2 /* constitution_article_6_section_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF05D14A294900087CBD2 /* constitution_article_6_section_1.html */; };
+		164DF0CC14A294910087CBD2 /* constitution_article_6_section_10.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF05E14A294900087CBD2 /* constitution_article_6_section_10.html */; };
+		164DF0CD14A294910087CBD2 /* constitution_article_6_section_11.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF05F14A294900087CBD2 /* constitution_article_6_section_11.html */; };
+		164DF0CE14A294910087CBD2 /* constitution_article_6_section_12.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF06014A294900087CBD2 /* constitution_article_6_section_12.html */; };
+		164DF0CF14A294910087CBD2 /* constitution_article_6_section_13.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF06114A294900087CBD2 /* constitution_article_6_section_13.html */; };
+		164DF0D014A294910087CBD2 /* constitution_article_6_section_14.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF06214A294900087CBD2 /* constitution_article_6_section_14.html */; };
+		164DF0D114A294910087CBD2 /* constitution_article_6_section_15.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF06314A294900087CBD2 /* constitution_article_6_section_15.html */; };
+		164DF0D214A294910087CBD2 /* constitution_article_6_section_16.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF06414A294900087CBD2 /* constitution_article_6_section_16.html */; };
+		164DF0D314A294910087CBD2 /* constitution_article_6_section_17.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF06514A294900087CBD2 /* constitution_article_6_section_17.html */; };
+		164DF0D414A294910087CBD2 /* constitution_article_6_section_18.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF06614A294900087CBD2 /* constitution_article_6_section_18.html */; };
+		164DF0D514A294910087CBD2 /* constitution_article_6_section_19.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF06714A294900087CBD2 /* constitution_article_6_section_19.html */; };
+		164DF0D614A294910087CBD2 /* constitution_article_6_section_2.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF06814A294900087CBD2 /* constitution_article_6_section_2.html */; };
+		164DF0D714A294910087CBD2 /* constitution_article_6_section_3.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF06914A294900087CBD2 /* constitution_article_6_section_3.html */; };
+		164DF0D814A294910087CBD2 /* constitution_article_6_section_4.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF06A14A294900087CBD2 /* constitution_article_6_section_4.html */; };
+		164DF0D914A294910087CBD2 /* constitution_article_6_section_5.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF06B14A294900087CBD2 /* constitution_article_6_section_5.html */; };
+		164DF0DA14A294910087CBD2 /* constitution_article_6_section_6.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF06C14A294900087CBD2 /* constitution_article_6_section_6.html */; };
+		164DF0DB14A294910087CBD2 /* constitution_article_6_section_7.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF06D14A294900087CBD2 /* constitution_article_6_section_7.html */; };
+		164DF0DC14A294910087CBD2 /* constitution_article_6_section_8.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF06E14A294900087CBD2 /* constitution_article_6_section_8.html */; };
+		164DF0DD14A294910087CBD2 /* constitution_article_6_section_9.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF06F14A294900087CBD2 /* constitution_article_6_section_9.html */; };
+		164DF0DE14A294910087CBD2 /* constitution_article_7_section_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF07114A294900087CBD2 /* constitution_article_7_section_1.html */; };
+		164DF0DF14A294910087CBD2 /* constitution_article_7_section_2.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF07214A294900087CBD2 /* constitution_article_7_section_2.html */; };
+		164DF0E014A294910087CBD2 /* constitution_article_7_section_3.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF07314A294900087CBD2 /* constitution_article_7_section_3.html */; };
+		164DF0E114A294910087CBD2 /* constitution_article_8_section_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF07514A294900087CBD2 /* constitution_article_8_section_1.html */; };
+		164DF0E214A294910087CBD2 /* constitution_article_8_section_2.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF07614A294900087CBD2 /* constitution_article_8_section_2.html */; };
+		164DF0E314A294910087CBD2 /* constitution_article_9_section_1.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF07814A294900087CBD2 /* constitution_article_9_section_1.html */; };
+		164DF0E414A294910087CBD2 /* constitution_article_9_section_10.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF07914A294900087CBD2 /* constitution_article_9_section_10.html */; };
+		164DF0E514A294910087CBD2 /* constitution_article_9_section_2.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF07A14A294900087CBD2 /* constitution_article_9_section_2.html */; };
+		164DF0E614A294910087CBD2 /* constitution_article_9_section_3.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF07B14A294900087CBD2 /* constitution_article_9_section_3.html */; };
+		164DF0E714A294910087CBD2 /* constitution_article_9_section_4.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF07C14A294900087CBD2 /* constitution_article_9_section_4.html */; };
+		164DF0E814A294910087CBD2 /* constitution_article_9_section_5.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF07D14A294900087CBD2 /* constitution_article_9_section_5.html */; };
+		164DF0E914A294910087CBD2 /* constitution_article_9_section_6.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF07E14A294900087CBD2 /* constitution_article_9_section_6.html */; };
+		164DF0EA14A294910087CBD2 /* constitution_article_9_section_7.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF07F14A294900087CBD2 /* constitution_article_9_section_7.html */; };
+		164DF0EB14A294910087CBD2 /* constitution_article_9_section_8.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF08014A294900087CBD2 /* constitution_article_9_section_8.html */; };
+		164DF0EC14A294910087CBD2 /* constitution_article_9_section_9.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF08114A294900087CBD2 /* constitution_article_9_section_9.html */; };
+		164DF0ED14A294910087CBD2 /* constitution_preamble_index.html in Resources */ = {isa = PBXBuildFile; fileRef = 164DF08314A294900087CBD2 /* constitution_preamble_index.html */; };
+		164DF0EE14A294910087CBD2 /* Constitution.plist in Resources */ = {isa = PBXBuildFile; fileRef = 164DF08414A294910087CBD2 /* Constitution.plist */; };
+		164DF0EF14A294910087CBD2 /* PuertoRicoLawBooks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 164DF08514A294910087CBD2 /* PuertoRicoLawBooks.plist */; };
+		164DF0F314A29D160087CBD2 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 164DF0F114A29D160087CBD2 /* SettingsViewController.m */; };
+		164DF0F414A29D160087CBD2 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 164DF0F214A29D160087CBD2 /* SettingsViewController.xib */; };
+		164DF0F714A2A14D0087CBD2 /* magnify_mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF0F514A2A14D0087CBD2 /* magnify_mini.png */; };
+		164DF0F814A2A14D0087CBD2 /* magnify_mini@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF0F614A2A14D0087CBD2 /* magnify_mini@2x.png */; };
+		164DF10714A2B1B90087CBD2 /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF0FB14A2B1B90087CBD2 /* house.png */; };
+		164DF10814A2B1B90087CBD2 /* house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF0FC14A2B1B90087CBD2 /* house@2x.png */; };
+		164DF10914A2B1B90087CBD2 /* left_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF0FD14A2B1B90087CBD2 /* left_arrow.png */; };
+		164DF10A14A2B1B90087CBD2 /* left_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF0FE14A2B1B90087CBD2 /* left_arrow@2x.png */; };
+		164DF10B14A2B1B90087CBD2 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF0FF14A2B1B90087CBD2 /* list.png */; };
+		164DF10C14A2B1B90087CBD2 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF10014A2B1B90087CBD2 /* list@2x.png */; };
+		164DF10D14A2B1B90087CBD2 /* right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF10114A2B1B90087CBD2 /* right_arrow.png */; };
+		164DF10E14A2B1B90087CBD2 /* right_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF10214A2B1B90087CBD2 /* right_arrow@2x.png */; };
+		164DF10F14A2B1B90087CBD2 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF10314A2B1B90087CBD2 /* star.png */; };
+		164DF11014A2B1B90087CBD2 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF10414A2B1B90087CBD2 /* star@2x.png */; };
+		164DF11314A2B6B20087CBD2 /* gears.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF11114A2B6B20087CBD2 /* gears.png */; };
+		164DF11414A2B6B20087CBD2 /* gears@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF11214A2B6B20087CBD2 /* gears@2x.png */; };
 		167EF1D714A23DAA0058F8D1 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167EF1D614A23DAA0058F8D1 /* BookViewController.m */; };
 		167EF1DA14A23F790058F8D1 /* BookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167EF1D914A23F790058F8D1 /* BookViewController.xib */; };
 		167EF24314A24D250058F8D1 /* SectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167EF24114A24D250058F8D1 /* SectionListViewController.m */; };
 		167EF24414A24D250058F8D1 /* SectionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167EF24214A24D250058F8D1 /* SectionListViewController.xib */; };
 		167EF24814A251320058F8D1 /* SectionContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167EF24614A251320058F8D1 /* SectionContentViewController.m */; };
 		167EF24914A251320058F8D1 /* SectionContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167EF24714A251320058F8D1 /* SectionContentViewController.xib */; };
+		1691519C14A2BF3B001E59C2 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519514A2BF3B001E59C2 /* Icon-72.png */; };
+		1691519D14A2BF3B001E59C2 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519614A2BF3B001E59C2 /* Icon-Small-50.png */; };
+		1691519E14A2BF3B001E59C2 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519714A2BF3B001E59C2 /* Icon-Small.png */; };
+		1691519F14A2BF3B001E59C2 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519814A2BF3B001E59C2 /* Icon-Small@2x.png */; };
+		169151A014A2BF3B001E59C2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519914A2BF3B001E59C2 /* Icon.png */; };
+		169151A114A2BF3B001E59C2 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519A14A2BF3B001E59C2 /* Icon@2x.png */; };
+		169151A214A2BF3B001E59C2 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519B14A2BF3B001E59C2 /* iTunesArtwork.png */; };
+		169151A714A2C11D001E59C2 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 169151A514A2C11D001E59C2 /* FavoritesViewController.m */; };
+		169151A814A2C11D001E59C2 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169151A614A2C11D001E59C2 /* FavoritesViewController.xib */; };
 		16DD4CA414A10D200063163D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DD4CA314A10D200063163D /* UIKit.framework */; };
 		16DD4CA614A10D200063163D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DD4CA514A10D200063163D /* Foundation.framework */; };
 		16DD4CA814A10D200063163D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DD4CA714A10D200063163D /* CoreGraphics.framework */; };
 		16DD4CAE14A10D200063163D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16DD4CAC14A10D200063163D /* InfoPlist.strings */; };
 		16DD4CB014A10D200063163D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DD4CAF14A10D200063163D /* main.m */; };
 		16DD4CB414A10D200063163D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DD4CB314A10D200063163D /* AppDelegate.m */; };
-		16DD4D9814A10E190063163D /* PuertoRicoLawBooks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16DD4D9714A10E190063163D /* PuertoRicoLawBooks.plist */; };
 		16DD4DA914A1568B0063163D /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DD4DA814A1568B0063163D /* Book.m */; };
 		16DD4DAC14A1569F0063163D /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DD4DAB14A1569F0063163D /* Section.m */; };
 		16DD4DB114A16D1E0063163D /* BookData.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DD4DB014A16D1E0063163D /* BookData.m */; };
@@ -134,111 +159,129 @@
 /* Begin PBXFileReference section */
 		1620F7FF14A196910070E512 /* FileHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHelpers.h; sourceTree = "<group>"; };
 		1620F80014A196910070E512 /* FileHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileHelpers.m; sourceTree = "<group>"; };
-		164ED27914A201D700C633C7 /* Constitution.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Constitution.plist; sourceTree = "<group>"; };
-		164ED2E514A2082000C633C7 /* constitution_article_1_section_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_1_section_1.html; sourceTree = "<group>"; };
-		164ED2E614A2082000C633C7 /* constitution_article_1_section_2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_1_section_2.html; sourceTree = "<group>"; };
-		164ED2E714A2082000C633C7 /* constitution_article_1_section_3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_1_section_3.html; sourceTree = "<group>"; };
-		164ED2E814A2082000C633C7 /* constitution_article_1_section_4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_1_section_4.html; sourceTree = "<group>"; };
-		164ED2EA14A2082000C633C7 /* constitution_article_2_section_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_1.html; sourceTree = "<group>"; };
-		164ED2EB14A2082000C633C7 /* constitution_article_2_section_10.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_10.html; sourceTree = "<group>"; };
-		164ED2EC14A2082000C633C7 /* constitution_article_2_section_11.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_11.html; sourceTree = "<group>"; };
-		164ED2ED14A2082000C633C7 /* constitution_article_2_section_12.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_12.html; sourceTree = "<group>"; };
-		164ED2EE14A2082000C633C7 /* constitution_article_2_section_13.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_13.html; sourceTree = "<group>"; };
-		164ED2EF14A2082000C633C7 /* constitution_article_2_section_14.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_14.html; sourceTree = "<group>"; };
-		164ED2F014A2082000C633C7 /* constitution_article_2_section_15.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_15.html; sourceTree = "<group>"; };
-		164ED2F114A2082000C633C7 /* constitution_article_2_section_16.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_16.html; sourceTree = "<group>"; };
-		164ED2F214A2082000C633C7 /* constitution_article_2_section_17.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_17.html; sourceTree = "<group>"; };
-		164ED2F314A2082000C633C7 /* constitution_article_2_section_18.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_18.html; sourceTree = "<group>"; };
-		164ED2F414A2082000C633C7 /* constitution_article_2_section_19.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_19.html; sourceTree = "<group>"; };
-		164ED2F514A2082000C633C7 /* constitution_article_2_section_2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_2.html; sourceTree = "<group>"; };
-		164ED2F614A2082000C633C7 /* constitution_article_2_section_20.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_20.html; sourceTree = "<group>"; };
-		164ED2F714A2082000C633C7 /* constitution_article_2_section_3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_3.html; sourceTree = "<group>"; };
-		164ED2F814A2082000C633C7 /* constitution_article_2_section_4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_4.html; sourceTree = "<group>"; };
-		164ED2F914A2082000C633C7 /* constitution_article_2_section_5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_5.html; sourceTree = "<group>"; };
-		164ED2FA14A2082000C633C7 /* constitution_article_2_section_6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_6.html; sourceTree = "<group>"; };
-		164ED2FB14A2082000C633C7 /* constitution_article_2_section_7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_7.html; sourceTree = "<group>"; };
-		164ED2FC14A2082000C633C7 /* constitution_article_2_section_8.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_8.html; sourceTree = "<group>"; };
-		164ED2FD14A2082000C633C7 /* constitution_article_2_section_9.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_9.html; sourceTree = "<group>"; };
-		164ED2FF14A2082000C633C7 /* constitution_article_3_section_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_1.html; sourceTree = "<group>"; };
-		164ED30014A2082000C633C7 /* constitution_article_3_section_10.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_10.html; sourceTree = "<group>"; };
-		164ED30114A2082000C633C7 /* constitution_article_3_section_11.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_11.html; sourceTree = "<group>"; };
-		164ED30214A2082000C633C7 /* constitution_article_3_section_12.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_12.html; sourceTree = "<group>"; };
-		164ED30314A2082000C633C7 /* constitution_article_3_section_13.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_13.html; sourceTree = "<group>"; };
-		164ED30414A2082000C633C7 /* constitution_article_3_section_14.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_14.html; sourceTree = "<group>"; };
-		164ED30514A2082000C633C7 /* constitution_article_3_section_15.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_15.html; sourceTree = "<group>"; };
-		164ED30614A2082000C633C7 /* constitution_article_3_section_16.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_16.html; sourceTree = "<group>"; };
-		164ED30714A2082000C633C7 /* constitution_article_3_section_17.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_17.html; sourceTree = "<group>"; };
-		164ED30814A2082000C633C7 /* constitution_article_3_section_18.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_18.html; sourceTree = "<group>"; };
-		164ED30914A2082000C633C7 /* constitution_article_3_section_19.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_19.html; sourceTree = "<group>"; };
-		164ED30A14A2082000C633C7 /* constitution_article_3_section_2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_2.html; sourceTree = "<group>"; };
-		164ED30B14A2082000C633C7 /* constitution_article_3_section_20.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_20.html; sourceTree = "<group>"; };
-		164ED30C14A2082000C633C7 /* constitution_article_3_section_21.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_21.html; sourceTree = "<group>"; };
-		164ED30D14A2082000C633C7 /* constitution_article_3_section_22.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_22.html; sourceTree = "<group>"; };
-		164ED30E14A2082000C633C7 /* constitution_article_3_section_3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_3.html; sourceTree = "<group>"; };
-		164ED30F14A2082000C633C7 /* constitution_article_3_section_4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_4.html; sourceTree = "<group>"; };
-		164ED31014A2082000C633C7 /* constitution_article_3_section_5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_5.html; sourceTree = "<group>"; };
-		164ED31114A2082000C633C7 /* constitution_article_3_section_6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_6.html; sourceTree = "<group>"; };
-		164ED31214A2082000C633C7 /* constitution_article_3_section_7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_7.html; sourceTree = "<group>"; };
-		164ED31314A2082000C633C7 /* constitution_article_3_section_8.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_8.html; sourceTree = "<group>"; };
-		164ED31414A2082000C633C7 /* constitution_article_3_section_9.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_9.html; sourceTree = "<group>"; };
-		164ED31614A2082000C633C7 /* constitution_article_4_section_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_1.html; sourceTree = "<group>"; };
-		164ED31714A2082000C633C7 /* constitution_article_4_section_10.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_10.html; sourceTree = "<group>"; };
-		164ED31814A2082000C633C7 /* constitution_article_4_section_2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_2.html; sourceTree = "<group>"; };
-		164ED31914A2082000C633C7 /* constitution_article_4_section_3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_3.html; sourceTree = "<group>"; };
-		164ED31A14A2082000C633C7 /* constitution_article_4_section_4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_4.html; sourceTree = "<group>"; };
-		164ED31B14A2082000C633C7 /* constitution_article_4_section_5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_5.html; sourceTree = "<group>"; };
-		164ED31C14A2082000C633C7 /* constitution_article_4_section_6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_6.html; sourceTree = "<group>"; };
-		164ED31D14A2082000C633C7 /* constitution_article_4_section_7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_7.html; sourceTree = "<group>"; };
-		164ED31E14A2082000C633C7 /* constitution_article_4_section_8.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_8.html; sourceTree = "<group>"; };
-		164ED31F14A2082000C633C7 /* constitution_article_4_section_9.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_9.html; sourceTree = "<group>"; };
-		164ED32114A2082000C633C7 /* constitution_article_5_section_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_1.html; sourceTree = "<group>"; };
-		164ED32214A2082000C633C7 /* constitution_article_5_section_10.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_10.html; sourceTree = "<group>"; };
-		164ED32314A2082000C633C7 /* constitution_article_5_section_11.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_11.html; sourceTree = "<group>"; };
-		164ED32414A2082000C633C7 /* constitution_article_5_section_12.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_12.html; sourceTree = "<group>"; };
-		164ED32514A2082000C633C7 /* constitution_article_5_section_13.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_13.html; sourceTree = "<group>"; };
-		164ED32614A2082000C633C7 /* constitution_article_5_section_2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_2.html; sourceTree = "<group>"; };
-		164ED32714A2082000C633C7 /* constitution_article_5_section_3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_3.html; sourceTree = "<group>"; };
-		164ED32814A2082000C633C7 /* constitution_article_5_section_4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_4.html; sourceTree = "<group>"; };
-		164ED32914A2082000C633C7 /* constitution_article_5_section_5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_5.html; sourceTree = "<group>"; };
-		164ED32A14A2082000C633C7 /* constitution_article_5_section_6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_6.html; sourceTree = "<group>"; };
-		164ED32B14A2082000C633C7 /* constitution_article_5_section_7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_7.html; sourceTree = "<group>"; };
-		164ED32C14A2082000C633C7 /* constitution_article_5_section_8.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_8.html; sourceTree = "<group>"; };
-		164ED32D14A2082000C633C7 /* constitution_article_5_section_9.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_9.html; sourceTree = "<group>"; };
-		164ED32F14A2082000C633C7 /* constitution_article_6_section_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_1.html; sourceTree = "<group>"; };
-		164ED33014A2082000C633C7 /* constitution_article_6_section_10.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_10.html; sourceTree = "<group>"; };
-		164ED33114A2082000C633C7 /* constitution_article_6_section_11.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_11.html; sourceTree = "<group>"; };
-		164ED33214A2082000C633C7 /* constitution_article_6_section_12.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_12.html; sourceTree = "<group>"; };
-		164ED33314A2082000C633C7 /* constitution_article_6_section_13.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_13.html; sourceTree = "<group>"; };
-		164ED33414A2082000C633C7 /* constitution_article_6_section_14.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_14.html; sourceTree = "<group>"; };
-		164ED33514A2082000C633C7 /* constitution_article_6_section_15.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_15.html; sourceTree = "<group>"; };
-		164ED33614A2082000C633C7 /* constitution_article_6_section_16.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_16.html; sourceTree = "<group>"; };
-		164ED33714A2082000C633C7 /* constitution_article_6_section_17.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_17.html; sourceTree = "<group>"; };
-		164ED33814A2082000C633C7 /* constitution_article_6_section_18.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_18.html; sourceTree = "<group>"; };
-		164ED33914A2082000C633C7 /* constitution_article_6_section_19.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_19.html; sourceTree = "<group>"; };
-		164ED33A14A2082000C633C7 /* constitution_article_6_section_2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_2.html; sourceTree = "<group>"; };
-		164ED33B14A2082000C633C7 /* constitution_article_6_section_3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_3.html; sourceTree = "<group>"; };
-		164ED33C14A2082000C633C7 /* constitution_article_6_section_4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_4.html; sourceTree = "<group>"; };
-		164ED33D14A2082000C633C7 /* constitution_article_6_section_5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_5.html; sourceTree = "<group>"; };
-		164ED33E14A2082000C633C7 /* constitution_article_6_section_6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_6.html; sourceTree = "<group>"; };
-		164ED33F14A2082000C633C7 /* constitution_article_6_section_7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_7.html; sourceTree = "<group>"; };
-		164ED34014A2082000C633C7 /* constitution_article_6_section_8.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_8.html; sourceTree = "<group>"; };
-		164ED34114A2082000C633C7 /* constitution_article_6_section_9.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_9.html; sourceTree = "<group>"; };
-		164ED34314A2082000C633C7 /* constitution_article_7_section_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_7_section_1.html; sourceTree = "<group>"; };
-		164ED34414A2082000C633C7 /* constitution_article_7_section_2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_7_section_2.html; sourceTree = "<group>"; };
-		164ED34514A2082000C633C7 /* constitution_article_7_section_3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_7_section_3.html; sourceTree = "<group>"; };
-		164ED34714A2082000C633C7 /* constitution_article_8_section_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_8_section_1.html; sourceTree = "<group>"; };
-		164ED34814A2082000C633C7 /* constitution_article_8_section_2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_8_section_2.html; sourceTree = "<group>"; };
-		164ED34A14A2082000C633C7 /* constitution_article_9_section_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_1.html; sourceTree = "<group>"; };
-		164ED34B14A2082000C633C7 /* constitution_article_9_section_10.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_10.html; sourceTree = "<group>"; };
-		164ED34C14A2082000C633C7 /* constitution_article_9_section_2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_2.html; sourceTree = "<group>"; };
-		164ED34D14A2082000C633C7 /* constitution_article_9_section_3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_3.html; sourceTree = "<group>"; };
-		164ED34E14A2082000C633C7 /* constitution_article_9_section_4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_4.html; sourceTree = "<group>"; };
-		164ED34F14A2082000C633C7 /* constitution_article_9_section_5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_5.html; sourceTree = "<group>"; };
-		164ED35014A2082000C633C7 /* constitution_article_9_section_6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_6.html; sourceTree = "<group>"; };
-		164ED35114A2082000C633C7 /* constitution_article_9_section_7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_7.html; sourceTree = "<group>"; };
-		164ED35214A2082000C633C7 /* constitution_article_9_section_8.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_8.html; sourceTree = "<group>"; };
-		164ED35314A2082000C633C7 /* constitution_article_9_section_9.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_9.html; sourceTree = "<group>"; };
-		164ED35514A2082000C633C7 /* constitution_preamble_index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_preamble_index.html; sourceTree = "<group>"; };
+		164DF01314A294900087CBD2 /* constitution_article_1_section_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_1_section_1.html; sourceTree = "<group>"; };
+		164DF01414A294900087CBD2 /* constitution_article_1_section_2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_1_section_2.html; sourceTree = "<group>"; };
+		164DF01514A294900087CBD2 /* constitution_article_1_section_3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_1_section_3.html; sourceTree = "<group>"; };
+		164DF01614A294900087CBD2 /* constitution_article_1_section_4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_1_section_4.html; sourceTree = "<group>"; };
+		164DF01814A294900087CBD2 /* constitution_article_2_section_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_1.html; sourceTree = "<group>"; };
+		164DF01914A294900087CBD2 /* constitution_article_2_section_10.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_10.html; sourceTree = "<group>"; };
+		164DF01A14A294900087CBD2 /* constitution_article_2_section_11.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_11.html; sourceTree = "<group>"; };
+		164DF01B14A294900087CBD2 /* constitution_article_2_section_12.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_12.html; sourceTree = "<group>"; };
+		164DF01C14A294900087CBD2 /* constitution_article_2_section_13.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_13.html; sourceTree = "<group>"; };
+		164DF01D14A294900087CBD2 /* constitution_article_2_section_14.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_14.html; sourceTree = "<group>"; };
+		164DF01E14A294900087CBD2 /* constitution_article_2_section_15.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_15.html; sourceTree = "<group>"; };
+		164DF01F14A294900087CBD2 /* constitution_article_2_section_16.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_16.html; sourceTree = "<group>"; };
+		164DF02014A294900087CBD2 /* constitution_article_2_section_17.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_17.html; sourceTree = "<group>"; };
+		164DF02114A294900087CBD2 /* constitution_article_2_section_18.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_18.html; sourceTree = "<group>"; };
+		164DF02214A294900087CBD2 /* constitution_article_2_section_19.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_19.html; sourceTree = "<group>"; };
+		164DF02314A294900087CBD2 /* constitution_article_2_section_2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_2.html; sourceTree = "<group>"; };
+		164DF02414A294900087CBD2 /* constitution_article_2_section_20.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_20.html; sourceTree = "<group>"; };
+		164DF02514A294900087CBD2 /* constitution_article_2_section_3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_3.html; sourceTree = "<group>"; };
+		164DF02614A294900087CBD2 /* constitution_article_2_section_4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_4.html; sourceTree = "<group>"; };
+		164DF02714A294900087CBD2 /* constitution_article_2_section_5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_5.html; sourceTree = "<group>"; };
+		164DF02814A294900087CBD2 /* constitution_article_2_section_6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_6.html; sourceTree = "<group>"; };
+		164DF02914A294900087CBD2 /* constitution_article_2_section_7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_7.html; sourceTree = "<group>"; };
+		164DF02A14A294900087CBD2 /* constitution_article_2_section_8.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_8.html; sourceTree = "<group>"; };
+		164DF02B14A294900087CBD2 /* constitution_article_2_section_9.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_2_section_9.html; sourceTree = "<group>"; };
+		164DF02D14A294900087CBD2 /* constitution_article_3_section_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_1.html; sourceTree = "<group>"; };
+		164DF02E14A294900087CBD2 /* constitution_article_3_section_10.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_10.html; sourceTree = "<group>"; };
+		164DF02F14A294900087CBD2 /* constitution_article_3_section_11.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_11.html; sourceTree = "<group>"; };
+		164DF03014A294900087CBD2 /* constitution_article_3_section_12.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_12.html; sourceTree = "<group>"; };
+		164DF03114A294900087CBD2 /* constitution_article_3_section_13.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_13.html; sourceTree = "<group>"; };
+		164DF03214A294900087CBD2 /* constitution_article_3_section_14.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_14.html; sourceTree = "<group>"; };
+		164DF03314A294900087CBD2 /* constitution_article_3_section_15.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_15.html; sourceTree = "<group>"; };
+		164DF03414A294900087CBD2 /* constitution_article_3_section_16.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_16.html; sourceTree = "<group>"; };
+		164DF03514A294900087CBD2 /* constitution_article_3_section_17.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_17.html; sourceTree = "<group>"; };
+		164DF03614A294900087CBD2 /* constitution_article_3_section_18.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_18.html; sourceTree = "<group>"; };
+		164DF03714A294900087CBD2 /* constitution_article_3_section_19.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_19.html; sourceTree = "<group>"; };
+		164DF03814A294900087CBD2 /* constitution_article_3_section_2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_2.html; sourceTree = "<group>"; };
+		164DF03914A294900087CBD2 /* constitution_article_3_section_20.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_20.html; sourceTree = "<group>"; };
+		164DF03A14A294900087CBD2 /* constitution_article_3_section_21.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_21.html; sourceTree = "<group>"; };
+		164DF03B14A294900087CBD2 /* constitution_article_3_section_22.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_22.html; sourceTree = "<group>"; };
+		164DF03C14A294900087CBD2 /* constitution_article_3_section_3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_3.html; sourceTree = "<group>"; };
+		164DF03D14A294900087CBD2 /* constitution_article_3_section_4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_4.html; sourceTree = "<group>"; };
+		164DF03E14A294900087CBD2 /* constitution_article_3_section_5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_5.html; sourceTree = "<group>"; };
+		164DF03F14A294900087CBD2 /* constitution_article_3_section_6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_6.html; sourceTree = "<group>"; };
+		164DF04014A294900087CBD2 /* constitution_article_3_section_7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_7.html; sourceTree = "<group>"; };
+		164DF04114A294900087CBD2 /* constitution_article_3_section_8.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_8.html; sourceTree = "<group>"; };
+		164DF04214A294900087CBD2 /* constitution_article_3_section_9.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_3_section_9.html; sourceTree = "<group>"; };
+		164DF04414A294900087CBD2 /* constitution_article_4_section_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_1.html; sourceTree = "<group>"; };
+		164DF04514A294900087CBD2 /* constitution_article_4_section_10.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_10.html; sourceTree = "<group>"; };
+		164DF04614A294900087CBD2 /* constitution_article_4_section_2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_2.html; sourceTree = "<group>"; };
+		164DF04714A294900087CBD2 /* constitution_article_4_section_3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_3.html; sourceTree = "<group>"; };
+		164DF04814A294900087CBD2 /* constitution_article_4_section_4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_4.html; sourceTree = "<group>"; };
+		164DF04914A294900087CBD2 /* constitution_article_4_section_5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_5.html; sourceTree = "<group>"; };
+		164DF04A14A294900087CBD2 /* constitution_article_4_section_6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_6.html; sourceTree = "<group>"; };
+		164DF04B14A294900087CBD2 /* constitution_article_4_section_7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_7.html; sourceTree = "<group>"; };
+		164DF04C14A294900087CBD2 /* constitution_article_4_section_8.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_8.html; sourceTree = "<group>"; };
+		164DF04D14A294900087CBD2 /* constitution_article_4_section_9.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_4_section_9.html; sourceTree = "<group>"; };
+		164DF04F14A294900087CBD2 /* constitution_article_5_section_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_1.html; sourceTree = "<group>"; };
+		164DF05014A294900087CBD2 /* constitution_article_5_section_10.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_10.html; sourceTree = "<group>"; };
+		164DF05114A294900087CBD2 /* constitution_article_5_section_11.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_11.html; sourceTree = "<group>"; };
+		164DF05214A294900087CBD2 /* constitution_article_5_section_12.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_12.html; sourceTree = "<group>"; };
+		164DF05314A294900087CBD2 /* constitution_article_5_section_13.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_13.html; sourceTree = "<group>"; };
+		164DF05414A294900087CBD2 /* constitution_article_5_section_2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_2.html; sourceTree = "<group>"; };
+		164DF05514A294900087CBD2 /* constitution_article_5_section_3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_3.html; sourceTree = "<group>"; };
+		164DF05614A294900087CBD2 /* constitution_article_5_section_4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_4.html; sourceTree = "<group>"; };
+		164DF05714A294900087CBD2 /* constitution_article_5_section_5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_5.html; sourceTree = "<group>"; };
+		164DF05814A294900087CBD2 /* constitution_article_5_section_6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_6.html; sourceTree = "<group>"; };
+		164DF05914A294900087CBD2 /* constitution_article_5_section_7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_7.html; sourceTree = "<group>"; };
+		164DF05A14A294900087CBD2 /* constitution_article_5_section_8.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_8.html; sourceTree = "<group>"; };
+		164DF05B14A294900087CBD2 /* constitution_article_5_section_9.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_5_section_9.html; sourceTree = "<group>"; };
+		164DF05D14A294900087CBD2 /* constitution_article_6_section_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_1.html; sourceTree = "<group>"; };
+		164DF05E14A294900087CBD2 /* constitution_article_6_section_10.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_10.html; sourceTree = "<group>"; };
+		164DF05F14A294900087CBD2 /* constitution_article_6_section_11.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_11.html; sourceTree = "<group>"; };
+		164DF06014A294900087CBD2 /* constitution_article_6_section_12.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_12.html; sourceTree = "<group>"; };
+		164DF06114A294900087CBD2 /* constitution_article_6_section_13.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_13.html; sourceTree = "<group>"; };
+		164DF06214A294900087CBD2 /* constitution_article_6_section_14.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_14.html; sourceTree = "<group>"; };
+		164DF06314A294900087CBD2 /* constitution_article_6_section_15.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_15.html; sourceTree = "<group>"; };
+		164DF06414A294900087CBD2 /* constitution_article_6_section_16.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_16.html; sourceTree = "<group>"; };
+		164DF06514A294900087CBD2 /* constitution_article_6_section_17.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_17.html; sourceTree = "<group>"; };
+		164DF06614A294900087CBD2 /* constitution_article_6_section_18.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_18.html; sourceTree = "<group>"; };
+		164DF06714A294900087CBD2 /* constitution_article_6_section_19.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_19.html; sourceTree = "<group>"; };
+		164DF06814A294900087CBD2 /* constitution_article_6_section_2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_2.html; sourceTree = "<group>"; };
+		164DF06914A294900087CBD2 /* constitution_article_6_section_3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_3.html; sourceTree = "<group>"; };
+		164DF06A14A294900087CBD2 /* constitution_article_6_section_4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_4.html; sourceTree = "<group>"; };
+		164DF06B14A294900087CBD2 /* constitution_article_6_section_5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_5.html; sourceTree = "<group>"; };
+		164DF06C14A294900087CBD2 /* constitution_article_6_section_6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_6.html; sourceTree = "<group>"; };
+		164DF06D14A294900087CBD2 /* constitution_article_6_section_7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_7.html; sourceTree = "<group>"; };
+		164DF06E14A294900087CBD2 /* constitution_article_6_section_8.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_8.html; sourceTree = "<group>"; };
+		164DF06F14A294900087CBD2 /* constitution_article_6_section_9.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_6_section_9.html; sourceTree = "<group>"; };
+		164DF07114A294900087CBD2 /* constitution_article_7_section_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_7_section_1.html; sourceTree = "<group>"; };
+		164DF07214A294900087CBD2 /* constitution_article_7_section_2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_7_section_2.html; sourceTree = "<group>"; };
+		164DF07314A294900087CBD2 /* constitution_article_7_section_3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_7_section_3.html; sourceTree = "<group>"; };
+		164DF07514A294900087CBD2 /* constitution_article_8_section_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_8_section_1.html; sourceTree = "<group>"; };
+		164DF07614A294900087CBD2 /* constitution_article_8_section_2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_8_section_2.html; sourceTree = "<group>"; };
+		164DF07814A294900087CBD2 /* constitution_article_9_section_1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_1.html; sourceTree = "<group>"; };
+		164DF07914A294900087CBD2 /* constitution_article_9_section_10.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_10.html; sourceTree = "<group>"; };
+		164DF07A14A294900087CBD2 /* constitution_article_9_section_2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_2.html; sourceTree = "<group>"; };
+		164DF07B14A294900087CBD2 /* constitution_article_9_section_3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_3.html; sourceTree = "<group>"; };
+		164DF07C14A294900087CBD2 /* constitution_article_9_section_4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_4.html; sourceTree = "<group>"; };
+		164DF07D14A294900087CBD2 /* constitution_article_9_section_5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_5.html; sourceTree = "<group>"; };
+		164DF07E14A294900087CBD2 /* constitution_article_9_section_6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_6.html; sourceTree = "<group>"; };
+		164DF07F14A294900087CBD2 /* constitution_article_9_section_7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_7.html; sourceTree = "<group>"; };
+		164DF08014A294900087CBD2 /* constitution_article_9_section_8.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_8.html; sourceTree = "<group>"; };
+		164DF08114A294900087CBD2 /* constitution_article_9_section_9.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_article_9_section_9.html; sourceTree = "<group>"; };
+		164DF08314A294900087CBD2 /* constitution_preamble_index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = constitution_preamble_index.html; sourceTree = "<group>"; };
+		164DF08414A294910087CBD2 /* Constitution.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Constitution.plist; sourceTree = "<group>"; };
+		164DF08514A294910087CBD2 /* PuertoRicoLawBooks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PuertoRicoLawBooks.plist; sourceTree = "<group>"; };
+		164DF0F014A29D160087CBD2 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		164DF0F114A29D160087CBD2 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		164DF0F214A29D160087CBD2 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		164DF0F514A2A14D0087CBD2 /* magnify_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magnify_mini.png; sourceTree = "<group>"; };
+		164DF0F614A2A14D0087CBD2 /* magnify_mini@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "magnify_mini@2x.png"; sourceTree = "<group>"; };
+		164DF0FB14A2B1B90087CBD2 /* house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house.png; sourceTree = "<group>"; };
+		164DF0FC14A2B1B90087CBD2 /* house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house@2x.png"; sourceTree = "<group>"; };
+		164DF0FD14A2B1B90087CBD2 /* left_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_arrow.png; sourceTree = "<group>"; };
+		164DF0FE14A2B1B90087CBD2 /* left_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_arrow@2x.png"; sourceTree = "<group>"; };
+		164DF0FF14A2B1B90087CBD2 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
+		164DF10014A2B1B90087CBD2 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
+		164DF10114A2B1B90087CBD2 /* right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_arrow.png; sourceTree = "<group>"; };
+		164DF10214A2B1B90087CBD2 /* right_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_arrow@2x.png"; sourceTree = "<group>"; };
+		164DF10314A2B1B90087CBD2 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		164DF10414A2B1B90087CBD2 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
+		164DF11114A2B6B20087CBD2 /* gears.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gears.png; sourceTree = "<group>"; };
+		164DF11214A2B6B20087CBD2 /* gears@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gears@2x.png"; sourceTree = "<group>"; };
 		167EF1D514A23DAA0058F8D1 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
 		167EF1D614A23DAA0058F8D1 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
 		167EF1D914A23F790058F8D1 /* BookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookViewController.xib; sourceTree = "<group>"; };
@@ -248,6 +291,16 @@
 		167EF24514A251320058F8D1 /* SectionContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionContentViewController.h; sourceTree = "<group>"; };
 		167EF24614A251320058F8D1 /* SectionContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionContentViewController.m; sourceTree = "<group>"; };
 		167EF24714A251320058F8D1 /* SectionContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionContentViewController.xib; sourceTree = "<group>"; };
+		1691519514A2BF3B001E59C2 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		1691519614A2BF3B001E59C2 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		1691519714A2BF3B001E59C2 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		1691519814A2BF3B001E59C2 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		1691519914A2BF3B001E59C2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		1691519A14A2BF3B001E59C2 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		1691519B14A2BF3B001E59C2 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		169151A414A2C11D001E59C2 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
+		169151A514A2C11D001E59C2 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
+		169151A614A2C11D001E59C2 /* FavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
 		16DD4C9F14A10D200063163D /* PuertoRicoLaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuertoRicoLaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16DD4CA314A10D200063163D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		16DD4CA514A10D200063163D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -258,7 +311,6 @@
 		16DD4CB114A10D200063163D /* PuertoRicoLaw-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PuertoRicoLaw-Prefix.pch"; sourceTree = "<group>"; };
 		16DD4CB214A10D200063163D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		16DD4CB314A10D200063163D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		16DD4D9714A10E190063163D /* PuertoRicoLawBooks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PuertoRicoLawBooks.plist; sourceTree = "<group>"; };
 		16DD4DA714A1568B0063163D /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
 		16DD4DA814A1568B0063163D /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		16DD4DAA14A1569F0063163D /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
@@ -291,193 +343,224 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
-		164ED2E314A2082000C633C7 /* constitution */ = {
+		164DF00A14A293CD0087CBD2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				164ED2E414A2082000C633C7 /* article_1 */,
-				164ED2E914A2082000C633C7 /* article_2 */,
-				164ED2FE14A2082000C633C7 /* article_3 */,
-				164ED31514A2082000C633C7 /* article_4 */,
-				164ED32014A2082000C633C7 /* article_5 */,
-				164ED32E14A2082000C633C7 /* article_6 */,
-				164ED34214A2082000C633C7 /* article_7 */,
-				164ED34614A2082000C633C7 /* article_8 */,
-				164ED34914A2082000C633C7 /* article_9 */,
-				164ED35414A2082000C633C7 /* preamble */,
+				164DF11114A2B6B20087CBD2 /* gears.png */,
+				164DF11214A2B6B20087CBD2 /* gears@2x.png */,
+				164DF0FB14A2B1B90087CBD2 /* house.png */,
+				164DF0FC14A2B1B90087CBD2 /* house@2x.png */,
+				164DF0FD14A2B1B90087CBD2 /* left_arrow.png */,
+				164DF0FE14A2B1B90087CBD2 /* left_arrow@2x.png */,
+				164DF0FF14A2B1B90087CBD2 /* list.png */,
+				164DF10014A2B1B90087CBD2 /* list@2x.png */,
+				164DF10114A2B1B90087CBD2 /* right_arrow.png */,
+				164DF10214A2B1B90087CBD2 /* right_arrow@2x.png */,
+				164DF10314A2B1B90087CBD2 /* star.png */,
+				164DF10414A2B1B90087CBD2 /* star@2x.png */,
+				164DF0F514A2A14D0087CBD2 /* magnify_mini.png */,
+				164DF0F614A2A14D0087CBD2 /* magnify_mini@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		164DF01014A2948F0087CBD2 /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				164DF01114A2948F0087CBD2 /* constitution */,
+				164DF08414A294910087CBD2 /* Constitution.plist */,
+				164DF08514A294910087CBD2 /* PuertoRicoLawBooks.plist */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
+		164DF01114A2948F0087CBD2 /* constitution */ = {
+			isa = PBXGroup;
+			children = (
+				164DF01214A2948F0087CBD2 /* article_1 */,
+				164DF01714A294900087CBD2 /* article_2 */,
+				164DF02C14A294900087CBD2 /* article_3 */,
+				164DF04314A294900087CBD2 /* article_4 */,
+				164DF04E14A294900087CBD2 /* article_5 */,
+				164DF05C14A294900087CBD2 /* article_6 */,
+				164DF07014A294900087CBD2 /* article_7 */,
+				164DF07414A294900087CBD2 /* article_8 */,
+				164DF07714A294900087CBD2 /* article_9 */,
+				164DF08214A294900087CBD2 /* preamble */,
 			);
 			path = constitution;
 			sourceTree = "<group>";
 		};
-		164ED2E414A2082000C633C7 /* article_1 */ = {
+		164DF01214A2948F0087CBD2 /* article_1 */ = {
 			isa = PBXGroup;
 			children = (
-				164ED2E514A2082000C633C7 /* constitution_article_1_section_1.html */,
-				164ED2E614A2082000C633C7 /* constitution_article_1_section_2.html */,
-				164ED2E714A2082000C633C7 /* constitution_article_1_section_3.html */,
-				164ED2E814A2082000C633C7 /* constitution_article_1_section_4.html */,
+				164DF01314A294900087CBD2 /* constitution_article_1_section_1.html */,
+				164DF01414A294900087CBD2 /* constitution_article_1_section_2.html */,
+				164DF01514A294900087CBD2 /* constitution_article_1_section_3.html */,
+				164DF01614A294900087CBD2 /* constitution_article_1_section_4.html */,
 			);
 			path = article_1;
 			sourceTree = "<group>";
 		};
-		164ED2E914A2082000C633C7 /* article_2 */ = {
+		164DF01714A294900087CBD2 /* article_2 */ = {
 			isa = PBXGroup;
 			children = (
-				164ED2EA14A2082000C633C7 /* constitution_article_2_section_1.html */,
-				164ED2EB14A2082000C633C7 /* constitution_article_2_section_10.html */,
-				164ED2EC14A2082000C633C7 /* constitution_article_2_section_11.html */,
-				164ED2ED14A2082000C633C7 /* constitution_article_2_section_12.html */,
-				164ED2EE14A2082000C633C7 /* constitution_article_2_section_13.html */,
-				164ED2EF14A2082000C633C7 /* constitution_article_2_section_14.html */,
-				164ED2F014A2082000C633C7 /* constitution_article_2_section_15.html */,
-				164ED2F114A2082000C633C7 /* constitution_article_2_section_16.html */,
-				164ED2F214A2082000C633C7 /* constitution_article_2_section_17.html */,
-				164ED2F314A2082000C633C7 /* constitution_article_2_section_18.html */,
-				164ED2F414A2082000C633C7 /* constitution_article_2_section_19.html */,
-				164ED2F514A2082000C633C7 /* constitution_article_2_section_2.html */,
-				164ED2F614A2082000C633C7 /* constitution_article_2_section_20.html */,
-				164ED2F714A2082000C633C7 /* constitution_article_2_section_3.html */,
-				164ED2F814A2082000C633C7 /* constitution_article_2_section_4.html */,
-				164ED2F914A2082000C633C7 /* constitution_article_2_section_5.html */,
-				164ED2FA14A2082000C633C7 /* constitution_article_2_section_6.html */,
-				164ED2FB14A2082000C633C7 /* constitution_article_2_section_7.html */,
-				164ED2FC14A2082000C633C7 /* constitution_article_2_section_8.html */,
-				164ED2FD14A2082000C633C7 /* constitution_article_2_section_9.html */,
+				164DF01814A294900087CBD2 /* constitution_article_2_section_1.html */,
+				164DF01914A294900087CBD2 /* constitution_article_2_section_10.html */,
+				164DF01A14A294900087CBD2 /* constitution_article_2_section_11.html */,
+				164DF01B14A294900087CBD2 /* constitution_article_2_section_12.html */,
+				164DF01C14A294900087CBD2 /* constitution_article_2_section_13.html */,
+				164DF01D14A294900087CBD2 /* constitution_article_2_section_14.html */,
+				164DF01E14A294900087CBD2 /* constitution_article_2_section_15.html */,
+				164DF01F14A294900087CBD2 /* constitution_article_2_section_16.html */,
+				164DF02014A294900087CBD2 /* constitution_article_2_section_17.html */,
+				164DF02114A294900087CBD2 /* constitution_article_2_section_18.html */,
+				164DF02214A294900087CBD2 /* constitution_article_2_section_19.html */,
+				164DF02314A294900087CBD2 /* constitution_article_2_section_2.html */,
+				164DF02414A294900087CBD2 /* constitution_article_2_section_20.html */,
+				164DF02514A294900087CBD2 /* constitution_article_2_section_3.html */,
+				164DF02614A294900087CBD2 /* constitution_article_2_section_4.html */,
+				164DF02714A294900087CBD2 /* constitution_article_2_section_5.html */,
+				164DF02814A294900087CBD2 /* constitution_article_2_section_6.html */,
+				164DF02914A294900087CBD2 /* constitution_article_2_section_7.html */,
+				164DF02A14A294900087CBD2 /* constitution_article_2_section_8.html */,
+				164DF02B14A294900087CBD2 /* constitution_article_2_section_9.html */,
 			);
 			path = article_2;
 			sourceTree = "<group>";
 		};
-		164ED2FE14A2082000C633C7 /* article_3 */ = {
+		164DF02C14A294900087CBD2 /* article_3 */ = {
 			isa = PBXGroup;
 			children = (
-				164ED2FF14A2082000C633C7 /* constitution_article_3_section_1.html */,
-				164ED30014A2082000C633C7 /* constitution_article_3_section_10.html */,
-				164ED30114A2082000C633C7 /* constitution_article_3_section_11.html */,
-				164ED30214A2082000C633C7 /* constitution_article_3_section_12.html */,
-				164ED30314A2082000C633C7 /* constitution_article_3_section_13.html */,
-				164ED30414A2082000C633C7 /* constitution_article_3_section_14.html */,
-				164ED30514A2082000C633C7 /* constitution_article_3_section_15.html */,
-				164ED30614A2082000C633C7 /* constitution_article_3_section_16.html */,
-				164ED30714A2082000C633C7 /* constitution_article_3_section_17.html */,
-				164ED30814A2082000C633C7 /* constitution_article_3_section_18.html */,
-				164ED30914A2082000C633C7 /* constitution_article_3_section_19.html */,
-				164ED30A14A2082000C633C7 /* constitution_article_3_section_2.html */,
-				164ED30B14A2082000C633C7 /* constitution_article_3_section_20.html */,
-				164ED30C14A2082000C633C7 /* constitution_article_3_section_21.html */,
-				164ED30D14A2082000C633C7 /* constitution_article_3_section_22.html */,
-				164ED30E14A2082000C633C7 /* constitution_article_3_section_3.html */,
-				164ED30F14A2082000C633C7 /* constitution_article_3_section_4.html */,
-				164ED31014A2082000C633C7 /* constitution_article_3_section_5.html */,
-				164ED31114A2082000C633C7 /* constitution_article_3_section_6.html */,
-				164ED31214A2082000C633C7 /* constitution_article_3_section_7.html */,
-				164ED31314A2082000C633C7 /* constitution_article_3_section_8.html */,
-				164ED31414A2082000C633C7 /* constitution_article_3_section_9.html */,
+				164DF02D14A294900087CBD2 /* constitution_article_3_section_1.html */,
+				164DF02E14A294900087CBD2 /* constitution_article_3_section_10.html */,
+				164DF02F14A294900087CBD2 /* constitution_article_3_section_11.html */,
+				164DF03014A294900087CBD2 /* constitution_article_3_section_12.html */,
+				164DF03114A294900087CBD2 /* constitution_article_3_section_13.html */,
+				164DF03214A294900087CBD2 /* constitution_article_3_section_14.html */,
+				164DF03314A294900087CBD2 /* constitution_article_3_section_15.html */,
+				164DF03414A294900087CBD2 /* constitution_article_3_section_16.html */,
+				164DF03514A294900087CBD2 /* constitution_article_3_section_17.html */,
+				164DF03614A294900087CBD2 /* constitution_article_3_section_18.html */,
+				164DF03714A294900087CBD2 /* constitution_article_3_section_19.html */,
+				164DF03814A294900087CBD2 /* constitution_article_3_section_2.html */,
+				164DF03914A294900087CBD2 /* constitution_article_3_section_20.html */,
+				164DF03A14A294900087CBD2 /* constitution_article_3_section_21.html */,
+				164DF03B14A294900087CBD2 /* constitution_article_3_section_22.html */,
+				164DF03C14A294900087CBD2 /* constitution_article_3_section_3.html */,
+				164DF03D14A294900087CBD2 /* constitution_article_3_section_4.html */,
+				164DF03E14A294900087CBD2 /* constitution_article_3_section_5.html */,
+				164DF03F14A294900087CBD2 /* constitution_article_3_section_6.html */,
+				164DF04014A294900087CBD2 /* constitution_article_3_section_7.html */,
+				164DF04114A294900087CBD2 /* constitution_article_3_section_8.html */,
+				164DF04214A294900087CBD2 /* constitution_article_3_section_9.html */,
 			);
 			path = article_3;
 			sourceTree = "<group>";
 		};
-		164ED31514A2082000C633C7 /* article_4 */ = {
+		164DF04314A294900087CBD2 /* article_4 */ = {
 			isa = PBXGroup;
 			children = (
-				164ED31614A2082000C633C7 /* constitution_article_4_section_1.html */,
-				164ED31714A2082000C633C7 /* constitution_article_4_section_10.html */,
-				164ED31814A2082000C633C7 /* constitution_article_4_section_2.html */,
-				164ED31914A2082000C633C7 /* constitution_article_4_section_3.html */,
-				164ED31A14A2082000C633C7 /* constitution_article_4_section_4.html */,
-				164ED31B14A2082000C633C7 /* constitution_article_4_section_5.html */,
-				164ED31C14A2082000C633C7 /* constitution_article_4_section_6.html */,
-				164ED31D14A2082000C633C7 /* constitution_article_4_section_7.html */,
-				164ED31E14A2082000C633C7 /* constitution_article_4_section_8.html */,
-				164ED31F14A2082000C633C7 /* constitution_article_4_section_9.html */,
+				164DF04414A294900087CBD2 /* constitution_article_4_section_1.html */,
+				164DF04514A294900087CBD2 /* constitution_article_4_section_10.html */,
+				164DF04614A294900087CBD2 /* constitution_article_4_section_2.html */,
+				164DF04714A294900087CBD2 /* constitution_article_4_section_3.html */,
+				164DF04814A294900087CBD2 /* constitution_article_4_section_4.html */,
+				164DF04914A294900087CBD2 /* constitution_article_4_section_5.html */,
+				164DF04A14A294900087CBD2 /* constitution_article_4_section_6.html */,
+				164DF04B14A294900087CBD2 /* constitution_article_4_section_7.html */,
+				164DF04C14A294900087CBD2 /* constitution_article_4_section_8.html */,
+				164DF04D14A294900087CBD2 /* constitution_article_4_section_9.html */,
 			);
 			path = article_4;
 			sourceTree = "<group>";
 		};
-		164ED32014A2082000C633C7 /* article_5 */ = {
+		164DF04E14A294900087CBD2 /* article_5 */ = {
 			isa = PBXGroup;
 			children = (
-				164ED32114A2082000C633C7 /* constitution_article_5_section_1.html */,
-				164ED32214A2082000C633C7 /* constitution_article_5_section_10.html */,
-				164ED32314A2082000C633C7 /* constitution_article_5_section_11.html */,
-				164ED32414A2082000C633C7 /* constitution_article_5_section_12.html */,
-				164ED32514A2082000C633C7 /* constitution_article_5_section_13.html */,
-				164ED32614A2082000C633C7 /* constitution_article_5_section_2.html */,
-				164ED32714A2082000C633C7 /* constitution_article_5_section_3.html */,
-				164ED32814A2082000C633C7 /* constitution_article_5_section_4.html */,
-				164ED32914A2082000C633C7 /* constitution_article_5_section_5.html */,
-				164ED32A14A2082000C633C7 /* constitution_article_5_section_6.html */,
-				164ED32B14A2082000C633C7 /* constitution_article_5_section_7.html */,
-				164ED32C14A2082000C633C7 /* constitution_article_5_section_8.html */,
-				164ED32D14A2082000C633C7 /* constitution_article_5_section_9.html */,
+				164DF04F14A294900087CBD2 /* constitution_article_5_section_1.html */,
+				164DF05014A294900087CBD2 /* constitution_article_5_section_10.html */,
+				164DF05114A294900087CBD2 /* constitution_article_5_section_11.html */,
+				164DF05214A294900087CBD2 /* constitution_article_5_section_12.html */,
+				164DF05314A294900087CBD2 /* constitution_article_5_section_13.html */,
+				164DF05414A294900087CBD2 /* constitution_article_5_section_2.html */,
+				164DF05514A294900087CBD2 /* constitution_article_5_section_3.html */,
+				164DF05614A294900087CBD2 /* constitution_article_5_section_4.html */,
+				164DF05714A294900087CBD2 /* constitution_article_5_section_5.html */,
+				164DF05814A294900087CBD2 /* constitution_article_5_section_6.html */,
+				164DF05914A294900087CBD2 /* constitution_article_5_section_7.html */,
+				164DF05A14A294900087CBD2 /* constitution_article_5_section_8.html */,
+				164DF05B14A294900087CBD2 /* constitution_article_5_section_9.html */,
 			);
 			path = article_5;
 			sourceTree = "<group>";
 		};
-		164ED32E14A2082000C633C7 /* article_6 */ = {
+		164DF05C14A294900087CBD2 /* article_6 */ = {
 			isa = PBXGroup;
 			children = (
-				164ED32F14A2082000C633C7 /* constitution_article_6_section_1.html */,
-				164ED33014A2082000C633C7 /* constitution_article_6_section_10.html */,
-				164ED33114A2082000C633C7 /* constitution_article_6_section_11.html */,
-				164ED33214A2082000C633C7 /* constitution_article_6_section_12.html */,
-				164ED33314A2082000C633C7 /* constitution_article_6_section_13.html */,
-				164ED33414A2082000C633C7 /* constitution_article_6_section_14.html */,
-				164ED33514A2082000C633C7 /* constitution_article_6_section_15.html */,
-				164ED33614A2082000C633C7 /* constitution_article_6_section_16.html */,
-				164ED33714A2082000C633C7 /* constitution_article_6_section_17.html */,
-				164ED33814A2082000C633C7 /* constitution_article_6_section_18.html */,
-				164ED33914A2082000C633C7 /* constitution_article_6_section_19.html */,
-				164ED33A14A2082000C633C7 /* constitution_article_6_section_2.html */,
-				164ED33B14A2082000C633C7 /* constitution_article_6_section_3.html */,
-				164ED33C14A2082000C633C7 /* constitution_article_6_section_4.html */,
-				164ED33D14A2082000C633C7 /* constitution_article_6_section_5.html */,
-				164ED33E14A2082000C633C7 /* constitution_article_6_section_6.html */,
-				164ED33F14A2082000C633C7 /* constitution_article_6_section_7.html */,
-				164ED34014A2082000C633C7 /* constitution_article_6_section_8.html */,
-				164ED34114A2082000C633C7 /* constitution_article_6_section_9.html */,
+				164DF05D14A294900087CBD2 /* constitution_article_6_section_1.html */,
+				164DF05E14A294900087CBD2 /* constitution_article_6_section_10.html */,
+				164DF05F14A294900087CBD2 /* constitution_article_6_section_11.html */,
+				164DF06014A294900087CBD2 /* constitution_article_6_section_12.html */,
+				164DF06114A294900087CBD2 /* constitution_article_6_section_13.html */,
+				164DF06214A294900087CBD2 /* constitution_article_6_section_14.html */,
+				164DF06314A294900087CBD2 /* constitution_article_6_section_15.html */,
+				164DF06414A294900087CBD2 /* constitution_article_6_section_16.html */,
+				164DF06514A294900087CBD2 /* constitution_article_6_section_17.html */,
+				164DF06614A294900087CBD2 /* constitution_article_6_section_18.html */,
+				164DF06714A294900087CBD2 /* constitution_article_6_section_19.html */,
+				164DF06814A294900087CBD2 /* constitution_article_6_section_2.html */,
+				164DF06914A294900087CBD2 /* constitution_article_6_section_3.html */,
+				164DF06A14A294900087CBD2 /* constitution_article_6_section_4.html */,
+				164DF06B14A294900087CBD2 /* constitution_article_6_section_5.html */,
+				164DF06C14A294900087CBD2 /* constitution_article_6_section_6.html */,
+				164DF06D14A294900087CBD2 /* constitution_article_6_section_7.html */,
+				164DF06E14A294900087CBD2 /* constitution_article_6_section_8.html */,
+				164DF06F14A294900087CBD2 /* constitution_article_6_section_9.html */,
 			);
 			path = article_6;
 			sourceTree = "<group>";
 		};
-		164ED34214A2082000C633C7 /* article_7 */ = {
+		164DF07014A294900087CBD2 /* article_7 */ = {
 			isa = PBXGroup;
 			children = (
-				164ED34314A2082000C633C7 /* constitution_article_7_section_1.html */,
-				164ED34414A2082000C633C7 /* constitution_article_7_section_2.html */,
-				164ED34514A2082000C633C7 /* constitution_article_7_section_3.html */,
+				164DF07114A294900087CBD2 /* constitution_article_7_section_1.html */,
+				164DF07214A294900087CBD2 /* constitution_article_7_section_2.html */,
+				164DF07314A294900087CBD2 /* constitution_article_7_section_3.html */,
 			);
 			path = article_7;
 			sourceTree = "<group>";
 		};
-		164ED34614A2082000C633C7 /* article_8 */ = {
+		164DF07414A294900087CBD2 /* article_8 */ = {
 			isa = PBXGroup;
 			children = (
-				164ED34714A2082000C633C7 /* constitution_article_8_section_1.html */,
-				164ED34814A2082000C633C7 /* constitution_article_8_section_2.html */,
+				164DF07514A294900087CBD2 /* constitution_article_8_section_1.html */,
+				164DF07614A294900087CBD2 /* constitution_article_8_section_2.html */,
 			);
 			path = article_8;
 			sourceTree = "<group>";
 		};
-		164ED34914A2082000C633C7 /* article_9 */ = {
+		164DF07714A294900087CBD2 /* article_9 */ = {
 			isa = PBXGroup;
 			children = (
-				164ED34A14A2082000C633C7 /* constitution_article_9_section_1.html */,
-				164ED34B14A2082000C633C7 /* constitution_article_9_section_10.html */,
-				164ED34C14A2082000C633C7 /* constitution_article_9_section_2.html */,
-				164ED34D14A2082000C633C7 /* constitution_article_9_section_3.html */,
-				164ED34E14A2082000C633C7 /* constitution_article_9_section_4.html */,
-				164ED34F14A2082000C633C7 /* constitution_article_9_section_5.html */,
-				164ED35014A2082000C633C7 /* constitution_article_9_section_6.html */,
-				164ED35114A2082000C633C7 /* constitution_article_9_section_7.html */,
-				164ED35214A2082000C633C7 /* constitution_article_9_section_8.html */,
-				164ED35314A2082000C633C7 /* constitution_article_9_section_9.html */,
+				164DF07814A294900087CBD2 /* constitution_article_9_section_1.html */,
+				164DF07914A294900087CBD2 /* constitution_article_9_section_10.html */,
+				164DF07A14A294900087CBD2 /* constitution_article_9_section_2.html */,
+				164DF07B14A294900087CBD2 /* constitution_article_9_section_3.html */,
+				164DF07C14A294900087CBD2 /* constitution_article_9_section_4.html */,
+				164DF07D14A294900087CBD2 /* constitution_article_9_section_5.html */,
+				164DF07E14A294900087CBD2 /* constitution_article_9_section_6.html */,
+				164DF07F14A294900087CBD2 /* constitution_article_9_section_7.html */,
+				164DF08014A294900087CBD2 /* constitution_article_9_section_8.html */,
+				164DF08114A294900087CBD2 /* constitution_article_9_section_9.html */,
 			);
 			path = article_9;
 			sourceTree = "<group>";
 		};
-		164ED35414A2082000C633C7 /* preamble */ = {
+		164DF08214A294900087CBD2 /* preamble */ = {
 			isa = PBXGroup;
 			children = (
-				164ED35514A2082000C633C7 /* constitution_preamble_index.html */,
+				164DF08314A294900087CBD2 /* constitution_preamble_index.html */,
 			);
 			path = preamble;
 			sourceTree = "<group>";
@@ -491,6 +574,10 @@
 				167EF24114A24D250058F8D1 /* SectionListViewController.m */,
 				167EF24514A251320058F8D1 /* SectionContentViewController.h */,
 				167EF24614A251320058F8D1 /* SectionContentViewController.m */,
+				164DF0F014A29D160087CBD2 /* SettingsViewController.h */,
+				164DF0F114A29D160087CBD2 /* SettingsViewController.m */,
+				169151A414A2C11D001E59C2 /* FavoritesViewController.h */,
+				169151A514A2C11D001E59C2 /* FavoritesViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -501,6 +588,8 @@
 				167EF1D914A23F790058F8D1 /* BookViewController.xib */,
 				167EF24214A24D250058F8D1 /* SectionListViewController.xib */,
 				167EF24714A251320058F8D1 /* SectionContentViewController.xib */,
+				164DF0F214A29D160087CBD2 /* SettingsViewController.xib */,
+				169151A614A2C11D001E59C2 /* FavoritesViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -550,31 +639,21 @@
 		16DD4CAA14A10D200063163D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				16DD4CBA14A10DB50063163D /* Resources */,
+				164DF01014A2948F0087CBD2 /* Books */,
+				164DF00A14A293CD0087CBD2 /* Images */,
+				1691519514A2BF3B001E59C2 /* Icon-72.png */,
+				1691519614A2BF3B001E59C2 /* Icon-Small-50.png */,
+				1691519714A2BF3B001E59C2 /* Icon-Small.png */,
+				1691519814A2BF3B001E59C2 /* Icon-Small@2x.png */,
+				1691519914A2BF3B001E59C2 /* Icon.png */,
+				1691519A14A2BF3B001E59C2 /* Icon@2x.png */,
+				1691519B14A2BF3B001E59C2 /* iTunesArtwork.png */,
 				16DD4CAB14A10D200063163D /* PuertoRicoLaw-Info.plist */,
 				16DD4CAC14A10D200063163D /* InfoPlist.strings */,
 				16DD4CAF14A10D200063163D /* main.m */,
 				16DD4CB114A10D200063163D /* PuertoRicoLaw-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		16DD4CBA14A10DB50063163D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				16DD4CBB14A10DB50063163D /* Books */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		16DD4CBB14A10DB50063163D /* Books */ = {
-			isa = PBXGroup;
-			children = (
-				164ED2E314A2082000C633C7 /* constitution */,
-				164ED27914A201D700C633C7 /* Constitution.plist */,
-				16DD4D9714A10E190063163D /* PuertoRicoLawBooks.plist */,
-			);
-			path = Books;
 			sourceTree = "<group>";
 		};
 		16DD4DA614A156690063163D /* Model + Data */ = {
@@ -650,115 +729,138 @@
 			buildActionMask = 2147483647;
 			files = (
 				16DD4CAE14A10D200063163D /* InfoPlist.strings in Resources */,
-				16DD4D9814A10E190063163D /* PuertoRicoLawBooks.plist in Resources */,
-				164ED2E214A201D700C633C7 /* Constitution.plist in Resources */,
-				164ED35614A2082000C633C7 /* constitution_article_1_section_1.html in Resources */,
-				164ED35714A2082000C633C7 /* constitution_article_1_section_2.html in Resources */,
-				164ED35814A2082000C633C7 /* constitution_article_1_section_3.html in Resources */,
-				164ED35914A2082000C633C7 /* constitution_article_1_section_4.html in Resources */,
-				164ED35A14A2082000C633C7 /* constitution_article_2_section_1.html in Resources */,
-				164ED35B14A2082000C633C7 /* constitution_article_2_section_10.html in Resources */,
-				164ED35C14A2082000C633C7 /* constitution_article_2_section_11.html in Resources */,
-				164ED35D14A2082000C633C7 /* constitution_article_2_section_12.html in Resources */,
-				164ED35E14A2082000C633C7 /* constitution_article_2_section_13.html in Resources */,
-				164ED35F14A2082000C633C7 /* constitution_article_2_section_14.html in Resources */,
-				164ED36014A2082000C633C7 /* constitution_article_2_section_15.html in Resources */,
-				164ED36114A2082000C633C7 /* constitution_article_2_section_16.html in Resources */,
-				164ED36214A2082000C633C7 /* constitution_article_2_section_17.html in Resources */,
-				164ED36314A2082000C633C7 /* constitution_article_2_section_18.html in Resources */,
-				164ED36414A2082000C633C7 /* constitution_article_2_section_19.html in Resources */,
-				164ED36514A2082000C633C7 /* constitution_article_2_section_2.html in Resources */,
-				164ED36614A2082000C633C7 /* constitution_article_2_section_20.html in Resources */,
-				164ED36714A2082000C633C7 /* constitution_article_2_section_3.html in Resources */,
-				164ED36814A2082000C633C7 /* constitution_article_2_section_4.html in Resources */,
-				164ED36914A2082000C633C7 /* constitution_article_2_section_5.html in Resources */,
-				164ED36A14A2082000C633C7 /* constitution_article_2_section_6.html in Resources */,
-				164ED36B14A2082000C633C7 /* constitution_article_2_section_7.html in Resources */,
-				164ED36C14A2082000C633C7 /* constitution_article_2_section_8.html in Resources */,
-				164ED36D14A2082000C633C7 /* constitution_article_2_section_9.html in Resources */,
-				164ED36E14A2082000C633C7 /* constitution_article_3_section_1.html in Resources */,
-				164ED36F14A2082000C633C7 /* constitution_article_3_section_10.html in Resources */,
-				164ED37014A2082000C633C7 /* constitution_article_3_section_11.html in Resources */,
-				164ED37114A2082000C633C7 /* constitution_article_3_section_12.html in Resources */,
-				164ED37214A2082000C633C7 /* constitution_article_3_section_13.html in Resources */,
-				164ED37314A2082000C633C7 /* constitution_article_3_section_14.html in Resources */,
-				164ED37414A2082000C633C7 /* constitution_article_3_section_15.html in Resources */,
-				164ED37514A2082000C633C7 /* constitution_article_3_section_16.html in Resources */,
-				164ED37614A2082000C633C7 /* constitution_article_3_section_17.html in Resources */,
-				164ED37714A2082000C633C7 /* constitution_article_3_section_18.html in Resources */,
-				164ED37814A2082000C633C7 /* constitution_article_3_section_19.html in Resources */,
-				164ED37914A2082000C633C7 /* constitution_article_3_section_2.html in Resources */,
-				164ED37A14A2082000C633C7 /* constitution_article_3_section_20.html in Resources */,
-				164ED37B14A2082000C633C7 /* constitution_article_3_section_21.html in Resources */,
-				164ED37C14A2082000C633C7 /* constitution_article_3_section_22.html in Resources */,
-				164ED37D14A2082000C633C7 /* constitution_article_3_section_3.html in Resources */,
-				164ED37E14A2082000C633C7 /* constitution_article_3_section_4.html in Resources */,
-				164ED37F14A2082000C633C7 /* constitution_article_3_section_5.html in Resources */,
-				164ED38014A2082000C633C7 /* constitution_article_3_section_6.html in Resources */,
-				164ED38114A2082000C633C7 /* constitution_article_3_section_7.html in Resources */,
-				164ED38214A2082000C633C7 /* constitution_article_3_section_8.html in Resources */,
-				164ED38314A2082000C633C7 /* constitution_article_3_section_9.html in Resources */,
-				164ED38414A2082000C633C7 /* constitution_article_4_section_1.html in Resources */,
-				164ED38514A2082000C633C7 /* constitution_article_4_section_10.html in Resources */,
-				164ED38614A2082000C633C7 /* constitution_article_4_section_2.html in Resources */,
-				164ED38714A2082000C633C7 /* constitution_article_4_section_3.html in Resources */,
-				164ED38814A2082000C633C7 /* constitution_article_4_section_4.html in Resources */,
-				164ED38914A2082000C633C7 /* constitution_article_4_section_5.html in Resources */,
-				164ED38A14A2082000C633C7 /* constitution_article_4_section_6.html in Resources */,
-				164ED38B14A2082000C633C7 /* constitution_article_4_section_7.html in Resources */,
-				164ED38C14A2082000C633C7 /* constitution_article_4_section_8.html in Resources */,
-				164ED38D14A2082000C633C7 /* constitution_article_4_section_9.html in Resources */,
-				164ED38E14A2082000C633C7 /* constitution_article_5_section_1.html in Resources */,
-				164ED38F14A2082000C633C7 /* constitution_article_5_section_10.html in Resources */,
-				164ED39014A2082000C633C7 /* constitution_article_5_section_11.html in Resources */,
-				164ED39114A2082000C633C7 /* constitution_article_5_section_12.html in Resources */,
-				164ED39214A2082000C633C7 /* constitution_article_5_section_13.html in Resources */,
-				164ED39314A2082000C633C7 /* constitution_article_5_section_2.html in Resources */,
-				164ED39414A2082000C633C7 /* constitution_article_5_section_3.html in Resources */,
-				164ED39514A2082000C633C7 /* constitution_article_5_section_4.html in Resources */,
-				164ED39614A2082000C633C7 /* constitution_article_5_section_5.html in Resources */,
-				164ED39714A2082000C633C7 /* constitution_article_5_section_6.html in Resources */,
-				164ED39814A2082000C633C7 /* constitution_article_5_section_7.html in Resources */,
-				164ED39914A2082000C633C7 /* constitution_article_5_section_8.html in Resources */,
-				164ED39A14A2082000C633C7 /* constitution_article_5_section_9.html in Resources */,
-				164ED39B14A2082000C633C7 /* constitution_article_6_section_1.html in Resources */,
-				164ED39C14A2082000C633C7 /* constitution_article_6_section_10.html in Resources */,
-				164ED39D14A2082000C633C7 /* constitution_article_6_section_11.html in Resources */,
-				164ED39E14A2082000C633C7 /* constitution_article_6_section_12.html in Resources */,
-				164ED39F14A2082000C633C7 /* constitution_article_6_section_13.html in Resources */,
-				164ED3A014A2082000C633C7 /* constitution_article_6_section_14.html in Resources */,
-				164ED3A114A2082000C633C7 /* constitution_article_6_section_15.html in Resources */,
-				164ED3A214A2082000C633C7 /* constitution_article_6_section_16.html in Resources */,
-				164ED3A314A2082000C633C7 /* constitution_article_6_section_17.html in Resources */,
-				164ED3A414A2082000C633C7 /* constitution_article_6_section_18.html in Resources */,
-				164ED3A514A2082000C633C7 /* constitution_article_6_section_19.html in Resources */,
-				164ED3A614A2082000C633C7 /* constitution_article_6_section_2.html in Resources */,
-				164ED3A714A2082000C633C7 /* constitution_article_6_section_3.html in Resources */,
-				164ED3A814A2082000C633C7 /* constitution_article_6_section_4.html in Resources */,
-				164ED3A914A2082000C633C7 /* constitution_article_6_section_5.html in Resources */,
-				164ED3AA14A2082000C633C7 /* constitution_article_6_section_6.html in Resources */,
-				164ED3AB14A2082000C633C7 /* constitution_article_6_section_7.html in Resources */,
-				164ED3AC14A2082000C633C7 /* constitution_article_6_section_8.html in Resources */,
-				164ED3AD14A2082000C633C7 /* constitution_article_6_section_9.html in Resources */,
-				164ED3AE14A2082000C633C7 /* constitution_article_7_section_1.html in Resources */,
-				164ED3AF14A2082000C633C7 /* constitution_article_7_section_2.html in Resources */,
-				164ED3B014A2082000C633C7 /* constitution_article_7_section_3.html in Resources */,
-				164ED3B114A2082000C633C7 /* constitution_article_8_section_1.html in Resources */,
-				164ED3B214A2082000C633C7 /* constitution_article_8_section_2.html in Resources */,
-				164ED3B314A2082000C633C7 /* constitution_article_9_section_1.html in Resources */,
-				164ED3B414A2082000C633C7 /* constitution_article_9_section_10.html in Resources */,
-				164ED3B514A2082000C633C7 /* constitution_article_9_section_2.html in Resources */,
-				164ED3B614A2082000C633C7 /* constitution_article_9_section_3.html in Resources */,
-				164ED3B714A2082000C633C7 /* constitution_article_9_section_4.html in Resources */,
-				164ED3B814A2082000C633C7 /* constitution_article_9_section_5.html in Resources */,
-				164ED3B914A2082000C633C7 /* constitution_article_9_section_6.html in Resources */,
-				164ED3BA14A2082000C633C7 /* constitution_article_9_section_7.html in Resources */,
-				164ED3BB14A2082000C633C7 /* constitution_article_9_section_8.html in Resources */,
-				164ED3BC14A2082000C633C7 /* constitution_article_9_section_9.html in Resources */,
-				164ED3BD14A2082000C633C7 /* constitution_preamble_index.html in Resources */,
 				167EF1DA14A23F790058F8D1 /* BookViewController.xib in Resources */,
 				167EF24414A24D250058F8D1 /* SectionListViewController.xib in Resources */,
 				167EF24914A251320058F8D1 /* SectionContentViewController.xib in Resources */,
+				164DF08614A294910087CBD2 /* constitution_article_1_section_1.html in Resources */,
+				164DF08714A294910087CBD2 /* constitution_article_1_section_2.html in Resources */,
+				164DF08814A294910087CBD2 /* constitution_article_1_section_3.html in Resources */,
+				164DF08914A294910087CBD2 /* constitution_article_1_section_4.html in Resources */,
+				164DF08A14A294910087CBD2 /* constitution_article_2_section_1.html in Resources */,
+				164DF08B14A294910087CBD2 /* constitution_article_2_section_10.html in Resources */,
+				164DF08C14A294910087CBD2 /* constitution_article_2_section_11.html in Resources */,
+				164DF08D14A294910087CBD2 /* constitution_article_2_section_12.html in Resources */,
+				164DF08E14A294910087CBD2 /* constitution_article_2_section_13.html in Resources */,
+				164DF08F14A294910087CBD2 /* constitution_article_2_section_14.html in Resources */,
+				164DF09014A294910087CBD2 /* constitution_article_2_section_15.html in Resources */,
+				164DF09114A294910087CBD2 /* constitution_article_2_section_16.html in Resources */,
+				164DF09214A294910087CBD2 /* constitution_article_2_section_17.html in Resources */,
+				164DF09314A294910087CBD2 /* constitution_article_2_section_18.html in Resources */,
+				164DF09414A294910087CBD2 /* constitution_article_2_section_19.html in Resources */,
+				164DF09514A294910087CBD2 /* constitution_article_2_section_2.html in Resources */,
+				164DF09614A294910087CBD2 /* constitution_article_2_section_20.html in Resources */,
+				164DF09714A294910087CBD2 /* constitution_article_2_section_3.html in Resources */,
+				164DF09814A294910087CBD2 /* constitution_article_2_section_4.html in Resources */,
+				164DF09914A294910087CBD2 /* constitution_article_2_section_5.html in Resources */,
+				164DF09A14A294910087CBD2 /* constitution_article_2_section_6.html in Resources */,
+				164DF09B14A294910087CBD2 /* constitution_article_2_section_7.html in Resources */,
+				164DF09C14A294910087CBD2 /* constitution_article_2_section_8.html in Resources */,
+				164DF09D14A294910087CBD2 /* constitution_article_2_section_9.html in Resources */,
+				164DF09E14A294910087CBD2 /* constitution_article_3_section_1.html in Resources */,
+				164DF09F14A294910087CBD2 /* constitution_article_3_section_10.html in Resources */,
+				164DF0A014A294910087CBD2 /* constitution_article_3_section_11.html in Resources */,
+				164DF0A114A294910087CBD2 /* constitution_article_3_section_12.html in Resources */,
+				164DF0A214A294910087CBD2 /* constitution_article_3_section_13.html in Resources */,
+				164DF0A314A294910087CBD2 /* constitution_article_3_section_14.html in Resources */,
+				164DF0A414A294910087CBD2 /* constitution_article_3_section_15.html in Resources */,
+				164DF0A514A294910087CBD2 /* constitution_article_3_section_16.html in Resources */,
+				164DF0A614A294910087CBD2 /* constitution_article_3_section_17.html in Resources */,
+				164DF0A714A294910087CBD2 /* constitution_article_3_section_18.html in Resources */,
+				164DF0A814A294910087CBD2 /* constitution_article_3_section_19.html in Resources */,
+				164DF0A914A294910087CBD2 /* constitution_article_3_section_2.html in Resources */,
+				164DF0AA14A294910087CBD2 /* constitution_article_3_section_20.html in Resources */,
+				164DF0AB14A294910087CBD2 /* constitution_article_3_section_21.html in Resources */,
+				164DF0AC14A294910087CBD2 /* constitution_article_3_section_22.html in Resources */,
+				164DF0AD14A294910087CBD2 /* constitution_article_3_section_3.html in Resources */,
+				164DF0AE14A294910087CBD2 /* constitution_article_3_section_4.html in Resources */,
+				164DF0AF14A294910087CBD2 /* constitution_article_3_section_5.html in Resources */,
+				164DF0B014A294910087CBD2 /* constitution_article_3_section_6.html in Resources */,
+				164DF0B114A294910087CBD2 /* constitution_article_3_section_7.html in Resources */,
+				164DF0B214A294910087CBD2 /* constitution_article_3_section_8.html in Resources */,
+				164DF0B314A294910087CBD2 /* constitution_article_3_section_9.html in Resources */,
+				164DF0B414A294910087CBD2 /* constitution_article_4_section_1.html in Resources */,
+				164DF0B514A294910087CBD2 /* constitution_article_4_section_10.html in Resources */,
+				164DF0B614A294910087CBD2 /* constitution_article_4_section_2.html in Resources */,
+				164DF0B714A294910087CBD2 /* constitution_article_4_section_3.html in Resources */,
+				164DF0B814A294910087CBD2 /* constitution_article_4_section_4.html in Resources */,
+				164DF0B914A294910087CBD2 /* constitution_article_4_section_5.html in Resources */,
+				164DF0BA14A294910087CBD2 /* constitution_article_4_section_6.html in Resources */,
+				164DF0BB14A294910087CBD2 /* constitution_article_4_section_7.html in Resources */,
+				164DF0BC14A294910087CBD2 /* constitution_article_4_section_8.html in Resources */,
+				164DF0BD14A294910087CBD2 /* constitution_article_4_section_9.html in Resources */,
+				164DF0BE14A294910087CBD2 /* constitution_article_5_section_1.html in Resources */,
+				164DF0BF14A294910087CBD2 /* constitution_article_5_section_10.html in Resources */,
+				164DF0C014A294910087CBD2 /* constitution_article_5_section_11.html in Resources */,
+				164DF0C114A294910087CBD2 /* constitution_article_5_section_12.html in Resources */,
+				164DF0C214A294910087CBD2 /* constitution_article_5_section_13.html in Resources */,
+				164DF0C314A294910087CBD2 /* constitution_article_5_section_2.html in Resources */,
+				164DF0C414A294910087CBD2 /* constitution_article_5_section_3.html in Resources */,
+				164DF0C514A294910087CBD2 /* constitution_article_5_section_4.html in Resources */,
+				164DF0C614A294910087CBD2 /* constitution_article_5_section_5.html in Resources */,
+				164DF0C714A294910087CBD2 /* constitution_article_5_section_6.html in Resources */,
+				164DF0C814A294910087CBD2 /* constitution_article_5_section_7.html in Resources */,
+				164DF0C914A294910087CBD2 /* constitution_article_5_section_8.html in Resources */,
+				164DF0CA14A294910087CBD2 /* constitution_article_5_section_9.html in Resources */,
+				164DF0CB14A294910087CBD2 /* constitution_article_6_section_1.html in Resources */,
+				164DF0CC14A294910087CBD2 /* constitution_article_6_section_10.html in Resources */,
+				164DF0CD14A294910087CBD2 /* constitution_article_6_section_11.html in Resources */,
+				164DF0CE14A294910087CBD2 /* constitution_article_6_section_12.html in Resources */,
+				164DF0CF14A294910087CBD2 /* constitution_article_6_section_13.html in Resources */,
+				164DF0D014A294910087CBD2 /* constitution_article_6_section_14.html in Resources */,
+				164DF0D114A294910087CBD2 /* constitution_article_6_section_15.html in Resources */,
+				164DF0D214A294910087CBD2 /* constitution_article_6_section_16.html in Resources */,
+				164DF0D314A294910087CBD2 /* constitution_article_6_section_17.html in Resources */,
+				164DF0D414A294910087CBD2 /* constitution_article_6_section_18.html in Resources */,
+				164DF0D514A294910087CBD2 /* constitution_article_6_section_19.html in Resources */,
+				164DF0D614A294910087CBD2 /* constitution_article_6_section_2.html in Resources */,
+				164DF0D714A294910087CBD2 /* constitution_article_6_section_3.html in Resources */,
+				164DF0D814A294910087CBD2 /* constitution_article_6_section_4.html in Resources */,
+				164DF0D914A294910087CBD2 /* constitution_article_6_section_5.html in Resources */,
+				164DF0DA14A294910087CBD2 /* constitution_article_6_section_6.html in Resources */,
+				164DF0DB14A294910087CBD2 /* constitution_article_6_section_7.html in Resources */,
+				164DF0DC14A294910087CBD2 /* constitution_article_6_section_8.html in Resources */,
+				164DF0DD14A294910087CBD2 /* constitution_article_6_section_9.html in Resources */,
+				164DF0DE14A294910087CBD2 /* constitution_article_7_section_1.html in Resources */,
+				164DF0DF14A294910087CBD2 /* constitution_article_7_section_2.html in Resources */,
+				164DF0E014A294910087CBD2 /* constitution_article_7_section_3.html in Resources */,
+				164DF0E114A294910087CBD2 /* constitution_article_8_section_1.html in Resources */,
+				164DF0E214A294910087CBD2 /* constitution_article_8_section_2.html in Resources */,
+				164DF0E314A294910087CBD2 /* constitution_article_9_section_1.html in Resources */,
+				164DF0E414A294910087CBD2 /* constitution_article_9_section_10.html in Resources */,
+				164DF0E514A294910087CBD2 /* constitution_article_9_section_2.html in Resources */,
+				164DF0E614A294910087CBD2 /* constitution_article_9_section_3.html in Resources */,
+				164DF0E714A294910087CBD2 /* constitution_article_9_section_4.html in Resources */,
+				164DF0E814A294910087CBD2 /* constitution_article_9_section_5.html in Resources */,
+				164DF0E914A294910087CBD2 /* constitution_article_9_section_6.html in Resources */,
+				164DF0EA14A294910087CBD2 /* constitution_article_9_section_7.html in Resources */,
+				164DF0EB14A294910087CBD2 /* constitution_article_9_section_8.html in Resources */,
+				164DF0EC14A294910087CBD2 /* constitution_article_9_section_9.html in Resources */,
+				164DF0ED14A294910087CBD2 /* constitution_preamble_index.html in Resources */,
+				164DF0EE14A294910087CBD2 /* Constitution.plist in Resources */,
+				164DF0EF14A294910087CBD2 /* PuertoRicoLawBooks.plist in Resources */,
+				164DF0F414A29D160087CBD2 /* SettingsViewController.xib in Resources */,
+				164DF0F714A2A14D0087CBD2 /* magnify_mini.png in Resources */,
+				164DF0F814A2A14D0087CBD2 /* magnify_mini@2x.png in Resources */,
+				164DF10714A2B1B90087CBD2 /* house.png in Resources */,
+				164DF10814A2B1B90087CBD2 /* house@2x.png in Resources */,
+				164DF10914A2B1B90087CBD2 /* left_arrow.png in Resources */,
+				164DF10A14A2B1B90087CBD2 /* left_arrow@2x.png in Resources */,
+				164DF10B14A2B1B90087CBD2 /* list.png in Resources */,
+				164DF10C14A2B1B90087CBD2 /* list@2x.png in Resources */,
+				164DF10D14A2B1B90087CBD2 /* right_arrow.png in Resources */,
+				164DF10E14A2B1B90087CBD2 /* right_arrow@2x.png in Resources */,
+				164DF10F14A2B1B90087CBD2 /* star.png in Resources */,
+				164DF11014A2B1B90087CBD2 /* star@2x.png in Resources */,
+				164DF11314A2B6B20087CBD2 /* gears.png in Resources */,
+				164DF11414A2B6B20087CBD2 /* gears@2x.png in Resources */,
+				1691519C14A2BF3B001E59C2 /* Icon-72.png in Resources */,
+				1691519D14A2BF3B001E59C2 /* Icon-Small-50.png in Resources */,
+				1691519E14A2BF3B001E59C2 /* Icon-Small.png in Resources */,
+				1691519F14A2BF3B001E59C2 /* Icon-Small@2x.png in Resources */,
+				169151A014A2BF3B001E59C2 /* Icon.png in Resources */,
+				169151A114A2BF3B001E59C2 /* Icon@2x.png in Resources */,
+				169151A214A2BF3B001E59C2 /* iTunesArtwork.png in Resources */,
+				169151A814A2C11D001E59C2 /* FavoritesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,6 +880,8 @@
 				167EF1D714A23DAA0058F8D1 /* BookViewController.m in Sources */,
 				167EF24314A24D250058F8D1 /* SectionListViewController.m in Sources */,
 				167EF24814A251320058F8D1 /* SectionContentViewController.m in Sources */,
+				164DF0F314A29D160087CBD2 /* SettingsViewController.m in Sources */,
+				169151A714A2C11D001E59C2 /* FavoritesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

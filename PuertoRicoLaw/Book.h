@@ -10,11 +10,12 @@
 
 @interface Book : NSObject
 
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *bookDescription;
-@property (nonatomic, strong) NSString *directory;
-@property (nonatomic, strong) NSArray *sections;
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *shortName;
+@property (strong, nonatomic) NSString *bookDescription;
+@property (strong, nonatomic) NSString *directory;
+@property (strong, nonatomic) NSArray *sections;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 - (void)loadSections;

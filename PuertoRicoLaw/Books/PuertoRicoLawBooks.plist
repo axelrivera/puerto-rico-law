@@ -7,6 +7,8 @@
 		<dict>
 			<key>bookName</key>
 			<string>Constitution</string>
+			<key>bookShortName</key>
+			<string>Constitución</string>
 			<key>bookTitle</key>
 			<string>Constitución del Estado Libre Asociado de Puerto Rico</string>
 			<key>bookDescription</key>
@@ -17,6 +19,8 @@
 		<dict>
 			<key>bookName</key>
 			<string>EticaProfesional</string>
+			<key>bookShortName</key>
+			<string>Etica</string>
 			<key>bookTitle</key>
 			<string>Código de Etica Profesional</string>
 			<key>bookDescription</key>
