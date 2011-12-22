@@ -133,7 +133,12 @@
 
 - (void)optionsAction:(id)sender
 {
-	
+	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+															 delegate:self
+													cancelButtonTitle:@"Cancelar"
+											   destructiveButtonTitle:nil
+													otherButtonTitles:@"Enviar E-mail", @"Agregar a Favoritos", nil];
+	[actionSheet showFromToolbar:self.navigationController.toolbar];
 }
 
 - (void)prevAction:(id)sender
@@ -166,6 +171,13 @@
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+}
+
+#pragma mark - UIActionSheet Delegate Methods
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	
 }
 
 @end

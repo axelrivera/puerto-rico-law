@@ -134,6 +134,7 @@
 		164DF11014A2B1B90087CBD2 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF10414A2B1B90087CBD2 /* star@2x.png */; };
 		164DF11314A2B6B20087CBD2 /* gears.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF11114A2B6B20087CBD2 /* gears.png */; };
 		164DF11414A2B6B20087CBD2 /* gears@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF11214A2B6B20087CBD2 /* gears@2x.png */; };
+		165BB8EE14A38758000F8BF3 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 165BB8ED14A38758000F8BF3 /* Settings.m */; };
 		167EF1D714A23DAA0058F8D1 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167EF1D614A23DAA0058F8D1 /* BookViewController.m */; };
 		167EF1DA14A23F790058F8D1 /* BookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167EF1D914A23F790058F8D1 /* BookViewController.xib */; };
 		167EF24314A24D250058F8D1 /* SectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167EF24114A24D250058F8D1 /* SectionListViewController.m */; };
@@ -290,6 +291,8 @@
 		164DF10414A2B1B90087CBD2 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
 		164DF11114A2B6B20087CBD2 /* gears.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gears.png; sourceTree = "<group>"; };
 		164DF11214A2B6B20087CBD2 /* gears@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gears@2x.png"; sourceTree = "<group>"; };
+		165BB8EC14A38758000F8BF3 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		165BB8ED14A38758000F8BF3 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		167EF1D514A23DAA0058F8D1 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
 		167EF1D614A23DAA0058F8D1 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
 		167EF1D914A23F790058F8D1 /* BookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookViewController.xib; sourceTree = "<group>"; };
@@ -677,6 +680,8 @@
 				16DD4DAB14A1569F0063163D /* Section.m */,
 				16DD4DAF14A16D1E0063163D /* BookData.h */,
 				16DD4DB014A16D1E0063163D /* BookData.m */,
+				165BB8EC14A38758000F8BF3 /* Settings.h */,
+				165BB8ED14A38758000F8BF3 /* Settings.m */,
 			);
 			name = "Model + Data";
 			sourceTree = "<group>";
@@ -898,6 +903,7 @@
 				167EF24814A251320058F8D1 /* SectionContentViewController.m in Sources */,
 				164DF0F314A29D160087CBD2 /* SettingsViewController.m in Sources */,
 				169151A714A2C11D001E59C2 /* FavoritesViewController.m in Sources */,
+				165BB8EE14A38758000F8BF3 /* Settings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@
 
 @class Section;
 
-@interface SectionContentViewController : UIViewController
+@interface SectionContentViewController : UIViewController <UIActionSheetDelegate>
 
 @property (unsafe_unretained, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) Section *section;

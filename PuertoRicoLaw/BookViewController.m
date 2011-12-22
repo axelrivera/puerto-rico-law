@@ -151,7 +151,6 @@
 	} else {
 		self.navigationItem.rightBarButtonItem = searchItem_;
 	}
-	[self.tableView reloadData];
 }
 
 #pragma mark - Selector Actions
@@ -203,17 +202,12 @@
     
 	Book *book = [bookData_.books objectAtIndex:indexPath.row];
 	
+	cell.showsReorderControl = YES;
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 	cell.textLabel.font = [UIFont systemFontOfSize:14.0];
 	cell.textLabel.text = book.title;
 	cell.detailTextLabel.text = book.bookDescription;
-	
-	if (tableView.editing) {
-		cell.imageView.image = [UIImage imageNamed:@"star_cell.png"];
-	} else {
-		cell.imageView.image = nil;
-	}
 	
     return cell;
 }
@@ -230,6 +224,7 @@
 	SectionListViewController *sectionController = [[SectionListViewController alloc] init];
 	sectionController.sectionTitle = bookData_.currentBook.shortName;
 	sectionController.sectionDataSource = bookData_.currentBook.sections;
+	sectionController.tableHeaderTitle = bookData_.currentBook.title;
 	self.title = kHomeNavigationLabel;
 	[self.navigationController pushViewController:sectionController animated:YES];
 }

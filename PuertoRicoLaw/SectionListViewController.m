@@ -18,8 +18,12 @@
 @end
 
 @implementation SectionListViewController
+{
+	UIView *headerView_;
+}
 
 @synthesize sectionTitle = sectionTitle_;
+@synthesize tableHeaderTitle = tableHeaderTitle_;
 @synthesize sectionDataSource = sectionDataSource_;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -71,6 +75,7 @@
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
 	    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 	} else {
+		//[headerView_ layoutSubviews];
 	    return YES;
 	}
 }
@@ -173,8 +178,40 @@
 		SectionListViewController *sectionController = [[SectionListViewController alloc] init];
 		sectionController.sectionTitle = section.label;
 		sectionController.sectionDataSource = section.children;
+		sectionController.tableHeaderTitle = section.title;
 		[self.navigationController pushViewController:sectionController animated:YES];
 	}
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+	CGRect screenRect = [UIScreen mainScreen].bounds;
+	CGRect headerFrame = CGRectMake(0.0, 0.0, screenRect.size.width, 52.0);
+	CGRect labelFrame = CGRectMake(10.0, 0.0, screenRect.size.width - 20.0, headerFrame.size.height);
+	
+	headerView_ = [[UIView alloc] initWithFrame:headerFrame];
+	headerView_.backgroundColor = [UIColor clearColor];
+	
+	UILabel *textLabel = [[UILabel alloc] initWithFrame:labelFrame];
+	textLabel.font = [UIFont boldSystemFontOfSize:16.0];
+	textLabel.backgroundColor = [UIColor clearColor];
+	textLabel.textColor = [UIColor darkGrayColor];
+	textLabel.textAlignment = UITextAlignmentCenter;
+	textLabel.numberOfLines = 2.0;
+	textLabel.lineBreakMode = UILineBreakModeTailTruncation;
+	textLabel.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
+	textLabel.shadowColor = [UIColor whiteColor];
+	textLabel.shadowOffset = CGSizeMake(0.0, -1.0);
+	textLabel.text = self.tableHeaderTitle;
+	
+	[headerView_ addSubview:textLabel];
+	
+	return headerView_;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+	return 52.0;
 }
 
 @end

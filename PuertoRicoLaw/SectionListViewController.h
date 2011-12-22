@@ -14,6 +14,7 @@
 @interface SectionListViewController : UITableViewController
 
 @property (strong, nonatomic) NSString *sectionTitle;
+@property (strong, nonatomic) NSString *tableHeaderTitle;
 @property (strong, nonatomic) NSArray *sectionDataSource;
 
 @end
