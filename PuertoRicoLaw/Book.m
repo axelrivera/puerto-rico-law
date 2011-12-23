@@ -17,11 +17,13 @@
 @synthesize bookDescription = bookDescription_;
 @synthesize directory = directory_;
 @synthesize sections = sections_;
+@synthesize favorite = favorite_;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
 	self = [super init];
 	if (self) {
+		favorite_ = NO;
 		name_ = [dictionary objectForKey:kBookNameKey];
 		shortName_ = [dictionary objectForKey:kBookShortNameKey];
 		title_ = [dictionary objectForKey:kBookTitleKey];

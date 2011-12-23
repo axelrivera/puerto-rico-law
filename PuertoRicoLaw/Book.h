@@ -16,6 +16,8 @@
 @property (strong, nonatomic) NSString *bookDescription;
 @property (strong, nonatomic) NSString *directory;
 @property (strong, nonatomic) NSArray *sections;
+@property (assign, nonatomic, getter = isFavorite) BOOL favorite;
+
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 - (void)loadSections;

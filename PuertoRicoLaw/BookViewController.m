@@ -12,6 +12,8 @@
 #import "SettingsViewController.h"
 #import "BookData.h"
 #import "Book.h"
+#import "BookTableView.h"
+#import "BookTableViewCell.h"
 
 @interface BookViewController (Private)
 
@@ -52,7 +54,8 @@
 	self.navigationController.toolbarHidden = NO;
 	[self setToolbarItems:[self toolbarItemsArray]];
 	
-	self.tableView.rowHeight = 48.0;
+	self.tableView.allowsSelectionDuringEditing = YES;
+	self.tableView.rowHeight = 64.0;
 	
 	searchItem_ = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"magnify_mini.png"]
 												   style:UIBarButtonItemStyleBordered
@@ -193,21 +196,24 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    NSString *CellIdentifier = [NSString stringWithFormat:@"Cell%d", indexPath.row];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    BookTableViewCell *cell = (BookTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[BookTableViewCell alloc] initWithReuseIdentifier:CellIdentifier];
+		BookTableView *bookTableView = [[BookTableView alloc] initWithFrame:CGRectZero];
+		[cell saveBookTableView:bookTableView];
     }
     
 	Book *book = [bookData_.books objectAtIndex:indexPath.row];
 	
+	cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 	cell.showsReorderControl = YES;
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-	cell.textLabel.font = [UIFont systemFontOfSize:14.0];
-	cell.textLabel.text = book.title;
-	cell.detailTextLabel.text = book.bookDescription;
+	
+	cell.bookTableView.textLabel.text = book.title;
+	cell.bookTableView.detailTextLabel.text = book.bookDescription;
+	cell.bookTableView.favorite = book.favorite;
 	
     return cell;
 }
@@ -217,16 +223,28 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	Book *book = [bookData_.books objectAtIndex:indexPath.row];
 	
-	bookData_.currentBook = [bookData_.books objectAtIndex:indexPath.row];
-	[bookData_.currentBook loadSections];
+	if (!tableView.isEditing) {
+		bookData_.currentBook = book;
+		[bookData_.currentBook loadSections];
+		
+		SectionListViewController *sectionController = [[SectionListViewController alloc] init];
+		sectionController.sectionTitle = bookData_.currentBook.shortName;
+		sectionController.sectionDataSource = bookData_.currentBook.sections;
+		sectionController.tableHeaderTitle = bookData_.currentBook.title;
+		self.title = kHomeNavigationLabel;
+		[self.navigationController pushViewController:sectionController animated:YES];
+		return;
+	}
+
+	BookTableViewCell *cell = (BookTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
 	
-	SectionListViewController *sectionController = [[SectionListViewController alloc] init];
-	sectionController.sectionTitle = bookData_.currentBook.shortName;
-	sectionController.sectionDataSource = bookData_.currentBook.sections;
-	sectionController.tableHeaderTitle = bookData_.currentBook.title;
-	self.title = kHomeNavigationLabel;
-	[self.navigationController pushViewController:sectionController animated:YES];
+	if (cell.bookTableView.isFavorite) {
+		cell.bookTableView.favorite = book.favorite = NO;
+	} else {
+		cell.bookTableView.favorite = book.favorite = YES;
+	}
 }
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
@@ -250,6 +268,11 @@
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	return YES;
+}
+
+- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	return NO;
 }
 
 @end
