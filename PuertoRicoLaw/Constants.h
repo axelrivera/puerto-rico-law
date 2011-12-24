@@ -8,6 +8,9 @@
 
 #define kHomeNavigationLabel @"Inicio"
 
+#define kToolbarPreviousItemIndex 2
+#define kToolbarNextItemIndex 4
+
 #define kBookListFileName @"PuertoRicoLawBooks"
 #define kBookListKey @"bookList"
 

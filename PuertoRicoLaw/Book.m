@@ -52,9 +52,12 @@
 		[sections addObject:section];
 	}
 	
+	Section *mainSection = [[Section alloc] initWithBook:self];
+	
 	if ([sections count] > 0) {
-		self.sections = [NSArray arrayWithArray:sections];
+		mainSection.children = (NSArray *)sections;
 	}
+	self.sections = [NSArray arrayWithObject:mainSection];
 }
 
 - (void)clearSections

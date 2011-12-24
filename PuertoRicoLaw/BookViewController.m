@@ -14,6 +14,7 @@
 #import "Book.h"
 #import "BookTableView.h"
 #import "BookTableViewCell.h"
+#import "Section.h"
 
 @interface BookViewController (Private)
 
@@ -229,10 +230,10 @@
 		bookData_.currentBook = book;
 		[bookData_.currentBook loadSections];
 		
+		Section *section = [bookData_.currentBook.sections objectAtIndex:0];
 		SectionListViewController *sectionController = [[SectionListViewController alloc] init];
-		sectionController.sectionTitle = bookData_.currentBook.shortName;
-		sectionController.sectionDataSource = bookData_.currentBook.sections;
-		sectionController.tableHeaderTitle = bookData_.currentBook.title;
+		sectionController.section = section;
+		sectionController.sectionDataSource = section.children;
 		self.title = kHomeNavigationLabel;
 		[self.navigationController pushViewController:sectionController animated:YES];
 		return;

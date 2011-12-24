@@ -89,19 +89,11 @@
 																				  target:nil
 																				  action:nil];
 	
-	UIBarButtonItem *fixedItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
-																			   target:nil
-																			   action:nil];
-	fixedItem.width = 50.0;
-	
 	UIBarButtonItem *homeItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"house.png"]
 																 style:UIBarButtonItemStylePlain
 																target:self
 																action:@selector(homeAction:)];
 	
-	UIBarButtonItem *optionsAction = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
-																				   target:self
-																				   action:@selector(optionsAction:)];
 	
 	UIBarButtonItem *prevItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"left_arrow.png"]
 																 style:UIBarButtonItemStylePlain
@@ -113,14 +105,18 @@
 																target:self
 																action:@selector(nextAction:)];
 	
+	UIBarButtonItem *optionsItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+																				 target:self
+																				 action:@selector(optionsAction:)];
+	
 	return [NSArray arrayWithObjects:
 			homeItem,
 			flexibleItem,
 			prevItem,
-			fixedItem,
+			flexibleItem,
 			nextItem,
 			flexibleItem,
-			optionsAction,
+			optionsItem,
 			nil];
 }
 

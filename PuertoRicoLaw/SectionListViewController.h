@@ -11,10 +11,11 @@
 @class Book;
 @class Section;
 
-@interface SectionListViewController : UITableViewController
+@interface SectionListViewController : UITableViewController <UIActionSheetDelegate>
 
-@property (strong, nonatomic) NSString *sectionTitle;
-@property (strong, nonatomic) NSString *tableHeaderTitle;
+@property (strong, nonatomic) Section *section;
 @property (strong, nonatomic) NSArray *sectionDataSource;
+@property (strong, nonatomic) NSArray *parentSections;
+@property (assign, nonatomic) NSInteger currentSectionIndex;
 
 @end

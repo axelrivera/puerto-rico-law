@@ -21,6 +21,7 @@
 @property (nonatomic, unsafe_unretained) Section *parent;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
+- (id)initWithBook:(Book *)book;
 - (id)initWithDictionary:(NSDictionary *)dictionary book:(Book *)book;
 
 @end

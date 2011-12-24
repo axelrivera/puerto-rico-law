@@ -10,9 +10,15 @@
 #import "SectionContentViewController.h"
 #import "Book.h"
 #import "Section.h"
+#import "SectionTableViewCell.h"
 
 @interface SectionListViewController (Private)
 
+- (void)checkGoNextItem;
+- (BOOL)canGoNext;
+- (void)checkGoPrevItem;
+- (BOOL)canGoPrev;
+- (void)reloadContentWithParentSectionAtIndex:(NSInteger)index;
 - (NSArray *)toolbarItemsArray;
 
 @end
@@ -20,17 +26,21 @@
 @implementation SectionListViewController
 {
 	UIView *headerView_;
+	UIBarButtonItem *prevItem_;
+	UIBarButtonItem *nextItem_;
 }
 
-@synthesize sectionTitle = sectionTitle_;
-@synthesize tableHeaderTitle = tableHeaderTitle_;
+@synthesize section = section_;
 @synthesize sectionDataSource = sectionDataSource_;
+@synthesize parentSections = parentSections_;
+@synthesize currentSectionIndex = currentSectionIndex_;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
 	self = [super initWithNibName:@"SectionListViewController" bundle:nil];
 	if (self) {
-		// Initialization Code
+		currentSectionIndex_ = 0;
+		parentSections_ = nil;
 	}
 	return self;
 }
@@ -49,6 +59,8 @@
 {
     [super viewDidLoad];
 	[self setToolbarItems:[self toolbarItemsArray]];
+	prevItem_ = [self.toolbarItems objectAtIndex:kToolbarPreviousItemIndex];
+	nextItem_ = [self.toolbarItems objectAtIndex:kToolbarNextItemIndex];
 }
 
 - (void)viewDidUnload
@@ -56,12 +68,16 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	prevItem_ = nil;
+	nextItem_ = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-	self.title = self.sectionTitle;
+	self.title = self.section.label;
+	[self checkGoNextItem];
+	[self checkGoPrevItem];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -82,16 +98,66 @@
 
 #pragma mark - Private Methods
 
+- (void)checkGoNextItem
+{
+	if ([self canGoNext]) {
+		nextItem_.enabled = YES;
+		return;
+	}
+	nextItem_.enabled = NO;
+}
+
+- (BOOL)canGoNext
+{
+	if (self.currentSectionIndex + 1 >= [self.parentSections count]) {
+		return NO;
+	}
+	return YES;
+}
+
+- (void)checkGoPrevItem
+{
+	if ([self canGoPrev]) {
+		prevItem_.enabled = YES;
+		return;
+	}
+	prevItem_.enabled = NO;
+}
+
+- (BOOL)canGoPrev
+{
+	if (self.currentSectionIndex - 1 < 0) {
+		return NO;
+	}
+	return YES;
+}
+
+- (void)reloadContentWithParentSectionAtIndex:(NSInteger)index
+{
+	Section *section = [self.parentSections objectAtIndex:index];
+	if (section.children == nil) {
+		NSMutableArray *viewControllers = [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
+		[viewControllers removeLastObject];
+		SectionContentViewController *contentController = [[SectionContentViewController alloc] init];
+		contentController.section = section;
+		[viewControllers addObject:contentController];
+		[self.navigationController setViewControllers:viewControllers];
+		return;
+	}
+	self.title = section.label;
+	self.section = section;
+	self.sectionDataSource = section.children;
+	[self.tableView reloadData];
+	[self.tableView setContentOffset:CGPointZero animated:NO];
+	[self checkGoNextItem];
+	[self checkGoPrevItem];
+}
+
 - (NSArray *)toolbarItemsArray
 {
 	UIBarButtonItem *flexibleItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
 																				  target:nil
 																				  action:nil];
-	
-	UIBarButtonItem *fixedItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
-																			   target:nil
-																			   action:nil];
-	fixedItem.width = 50.0;
 	
 	UIBarButtonItem *homeItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"house.png"]
 																 style:UIBarButtonItemStylePlain
@@ -108,13 +174,18 @@
 																	target:self
 																	action:@selector(nextAction:)];
 	
+	UIBarButtonItem *optionsItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+																				 target:self
+																				 action:@selector(optionsAction:)];
+	
 	return [NSArray arrayWithObjects:
 			homeItem,
 			flexibleItem,
 			prevItem,
-			fixedItem,
+			flexibleItem,
 			nextItem,
 			flexibleItem,
+			optionsItem,
 			nil];
 }
 
@@ -125,14 +196,30 @@
 	[self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+- (void)optionsAction:(id)sender
+{
+	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+															 delegate:self
+													cancelButtonTitle:@"Cancelar"
+											   destructiveButtonTitle:nil
+													otherButtonTitles:@"Agregar a Favoritos", nil];
+	[actionSheet showFromToolbar:self.navigationController.toolbar];
+}
+
 - (void)prevAction:(id)sender
 {
-	
+	if ([self canGoPrev]) {
+		self.currentSectionIndex--;
+		[self reloadContentWithParentSectionAtIndex:self.currentSectionIndex];
+	}
 }
 
 - (void)nextAction:(id)sender
 {
-	
+	if ([self canGoNext]) {
+		self.currentSectionIndex++;
+		[self reloadContentWithParentSectionAtIndex:self.currentSectionIndex];
+	}
 }
 
 #pragma mark - Table view data source
@@ -146,18 +233,16 @@
 {
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    SectionTableViewCell *cell = (SectionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier];
+        cell = [[SectionTableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier];
     }
 	
 	Section *section = [self.sectionDataSource objectAtIndex:indexPath.row];
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-	cell.textLabel.font = [UIFont boldSystemFontOfSize:12.0];
 	cell.textLabel.text = section.label;
-	cell.detailTextLabel.font = [UIFont boldSystemFontOfSize:12.0];
 	cell.detailTextLabel.text = section.title;
     
     return cell;
@@ -176,9 +261,11 @@
 		[self.navigationController pushViewController:contentController animated:YES];
 	} else {
 		SectionListViewController *sectionController = [[SectionListViewController alloc] init];
-		sectionController.sectionTitle = section.label;
+		sectionController.title = section.label;
+		sectionController.section = section;
 		sectionController.sectionDataSource = section.children;
-		sectionController.tableHeaderTitle = section.title;
+		sectionController.parentSections = self.sectionDataSource;
+		sectionController.currentSectionIndex = indexPath.row;
 		[self.navigationController pushViewController:sectionController animated:YES];
 	}
 }
@@ -202,7 +289,7 @@
 	textLabel.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
 	textLabel.shadowColor = [UIColor whiteColor];
 	textLabel.shadowOffset = CGSizeMake(0.0, -1.0);
-	textLabel.text = self.tableHeaderTitle;
+	textLabel.text = self.section.title;
 	
 	[headerView_ addSubview:textLabel];
 	
@@ -212,6 +299,13 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
 	return 52.0;
+}
+
+#pragma mark - UIActionSheet Delegate Methods
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	
 }
 
 @end

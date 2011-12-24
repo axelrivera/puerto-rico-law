@@ -53,6 +53,21 @@
 	return self;
 }
 
+- (id)initWithBook:(Book *)book
+{
+	self = [super init];
+	if (self) {
+		title_ = book.title;
+		label_ = book.shortName;
+		directory_ = nil;
+		book_ = nil;
+		parent_ = nil;
+		contentFile_ = nil;
+		children_ = nil;
+	}
+	return self;
+}
+
 - (void)dealloc
 {
 	book_ = nil;
