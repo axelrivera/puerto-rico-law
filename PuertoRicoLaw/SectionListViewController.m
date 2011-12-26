@@ -32,15 +32,15 @@
 
 @synthesize section = section_;
 @synthesize sectionDataSource = sectionDataSource_;
-@synthesize parentSections = parentSections_;
-@synthesize currentSectionIndex = currentSectionIndex_;
+@synthesize siblingSections = siblingSections_;
+@synthesize currentSiblingSectionIndex = currentSiblingSectionIndex_;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
 	self = [super initWithNibName:@"SectionListViewController" bundle:nil];
 	if (self) {
-		currentSectionIndex_ = 0;
-		parentSections_ = nil;
+		currentSiblingSectionIndex_ = 0;
+		siblingSections_ = nil;
 	}
 	return self;
 }
@@ -59,8 +59,8 @@
 {
     [super viewDidLoad];
 	[self setToolbarItems:[self toolbarItemsArray]];
-	prevItem_ = [self.toolbarItems objectAtIndex:kToolbarPreviousItemIndex];
-	nextItem_ = [self.toolbarItems objectAtIndex:kToolbarNextItemIndex];
+	prevItem_ = [self.toolbarItems objectAtIndex:kToolbarItemPosition2];
+	nextItem_ = [self.toolbarItems objectAtIndex:kToolbarItemPosition3];
 }
 
 - (void)viewDidUnload
@@ -109,7 +109,7 @@
 
 - (BOOL)canGoNext
 {
-	if (self.currentSectionIndex + 1 >= [self.parentSections count]) {
+	if (self.currentSiblingSectionIndex + 1 >= [self.siblingSections count]) {
 		return NO;
 	}
 	return YES;
@@ -126,7 +126,7 @@
 
 - (BOOL)canGoPrev
 {
-	if (self.currentSectionIndex - 1 < 0) {
+	if (self.currentSiblingSectionIndex - 1 < 0) {
 		return NO;
 	}
 	return YES;
@@ -134,12 +134,14 @@
 
 - (void)reloadContentWithParentSectionAtIndex:(NSInteger)index
 {
-	Section *section = [self.parentSections objectAtIndex:index];
+	Section *section = [self.siblingSections objectAtIndex:index];
 	if (section.children == nil) {
 		NSMutableArray *viewControllers = [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
 		[viewControllers removeLastObject];
 		SectionContentViewController *contentController = [[SectionContentViewController alloc] init];
 		contentController.section = section;
+		contentController.siblingSections = self.siblingSections;
+		contentController.currentSiblingSectionIndex = index;
 		[viewControllers addObject:contentController];
 		[self.navigationController setViewControllers:viewControllers];
 		return;
@@ -209,16 +211,16 @@
 - (void)prevAction:(id)sender
 {
 	if ([self canGoPrev]) {
-		self.currentSectionIndex--;
-		[self reloadContentWithParentSectionAtIndex:self.currentSectionIndex];
+		self.currentSiblingSectionIndex--;
+		[self reloadContentWithParentSectionAtIndex:self.currentSiblingSectionIndex];
 	}
 }
 
 - (void)nextAction:(id)sender
 {
 	if ([self canGoNext]) {
-		self.currentSectionIndex++;
-		[self reloadContentWithParentSectionAtIndex:self.currentSectionIndex];
+		self.currentSiblingSectionIndex++;
+		[self reloadContentWithParentSectionAtIndex:self.currentSiblingSectionIndex];
 	}
 }
 
@@ -258,14 +260,16 @@
 	if (section.children == nil) {
 		SectionContentViewController *contentController = [[SectionContentViewController alloc] init];
 		contentController.section = section;
+		contentController.siblingSections = self.sectionDataSource;
+		contentController.currentSiblingSectionIndex = indexPath.row;
 		[self.navigationController pushViewController:contentController animated:YES];
 	} else {
 		SectionListViewController *sectionController = [[SectionListViewController alloc] init];
 		sectionController.title = section.label;
 		sectionController.section = section;
 		sectionController.sectionDataSource = section.children;
-		sectionController.parentSections = self.sectionDataSource;
-		sectionController.currentSectionIndex = indexPath.row;
+		sectionController.siblingSections = self.sectionDataSource;
+		sectionController.currentSiblingSectionIndex = indexPath.row;
 		[self.navigationController pushViewController:sectionController animated:YES];
 	}
 }

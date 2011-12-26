@@ -13,58 +13,56 @@
 
 @synthesize title = title_;
 @synthesize label = label_;
-@synthesize directory = directory_;
 @synthesize contentFile = contentFile_;
 @synthesize children = children_;
 @synthesize book = book_;
 @synthesize parent = parent_;
 
-- (id)initWithDictionary:(NSDictionary *)dictionary
-{
-	self = [self initWithDictionary:dictionary book:nil];
-	return self;
-}
-
-- (id)initWithDictionary:(NSDictionary *)dictionary book:(Book *)book
+- (id)initWithBook:(Book *)book
 {
 	self = [super init];
 	if (self) {
-		title_ = [dictionary objectForKey:kSectionTitleKey];
-		label_ = [dictionary objectForKey:kSectionLabelKey];
-		directory_ = [dictionary objectForKey:kSectionDirectoryKey];
-		book_ = book;
-		parent_ = nil;
+		self.title = book.title;
+		self.label = book.shortName;
+		self.book = book;
+		self.parent	= nil;
+		self.contentFile = nil;
+		self.children = nil;
+	}
+	return self;
+}
+
+- (id)initWithBook:(Book *)book andDictionary:(NSDictionary *)dictionary
+{
+	self = [super init];
+	if (self) {
+		self.title = [dictionary objectForKey:kSectionTitleKey];
+		self.label = [dictionary objectForKey:kSectionLabelKey];
+		self.book = book;
+		self.parent = nil;
+		self.children = nil;
 		
 		if ([dictionary objectForKey:kSectionContentFileKey]) {
-			contentFile_ = [dictionary objectForKey:kSectionContentFileKey];
+			self.contentFile = [dictionary objectForKey:kSectionContentFileKey];
 		}
 		
 		if ([dictionary objectForKey:kSectionChildrenKey]) {
 			NSArray *sectionArray = [dictionary objectForKey:kSectionChildrenKey];
 			NSMutableArray *children = [[NSMutableArray alloc] initWithCapacity:[sectionArray count]];
 			for (NSDictionary *child in sectionArray) {
-				Section *section = [[Section alloc] initWithDictionary:child];
+				Section *section = [[Section alloc] initWithBook:self.book andDictionary:child];
 				section.parent = self;
 				[children addObject:section];
 			}
-			children_ = [NSArray arrayWithArray:children];
+			self.children = (NSArray *)children;
 		}
 	}
 	return self;
 }
 
-- (id)initWithBook:(Book *)book
+- (id)initWithDictionary:(NSDictionary *)dictionary
 {
-	self = [super init];
-	if (self) {
-		title_ = book.title;
-		label_ = book.shortName;
-		directory_ = nil;
-		book_ = nil;
-		parent_ = nil;
-		contentFile_ = nil;
-		children_ = nil;
-	}
+	self = [self initWithBook:nil andDictionary:dictionary];
 	return self;
 }
 
@@ -72,6 +70,11 @@
 {
 	book_ = nil;
 	parent_ = nil;
+}
+
+- (NSString *)description
+{
+	return [NSString stringWithFormat:@"Title: %@, Label: %@, Content File: %@", self.title, self.label, self.contentFile];
 }
 
 @end

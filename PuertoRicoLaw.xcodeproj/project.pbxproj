@@ -153,6 +153,7 @@
 		169151A214A2BF3B001E59C2 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519B14A2BF3B001E59C2 /* iTunesArtwork.png */; };
 		169151A714A2C11D001E59C2 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 169151A514A2C11D001E59C2 /* FavoritesViewController.m */; };
 		169151A814A2C11D001E59C2 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169151A614A2C11D001E59C2 /* FavoritesViewController.xib */; };
+		16D8D96514A8E1CE00E88215 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D8D96414A8E1CE00E88215 /* MessageUI.framework */; };
 		16DD4CA414A10D200063163D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DD4CA314A10D200063163D /* UIKit.framework */; };
 		16DD4CA614A10D200063163D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DD4CA514A10D200063163D /* Foundation.framework */; };
 		16DD4CA814A10D200063163D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DD4CA714A10D200063163D /* CoreGraphics.framework */; };
@@ -321,6 +322,7 @@
 		169151A414A2C11D001E59C2 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
 		169151A514A2C11D001E59C2 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
 		169151A614A2C11D001E59C2 /* FavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
+		16D8D96414A8E1CE00E88215 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		16DD4C9F14A10D200063163D /* PuertoRicoLaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuertoRicoLaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16DD4CA314A10D200063163D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		16DD4CA514A10D200063163D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -345,6 +347,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16D8D96514A8E1CE00E88215 /* MessageUI.framework in Frameworks */,
 				16DD4CA414A10D200063163D /* UIKit.framework in Frameworks */,
 				16DD4CA614A10D200063163D /* Foundation.framework in Frameworks */,
 				16DD4CA814A10D200063163D /* CoreGraphics.framework in Frameworks */,
@@ -664,6 +667,7 @@
 		16DD4CA214A10D200063163D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				16D8D96414A8E1CE00E88215 /* MessageUI.framework */,
 				16DD4CA314A10D200063163D /* UIKit.framework */,
 				16DD4CA514A10D200063163D /* Foundation.framework */,
 				16DD4CA714A10D200063163D /* CoreGraphics.framework */,

@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
 @class Section;
 
-@interface SectionContentViewController : UIViewController <UIActionSheetDelegate>
+@interface SectionContentViewController : UIViewController <UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
 
 @property (unsafe_unretained, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) Section *section;
+@property (strong, nonatomic) NSArray *siblingSections;
+@property (assign, nonatomic) NSInteger currentSiblingSectionIndex;
 
 @end

@@ -14,14 +14,13 @@
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *label;
-@property (nonatomic, strong) NSString *directory;
 @property (nonatomic, strong) NSString *contentFile;
 @property (nonatomic, strong) NSArray *children;
 @property (nonatomic, unsafe_unretained) Book *book;
 @property (nonatomic, unsafe_unretained) Section *parent;
 
-- (id)initWithDictionary:(NSDictionary *)dictionary;
 - (id)initWithBook:(Book *)book;
-- (id)initWithDictionary:(NSDictionary *)dictionary book:(Book *)book;
+- (id)initWithBook:(Book *)book andDictionary:(NSDictionary *)dictionary;
+- (id)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

@@ -230,7 +230,7 @@
 		bookData_.currentBook = book;
 		[bookData_.currentBook loadSections];
 		
-		Section *section = [bookData_.currentBook.sections objectAtIndex:0];
+		Section *section = bookData_.currentBook.mainSection;
 		SectionListViewController *sectionController = [[SectionListViewController alloc] init];
 		sectionController.section = section;
 		sectionController.sectionDataSource = section.children;

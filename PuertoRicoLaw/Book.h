@@ -8,14 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class Section;
+
 @interface Book : NSObject
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *shortName;
 @property (strong, nonatomic) NSString *bookDescription;
-@property (strong, nonatomic) NSString *directory;
-@property (strong, nonatomic) NSArray *sections;
+@property (strong, nonatomic) Section *mainSection;
 @property (assign, nonatomic, getter = isFavorite) BOOL favorite;
 
 

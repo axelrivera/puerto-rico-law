@@ -15,7 +15,7 @@
 
 @property (strong, nonatomic) Section *section;
 @property (strong, nonatomic) NSArray *sectionDataSource;
-@property (strong, nonatomic) NSArray *parentSections;
-@property (assign, nonatomic) NSInteger currentSectionIndex;
+@property (strong, nonatomic) NSArray *siblingSections;
+@property (assign, nonatomic) NSInteger currentSiblingSectionIndex;
 
 @end

@@ -15,29 +15,29 @@
 @synthesize shortName = shortName_;
 @synthesize title = title_;
 @synthesize bookDescription = bookDescription_;
-@synthesize directory = directory_;
-@synthesize sections = sections_;
+@synthesize mainSection = mainSection_;
 @synthesize favorite = favorite_;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
 	self = [super init];
 	if (self) {
-		favorite_ = NO;
-		name_ = [dictionary objectForKey:kBookNameKey];
-		shortName_ = [dictionary objectForKey:kBookShortNameKey];
-		title_ = [dictionary objectForKey:kBookTitleKey];
-		bookDescription_ = [dictionary objectForKey:kBookDescriptionKey];
-		directory_ = [dictionary objectForKey:kBookDirectoryKey];
+		self.favorite = NO;
+		self.name = [dictionary objectForKey:kBookNameKey];
+		self.shortName = [dictionary objectForKey:kBookShortNameKey];
+		self.title = [dictionary objectForKey:kBookTitleKey];
+		self.bookDescription = [dictionary objectForKey:kBookDescriptionKey];
 	}
 	return self;
 }
 
 - (void)loadSections
 {
-	if (self.sections) {
+	if (self.mainSection) {
 		[self clearSections];
 	}
+	
+	self.mainSection = [[Section alloc] initWithBook:self];
 	
 	NSString *plistPath = [[NSBundle mainBundle] pathForResource:self.name ofType:@"plist"]; 
     
@@ -48,21 +48,19 @@
 	NSMutableArray *sections = [[NSMutableArray alloc] initWithCapacity:[sectionArray count]];
 	
 	for (NSDictionary *dictionary in sectionArray) {
-		Section *section = [[Section alloc] initWithDictionary:dictionary];
+		Section *section = [[Section alloc] initWithBook:self andDictionary:dictionary];
+		section.parent = self.mainSection;
 		[sections addObject:section];
 	}
 	
-	Section *mainSection = [[Section alloc] initWithBook:self];
-	
 	if ([sections count] > 0) {
-		mainSection.children = (NSArray *)sections;
+		self.mainSection.children = (NSArray *)sections;
 	}
-	self.sections = [NSArray arrayWithObject:mainSection];
 }
 
 - (void)clearSections
 {
-	self.sections = nil;
+	self.mainSection = nil;
 }
 
 @end
