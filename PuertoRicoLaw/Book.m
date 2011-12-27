@@ -19,17 +19,22 @@
 @synthesize date = date_;
 @synthesize mainSection = mainSection_;
 @synthesize favorite = favorite_;
+@synthesize favoritesTitle = favoritesTitle_;
+@synthesize favorites = favorites_;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
 	self = [super init];
 	if (self) {
-		self.favorite = NO;
 		self.name = [dictionary objectForKey:kBookNameKey];
 		self.shortName = [dictionary objectForKey:kBookShortNameKey];
 		self.title = [dictionary objectForKey:kBookTitleKey];
 		self.bookDescription = [dictionary objectForKey:kBookDescriptionKey];
 		self.date = [dictionary objectForKey:kBookDateKey];
+		self.favoritesTitle = [dictionary objectForKey:kBookFavoritesTitleKey];
+		self.mainSection = nil;
+		self.favorite = NO;
+		self.favorites = [[NSMutableArray alloc] initWithCapacity:0];
 	}
 	return self;
 }
@@ -39,13 +44,15 @@
 	self = [super init];  // this needs to be [super initWithCoder:aDecoder] if the superclass implements NSCoding
 	if (self) {
 		//self.object = [decoder decodeObjectForKey:@"objectName"];
-		self.favorite = [decoder decodeBoolForKey:@"bookFavorite"];
 		self.name = [decoder decodeObjectForKey:@"bookName"];
 		self.shortName = [decoder decodeObjectForKey:@"bookShortName"];
 		self.title = [decoder decodeObjectForKey:@"bookTitle"];
 		self.bookDescription = [decoder decodeObjectForKey:@"bookBookDescription"];
 		self.date = [decoder decodeObjectForKey:@"bookDate"];
 		self.mainSection = [decoder decodeObjectForKey:@"bookMainSection"];
+		self.favorite = [decoder decodeBoolForKey:@"bookFavorite"];
+		self.favoritesTitle = [decoder decodeObjectForKey:@"bookFavoritesTitle"];
+		self.favorites = [decoder decodeObjectForKey:@"bookFavorites"];
 	}
 	return self;
 }
@@ -54,13 +61,15 @@
 {
 	// add [super encodeWithCoder:encoder] if the superclass implements NSCoding
 	//[encoder encodeObject:object forKey:@"objectName"];
-	[encoder encodeBool:self.isFavorite forKey:@"bookFavorite"];
 	[encoder encodeObject:self.name forKey:@"bookName"];
 	[encoder encodeObject:self.shortName forKey:@"bookShortName"];
 	[encoder encodeObject:self.title forKey:@"bookTitle"];
 	[encoder encodeObject:self.bookDescription forKey:@"bookBookDescription"];
 	[encoder encodeObject:self.date forKey:@"bookDate"];
 	[encoder encodeObject:self.mainSection forKey:@"bookMainSection"];
+	[encoder encodeBool:self.isFavorite forKey:@"bookFavorite"];
+	[encoder encodeObject:self.favoritesTitle forKey:@"bookFavoritesTitle"];
+	[encoder encodeObject:self.favorites forKey:@"bookFavorites"];
 }
 
 - (void)loadSections

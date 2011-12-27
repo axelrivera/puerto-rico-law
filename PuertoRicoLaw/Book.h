@@ -19,7 +19,8 @@
 @property (strong, nonatomic) NSDate *date;
 @property (strong, nonatomic) Section *mainSection;
 @property (assign, nonatomic, getter = isFavorite) BOOL favorite;
-
+@property (strong, nonatomic) NSString *favoritesTitle;
+@property (strong, nonatomic) NSMutableArray *favorites;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 - (void)loadSections;

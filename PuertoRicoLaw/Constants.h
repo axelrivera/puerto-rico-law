@@ -12,6 +12,7 @@
 #define kToolbarItemPosition2 2
 #define kToolbarItemPosition3 4
 #define kToolbarItemPosition4 6
+#define kToolbarItemPosition5 8
 
 #define kBookListFileName @"PuertoRicoLawBooks"
 #define kBookListKey @"bookList"
@@ -19,6 +20,7 @@
 #define kBookNameKey @"bookName"
 #define kBookShortNameKey @"bookShortName"
 #define kBookTitleKey @"bookTitle"
+#define kBookFavoritesTitleKey @"bookFavoritesTitle"
 #define kBookDescriptionKey @"bookDescription"
 #define kBookDateKey @"bookDate"
 

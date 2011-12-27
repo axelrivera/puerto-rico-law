@@ -8,6 +8,7 @@
 
 #import "SectionContentViewController.h"
 #import "SectionListViewController.h"
+#import "FavoritesViewController.h"
 #import "Book.h"
 #import "Section.h"
 #import "BookData.h"
@@ -48,6 +49,7 @@
 		bookData_ = [BookData sharedBookData];
 		siblingSections_ = nil;
 		currentSiblingSectionIndex_ = 0;
+		fileContentStr_ = nil;
 	}
 	return self;
 }
@@ -84,12 +86,13 @@
 {
 	[super viewWillAppear:animated];
 	self.title = self.section.label;
-	fileContentStr_ = [self fileContentString];
-	[self.webView loadHTMLString:[self htmlStringForSection] baseURL:nil];
+	if (fileContentStr_ == nil) {
+		fileContentStr_ = [self fileContentString];
+		[self.webView loadHTMLString:[self htmlStringForSection] baseURL:nil];
+	}
 	[self checkGoNextItem];
 	[self checkGoPrevItem];	
 	favoriteIndex_ = [bookData_ unsignedIndexOfFavoriteContentWithMd5String:[self.section md5String]];
-	NSLog(@"%i", favoriteIndex_);
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -241,6 +244,11 @@
 																target:self
 																action:@selector(nextAction:)];
 	
+	UIBarButtonItem *favoritesItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"star.png"]
+																	  style:UIBarButtonItemStylePlain
+																	 target:self
+																	 action:@selector(favoritesAction:)];
+	
 	UIBarButtonItem *optionsItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
 																				 target:self
 																				 action:@selector(optionsAction:)];
@@ -252,6 +260,8 @@
 			flexibleItem,
 			nextItem,
 			flexibleItem,
+			favoritesItem,
+			flexibleItem,
 			optionsItem,
 			nil];
 }
@@ -261,6 +271,15 @@
 - (void)homeAction:(id)sender
 {
 	[self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (void)favoritesAction:(id)sender
+{
+	FavoritesViewController *favoritesController = [[FavoritesViewController alloc] initWithFavoritesType:FavoritesTypeSection];
+	favoritesController.favoritesDataSource = self.section.book.favorites;
+	favoritesController.navigationItem.prompt = self.section.book.favoritesTitle;
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:favoritesController];
+	[self presentModalViewController:navigationController animated:YES];	
 }
 
 - (void)optionsAction:(id)sender

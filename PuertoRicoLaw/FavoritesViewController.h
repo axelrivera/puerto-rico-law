@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+	FavoritesTypeSection,
+	FavoritesTypeBook
+} FavoritesType;
+
 @interface FavoritesViewController : UITableViewController
+
+@property (assign, readonly, nonatomic) FavoritesType favoritesType;
+@property (strong, nonatomic) NSMutableArray *favoritesDataSource;
+
+- (id)initWithFavoritesType:(FavoritesType)type;
 
 @end

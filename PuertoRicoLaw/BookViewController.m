@@ -176,7 +176,8 @@
 
 - (void)favoritesAction:(id)sender
 {
-	FavoritesViewController *favoritesController = [[FavoritesViewController alloc] init];
+	FavoritesViewController *favoritesController = [[FavoritesViewController alloc] initWithFavoritesType:FavoritesTypeBook];
+	favoritesController.favoritesDataSource = bookData_.favoriteBooks;
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:favoritesController];
 	[self presentModalViewController:navigationController animated:YES];
 }

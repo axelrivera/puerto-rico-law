@@ -8,6 +8,7 @@
 
 #import "SectionListViewController.h"
 #import "SectionContentViewController.h"
+#import "FavoritesViewController.h"
 #import "Book.h"
 #import "Section.h"
 #import "SectionTableViewCell.h"
@@ -182,6 +183,11 @@
 																	target:self
 																	action:@selector(nextAction:)];
 	
+	UIBarButtonItem *favoritesItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"star.png"]
+																	  style:UIBarButtonItemStylePlain
+																	 target:self
+																	 action:@selector(favoritesAction:)];
+	
 	UIBarButtonItem *optionsItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
 																				 target:self
 																				 action:@selector(optionsAction:)];
@@ -193,6 +199,8 @@
 			flexibleItem,
 			nextItem,
 			flexibleItem,
+			favoritesItem,
+			flexibleItem,
 			optionsItem,
 			nil];
 }
@@ -202,6 +210,15 @@
 - (void)homeAction:(id)sender
 {
 	[self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (void)favoritesAction:(id)sender
+{
+	FavoritesViewController *favoritesController = [[FavoritesViewController alloc] initWithFavoritesType:FavoritesTypeSection];
+	favoritesController.favoritesDataSource = self.section.book.favorites;
+	favoritesController.navigationItem.prompt = self.section.book.favoritesTitle;
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:favoritesController];
+	[self presentModalViewController:navigationController animated:YES];
 }
 
 - (void)optionsAction:(id)sender
