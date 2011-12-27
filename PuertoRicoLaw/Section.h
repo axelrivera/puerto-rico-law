@@ -10,7 +10,7 @@
 
 @class Book;
 
-@interface Section : NSObject
+@interface Section : NSObject <NSCoding>
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *label;
@@ -22,5 +22,8 @@
 - (id)initWithBook:(Book *)book;
 - (id)initWithBook:(Book *)book andDictionary:(NSDictionary *)dictionary;
 - (id)initWithDictionary:(NSDictionary *)dictionary;
+- (id)initWithData:(NSData *)data;
+- (NSString *)md5String;
+- (NSData *)serialize;
 
 @end

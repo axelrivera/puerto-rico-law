@@ -10,7 +10,7 @@
 
 @class Section;
 
-@interface Book : NSObject
+@interface Book : NSObject <NSCoding>
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *title;

@@ -8,30 +8,35 @@
 
 #import "BookData.h"
 #import "Book.h"
+#import "Section.h"
 #import "FileHelpers.h"
 
 @implementation BookData
-{
-	NSMutableArray *books_;
-}
 
 @synthesize currentBook = currentBook_;
+@synthesize books = books_;
+@synthesize favoriteBooks = favoriteBooks_;
+@synthesize favoriteContent = favoriteContent_;
+@synthesize favoritesSegmentedControlIndex = favoritesSegmentedControlIndex_;
 
 - (id)init
 {
 	self = [super init];
 	if (self) {
-		books_ = [NSMutableArray arrayWithCapacity:0];
-		[self loadBooks];
 		currentBook_ = nil;
+		books_ = [[NSMutableArray alloc] initWithCapacity:0];
+		favoriteBooks_ = [[NSMutableArray alloc] initWithCapacity:0];
+		favoriteContent_ = [[NSMutableArray alloc] initWithCapacity:0];
+		favoritesSegmentedControlIndex_ = 0;
+		[self loadBooks];
 	}
 	return self;
 }
 
 - (void)loadBooks
 {
-	if ([books_ count] > 0) {
-		[self removeAllBooks];
+	if ([self.books count] > 0) {
+		[self.books removeAllObjects];
 	}
 	
 	NSString *plistPath = [[NSBundle mainBundle] pathForResource:kBookListFileName ofType:@"plist"];
@@ -42,35 +47,21 @@
 		
 	for (NSDictionary *dictionary in booksArray) {
 		Book *book = [[Book alloc] initWithDictionary:dictionary];
-		[self addBook:book];
+		[self.books addObject:book];
 	}
 }
 
-- (void)addBook:(Book *)book
+- (NSInteger)unsignedIndexOfFavoriteContentWithMd5String:(NSString *)string
 {
-	NSAssert([book isKindOfClass:[Book class]], @"Object is not a book");
-	[books_ addObject:book];
-}
-
-- (void)insertBook:(Book *)book atIndex:(NSInteger)index
-{
-	NSAssert([book isKindOfClass:[Book class]], @"Object is not a book");
-	[books_ insertObject:book atIndex:index];
-}
-
-- (void)removeBookAtIndex:(NSInteger)index
-{
-	[books_ removeObjectAtIndex:index];
-}
-
-- (void)removeAllBooks
-{
-	[books_ removeAllObjects];
-}
-
-- (NSArray *)books
-{
-	return books_;
+	NSInteger index = -1;
+	for (NSInteger i = 0; i < [self.favoriteContent count]; i++) {
+		Section *section = [[Section alloc] initWithData:[self.favoriteContent objectAtIndex:i]];
+		if ([[section md5String] isEqualToString:string]) {
+			index = i;
+			break;
+		}
+	}
+	return index;
 }
 
 #pragma mark - Singleton Code

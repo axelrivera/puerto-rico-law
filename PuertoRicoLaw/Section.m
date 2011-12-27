@@ -8,6 +8,7 @@
 
 #import "Section.h"
 #import "Book.h"
+#import "NSString+Extras.h"
 
 @implementation Section
 
@@ -22,12 +23,12 @@
 {
 	self = [super init];
 	if (self) {
-		self.title = book.title;
-		self.label = book.shortName;
-		self.book = book;
-		self.parent	= nil;
-		self.contentFile = nil;
-		self.children = nil;
+		title_ = book.title;
+		label_ = book.shortName;
+		book_ = book;
+		parent_	= nil;
+		contentFile_ = nil;
+		children_ = nil;
 	}
 	return self;
 }
@@ -36,25 +37,25 @@
 {
 	self = [super init];
 	if (self) {
-		self.title = [dictionary objectForKey:kSectionTitleKey];
-		self.label = [dictionary objectForKey:kSectionLabelKey];
-		self.book = book;
-		self.parent = nil;
-		self.children = nil;
+		title_ = [dictionary objectForKey:kSectionTitleKey];
+		label_ = [dictionary objectForKey:kSectionLabelKey];
+		book_ = book;
+		parent_ = nil;
+		children_ = nil;
 		
 		if ([dictionary objectForKey:kSectionContentFileKey]) {
-			self.contentFile = [dictionary objectForKey:kSectionContentFileKey];
+			contentFile_ = [dictionary objectForKey:kSectionContentFileKey];
 		}
 		
 		if ([dictionary objectForKey:kSectionChildrenKey]) {
 			NSArray *sectionArray = [dictionary objectForKey:kSectionChildrenKey];
 			NSMutableArray *children = [[NSMutableArray alloc] initWithCapacity:[sectionArray count]];
 			for (NSDictionary *child in sectionArray) {
-				Section *section = [[Section alloc] initWithBook:self.book andDictionary:child];
+				Section *section = [[Section alloc] initWithBook:book_ andDictionary:child];
 				section.parent = self;
 				[children addObject:section];
 			}
-			self.children = (NSArray *)children;
+			children_ = (NSArray *)children;
 		}
 	}
 	return self;
@@ -66,11 +67,58 @@
 	return self;
 }
 
+- (id)initWithData:(NSData *)data
+{
+	self = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+	return self;
+}
+
+- (id)initWithCoder:(NSCoder *)decoder
+{
+	self = [super init];  // this needs to be [super initWithCoder:aDecoder] if the superclass implements NSCoding
+	if (self) {
+		//self.object = [decoder decodeObjectForKey:@"objectName"];
+		self.title = [decoder decodeObjectForKey:@"sectionTitle"];
+		self.label = [decoder decodeObjectForKey:@"sectionLabel"];
+		self.book = [decoder decodeObjectForKey:@"sectionBook"];
+		self.parent = [decoder decodeObjectForKey:@"sectionParent"];
+		self.contentFile = [decoder decodeObjectForKey:@"sectionContentFile"];
+		self.children = [decoder decodeObjectForKey:@"sectionChildren"];
+	}
+	return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
+	// add [super encodeWithCoder:encoder] if the superclass implements NSCoding
+	//[encoder encodeObject:object forKey:@"objectName"];
+	[encoder encodeObject:self.title forKey:@"sectionTitle"];
+	[encoder encodeObject:self.label forKey:@"sectionLabel"];
+	[encoder encodeObject:self.book forKey:@"sectionBook"];
+	[encoder encodeObject:self.parent forKey:@"sectionParent"];
+	[encoder encodeObject:self.contentFile forKey:@"sectionContentFile"];
+	[encoder encodeObject:self.children forKey:@"sectionChildren"];
+}
+
 - (void)dealloc
 {
 	book_ = nil;
 	parent_ = nil;
 }
+
+#pragma mark - Custom Methods
+
+- (NSString *)md5String
+{
+	return [[NSString stringWithFormat:@"%@%@", self.label, self.title] md5];
+}
+
+- (NSData *)serialize
+{
+	return [NSKeyedArchiver archivedDataWithRootObject:self];
+}
+
+#pragma mark - Parent Methods
 
 - (NSString *)description
 {

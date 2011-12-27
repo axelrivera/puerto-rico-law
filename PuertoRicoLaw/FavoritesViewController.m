@@ -7,9 +7,20 @@
 //
 
 #import "FavoritesViewController.h"
+#import "BookData.h"
+#import "Book.h"
+#import "Section.h"
+
+@interface FavoritesViewController (Private)
+
+- (void)setFavoritesDataSource;
+
+@end
 
 @implementation FavoritesViewController
 {
+	BookData *bookData_;
+	NSMutableArray *favoritesDataSource_;
 	UISegmentedControl *segmentedControl_;
 }
 
@@ -18,6 +29,7 @@
 	self = [super initWithNibName:@"FavoritesViewController" bundle:nil];
 	if (self) {
 		self.title = @"Favoritos";
+		bookData_ = [BookData sharedBookData];
 	}
 	return self;
 }
@@ -35,10 +47,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Regresar"
-																			  style:UIBarButtonItemStyleDone
-																			 target:self
-																			 action:@selector(dismissAction:)];
+	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Regresar"
+																			 style:UIBarButtonItemStyleDone
+																			target:self
+																			action:@selector(dismissAction:)];
 	
 	NSArray *segmentedControlItems = [NSArray arrayWithObjects:@"Leyes", @"Contenido", nil];
 	segmentedControl_ = [[UISegmentedControl alloc] initWithItems:segmentedControlItems];
@@ -66,7 +78,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-	segmentedControl_.selectedSegmentIndex = 0;
+	segmentedControl_.selectedSegmentIndex = bookData_.favoritesSegmentedControlIndex;
+	[self setFavoritesDataSource];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -94,6 +107,17 @@
 	}
 }
 
+#pragma mark - Private Methods
+
+- (void)setFavoritesDataSource
+{
+	if (segmentedControl_.selectedSegmentIndex == 0) {
+		favoritesDataSource_ = bookData_.favoriteBooks;
+	} else {
+		favoritesDataSource_ = bookData_.favoriteContent;
+	}
+}
+
 #pragma mark - Selector Actions
 
 - (void)dismissAction:(id)sender
@@ -103,37 +127,47 @@
 
 - (void)controlAction:(id)sender
 {
-	NSLog(@"Segmented Control Value Changed");
+	bookData_.favoritesSegmentedControlIndex = segmentedControl_.selectedSegmentIndex;
+	[self setFavoritesDataSource];
+	[self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+	return [favoritesDataSource_ count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-    
-    // Configure the cell...
-    
-    return cell;
+	if (segmentedControl_.selectedSegmentIndex == 0) {
+		NSString *CellIdentifier = @"BookCell";
+		
+		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+		if (cell == nil) {
+			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+		}
+		
+		Book *book = [favoritesDataSource_ objectAtIndex:indexPath.row];
+		
+		cell.textLabel.text = book.title;
+		
+		return cell;
+	}
+	
+	NSString *CellIdentifier = @"ContentCell";
+	
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (cell == nil) {
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+	}
+	
+	Section *section = [[Section alloc] initWithData:[favoritesDataSource_ objectAtIndex:indexPath.row]];
+	
+	cell.textLabel.text = section.title;
+	
+	return cell;
 }
 
 /*

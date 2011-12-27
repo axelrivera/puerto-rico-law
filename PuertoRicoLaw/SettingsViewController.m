@@ -32,10 +32,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Regresar"
-																			  style:UIBarButtonItemStyleDone
-																			 target:self
-																			 action:@selector(dismissAction:)];
+	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Regresar"
+																			 style:UIBarButtonItemStyleDone
+																			target:self
+																			action:@selector(dismissAction:)];
 }
 
 - (void)viewDidUnload

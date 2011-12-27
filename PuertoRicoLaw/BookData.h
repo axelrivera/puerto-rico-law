@@ -13,14 +13,15 @@
 @interface BookData : NSObject
 
 @property (strong, nonatomic) Book *currentBook;
-@property (strong, nonatomic, readonly) NSArray *books;
+@property (strong, nonatomic) NSMutableArray *books;
+@property (strong, nonatomic) NSMutableArray *favoriteBooks;
+@property (strong, nonatomic) NSMutableArray *favoriteContent;
+@property (assign, nonatomic) NSInteger favoritesSegmentedControlIndex;
 
 + (id)sharedBookData;
 
 - (void)loadBooks;
-- (void)addBook:(Book *)book;
-- (void)insertBook:(Book *)book atIndex:(NSInteger)index;
-- (void)removeBookAtIndex:(NSInteger)index;
-- (void)removeAllBooks;
+
+- (NSInteger)unsignedIndexOfFavoriteContentWithMd5String:(NSString *)string;
 
 @end

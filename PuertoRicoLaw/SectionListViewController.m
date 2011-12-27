@@ -11,6 +11,7 @@
 #import "Book.h"
 #import "Section.h"
 #import "SectionTableViewCell.h"
+#import "BookData.h"
 
 @interface SectionListViewController (Private)
 
@@ -25,9 +26,11 @@
 
 @implementation SectionListViewController
 {
+	BookData *bookData_;
 	UIView *headerView_;
 	UIBarButtonItem *prevItem_;
 	UIBarButtonItem *nextItem_;
+	NSInteger favoriteIndex_;
 }
 
 @synthesize section = section_;
@@ -39,6 +42,7 @@
 {
 	self = [super initWithNibName:@"SectionListViewController" bundle:nil];
 	if (self) {
+		bookData_ = [BookData sharedBookData];
 		currentSiblingSectionIndex_ = 0;
 		siblingSections_ = nil;
 	}
@@ -78,6 +82,8 @@
 	self.title = self.section.label;
 	[self checkGoNextItem];
 	[self checkGoPrevItem];
+	favoriteIndex_ = [bookData_ unsignedIndexOfFavoriteContentWithMd5String:[self.section md5String]];
+	NSLog(@"Favorite Index: %i", favoriteIndex_);
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -153,6 +159,7 @@
 	[self.tableView setContentOffset:CGPointZero animated:NO];
 	[self checkGoNextItem];
 	[self checkGoPrevItem];
+	favoriteIndex_ = [bookData_ unsignedIndexOfFavoriteContentWithMd5String:[self.section md5String]];
 }
 
 - (NSArray *)toolbarItemsArray
@@ -200,11 +207,18 @@
 
 - (void)optionsAction:(id)sender
 {
+	NSString *favoriteStr = nil;
+	if (favoriteIndex_ >= 0) {
+		favoriteStr = kFavoriteContentRemoveTitle;
+	} else {
+		favoriteStr = kFavoriteContentAddTitle;
+	}
+	
 	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
 															 delegate:self
 													cancelButtonTitle:@"Cancelar"
 											   destructiveButtonTitle:nil
-													otherButtonTitles:@"Agregar a Favoritos", nil];
+													otherButtonTitles:favoriteStr, nil];
 	[actionSheet showFromToolbar:self.navigationController.toolbar];
 }
 
@@ -309,7 +323,16 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-	
+	if (buttonIndex == 0) {
+		if (favoriteIndex_ >= 0) {
+			[bookData_.favoriteContent removeObjectAtIndex:favoriteIndex_];
+			favoriteIndex_ = -1;
+		} else {
+			NSData *data = [self.section serialize];
+			[bookData_.favoriteContent addObject:data];
+			favoriteIndex_ = [bookData_.favoriteContent count] - 1;
+		}
+	}
 }
 
 @end

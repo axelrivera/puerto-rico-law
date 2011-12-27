@@ -144,6 +144,8 @@
 		167EF24414A24D250058F8D1 /* SectionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167EF24214A24D250058F8D1 /* SectionListViewController.xib */; };
 		167EF24814A251320058F8D1 /* SectionContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167EF24614A251320058F8D1 /* SectionContentViewController.m */; };
 		167EF24914A251320058F8D1 /* SectionContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167EF24714A251320058F8D1 /* SectionContentViewController.xib */; };
+		16822ED214A931B8006344D1 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 16822ED114A931B8006344D1 /* NSString+Extras.m */; };
+		16822ED514A9338B006344D1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16822ED414A9338B006344D1 /* Security.framework */; };
 		1691519C14A2BF3B001E59C2 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519514A2BF3B001E59C2 /* Icon-72.png */; };
 		1691519D14A2BF3B001E59C2 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519614A2BF3B001E59C2 /* Icon-Small-50.png */; };
 		1691519E14A2BF3B001E59C2 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519714A2BF3B001E59C2 /* Icon-Small.png */; };
@@ -312,6 +314,9 @@
 		167EF24514A251320058F8D1 /* SectionContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionContentViewController.h; sourceTree = "<group>"; };
 		167EF24614A251320058F8D1 /* SectionContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionContentViewController.m; sourceTree = "<group>"; };
 		167EF24714A251320058F8D1 /* SectionContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionContentViewController.xib; sourceTree = "<group>"; };
+		16822ED014A931B8006344D1 /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
+		16822ED114A931B8006344D1 /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
+		16822ED414A9338B006344D1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		1691519514A2BF3B001E59C2 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		1691519614A2BF3B001E59C2 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		1691519714A2BF3B001E59C2 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
@@ -347,6 +352,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16822ED514A9338B006344D1 /* Security.framework in Frameworks */,
 				16D8D96514A8E1CE00E88215 /* MessageUI.framework in Frameworks */,
 				16DD4CA414A10D200063163D /* UIKit.framework in Frameworks */,
 				16DD4CA614A10D200063163D /* Foundation.framework in Frameworks */,
@@ -362,6 +368,8 @@
 			children = (
 				1620F7FF14A196910070E512 /* FileHelpers.h */,
 				1620F80014A196910070E512 /* FileHelpers.m */,
+				16822ED014A931B8006344D1 /* NSString+Extras.h */,
+				16822ED114A931B8006344D1 /* NSString+Extras.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -667,6 +675,7 @@
 		16DD4CA214A10D200063163D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				16822ED414A9338B006344D1 /* Security.framework */,
 				16D8D96414A8E1CE00E88215 /* MessageUI.framework */,
 				16DD4CA314A10D200063163D /* UIKit.framework */,
 				16DD4CA514A10D200063163D /* Foundation.framework */,
@@ -942,6 +951,7 @@
 				1646AB2914A3AB7100B27123 /* BookTableView.m in Sources */,
 				1646AB2C14A3B55800B27123 /* BookTableViewCell.m in Sources */,
 				1663261D14A65249003279C3 /* SectionTableViewCell.m in Sources */,
+				16822ED214A931B8006344D1 /* NSString+Extras.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

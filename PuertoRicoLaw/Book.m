@@ -31,6 +31,33 @@
 	return self;
 }
 
+- (id)initWithCoder:(NSCoder *)decoder
+{
+	self = [super init];  // this needs to be [super initWithCoder:aDecoder] if the superclass implements NSCoding
+	if (self) {
+		//self.object = [decoder decodeObjectForKey:@"objectName"];
+		self.favorite = [decoder decodeBoolForKey:@"bookFavorite"];
+		self.name = [decoder decodeObjectForKey:@"bookName"];
+		self.shortName = [decoder decodeObjectForKey:@"bookShortName"];
+		self.title = [decoder decodeObjectForKey:@"bookTitle"];
+		self.bookDescription = [decoder decodeObjectForKey:@"bookBookDescription"];
+		self.mainSection = [decoder decodeObjectForKey:@"bookMainSection"];
+	}
+	return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
+	// add [super encodeWithCoder:encoder] if the superclass implements NSCoding
+	//[encoder encodeObject:object forKey:@"objectName"];
+	[encoder encodeBool:self.isFavorite forKey:@"bookFavorite"];
+	[encoder encodeObject:self.name forKey:@"bookName"];
+	[encoder encodeObject:self.shortName forKey:@"bookShortName"];
+	[encoder encodeObject:self.title forKey:@"bookTitle"];
+	[encoder encodeObject:self.bookDescription forKey:@"bookBookDescription"];
+	[encoder encodeObject:self.mainSection forKey:@"bookMainSection"];
+}
+
 - (void)loadSections
 {
 	if (self.mainSection) {

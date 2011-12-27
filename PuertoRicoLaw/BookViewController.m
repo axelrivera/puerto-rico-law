@@ -243,8 +243,10 @@
 	
 	if (cell.bookTableView.isFavorite) {
 		cell.bookTableView.favorite = book.favorite = NO;
+		[bookData_.favoriteBooks removeObject:book];
 	} else {
 		cell.bookTableView.favorite = book.favorite = YES;
+		[bookData_.favoriteBooks addObject:book];
 	}
 }
 
@@ -252,8 +254,8 @@
 	  toIndexPath:(NSIndexPath *)destinationIndexPath
 {
 	Book *book = [bookData_.books objectAtIndex:sourceIndexPath.row];
-    [bookData_ removeBookAtIndex:sourceIndexPath.row];
-    [bookData_ insertBook:book atIndex:destinationIndexPath.row];
+    [bookData_.books removeObjectAtIndex:sourceIndexPath.row];
+    [bookData_.books insertObject:book atIndex:destinationIndexPath.row];
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
