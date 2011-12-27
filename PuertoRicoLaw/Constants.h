@@ -20,7 +20,7 @@
 #define kBookShortNameKey @"bookShortName"
 #define kBookTitleKey @"bookTitle"
 #define kBookDescriptionKey @"bookDescription"
-#define kBookDirectoryKey @"bookDir"
+#define kBookDateKey @"bookDate"
 
 #define kSectionTitleKey @"sectionTitle"
 #define kSectionLabelKey @"sectionLabel"

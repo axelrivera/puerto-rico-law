@@ -25,7 +25,7 @@
 		self.textLabel.font = [UIFont boldSystemFontOfSize:12.0];
 		self.textLabel.minimumFontSize = 10.0;
 		self.textLabel.adjustsFontSizeToFitWidth = YES;
-		self.detailTextLabel.font = [UIFont boldSystemFontOfSize:12.0];
+		self.detailTextLabel.font = [UIFont boldSystemFontOfSize:13.0];
 		self.detailTextLabel.numberOfLines = 2.0;
 		self.detailTextLabel.lineBreakMode = UILineBreakModeTailTruncation;
     }
@@ -37,7 +37,7 @@
 	[super layoutSubviews];
 
 #define kTextWidth 70.0
-#define kTextDetailHeight 28.0
+#define kTextDetailHeight 30.0
 	
 	self.textLabel.frame = CGRectMake(10.0,
 									  (self.contentView.bounds.size.height / 2.0) - (kTextDetailHeight / 2.0),

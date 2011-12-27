@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *shortName;
 @property (strong, nonatomic) NSString *bookDescription;
+@property (strong, nonatomic) NSDate *date;
 @property (strong, nonatomic) Section *mainSection;
 @property (assign, nonatomic, getter = isFavorite) BOOL favorite;
 
@@ -23,5 +24,6 @@
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 - (void)loadSections;
 - (void)clearSections;
+- (NSString *)md5String;
 
 @end

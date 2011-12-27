@@ -243,7 +243,10 @@
 	
 	if (cell.bookTableView.isFavorite) {
 		cell.bookTableView.favorite = book.favorite = NO;
-		[bookData_.favoriteBooks removeObject:book];
+		NSInteger index = [bookData_ unsignedIndexOfFavoriteBookWithMd5String:[book md5String]];
+		if (index >= 0) {
+			[bookData_.favoriteBooks removeObjectAtIndex:index];
+		}
 	} else {
 		cell.bookTableView.favorite = book.favorite = YES;
 		[bookData_.favoriteBooks addObject:book];

@@ -110,7 +110,7 @@
 
 - (NSString *)md5String
 {
-	return [[NSString stringWithFormat:@"%@%@", self.label, self.title] md5];
+	return [[NSString stringWithFormat:@"%@%@", self.title, self.label] md5];
 }
 
 - (NSData *)serialize

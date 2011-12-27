@@ -22,6 +22,7 @@
 
 - (void)loadBooks;
 
+- (NSInteger)unsignedIndexOfFavoriteBookWithMd5String:(NSString *)string;
 - (NSInteger)unsignedIndexOfFavoriteContentWithMd5String:(NSString *)string;
 
 @end

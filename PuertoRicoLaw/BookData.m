@@ -51,11 +51,25 @@
 	}
 }
 
+- (NSInteger)unsignedIndexOfFavoriteBookWithMd5String:(NSString *)string
+{
+	NSInteger index = -1;
+	for (NSInteger i = 0; i < [self.favoriteBooks count]; i++) {
+		Book *book = [self.favoriteBooks objectAtIndex:i];
+		if ([[book md5String] isEqualToString:string]) {
+			index = i;
+			break;
+		}
+	}
+	return index;
+}
+
 - (NSInteger)unsignedIndexOfFavoriteContentWithMd5String:(NSString *)string
 {
 	NSInteger index = -1;
 	for (NSInteger i = 0; i < [self.favoriteContent count]; i++) {
 		Section *section = [[Section alloc] initWithData:[self.favoriteContent objectAtIndex:i]];
+		NSLog(@"Section: %@, Compare: %@", [section md5String], string);
 		if ([[section md5String] isEqualToString:string]) {
 			index = i;
 			break;

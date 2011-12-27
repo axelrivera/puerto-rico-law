@@ -54,7 +54,7 @@
 		[contentView_ addSubview:textLabel_];
 		
 		detailTextLabel_ = [[UILabel alloc] initWithFrame:CGRectZero];
-		detailTextLabel_.font = [UIFont systemFontOfSize:14.0];
+		detailTextLabel_.font = [UIFont italicSystemFontOfSize:14.0]; 
 		detailTextLabel_.textAlignment = UITextAlignmentLeft;
 		detailTextLabel_.backgroundColor = [UIColor clearColor];
 		detailTextLabel_.textColor = [UIColor lightGrayColor];

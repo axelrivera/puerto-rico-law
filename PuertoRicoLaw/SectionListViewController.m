@@ -83,7 +83,6 @@
 	[self checkGoNextItem];
 	[self checkGoPrevItem];
 	favoriteIndex_ = [bookData_ unsignedIndexOfFavoriteContentWithMd5String:[self.section md5String]];
-	NSLog(@"Favorite Index: %i", favoriteIndex_);
 }
 
 - (void)viewWillDisappear:(BOOL)animated

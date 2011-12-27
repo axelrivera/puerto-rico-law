@@ -10,6 +10,7 @@
 #import "SectionListViewController.h"
 #import "Book.h"
 #import "Section.h"
+#import "BookData.h"
 
 @interface SectionContentViewController (Private)
 
@@ -28,9 +29,11 @@
 
 @implementation SectionContentViewController
 {
+	BookData *bookData_;
 	UIBarButtonItem *prevItem_;
 	UIBarButtonItem *nextItem_;
 	NSString *fileContentStr_;
+	NSInteger favoriteIndex_;
 }
 
 @synthesize webView = webView_;
@@ -42,6 +45,7 @@
 {
 	self = [super initWithNibName:@"SectionContentViewController" bundle:nil];
 	if (self) {
+		bookData_ = [BookData sharedBookData];
 		siblingSections_ = nil;
 		currentSiblingSectionIndex_ = 0;
 	}
@@ -84,6 +88,8 @@
 	[self.webView loadHTMLString:[self htmlStringForSection] baseURL:nil];
 	[self checkGoNextItem];
 	[self checkGoPrevItem];	
+	favoriteIndex_ = [bookData_ unsignedIndexOfFavoriteContentWithMd5String:[self.section md5String]];
+	NSLog(@"%i", favoriteIndex_);
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -154,6 +160,7 @@
 	[self.webView loadHTMLString:[self htmlStringForSection] baseURL:nil];
 	[self checkGoNextItem];
 	[self checkGoPrevItem];
+	favoriteIndex_ = [bookData_ unsignedIndexOfFavoriteContentWithMd5String:[self.section md5String]];
 }
 
 - (NSString *)fileContentString
@@ -258,11 +265,18 @@
 
 - (void)optionsAction:(id)sender
 {
+	NSString *favoriteStr = nil;
+	if (favoriteIndex_ >= 0) {
+		favoriteStr = kFavoriteContentRemoveTitle;
+	} else {
+		favoriteStr = kFavoriteContentAddTitle;
+	}
+	
 	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
 															 delegate:self
 													cancelButtonTitle:@"Cancelar"
 											   destructiveButtonTitle:nil
-													otherButtonTitles:@"Enviar E-mail", @"Agregar a Favoritos", nil];
+													otherButtonTitles:favoriteStr, @"Enviar E-mail", nil];
 	[actionSheet showFromToolbar:self.navigationController.toolbar];
 }
 
@@ -309,6 +323,15 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
 	if (buttonIndex == 0) {
+		if (favoriteIndex_ >= 0) {
+			[bookData_.favoriteContent removeObjectAtIndex:favoriteIndex_];
+			favoriteIndex_ = -1;
+		} else {
+			NSData *data = [self.section serialize];
+			[bookData_.favoriteContent addObject:data];
+			favoriteIndex_ = [bookData_.favoriteContent count] - 1;
+		}
+	} else if (buttonIndex == 1) {
 		[self displayComposerSheet];
 	}
 }

@@ -12,9 +12,9 @@
 			<key>bookTitle</key>
 			<string>Constitución del Estado Libre Asociado de Puerto Rico</string>
 			<key>bookDescription</key>
-			<string>Descripción Aqui</string>
-			<key>bookDir</key>
-			<string>constitution</string>
+			<string>Entró en vigor el 28 de Julio de 1952</string>
+			<key>bookDate</key>
+			<string>Jul 25, 1952</string>
 		</dict>
 		<dict>
 			<key>bookName</key>
@@ -24,9 +24,9 @@
 			<key>bookTitle</key>
 			<string>Código de Etica Profesional</string>
 			<key>bookDescription</key>
-			<string>Descripción Aqui</string>
-			<key>bookDir</key>
-			<string>etica_profesional</string>
+			<string>Enmendado en Noviembre de 2010</string>
+			<key>bookDate</key>
+			<string>Dec 5, 2011</string>
 		</dict>
 	</array>
 </dict>

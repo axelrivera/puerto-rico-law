@@ -8,6 +8,7 @@
 
 #import "Book.h"
 #import "Section.h"
+#import "NSString+Extras.h"
 
 @implementation Book
 
@@ -15,6 +16,7 @@
 @synthesize shortName = shortName_;
 @synthesize title = title_;
 @synthesize bookDescription = bookDescription_;
+@synthesize date = date_;
 @synthesize mainSection = mainSection_;
 @synthesize favorite = favorite_;
 
@@ -27,6 +29,7 @@
 		self.shortName = [dictionary objectForKey:kBookShortNameKey];
 		self.title = [dictionary objectForKey:kBookTitleKey];
 		self.bookDescription = [dictionary objectForKey:kBookDescriptionKey];
+		self.date = [dictionary objectForKey:kBookDateKey];
 	}
 	return self;
 }
@@ -41,6 +44,7 @@
 		self.shortName = [decoder decodeObjectForKey:@"bookShortName"];
 		self.title = [decoder decodeObjectForKey:@"bookTitle"];
 		self.bookDescription = [decoder decodeObjectForKey:@"bookBookDescription"];
+		self.date = [decoder decodeObjectForKey:@"bookDate"];
 		self.mainSection = [decoder decodeObjectForKey:@"bookMainSection"];
 	}
 	return self;
@@ -55,6 +59,7 @@
 	[encoder encodeObject:self.shortName forKey:@"bookShortName"];
 	[encoder encodeObject:self.title forKey:@"bookTitle"];
 	[encoder encodeObject:self.bookDescription forKey:@"bookBookDescription"];
+	[encoder encodeObject:self.date forKey:@"bookDate"];
 	[encoder encodeObject:self.mainSection forKey:@"bookMainSection"];
 }
 
@@ -88,6 +93,11 @@
 - (void)clearSections
 {
 	self.mainSection = nil;
+}
+
+- (NSString *)md5String
+{
+	return [[NSString stringWithFormat:@"%@%@%@%@", self.name, self.title, self.shortName, self.bookDescription] md5];
 }
 
 @end
