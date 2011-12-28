@@ -9,6 +9,7 @@
 #import "Book.h"
 #import "Section.h"
 #import "NSString+Extras.h"
+#import "FileHelpers.h"
 
 @implementation Book
 
@@ -22,10 +23,13 @@
 @synthesize favoritesTitle = favoritesTitle_;
 @synthesize favorites = favorites_;
 
+// FIXME: Remember to remove the automatic file deletion
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
 	self = [super init];
 	if (self) {
+		// Remove this
+		deletePathInDocumentDirectory([self mainSectionDataFileName]);
 		self.name = [dictionary objectForKey:kBookNameKey];
 		self.shortName = [dictionary objectForKey:kBookShortNameKey];
 		self.title = [dictionary objectForKey:kBookTitleKey];
@@ -74,10 +78,13 @@
 
 - (void)loadSections
 {
+	self.mainSection = [self unarchiveMainSection];
 	if (self.mainSection) {
-		[self clearSections];
+		[self reloadSection:self.mainSection andParent:nil];
+		return;
 	}
 	
+	self.favorites = [[NSMutableArray alloc] initWithCapacity:0];
 	self.mainSection = [[Section alloc] initWithBook:self];
 	
 	NSString *plistPath = [[NSBundle mainBundle] pathForResource:self.name ofType:@"plist"]; 
@@ -97,16 +104,57 @@
 	if ([sections count] > 0) {
 		self.mainSection.children = (NSArray *)sections;
 	}
+	
+	[self archiveMainSection];
 }
 
 - (void)clearSections
 {
+	[self archiveMainSection];
 	self.mainSection = nil;
+}
+
+- (NSInteger)unsignedIndexOfFavoritesWithMd5String:(NSString *)string
+{
+	NSInteger index = -1;
+	for (NSInteger i = 0; i < [self.favorites count]; i++) {
+		Section *section = [self.favorites objectAtIndex:i];
+		if ([[section md5String] isEqualToString:string]) {
+			index = i;
+			break;
+		}
+	}
+	return index;
 }
 
 - (NSString *)md5String
 {
 	return [[NSString stringWithFormat:@"%@%@%@%@", self.name, self.title, self.shortName, self.bookDescription] md5];
+}
+
+- (void)archiveMainSection
+{
+	[NSKeyedArchiver archiveRootObject:self.mainSection toFile:[self mainSectionDataFileName]];
+}
+
+- (id)unarchiveMainSection
+{
+	return [NSKeyedUnarchiver unarchiveObjectWithFile:[self mainSectionDataFileName]];
+}
+
+- (NSString *)mainSectionDataFileName
+{
+	NSString *filePath = pathInDocumentDirectory([NSString stringWithFormat:@"%@_mainSection.data", self.name]);
+	return filePath;
+}
+
+- (void)reloadSection:(Section *)section andParent:(Section *)parent
+{
+	for (Section *child in section.children) {
+		[self reloadSection:child andParent:section];
+	}
+	section.book = self;
+	section.parent = parent;
 }
 
 @end

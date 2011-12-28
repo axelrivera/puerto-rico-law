@@ -7,9 +7,11 @@
 //
 
 #import "FavoritesViewController.h"
-#import "BookData.h"
 #import "Book.h"
 #import "Section.h"
+#import "BookTableViewCell.h"
+#import "FavoritesSectionTableViewCell.h"
+#import "BookTableView.h"
 
 @interface FavoritesViewController (Private)
 
@@ -18,9 +20,6 @@
 @end
 
 @implementation FavoritesViewController
-{
-	BookData *bookData_;
-}
 
 @synthesize favoritesDataSource = favoritesDataSource_;
 @synthesize favoritesType = favoritesType_;
@@ -36,7 +35,6 @@
 	self = [super initWithNibName:@"FavoritesViewController" bundle:nil];
 	if (self) {
 		favoritesType_ = type;
-		bookData_ = [BookData sharedBookData];
 	}
 	return self;	
 }
@@ -61,6 +59,12 @@
 																			 style:UIBarButtonItemStyleDone
 																			target:self
 																			action:@selector(dismissAction:)];
+	
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"trash_mini.png"]
+																			  style:UIBarButtonItemStyleBordered
+																			 target:self
+																			 action:@selector(deleteAction:)];
+	self.tableView.rowHeight = 64.0;
 }
 
 - (void)viewDidUnload
@@ -97,6 +101,11 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
+- (void)deleteAction:(id)sender
+{
+	
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -107,30 +116,40 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	if (self.favoritesType == FavoritesTypeBook) {
-		NSString *CellIdentifier = @"BookCell";
+		NSString *CellIdentifier = [NSString stringWithFormat:@"BookCell%d", indexPath.row];
 		
-		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+		BookTableViewCell *cell = (BookTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 		if (cell == nil) {
-			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+			cell = [[BookTableViewCell alloc] initWithReuseIdentifier:CellIdentifier];
+			BookTableView *bookTableView = [[BookTableView alloc] initWithFrame:CGRectZero];
+			[cell saveBookTableView:bookTableView];
 		}
 		
 		Book *book = [self.favoritesDataSource objectAtIndex:indexPath.row];
 		
-		cell.textLabel.text = book.title;
+		cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+		cell.showsReorderControl = NO;
+		cell.accessoryType = UITableViewCellAccessoryNone;
+		
+		cell.bookTableView.textLabel.text = book.title;
+		cell.bookTableView.detailTextLabel.text = book.bookDescription;
+		cell.bookTableView.favorite = book.favorite;
 		
 		return cell;
+
 	}
 	
 	NSString *CellIdentifier = @"ContentCell";
 	
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	FavoritesSectionTableViewCell *cell = (FavoritesSectionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+		cell = [[FavoritesSectionTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
 	}
 	
-	Section *section = [[Section alloc] initWithData:[self.favoritesDataSource objectAtIndex:indexPath.row]];
+	Section *section = [self.favoritesDataSource objectAtIndex:indexPath.row];
 	
 	cell.textLabel.text = section.title;
+	cell.detailTextLabel.text = section.label;
 	
 	return cell;
 }
@@ -178,6 +197,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
     // Navigation logic may go here. Create and push another view controller.
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];

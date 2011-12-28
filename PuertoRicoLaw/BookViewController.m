@@ -58,11 +58,6 @@
 	self.tableView.allowsSelectionDuringEditing = YES;
 	self.tableView.rowHeight = 64.0;
 	
-	searchItem_ = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"magnify_mini.png"]
-												   style:UIBarButtonItemStyleBordered
-												  target:self
-												  action:@selector(searchAction:)];
-	
 	doneItem_ = [[UIBarButtonItem alloc] initWithTitle:@"Terminar"
 												 style:UIBarButtonItemStyleDone
 												target:self
@@ -153,16 +148,11 @@
 	if (editing) {
 		self.navigationItem.rightBarButtonItem = doneItem_;
 	} else {
-		self.navigationItem.rightBarButtonItem = searchItem_;
+		self.navigationItem.rightBarButtonItem = nil;
 	}
 }
 
 #pragma mark - Selector Actions
-
-- (void)searchAction:(id)sender
-{
-	
-}
 
 - (void)doneAction:(id)sender
 {

@@ -16,3 +16,9 @@ NSString *pathInDocumentDirectory(NSString *fileName) {
 	// Append passed in file name to that directory, return it
 	return [documentDirectory stringByAppendingPathComponent:fileName];
 }
+
+BOOL deletePathInDocumentDirectory(NSString *fileName)
+{
+	NSString *filePath = pathInDocumentDirectory(fileName);
+	return [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
+}

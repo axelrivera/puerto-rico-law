@@ -25,6 +25,11 @@
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 - (void)loadSections;
 - (void)clearSections;
+- (NSInteger)unsignedIndexOfFavoritesWithMd5String:(NSString *)string;
 - (NSString *)md5String;
+- (void)archiveMainSection;
+- (id)unarchiveMainSection;
+- (NSString *)mainSectionDataFileName;
+- (void)reloadSection:(Section *)section andParent:(Section *)parent;
 
 @end

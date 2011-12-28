@@ -12,18 +12,16 @@
 
 @interface Section : NSObject <NSCoding>
 
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *label;
-@property (nonatomic, strong) NSString *contentFile;
-@property (nonatomic, strong) NSArray *children;
-@property (nonatomic, unsafe_unretained) Book *book;
-@property (nonatomic, unsafe_unretained) Section *parent;
+@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *label;
+@property (strong, nonatomic) NSString *contentFile;
+@property (strong, nonatomic) NSArray *children;
+@property (unsafe_unretained, nonatomic) Book *book;
+@property (unsafe_unretained, nonatomic) Section *parent;
 
 - (id)initWithBook:(Book *)book;
 - (id)initWithBook:(Book *)book andDictionary:(NSDictionary *)dictionary;
 - (id)initWithDictionary:(NSDictionary *)dictionary;
-- (id)initWithData:(NSData *)data;
 - (NSString *)md5String;
-- (NSData *)serialize;
 
 @end

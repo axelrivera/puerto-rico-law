@@ -5,4 +5,5 @@
 //
 
 NSString *pathInDocumentDirectory(NSString *fileName);
+BOOL deletePathInDocumentDirectory(NSString *fileName);
 

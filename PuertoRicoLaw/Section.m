@@ -67,12 +67,6 @@
 	return self;
 }
 
-- (id)initWithData:(NSData *)data
-{
-	self = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-	return self;
-}
-
 - (id)initWithCoder:(NSCoder *)decoder
 {
 	self = [super init];  // this needs to be [super initWithCoder:aDecoder] if the superclass implements NSCoding
@@ -94,8 +88,8 @@
 	//[encoder encodeObject:object forKey:@"objectName"];
 	[encoder encodeObject:self.title forKey:@"sectionTitle"];
 	[encoder encodeObject:self.label forKey:@"sectionLabel"];
-	[encoder encodeObject:self.book forKey:@"sectionBook"];
-	[encoder encodeObject:self.parent forKey:@"sectionParent"];
+	[encoder encodeConditionalObject:self.book forKey:@"sectionBook"];
+	[encoder encodeConditionalObject:self.parent forKey:@"sectionParent"];
 	[encoder encodeObject:self.contentFile forKey:@"sectionContentFile"];
 	[encoder encodeObject:self.children forKey:@"sectionChildren"];
 }
@@ -113,16 +107,11 @@
 	return [[NSString stringWithFormat:@"%@%@", self.title, self.label] md5];
 }
 
-- (NSData *)serialize
-{
-	return [NSKeyedArchiver archivedDataWithRootObject:self];
-}
-
 #pragma mark - Parent Methods
 
 - (NSString *)description
 {
-	return [NSString stringWithFormat:@"Title: %@, Label: %@, Content File: %@", self.title, self.label, self.contentFile];
+	return [NSString stringWithFormat:@"Title: %@, Label: %@", self.title, self.label];
 }
 
 @end

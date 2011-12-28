@@ -11,7 +11,6 @@
 #import "FavoritesViewController.h"
 #import "Book.h"
 #import "Section.h"
-#import "BookData.h"
 
 @interface SectionContentViewController (Private)
 
@@ -30,7 +29,6 @@
 
 @implementation SectionContentViewController
 {
-	BookData *bookData_;
 	UIBarButtonItem *prevItem_;
 	UIBarButtonItem *nextItem_;
 	NSString *fileContentStr_;
@@ -46,7 +44,6 @@
 {
 	self = [super initWithNibName:@"SectionContentViewController" bundle:nil];
 	if (self) {
-		bookData_ = [BookData sharedBookData];
 		siblingSections_ = nil;
 		currentSiblingSectionIndex_ = 0;
 		fileContentStr_ = nil;
@@ -67,6 +64,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"magnify_mini.png"]
+																			  style:UIBarButtonItemStyleBordered
+																			 target:self
+																			 action:@selector(searchAction:)];
+	
     [self setToolbarItems:[self toolbarItemsArray] animated:NO];
 	prevItem_ = [self.toolbarItems objectAtIndex:kToolbarItemPosition2];
 	nextItem_ = [self.toolbarItems objectAtIndex:kToolbarItemPosition3];
@@ -92,7 +95,7 @@
 	}
 	[self checkGoNextItem];
 	[self checkGoPrevItem];	
-	favoriteIndex_ = [bookData_ unsignedIndexOfFavoriteContentWithMd5String:[self.section md5String]];
+	favoriteIndex_ = [self.section.book unsignedIndexOfFavoritesWithMd5String:[self.section md5String]];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -163,7 +166,7 @@
 	[self.webView loadHTMLString:[self htmlStringForSection] baseURL:nil];
 	[self checkGoNextItem];
 	[self checkGoPrevItem];
-	favoriteIndex_ = [bookData_ unsignedIndexOfFavoriteContentWithMd5String:[self.section md5String]];
+	favoriteIndex_ = [self.section.book unsignedIndexOfFavoritesWithMd5String:[self.section md5String]];
 }
 
 - (NSString *)fileContentString
@@ -268,6 +271,11 @@
 
 #pragma mark - Selector Actions
 
+- (void)searchAction:(id)sender
+{
+	
+}
+
 - (void)homeAction:(id)sender
 {
 	[self.navigationController popToRootViewControllerAnimated:YES];
@@ -343,12 +351,11 @@
 {
 	if (buttonIndex == 0) {
 		if (favoriteIndex_ >= 0) {
-			[bookData_.favoriteContent removeObjectAtIndex:favoriteIndex_];
+			[self.section.book.favorites removeObjectAtIndex:favoriteIndex_];
 			favoriteIndex_ = -1;
 		} else {
-			NSData *data = [self.section serialize];
-			[bookData_.favoriteContent addObject:data];
-			favoriteIndex_ = [bookData_.favoriteContent count] - 1;
+			[self.section.book.favorites addObject:self.section];
+			favoriteIndex_ = [self.section.book.favorites count] - 1;
 		}
 	} else if (buttonIndex == 1) {
 		[self displayComposerSheet];

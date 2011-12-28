@@ -15,14 +15,13 @@
 @property (strong, nonatomic) Book *currentBook;
 @property (strong, nonatomic) NSMutableArray *books;
 @property (strong, nonatomic) NSMutableArray *favoriteBooks;
-@property (strong, nonatomic) NSMutableArray *favoriteContent;
 @property (assign, nonatomic) NSInteger favoritesSegmentedControlIndex;
 
 + (id)sharedBookData;
 
 - (void)loadBooks;
-
 - (NSInteger)unsignedIndexOfFavoriteBookWithMd5String:(NSString *)string;
-- (NSInteger)unsignedIndexOfFavoriteContentWithMd5String:(NSString *)string;
+- (void)archiveBook:(Book *)book withName:(NSString *)fileName;
+- (id)unarchiveBookWithFileName:(NSString *)fileName;
 
 @end

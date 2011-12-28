@@ -16,7 +16,6 @@
 @synthesize currentBook = currentBook_;
 @synthesize books = books_;
 @synthesize favoriteBooks = favoriteBooks_;
-@synthesize favoriteContent = favoriteContent_;
 @synthesize favoritesSegmentedControlIndex = favoritesSegmentedControlIndex_;
 
 - (id)init
@@ -26,7 +25,6 @@
 		currentBook_ = nil;
 		books_ = [[NSMutableArray alloc] initWithCapacity:0];
 		favoriteBooks_ = [[NSMutableArray alloc] initWithCapacity:0];
-		favoriteContent_ = [[NSMutableArray alloc] initWithCapacity:0];
 		favoritesSegmentedControlIndex_ = 0;
 		[self loadBooks];
 	}
@@ -46,8 +44,13 @@
 	NSArray *booksArray = [plistDictionary objectForKey:kBookListKey];
 		
 	for (NSDictionary *dictionary in booksArray) {
-		Book *book = [[Book alloc] initWithDictionary:dictionary];
+		NSString *fileName = [NSString stringWithFormat:@"%@.data", [dictionary objectForKey:kBookNameKey]];
+		Book *book = [self unarchiveBookWithFileName:fileName];
+		if (book == nil) {
+			book = [[Book alloc] initWithDictionary:dictionary];
+		}
 		[self.books addObject:book];
+		[self archiveBook:book withName:fileName];
 	}
 }
 
@@ -64,17 +67,14 @@
 	return index;
 }
 
-- (NSInteger)unsignedIndexOfFavoriteContentWithMd5String:(NSString *)string
+- (void)archiveBook:(Book *)book withName:(NSString *)fileName
 {
-	NSInteger index = -1;
-	for (NSInteger i = 0; i < [self.favoriteContent count]; i++) {
-		Section *section = [[Section alloc] initWithData:[self.favoriteContent objectAtIndex:i]];
-		if ([[section md5String] isEqualToString:string]) {
-			index = i;
-			break;
-		}
-	}
-	return index;
+	[NSKeyedArchiver archiveRootObject:book toFile:fileName];
+}
+
+- (id)unarchiveBookWithFileName:(NSString *)fileName
+{
+	return [NSKeyedUnarchiver unarchiveObjectWithFile:fileName];
 }
 
 #pragma mark - Singleton Code

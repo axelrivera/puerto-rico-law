@@ -61,6 +61,8 @@
 		detailTextLabel_.highlightedTextColor = [UIColor whiteColor];
 		detailTextLabel_.numberOfLines = 1;
 		detailTextLabel_.lineBreakMode = UILineBreakModeTailTruncation;
+		detailTextLabel_.minimumFontSize = 12.0;
+		detailTextLabel_.adjustsFontSizeToFitWidth = YES;
 		detailTextLabel_.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
 		[contentView_ addSubview:detailTextLabel_];
     }
