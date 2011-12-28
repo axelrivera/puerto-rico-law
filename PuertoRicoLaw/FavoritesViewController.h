@@ -13,11 +13,21 @@ typedef enum {
 	FavoritesTypeBook
 } FavoritesType;
 
+@protocol FavoritesViewControllerDelegate;
+
 @interface FavoritesViewController : UITableViewController
 
+@property (unsafe_unretained, nonatomic) id <FavoritesViewControllerDelegate> delegate;
 @property (assign, readonly, nonatomic) FavoritesType favoritesType;
 @property (strong, nonatomic) NSMutableArray *favoritesDataSource;
+@property (assign, nonatomic) id selection;
 
 - (id)initWithFavoritesType:(FavoritesType)type;
+
+@end
+
+@protocol FavoritesViewControllerDelegate
+
+- (void)favoritesViewControllerDidFinish:(FavoritesViewController *)controller save:(BOOL)save;
 
 @end

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FavoritesViewController.h"
 
-@interface BookViewController : UITableViewController
+@interface BookViewController : UITableViewController <FavoritesViewControllerDelegate>
 
 @end

@@ -21,8 +21,10 @@
 
 @implementation FavoritesViewController
 
+@synthesize delegate = delegate_;
 @synthesize favoritesDataSource = favoritesDataSource_;
 @synthesize favoritesType = favoritesType_;
+@synthesize selection = selection_;
 
 - (id)init
 {
@@ -35,6 +37,7 @@
 	self = [super initWithNibName:@"FavoritesViewController" bundle:nil];
 	if (self) {
 		favoritesType_ = type;
+		selection_ = nil;
 	}
 	return self;	
 }
@@ -55,12 +58,12 @@
 	
 	self.title = @"Favoritos";
 	
-	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Regresar"
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"OK"
 																			 style:UIBarButtonItemStyleDone
 																			target:self
 																			action:@selector(dismissAction:)];
 	
-	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"trash_mini.png"]
+	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"trash_mini.png"]
 																			  style:UIBarButtonItemStyleBordered
 																			 target:self
 																			 action:@selector(deleteAction:)];
@@ -98,7 +101,7 @@
 
 - (void)dismissAction:(id)sender
 {
-	[self dismissModalViewControllerAnimated:YES];
+	[self.delegate favoritesViewControllerDidFinish:self save:NO];
 }
 
 - (void)deleteAction:(id)sender
@@ -198,13 +201,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    self.selection = [self.favoritesDataSource objectAtIndex:indexPath.row];
+	[self.delegate favoritesViewControllerDidFinish:self save:YES];
 }
 
 @end

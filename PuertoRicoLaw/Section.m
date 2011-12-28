@@ -102,6 +102,23 @@
 
 #pragma mark - Custom Methods
 
+- (NSInteger)indexPositionAtParent
+{
+	if (self.parent == nil) {
+		return -1;
+	}
+	
+	NSInteger index = 0;
+	for (NSInteger i = 0; i < [self.parent.children count]; i++) {
+		Section *section = [self.parent.children objectAtIndex:i];
+		if ([[self md5String] isEqualToString:[section md5String]]) {
+			index = i;
+			break;
+		}
+	}
+	return index;
+}
+
 - (NSString *)md5String
 {
 	return [[NSString stringWithFormat:@"%@%@", self.title, self.label] md5];

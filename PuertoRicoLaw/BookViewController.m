@@ -8,7 +8,6 @@
 
 #import "BookViewController.h"
 #import "SectionListViewController.h"
-#import "FavoritesViewController.h"
 #import "SettingsViewController.h"
 #import "BookData.h"
 #import "Book.h"
@@ -18,6 +17,7 @@
 
 @interface BookViewController (Private)
 
+- (void)loadBook:(Book *)book;
 - (NSArray *)toolbarItemsArray;
 
 @end
@@ -58,7 +58,7 @@
 	self.tableView.allowsSelectionDuringEditing = YES;
 	self.tableView.rowHeight = 64.0;
 	
-	doneItem_ = [[UIBarButtonItem alloc] initWithTitle:@"Terminar"
+	doneItem_ = [[UIBarButtonItem alloc] initWithTitle:@"OK"
 												 style:UIBarButtonItemStyleDone
 												target:self
 												action:@selector(doneAction:)];
@@ -77,7 +77,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-	self.title = @"Leyes de Puerto Rico";
+	self.title = @"Leyes Puerto Rico";
 	if (bookData_.currentBook != nil) {
 		[bookData_.currentBook clearSections];
 		bookData_.currentBook = nil;
@@ -100,6 +100,19 @@
 }
 
 #pragma mark - Private Methods
+
+- (void)loadBook:(Book *)book
+{
+	bookData_.currentBook = book;
+	[bookData_.currentBook loadSections];
+	
+	Section *section = bookData_.currentBook.mainSection;
+	SectionListViewController *sectionController = [[SectionListViewController alloc] init];
+	sectionController.section = section;
+	sectionController.sectionDataSource = section.children;
+	self.title = kHomeNavigationLabel;
+	[self.navigationController pushViewController:sectionController animated:YES];
+}
 
 - (NSArray *)toolbarItemsArray
 {
@@ -138,20 +151,6 @@
 			nil];
 }
 
-#pragma mark - Parent Methods
-
-- (void)setEditing:(BOOL)editing animated:(BOOL)animated
-{
-	[super setEditing:editing animated:animated];
-	[self.tableView setEditing:editing animated:animated];
-	
-	if (editing) {
-		self.navigationItem.rightBarButtonItem = doneItem_;
-	} else {
-		self.navigationItem.rightBarButtonItem = nil;
-	}
-}
-
 #pragma mark - Selector Actions
 
 - (void)doneAction:(id)sender
@@ -167,6 +166,7 @@
 - (void)favoritesAction:(id)sender
 {
 	FavoritesViewController *favoritesController = [[FavoritesViewController alloc] initWithFavoritesType:FavoritesTypeBook];
+	favoritesController.delegate = self;
 	favoritesController.favoritesDataSource = bookData_.favoriteBooks;
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:favoritesController];
 	[self presentModalViewController:navigationController animated:YES];
@@ -177,6 +177,20 @@
 	SettingsViewController *settingsController = [[SettingsViewController alloc] init];
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:settingsController];
 	[self presentModalViewController:navigationController animated:YES];
+}
+
+#pragma mark - Parent Methods
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+	[super setEditing:editing animated:animated];
+	[self.tableView setEditing:editing animated:animated];
+	
+	if (editing) {
+		self.navigationItem.rightBarButtonItem = doneItem_;
+	} else {
+		self.navigationItem.rightBarButtonItem = nil;
+	}
 }
 
 #pragma mark - Table view data source
@@ -218,15 +232,7 @@
 	Book *book = [bookData_.books objectAtIndex:indexPath.row];
 	
 	if (!tableView.isEditing) {
-		bookData_.currentBook = book;
-		[bookData_.currentBook loadSections];
-		
-		Section *section = bookData_.currentBook.mainSection;
-		SectionListViewController *sectionController = [[SectionListViewController alloc] init];
-		sectionController.section = section;
-		sectionController.sectionDataSource = section.children;
-		self.title = kHomeNavigationLabel;
-		[self.navigationController pushViewController:sectionController animated:YES];
+		[self loadBook:book];
 		return;
 	}
 
@@ -270,6 +276,20 @@
 - (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	return NO;
+}
+
+#pragma mark - UIViewController Delegates
+
+- (void)favoritesViewControllerDidFinish:(FavoritesViewController *)controller save:(BOOL)save
+{
+	Book *book = nil;
+	if (save) {
+		book = controller.selection;
+	}
+	[controller dismissModalViewControllerAnimated:YES];
+	if (book) {
+		[self loadBook:book];
+	}
 }
 
 @end

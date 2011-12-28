@@ -11,7 +11,16 @@
 #import "NSString+Extras.h"
 #import "FileHelpers.h"
 
+@interface Book (Private)
+
+- (void)findInSection:(Section *)section md5String:(NSString *)string;
+
+@end
+
 @implementation Book
+{
+	Section *findSection_;
+}
 
 @synthesize name = name_;
 @synthesize shortName = shortName_;
@@ -30,6 +39,7 @@
 	if (self) {
 		// Remove this
 		deletePathInDocumentDirectory([self mainSectionDataFileName]);
+		findSection_ = nil;
 		self.name = [dictionary objectForKey:kBookNameKey];
 		self.shortName = [dictionary objectForKey:kBookShortNameKey];
 		self.title = [dictionary objectForKey:kBookTitleKey];
@@ -155,6 +165,31 @@
 	}
 	section.book = self;
 	section.parent = parent;
+}
+
+- (Section *)sectionInMainSectionMatchingMd5String:(NSString *)string
+{
+	findSection_ = nil;
+	[self findInSection:self.mainSection md5String:string];
+	return findSection_;
+}
+
+#pragma mark - Private Methods
+
+- (void)findInSection:(Section *)section md5String:(NSString *)string
+{
+	if (findSection_ != nil) {
+		return;
+	}
+	
+	if ([[section md5String] isEqualToString:string]) {
+		findSection_ = section;
+		return;
+	} else {
+		for (Section *child in section.children) {
+			[self findInSection:child md5String:string];
+		}
+	}
 }
 
 @end

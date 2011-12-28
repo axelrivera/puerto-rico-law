@@ -31,5 +31,6 @@
 - (id)unarchiveMainSection;
 - (NSString *)mainSectionDataFileName;
 - (void)reloadSection:(Section *)section andParent:(Section *)parent;
+- (Section *)sectionInMainSectionMatchingMd5String:(NSString *)string;
 
 @end

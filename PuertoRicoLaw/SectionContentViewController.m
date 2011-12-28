@@ -24,6 +24,7 @@
 - (NSString *)fileContentString;
 - (void)displayComposerSheet;
 - (NSArray *)toolbarItemsArray;
+- (void)reloadControllerWithSection:(Section *)section;
 
 @end
 
@@ -121,7 +122,7 @@
 
 - (BOOL)canGoNext
 {
-	if (self.currentSiblingSectionIndex + 1 >= [self.siblingSections count]) {
+	if (self.currentSiblingSectionIndex < 0 || self.currentSiblingSectionIndex + 1 >= [self.siblingSections count]) {
 		return NO;
 	}
 	return YES;
@@ -138,7 +139,7 @@
 
 - (BOOL)canGoPrev
 {
-	if (self.currentSiblingSectionIndex - 1 < 0) {
+	if (self.currentSiblingSectionIndex < 0 || self.currentSiblingSectionIndex - 1 < 0) {
 		return NO;
 	}
 	return YES;
@@ -269,6 +270,46 @@
 			nil];
 }
 
+- (void)reloadControllerWithSection:(Section *)section
+{
+	NSMutableArray *reversedSections = [[NSMutableArray alloc] initWithCapacity:0];
+	NSMutableArray *orderedSections = [[NSMutableArray alloc] initWithCapacity:0];
+	
+	Section *tmpSection = section;
+	while (tmpSection != nil) {
+		[reversedSections addObject:tmpSection];
+		tmpSection = tmpSection.parent;
+	}
+	
+	NSEnumerator *reverseEnumerator = [reversedSections reverseObjectEnumerator];
+	id object;
+	while (object = [reverseEnumerator nextObject]) {
+		[orderedSections addObject:object];
+	}
+	
+	NSMutableArray *viewControllers = [[NSMutableArray alloc] initWithCapacity:0];
+	[viewControllers addObject:[self.navigationController.viewControllers objectAtIndex:0]];
+	
+	for (Section *mySection in orderedSections) {
+		if (mySection.children == nil) {
+			SectionContentViewController *contentController = [[SectionContentViewController alloc] init];
+			contentController.section = mySection;
+			contentController.siblingSections = mySection.parent.children;
+			contentController.currentSiblingSectionIndex = [mySection indexPositionAtParent];
+			[viewControllers addObject:contentController];
+		} else {
+			SectionListViewController *sectionController = [[SectionListViewController alloc] init];
+			sectionController.title = mySection.label;
+			sectionController.section = mySection;
+			sectionController.sectionDataSource = mySection.children;
+			sectionController.siblingSections = mySection.parent.children;
+			sectionController.currentSiblingSectionIndex = [mySection indexPositionAtParent];
+			[viewControllers addObject:sectionController];
+		}
+	}
+	[self.navigationController setViewControllers:(NSArray *)viewControllers animated:YES];
+}
+
 #pragma mark - Selector Actions
 
 - (void)searchAction:(id)sender
@@ -284,6 +325,7 @@
 - (void)favoritesAction:(id)sender
 {
 	FavoritesViewController *favoritesController = [[FavoritesViewController alloc] initWithFavoritesType:FavoritesTypeSection];
+	favoritesController.delegate = self;
 	favoritesController.favoritesDataSource = self.section.book.favorites;
 	favoritesController.navigationItem.prompt = self.section.book.favoritesTitle;
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:favoritesController];
@@ -325,7 +367,9 @@
 
 #pragma mark - UIWebView Delegate Methods
 
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+- (BOOL)webView:(UIWebView *)webView
+shouldStartLoadWithRequest:(NSURLRequest *)request
+ navigationType:(UIWebViewNavigationType)navigationType
 {
 	return YES;
 }
@@ -343,6 +387,21 @@
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+}
+
+#pragma mark - UIViewController Delegate Methods
+
+- (void)favoritesViewControllerDidFinish:(FavoritesViewController *)controller save:(BOOL)save
+{
+	Section *section = nil;
+	if (save) {
+		section = controller.selection;
+	}
+	[controller dismissModalViewControllerAnimated:YES];
+	if (section) {
+		Section *favoriteSection = [self.section.book sectionInMainSectionMatchingMd5String:[section md5String]];
+		[self reloadControllerWithSection:favoriteSection];
+	}
 }
 
 #pragma mark - UIActionSheet Delegate Methods

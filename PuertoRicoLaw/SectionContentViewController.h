@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FavoritesViewController.h"
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 
 @class Section;
 
-@interface SectionContentViewController : UIViewController <UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
+@interface SectionContentViewController : UIViewController
+<FavoritesViewControllerDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
 
 @property (unsafe_unretained, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) Section *section;

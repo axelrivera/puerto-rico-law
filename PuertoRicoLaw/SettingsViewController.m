@@ -14,7 +14,7 @@
 {
 	self = [super initWithNibName:@"SettingsViewController" bundle:nil];
 	if (self) {
-		self.title = @"Configuración";
+		self.title = @"Configurar";
 	}
 	return self;
 }
@@ -32,10 +32,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Regresar"
-																			 style:UIBarButtonItemStyleDone
-																			target:self
-																			action:@selector(dismissAction:)];
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"OK"
+																			  style:UIBarButtonItemStyleDone
+																			 target:self
+																			 action:@selector(dismissAction:)];
 }
 
 - (void)viewDidUnload

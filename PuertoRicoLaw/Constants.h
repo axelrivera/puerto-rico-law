@@ -30,5 +30,5 @@
 #define kSectionContentFileKey @"sectionContentFile"
 #define kSectionChildrenKey @"sectionChildren"
 
-#define kFavoriteContentAddTitle @"Agregar a Favoritos"
+#define kFavoriteContentAddTitle @"Añadir a Favoritos"
 #define kFavoriteContentRemoveTitle @"Remover de Favoritos"

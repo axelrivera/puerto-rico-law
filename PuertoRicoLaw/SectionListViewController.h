@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FavoritesViewController.h"
 
 @class Book;
 @class Section;
 
-@interface SectionListViewController : UITableViewController <UIActionSheetDelegate>
+@interface SectionListViewController : UITableViewController <FavoritesViewControllerDelegate, UIActionSheetDelegate>
 
 @property (strong, nonatomic) Section *section;
 @property (strong, nonatomic) NSArray *sectionDataSource;
