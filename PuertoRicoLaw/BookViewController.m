@@ -82,6 +82,7 @@
 		[bookData_.currentBook clearSections];
 		bookData_.currentBook = nil;
 	}
+	[self.tableView reloadData];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -165,6 +166,7 @@
 
 - (void)favoritesAction:(id)sender
 {
+	[self setEditing:NO animated:YES];
 	FavoritesViewController *favoritesController = [[FavoritesViewController alloc] initWithFavoritesType:FavoritesTypeBook];
 	favoritesController.delegate = self;
 	favoritesController.favoritesDataSource = bookData_.favoriteBooks;
@@ -174,6 +176,7 @@
 
 - (void)settingsAction:(id)sender
 {
+	[self setEditing:NO animated:YES];
 	SettingsViewController *settingsController = [[SettingsViewController alloc] init];
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:settingsController];
 	[self presentModalViewController:navigationController animated:YES];
@@ -289,6 +292,27 @@
 	[controller dismissModalViewControllerAnimated:YES];
 	if (book) {
 		[self loadBook:book];
+	}
+}
+
+- (void)favoritesViewControllerDeleteDataSource:(FavoritesViewController *)controller
+{
+	for (Book *book in controller.favoritesDataSource) {
+		book.favorite = NO;
+	}
+	[controller.favoritesDataSource removeAllObjects];
+	[controller.tableView reloadData];
+	[controller setEditing:NO animated:YES];
+}
+
+- (void)favoritesViewController:(FavoritesViewController *)controller deleteRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	Book *book = [controller.favoritesDataSource objectAtIndex:indexPath.row];
+	book.favorite = NO;
+	[controller.favoritesDataSource removeObjectAtIndex:indexPath.row];
+	[controller.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+	if ([controller.favoritesDataSource count] <= 0) {
+		[controller setEditing:NO animated:YES];
 	}
 }
 

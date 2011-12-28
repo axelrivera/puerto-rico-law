@@ -146,7 +146,6 @@
 		167EF24414A24D250058F8D1 /* SectionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167EF24214A24D250058F8D1 /* SectionListViewController.xib */; };
 		167EF24814A251320058F8D1 /* SectionContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167EF24614A251320058F8D1 /* SectionContentViewController.m */; };
 		167EF24914A251320058F8D1 /* SectionContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167EF24714A251320058F8D1 /* SectionContentViewController.xib */; };
-		1680EF5114AA441F00C4F785 /* FavoritesSectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1680EF5014AA441F00C4F785 /* FavoritesSectionTableViewCell.m */; };
 		16822ED214A931B8006344D1 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 16822ED114A931B8006344D1 /* NSString+Extras.m */; };
 		16822ED514A9338B006344D1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16822ED414A9338B006344D1 /* Security.framework */; };
 		1691519C14A2BF3B001E59C2 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519514A2BF3B001E59C2 /* Icon-72.png */; };
@@ -319,8 +318,6 @@
 		167EF24514A251320058F8D1 /* SectionContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionContentViewController.h; sourceTree = "<group>"; };
 		167EF24614A251320058F8D1 /* SectionContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionContentViewController.m; sourceTree = "<group>"; };
 		167EF24714A251320058F8D1 /* SectionContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionContentViewController.xib; sourceTree = "<group>"; };
-		1680EF4F14AA441F00C4F785 /* FavoritesSectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesSectionTableViewCell.h; sourceTree = "<group>"; };
-		1680EF5014AA441F00C4F785 /* FavoritesSectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesSectionTableViewCell.m; sourceTree = "<group>"; };
 		16822ED014A931B8006344D1 /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
 		16822ED114A931B8006344D1 /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
 		16822ED414A9338B006344D1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -403,8 +400,6 @@
 				1646AB2B14A3B55800B27123 /* BookTableViewCell.m */,
 				1663261B14A65249003279C3 /* SectionTableViewCell.h */,
 				1663261C14A65249003279C3 /* SectionTableViewCell.m */,
-				1680EF4F14AA441F00C4F785 /* FavoritesSectionTableViewCell.h */,
-				1680EF5014AA441F00C4F785 /* FavoritesSectionTableViewCell.m */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -965,7 +960,6 @@
 				1646AB2C14A3B55800B27123 /* BookTableViewCell.m in Sources */,
 				1663261D14A65249003279C3 /* SectionTableViewCell.m in Sources */,
 				16822ED214A931B8006344D1 /* NSString+Extras.m in Sources */,
-				1680EF5114AA441F00C4F785 /* FavoritesSectionTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

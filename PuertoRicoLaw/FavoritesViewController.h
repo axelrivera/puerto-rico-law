@@ -15,12 +15,12 @@ typedef enum {
 
 @protocol FavoritesViewControllerDelegate;
 
-@interface FavoritesViewController : UITableViewController
+@interface FavoritesViewController : UITableViewController <UIActionSheetDelegate>
 
 @property (unsafe_unretained, nonatomic) id <FavoritesViewControllerDelegate> delegate;
 @property (assign, readonly, nonatomic) FavoritesType favoritesType;
 @property (strong, nonatomic) NSMutableArray *favoritesDataSource;
-@property (assign, nonatomic) id selection;
+@property (strong, nonatomic) id selection;
 
 - (id)initWithFavoritesType:(FavoritesType)type;
 
@@ -29,5 +29,7 @@ typedef enum {
 @protocol FavoritesViewControllerDelegate
 
 - (void)favoritesViewControllerDidFinish:(FavoritesViewController *)controller save:(BOOL)save;
+- (void)favoritesViewControllerDeleteDataSource:(FavoritesViewController *)controller;
+- (void)favoritesViewController:(FavoritesViewController *)controller deleteRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

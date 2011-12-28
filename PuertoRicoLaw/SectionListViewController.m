@@ -399,6 +399,22 @@
 	}
 }
 
+- (void)favoritesViewControllerDeleteDataSource:(FavoritesViewController *)controller
+{
+	[controller.favoritesDataSource removeAllObjects];
+	[controller.tableView reloadData];
+	[controller setEditing:NO animated:YES];
+}
+
+- (void)favoritesViewController:(FavoritesViewController *)controller deleteRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	[controller.favoritesDataSource removeObjectAtIndex:indexPath.row];
+	[controller.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+	if ([controller.favoritesDataSource count] <= 0) {
+		[controller setEditing:NO animated:YES];
+	}
+}
+
 #pragma mark - UIActionSheet Delegate Methods
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
