@@ -10,4 +10,8 @@
 
 @interface Settings : NSObject
 
+@property (assign, nonatomic) BOOL landscapeMode;
+
++ (Settings *)sharedSettings;
+
 @end

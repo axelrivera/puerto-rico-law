@@ -14,6 +14,7 @@
 #import "BookTableView.h"
 #import "BookTableViewCell.h"
 #import "Section.h"
+#import "Settings.h"
 
 @interface BookViewController (Private)
 
@@ -92,6 +93,9 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
+	if (UIDeviceOrientationIsLandscape(interfaceOrientation) && ![Settings sharedSettings].landscapeMode) {
+		return NO;
+	}
     // Return YES for supported orientations
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
 	    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
