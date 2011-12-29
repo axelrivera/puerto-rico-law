@@ -12,6 +12,7 @@
 #import "Book.h"
 #import "Section.h"
 #import "Settings.h"
+#import "NSString+Extras.h"
 
 @interface SectionContentViewController (Private)
 
@@ -93,6 +94,7 @@
 	self.title = self.section.label;
 	if (fileContentStr_ == nil) {
 		fileContentStr_ = [self fileContentString];
+		self.webView.scrollView.indicatorStyle = [[Settings sharedSettings] scrollViewIndicator];
 		[self.webView loadHTMLString:[self htmlStringForSection] baseURL:nil];
 	}
 	[self checkGoNextItem];
@@ -184,7 +186,7 @@
 
 - (NSString *)htmlStringForSection
 {
-	return [NSString stringWithFormat:@"<html><body><h2>%@</h2>%@</body></html>", self.section.title, fileContentStr_];
+	return [NSString htmlStringWithTitle:self.section.title body:fileContentStr_];
 }
 
 - (NSString *)htmlStringForEmail

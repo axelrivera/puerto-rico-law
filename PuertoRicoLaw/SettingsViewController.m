@@ -7,7 +7,12 @@
 //
 
 #import "SettingsViewController.h"
+#import "ContentPreviewViewController.h"
 #import "Settings.h"
+
+#define kFontFamilyControllerTag 101
+#define kFontSizeControllerTag 102
+#define kContentBackgroundControllerTag 103
 
 @implementation SettingsViewController
 
@@ -49,11 +54,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
+	[self.tableView reloadData];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -95,7 +96,7 @@
     if (section == 0) {
 		row = 1;
 	} else if (section == 1) {
-		row = 2;
+		row = 4;
 	}
 	return row;
 }
@@ -113,7 +114,7 @@
 		}
 		
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
-		cell.textLabel.text = @"Soporte Landscape";
+		cell.textLabel.text = @"Landscape";
 		
 		UISwitch *switchView = (UISwitch *)cell.accessoryView;
 		[switchView addTarget:self action:@selector(landscapeAction:) forControlEvents:UIControlEventValueChanged];
@@ -133,11 +134,17 @@
 	NSString *detailTextStr = nil;
 	
 	if (indexPath.row == 0) {
-		textStr = @"Tipo de Letra";
-		detailTextStr = @"Helvetica";
+		textStr = @"Tipo";
+		detailTextStr = [[Settings sharedSettings] fontFamilyString];
 	} else if (indexPath.row == 1) {
-		textStr = @"Tamaño de Letra";
-		detailTextStr = @"Pequeña";
+		textStr = @"Tamaño";
+		detailTextStr = [[Settings sharedSettings] fontSizeString];
+	} else if (indexPath.row == 2) {
+		textStr = @"Background";
+		detailTextStr = [[Settings sharedSettings] contentBackgroundString];
+	} else if (indexPath.row == 3) {
+		textStr = @"Ver Ejemplo";
+		detailTextStr = nil;
 	}
 	
 	cell.selectionStyle = UITableViewCellSelectionStyleBlue;
@@ -153,20 +160,41 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+	
+    if (indexPath.section == 1) {
+		if (indexPath.row == 3) {
+			ContentPreviewViewController *previewController = [[ContentPreviewViewController alloc] init];
+			previewController.title = @"Ejemplo Contenido";
+			[self.navigationController pushViewController:previewController animated:YES];
+			return;
+		}
+		TableSelectViewController *selectController = [[TableSelectViewController alloc] init];
+		selectController.delegate = self;
+		if (indexPath.row == 0) {
+			selectController.selectID = kFontFamilyControllerTag;
+			selectController.currentIndex = [Settings sharedSettings].fontFamilyType;
+			selectController.tableData = [Settings fontFamilyArray];
+			selectController.title = @"Tipo de Font";
+		} else if (indexPath.row == 1) {
+			selectController.selectID = kFontSizeControllerTag;
+			selectController.currentIndex = [Settings sharedSettings].fontSizeType;
+			selectController.tableData = [Settings fontSizeArray];
+			selectController.title = @"Tamaño de Font";
+		} else if (indexPath.row == 2) {
+			selectController.selectID = kContentBackgroundControllerTag;
+			selectController.currentIndex = [Settings sharedSettings].contentBackgroundType;
+			selectController.tableData = [Settings contentBackgroundArray];
+			selectController.title = @"Color del Background";
+		}
+		[self.navigationController pushViewController:selectController animated:YES];
+	}
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
 	NSString *title = nil;
 	if (section == 1) {
-		title = @"Letra o \"Font\"";
+		title = @"Fonts";
 	}
 	return title;
 }
@@ -175,9 +203,22 @@
 {
 	NSString *title = nil;
 	if (section == 1) {
-		title = @"Para el contenido de las secciones.";
+		title = @"Fonts visibles en el contenido.";
 	}
 	return title;
+}
+
+#pragma mark - UIViewController Delegate Methods
+
+- (void)tableSelectViewControllerDidFinish:(TableSelectViewController *)controller
+{
+	if (controller.selectID == kFontFamilyControllerTag) {
+		[Settings sharedSettings].fontFamilyType = controller.currentIndex;
+	} else if (controller.selectID == kFontSizeControllerTag) {
+		[Settings sharedSettings].fontSizeType = controller.currentIndex;
+	} else if (controller.selectID == kContentBackgroundControllerTag) {
+		[Settings sharedSettings].contentBackgroundType = controller.currentIndex;
+	}
 }
 
 @end

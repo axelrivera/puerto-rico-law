@@ -10,6 +10,7 @@
 
 @interface NSString (Extras)
 
++ (NSString *)htmlStringWithTitle:(NSString *)title body:(NSString *)body;
 - (NSString *)md5;
 
 @end

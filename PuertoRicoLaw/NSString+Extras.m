@@ -8,8 +8,29 @@
 
 #import "NSString+Extras.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "Settings.h"
 
 @implementation NSString (Extras)
+
++ (NSString *)htmlStringWithTitle:(NSString *)title body:(NSString *)body
+{
+	Settings *settings = [Settings sharedSettings];
+	NSString *stylesheet = [NSString stringWithFormat:
+							@"<style type=\"text/css\">"
+							@"body {background-color:%@;color:%@;font-family:%@;font-size:%ipt;}"
+							@"h2 {font-size:1.3em; margin-bottom: 0.8em;}"
+							@"</style>",
+							[settings contentBackgroundStyleString],
+							[settings contentBackgroundFontColorStyleString],
+							[settings fontFamilyStyleString],
+							[settings fontSizeStylePoints]];
+	
+	return [NSString stringWithFormat:
+			@"<html><head>%@</head><body><h2>%@</h2>%@</body></html>",
+			stylesheet,
+			title,
+			body];
+}
 
 - (NSString *)md5
 {
