@@ -16,10 +16,15 @@
 
 @implementation SettingsViewController
 
+@synthesize delegate = delegate_;
+
 - (id)init
 {
 	self = [super initWithNibName:@"SettingsViewController" bundle:nil];
 	if (self) {
+		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+			self.contentSizeForViewInPopover = CGSizeMake(320.0, 480.0);
+		}
 		self.title = @"Configurar";
 	}
 	return self;
@@ -74,7 +79,7 @@
 
 - (void)dismissAction:(id)sender
 {
-	[self dismissModalViewControllerAnimated:YES];
+	[self.delegate settingsViewControllerDidFinish:self];
 }
 
 - (void)landscapeAction:(id)sender

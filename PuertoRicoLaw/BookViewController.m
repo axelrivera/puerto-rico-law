@@ -28,12 +28,17 @@
 	BookData *bookData_;
 	UIBarButtonItem *searchItem_;
 	UIBarButtonItem *doneItem_;
+	UIPopoverController *favoritesPopover_;
+	UIPopoverController *settingsPopover_;
 }
 
 - (id)init
 {
 	self = [super initWithNibName:@"BookViewController" bundle:nil];
 	if (self) {
+		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+			self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
+		}
 		bookData_ = [BookData sharedBookData];
 		bookData_.currentBook = nil;
 	}
@@ -53,6 +58,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
 	self.navigationController.toolbarHidden = NO;
 	[self setToolbarItems:[self toolbarItemsArray]];
 	
@@ -62,7 +68,7 @@
 	doneItem_ = [[UIBarButtonItem alloc] initWithTitle:@"OK"
 												 style:UIBarButtonItemStyleDone
 												target:self
-												action:@selector(doneAction:)];
+												action:@selector(reorderAction:)];
 	[self setEditing:NO animated:NO];
 }
 
@@ -89,6 +95,21 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		if (favoritesPopover_ != nil) {
+			[favoritesPopover_ dismissPopoverAnimated:YES];
+			favoritesPopover_ = nil;
+		}
+		
+		if (settingsPopover_ != nil) {
+			[settingsPopover_ dismissPopoverAnimated:YES];
+			settingsPopover_ = nil;
+		}
+	}
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -133,7 +154,7 @@
 	UIBarButtonItem *listItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"list.png"]
 																	style:UIBarButtonItemStylePlain
 																   target:self
-																   action:@selector(doneAction:)];
+																   action:@selector(reorderAction:)];
 	
 	UIBarButtonItem *favoritesItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"star.png"]
 																 style:UIBarButtonItemStylePlain
@@ -158,8 +179,19 @@
 
 #pragma mark - Selector Actions
 
-- (void)doneAction:(id)sender
+- (void)reorderAction:(id)sender
 {
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		if (favoritesPopover_ != nil) {
+			[favoritesPopover_ dismissPopoverAnimated:YES];
+			favoritesPopover_ = nil;
+		}
+		
+		if (settingsPopover_ != nil) {
+			[settingsPopover_ dismissPopoverAnimated:YES];
+			settingsPopover_ = nil;
+		}
+	}
 	[self setEditing:!self.isEditing animated:YES];
 }
 
@@ -175,15 +207,41 @@
 	favoritesController.delegate = self;
 	favoritesController.favoritesDataSource = bookData_.favoriteBooks;
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:favoritesController];
-	[self presentModalViewController:navigationController animated:YES];
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		if (settingsPopover_ != nil) {
+			[settingsPopover_ dismissPopoverAnimated:YES];
+			settingsPopover_ = nil;
+		}
+		if (favoritesPopover_ == nil) {
+			favoritesPopover_ = [[UIPopoverController alloc] initWithContentViewController:navigationController];
+		}
+		[favoritesPopover_ presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+	} else {
+		[self presentModalViewController:navigationController animated:YES];
+	}
 }
 
 - (void)settingsAction:(id)sender
 {
 	[self setEditing:NO animated:YES];
 	SettingsViewController *settingsController = [[SettingsViewController alloc] init];
+	settingsController.delegate = self;
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:settingsController];
-	[self presentModalViewController:navigationController animated:YES];
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		if (favoritesPopover_ != nil) {
+			[favoritesPopover_ dismissPopoverAnimated:YES];
+			favoritesPopover_ = nil;
+		}
+		
+		if (settingsPopover_ == nil) {
+			settingsPopover_ = [[UIPopoverController alloc] initWithContentViewController:navigationController];
+		}
+		[settingsPopover_ presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+	} else {
+		[self presentModalViewController:navigationController animated:YES];
+	}
 }
 
 #pragma mark - Parent Methods
@@ -293,7 +351,14 @@
 	if (save) {
 		book = controller.selection;
 	}
-	[controller dismissModalViewControllerAnimated:YES];
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		[favoritesPopover_ dismissPopoverAnimated:YES];
+		favoritesPopover_ = nil;
+	} else {
+		[self dismissModalViewControllerAnimated:YES];
+	}
+	
 	if (book) {
 		[self loadBook:book];
 	}
@@ -317,6 +382,16 @@
 	[controller.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
 	if ([controller.favoritesDataSource count] <= 0) {
 		[controller setEditing:NO animated:YES];
+	}
+}
+
+- (void)settingsViewControllerDidFinish:(UIViewController *)controller
+{
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		[settingsPopover_ dismissPopoverAnimated:YES];
+		settingsPopover_ = nil;
+	} else {
+		[self dismissModalViewControllerAnimated:YES];
 	}
 }
 

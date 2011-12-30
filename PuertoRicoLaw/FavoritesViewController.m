@@ -38,6 +38,9 @@
 {
 	self = [super initWithNibName:@"FavoritesViewController" bundle:nil];
 	if (self) {
+		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+			self.contentSizeForViewInPopover = CGSizeMake(320.0, 480.0);
+		}
 		favoritesType_ = type;
 		selection_ = nil;
 	}

@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "FavoritesViewController.h"
+#import "SettingsViewController.h"
 
-@interface BookViewController : UITableViewController <FavoritesViewControllerDelegate>
+@interface BookViewController : UITableViewController <FavoritesViewControllerDelegate, SettingsViewControllerDelegate>
 
 @end

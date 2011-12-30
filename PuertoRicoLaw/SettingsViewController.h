@@ -9,6 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "TableSelectViewController.h"
 
+@protocol SettingsViewControllerDelegate;
+
 @interface SettingsViewController : UITableViewController <TableSelectViewControllerDelegate>
+
+@property (unsafe_unretained, nonatomic) id <SettingsViewControllerDelegate> delegate;
+
+@end
+
+@protocol SettingsViewControllerDelegate
+
+- (void)settingsViewControllerDidFinish:(UIViewController *)controller;
 
 @end

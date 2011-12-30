@@ -14,11 +14,12 @@
 @class Section;
 
 @interface SectionContentViewController : UIViewController
-<FavoritesViewControllerDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
+<FavoritesViewControllerDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate, UISplitViewControllerDelegate>
 
 @property (unsafe_unretained, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) Section *section;
 @property (strong, nonatomic) NSArray *siblingSections;
 @property (assign, nonatomic) NSInteger currentSiblingSectionIndex;
+@property (strong, nonatomic) UIPopoverController *masterPopoverController;
 
 @end

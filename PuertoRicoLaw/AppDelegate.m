@@ -8,12 +8,14 @@
 
 #import "AppDelegate.h"
 #import "BookViewController.h"
+#import "SectionContentViewController.h"
 #import "BookData.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize navigationController = _navigationController;
+@synthesize splitViewController = _splitViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -26,8 +28,23 @@
 	// Override point for customization after application launch.
 	
 	BookViewController *bookController = [[BookViewController alloc] init];
-	self.navigationController = [[UINavigationController alloc] initWithRootViewController:bookController];
-	self.window.rootViewController = self.navigationController;
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		SectionContentViewController *contentController = [[SectionContentViewController alloc] init];
+		
+		UINavigationController *bookNavigationController = [[UINavigationController alloc] initWithRootViewController:bookController];
+		UINavigationController *contentNavigationController = [[UINavigationController alloc] initWithRootViewController:contentController];
+		
+		self.splitViewController = [[UISplitViewController alloc] init];
+		self.splitViewController.viewControllers = [NSArray arrayWithObjects:bookNavigationController, contentNavigationController, nil];
+		self.splitViewController.delegate = contentController;
+		self.window.rootViewController = self.splitViewController;
+		
+	} else {
+		self.navigationController = [[UINavigationController alloc] initWithRootViewController:bookController];
+		self.window.rootViewController = self.navigationController;
+	}
+	
     [self.window makeKeyAndVisible];
     return YES;
 }
