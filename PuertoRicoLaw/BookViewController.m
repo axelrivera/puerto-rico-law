@@ -133,9 +133,11 @@
 	[bookData_.currentBook loadSections];
 	
 	Section *section = bookData_.currentBook.mainSection;
-	SectionListViewController *sectionController = [[SectionListViewController alloc] init];
-	sectionController.section = section;
-	sectionController.sectionDataSource = section.children;
+	SectionListViewController *sectionController =
+	[[SectionListViewController alloc] initWithSection:section
+											dataSource:section.children
+									   siblingSections:nil
+								   currentSiblingIndex:0];
 	self.title = kHomeNavigationLabel;
 	[self.navigationController pushViewController:sectionController animated:YES];
 }

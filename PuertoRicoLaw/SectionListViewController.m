@@ -7,43 +7,43 @@
 //
 
 #import "SectionListViewController.h"
+#import "UIViewController+Section.h"
 #import "SectionContentViewController.h"
 #import "Book.h"
 #import "Section.h"
 #import "SectionTableViewCell.h"
 #import "Settings.h"
-
-@interface SectionListViewController (Private)
-
-- (void)checkGoNextItem;
-- (BOOL)canGoNext;
-- (void)checkGoPrevItem;
-- (BOOL)canGoPrev;
-- (void)reloadContentWithParentSectionAtIndex:(NSInteger)index;
-- (NSArray *)toolbarItemsArray;
-- (void)reloadControllerWithSection:(Section *)section;
-
-@end
+#import "SectionManager.h"
 
 @implementation SectionListViewController
 {
 	UIView *headerView_;
-	UIBarButtonItem *prevItem_;
-	UIBarButtonItem *nextItem_;
-	NSInteger favoriteIndex_;
 }
 
-@synthesize section = section_;
+@synthesize delegate = delegate_;
+@synthesize contentController = contentController_;
+@synthesize manager = manager_;
 @synthesize sectionDataSource = sectionDataSource_;
-@synthesize siblingSections = siblingSections_;
-@synthesize currentSiblingSectionIndex = currentSiblingSectionIndex_;
 
 - (id)init
 {
 	self = [super initWithNibName:@"SectionListViewController" bundle:nil];
 	if (self) {
-		currentSiblingSectionIndex_ = 0;
-		siblingSections_ = nil;
+		delegate_ = nil;
+		contentController_ = nil;
+		manager_ = nil;
+		sectionDataSource_ = nil;
+	}
+	return self;
+}
+
+- (id)initWithSection:(Section *)section dataSource:(NSArray *)data siblingSections:(NSArray *)siblings currentSiblingIndex:(NSInteger)index
+{
+	self = [self init];
+	if (self) {
+		manager_ = [[SectionManager alloc] initWithSection:section siblings:siblings currentIndex:index];
+		manager_.controller = self;
+		sectionDataSource_ = data;
 	}
 	return self;
 }
@@ -56,20 +56,31 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+- (void)dealloc
+{
+	self.delegate = nil;
+	self.contentController = nil;
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		self.contentController = (SectionContentViewController *)[self.splitViewController.viewControllers objectAtIndex:1];
+		self.delegate = self.contentController;
+	}
+	
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"magnify_mini.png"]
 																			  style:UIBarButtonItemStyleBordered
 																			 target:self
 																			 action:@selector(searchAction:)];
 	
-	[self setToolbarItems:[self toolbarItemsArray]];
-	prevItem_ = [self.toolbarItems objectAtIndex:kToolbarItemPosition2];
-	nextItem_ = [self.toolbarItems objectAtIndex:kToolbarItemPosition3];
+	[self setToolbarItems:[self sectionToolbarItems] animated:NO];
+	self.manager.prevItem = [self.toolbarItems objectAtIndex:kToolbarItemPosition2];
+	self.manager.nextItem = [self.toolbarItems objectAtIndex:kToolbarItemPosition3];
 }
 
 - (void)viewDidUnload
@@ -77,17 +88,15 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-	prevItem_ = nil;
-	nextItem_ = nil;
+	self.delegate = nil;
+	self.contentController = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-	self.title = self.section.label;
-	[self checkGoNextItem];
-	[self checkGoPrevItem];
-	favoriteIndex_ = [self.section.book unsignedIndexOfFavoritesWithMd5String:[self.section md5String]];
+	self.title = self.manager.section.label;
+	[self.manager checkItemsAndUpdateFavoriteIndex];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -108,149 +117,6 @@
 	}
 }
 
-#pragma mark - Private Methods
-
-- (void)checkGoNextItem
-{
-	if ([self canGoNext]) {
-		nextItem_.enabled = YES;
-		return;
-	}
-	nextItem_.enabled = NO;
-}
-
-- (BOOL)canGoNext
-{
-	if (self.currentSiblingSectionIndex < 0 || self.currentSiblingSectionIndex + 1 >= [self.siblingSections count]) {
-		return NO;
-	}
-	return YES;
-}
-
-- (void)checkGoPrevItem
-{
-	if ([self canGoPrev]) {
-		prevItem_.enabled = YES;
-		return;
-	}
-	prevItem_.enabled = NO;
-}
-
-- (BOOL)canGoPrev
-{
-	if (self.currentSiblingSectionIndex < 0 || self.currentSiblingSectionIndex - 1 < 0) {
-		return NO;
-	}
-	return YES;
-}
-
-- (void)reloadContentWithParentSectionAtIndex:(NSInteger)index
-{
-	Section *section = [self.siblingSections objectAtIndex:index];
-	if (section.children == nil) {
-		NSMutableArray *viewControllers = [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
-		[viewControllers removeLastObject];
-		SectionContentViewController *contentController = [[SectionContentViewController alloc] init];
-		contentController.section = section;
-		contentController.siblingSections = self.siblingSections;
-		contentController.currentSiblingSectionIndex = index;
-		[viewControllers addObject:contentController];
-		[self.navigationController setViewControllers:viewControllers];
-		return;
-	}
-	self.title = section.label;
-	self.section = section;
-	self.sectionDataSource = section.children;
-	[self.tableView reloadData];
-	[self.tableView setContentOffset:CGPointZero animated:NO];
-	[self checkGoNextItem];
-	[self checkGoPrevItem];
-	favoriteIndex_ = [self.section.book unsignedIndexOfFavoritesWithMd5String:[self.section md5String]];
-}
-
-- (NSArray *)toolbarItemsArray
-{
-	UIBarButtonItem *flexibleItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
-																				  target:nil
-																				  action:nil];
-	
-	UIBarButtonItem *homeItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"house.png"]
-																 style:UIBarButtonItemStylePlain
-																target:self
-																action:@selector(homeAction:)];
-	
-	UIBarButtonItem *prevItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"left_arrow.png"]
-																	  style:UIBarButtonItemStylePlain
-																	 target:self
-																	 action:@selector(prevAction:)];
-	
-	UIBarButtonItem *nextItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"right_arrow.png"]
-																	 style:UIBarButtonItemStylePlain
-																	target:self
-																	action:@selector(nextAction:)];
-	
-	UIBarButtonItem *favoritesItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"star.png"]
-																	  style:UIBarButtonItemStylePlain
-																	 target:self
-																	 action:@selector(favoritesAction:)];
-	
-	UIBarButtonItem *optionsItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
-																				 target:self
-																				 action:@selector(optionsAction:)];
-	
-	return [NSArray arrayWithObjects:
-			homeItem,
-			flexibleItem,
-			prevItem,
-			flexibleItem,
-			nextItem,
-			flexibleItem,
-			favoritesItem,
-			flexibleItem,
-			optionsItem,
-			nil];
-}
-
-- (void)reloadControllerWithSection:(Section *)section
-{
-	NSMutableArray *reversedSections = [[NSMutableArray alloc] initWithCapacity:0];
-	NSMutableArray *orderedSections = [[NSMutableArray alloc] initWithCapacity:0];
-	
-	Section *tmpSection = section;
-	while (tmpSection != nil) {
-		[reversedSections addObject:tmpSection];
-		tmpSection = tmpSection.parent;
-	}
-	
-	NSEnumerator *reverseEnumerator = [reversedSections reverseObjectEnumerator];
-	id object;
-	while (object = [reverseEnumerator nextObject]) {
-		[orderedSections addObject:object];
-	}
-	
-	NSMutableArray *viewControllers = [[NSMutableArray alloc] initWithCapacity:0];
-	[viewControllers addObject:[self.navigationController.viewControllers objectAtIndex:0]];
-	
-	for (Section *mySection in orderedSections) {
-		if (mySection.children == nil) {
-			SectionContentViewController *contentController = [[SectionContentViewController alloc] init];
-			contentController.section = mySection;
-			contentController.siblingSections = mySection.parent.children;
-			contentController.currentSiblingSectionIndex = [mySection indexPositionAtParent];
-			[viewControllers addObject:contentController];
-		} else {
-			SectionListViewController *sectionController = [[SectionListViewController alloc] init];
-			sectionController.title = mySection.label;
-			sectionController.section = mySection;
-			sectionController.sectionDataSource = mySection.children;
-			sectionController.siblingSections = mySection.parent.children;
-			sectionController.currentSiblingSectionIndex = [mySection indexPositionAtParent];
-			[viewControllers addObject:sectionController];
-		}
-	}
-	[self.navigationController setViewControllers:(NSArray *)viewControllers animated:YES];
-}
-
 #pragma mark - Selector Actions
 
 - (void)searchAction:(id)sender
@@ -267,16 +133,16 @@
 {
 	FavoritesViewController *favoritesController = [[FavoritesViewController alloc] initWithFavoritesType:FavoritesTypeSection];
 	favoritesController.delegate = self;
-	favoritesController.favoritesDataSource = self.section.book.favorites;
-	favoritesController.navigationItem.prompt = self.section.book.favoritesTitle;
+	favoritesController.favoritesDataSource = self.manager.section.book.favorites;
+	favoritesController.navigationItem.prompt = self.manager.section.book.favoritesTitle;
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:favoritesController];
-	[self presentModalViewController:navigationController animated:YES];
+	[self presentModalViewController:navigationController animated:YES];	
 }
 
 - (void)optionsAction:(id)sender
 {
 	NSString *favoriteStr = nil;
-	if (favoriteIndex_ >= 0) {
+	if (self.manager.favoriteIndex >= 0) {
 		favoriteStr = kFavoriteContentRemoveTitle;
 	} else {
 		favoriteStr = kFavoriteContentAddTitle;
@@ -292,17 +158,17 @@
 
 - (void)prevAction:(id)sender
 {
-	if ([self canGoPrev]) {
-		self.currentSiblingSectionIndex--;
-		[self reloadContentWithParentSectionAtIndex:self.currentSiblingSectionIndex];
+	if ([self.manager canGoPrev]) {
+		self.manager.currentIndex--;
+		[self.manager reloadContentWithCurrentIndex];
 	}
 }
 
 - (void)nextAction:(id)sender
 {
-	if ([self canGoNext]) {
-		self.currentSiblingSectionIndex++;
-		[self reloadContentWithParentSectionAtIndex:self.currentSiblingSectionIndex];
+	if ([self.manager canGoNext]) {
+		self.manager.currentIndex++;
+		[self.manager reloadContentWithCurrentIndex];
 	}
 }
 
@@ -340,18 +206,17 @@
 	
 	Section *section = [self.sectionDataSource objectAtIndex:indexPath.row];
 	if (section.children == nil) {
-		SectionContentViewController *contentController = [[SectionContentViewController alloc] init];
-		contentController.section = section;
-		contentController.siblingSections = self.sectionDataSource;
-		contentController.currentSiblingSectionIndex = indexPath.row;
+		SectionContentViewController *contentController =
+		[[SectionContentViewController alloc] initWithSection:section
+											  siblingSections:self.sectionDataSource
+										  currentSiblingIndex:indexPath.row];
 		[self.navigationController pushViewController:contentController animated:YES];
 	} else {
-		SectionListViewController *sectionController = [[SectionListViewController alloc] init];
-		sectionController.title = section.label;
-		sectionController.section = section;
-		sectionController.sectionDataSource = section.children;
-		sectionController.siblingSections = self.sectionDataSource;
-		sectionController.currentSiblingSectionIndex = indexPath.row;
+		SectionListViewController *sectionController =
+		[[SectionListViewController alloc] initWithSection:section
+												dataSource:section.children
+										   siblingSections:self.sectionDataSource
+									   currentSiblingIndex:indexPath.row];
 		[self.navigationController pushViewController:sectionController animated:YES];
 	}
 }
@@ -375,7 +240,7 @@
 	textLabel.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
 	textLabel.shadowColor = [UIColor whiteColor];
 	textLabel.shadowOffset = CGSizeMake(0.0, -1.0);
-	textLabel.text = self.section.title;
+	textLabel.text = self.manager.section.title;
 	
 	[headerView_ addSubview:textLabel];
 	
@@ -397,7 +262,7 @@
 	}
 	[controller dismissModalViewControllerAnimated:YES];
 	if (section) {
-		Section *favoriteSection = [self.section.book sectionInMainSectionMatchingMd5String:[section md5String]];
+		Section *favoriteSection = [self.manager.section.book sectionInMainSectionMatchingMd5String:[section md5String]];
 		[self reloadControllerWithSection:favoriteSection];
 	}
 }
@@ -423,12 +288,10 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
 	if (buttonIndex == 0) {
-		if (favoriteIndex_ >= 0) {
-			[self.section.book.favorites removeObjectAtIndex:favoriteIndex_];
-			favoriteIndex_ = -1;
+		if (self.manager.favoriteIndex >= 0) {
+			[self.manager removeFromFavorites];
 		} else {
-			[self.section.book.favorites addObject:self.section];
-			favoriteIndex_ = [self.section.book.favorites count] - 1;
+			[self.manager addToFavorites];
 		}
 	}
 }
