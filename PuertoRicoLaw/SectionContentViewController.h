@@ -7,21 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FavoritesViewController.h"
-#import <MessageUI/MessageUI.h>
-#import <MessageUI/MFMailComposeViewController.h>
 #import "SectionSelectionDelegate.h"
 
 @class Section;
 @class SectionManager;
 
-@interface SectionContentViewController : UIViewController
-<SectionSelectionDelegate, FavoritesViewControllerDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate, UISplitViewControllerDelegate>
+@interface SectionContentViewController : UIViewController <SectionSelectionDelegate, UISplitViewControllerDelegate>
 
 @property (unsafe_unretained, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) SectionManager *manager;
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 
 - (id)initWithSection:(Section *)section siblingSections:(NSArray *)siblings currentSiblingIndex:(NSInteger)index;
+
+- (NSString *)htmlStringForSection;
+- (NSString *)htmlStringForEmail;
+- (NSString *)fileContentString;
 
 @end

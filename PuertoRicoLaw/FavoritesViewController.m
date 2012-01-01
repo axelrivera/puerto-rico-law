@@ -94,9 +94,6 @@
 	}
 }
 
-#pragma mark - Custom Methods
-
-
 #pragma mark - Selector Actions
 
 - (void)dismissAction:(id)sender

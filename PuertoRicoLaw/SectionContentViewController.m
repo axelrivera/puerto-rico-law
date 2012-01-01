@@ -19,10 +19,6 @@
 @interface SectionContentViewController (Private)
 
 - (void)refresh;
-- (NSString *)htmlStringForSection;
-- (NSString *)htmlStringForEmail;
-- (NSString *)fileContentString;
-- (void)displayComposerSheet;
 
 @end
 
@@ -106,18 +102,7 @@
 	}
 }
 
-#pragma mark - Private Methods
-
-- (void)refresh
-{
-	self.title = self.manager.section.label;
-	if (fileContentStr_ == nil) {
-		fileContentStr_ = [self fileContentString];
-		self.webView.scrollView.indicatorStyle = [[Settings sharedSettings] scrollViewIndicator];
-		[self.webView loadHTMLString:[self htmlStringForSection] baseURL:nil];
-	}
-	[self.manager checkItemsAndUpdateFavoriteIndex];
-}
+#pragma mark - Custom Methods
 
 - (NSString *)htmlStringForSection
 {
@@ -164,15 +149,17 @@
 										error:NULL];
 }
 
-- (void)displayComposerSheet {
-	MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
-	picker.mailComposeDelegate = self;
-	
-	NSString *subjectStr = [NSString stringWithFormat:@"%@ [Leyes de Puerto Rico]", self.manager.section.book.title];
-	[picker setSubject:subjectStr];
-	[picker setMessageBody:[self htmlStringForEmail] isHTML:YES];
-	
-	[self presentModalViewController:picker animated:YES];
+#pragma mark - Private Methods
+
+- (void)refresh
+{
+	self.title = self.manager.section.label;
+	if (fileContentStr_ == nil) {
+		fileContentStr_ = [self fileContentString];
+		self.webView.scrollView.indicatorStyle = [[Settings sharedSettings] scrollViewIndicator];
+		[self.webView loadHTMLString:[self htmlStringForSection] baseURL:nil];
+	}
+	[self.manager checkItemsAndUpdateFavoriteIndex];
 }
 
 #pragma mark - Selector Actions
@@ -184,50 +171,42 @@
 
 - (void)homeAction:(id)sender
 {
-	[self.navigationController popToRootViewControllerAnimated:YES];
+	[self goHome];
 }
 
 - (void)favoritesAction:(id)sender
 {
-	FavoritesViewController *favoritesController = [[FavoritesViewController alloc] initWithFavoritesType:FavoritesTypeSection];
-	favoritesController.delegate = self;
-	favoritesController.favoritesDataSource = self.manager.section.book.favorites;
-	favoritesController.navigationItem.prompt = self.manager.section.book.favoritesTitle;
-	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:favoritesController];
-	[self presentModalViewController:navigationController animated:YES];	
+	[self.manager showFavorites];
 }
 
 - (void)optionsAction:(id)sender
 {
-	NSString *favoriteStr = nil;
-	if (self.manager.favoriteIndex >= 0) {
-		favoriteStr = kFavoriteContentRemoveTitle;
-	} else {
-		favoriteStr = kFavoriteContentAddTitle;
-	}
-	
-	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
-															 delegate:self
-													cancelButtonTitle:@"Cancelar"
-											   destructiveButtonTitle:nil
-													otherButtonTitles:favoriteStr, @"Enviar E-mail", nil];
-	[actionSheet showFromToolbar:self.navigationController.toolbar];
+	[self.manager showOptions];
 }
 
 - (void)prevAction:(id)sender
 {
-	if ([self.manager canGoPrev]) {
-		self.manager.currentIndex--;
-		[self.manager reloadContentWithCurrentIndex];
-	}
+	[self.manager showPrev];
 }
 
 - (void)nextAction:(id)sender
 {
-	if ([self.manager canGoNext]) {
-		self.manager.currentIndex++;
-		[self.manager reloadContentWithCurrentIndex];
-	}
+	[self.manager showNext];
+}
+
+#pragma mark - Section Selection Delegate Methods
+
+- (void)sectionSelectionChanged:(Section *)section siblingSections:(NSArray *)siblings currentSiblingIndex:(NSInteger)index
+{
+	self.manager = [[SectionManager alloc] initWithSection:section siblings:siblings currentIndex:index];
+	fileContentStr_ = nil;
+	[self refresh];
+}
+
+- (void)refreshCurrentSection
+{
+	fileContentStr_ = nil;
+	[self refresh];
 }
 
 #pragma mark - UIWebView Delegate Methods
@@ -252,106 +231,6 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-}
-
-#pragma mark - UIViewController Delegate Methods
-
-- (void)favoritesViewControllerDidFinish:(FavoritesViewController *)controller save:(BOOL)save
-{
-	Section *section = nil;
-	if (save) {
-		section = controller.selection;
-	}
-	[controller dismissModalViewControllerAnimated:YES];
-	if (section) {
-		Section *favoriteSection = [self.manager.section.book sectionInMainSectionMatchingMd5String:[section md5String]];
-		[self reloadControllerWithSection:favoriteSection];
-	}
-}
-
-- (void)favoritesViewControllerDeleteDataSource:(FavoritesViewController *)controller
-{
-	[controller.favoritesDataSource removeAllObjects];
-	[controller.tableView reloadData];
-	[controller setEditing:NO animated:YES];
-}
-
-- (void)favoritesViewController:(FavoritesViewController *)controller deleteRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	[controller.favoritesDataSource removeObjectAtIndex:indexPath.row];
-	[controller.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
-	if ([controller.favoritesDataSource count] <= 0) {
-		[controller setEditing:NO animated:YES];
-	}
-}
-
-#pragma mark - Section Selection Delegate Methods
-
-- (void)sectionSelectionChanged:(Section *)section siblingSections:(NSArray *)siblings currentSiblingIndex:(NSInteger)index
-{
-	self.manager = [[SectionManager alloc] initWithSection:section siblings:siblings currentIndex:index];
-	fileContentStr_ = nil;
-	[self refresh];
-}
-
-- (void)refreshCurrentSection
-{
-	fileContentStr_ = nil;
-	[self refresh];
-}
-
-#pragma mark - UIActionSheet Delegate Methods
-
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-	if (buttonIndex == 0) {
-		if (self.manager.favoriteIndex >= 0) {
-			[self.manager removeFromFavorites];
-		} else {
-			[self.manager addToFavorites];
-		}
-	} else if (buttonIndex == 1) {
-		[self displayComposerSheet];
-	}
-}
-
-#pragma mark - MFMailComposeViewController Delegate
-
-// Dismisses the email composition interface when users tap Cancel or Send. Proceeds to update the message field with the result of the operation.
-- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {	
-	NSString *errorString = nil;
-	
-	BOOL showAlert = NO;
-	// Notifies users about errors associated with the interface
-	switch (result)  {
-		case MFMailComposeResultCancelled:
-			break;
-		case MFMailComposeResultSaved:
-			break;
-		case MFMailComposeResultSent:
-			break;
-		case MFMailComposeResultFailed:
-			errorString = [NSString stringWithFormat:@"E-mail failed: %@", 
-						   [error localizedDescription]];
-			showAlert = YES;
-			break;
-		default:
-			errorString = [NSString stringWithFormat:@"E-mail was not sent: %@", 
-						   [error localizedDescription]];
-			showAlert = YES;
-			break;
-	}
-	
-	[self dismissModalViewControllerAnimated:YES];
-	
-	if (showAlert == YES) {
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"E-mail Error"
-														message:errorString
-													   delegate:self
-											  cancelButtonTitle:@"OK"
-											  otherButtonTitles: nil];
-		[alert show];
-	}
 }
 
 #pragma mark Split View Delegate

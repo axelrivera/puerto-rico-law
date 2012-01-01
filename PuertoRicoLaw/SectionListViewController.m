@@ -37,7 +37,10 @@
 	return self;
 }
 
-- (id)initWithSection:(Section *)section dataSource:(NSArray *)data siblingSections:(NSArray *)siblings currentSiblingIndex:(NSInteger)index
+- (id)initWithSection:(Section *)section
+		   dataSource:(NSArray *)data
+	  siblingSections:(NSArray *)siblings
+  currentSiblingIndex:(NSInteger)index
 {
 	self = [self init];
 	if (self) {
@@ -126,50 +129,27 @@
 
 - (void)homeAction:(id)sender
 {
-	[self.navigationController popToRootViewControllerAnimated:YES];
+	[self goHome];
 }
 
 - (void)favoritesAction:(id)sender
 {
-	FavoritesViewController *favoritesController = [[FavoritesViewController alloc] initWithFavoritesType:FavoritesTypeSection];
-	favoritesController.delegate = self;
-	favoritesController.favoritesDataSource = self.manager.section.book.favorites;
-	favoritesController.navigationItem.prompt = self.manager.section.book.favoritesTitle;
-	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:favoritesController];
-	[self presentModalViewController:navigationController animated:YES];	
+	[self.manager showFavorites];
 }
 
 - (void)optionsAction:(id)sender
 {
-	NSString *favoriteStr = nil;
-	if (self.manager.favoriteIndex >= 0) {
-		favoriteStr = kFavoriteContentRemoveTitle;
-	} else {
-		favoriteStr = kFavoriteContentAddTitle;
-	}
-	
-	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
-															 delegate:self
-													cancelButtonTitle:@"Cancelar"
-											   destructiveButtonTitle:nil
-													otherButtonTitles:favoriteStr, nil];
-	[actionSheet showFromToolbar:self.navigationController.toolbar];
+	[self.manager showOptions];
 }
 
 - (void)prevAction:(id)sender
 {
-	if ([self.manager canGoPrev]) {
-		self.manager.currentIndex--;
-		[self.manager reloadContentWithCurrentIndex];
-	}
+	[self.manager showPrev];
 }
 
 - (void)nextAction:(id)sender
 {
-	if ([self.manager canGoNext]) {
-		self.manager.currentIndex++;
-		[self.manager reloadContentWithCurrentIndex];
-	}
+	[self.manager showNext];
 }
 
 #pragma mark - Table view data source
@@ -250,50 +230,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
 	return 52.0;
-}
-
-#pragma mark - UIViewControllerDelegates
-
-- (void)favoritesViewControllerDidFinish:(FavoritesViewController *)controller save:(BOOL)save
-{
-	Section *section = nil;
-	if (save) {
-		section = controller.selection;
-	}
-	[controller dismissModalViewControllerAnimated:YES];
-	if (section) {
-		Section *favoriteSection = [self.manager.section.book sectionInMainSectionMatchingMd5String:[section md5String]];
-		[self reloadControllerWithSection:favoriteSection];
-	}
-}
-
-- (void)favoritesViewControllerDeleteDataSource:(FavoritesViewController *)controller
-{
-	[controller.favoritesDataSource removeAllObjects];
-	[controller.tableView reloadData];
-	[controller setEditing:NO animated:YES];
-}
-
-- (void)favoritesViewController:(FavoritesViewController *)controller deleteRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	[controller.favoritesDataSource removeObjectAtIndex:indexPath.row];
-	[controller.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
-	if ([controller.favoritesDataSource count] <= 0) {
-		[controller setEditing:NO animated:YES];
-	}
-}
-
-#pragma mark - UIActionSheet Delegate Methods
-
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-	if (buttonIndex == 0) {
-		if (self.manager.favoriteIndex >= 0) {
-			[self.manager removeFromFavorites];
-		} else {
-			[self.manager addToFavorites];
-		}
-	}
 }
 
 @end

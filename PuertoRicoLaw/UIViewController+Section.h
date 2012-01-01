@@ -16,4 +16,6 @@
 - (NSArray *)sectionToolbarItems;
 - (void)reloadControllerWithSection:(Section *)section;
 
+- (void)goHome;
+
 @end

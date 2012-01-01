@@ -97,4 +97,9 @@
 	[self.navigationController setViewControllers:(NSArray *)viewControllers animated:YES];
 }
 
+- (void)goHome
+{
+	[self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 @end

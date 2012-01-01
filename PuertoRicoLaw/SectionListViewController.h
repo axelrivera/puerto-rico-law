@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FavoritesViewController.h"
 #import "SectionSelectionDelegate.h"
 
 @class Book;
@@ -15,13 +14,16 @@
 @class SectionManager;
 @class SectionContentViewController;
 
-@interface SectionListViewController : UITableViewController <FavoritesViewControllerDelegate, UIActionSheetDelegate>
+@interface SectionListViewController : UITableViewController
 
 @property (unsafe_unretained, nonatomic) id <SectionSelectionDelegate> delegate;
 @property (unsafe_unretained, nonatomic) SectionContentViewController *contentController;
 @property (strong, nonatomic) SectionManager *manager;
 @property (strong, nonatomic) NSArray *sectionDataSource;
 
-- (id)initWithSection:(Section *)section dataSource:(NSArray *)data siblingSections:(NSArray *)siblings currentSiblingIndex:(NSInteger)index;
+- (id)initWithSection:(Section *)section
+		   dataSource:(NSArray *)data
+	  siblingSections:(NSArray *)siblings
+  currentSiblingIndex:(NSInteger)index;
 
 @end
