@@ -144,12 +144,12 @@
 
 - (void)prevAction:(id)sender
 {
-	[self.manager showPrev:self];
+	[self.manager showPrev];
 }
 
 - (void)nextAction:(id)sender
 {
-	[self.manager showNext:self];
+	[self.manager showNext];
 }
 
 #pragma mark - Table view data source

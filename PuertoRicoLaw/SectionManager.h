@@ -41,8 +41,8 @@
 - (void)removeFromFavorites;
 
 - (void)showFavorites;
-- (void)showNext:(id)sender;
-- (void)showPrev:(id)sender;
+- (void)showNext;
+- (void)showPrev;
 - (void)showOptions;
 
 @end

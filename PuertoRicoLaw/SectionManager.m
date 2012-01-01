@@ -177,31 +177,27 @@
 	[self.controller presentModalViewController:navigationController animated:YES];
 }
 
-- (void)showNext:(id)sender
+- (void)showNext
 {
-	if ([sender isKindOfClass:[SectionListViewController class]] || [sender isKindOfClass:[SectionContentViewController class]]) {
-		if ([self canGoNext]) {
-			self.currentIndex++;
-			if ([sender isKindOfClass:[SectionListViewController class]]) {
-				[self reloadListWithCurrentIndex];
-				return;
-			}
-			[self reloadContentWithCurrentIndex];
+	if ([self canGoNext]) {
+		self.currentIndex++;
+		if ([self.controller isKindOfClass:[SectionListViewController class]]) {
+			[self reloadListWithCurrentIndex];
+			return;
 		}
+		[self reloadContentWithCurrentIndex];
 	}
 }
 
-- (void)showPrev:(id)sender
+- (void)showPrev
 {
-	if ([sender isKindOfClass:[SectionListViewController class]] || [sender isKindOfClass:[SectionContentViewController class]]) {
-		if ([self canGoPrev]) {
-			self.currentIndex--;
-			if ([sender isKindOfClass:[SectionListViewController class]]) {
-				[self reloadListWithCurrentIndex];
-				return;
-			}
-			[self reloadContentWithCurrentIndex];
+	if ([self canGoPrev]) {
+		self.currentIndex--;
+		if ([self.controller isKindOfClass:[SectionListViewController class]]) {
+			[self reloadListWithCurrentIndex];
+			return;
 		}
+		[self reloadContentWithCurrentIndex];
 	}
 }
 
