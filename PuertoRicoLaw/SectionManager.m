@@ -63,7 +63,7 @@
 
 #pragma mark - Custom Methods
 
-- (void)reloadContentWithCurrentIndex
+- (void)reloadListWithCurrentIndex
 {	
 	Section *section = [self.siblings objectAtIndex:self.currentIndex];
 	if (section.children == nil) {
@@ -83,6 +83,29 @@
 	[self.controller setSectionDataSource:section.children];
 	[[self.controller tableView] reloadData];
 	[[self.controller tableView] setContentOffset:CGPointZero animated:NO];
+	[[self.controller manager] checkItemsAndUpdateFavoriteIndex];
+}
+
+- (void)reloadContentWithCurrentIndex
+{
+	Section *section = [self.siblings objectAtIndex:self.currentIndex];
+	if (section.children != nil) {
+		NSMutableArray *viewControllers =
+		[[NSMutableArray alloc] initWithArray:[[self.controller navigationController] viewControllers]];
+		[viewControllers removeLastObject];
+		SectionListViewController *sectionController =
+		[[SectionListViewController alloc] initWithSection:section
+												dataSource:section.children
+										   siblingSections:self.siblings
+									   currentSiblingIndex:self.currentIndex];
+		[viewControllers addObject:sectionController];
+		[[self.controller navigationController] setViewControllers:viewControllers];
+		return;
+	}
+	[self.controller setTitle:section.label];
+	[[self.controller manager] setSection:section];
+	[self.controller setFileContentStr:[self.controller fileContentString]];
+	[[self.controller webView] loadHTMLString:[self.controller htmlStringForSection] baseURL:nil];
 	[[self.controller manager] checkItemsAndUpdateFavoriteIndex];
 }
 
@@ -154,19 +177,31 @@
 	[self.controller presentModalViewController:navigationController animated:YES];
 }
 
-- (void)showNext
+- (void)showNext:(id)sender
 {
-	if ([self canGoNext]) {
-		self.currentIndex++;
-		[self reloadContentWithCurrentIndex];
+	if ([sender isKindOfClass:[SectionListViewController class]] || [sender isKindOfClass:[SectionContentViewController class]]) {
+		if ([self canGoNext]) {
+			self.currentIndex++;
+			if ([sender isKindOfClass:[SectionListViewController class]]) {
+				[self reloadListWithCurrentIndex];
+				return;
+			}
+			[self reloadContentWithCurrentIndex];
+		}
 	}
 }
 
-- (void)showPrev
+- (void)showPrev:(id)sender
 {
-	if ([self canGoPrev]) {
-		self.currentIndex--;
-		[self reloadContentWithCurrentIndex];
+	if ([sender isKindOfClass:[SectionListViewController class]] || [sender isKindOfClass:[SectionContentViewController class]]) {
+		if ([self canGoPrev]) {
+			self.currentIndex--;
+			if ([sender isKindOfClass:[SectionListViewController class]]) {
+				[self reloadListWithCurrentIndex];
+				return;
+			}
+			[self reloadContentWithCurrentIndex];
+		}
 	}
 }
 

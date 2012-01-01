@@ -16,6 +16,7 @@
 
 @property (unsafe_unretained, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) SectionManager *manager;
+@property (strong, nonatomic) NSString *fileContentStr;
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 
 - (id)initWithSection:(Section *)section siblingSections:(NSArray *)siblings currentSiblingIndex:(NSInteger)index;

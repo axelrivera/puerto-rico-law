@@ -28,6 +28,7 @@
 
 - (id)initWithSection:(Section *)section siblings:(NSArray *)siblings currentIndex:(NSInteger)currentIndex;
 
+- (void)reloadListWithCurrentIndex;
 - (void)reloadContentWithCurrentIndex;
 - (void)checkItemsAndUpdateFavoriteIndex;
 - (void)checkGoNextItem;
@@ -40,8 +41,8 @@
 - (void)removeFromFavorites;
 
 - (void)showFavorites;
-- (void)showNext;
-- (void)showPrev;
+- (void)showNext:(id)sender;
+- (void)showPrev:(id)sender;
 - (void)showOptions;
 
 @end

@@ -23,12 +23,10 @@
 @end
 
 @implementation SectionContentViewController
-{
-	NSString *fileContentStr_;
-}
 
 @synthesize webView = webView_;
 @synthesize manager = manager_;
+@synthesize fileContentStr = fileContentStr_;
 @synthesize masterPopoverController = masterPopoverController_;
 
 - (id)init
@@ -106,12 +104,12 @@
 
 - (NSString *)htmlStringForSection
 {
-	return [NSString htmlStringWithTitle:self.manager.section.title body:fileContentStr_];
+	return [NSString htmlStringWithTitle:self.manager.section.title body:self.fileContentStr];
 }
 
 - (NSString *)htmlStringForEmail
 {
-	NSString *contentStr = fileContentStr_;
+	NSString *contentStr = self.fileContentStr;
 	
 	NSMutableArray *sections = [[NSMutableArray alloc] initWithCapacity:0];
 	Section *section = self.manager.section;
@@ -154,8 +152,8 @@
 - (void)refresh
 {
 	self.title = self.manager.section.label;
-	if (fileContentStr_ == nil) {
-		fileContentStr_ = [self fileContentString];
+	if (self.fileContentStr == nil) {
+		self.fileContentStr = [self fileContentString];
 		self.webView.scrollView.indicatorStyle = [[Settings sharedSettings] scrollViewIndicator];
 		[self.webView loadHTMLString:[self htmlStringForSection] baseURL:nil];
 	}
@@ -186,12 +184,12 @@
 
 - (void)prevAction:(id)sender
 {
-	[self.manager showPrev];
+	[self.manager showPrev:self];
 }
 
 - (void)nextAction:(id)sender
 {
-	[self.manager showNext];
+	[self.manager showNext:self];
 }
 
 #pragma mark - Section Selection Delegate Methods
@@ -199,13 +197,13 @@
 - (void)sectionSelectionChanged:(Section *)section siblingSections:(NSArray *)siblings currentSiblingIndex:(NSInteger)index
 {
 	self.manager = [[SectionManager alloc] initWithSection:section siblings:siblings currentIndex:index];
-	fileContentStr_ = nil;
+	self.fileContentStr = nil;
 	[self refresh];
 }
 
 - (void)refreshCurrentSection
 {
-	fileContentStr_ = nil;
+	self.fileContentStr = nil;
 	[self refresh];
 }
 
