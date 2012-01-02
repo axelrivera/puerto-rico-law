@@ -20,17 +20,14 @@
 	UIView *headerView_;
 }
 
-@synthesize delegate = delegate_;
-@synthesize contentController = contentController_;
 @synthesize manager = manager_;
 @synthesize sectionDataSource = sectionDataSource_;
+@synthesize masterPopoverController = masterPopoverController_;
 
 - (id)init
 {
 	self = [super initWithNibName:@"SectionListViewController" bundle:nil];
 	if (self) {
-		delegate_ = nil;
-		contentController_ = nil;
 		manager_ = nil;
 		sectionDataSource_ = nil;
 	}
@@ -59,22 +56,11 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
-- (void)dealloc
-{
-	self.delegate = nil;
-	self.contentController = nil;
-}
-
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		self.contentController = (SectionContentViewController *)[self.splitViewController.viewControllers objectAtIndex:1];
-		self.delegate = self.contentController;
-	}
 	
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"magnify_mini.png"]
 																			  style:UIBarButtonItemStyleBordered
@@ -91,15 +77,12 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-	self.delegate = nil;
-	self.contentController = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-	self.title = self.manager.section.label;
-	[self.manager checkItemsAndUpdateFavoriteIndex];
+	[self refresh];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -118,6 +101,24 @@
 	} else {
 	    return YES;
 	}
+}
+
+#pragma mark - Custom Methods
+
+- (void)refresh
+{
+	if (self.sectionDataSource == nil) {
+		self.navigationController.toolbarHidden = YES;
+	} else {
+		self.navigationController.toolbarHidden = NO;
+	}
+	if (self.manager.section == nil) {
+		self.title = @"Leyes Puerto Rico";
+	} else {
+		self.title = self.manager.section.label;
+	}
+	[self.manager checkItemsAndUpdateFavoriteIndex];
+	[self.tableView reloadData];
 }
 
 #pragma mark - Selector Actions
@@ -152,6 +153,34 @@
 	[self.manager showNext];
 }
 
+#pragma mark - Section Selection Delegate Methods
+
+- (void)sectionSelectionChanged:(Section *)section
+					 dataSource:(NSArray *)data
+				siblingSections:(NSArray *)siblings
+			currentSiblingIndex:(NSInteger)index
+{
+	if (self.masterPopoverController) {
+		[self.masterPopoverController dismissPopoverAnimated:YES];
+	}
+	
+	self.sectionDataSource = data;
+	self.manager.section = section;
+	self.manager.siblings = siblings;
+	self.manager.currentIndex = index;
+	[self refresh];
+}
+
+- (void)refreshCurrentSection
+{
+	
+}
+
+- (void)clearCurrentSection
+{
+	
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -170,7 +199,7 @@
 	
 	Section *section = [self.sectionDataSource objectAtIndex:indexPath.row];
     
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 	cell.textLabel.text = section.label;
 	cell.detailTextLabel.text = section.title;
@@ -230,6 +259,27 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
 	return 52.0;
+}
+
+#pragma mark Split View Delegate
+
+- (void)splitViewController:(UISplitViewController *)splitController
+	 willHideViewController:(UIViewController *)viewController
+		  withBarButtonItem:(UIBarButtonItem *)barButtonItem
+	   forPopoverController:(UIPopoverController *)popoverController
+{
+    barButtonItem.title = @"Leyes Puerto Rico";
+    [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
+    self.masterPopoverController = popoverController;
+}
+
+- (void)splitViewController:(UISplitViewController *)splitController
+	 willShowViewController:(UIViewController *)viewController
+  invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
+{
+    // Called when the view is shown again in the split view, invalidating the button and popover controller.
+    [self.navigationItem setLeftBarButtonItem:nil animated:YES];
+    self.masterPopoverController = nil;
 }
 
 @end

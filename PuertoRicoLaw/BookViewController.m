@@ -32,10 +32,13 @@
 	UIPopoverController *settingsPopover_;
 }
 
+@synthesize delegate = delegate_;
+
 - (id)init
 {
 	self = [super initWithNibName:@"BookViewController" bundle:nil];
 	if (self) {
+		delegate_ = nil;
 		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 			self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
 		}
@@ -53,11 +56,18 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+- (void)dealloc
+{
+	self.delegate = nil;
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+	self.clearsSelectionOnViewWillAppear = YES;
 	
 	self.navigationController.toolbarHidden = NO;
 	[self setToolbarItems:[self toolbarItemsArray]];
@@ -79,6 +89,7 @@
     // e.g. self.myOutlet = nil;
 	searchItem_ = nil;
 	doneItem_ = nil;
+	self.delegate = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -133,13 +144,18 @@
 	[bookData_.currentBook loadSections];
 	
 	Section *section = bookData_.currentBook.mainSection;
-	SectionListViewController *sectionController =
-	[[SectionListViewController alloc] initWithSection:section
-											dataSource:section.children
-									   siblingSections:nil
-								   currentSiblingIndex:0];
-	self.title = kHomeNavigationLabel;
-	[self.navigationController pushViewController:sectionController animated:YES];
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		[self.delegate sectionSelectionChanged:section dataSource:section.children siblingSections:nil currentSiblingIndex:-1];
+	} else {
+		SectionListViewController *sectionController =
+		[[SectionListViewController alloc] initWithSection:section
+												dataSource:section.children
+										   siblingSections:nil
+									   currentSiblingIndex:0];
+		self.title = kHomeNavigationLabel;
+		[self.navigationController pushViewController:sectionController animated:YES];
+	}
 }
 
 - (NSArray *)toolbarItemsArray
@@ -148,10 +164,14 @@
 																				  target:nil
 																				  action:nil];
 	
-	UIBarButtonItem *homeItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"house.png"]
+	UIBarButtonItem *homeItem = nil;
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+		homeItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"house.png"]
 																 style:UIBarButtonItemStylePlain
 																target:self
 																action:@selector(homeAction:)];
+	}
 	
 	UIBarButtonItem *listItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"list.png"]
 																	style:UIBarButtonItemStylePlain
@@ -168,15 +188,28 @@
 																	target:self
 																	action:@selector(settingsAction:)];
 	
-	return [NSArray arrayWithObjects:
-			homeItem,
-			flexibleItem,
-			listItem,
-			flexibleItem,
-			favoritesItem,
-			flexibleItem,
-			settingsItem,
-			nil];
+	NSArray *array = nil;
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		array = [NSArray arrayWithObjects:
+				 listItem,
+				 flexibleItem,
+				 favoritesItem,
+				 flexibleItem,
+				 settingsItem,
+				 nil];
+	} else {
+		array = [NSArray arrayWithObjects:
+				 homeItem,
+				 flexibleItem,
+				 listItem,
+				 flexibleItem,
+				 favoritesItem,
+				 flexibleItem,
+				 settingsItem,
+				 nil];
+	}
+	return array;
 }
 
 #pragma mark - Selector Actions
@@ -295,7 +328,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+		[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	}
 	Book *book = [bookData_.books objectAtIndex:indexPath.row];
 	
 	if (!tableView.isEditing) {

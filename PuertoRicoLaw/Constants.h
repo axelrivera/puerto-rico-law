@@ -8,11 +8,11 @@
 
 #define kHomeNavigationLabel @"Inicio"
 
-#define kToolbarItemPosition1 0
-#define kToolbarItemPosition2 2
-#define kToolbarItemPosition3 4
-#define kToolbarItemPosition4 6
-#define kToolbarItemPosition5 8
+#define kToolbarItemPosition1 1
+#define kToolbarItemPosition2 3
+#define kToolbarItemPosition3 5
+#define kToolbarItemPosition4 7
+#define kToolbarItemPosition5 9
 
 #define kBookListFileName @"PuertoRicoLawBooks"
 #define kBookListKey @"bookList"

@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BookViewController.h"
-#import "SectionContentViewController.h"
+#import "SectionListViewController.h"
 #import "BookData.h"
 
 @implementation AppDelegate
@@ -30,14 +30,16 @@
 	BookViewController *bookController = [[BookViewController alloc] init];
 	
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		SectionContentViewController *contentController = [[SectionContentViewController alloc] init];
+		SectionListViewController *listController =
+		[[SectionListViewController alloc] initWithSection:nil dataSource:nil siblingSections:nil currentSiblingIndex:-1];
 		
+		bookController.delegate = listController;
 		UINavigationController *bookNavigationController = [[UINavigationController alloc] initWithRootViewController:bookController];
-		UINavigationController *contentNavigationController = [[UINavigationController alloc] initWithRootViewController:contentController];
+		UINavigationController *listNavigationController = [[UINavigationController alloc] initWithRootViewController:listController];
 		
 		self.splitViewController = [[UISplitViewController alloc] init];
-		self.splitViewController.viewControllers = [NSArray arrayWithObjects:bookNavigationController, contentNavigationController, nil];
-		self.splitViewController.delegate = contentController;
+		self.splitViewController.viewControllers = [NSArray arrayWithObjects:bookNavigationController, listNavigationController, nil];
+		self.splitViewController.delegate = listController;
 		self.window.rootViewController = self.splitViewController;
 		
 	} else {

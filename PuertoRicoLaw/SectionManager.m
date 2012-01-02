@@ -36,6 +36,7 @@
 		section_ = nil;
 		siblings_ = nil;
 		currentIndex_ = 0;
+		favoriteIndex_ = -1;
 		nextItem_ = nil;
 		prevItem_ = nil;
 		controller_ = nil;
@@ -103,7 +104,7 @@
 		return;
 	}
 	[[self.controller manager] setSection:section];
-	[self.controller setFileContentStr:[self.controller fileContentString]];
+	[self.controller setFileContentStr:nil];
 	[self.controller refresh];
 }
 
@@ -221,6 +222,13 @@
 	actionSheet.cancelButtonIndex = [actionSheet numberOfButtons] - 1;
 	
 	[actionSheet showFromToolbar:[[self.controller navigationController] toolbar]];
+}
+
+- (void)resetSection
+{
+	self.section = nil;
+	self.siblings = nil;
+	self.currentIndex = 0;
 }
 
 #pragma mark - Private Methods

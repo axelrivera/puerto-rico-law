@@ -14,16 +14,18 @@
 @class SectionManager;
 @class SectionContentViewController;
 
-@interface SectionListViewController : UITableViewController
+@interface SectionListViewController : UITableViewController <SectionSelectionDelegate, UISplitViewControllerDelegate>
 
-@property (unsafe_unretained, nonatomic) id <SectionSelectionDelegate> delegate;
-@property (unsafe_unretained, nonatomic) SectionContentViewController *contentController;
 @property (strong, nonatomic) SectionManager *manager;
 @property (strong, nonatomic) NSArray *sectionDataSource;
+@property (strong, nonatomic) UIPopoverController *masterPopoverController;
+
 
 - (id)initWithSection:(Section *)section
 		   dataSource:(NSArray *)data
 	  siblingSections:(NSArray *)siblings
   currentSiblingIndex:(NSInteger)index;
+
+- (void)refresh;
 
 @end

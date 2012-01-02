@@ -16,16 +16,25 @@
 
 - (NSArray *)sectionToolbarItems
 {
+	CGFloat fixedWidth = 0.0;
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		fixedWidth = 100.0;
+	}
+	
+	UIBarButtonItem *fixedItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+																			   target:nil
+																			   action:nil];
+	fixedItem.width = fixedWidth;
+	
 	UIBarButtonItem *flexibleItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
 																				  target:nil
 																				  action:nil];
 	
 	UIBarButtonItem *homeItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"house.png"]
-																 style:UIBarButtonItemStylePlain
-																target:self
-																action:@selector(homeAction:)];
-	
-	
+													style:UIBarButtonItemStylePlain
+												   target:self
+												   action:@selector(homeAction:)];
+		
 	UIBarButtonItem *prevItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"left_arrow.png"]
 																 style:UIBarButtonItemStylePlain
 																target:self
@@ -46,6 +55,7 @@
 																				 action:@selector(optionsAction:)];
 	
 	return [NSArray arrayWithObjects:
+			fixedItem,
 			homeItem,
 			flexibleItem,
 			prevItem,
@@ -55,6 +65,7 @@
 			favoritesItem,
 			flexibleItem,
 			optionsItem,
+			fixedItem,
 			nil];
 }
 

@@ -21,7 +21,6 @@
 @synthesize webView = webView_;
 @synthesize manager = manager_;
 @synthesize fileContentStr = fileContentStr_;
-@synthesize masterPopoverController = masterPopoverController_;
 
 - (id)init
 {
@@ -145,13 +144,24 @@
 
 - (void)refresh
 {
+	self.webView.scrollView.indicatorStyle = [[Settings sharedSettings] scrollViewIndicator];
+	
+	if (self.manager.section == nil) {
+		self.title = @"Leyes Puerto Rico";
+		self.fileContentStr = nil;
+		[self.webView loadHTMLString:@"" baseURL:nil];
+		[self.manager checkItemsAndUpdateFavoriteIndex];
+		self.navigationController.toolbarHidden = YES;
+		return;
+	}
+
 	self.title = self.manager.section.label;
 	if (self.fileContentStr == nil) {
 		self.fileContentStr = [self fileContentString];
-		self.webView.scrollView.indicatorStyle = [[Settings sharedSettings] scrollViewIndicator];
 		[self.webView loadHTMLString:[self htmlStringForSection] baseURL:nil];
 	}
 	[self.manager checkItemsAndUpdateFavoriteIndex];
+	self.navigationController.toolbarHidden = NO;
 }
 
 #pragma mark - Selector Actions
@@ -186,21 +196,6 @@
 	[self.manager showNext];
 }
 
-#pragma mark - Section Selection Delegate Methods
-
-- (void)sectionSelectionChanged:(Section *)section siblingSections:(NSArray *)siblings currentSiblingIndex:(NSInteger)index
-{
-	self.manager = [[SectionManager alloc] initWithSection:section siblings:siblings currentIndex:index];
-	self.fileContentStr = nil;
-	[self refresh];
-}
-
-- (void)refreshCurrentSection
-{
-	self.fileContentStr = nil;
-	[self refresh];
-}
-
 #pragma mark - UIWebView Delegate Methods
 
 - (BOOL)webView:(UIWebView *)webView
@@ -223,27 +218,6 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-}
-
-#pragma mark Split View Delegate
-
-- (void)splitViewController:(UISplitViewController *)splitController
-	 willHideViewController:(UIViewController *)viewController
-		  withBarButtonItem:(UIBarButtonItem *)barButtonItem
-	   forPopoverController:(UIPopoverController *)popoverController
-{
-    barButtonItem.title = @"Leyes Puerto Rico";
-    [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
-    self.masterPopoverController = popoverController;
-}
-
-- (void)splitViewController:(UISplitViewController *)splitController
-	 willShowViewController:(UIViewController *)viewController
-  invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
-{
-    // Called when the view is shown again in the split view, invalidating the button and popover controller.
-    [self.navigationItem setLeftBarButtonItem:nil animated:YES];
-    self.masterPopoverController = nil;
 }
 
 @end

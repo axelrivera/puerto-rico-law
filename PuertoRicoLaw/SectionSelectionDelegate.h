@@ -11,7 +11,11 @@
 
 @protocol SectionSelectionDelegate <NSObject>
 
-- (void)sectionSelectionChanged:(Section *)section siblingSections:(NSArray *)siblings currentSiblingIndex:(NSInteger)index;
+- (void)sectionSelectionChanged:(Section *)section
+					 dataSource:(NSArray *)data
+				siblingSections:(NSArray *)siblings
+			currentSiblingIndex:(NSInteger)index;
 - (void)refreshCurrentSection;
+- (void)clearCurrentSection;
 
 @end

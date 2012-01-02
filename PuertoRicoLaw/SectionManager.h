@@ -45,4 +45,6 @@
 - (void)showPrev;
 - (void)showOptions;
 
+- (void)resetSection;
+
 @end
