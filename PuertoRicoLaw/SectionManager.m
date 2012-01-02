@@ -102,11 +102,9 @@
 		[[self.controller navigationController] setViewControllers:viewControllers];
 		return;
 	}
-	[self.controller setTitle:section.label];
 	[[self.controller manager] setSection:section];
 	[self.controller setFileContentStr:[self.controller fileContentString]];
-	[[self.controller webView] loadHTMLString:[self.controller htmlStringForSection] baseURL:nil];
-	[[self.controller manager] checkItemsAndUpdateFavoriteIndex];
+	[self.controller refresh];
 }
 
 - (void)checkItemsAndUpdateFavoriteIndex
@@ -202,7 +200,10 @@
 }
 
 - (void)showOptions
-{
+{	
+	UIActionSheet *actionSheet = [[UIActionSheet alloc] init];
+	actionSheet.delegate = self;
+	
 	NSString *favoriteStr = nil;
 	if (self.favoriteIndex >= 0) {
 		favoriteStr = kFavoriteContentRemoveTitle;
@@ -210,11 +211,15 @@
 		favoriteStr = kFavoriteContentAddTitle;
 	}
 	
-	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
-															 delegate:self
-													cancelButtonTitle:@"Cancelar"
-											   destructiveButtonTitle:nil
-													otherButtonTitles:favoriteStr, @"Enviar E-mail", nil];
+	[actionSheet addButtonWithTitle:favoriteStr];
+	
+	if ([self.controller isKindOfClass:[SectionContentViewController class]]) {
+		[actionSheet addButtonWithTitle:@"Enviar E-mail"];
+	}
+	
+	[actionSheet addButtonWithTitle:@"Cancelar"];
+	actionSheet.cancelButtonIndex = [actionSheet numberOfButtons] - 1;
+	
 	[actionSheet showFromToolbar:[[self.controller navigationController] toolbar]];
 }
 
@@ -273,8 +278,10 @@
 		} else {
 			[self addToFavorites];
 		}
-	} else if (buttonIndex == 1) {
-		[self displayComposerSheet];
+	} else {
+		if ([self.controller isKindOfClass:[SectionContentViewController class]] && buttonIndex == 1) {
+			[self displayComposerSheet];
+		}
 	}
 }
 

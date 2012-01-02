@@ -24,5 +24,6 @@
 - (NSString *)htmlStringForSection;
 - (NSString *)htmlStringForEmail;
 - (NSString *)fileContentString;
+- (void)refresh;
 
 @end

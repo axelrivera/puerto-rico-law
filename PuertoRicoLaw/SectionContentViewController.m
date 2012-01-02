@@ -16,12 +16,6 @@
 #import "NSString+Extras.h"
 #import "SectionManager.h"
 
-@interface SectionContentViewController (Private)
-
-- (void)refresh;
-
-@end
-
 @implementation SectionContentViewController
 
 @synthesize webView = webView_;

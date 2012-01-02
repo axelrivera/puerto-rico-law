@@ -49,7 +49,7 @@
 		textLabel_.textColor = [UIColor blackColor];
 		textLabel_.highlightedTextColor = [UIColor whiteColor];
 		textLabel_.numberOfLines = 2;
-		textLabel_.lineBreakMode = UILineBreakModeWordWrap;
+		textLabel_.lineBreakMode = UILineBreakModeTailTruncation;
 		textLabel_.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
 		[contentView_ addSubview:textLabel_];
 		
