@@ -56,11 +56,6 @@
 {
     [super viewDidLoad];
 	
-	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"magnify_mini.png"]
-																			  style:UIBarButtonItemStyleBordered
-																			 target:self
-																			 action:@selector(searchAction:)];
-	
     [self setToolbarItems:[self sectionToolbarItems] animated:NO];
 	self.manager.prevItem = [self.toolbarItems objectAtIndex:kToolbarItemPosition2];
 	self.manager.nextItem = [self.toolbarItems objectAtIndex:kToolbarItemPosition3];
@@ -185,11 +180,6 @@
 }
 
 #pragma mark - Selector Actions
-
-- (void)searchAction:(id)sender
-{
-	
-}
 
 - (void)homeAction:(id)sender
 {

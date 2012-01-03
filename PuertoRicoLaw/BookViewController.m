@@ -150,15 +150,6 @@
 																				  target:nil
 																				  action:nil];
 	
-	UIBarButtonItem *homeItem = nil;
-	
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-		homeItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"house.png"]
-																 style:UIBarButtonItemStylePlain
-																target:self
-																action:@selector(homeAction:)];
-	}
-	
 	UIBarButtonItem *listItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"list.png"]
 																	style:UIBarButtonItemStylePlain
 																   target:self
@@ -174,28 +165,13 @@
 																	target:self
 																	action:@selector(settingsAction:)];
 	
-	NSArray *array = nil;
-	
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		array = [NSArray arrayWithObjects:
-				 listItem,
-				 flexibleItem,
-				 favoritesItem,
-				 flexibleItem,
-				 settingsItem,
-				 nil];
-	} else {
-		array = [NSArray arrayWithObjects:
-				 homeItem,
-				 flexibleItem,
-				 listItem,
-				 flexibleItem,
-				 favoritesItem,
-				 flexibleItem,
-				 settingsItem,
-				 nil];
-	}
-	return array;
+	return [NSArray arrayWithObjects:
+			listItem,
+			flexibleItem,
+			favoritesItem,
+			flexibleItem,
+			settingsItem,
+			nil];;
 }
 
 #pragma mark - Selector Actions
@@ -203,11 +179,6 @@
 - (void)reorderAction:(id)sender
 {
 	[self setEditing:!self.isEditing animated:YES];
-}
-
-- (void)homeAction:(id)sender
-{
-	[self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)favoritesAction:(id)sender

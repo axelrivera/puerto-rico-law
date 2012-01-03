@@ -9,6 +9,7 @@
 #import "SectionListViewController.h"
 #import "UIViewController+Section.h"
 #import "SectionContentViewController.h"
+#import "SearchViewController.h"
 #import "Book.h"
 #import "Section.h"
 #import "SectionTableViewCell.h"
@@ -62,10 +63,12 @@
 {
     [super viewDidLoad];
 	
-	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"magnify_mini.png"]
-																			  style:UIBarButtonItemStyleBordered
-																			 target:self
-																			 action:@selector(searchAction:)];
+	if (self.manager.section == self.manager.section.book.mainSection) {
+		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"magnify_mini.png"]
+																				  style:UIBarButtonItemStyleBordered
+																				 target:self
+																				 action:@selector(searchAction:)];
+	}
 	
 	[self setToolbarItems:[self sectionToolbarItems] animated:NO];
 	self.manager.prevItem = [self.toolbarItems objectAtIndex:kToolbarItemPosition2];
@@ -134,7 +137,8 @@
 
 - (void)searchAction:(id)sender
 {
-	
+	SearchViewController *searchController = [[SearchViewController alloc] init];
+	[self.navigationController pushViewController:searchController animated:YES];
 }
 
 - (void)homeAction:(id)sender

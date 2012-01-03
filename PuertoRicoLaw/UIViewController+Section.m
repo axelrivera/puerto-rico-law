@@ -30,7 +30,7 @@
 																				  target:nil
 																				  action:nil];
 	
-	UIBarButtonItem *position1 = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"house.png"]
+	UIBarButtonItem *position1 = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"orgchart.png"]
 													style:UIBarButtonItemStylePlain
 												   target:self
 												   action:@selector(homeAction:)];
@@ -114,7 +114,12 @@
 
 - (void)goHome
 {
-	[self.navigationController popToRootViewControllerAnimated:YES];
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		[self.navigationController popToRootViewControllerAnimated:YES];
+		return;
+	}
+	UIViewController *controller = [[self.navigationController viewControllers] objectAtIndex:1];
+	[self.navigationController popToViewController:controller animated:YES];
 }
 
 @end
