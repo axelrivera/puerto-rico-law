@@ -22,6 +22,9 @@
 {
     self = [super initWithNibName:@"TableSelectViewController" bundle:nil];
     if (self) {
+		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+			self.contentSizeForViewInPopover = kMainPopoverSize;
+		}
         selectID_ = 0;
         currentIndex_ = 0;
         tableHeaderTitle_ = nil;

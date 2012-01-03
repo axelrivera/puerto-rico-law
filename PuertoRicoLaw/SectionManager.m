@@ -27,6 +27,8 @@
 @synthesize favoriteIndex = favoriteIndex_;
 @synthesize nextItem = nextItem_;
 @synthesize prevItem = prevItem_;
+@synthesize actionSheet = actionSheet_;
+@synthesize favoritesPopover = favoritesPopover_;
 @synthesize controller = controller_;
 
 - (id)init
@@ -39,6 +41,7 @@
 		favoriteIndex_ = -1;
 		nextItem_ = nil;
 		prevItem_ = nil;
+		actionSheet_ = nil;
 		controller_ = nil;
 	}
 	return self;
@@ -79,12 +82,10 @@
 		[[self.controller navigationController] setViewControllers:viewControllers];
 		return;
 	}
-	[self.controller setTitle:section.label];
 	[[self.controller manager] setSection:section];
 	[self.controller setSectionDataSource:section.children];
-	[[self.controller tableView] reloadData];
+	[self.controller refresh];
 	[[self.controller tableView] setContentOffset:CGPointZero animated:NO];
-	[[self.controller manager] checkItemsAndUpdateFavoriteIndex];
 }
 
 - (void)reloadContentWithCurrentIndex
@@ -166,14 +167,19 @@
 	self.favoriteIndex = -1;
 }
 
-- (void)showFavorites
+- (void)showFavorites:(id)sender
 {
 	FavoritesViewController *favoritesController = [[FavoritesViewController alloc] initWithFavoritesType:FavoritesTypeSection];
 	favoritesController.delegate = self;
 	favoritesController.favoritesDataSource = self.section.book.favorites;
 	favoritesController.navigationItem.prompt = self.section.book.favoritesTitle;
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:favoritesController];
-	[self.controller presentModalViewController:navigationController animated:YES];
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		self.favoritesPopover = [[UIPopoverController alloc] initWithContentViewController:navigationController];
+		[self.favoritesPopover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+	} else {
+		[self.controller presentModalViewController:navigationController animated:YES];
+	}
 }
 
 - (void)showNext
@@ -200,10 +206,15 @@
 	}
 }
 
-- (void)showOptions
-{	
-	UIActionSheet *actionSheet = [[UIActionSheet alloc] init];
-	actionSheet.delegate = self;
+- (void)showOptions:(id)sender
+{
+	if ([self.actionSheet isVisible]) {
+		[self.actionSheet dismissWithClickedButtonIndex:-1 animated:NO];
+		return;
+	}
+	
+	self.actionSheet = [[UIActionSheet alloc] init];
+	self.actionSheet.delegate = self;
 	
 	NSString *favoriteStr = nil;
 	if (self.favoriteIndex >= 0) {
@@ -212,16 +223,19 @@
 		favoriteStr = kFavoriteContentAddTitle;
 	}
 	
-	[actionSheet addButtonWithTitle:favoriteStr];
+	[self.actionSheet addButtonWithTitle:favoriteStr];
 	
 	if ([self.controller isKindOfClass:[SectionContentViewController class]]) {
-		[actionSheet addButtonWithTitle:@"Enviar E-mail"];
+		[self.actionSheet addButtonWithTitle:@"Enviar E-mail"];
 	}
 	
-	[actionSheet addButtonWithTitle:@"Cancelar"];
-	actionSheet.cancelButtonIndex = [actionSheet numberOfButtons] - 1;
-	
-	[actionSheet showFromToolbar:[[self.controller navigationController] toolbar]];
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		[self.actionSheet showFromBarButtonItem:sender animated:NO];
+	} else {
+		[self.actionSheet addButtonWithTitle:@"Cancelar"];
+		self.actionSheet.cancelButtonIndex = [self.actionSheet numberOfButtons] - 1;
+		[self.actionSheet showFromToolbar:[[self.controller navigationController] toolbar]];
+	}
 }
 
 - (void)resetSection
@@ -253,7 +267,11 @@
 	if (save) {
 		section = controller.selection;
 	}
-	[controller dismissModalViewControllerAnimated:YES];
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		[self.favoritesPopover dismissPopoverAnimated:YES];
+	} else {
+		[controller dismissModalViewControllerAnimated:YES];
+	}
 	if (section) {
 		Section *favoriteSection = [self.section.book sectionInMainSectionMatchingMd5String:[section md5String]];
 		[self.controller reloadControllerWithSection:favoriteSection];

@@ -39,7 +39,7 @@
 	self = [super initWithNibName:@"FavoritesViewController" bundle:nil];
 	if (self) {
 		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-			self.contentSizeForViewInPopover = CGSizeMake(320.0, 480.0);
+			self.contentSizeForViewInPopover = kMainPopoverSize;
 		}
 		favoritesType_ = type;
 		selection_ = nil;
@@ -61,6 +61,7 @@
 {
     [super viewDidLoad];
 	self.tableView.rowHeight = 64.0;
+	self.navigationItem.hidesBackButton = YES;
 }
 
 - (void)viewDidUnload
@@ -73,7 +74,13 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+	[super viewDidAppear:animated];
 	[self setEditing:NO animated:NO];
+	self.modalInPopover = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated

@@ -8,6 +8,7 @@
 
 #import "BookViewController.h"
 #import "SectionListViewController.h"
+#import "SectionContentViewController.h"
 #import "SettingsViewController.h"
 #import "BookData.h"
 #import "Book.h"
@@ -28,8 +29,6 @@
 	BookData *bookData_;
 	UIBarButtonItem *searchItem_;
 	UIBarButtonItem *doneItem_;
-	UIPopoverController *favoritesPopover_;
-	UIPopoverController *settingsPopover_;
 }
 
 @synthesize delegate = delegate_;
@@ -40,7 +39,7 @@
 	if (self) {
 		delegate_ = nil;
 		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-			self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
+			self.contentSizeForViewInPopover = kMainPopoverSize;
 		}
 		bookData_ = [BookData sharedBookData];
 		bookData_.currentBook = nil;
@@ -69,7 +68,6 @@
 	
 	self.clearsSelectionOnViewWillAppear = YES;
 	
-	self.navigationController.toolbarHidden = NO;
 	[self setToolbarItems:[self toolbarItemsArray]];
 	
 	self.tableView.allowsSelectionDuringEditing = YES;
@@ -95,6 +93,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+	
+	self.navigationController.toolbarHidden = NO;
+	
 	self.title = @"Leyes Puerto Rico";
 	if (bookData_.currentBook != nil) {
 		[bookData_.currentBook clearSections];
@@ -106,21 +107,6 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-}
-
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		if (favoritesPopover_ != nil) {
-			[favoritesPopover_ dismissPopoverAnimated:YES];
-			favoritesPopover_ = nil;
-		}
-		
-		if (settingsPopover_ != nil) {
-			[settingsPopover_ dismissPopoverAnimated:YES];
-			settingsPopover_ = nil;
-		}
-	}
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -216,17 +202,6 @@
 
 - (void)reorderAction:(id)sender
 {
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		if (favoritesPopover_ != nil) {
-			[favoritesPopover_ dismissPopoverAnimated:YES];
-			favoritesPopover_ = nil;
-		}
-		
-		if (settingsPopover_ != nil) {
-			[settingsPopover_ dismissPopoverAnimated:YES];
-			settingsPopover_ = nil;
-		}
-	}
 	[self setEditing:!self.isEditing animated:YES];
 }
 
@@ -244,14 +219,7 @@
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:favoritesController];
 	
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		if (settingsPopover_ != nil) {
-			[settingsPopover_ dismissPopoverAnimated:YES];
-			settingsPopover_ = nil;
-		}
-		if (favoritesPopover_ == nil) {
-			favoritesPopover_ = [[UIPopoverController alloc] initWithContentViewController:navigationController];
-		}
-		[favoritesPopover_ presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+		[self.navigationController pushViewController:favoritesController animated:YES];
 	} else {
 		[self presentModalViewController:navigationController animated:YES];
 	}
@@ -265,15 +233,7 @@
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:settingsController];
 	
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		if (favoritesPopover_ != nil) {
-			[favoritesPopover_ dismissPopoverAnimated:YES];
-			favoritesPopover_ = nil;
-		}
-		
-		if (settingsPopover_ == nil) {
-			settingsPopover_ = [[UIPopoverController alloc] initWithContentViewController:navigationController];
-		}
-		[settingsPopover_ presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+		[self.navigationController pushViewController:settingsController animated:YES];
 	} else {
 		[self presentModalViewController:navigationController animated:YES];
 	}
@@ -390,8 +350,7 @@
 	}
 	
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		[favoritesPopover_ dismissPopoverAnimated:YES];
-		favoritesPopover_ = nil;
+		[self.navigationController popViewControllerAnimated:YES];
 	} else {
 		[self dismissModalViewControllerAnimated:YES];
 	}
@@ -425,8 +384,12 @@
 - (void)settingsViewControllerDidFinish:(UIViewController *)controller
 {
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		[settingsPopover_ dismissPopoverAnimated:YES];
-		settingsPopover_ = nil;
+		id rightController = [[self.splitViewController.viewControllers objectAtIndex:1] visibleViewController];
+		if ([rightController isKindOfClass:[SectionContentViewController class]]) {
+			[rightController setFileContentStr:nil];
+			[rightController refresh];
+		}
+		[self.navigationController popViewControllerAnimated:YES];
 	} else {
 		[self dismissModalViewControllerAnimated:YES];
 	}

@@ -80,6 +80,20 @@
 	[self refresh];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+	if ([self.manager.actionSheet isVisible]) {
+		[self.manager.actionSheet dismissWithClickedButtonIndex:-1 animated:NO];
+	}
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+	[super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+	[self.webView setNeedsDisplay];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	if (UIDeviceOrientationIsLandscape(interfaceOrientation) && ![Settings sharedSettings].landscapeMode) {
@@ -144,9 +158,14 @@
 
 - (void)refresh
 {
+	if ([self.manager.actionSheet isVisible]) {
+		[self.manager.actionSheet dismissWithClickedButtonIndex:-1 animated:NO];
+	}
+	
 	self.webView.scrollView.indicatorStyle = [[Settings sharedSettings] scrollViewIndicator];
 	
 	if (self.manager.section == nil) {
+		self.navigationItem.rightBarButtonItem.enabled = NO;
 		self.title = @"Leyes Puerto Rico";
 		self.fileContentStr = nil;
 		[self.webView loadHTMLString:@"" baseURL:nil];
@@ -155,6 +174,7 @@
 		return;
 	}
 
+	self.navigationItem.rightBarButtonItem.enabled = YES;
 	self.title = self.manager.section.label;
 	if (self.fileContentStr == nil) {
 		self.fileContentStr = [self fileContentString];
@@ -178,12 +198,12 @@
 
 - (void)favoritesAction:(id)sender
 {
-	[self.manager showFavorites];
+	[self.manager showFavorites:sender];
 }
 
 - (void)optionsAction:(id)sender
 {
-	[self.manager showOptions];
+	[self.manager showOptions:sender];
 }
 
 - (void)prevAction:(id)sender

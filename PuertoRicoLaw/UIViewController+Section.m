@@ -30,41 +30,41 @@
 																				  target:nil
 																				  action:nil];
 	
-	UIBarButtonItem *homeItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"house.png"]
+	UIBarButtonItem *position1 = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"house.png"]
 													style:UIBarButtonItemStylePlain
 												   target:self
 												   action:@selector(homeAction:)];
 		
-	UIBarButtonItem *prevItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"left_arrow.png"]
+	UIBarButtonItem *position2 = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"left_arrow.png"]
 																 style:UIBarButtonItemStylePlain
 																target:self
 																action:@selector(prevAction:)];
 	
-	UIBarButtonItem *nextItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"right_arrow.png"]
+	UIBarButtonItem *position3 = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"right_arrow.png"]
 																 style:UIBarButtonItemStylePlain
 																target:self
 																action:@selector(nextAction:)];
 	
-	UIBarButtonItem *favoritesItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"star.png"]
+	UIBarButtonItem *position4 = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"star.png"]
 																	  style:UIBarButtonItemStylePlain
 																	 target:self
 																	 action:@selector(favoritesAction:)];
 	
-	UIBarButtonItem *optionsItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
-																				 target:self
-																				 action:@selector(optionsAction:)];
+	UIBarButtonItem *position5 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+																			   target:self
+																			   action:@selector(optionsAction:)];
 	
 	return [NSArray arrayWithObjects:
 			fixedItem,
-			homeItem,
+			position1,
 			flexibleItem,
-			prevItem,
+			position2,
 			flexibleItem,
-			nextItem,
+			position3,
 			flexibleItem,
-			favoritesItem,
+			position4,
 			flexibleItem,
-			optionsItem,
+			position5,
 			fixedItem,
 			nil];
 }
@@ -87,7 +87,9 @@
 	}
 	
 	NSMutableArray *viewControllers = [[NSMutableArray alloc] initWithCapacity:0];
-	[viewControllers addObject:[self.navigationController.viewControllers objectAtIndex:0]];
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+		[viewControllers addObject:[self.navigationController.viewControllers objectAtIndex:0]];
+	}
 	
 	for (Section *mySection in orderedSections) {
 		if (mySection.children == nil) {
@@ -95,6 +97,7 @@
 			[[SectionContentViewController alloc] initWithSection:mySection
 												  siblingSections:mySection.parent.children
 											  currentSiblingIndex:[mySection indexPositionAtParent]];
+			contentController.title = mySection.label;
 			[viewControllers addObject:contentController];
 		} else {
 			SectionListViewController *sectionController =
@@ -102,6 +105,7 @@
 													dataSource:mySection.children
 											   siblingSections:mySection.parent.children
 										   currentSiblingIndex:[mySection indexPositionAtParent]];
+			sectionController.title = mySection.label;
 			[viewControllers addObject:sectionController];
 		}
 	}

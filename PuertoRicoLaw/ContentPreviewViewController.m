@@ -18,7 +18,9 @@
 {
 	self = [super initWithNibName:@"ContentPreviewViewController" bundle:nil];
 	if (self) {
-		// Initialization Code
+		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+			self.contentSizeForViewInPopover = kMainPopoverSize;
+		}
 	}
 	return self;
 }

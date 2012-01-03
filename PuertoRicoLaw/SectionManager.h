@@ -24,6 +24,8 @@
 @property (assign, nonatomic) NSInteger favoriteIndex;
 @property (unsafe_unretained, nonatomic) UIBarButtonItem *nextItem;
 @property (unsafe_unretained, nonatomic) UIBarButtonItem *prevItem;
+@property (strong, nonatomic) UIActionSheet *actionSheet;
+@property (strong, nonatomic) UIPopoverController *favoritesPopover;
 @property (unsafe_unretained, nonatomic) id controller;
 
 - (id)initWithSection:(Section *)section siblings:(NSArray *)siblings currentIndex:(NSInteger)currentIndex;
@@ -40,10 +42,10 @@
 - (void)addToFavorites;
 - (void)removeFromFavorites;
 
-- (void)showFavorites;
+- (void)showFavorites:(id)sender;
 - (void)showNext;
 - (void)showPrev;
-- (void)showOptions;
+- (void)showOptions:(id)sender;
 
 - (void)resetSection;
 

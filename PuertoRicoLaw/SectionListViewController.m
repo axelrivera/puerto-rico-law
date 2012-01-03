@@ -88,6 +88,9 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+	if ([self.manager.actionSheet isVisible]) {
+		[self.manager.actionSheet dismissWithClickedButtonIndex:-1 animated:NO];
+	}
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -107,6 +110,10 @@
 
 - (void)refresh
 {
+	if ([self.manager.actionSheet isVisible]) {
+		[self.manager.actionSheet dismissWithClickedButtonIndex:-1 animated:NO];
+	}
+	
 	if (self.sectionDataSource == nil) {
 		self.navigationController.toolbarHidden = YES;
 	} else {
@@ -114,8 +121,10 @@
 	}
 	if (self.manager.section == nil) {
 		self.title = @"Leyes Puerto Rico";
+		self.navigationItem.rightBarButtonItem.enabled = NO;
 	} else {
 		self.title = self.manager.section.label;
+		self.navigationItem.rightBarButtonItem.enabled = YES;
 	}
 	[self.manager checkItemsAndUpdateFavoriteIndex];
 	[self.tableView reloadData];
@@ -135,12 +144,12 @@
 
 - (void)favoritesAction:(id)sender
 {
-	[self.manager showFavorites];
+	[self.manager showFavorites:sender];
 }
 
 - (void)optionsAction:(id)sender
 {
-	[self.manager showOptions];
+	[self.manager showOptions:sender];
 }
 
 - (void)prevAction:(id)sender

@@ -23,7 +23,7 @@
 	self = [super initWithNibName:@"SettingsViewController" bundle:nil];
 	if (self) {
 		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-			self.contentSizeForViewInPopover = CGSizeMake(320.0, 480.0);
+			self.contentSizeForViewInPopover = kMainPopoverSize;
 		}
 		self.title = @"Configurar";
 	}
@@ -43,6 +43,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		self.navigationItem.hidesBackButton = YES;
+	}
+	
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"OK"
 																			  style:UIBarButtonItemStyleDone
 																			 target:self
@@ -60,6 +65,13 @@
 {
     [super viewWillAppear:animated];
 	[self.tableView reloadData];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+	[super viewDidAppear:animated];
+	self.modalInPopover = YES;
+	self.navigationController.toolbarHidden = YES;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

@@ -6,6 +6,8 @@
 //  Copyright (c) 2011 Axel Rivera. All rights reserved.
 //
 
+#define kMainPopoverSize CGSizeMake(320.0, 600.0)
+
 #define kHomeNavigationLabel @"Inicio"
 
 #define kToolbarItemPosition1 1
