@@ -14,12 +14,15 @@
 @interface Book (Private)
 
 - (void)findInSection:(Section *)section md5String:(NSString *)string;
+- (void)findString:(NSString *)string inSection:(Section *)section;
+- (BOOL)foundString:(NSString *)string inSection:(Section *)section titleOnly:(BOOL)titleOnly;
 
 @end
 
 @implementation Book
 {
 	Section *findSection_;
+	NSMutableArray *findArray_;
 }
 
 @synthesize name = name_;
@@ -40,6 +43,7 @@
 		// Remove this
 		deletePathInDocumentDirectory([self mainSectionDataFileName]);
 		findSection_ = nil;
+		findArray_ = nil;
 		self.name = [dictionary objectForKey:kBookNameKey];
 		self.shortName = [dictionary objectForKey:kBookShortNameKey];
 		self.title = [dictionary objectForKey:kBookTitleKey];
@@ -174,6 +178,13 @@
 	return findSection_;
 }
 
+- (NSArray *)searchSectionTitlesWithString:(NSString *)string
+{
+	findArray_ = [[NSMutableArray alloc] initWithCapacity:0];
+	[self findString:string inSection:self.mainSection];
+	return findArray_;
+}
+
 #pragma mark - Private Methods
 
 - (void)findInSection:(Section *)section md5String:(NSString *)string
@@ -190,6 +201,42 @@
 			[self findInSection:child md5String:string];
 		}
 	}
+}
+
+- (void)findString:(NSString *)string inSection:(Section *)section
+{
+	if ([self foundString:string inSection:section titleOnly:YES]) {
+		[findArray_ addObject:section];
+		return;
+	} else {
+		for (Section *child in section.children) {
+			[self findString:string inSection:child];
+		}
+	}
+}
+
+- (BOOL)foundString:(NSString *)string inSection:(Section *)section titleOnly:(BOOL)titleOnly
+{
+	NSString *searchStr = string;
+	if (searchStr == nil) {
+		searchStr = @"";
+	}
+	
+	NSRange titleRange = [section.title rangeOfString:searchStr
+											  options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch)];
+	if (titleRange.length > 0) {
+		return YES;
+	}
+	
+	if (!titleOnly) {
+		NSRange textRange = [[section stringForContentFile] rangeOfString:searchStr
+																  options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch)];
+		if (textRange.length > 0) {
+			return YES;
+		}
+	}
+	
+	return NO;
 }
 
 @end

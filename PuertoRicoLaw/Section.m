@@ -102,6 +102,14 @@
 
 #pragma mark - Custom Methods
 
+- (NSString *)stringForContentFile
+{
+	NSString *filePath = [[NSBundle mainBundle] pathForResource:self.contentFile ofType:@"html"];
+	return [NSString stringWithContentsOfFile:filePath
+									 encoding:NSUTF8StringEncoding
+										error:NULL];
+}
+
 - (NSInteger)indexPositionAtParent
 {
 	if (self.parent == nil) {

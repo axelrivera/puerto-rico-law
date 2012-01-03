@@ -33,4 +33,6 @@
 - (void)reloadSection:(Section *)section andParent:(Section *)parent;
 - (Section *)sectionInMainSectionMatchingMd5String:(NSString *)string;
 
+- (NSArray *)searchSectionTitlesWithString:(NSString *)string;
+
 @end

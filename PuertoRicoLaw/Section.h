@@ -22,6 +22,7 @@
 - (id)initWithBook:(Book *)book;
 - (id)initWithBook:(Book *)book andDictionary:(NSDictionary *)dictionary;
 - (id)initWithDictionary:(NSDictionary *)dictionary;
+- (NSString *)stringForContentFile;
 - (NSInteger)indexPositionAtParent;
 - (NSString *)md5String;
 
