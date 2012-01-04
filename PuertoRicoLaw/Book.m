@@ -14,7 +14,7 @@
 @interface Book (Private)
 
 - (void)findInSection:(Section *)section md5String:(NSString *)string;
-- (void)findString:(NSString *)string inSection:(Section *)section;
+- (void)findString:(NSString *)string inSection:(Section *)section titleOnly:(BOOL)titleOnly;
 - (BOOL)foundString:(NSString *)string inSection:(Section *)section titleOnly:(BOOL)titleOnly;
 
 @end
@@ -178,10 +178,10 @@
 	return findSection_;
 }
 
-- (NSArray *)searchSectionTitlesWithString:(NSString *)string
+- (NSArray *)searchMainSectionWithString:(NSString *)string titleOnly:(BOOL)titleOnly
 {
 	findArray_ = [[NSMutableArray alloc] initWithCapacity:0];
-	[self findString:string inSection:self.mainSection];
+	[self findString:string inSection:self.mainSection titleOnly:titleOnly];
 	return findArray_;
 }
 
@@ -203,15 +203,13 @@
 	}
 }
 
-- (void)findString:(NSString *)string inSection:(Section *)section
+- (void)findString:(NSString *)string inSection:(Section *)section titleOnly:(BOOL)titleOnly
 {
-	if ([self foundString:string inSection:section titleOnly:YES]) {
+	if ([self foundString:string inSection:section titleOnly:titleOnly]) {
 		[findArray_ addObject:section];
-		return;
-	} else {
-		for (Section *child in section.children) {
-			[self findString:string inSection:child];
-		}
+	}
+	for (Section *child in section.children) {
+		[self findString:string inSection:child titleOnly:titleOnly];
 	}
 }
 
@@ -224,14 +222,14 @@
 	
 	NSRange titleRange = [section.title rangeOfString:searchStr
 											  options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch)];
-	if (titleRange.length > 0) {
+	if (titleRange.location != NSNotFound) {
 		return YES;
 	}
 	
 	if (!titleOnly) {
 		NSRange textRange = [[section stringForContentFile] rangeOfString:searchStr
 																  options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch)];
-		if (textRange.length > 0) {
+		if (textRange.location != NSNotFound) {
 			return YES;
 		}
 	}

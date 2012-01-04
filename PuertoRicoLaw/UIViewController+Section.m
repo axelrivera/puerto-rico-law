@@ -69,6 +69,26 @@
 			nil];
 }
 
+- (NSArray *)searchToolbarItems
+{
+	CGFloat fixedWidth = 0.0;
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		fixedWidth = 100.0;
+	}
+	
+	UIBarButtonItem *fixedItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+																			   target:nil
+																			   action:nil];
+	fixedItem.width = fixedWidth;
+	
+	UIBarButtonItem *position1 = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"orgchart.png"]
+																  style:UIBarButtonItemStylePlain
+																 target:self
+																 action:@selector(homeAction:)];
+	
+	return [NSArray arrayWithObjects:fixedItem, position1, nil];
+}
+
 - (void)reloadControllerWithSection:(Section *)section
 {
 	NSMutableArray *reversedSections = [[NSMutableArray alloc] initWithCapacity:0];

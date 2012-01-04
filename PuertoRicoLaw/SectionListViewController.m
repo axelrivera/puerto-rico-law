@@ -207,7 +207,7 @@
     
     SectionTableViewCell *cell = (SectionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[SectionTableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier];
+        cell = [[SectionTableViewCell alloc] initWithRLStyle:RLTableCellStyleSection reuseIdentifier:CellIdentifier];
     }
 	
 	Section *section = [self.sectionDataSource objectAtIndex:indexPath.row];

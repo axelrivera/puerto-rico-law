@@ -17,7 +17,9 @@
 
 @implementation SectionTableViewCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+@synthesize subtitleTextLabel = subtitleTextLabel_;
+
+- (id)initWithRLStyle:(RLTableCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
 	// The Style will be ignored
     self = [super initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:reuseIdentifier];
@@ -28,6 +30,21 @@
 		self.detailTextLabel.font = [UIFont boldSystemFontOfSize:13.0];
 		self.detailTextLabel.numberOfLines = 2.0;
 		self.detailTextLabel.lineBreakMode = UILineBreakModeTailTruncation;
+		
+		subtitleTextLabel_ = nil;
+		if (style == RLTableCellStyleSectionSubtitle) {
+			subtitleTextLabel_ = [[UILabel alloc] initWithFrame:CGRectZero];
+			subtitleTextLabel_.font = [UIFont italicSystemFontOfSize:12.0]; 
+			subtitleTextLabel_.textAlignment = UITextAlignmentLeft;
+			subtitleTextLabel_.backgroundColor = [UIColor whiteColor];
+			subtitleTextLabel_.textColor = [UIColor lightGrayColor];
+			subtitleTextLabel_.highlightedTextColor = [UIColor whiteColor];
+			subtitleTextLabel_.numberOfLines = 1;
+			subtitleTextLabel_.lineBreakMode = UILineBreakModeTailTruncation;
+			subtitleTextLabel_.adjustsFontSizeToFitWidth = NO;
+			subtitleTextLabel_.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
+			[self.contentView addSubview:subtitleTextLabel_];
+		}		
     }
     return self;
 }
@@ -38,16 +55,49 @@
 
 #define kTextWidth 70.0
 #define kTextDetailHeight 30.0
+#define kSubtitleTextHeight 16.0
 	
-	self.textLabel.frame = CGRectMake(10.0,
-									  (self.contentView.bounds.size.height / 2.0) - (kTextDetailHeight / 2.0),
-									  kTextWidth,
-									  kTextDetailHeight);
+	CGRect textFrame;
+	CGRect detailFrame;
+	CGRect subtitleFrame;
 	
-	self.detailTextLabel.frame = CGRectMake(10.0 + kTextWidth + 10.0,
-											(self.contentView.bounds.size.height / 2.0) - (kTextDetailHeight / 2.0),
-											self.contentView.bounds.size.width - (10.0 + kTextWidth + 10.0 + 10.0),
-											kTextDetailHeight);
+	if (self.subtitleTextLabel == nil) {
+		textFrame = CGRectMake(10.0,
+							   (self.contentView.frame.size.height / 2.0) - (kTextDetailHeight / 2.0),
+							   kTextWidth,
+							   kTextDetailHeight);
+		
+		detailFrame = CGRectMake(10.0 + kTextWidth + 10.0,
+								 (self.contentView.frame.size.height / 2.0) - (kTextDetailHeight / 2.0),
+								 self.contentView.frame.size.width - (10.0 + kTextWidth + 10.0 + 10.0),
+								 kTextDetailHeight);
+		
+		subtitleFrame = CGRectZero;
+	} else {
+		textFrame = CGRectMake(10.0,
+							   10.0,
+							   kTextWidth,
+							   kTextDetailHeight);
+		
+		detailFrame = CGRectMake(10.0 + kTextWidth + 5.0,
+								 10.0,
+								 self.contentView.frame.size.width - (10.0 + kTextWidth + 5.0 + 10.0),
+								 kTextDetailHeight);
+		
+		subtitleFrame = CGRectMake(10.0,
+								   10.0 + kTextDetailHeight,
+								   self.contentView.frame.size.width - (10.0 + 10.0),
+								   kSubtitleTextHeight);
+		
+	}
+	
+	self.textLabel.frame = textFrame;	
+	self.detailTextLabel.frame = detailFrame;
+	
+	if (!CGRectEqualToRect(subtitleFrame, CGRectZero)) {
+		self.subtitleTextLabel.frame = subtitleFrame;
+	}
+
 }
 
 @end

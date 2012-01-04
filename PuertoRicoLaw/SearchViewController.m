@@ -7,16 +7,21 @@
 //
 
 #import "SearchViewController.h"
+#import "UIViewController+Section.h"
 #import "Book.h"
+#import "Section.h"
 #import "BookData.h"
+#import "SectionTableViewCell.h"
+#import "SectionListViewController.h"
+#import "SectionContentViewController.h"
+#import "Settings.h"
 
 @implementation SearchViewController
 {
 	BookData *bookData_;
 }
 
-@synthesize searchBar = searchBar_;
-@synthesize searchController = searchController_;
+@synthesize searchDataSource = searchDataSource_;
 
 - (id)init
 {
@@ -36,19 +41,14 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
-- (void)dealloc
-{
-	searchBar_ = nil;
-	searchController_ = nil;
-}
-
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.searchBar.placeholder = [NSString stringWithFormat:@"Buscar en %@", bookData_.currentBook.title];
-	self.searchBar.scopeButtonTitles = [NSArray arrayWithObjects:@"Todo el Texto", @"Títulos", nil];
+	self.searchDisplayController.searchBar.placeholder = [NSString stringWithFormat:@"Buscar en %@", bookData_.currentBook.title];
+	self.searchDisplayController.searchBar.scopeButtonTitles = [NSArray arrayWithObjects:@"Todo el Texto", @"Títulos", nil];
+	[self setToolbarItems:[self searchToolbarItems] animated:NO];
 }
 
 - (void)viewDidUnload
@@ -56,8 +56,6 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-	self.searchBar = nil;
-	self.searchController = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -65,55 +63,59 @@
     [super viewWillAppear:animated];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-	self.navigationController.toolbarHidden = YES;
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	if (UIDeviceOrientationIsLandscape(interfaceOrientation) && ![Settings sharedSettings].landscapeMode) {
+		return NO;
+	}
+	// Return YES for supported orientations
+	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+	    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+	} else {
+	    return YES;
+	}
+}
+
+#pragma mark - Selector Actions
+
+- (void)homeAction:(id)sender
+{
+	[self goHome];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [self.searchDataSource count];;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    SectionTableViewCell *cell = (SectionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[SectionTableViewCell alloc] initWithRLStyle:RLTableCellStyleSectionSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    // Configure the cell...
-    
+	Section *section = [self.searchDataSource objectAtIndex:indexPath.row];
+	
+	cell.textLabel.text = section.label;
+	cell.detailTextLabel.text = section.title;
+	if (section.parent == nil) {
+		cell.subtitleTextLabel.text = section.book.title;
+	} else {
+		cell.subtitleTextLabel.text = section.parent.title;
+	}
+	
+	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	
     return cell;
 }
 
@@ -121,25 +123,66 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+	Section *section = [self.searchDataSource objectAtIndex:indexPath.row];
+	if (section.children == nil) {
+		SectionContentViewController *contentController =
+		[[SectionContentViewController alloc] initWithSection:section
+											  siblingSections:nil
+										  currentSiblingIndex:-1];
+		[self.navigationController pushViewController:contentController animated:YES];
+	} else {
+		SectionListViewController *sectionController =
+		[[SectionListViewController alloc] initWithSection:section
+												dataSource:section.children
+										   siblingSections:nil
+									   currentSiblingIndex:-1];
+		[self.navigationController pushViewController:sectionController animated:YES];
+	}
+
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	return 68.0;
 }
 
 #pragma mark - UISearchBar Delegate
 
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
-{
-	NSLog(@"Text Did Change");
-}
-
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-	NSLog(@"Start the search...");
+	BOOL titleOnly;
+	if ([searchBar selectedScopeButtonIndex] == 0) {
+		titleOnly = NO;
+	} else {
+		titleOnly = YES;
+	}
+	
+	self.searchDataSource = [bookData_.currentBook searchMainSectionWithString:searchBar.text titleOnly:titleOnly];
+	[self.searchDisplayController.searchResultsTableView reloadData];
 }
+
+#pragma mark - UISearchDisplayController Delegate
+
+- (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
+{
+	self.searchDataSource = nil;
+	[controller.searchResultsTableView reloadData];
+}
+
+- (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller
+{
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
+{
+	return YES;
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+	return YES;
+}
+
+
 
 @end

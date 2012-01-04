@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchViewController : UITableViewController
+@interface SearchViewController : UITableViewController <UISearchBarDelegate, UISearchDisplayDelegate>
 
-@property (unsafe_unretained, nonatomic) IBOutlet UISearchBar *searchBar;
-@property (unsafe_unretained, nonatomic) IBOutlet UISearchDisplayController *searchController;
+@property (strong, nonatomic) NSArray *searchDataSource;
 
 @end

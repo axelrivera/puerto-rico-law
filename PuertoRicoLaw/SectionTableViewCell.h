@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+	RLTableCellStyleSection,
+	RLTableCellStyleSectionSubtitle
+} RLTableCellStyle;
+
 @interface SectionTableViewCell : UITableViewCell
+
+@property (strong, nonatomic) UILabel *subtitleTextLabel;
+
+- (id)initWithRLStyle:(RLTableCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 
 @end
