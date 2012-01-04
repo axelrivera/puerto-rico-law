@@ -15,6 +15,7 @@
 #import "SectionListViewController.h"
 #import "SectionContentViewController.h"
 #import "Settings.h"
+#import "SectionManager.h"
 
 @implementation SearchViewController
 {
@@ -129,6 +130,7 @@
 		[[SectionContentViewController alloc] initWithSection:section
 											  siblingSections:nil
 										  currentSiblingIndex:-1];
+		contentController.manager.highlightString = self.searchDisplayController.searchBar.text;
 		[self.navigationController pushViewController:contentController animated:YES];
 	} else {
 		SectionListViewController *sectionController =

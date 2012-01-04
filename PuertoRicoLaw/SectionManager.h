@@ -22,6 +22,7 @@
 @property (strong, nonatomic) NSArray *siblings;
 @property (assign, nonatomic) NSInteger currentIndex;
 @property (assign, nonatomic) NSInteger favoriteIndex;
+@property (strong, nonatomic) NSString *highlightString;
 @property (unsafe_unretained, nonatomic) UIBarButtonItem *nextItem;
 @property (unsafe_unretained, nonatomic) UIBarButtonItem *prevItem;
 @property (strong, nonatomic) UIActionSheet *actionSheet;

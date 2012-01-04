@@ -16,6 +16,7 @@
 		161B5D6814B3598400700D86 /* orgchart.png in Resources */ = {isa = PBXBuildFile; fileRef = 161B5D6614B3598400700D86 /* orgchart.png */; };
 		161B5D6914B3598400700D86 /* orgchart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 161B5D6714B3598400700D86 /* orgchart@2x.png */; };
 		1620F80114A196910070E512 /* FileHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1620F80014A196910070E512 /* FileHelpers.m */; };
+		1631D87414B4E98D00F77790 /* SearchWebView.js in Resources */ = {isa = PBXBuildFile; fileRef = 16DFA24B14B4C79C00517778 /* SearchWebView.js */; };
 		163E2B2614B33FAF008C50DE /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 163E2B2414B33FAF008C50DE /* SearchViewController.m */; };
 		163E2B2714B33FAF008C50DE /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 163E2B2514B33FAF008C50DE /* SearchViewController.xib */; };
 		1646AB2914A3AB7100B27123 /* BookTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1646AB2814A3AB7100B27123 /* BookTableView.m */; };
@@ -177,6 +178,7 @@
 		16DD4DA914A1568B0063163D /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DD4DA814A1568B0063163D /* Book.m */; };
 		16DD4DAC14A1569F0063163D /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DD4DAB14A1569F0063163D /* Section.m */; };
 		16DD4DB114A16D1E0063163D /* BookData.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DD4DB014A16D1E0063163D /* BookData.m */; };
+		16DFA25014B4C7FB00517778 /* UIWebView+Highlight.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DFA24F14B4C7FB00517778 /* UIWebView+Highlight.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -375,6 +377,9 @@
 		16DD4DAE14A163640063163D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		16DD4DAF14A16D1E0063163D /* BookData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookData.h; sourceTree = "<group>"; };
 		16DD4DB014A16D1E0063163D /* BookData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookData.m; sourceTree = "<group>"; };
+		16DFA24B14B4C79C00517778 /* SearchWebView.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = SearchWebView.js; sourceTree = "<group>"; };
+		16DFA24E14B4C7FB00517778 /* UIWebView+Highlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Highlight.h"; sourceTree = "<group>"; };
+		16DFA24F14B4C7FB00517778 /* UIWebView+Highlight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Highlight.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -403,6 +408,8 @@
 				1671F10B14AF813B0019B181 /* SectionSelectionDelegate.h */,
 				1671F10D14AF91FA0019B181 /* UIViewController+Section.h */,
 				1671F10E14AF91FA0019B181 /* UIViewController+Section.m */,
+				16DFA24E14B4C7FB00517778 /* UIWebView+Highlight.h */,
+				16DFA24F14B4C7FB00517778 /* UIWebView+Highlight.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -761,6 +768,7 @@
 				16DD4CAC14A10D200063163D /* InfoPlist.strings */,
 				16DD4CAF14A10D200063163D /* main.m */,
 				16DD4CB114A10D200063163D /* PuertoRicoLaw-Prefix.pch */,
+				16DFA24B14B4C79C00517778 /* SearchWebView.js */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -837,6 +845,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1631D87414B4E98D00F77790 /* SearchWebView.js in Resources */,
 				16DD4CAE14A10D200063163D /* InfoPlist.strings in Resources */,
 				167EF1DA14A23F790058F8D1 /* BookViewController.xib in Resources */,
 				167EF24414A24D250058F8D1 /* SectionListViewController.xib in Resources */,
@@ -1012,6 +1021,7 @@
 				1671F10F14AF91FA0019B181 /* UIViewController+Section.m in Sources */,
 				1671F11214AF9F290019B181 /* SectionManager.m in Sources */,
 				163E2B2614B33FAF008C50DE /* SearchViewController.m in Sources */,
+				16DFA25014B4C7FB00517778 /* UIWebView+Highlight.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

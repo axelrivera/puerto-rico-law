@@ -25,6 +25,7 @@
 @synthesize siblings = siblings_;
 @synthesize currentIndex = currentIndex_;
 @synthesize favoriteIndex = favoriteIndex_;
+@synthesize highlightString = highlightString_;
 @synthesize nextItem = nextItem_;
 @synthesize prevItem = prevItem_;
 @synthesize actionSheet = actionSheet_;
@@ -39,6 +40,7 @@
 		siblings_ = nil;
 		currentIndex_ = 0;
 		favoriteIndex_ = -1;
+		highlightString_ = nil;
 		nextItem_ = nil;
 		prevItem_ = nil;
 		actionSheet_ = nil;

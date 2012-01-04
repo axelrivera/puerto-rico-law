@@ -105,9 +105,12 @@
 - (NSString *)stringForContentFile
 {
 	NSString *filePath = [[NSBundle mainBundle] pathForResource:self.contentFile ofType:@"html"];
-	return [NSString stringWithContentsOfFile:filePath
-									 encoding:NSUTF8StringEncoding
-										error:NULL];
+	NSString *fileStr = [NSString stringWithContentsOfFile:filePath
+												  encoding:NSUTF8StringEncoding
+													 error:NULL];
+	NSData *data = [fileStr dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+	NSString *string = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+	return string;
 }
 
 - (NSInteger)indexPositionAtParent

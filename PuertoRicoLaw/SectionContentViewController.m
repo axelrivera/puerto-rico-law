@@ -15,6 +15,7 @@
 #import "Settings.h"
 #import "NSString+Extras.h"
 #import "SectionManager.h"
+#import "UIWebView+Highlight.h"
 
 @implementation SectionContentViewController
 
@@ -222,6 +223,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+	[webView highlightAllOccurencesOfString:self.manager.highlightString];
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
 

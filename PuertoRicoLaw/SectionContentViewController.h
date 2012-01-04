@@ -11,7 +11,7 @@
 @class Section;
 @class SectionManager;
 
-@interface SectionContentViewController : UIViewController
+@interface SectionContentViewController : UIViewController <UIWebViewDelegate>
 
 @property (unsafe_unretained, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) SectionManager *manager;
