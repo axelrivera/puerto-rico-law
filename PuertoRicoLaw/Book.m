@@ -30,6 +30,7 @@
 @synthesize title = title_;
 @synthesize bookDescription = bookDescription_;
 @synthesize date = date_;
+@synthesize lastUpdate = lastUpdate_;
 @synthesize mainSection = mainSection_;
 @synthesize favorite = favorite_;
 @synthesize favoritesTitle = favoritesTitle_;
@@ -49,6 +50,7 @@
 		self.title = [dictionary objectForKey:kBookTitleKey];
 		self.bookDescription = [dictionary objectForKey:kBookDescriptionKey];
 		self.date = [dictionary objectForKey:kBookDateKey];
+		self.lastUpdate = [dictionary objectForKey:kBookLastUpdateKey];
 		self.favoritesTitle = [dictionary objectForKey:kBookFavoritesTitleKey];
 		self.mainSection = nil;
 		self.favorite = NO;
@@ -67,6 +69,7 @@
 		self.title = [decoder decodeObjectForKey:@"bookTitle"];
 		self.bookDescription = [decoder decodeObjectForKey:@"bookBookDescription"];
 		self.date = [decoder decodeObjectForKey:@"bookDate"];
+		self.lastUpdate = [decoder decodeObjectForKey:@"bookLastUpdate"];
 		self.mainSection = [decoder decodeObjectForKey:@"bookMainSection"];
 		self.favorite = [decoder decodeBoolForKey:@"bookFavorite"];
 		self.favoritesTitle = [decoder decodeObjectForKey:@"bookFavoritesTitle"];
@@ -84,6 +87,7 @@
 	[encoder encodeObject:self.title forKey:@"bookTitle"];
 	[encoder encodeObject:self.bookDescription forKey:@"bookBookDescription"];
 	[encoder encodeObject:self.date forKey:@"bookDate"];
+	[encoder encodeObject:self.lastUpdate forKey:@"bookLastUpdate"];
 	[encoder encodeObject:self.mainSection forKey:@"bookMainSection"];
 	[encoder encodeBool:self.isFavorite forKey:@"bookFavorite"];
 	[encoder encodeObject:self.favoritesTitle forKey:@"bookFavoritesTitle"];
@@ -227,7 +231,7 @@
 	}
 	
 	if (!titleOnly) {
-		NSRange textRange = [[section stringForContentFile] rangeOfString:searchStr
+		NSRange textRange = [[section asciiStringForContent] rangeOfString:searchStr
 																  options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch)];
 		if (textRange.location != NSNotFound) {
 			return YES;

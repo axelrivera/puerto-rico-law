@@ -25,11 +25,11 @@
 #define kBookFavoritesTitleKey @"bookFavoritesTitle"
 #define kBookDescriptionKey @"bookDescription"
 #define kBookDateKey @"bookDate"
+#define kBookLastUpdateKey @"bookLastUpdate"
 
 #define kSectionTitleKey @"sectionTitle"
 #define kSectionLabelKey @"sectionLabel"
-#define kSectionDirectoryKey @"sectionDir"
-#define kSectionContentFileKey @"sectionContentFile"
+#define kSectionContentKey @"sectionContent"
 #define kSectionChildrenKey @"sectionChildren"
 
 #define kFavoriteContentAddTitle @"Añadir a Favoritos"

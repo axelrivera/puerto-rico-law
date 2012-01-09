@@ -17,6 +17,7 @@
 @property (strong, nonatomic) NSString *shortName;
 @property (strong, nonatomic) NSString *bookDescription;
 @property (strong, nonatomic) NSDate *date;
+@property (strong, nonatomic) NSDate *lastUpdate;
 @property (strong, nonatomic) Section *mainSection;
 @property (assign, nonatomic, getter = isFavorite) BOOL favorite;
 @property (strong, nonatomic) NSString *favoritesTitle;

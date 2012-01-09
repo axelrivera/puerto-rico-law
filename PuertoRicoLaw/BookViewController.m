@@ -357,7 +357,7 @@
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 		id rightController = [[self.splitViewController.viewControllers objectAtIndex:1] visibleViewController];
 		if ([rightController isKindOfClass:[SectionContentViewController class]]) {
-			[rightController setFileContentStr:nil];
+			[rightController setContentStr:nil];
 			[rightController refresh];
 		}
 		[self.navigationController popViewControllerAnimated:YES];

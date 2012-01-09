@@ -15,13 +15,12 @@
 
 @property (unsafe_unretained, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) SectionManager *manager;
-@property (strong, nonatomic) NSString *fileContentStr;
+@property (strong, nonatomic) NSString *contentStr;
 
 - (id)initWithSection:(Section *)section siblingSections:(NSArray *)siblings currentSiblingIndex:(NSInteger)index;
 
 - (NSString *)htmlStringForSection;
 - (NSString *)htmlStringForEmail;
-- (NSString *)fileContentString;
 - (void)refresh;
 
 @end

@@ -107,7 +107,7 @@
 		return;
 	}
 	[[self.controller manager] setSection:section];
-	[self.controller setFileContentStr:nil];
+	[self.controller setContentStr:nil];
 	[self.controller refresh];
 }
 

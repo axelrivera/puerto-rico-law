@@ -6,7 +6,7 @@
 	<array>
 		<dict>
 			<key>bookName</key>
-			<string>Constitution</string>
+			<string>Constitucion</string>
 			<key>bookShortName</key>
 			<string>Constitución</string>
 			<key>bookTitle</key>
@@ -14,23 +14,43 @@
 			<key>bookFavoritesTitle</key>
 			<string>Constitución de Puerto Rico</string>
 			<key>bookDescription</key>
-			<string>Entró en vigor el 28 de Julio de 1952</string>
+			<string>Entró en vigor el 28 de julio de 1952</string>
 			<key>bookDate</key>
 			<string>Jul 25, 1952</string>
+			<key>bookLastUpdate</key>
+			<string>Jan 9, 2012</string>
 		</dict>
 		<dict>
 			<key>bookName</key>
-			<string>EticaProfesional</string>
+			<string>ProcedimientoCivil</string>
 			<key>bookShortName</key>
-			<string>Etica</string>
+			<string>Procedimiento Civil</string>
 			<key>bookTitle</key>
-			<string>Código de Etica Profesional</string>
+			<string>Reglas de Procedimiento Civil</string>
 			<key>bookFavoritesTitle</key>
-			<string>Código de Etica Profesional</string>
+			<string>Reglas de Procedimiento Civil</string>
 			<key>bookDescription</key>
-			<string>Enmendado en Noviembre de 2010</string>
+			<string>Enmendada el 29 de diciembre de 2009</string>
 			<key>bookDate</key>
-			<string>Dec 5, 2011</string>
+			<string>Dec 29, 2009</string>
+			<key>bookLastUpdate</key>
+			<string>Jan 9, 2012</string>
+		</dict>
+		<dict>
+			<key>bookName</key>
+			<string>Evidencia</string>
+			<key>bookShortName</key>
+			<string>Evidencia</string>
+			<key>bookTitle</key>
+			<string>Reglas de Evidencia</string>
+			<key>bookFavoritesTitle</key>
+			<string>Reglas de Evidencia</string>
+			<key>bookDescription</key>
+			<string>Enmendado el 30 de julio de 2009</string>
+			<key>bookDate</key>
+			<string>Jul 30, 2009</string>
+			<key>bookLastUpdate</key>
+			<string>Jan 9, 2012</string>
 		</dict>
 	</array>
 </dict>

@@ -14,7 +14,7 @@
 
 @synthesize title = title_;
 @synthesize label = label_;
-@synthesize contentFile = contentFile_;
+@synthesize content = content_;
 @synthesize children = children_;
 @synthesize book = book_;
 @synthesize parent = parent_;
@@ -27,7 +27,7 @@
 		label_ = book.shortName;
 		book_ = book;
 		parent_	= nil;
-		contentFile_ = nil;
+		content_ = nil;
 		children_ = nil;
 	}
 	return self;
@@ -43,8 +43,8 @@
 		parent_ = nil;
 		children_ = nil;
 		
-		if ([dictionary objectForKey:kSectionContentFileKey]) {
-			contentFile_ = [dictionary objectForKey:kSectionContentFileKey];
+		if ([dictionary objectForKey:kSectionContentKey]) {
+			content_ = [dictionary objectForKey:kSectionContentKey];
 		}
 		
 		if ([dictionary objectForKey:kSectionChildrenKey]) {
@@ -76,7 +76,7 @@
 		self.label = [decoder decodeObjectForKey:@"sectionLabel"];
 		self.book = [decoder decodeObjectForKey:@"sectionBook"];
 		self.parent = [decoder decodeObjectForKey:@"sectionParent"];
-		self.contentFile = [decoder decodeObjectForKey:@"sectionContentFile"];
+		self.content = [decoder decodeObjectForKey:@"sectionContent"];
 		self.children = [decoder decodeObjectForKey:@"sectionChildren"];
 	}
 	return self;
@@ -90,7 +90,7 @@
 	[encoder encodeObject:self.label forKey:@"sectionLabel"];
 	[encoder encodeConditionalObject:self.book forKey:@"sectionBook"];
 	[encoder encodeConditionalObject:self.parent forKey:@"sectionParent"];
-	[encoder encodeObject:self.contentFile forKey:@"sectionContentFile"];
+	[encoder encodeObject:self.content forKey:@"sectionContent"];
 	[encoder encodeObject:self.children forKey:@"sectionChildren"];
 }
 
@@ -102,13 +102,9 @@
 
 #pragma mark - Custom Methods
 
-- (NSString *)stringForContentFile
+- (NSString *)asciiStringForContent
 {
-	NSString *filePath = [[NSBundle mainBundle] pathForResource:self.contentFile ofType:@"html"];
-	NSString *fileStr = [NSString stringWithContentsOfFile:filePath
-												  encoding:NSUTF8StringEncoding
-													 error:NULL];
-	NSData *data = [fileStr dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+	NSData *data = [self.content dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
 	NSString *string = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
 	return string;
 }
@@ -132,7 +128,7 @@
 
 - (NSString *)md5String
 {
-	return [[NSString stringWithFormat:@"%@%@", self.title, self.label] md5];
+	return [[NSString stringWithFormat:@"%@%@%@", self.label, self.title, self.content] md5];
 }
 
 #pragma mark - Parent Methods

@@ -21,14 +21,14 @@
 
 @synthesize webView = webView_;
 @synthesize manager = manager_;
-@synthesize fileContentStr = fileContentStr_;
+@synthesize contentStr = contentStr_;
 
 - (id)init
 {
 	self = [super initWithNibName:@"SectionContentViewController" bundle:nil];
 	if (self) {
 		manager_ = nil;
-		fileContentStr_ = nil;
+		contentStr_ = nil;
 	}
 	return self;
 }
@@ -107,12 +107,12 @@
 
 - (NSString *)htmlStringForSection
 {
-	return [NSString htmlStringWithTitle:self.manager.section.title body:self.fileContentStr];
+	return [NSString htmlStringWithTitle:self.manager.section.title body:self.contentStr];
 }
 
 - (NSString *)htmlStringForEmail
 {
-	NSString *contentStr = self.fileContentStr;
+	NSString *contentStr = self.contentStr;
 	
 	NSMutableArray *sections = [[NSMutableArray alloc] initWithCapacity:0];
 	Section *section = self.manager.section;
@@ -142,14 +142,6 @@
 	return [NSString stringWithFormat:@"<html><body>%@%@%@</body></html>", headerStr, contentStr, aboutStr];
 }
 
-- (NSString *)fileContentString
-{
-	NSString *filePath = [[NSBundle mainBundle] pathForResource:self.manager.section.contentFile ofType:@"html"];
-	return [NSString stringWithContentsOfFile:filePath
-									 encoding:NSUTF8StringEncoding
-										error:NULL];
-}
-
 #pragma mark - Private Methods
 
 - (void)refresh
@@ -163,7 +155,7 @@
 	if (self.manager.section == nil) {
 		self.navigationItem.rightBarButtonItem.enabled = NO;
 		self.title = @"Leyes Puerto Rico";
-		self.fileContentStr = nil;
+		self.contentStr = nil;
 		[self.webView loadHTMLString:@"" baseURL:nil];
 		[self.manager checkItemsAndUpdateFavoriteIndex];
 		self.navigationController.toolbarHidden = YES;
@@ -172,8 +164,8 @@
 
 	self.navigationItem.rightBarButtonItem.enabled = YES;
 	self.title = self.manager.section.label;
-	if (self.fileContentStr == nil) {
-		self.fileContentStr = [self fileContentString];
+	if (self.contentStr == nil) {
+		self.contentStr = [self.manager.section content];
 		[self.webView loadHTMLString:[self htmlStringForSection] baseURL:nil];
 	}
 	[self.manager checkItemsAndUpdateFavoriteIndex];
