@@ -28,8 +28,6 @@ static BookData *sharedBookData_ = nil;
 		books_ = [[NSMutableArray alloc] initWithCapacity:0];
 		favoriteBooks_ = [[NSMutableArray alloc] initWithCapacity:0];
 		favoritesSegmentedControlIndex_ = 0;
-		NSLog(@"Init");
-		NSLog(@"%@", self.books);
 	}
 	return self;
 }
@@ -49,8 +47,6 @@ static BookData *sharedBookData_ = nil;
 		NSNumber *number = [decoder decodeObjectForKey:@"bookDataFavoritesSegmentControlIndex"];
 		self.favoritesSegmentedControlIndex = [number integerValue];
 		[self loadBooks];
-		NSLog(@"Init with Coder");
-		NSLog(@"%@", self.books);
 	}
 	return self;
 }
@@ -59,16 +55,11 @@ static BookData *sharedBookData_ = nil;
 {
 	// add [super encodeWithCoder:encoder] if the superclass implements NSCoding
 	//[encoder encodeObject:object forKey:@"objectName"];
-	NSArray *books = [[NSArray alloc] initWithArray:self.books];
-	[encoder encodeObject:books forKey:@"bookDataBooks"];
-	
-	NSArray *favoriteBooks = [[NSArray alloc] initWithArray:self.favoriteBooks];
-	[encoder encodeObject:favoriteBooks forKey:@"bookDataFavoriteBooks"];
+	[encoder encodeObject:self.books forKey:@"bookDataBooks"];
+	[encoder encodeObject:self.favoriteBooks forKey:@"bookDataFavoriteBooks"];
 	
 	[encoder encodeObject:[NSNumber numberWithInteger:self.favoritesSegmentedControlIndex]
 				   forKey:@"bookDataFavoritesSegmentControlIndex"];
-	NSLog(@"Archiving BookData");
-	NSLog(@"%@", self.books);
 }
 
 - (void)loadBooks

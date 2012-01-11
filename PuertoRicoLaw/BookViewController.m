@@ -41,10 +41,8 @@
 		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 			self.contentSizeForViewInPopover = kMainPopoverSize;
 		}
-		NSLog(@"Before Suspect");
 		bookData_ = [BookData sharedBookData];
 		bookData_.currentBook = nil;
-		NSLog(@"After suspect");
 	}
 	return self;
 }

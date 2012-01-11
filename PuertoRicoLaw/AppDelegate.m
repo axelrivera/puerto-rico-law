@@ -22,7 +22,6 @@
 {
 	BookData *bookData = [NSKeyedUnarchiver unarchiveObjectWithFile:bookDataPath()];
 	if (bookData == nil) {
-		NSLog(@"bookData was empty!");
 		bookData = [BookData sharedBookData];
 		[bookData loadBooks];
 	}
