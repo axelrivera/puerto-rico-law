@@ -7,7 +7,7 @@
 		<dict>
 			<key>bookName</key>
 			<string>Constitucion</string>
-			<key>bookShortName</key>
+			<key>bookShortTitle</key>
 			<string>Constitución</string>
 			<key>bookTitle</key>
 			<string>Constitución del Estado Libre Asociado de Puerto Rico</string>
@@ -15,31 +15,27 @@
 			<string>Constitución de Puerto Rico</string>
 			<key>bookDescription</key>
 			<string>Entró en vigor el 28 de julio de 1952</string>
-			<key>bookDate</key>
-			<string>Jul 25, 1952</string>
 			<key>bookLastUpdate</key>
-			<string>Jan 9, 2012</string>
+			<date>2012-01-09T04:00:00Z</date>
 		</dict>
 		<dict>
 			<key>bookName</key>
 			<string>ProcedimientoCivil</string>
-			<key>bookShortName</key>
+			<key>bookShortTitle</key>
 			<string>Procedimiento Civil</string>
 			<key>bookTitle</key>
 			<string>Reglas de Procedimiento Civil</string>
 			<key>bookFavoritesTitle</key>
 			<string>Reglas de Procedimiento Civil</string>
 			<key>bookDescription</key>
-			<string>Enmendada el 29 de diciembre de 2009</string>
-			<key>bookDate</key>
-			<string>Dec 29, 2009</string>
+			<string>Enmendado el 29 de diciembre de 2009</string>
 			<key>bookLastUpdate</key>
-			<string>Jan 9, 2012</string>
+			<date>2012-01-10T04:00:00Z</date>
 		</dict>
 		<dict>
 			<key>bookName</key>
 			<string>Evidencia</string>
-			<key>bookShortName</key>
+			<key>bookShortTitle</key>
 			<string>Evidencia</string>
 			<key>bookTitle</key>
 			<string>Reglas de Evidencia</string>
@@ -47,10 +43,8 @@
 			<string>Reglas de Evidencia</string>
 			<key>bookDescription</key>
 			<string>Enmendado el 30 de julio de 2009</string>
-			<key>bookDate</key>
-			<string>Jul 30, 2009</string>
 			<key>bookLastUpdate</key>
-			<string>Jan 9, 2012</string>
+			<date>2012-01-09T04:00:00Z</date>
 		</dict>
 	</array>
 </dict>

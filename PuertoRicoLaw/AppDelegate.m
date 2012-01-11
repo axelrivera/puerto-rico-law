@@ -10,6 +10,7 @@
 #import "BookViewController.h"
 #import "SectionListViewController.h"
 #import "BookData.h"
+#import "FileHelpers.h"
 
 @implementation AppDelegate
 
@@ -19,9 +20,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	BookData *bookData = [BookData sharedBookData];
+	BookData *bookData = [NSKeyedUnarchiver unarchiveObjectWithFile:bookDataPath()];
 	if (bookData == nil) {
-		NSLog(@"Book Data failed to load");
+		NSLog(@"bookData was empty!");
+		bookData = [BookData sharedBookData];
+		[bookData loadBooks];
 	}
 	
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -65,6 +68,7 @@
 	 Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
 	 If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 	 */
+	[self archiveBookData];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -88,6 +92,12 @@
 	 Save data if appropriate.
 	 See also applicationDidEnterBackground:.
 	 */
+	[self archiveBookData];
+}
+
+- (void)archiveBookData
+{
+	[NSKeyedArchiver archiveRootObject:[BookData sharedBookData] toFile:bookDataPath()];
 }
 
 @end

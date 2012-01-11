@@ -12,6 +12,7 @@
 
 @implementation Section
 
+@synthesize sectionID = sectionID_;
 @synthesize title = title_;
 @synthesize label = label_;
 @synthesize content = content_;
@@ -23,8 +24,9 @@
 {
 	self = [super init];
 	if (self) {
+		sectionID_ = [book.name lowercaseString];
 		title_ = book.title;
-		label_ = book.shortName;
+		label_ = book.shortTitle;
 		book_ = book;
 		parent_	= nil;
 		content_ = nil;
@@ -37,6 +39,7 @@
 {
 	self = [super init];
 	if (self) {
+		sectionID_ = [dictionary objectForKey:kSectionIDKey];
 		title_ = [dictionary objectForKey:kSectionTitleKey];
 		label_ = [dictionary objectForKey:kSectionLabelKey];
 		book_ = book;
@@ -72,6 +75,7 @@
 	self = [super init];  // this needs to be [super initWithCoder:aDecoder] if the superclass implements NSCoding
 	if (self) {
 		//self.object = [decoder decodeObjectForKey:@"objectName"];
+		self.sectionID = [decoder decodeObjectForKey:@"sectionSectionID"];
 		self.title = [decoder decodeObjectForKey:@"sectionTitle"];
 		self.label = [decoder decodeObjectForKey:@"sectionLabel"];
 		self.book = [decoder decodeObjectForKey:@"sectionBook"];
@@ -86,6 +90,7 @@
 {
 	// add [super encodeWithCoder:encoder] if the superclass implements NSCoding
 	//[encoder encodeObject:object forKey:@"objectName"];
+	[encoder encodeObject:self.sectionID forKey:@"sectionSectionID"];
 	[encoder encodeObject:self.title forKey:@"sectionTitle"];
 	[encoder encodeObject:self.label forKey:@"sectionLabel"];
 	[encoder encodeConditionalObject:self.book forKey:@"sectionBook"];
@@ -118,17 +123,12 @@
 	NSInteger index = 0;
 	for (NSInteger i = 0; i < [self.parent.children count]; i++) {
 		Section *section = [self.parent.children objectAtIndex:i];
-		if ([[self md5String] isEqualToString:[section md5String]]) {
+		if ([self.sectionID isEqualToString:section.sectionID]) {
 			index = i;
 			break;
 		}
 	}
 	return index;
-}
-
-- (NSString *)md5String
-{
-	return [[NSString stringWithFormat:@"%@%@%@", self.label, self.title, self.content] md5];
 }
 
 #pragma mark - Parent Methods

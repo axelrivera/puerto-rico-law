@@ -21,9 +21,6 @@
 		163E2B2714B33FAF008C50DE /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 163E2B2514B33FAF008C50DE /* SearchViewController.xib */; };
 		1646AB2914A3AB7100B27123 /* BookTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1646AB2814A3AB7100B27123 /* BookTableView.m */; };
 		1646AB2C14A3B55800B27123 /* BookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1646AB2B14A3B55800B27123 /* BookTableViewCell.m */; };
-		164ABF1D14BB812500A7E9AD /* Constitucion.plist in Resources */ = {isa = PBXBuildFile; fileRef = 164ABF1C14BB812500A7E9AD /* Constitucion.plist */; };
-		164ABF2514BB87B200A7E9AD /* ProcedimientoCivil.plist in Resources */ = {isa = PBXBuildFile; fileRef = 164ABF2414BB87B200A7E9AD /* ProcedimientoCivil.plist */; };
-		164ABF2714BBACBC00A7E9AD /* Evidencia.plist in Resources */ = {isa = PBXBuildFile; fileRef = 164ABF2614BBACBC00A7E9AD /* Evidencia.plist */; };
 		164DF0EF14A294910087CBD2 /* PuertoRicoLawBooks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 164DF08514A294910087CBD2 /* PuertoRicoLawBooks.plist */; };
 		164DF0F314A29D160087CBD2 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 164DF0F114A29D160087CBD2 /* SettingsViewController.m */; };
 		164DF0F414A29D160087CBD2 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 164DF0F214A29D160087CBD2 /* SettingsViewController.xib */; };
@@ -49,6 +46,9 @@
 		1673F16B14ACAED90065126B /* TableSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1673F16914ACAED90065126B /* TableSelectViewController.xib */; };
 		1673F17814ACDF1D0065126B /* ContentPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1673F17614ACDF1D0065126B /* ContentPreviewViewController.m */; };
 		1673F17914ACDF1D0065126B /* ContentPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1673F17714ACDF1D0065126B /* ContentPreviewViewController.xib */; };
+		1679FC7114BC9E3400656291 /* Constitucion.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1679FC7014BC9E3400656291 /* Constitucion.plist */; };
+		1679FC7314BC9E3E00656291 /* Evidencia.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1679FC7214BC9E3E00656291 /* Evidencia.plist */; };
+		1679FC7514BC9E4800656291 /* ProcedimientoCivil.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1679FC7414BC9E4800656291 /* ProcedimientoCivil.plist */; };
 		167EF1D714A23DAA0058F8D1 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167EF1D614A23DAA0058F8D1 /* BookViewController.m */; };
 		167EF1DA14A23F790058F8D1 /* BookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167EF1D914A23F790058F8D1 /* BookViewController.xib */; };
 		167EF24314A24D250058F8D1 /* SectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167EF24114A24D250058F8D1 /* SectionListViewController.m */; };
@@ -97,9 +97,6 @@
 		1646AB2814A3AB7100B27123 /* BookTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookTableView.m; sourceTree = "<group>"; };
 		1646AB2A14A3B55800B27123 /* BookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookTableViewCell.h; sourceTree = "<group>"; };
 		1646AB2B14A3B55800B27123 /* BookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookTableViewCell.m; sourceTree = "<group>"; };
-		164ABF1C14BB812500A7E9AD /* Constitucion.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Constitucion.plist; sourceTree = "<group>"; };
-		164ABF2414BB87B200A7E9AD /* ProcedimientoCivil.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ProcedimientoCivil.plist; sourceTree = "<group>"; };
-		164ABF2614BBACBC00A7E9AD /* Evidencia.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Evidencia.plist; sourceTree = "<group>"; };
 		164DF08514A294910087CBD2 /* PuertoRicoLawBooks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PuertoRicoLawBooks.plist; sourceTree = "<group>"; };
 		164DF0F014A29D160087CBD2 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		164DF0F114A29D160087CBD2 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
@@ -133,6 +130,9 @@
 		1673F17514ACDF1D0065126B /* ContentPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentPreviewViewController.h; sourceTree = "<group>"; };
 		1673F17614ACDF1D0065126B /* ContentPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentPreviewViewController.m; sourceTree = "<group>"; };
 		1673F17714ACDF1D0065126B /* ContentPreviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentPreviewViewController.xib; sourceTree = "<group>"; };
+		1679FC7014BC9E3400656291 /* Constitucion.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Constitucion.plist; sourceTree = "<group>"; };
+		1679FC7214BC9E3E00656291 /* Evidencia.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Evidencia.plist; sourceTree = "<group>"; };
+		1679FC7414BC9E4800656291 /* ProcedimientoCivil.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ProcedimientoCivil.plist; sourceTree = "<group>"; };
 		167EF1D514A23DAA0058F8D1 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
 		167EF1D614A23DAA0058F8D1 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
 		167EF1D914A23F790058F8D1 /* BookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookViewController.xib; sourceTree = "<group>"; };
@@ -268,9 +268,9 @@
 		164DF01014A2948F0087CBD2 /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				164ABF2614BBACBC00A7E9AD /* Evidencia.plist */,
-				164ABF2414BB87B200A7E9AD /* ProcedimientoCivil.plist */,
-				164ABF1C14BB812500A7E9AD /* Constitucion.plist */,
+				1679FC7414BC9E4800656291 /* ProcedimientoCivil.plist */,
+				1679FC7214BC9E3E00656291 /* Evidencia.plist */,
+				1679FC7014BC9E3400656291 /* Constitucion.plist */,
 				164DF08514A294910087CBD2 /* PuertoRicoLawBooks.plist */,
 			);
 			path = Books;
@@ -491,9 +491,9 @@
 				163E2B2714B33FAF008C50DE /* SearchViewController.xib in Resources */,
 				161B5D6814B3598400700D86 /* orgchart.png in Resources */,
 				161B5D6914B3598400700D86 /* orgchart@2x.png in Resources */,
-				164ABF1D14BB812500A7E9AD /* Constitucion.plist in Resources */,
-				164ABF2514BB87B200A7E9AD /* ProcedimientoCivil.plist in Resources */,
-				164ABF2714BBACBC00A7E9AD /* Evidencia.plist in Resources */,
+				1679FC7114BC9E3400656291 /* Constitucion.plist in Resources */,
+				1679FC7314BC9E3E00656291 /* Evidencia.plist in Resources */,
+				1679FC7514BC9E4800656291 /* ProcedimientoCivil.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

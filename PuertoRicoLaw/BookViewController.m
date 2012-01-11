@@ -41,8 +41,10 @@
 		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 			self.contentSizeForViewInPopover = kMainPopoverSize;
 		}
+		NSLog(@"Before Suspect");
 		bookData_ = [BookData sharedBookData];
 		bookData_.currentBook = nil;
+		NSLog(@"After suspect");
 	}
 	return self;
 }
@@ -244,13 +246,21 @@
     
 	Book *book = [bookData_.books objectAtIndex:indexPath.row];
 	
+	NSInteger favoriteIndex = [bookData_ indexOfFavoriteBookWithName:book.name];
+	
+	BOOL isFavorite = NO;
+	
+	if (favoriteIndex >= 0) {
+		isFavorite = YES;
+	}
+	
 	cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 	cell.showsReorderControl = YES;
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	
 	cell.bookTableView.textLabel.text = book.title;
 	cell.bookTableView.detailTextLabel.text = book.bookDescription;
-	cell.bookTableView.favorite = book.favorite;
+	cell.bookTableView.favorite = isFavorite;
 	
     return cell;
 }
@@ -272,13 +282,13 @@
 	BookTableViewCell *cell = (BookTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
 	
 	if (cell.bookTableView.isFavorite) {
-		cell.bookTableView.favorite = book.favorite = NO;
-		NSInteger index = [bookData_ unsignedIndexOfFavoriteBookWithMd5String:[book md5String]];
+		cell.bookTableView.favorite = NO;
+		NSInteger index = [bookData_ indexOfFavoriteBookWithName:book.name];
 		if (index >= 0) {
 			[bookData_.favoriteBooks removeObjectAtIndex:index];
 		}
 	} else {
-		cell.bookTableView.favorite = book.favorite = YES;
+		cell.bookTableView.favorite = YES;
 		[bookData_.favoriteBooks addObject:book];
 	}
 }
@@ -333,9 +343,6 @@
 
 - (void)favoritesViewControllerDeleteDataSource:(FavoritesViewController *)controller
 {
-	for (Book *book in controller.favoritesDataSource) {
-		book.favorite = NO;
-	}
 	[controller.favoritesDataSource removeAllObjects];
 	[controller.tableView reloadData];
 	[controller setEditing:NO animated:YES];
@@ -343,8 +350,6 @@
 
 - (void)favoritesViewController:(FavoritesViewController *)controller deleteRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	Book *book = [controller.favoritesDataSource objectAtIndex:indexPath.row];
-	book.favorite = NO;
 	[controller.favoritesDataSource removeObjectAtIndex:indexPath.row];
 	[controller.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
 	if ([controller.favoritesDataSource count] <= 0) {

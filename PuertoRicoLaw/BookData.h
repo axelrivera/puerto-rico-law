@@ -10,18 +10,17 @@
 
 @class Book;
 
-@interface BookData : NSObject
+@interface BookData : NSObject <NSCoding>
 
-@property (strong, nonatomic) Book *currentBook;
+@property (unsafe_unretained, nonatomic) Book *currentBook;
 @property (strong, nonatomic) NSMutableArray *books;
 @property (strong, nonatomic) NSMutableArray *favoriteBooks;
 @property (assign, nonatomic) NSInteger favoritesSegmentedControlIndex;
 
-+ (id)sharedBookData;
++ (BookData *)sharedBookData;
 
 - (void)loadBooks;
-- (NSInteger)unsignedIndexOfFavoriteBookWithMd5String:(NSString *)string;
-- (void)archiveBook:(Book *)book withName:(NSString *)fileName;
-- (id)unarchiveBookWithFileName:(NSString *)fileName;
+- (NSInteger)indexOfBookWithName:(NSString *)name;
+- (NSInteger)indexOfFavoriteBookWithName:(NSString *)name;
 
 @end

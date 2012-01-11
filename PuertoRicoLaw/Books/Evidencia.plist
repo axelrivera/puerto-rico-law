@@ -10,6 +10,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Estas Reglas se conocerán como Reglas de Evidencia de Puerto Rico.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloiregla101</string>
 					<key>sectionLabel</key>
 					<string>Regla 101</string>
 					<key>sectionTitle</key>
@@ -18,6 +20,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Las Reglas se interpretarán de forma que garanticen una solución justa, rápida y económica a cualquier problema de derecho probatorio. El propósito principal de las Reglas es el descubrimiento de la verdad en todos los procedimientos judiciales.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloiregla102</string>
 					<key>sectionLabel</key>
 					<string>Regla 102</string>
 					<key>sectionTitle</key>
@@ -26,6 +30,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Aplicabilidad al Tribunal General de Justicia&lt;/p&gt;  &lt;p&gt;(1) Tribunal de Primera Instancia&lt;/p&gt;  &lt;p&gt;Las Reglas aplican en las Salas del Tribunal de Primera Instancia.&lt;/p&gt;  &lt;p&gt;(2) Tribunal Supremo y Tribunal de Apelaciones Las Reglas aplican en los procedimientos ante el Tribunal Supremo y el Tribunal de Apelaciones, con arreglo a los límites establecidos en sus respectivos Reglamentos.&lt;/p&gt;  &lt;p&gt;(B) Casos civiles y penales Las Reglas aplican en todos los casos civiles y penales, excepto en casos de desacato sumario.&lt;/p&gt;  &lt;p&gt;(C) Privilegios y conocimiento judicial Las reglas de privilegios y conocimiento judicial aplican en todas las etapas de los procedimientos, acciones, y casos civiles y penales.&lt;/p&gt;  &lt;p&gt;(D) Las Reglas no obligan en:&lt;/p&gt;  &lt;p&gt;(1) las determinaciones preliminares a la admisibilidad de prueba, de conformidad con la Regla 109(A);&lt;/p&gt;  &lt;p&gt;(2) los procedimientos interlocutorios o post sentencia, entre otros:&lt;/p&gt;  &lt;p&gt;(a) procedimientos relacionados con la determinación de causa probable para arrestar o expedir orden de registro y allanamiento;&lt;/p&gt;  &lt;p&gt;(b) fase de la sentencia en el procedimiento penal;&lt;/p&gt;  &lt;p&gt;(c) procedimientos relacionados con la imposición de fianza o condiciones en los procedimientos penales;&lt;/p&gt;  &lt;p&gt;(d) vistas de revocación de libertad a prueba o condicionada;&lt;/p&gt;  &lt;p&gt;(e) procedimientos relacionados con entredichos provisionales e interdictos preliminares, y&lt;/p&gt;  &lt;p&gt;(3) los procedimientos ex parte.&lt;/p&gt;  &lt;p&gt;(E) Procedimientos bajo Leyes Especiales Las Reglas aplican en procedimientos establecidos por leyes especiales, salvo que expresamente se disponga lo contrario o sean incompatibles con la naturaleza del procedimiento especial contemplado en la ley.&lt;/p&gt;  &lt;p&gt;(F) Procedimientos de determinación de causa para acusar (vista preliminar).&lt;/p&gt;  &lt;p&gt;En la vista de determinación de causa para acusar (vista preliminar), aunque las Reglas de Evidencia no obligan, la determinación de causa deberá efectuarse con evidencia admisible en el juicio.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloiregla103</string>
 					<key>sectionLabel</key>
 					<string>Regla 103</string>
 					<key>sectionTitle</key>
@@ -34,22 +40,28 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Requisito de objeción&lt;/p&gt;  &lt;p&gt;La parte perjudicada por la admisión errónea de evidencia debe presentar una objeción oportuna, específica y correcta o una moción para que se elimine del récord evidencia erróneamente admitida cuando el fundamento para objetar surge con posterioridad. Si el fundamento de la objeción surge claramente del contexto del ofrecimiento de la evidencia, no será necesario aludir a tal fundamento.&lt;/p&gt;  &lt;p&gt;(B) Oferta de prueba&lt;/p&gt;  &lt;p&gt;En el caso de exclusión errónea de prueba, la parte perjudicada deberá invocar el fundamento específico para la admisibilidad de la evidencia ofrecida y hacer una oferta de prueba de forma que surja claramente cuál es la evidencia que ha sido excluida y la naturaleza, propósito y pertinencia para la cual se ofrece. No será necesario invocar tal fundamento específico ni hacer la oferta de prueba cuando resultan evidentes del contexto del ofrecimiento.&lt;/p&gt;  &lt;p&gt;El Tribunal permitirá la oferta de prueba y determinará si debe hacerse mediante un resumen de la evidencia ofrecida o el interrogatorio correspondiente. El Tribunal podrá añadir cualquier manifestación que demuestre el carácter de la evidencia, la forma en que fue ofrecida, la objeción a su admisión y la resolución sobre la exclusión.&lt;/p&gt;  &lt;p&gt;(C) Objeción u oferta de prueba continua&lt;/p&gt;  &lt;p&gt;Una vez el Tribunal dicta una resolución definitiva en el récord, para admitir o excluir prueba, ya sea antes o durante el juicio, una parte no tiene que renovar una objeción u oferta de prueba para conservar su derecho a plantear el asunto en apelación.&lt;/p&gt;  &lt;p&gt;(D) Casos por Jurado&lt;/p&gt;  &lt;p&gt;En los casos por Jurado, los procedimientos se llevarán a cabo de tal forma que se evite que evidencia inadmisible sea sugerida al Jurado mediante preguntas, aseveraciones u ofertas de prueba.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloiregla104</string>
 					<key>sectionLabel</key>
 					<string>Regla 104</string>
 					<key>sectionTitle</key>
-					<string>Admisión O Exclusión Errónea De Evidencia</string>
+					<string>Admisión o Exclusión Errónea De Evidencia</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Regla general&lt;/p&gt;  &lt;p&gt;No se dejará sin efecto una determinación de admisión o exclusión errónea de evidencia ni se revocará por ello sentencia o decisión alguna a menos que:&lt;/p&gt;  &lt;p&gt;(1) la parte perjudicada con la admisión o exclusión de evidencia hubiere satisfecho los requisitos de objeción, fundamento u oferta de prueba establecidos en la Regla 104 y&lt;/p&gt;  &lt;p&gt;(2) el Tribunal que considera el señalamiento estime que la evidencia admitida o excluida fue un factor decisivo o sustancial en la sentencia emitida o decisión cuya revocación se solicita.&lt;/p&gt;  &lt;p&gt;(B) Error constitucional&lt;/p&gt;  &lt;p&gt;Si el error en la admisión o exclusión constituye una violación a un derecho constitucional de la persona acusada, el tribunal apelativo sólo confirmará la decisión si está convencido más allá de duda razonable que, de no haberse cometido el error, el resultado hubiera sido el mismo.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloiregla105</string>
 					<key>sectionLabel</key>
 					<string>Regla 105</string>
 					<key>sectionTitle</key>
-					<string>Efecto De Error En La Admisión O Exclusión De Evidencia</string>
+					<string>Efecto De Error En La Admisión o Exclusión De Evidencia</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Un tribunal apelativo podrá considerar un señalamiento de error de admisión o exclusión de evidencia y revocar una sentencia o decisión, aun cuando la parte que hace el señalamiento no hubiera satisfecho los requisitos establecidos en la Regla 104, si:&lt;/p&gt;  &lt;p&gt;(A) el error fue craso ya que no cabe duda de que fue cometido,&lt;/p&gt;  &lt;p&gt;(B) el error fue perjudicial porque tuvo un efecto decisivo o sustancial en la sentencia o decisión cuya revocación se solicita y,&lt;/p&gt;  &lt;p&gt;(C) el no corregirlo resulte en un fracaso de la justicia.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloiregla106</string>
 					<key>sectionLabel</key>
 					<string>Regla 106</string>
 					<key>sectionTitle</key>
@@ -58,6 +70,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Cuando determinada evidencia sea admisible en cuanto a una parte o para un propósito, y sea inadmisible en cuanto a otra parte o para otro propósito, el Tribunal, previa solicitud al efecto, limitará la admisibilidad de esa evidencia a su alcance apropiado e instruirá inmediatamente sobre ello al Jurado, de haberlo.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloiregla107</string>
 					<key>sectionLabel</key>
 					<string>Regla 107</string>
 					<key>sectionTitle</key>
@@ -66,6 +80,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Cuando un escrito, grabación o filmación, o parte de éstos, es presentado como evidencia por una parte, la parte contraria puede requerir que en ese momento se presente la totalidad del escrito, grabación o filmación presentado parcialmente. Puede igualmente requerir cualquier otro escrito, grabación o filmación que deba ser presentado contemporáneamente para la más cabal comprensión del asunto. No se admitirá prueba de otra manera inadmisible, bajo el pretexto de la presentación de la totalidad del escrito, grabación o filmación.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloiregla108</string>
 					<key>sectionLabel</key>
 					<string>Regla 108</string>
 					<key>sectionTitle</key>
@@ -74,20 +90,26 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Admisibilidad en general Las cuestiones preliminares en relación con la capacidad de una persona para ser testigo, la existencia de un privilegio o la admisibilidad de evidencia serán determinadas por el Tribunal salvo a lo dispuesto en el inciso (B) de esta Regla. Al hacer tales determinaciones, el Tribunal no queda obligado por las Reglas de Derecho Probatorio, excepto por aquéllas relativas a privilegios.&lt;/p&gt;  &lt;p&gt;(B) Pertinencia condicionada a los hechos Cuando la pertinencia de evidencia ofrecida depende de que se satisfaga una condición de hecho, el Tribunal la admitirá al presentarse evidencia suficiente para sostener la conclusión de que la condición ha sido satisfecha. El Tribunal puede también admitir la evidencia si posteriormente se presenta evidencia suficiente para sostener la conclusión de que la condición ha sido satisfecha.&lt;/p&gt;  &lt;p&gt;(C) Determinaciones en ausencia del Jurado cuando medie confesión de la persona acusada En casos ventilados ante Jurado, toda la evidencia relativa a la admisibilidad de una confesión de la persona acusada será escuchada y evaluada por la Jueza o el Juez en ausencia del Jurado. Si la Jueza o el Juez determina que la confesión es admisible, la persona acusada podrá presentar al Jurado, y el Ministerio Público podrá refutar, evidencia pertinente relativa al peso o credibilidad de la confesión y a las circunstancias bajo las cuales la confesión fue obtenida. Otras determinaciones preliminares a la admisibilidad de evidencia también podrán considerarse en ausencia del Jurado cuando los intereses de la justicia así lo determinen o cuando la persona acusada sea un testigo que así lo solicite.&lt;/p&gt;  &lt;p&gt;(D) Testimonio de la persona acusada en determinaciones preliminares&lt;/p&gt;  &lt;p&gt;La persona acusada que testifica en torno a una cuestión preliminar a la admisibilidad de evidencia no queda por ello sujeta a contrainterrogatorio en cuanto a otros asuntos del caso. La declaración de una persona acusada sobre el asunto preliminar no es admisible en su contra salvo para propósitos de su impugnación. (E) Valor probatorio y credibilidad&lt;/p&gt;  &lt;p&gt;Esta Regla no limita el derecho de las partes a presentar evidencia ante el Jurado que sea pertinente al valor probatorio o a la credibilidad de la evidencia admitida luego de la correspondiente determinación preliminar del Tribunal.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloiregla109</string>
 					<key>sectionLabel</key>
 					<string>Regla 109</string>
 					<key>sectionTitle</key>
-					<string>Determinaciones Preliminares A La Admisibilidad De Evidencia</string>
+					<string>Determinaciones Preliminares a La Admisibilidad De Evidencia</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;La juzgadora o el juzgador de hechos deberá evaluar la evidencia presentada con el propósito de determinar cuáles hechos han quedado establecidos o demostrados, con sujeción a los principios siguientes:&lt;/p&gt;  &lt;p&gt;(A) El peso de la prueba recae sobre la parte que resultaría vencida de no presentarse evidencia por alguna de las partes.&lt;/p&gt;  &lt;p&gt;(B) La obligación de presentar evidencia primeramente recae sobre la parte que sostiene la afirmativa en el asunto en controversia.&lt;/p&gt;  &lt;p&gt;(C) Para establecer un hecho, no se exige aquel grado de prueba que, excluyendo posibilidad de error, produzca absoluta certeza.&lt;/p&gt;  &lt;p&gt;(D) La evidencia directa de una persona testigo que merezca entero crédito es prueba suficiente de cualquier hecho, salvo que otra cosa se disponga por ley.&lt;/p&gt;  &lt;p&gt;(E) La juzgadora o el juzgador de hechos no tiene la obligación de decidir de acuerdo con las declaraciones de cualquier cantidad de testigos que no le convenzan contra un número menor u otra evidencia que le resulte más convincente.&lt;/p&gt;  &lt;p&gt;(F) En los casos civiles, la decisión de la juzgadora o del juzgador se hará mediante la preponderancia de la prueba a base de criterios de probabilidad, a menos que exista disposición al contrario. En los casos criminales, la culpabilidad de la persona acusada debe ser establecida más allá de duda razonable.&lt;/p&gt;  &lt;p&gt;(G) Cuando pareciere que una parte, teniendo disponible una prueba más firme y satisfactoria, ofrece una más débil y menos satisfactoria, la evidencia ofrecida deberá considerarse con sospecha.&lt;/p&gt;  &lt;p&gt;(H) Cualquier hecho en controversia es susceptible de ser demostrado mediante evidencia directa o mediante evidencia indirecta o circunstancial. Evidencia directa es aquélla que prueba el hecho en controversia sin que medie inferencia o presunción alguna y que, de ser cierta, demuestra el hecho de modo concluyente. Evidencia indirecta o circunstancial es aquélla que tiende a demostrar el hecho en controversia probando otro distinto, del cual por si o, en unión a otros hechos ya establecidos, puede razonablemente inferirse el hecho en controversia.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloiregla110</string>
 					<key>sectionLabel</key>
 					<string>Regla 110</string>
 					<key>sectionTitle</key>
-					<string>Evaluación Y Suficiencia De La Prueba</string>
+					<string>Evaluación y Suficiencia De La Prueba</string>
 				</dict>
 			</array>
+			<key>sectionID</key>
+			<string>evidenciacapituloi</string>
 			<key>sectionLabel</key>
 			<string>Capítulo I</string>
 			<key>sectionTitle</key>
@@ -99,6 +121,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Esta Regla aplica solamente al conocimiento judicial de hechos adjudicativos.&lt;/p&gt;  &lt;p&gt;(B) El Tribunal podrá tomar conocimiento judicial solamente de aquel hecho adjudicativo que no esté sujeto a controversia razonable porque:&lt;/p&gt;  &lt;p&gt;(1) es de conocimiento general dentro de la jurisdicción territorial del Tribunal, o&lt;/p&gt;  &lt;p&gt;(2) es susceptible de corroboración inmediata y exacta mediante fuentes cuya exactitud no puede ser razonablemente cuestionada.&lt;/p&gt;  &lt;p&gt;(C) El Tribunal podrá tomar conocimiento judicial a iniciativa propia o a solicitud de parte. Si es a solicitud de parte y ésta provee información suficiente para ello, el Tribunal tomará conocimiento judicial.&lt;/p&gt;  &lt;p&gt;(D) Las partes tendrán derecho a ser oídas en torno a si procede tomar conocimiento judicial. De no haber sido notificada oportunamente por el Tribunal o por la parte promovente, la parte afectada podrá solicitar la oportunidad de ser oída luego de que se haya tomado conocimiento judicial.&lt;/p&gt;  &lt;p&gt;(E) El Tribunal podrá tomar conocimiento judicial en cualquier etapa de los procedimientos, incluyendo la apelativa.&lt;/p&gt;  &lt;p&gt;(F) En casos criminales ante Jurado, la Jueza o el Juez instruirá a las personas miembros del Jurado que pueden, pero no están obligados a aceptar como concluyente cualquier hecho del cual haya sido tomado conocimiento judicial.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloiiregla201</string>
 					<key>sectionLabel</key>
 					<string>Regla 201</string>
 					<key>sectionTitle</key>
@@ -107,12 +131,16 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) El Tribunal tomará conocimiento judicial de:&lt;/p&gt;  &lt;p&gt;(1) la Constitución y las leyes del Estado Libre Asociado de Puerto Rico,&lt;/p&gt;  &lt;p&gt;(2) la Constitución y las leyes de los Estados Unidos de América.&lt;/p&gt;  &lt;p&gt;(B) El Tribunal podrá tomar conocimiento judicial de:&lt;/p&gt;  &lt;p&gt;(1) las Reglas y Reglamentos de los Estados Unidos de América y del Estado Libre Asociado de Puerto Rico&lt;/p&gt;  &lt;p&gt;(2) las leyes y reglamentos de los estados y territorios de los Estados Unidos de América, y&lt;/p&gt;  &lt;p&gt;(3) las ordenanzas aprobadas por los municipios del Estado Libre Asociado de Puerto Rico.&lt;/p&gt;  &lt;p&gt;(4) los tratados en los que los Estados Unidos de América sea parte y apliquen a Puerto Rico.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloiiregla201</string>
 					<key>sectionLabel</key>
 					<string>Regla 201</string>
 					<key>sectionTitle</key>
 					<string>Conocimiento Judicial De Asuntos De Derecho</string>
 				</dict>
 			</array>
+			<key>sectionID</key>
+			<string>evidenciacapituloii</string>
 			<key>sectionLabel</key>
 			<string>Capítulo II</string>
 			<key>sectionTitle</key>
@@ -124,6 +152,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Una presunción es una deducción de un hecho que la ley autoriza a hacer o requiere que se haga de otro hecho o grupo de hechos previamente establecidos en la acción. A ese hecho o grupo de hechos previamente establecidos se les denomina hecho básico. Al hecho deducido mediante la presunción, se le denomina hecho presumido.&lt;/p&gt;  &lt;p&gt;(B) La presunción es incontrovertible cuando la ley no permite presentar evidencia para destruirla o rebatirla. Es decir, para demostrar la inexistencia del hecho presumido. El resto de las presunciones se denominan controvertibles.&lt;/p&gt;  &lt;p&gt;(C) Este capítulo se refiere sólo a presunciones controvertibles.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloiiiregla301</string>
 					<key>sectionLabel</key>
 					<string>Regla 301</string>
 					<key>sectionTitle</key>
@@ -132,6 +162,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;En una acción civil, una presunción impone a la parte contra la cual se establece la presunción el peso de la prueba para demostrar la inexistencia del hecho presumido. Si la parte contra la cual se establece la presunción no ofrece evidencia para demostrar la inexistencia del hecho presumido, la juzgadora o el juzgador debe aceptar la existencia de tal hecho. Si se presenta evidencia en apoyo de la determinación de la inexistencia de tal hecho, la parte que interesa rebatir la presunción debe persuadir a quien juzga de que es más probable la inexistencia que la existencia del hecho presumido.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloiiiregla302</string>
 					<key>sectionLabel</key>
 					<string>Regla 302</string>
 					<key>sectionTitle</key>
@@ -140,6 +172,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Cuando en una acción criminal la presunción perjudica a la persona acusada, tiene el efecto de permitir a la juzgadora o al juzgador inferir el hecho presumido si no se presenta evidencia alguna para refutarlo. Si de la prueba presentada surge duda razonable sobre el hecho presumido, la presunción queda derrotada. La presunción no tendrá efecto alguno de variar el peso de la prueba sobre los elementos del delito o de refutar una defensa de la persona acusada.&lt;/p&gt;  &lt;p&gt;(A) Cuando beneficia a la persona acusada, la presunción tendrá el mismo efecto que lo establecido en la Regla 302.&lt;/p&gt;  &lt;p&gt;(B) Instruir al Jurado sobre el efecto de una presunción contra la persona acusada, la Jueza o el Juez deberá hacer constar que:&lt;/p&gt;  &lt;p&gt;(1) basta que la persona acusada produzca duda razonable sobre el hecho presumido para derrotar la presunción, y&lt;/p&gt;  &lt;p&gt;(2) el Jurado no estará obligado a deducir el hecho presumido, aun cuando la persona acusada no produjera evidencia en contrario. Sin embargo, se instruirá al Jurado en cuanto a que puede deducir o inferir el hecho presumido si considera establecido el hecho básico.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloiiiregla303</string>
 					<key>sectionLabel</key>
 					<string>Regla 303</string>
 					<key>sectionTitle</key>
@@ -148,6 +182,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Las presunciones son aquéllas establecidas por ley o por decisiones judiciales. Entre las presunciones controvertibles se reconocen las siguientes:&lt;/p&gt;  &lt;p&gt;(1) Una persona es inocente de delito o falta.&lt;/p&gt;  &lt;p&gt;(2) Todo acto ilegal fue cometido con intención ilegal.&lt;/p&gt;  &lt;p&gt;(3) Toda persona intenta la consecuencia ordinaria de un acto cometido por ella voluntariamente.&lt;/p&gt;  &lt;p&gt;(4) Toda persona cuida de sus propios asuntos con celo ordinario.&lt;/p&gt;  &lt;p&gt;(5) Toda evidencia voluntariamente suprimida resultará adversa si se ofreciere.&lt;/p&gt;  &lt;p&gt;(6) Todo dinero entregado por una persona a otra se debía a ésta.&lt;/p&gt;  &lt;p&gt;(7) Toda cosa entregada por una persona a otra pertenecía a ésta.&lt;/p&gt;  &lt;p&gt;(8) Una obligación entregada a quien es la parte deudora ha sido satisfecha.&lt;/p&gt;  &lt;p&gt;(9) Las rentas o pagos anteriores fueron satisfechos, cuando se presentaren los recibos correspondientes a rentas o pagos posteriores.&lt;/p&gt;  &lt;p&gt;(10) Las cosas que obran en poder de una persona son de su pertenencia.&lt;/p&gt;  &lt;p&gt;(11) Una persona es dueña de una cosa, por ejercer actos de dominio sobre ella, o ser fama general que le pertenece.&lt;/p&gt;  &lt;p&gt;(12) Una persona en cuyo poder obrare una orden a su cargo para el pago de dinero, o mandándole entregar una cosa, ha pagado el dinero o entregado la cosa de conformidad.&lt;/p&gt;  &lt;p&gt;(13) Una persona en posesión de un cargo público, fue elegida o nombrada para dicho cargo, como es de rigor.&lt;/p&gt;  &lt;p&gt;(14) Los deberes de un cargo han sido cumplidos con regularidad.&lt;/p&gt;  &lt;p&gt;(15) Un Tribunal, una Jueza o un Juez, obrando como tal, bien en Puerto Rico, en cualquier estado de los Estados Unidos de América o país extranjero, se hallaba en el ejercicio legal de su jurisdicción.&lt;/p&gt;  &lt;p&gt;(16) Un registro judicial, aunque no fuere concluyente, determina o expone con exactitud los derechos de las partes.&lt;/p&gt;  &lt;p&gt;(17) Todas las materias comprendidas en una cuestión, fueron sometidas al Tribunal o Jurado y resueltas por cualquiera de éstos. De igual modo, que todas las materias comprendidas en una cuestión sometida a arbitraje fueron presentadas a los árbitros y resueltas por éstos o éstas.&lt;/p&gt;  &lt;p&gt;(18) Las transacciones privadas fueron realizadas con rectitud y en forma correcta.&lt;/p&gt;  &lt;p&gt;(19) Se ha seguido el curso ordinario de los negocios.&lt;/p&gt;  &lt;p&gt;(20) Un pagaré o letra de cambio fue dado o endosado mediante suficiente compensación.&lt;/p&gt;  &lt;p&gt;(21) El endoso de un pagaré o giro negociable, se hizo en la fecha y lugar en que fue extendido dicho pagaré o giro.&lt;/p&gt;  &lt;p&gt;(22) Un escrito lleva fecha exacta.&lt;/p&gt;  &lt;p&gt;(23) Una carta dirigida y cursada por correo debidamente, fue recibida en su oportunidad.&lt;/p&gt;  &lt;p&gt;(24) Probado el nombre de una persona, se establece su identidad.&lt;/p&gt;  &lt;p&gt;(25) El consentimiento resultó de la creencia de que la cosa consentida se ajustaba al derecho o al hecho.&lt;/p&gt;  &lt;p&gt;(26) Las cosas han ocurrido de acuerdo con el proceso ordinario de la naturaleza y los hábitos regulares de la vida.&lt;/p&gt;  &lt;p&gt;(27) Que las personas que se conducen como socios tienen celebrado un contrato social. (28) Que un hombre y una mujer que se conducen como casados han celebrado un contrato legal de matrimonio.&lt;/p&gt;  &lt;p&gt;(29) Las personas nacidas después de la celebración de un matrimonio son hijas o hijos del marido.&lt;/p&gt;  &lt;p&gt;(30) Una vez probada la existencia de una cosa continúa ésta todo el tiempo que ordinariamente duran las cosas de igual naturaleza.&lt;/p&gt;  &lt;p&gt;(31) La ley ha sido acatada.&lt;/p&gt;  &lt;p&gt;(32) Un documento o escrito de más de veinte años, es auténtico cuando ha sido generalmente acatado como tal por personas interesadas en la cuestión y se ha explicado satisfactoriamente su custodia.&lt;/p&gt;  &lt;p&gt;(33) Un libro impreso y publicado, que se dice haberlo sido por autoridad pública, fue impreso o publicado por tal autoridad.&lt;/p&gt;  &lt;p&gt;(34) Un libro impreso y publicado, que se dice contener las minutas de los casos juzgados en el Estado o país en que fuere publicado, contiene las minutas exactas de dichos casos.&lt;/p&gt;  &lt;p&gt;(35) El fideicomisario, la fideicomisaria u otra persona, cuyo deber fuere traspasar bienes raíces a determinada persona, ha hecho realmente el traspaso, cuando tal presunción fuere necesaria para ultimar el título de dicha persona o de la que es su sucesora en interés.&lt;/p&gt;  &lt;p&gt;(36) El uso no interrumpido por parte del público, durante cinco años, de un terreno para cementerio, con el consentimiento del dueño y sin que éste hubiere reservado sus derechos, constituye evidencia indirecta de su intención de dedicarlos al público para tal objeto.&lt;/p&gt;  &lt;p&gt;(37) Al efectuarse un contrato escrito, medió la correspondiente compensación.&lt;/p&gt;  &lt;p&gt;(38) Cuando dos personas perecieren en la misma calamidad, como un naufragio, una batalla o un incendio, y no se probare cuál de las dos murió primero, ni existieren circunstancias especiales de dónde inferirlo, se presume la supervivencia por las probabilidades resultantes de la fuerza y edad, de acuerdo con las siguientes reglas:&lt;/p&gt;  &lt;p&gt;&lt;em&gt;Primera:&lt;/em&gt; Si ambas personas perecidas fueren menores de quince años, se presume haber sobrevivido la de mayor edad.&lt;/p&gt;  &lt;p&gt;&lt;em&gt;Segunda:&lt;/em&gt; Si ambas tenían más de sesenta años, se presume haber sobrevivido la de menor edad.&lt;/p&gt;  &lt;p&gt;&lt;em&gt;Tercera:&lt;/em&gt; Si una era menor de quince años y la otra mayor de sesenta se presume haber sobrevivido la primera.&lt;/p&gt;  &lt;p&gt;&lt;em&gt;Cuarta:&lt;/em&gt; Si ambas tenían más de quince años y menos de sesenta se presume la supervivencia de la de más edad.&lt;/p&gt;  &lt;p&gt;&lt;em&gt;Quinta:&lt;/em&gt; Si una era menor de quince o mayor de sesenta, y otra de edad intermedia, se presume haber sobrevivido esta última.&lt;/p&gt;  &lt;p&gt;(39) Un recibo de compra de bienes o pago por servicios es auténtico y refleja el justo valor de los bienes adquiridos de los proveedores o los servicios recibidos de parte de un proveedor.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloiiiregla304</string>
 					<key>sectionLabel</key>
 					<string>Regla 304</string>
 					<key>sectionTitle</key>
@@ -156,12 +192,16 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;En caso de surgir dos presunciones incompatibles no se aplicará ninguna de ellas y el hecho en controversia se resolverá a base de la prueba.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloiiiregla305</string>
 					<key>sectionLabel</key>
 					<string>Regla 305</string>
 					<key>sectionTitle</key>
 					<string>Presunciones Incompatibles</string>
 				</dict>
 			</array>
+			<key>sectionID</key>
+			<string>evidenciacapituloiii</string>
 			<key>sectionLabel</key>
 			<string>Capítulo III</string>
 			<key>sectionTitle</key>
@@ -173,6 +213,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Evidencia pertinente es aquélla que tiende a hacer la existencia de un hecho, que tiene consecuencias para la adjudicación de la acción, más probable o menos probable de lo que sería sin tal evidencia. Esto incluye la evidencia que sirva para impugnar o sostener la credibilidad de una persona testigo o declarante.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloivregla401</string>
 					<key>sectionLabel</key>
 					<string>Regla 401</string>
 					<key>sectionTitle</key>
@@ -181,22 +223,28 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;La evidencia pertinente es admisible excepto cuando se disponga lo contrario por imperativo constitucional, por disposición de ley o por estas Reglas. La evidencia no pertinente es inadmisible.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloivregla402</string>
 					<key>sectionLabel</key>
 					<string>Regla 402</string>
 					<key>sectionTitle</key>
-					<string>Relación Entre Pertinencia Y Admisibilidad</string>
+					<string>Relación Entre Pertinencia y Admisibilidad</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Evidencia pertinente puede ser excluida cuando su valor probatorio queda sustancialmente superado por cualesquiera de estos factores:&lt;/p&gt;  &lt;p&gt;(a) riesgo de causar perjuicio indebido&lt;/p&gt;  &lt;p&gt;(b) riesgo de causar confusión&lt;/p&gt;  &lt;p&gt;(c) riesgo de causar desorientación del Jurado&lt;/p&gt;  &lt;p&gt;(d) dilación indebida de los procedimientos&lt;/p&gt;  &lt;p&gt;(e) innecesaria presentación de prueba acumulativa.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloivregla403</string>
 					<key>sectionLabel</key>
 					<string>Regla 403</string>
 					<key>sectionTitle</key>
-					<string>Evidencia Pertinente Excluida Por Fundamentos De Perjuicio, Confusión O Pérdida De Tiempo</string>
+					<string>Evidencia Pertinente Excluida Por Fundamentos De Perjuicio, Confusión o Pérdida De Tiempo</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Evidencia del carácter de una persona o de un rasgo de su carácter, no es admisible cuando se ofrece para probar que en una ocasión específica la persona actuó de conformidad con tal carácter, excepto cuando se trate de:&lt;/p&gt;  &lt;p&gt;(1) Evidencia de un rasgo pertinente de carácter ofrecido por la defensa, sobre el carácter de la persona acusada.&lt;/p&gt;  &lt;p&gt;(2) Evidencia de un rasgo pertinente de carácter ofrecido por la defensa, sobre el carácter de la víctima, sujeto a lo dispuesto en la Regla 412.&lt;/p&gt;  &lt;p&gt;(3) Evidencia ofrecida por el Ministerio Público, sobre el mismo rasgo pertinente de carácter de la persona acusada, para refutar la prueba de carácter presentada por la defensa bajo la Cláusula (1) o la Cláusula (2) de este inciso.&lt;/p&gt;  &lt;p&gt;(4) Evidencia de un rasgo pertinente de carácter ofrecido por el Ministerio Público, sobre el carácter de la víctima, para refutar la prueba de carácter presentada por la defensa bajo la cláusula (2) de este inciso.&lt;/p&gt;  &lt;p&gt;(5) Evidencia de un rasgo pertinente de carácter ofrecido por el Ministerio Público, en casos de asesinato u homicidio, sobre el carácter tranquilo o pacífico de la víctima, para refutar prueba de defensa de que la víctima fue quien agredió primero.&lt;/p&gt;  &lt;p&gt;(B) Evidencia de conducta específica, incluyendo la comisión de otros delitos, daño civil u otros actos, no es admisible para probar la propensión a incurrir en ese tipo de conducta y con el propósito de inferir que se actuó de conformidad con tal propensión. Sin embargo, evidencia de tal conducta es admisible si es pertinente para otros propósitos, tales como prueba de motivo, oportunidad, intención, preparación, plan, conocimiento, identidad, ausencia de error o accidente o para establecer o refutar una defensa.&lt;/p&gt;  &lt;p&gt;Si la persona acusada lo solicita, el Ministerio Público deberá notificarle la naturaleza general de toda prueba que el Ministerio Público se proponga presentar bajo este inciso (B). La notificación deberá proveerse con suficiente antelación al juicio, pero el Tribunal podrá permitir que la notificación se haga durante el juicio si el Ministerio Público demuestra justa causa para no haber provisto la información antes del juicio.&lt;/p&gt;  &lt;p&gt;(C) La admisibilidad de evidencia ofrecida para sostener o impugnar la credibilidad de una persona testigo se regula según lo codificado en las Reglas 608 ó 609.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloivregla404</string>
 					<key>sectionLabel</key>
 					<string>Regla 404</string>
 					<key>sectionTitle</key>
@@ -205,6 +253,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Reputación u opinión&lt;/p&gt;  &lt;p&gt;Cuando evidencia de carácter sea admisible bajo la Regla 404, se podrá presentar sólo en forma de testimonio de reputación o de opinión sobre el rasgo de carácter pertinente, sin perjuicio de que en el contrainterrogatorio pueda preguntarse a la persona testigo sobre actos específicos de conducta pertinentes a su testimonio.&lt;/p&gt;  &lt;p&gt;(B) Conducta específica&lt;/p&gt;  &lt;p&gt;Cuando el carácter o rasgo de carácter de una persona sea un elemento esencial de una acusación, reclamación o defensa, podrá ser admitida evidencia de carácter no sólo en forma de testimonio de reputación o de opinión, sino también en forma de actos específicos de conducta.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloivregla405</string>
 					<key>sectionLabel</key>
 					<string>Regla 405</string>
 					<key>sectionTitle</key>
@@ -213,38 +263,48 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Evidencia de hábito de una persona o la práctica rutinaria de una organización es admisible para probar que la conducta de esa persona u organización en una ocasión particular fue de conformidad al hábito o práctica rutinaria.&lt;/p&gt;  &lt;p&gt;(B) Método de prueba&lt;/p&gt;  &lt;p&gt;El hábito o la práctica rutinaria podrá probarse mediante testimonio en forma de una opinión o mediante un número suficiente de actos específicos de conducta para justificar la determinación de que el hábito existía o de que la práctica era rutinaria.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloivregla406</string>
 					<key>sectionLabel</key>
 					<string>Regla 406</string>
 					<key>sectionTitle</key>
-					<string>Hábito O Práctica Rutinaria</string>
+					<string>Hábito o Práctica Rutinaria</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Evidencia de medidas de reparación o precauciones efectuadas después de la ocurrencia de un evento, las cuales de haber sido efectuadas anteriormente, hubieran tendido a hacer menos probable su ocurrencia, será inadmisible para probar negligencia o conducta culpable en relación con el evento. Esto no impide que tal evidencia sea admisible a otros fines pertinentes, tales como establecer la titularidad o control sobre una cosa, la viabilidad de tomar medidas de precaución si la parte adversa ha puesto este hecho en controversia, o para fines de impugnación.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloivregla407</string>
 					<key>sectionLabel</key>
 					<string>Regla 407</string>
 					<key>sectionTitle</key>
-					<string>Reparaciones O Precauciones Posteriores</string>
+					<string>Reparaciones o Precauciones Posteriores</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) No es admisible para probar la validez o falta de validez de una reclamación, la cuantía reclamada o para impugnar a base de una declaración anterior inconsistente o por contradicción:&lt;/p&gt;  &lt;p&gt;(1) Evidencia de que una persona (a) ha provisto, ofrecido o prometido proveer o (b) ha aceptado, ofrecido o prometido aceptar algo de valor, con el propósito de intentar o lograr transigir una reclamación cuando estaba en controversia su validez o la cuantía reclamada, o&lt;/p&gt;  &lt;p&gt;(2) Evidencia sobre conducta o declaraciones efectuadas durante gestiones dirigidas a transigir.&lt;/p&gt;  &lt;p&gt;(B) Esta Regla no requiere la exclusión de evidencia que se ofrece para otros propósitos tales como impugnar por parcialidad o prejuicio a una persona testigo, refutar una alegación de demora indebida o probar un intento de obstruir una investigación o procedimiento criminal. Para fines de esta Regla, no se considerará como intento de obstruir una investigación o procedimiento criminal, la conducta dirigida a transigir un delito cuya transacción está autorizada por las Reglas de Procedimiento Criminal, el Código Penal o legislación especial.&lt;/p&gt;  &lt;p&gt;(C) Esta Regla aplica en casos civiles y criminales.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloivregla408</string>
 					<key>sectionLabel</key>
 					<string>Regla 408</string>
 					<key>sectionTitle</key>
-					<string>Transacciones Y Ofertas Para Transigir</string>
+					<string>Transacciones y Ofertas Para Transigir</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Evidencia de proveer, ofrecer o prometer el pago de gastos médicos, hospitalarios o gastos similares surgidos a raíz de lesiones, no es admisible para probar responsabilidad por las lesiones.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloivregla409</string>
 					<key>sectionLabel</key>
 					<string>Regla 409</string>
 					<key>sectionTitle</key>
-					<string>Pago Y Oferta De Pago Por Gastos Médicos</string>
+					<string>Pago y Oferta De Pago Por Gastos Médicos</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;La existencia de una alegación preacordada, sus términos o condiciones, y las conversaciones o conducta conducentes a la misma, no serán admisibles en ningún procedimiento criminal o civil si la alegación preacordada hubiere sido rechazada por el Tribunal, invalidada en algún recurso posterior o retirada válidamente por la persona imputada o el Ministerio Público. Lo anterior será admisible por excepción en un procedimiento criminal por perjurio contra la persona imputada basado en manifestaciones hechas por ésta bajo juramento y en presencia de su abogada o abogado.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloivregla410</string>
 					<key>sectionLabel</key>
 					<string>Regla 410</string>
 					<key>sectionTitle</key>
@@ -253,6 +313,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) La adjudicación de responsabilidad por accidentes de tránsito en la que se han utilizado los diagramas contenidos en el Sistema de la Determinación Inicial de Responsabilidad, según establecido por ley, no será admisible en procedimiento criminal o civil alguno que surja por los hechos particulares del referido accidente. No obstante, cualquier cantidad satisfecha por concepto de la adjudicación de responsabilidad, resultante de la utilización de los referidos diagramas en la reclamación surgida por tal accidente de tránsito, será admisible a los únicos efectos de que se acredite a cualquier cantidad adicional que judicial o extrajudicialmente se le adjudique a alguna de las partes involucradas en tal reclamación.&lt;/p&gt;  &lt;p&gt;(B) Tampoco será admisible como evidencia en un procedimiento civil o criminal, el informe amistoso de accidente que las partes involucradas en un accidente de tránsito llenen, firmen y entreguen a un asegurador o aseguradora, o su representante autorizado, excepto en procedimientos administrativos o criminales promovidos por la presentación de reclamaciones falsas o fraudulentas.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloivregla411</string>
 					<key>sectionLabel</key>
 					<string>Regla 411</string>
 					<key>sectionTitle</key>
@@ -261,6 +323,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Evidencia generalmente inadmisible La siguiente evidencia es inadmisible en cualquier procedimiento criminal que involucre alegaciones de conducta sexual ilícita:&lt;/p&gt;  &lt;p&gt;(1) evidencia de opinión, reputación o conducta sexual que se ofrece para probar que cualquier alegada víctima participó en otra conducta sexual;&lt;/p&gt;  &lt;p&gt;(2) evidencia de cualquier otro tipo que se ofrece para probar la propensión sexual de cualquier alegada víctima.&lt;/p&gt;  &lt;p&gt;(B) Excepciones&lt;/p&gt;  &lt;p&gt;En casos penales la siguiente evidencia es admisible, salvo que resulte inadmisible bajo otras Reglas:&lt;/p&gt;  &lt;p&gt;(1) evidencia de actos específicos de conducta sexual de la alegada víctima, que es ofrecida para probar que una persona distinta a la que fue acusada originó el semen, las lesiones u otra evidencia física;&lt;/p&gt;  &lt;p&gt;(2) evidencia de actos específicos de conducta sexual de la alegada víctima con la persona acusada de conducta sexual ilícita, que se ofrece por la persona acusada para probar que hubo consentimiento o por el Ministerio Público;&lt;/p&gt;  &lt;p&gt;(3) evidencia cuya exclusión violaría los derechos constitucionales de la persona acusada.&lt;/p&gt;  &lt;p&gt;(C) Procedimiento para determinar admisibilidad&lt;/p&gt;  &lt;p&gt;(1) Una parte que se propone presentar evidencia según las excepciones establecidas en el inciso (B) deberá:&lt;/p&gt;  &lt;p&gt;(a) presentar una moción en la cual describa de forma específica la evidencia en cuestión sostenida en declaración jurada y donde se exprese el propósito para el cual la ofrece;&lt;/p&gt;  &lt;p&gt;(b) someter la moción por lo menos 14 días antes del juicio, excepto si el Tribunal, por justa causa, establece un plazo distinto o permite que se presente durante el juicio;&lt;/p&gt;  &lt;p&gt;(c) notificar la moción a todas las partes y a la alegada víctima. Cuando ésta sea menor o incapacitada, la notificación deberá efectuarse a su tutor o representante legal.&lt;/p&gt;  &lt;p&gt;(2) Antes de admitir evidencia bajo esta Regla, el Tribunal debe celebrar una vista en privado donde se le brinde oportunidad a las partes de presentar prueba. En los casos que se ventilen ante Tribunal de derecho, la determinación en cuanto a la admisibilidad de evidencia la hará un Juez distinto al que preside el juicio. En la vista sólo se permitirá la presencia de la víctima, la persona acusada, el Ministerio Público, la abogada o el abogado de defensa y personal de apoyo del Tribunal y de las partes. La moción, los documentos relacionados y el expediente de la vista permanecerán sellados, excepto si el Tribunal ordena lo contrario.&lt;/p&gt;  &lt;p&gt;(3) Al terminar la vista, si el Tribunal determina que la evidencia que se propone ofrecer la persona acusada es pertinente y que su naturaleza inflamatoria o perjudicial no tendrá un peso mayor que su valor probatorio, dictará una orden escrita indicando la evidencia que puede ser presentada por la persona acusada y la naturaleza de las preguntas permitidas. La persona acusada entonces podrá ofrecer evidencia de acuerdo con la orden del Tribunal.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloivregla412</string>
 					<key>sectionLabel</key>
 					<string>Regla 412</string>
 					<key>sectionTitle</key>
@@ -269,16 +333,20 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Admisión y exclusión de evidencia&lt;/p&gt;  &lt;p&gt;(1) En cualquier acción civil en la que se alegue conducta constitutiva de hostigamiento sexual o agresión sexual, no se admitirá evidencia de la parte demandada para establecer consentimiento o inexistencia de daños, ya sea evidencia de opinión o reputación o de hechos específicos sobre la conducta sexual de la parte demandante. Esta regla de exclusión no aplicará cuando el daño alegado por la parte demandante sea pérdida de la capacidad para sostener relaciones sexuales.&lt;/p&gt;  &lt;p&gt;(2) No será aplicable lo dispuesto en el inciso (A) (1) de esta Regla a evidencia de conducta sexual de la parte demandante con la persona que según se alega, fue la hostigadora o agresora.&lt;/p&gt;  &lt;p&gt;(3) Si la parte demandante somete evidencia relacionada con su conducta sexual –incluyendo su propio testimonio o el de cualquier otra persona– la parte demandada podrá contrainterrogar a la persona testigo o a la parte que ofrezca dicha información y ofrecer evidencia pertinente, específicamente limitada a refutar la evidencia presentada por la parte demandante.&lt;/p&gt;  &lt;p&gt;(B) Procedimiento para determinar admisibilidad&lt;/p&gt;  &lt;p&gt;(1) La determinación en cuanto a la admisibilidad de evidencia bajo el inciso (A) de esta Regla, la hará una Jueza o un Juez distinto al que interviene en la consideración de los méritos de la demanda. La parte demandada deberá:&lt;/p&gt;  &lt;p&gt;(a) presentar una moción en la cual describa de forma específica la evidencia en cuestión sostenida en declaración jurada y exprese el propósito para el cual la ofrece;&lt;/p&gt;  &lt;p&gt;(b) someter la moción por lo menos 14 días antes del juicio, excepto si el Tribunal, por justa causa, establece un plazo distinto o permite que se presente durante el juicio;&lt;/p&gt;  &lt;p&gt;(c) notificar la moción a la parte demandante.&lt;/p&gt;  &lt;p&gt;(2) Antes de admitir evidencia bajo esta Regla, el Tribunal celebrará una vista privada. En la vista sólo se permitirá la presencia de las partes, sus abogadas o abogados y personal de apoyo del Tribunal y de las partes. La moción, los documentos relacionados y el expediente de la vista permanecerán sellados, excepto si el Tribunal ordena lo contrario. Si el Tribunal determina que la evidencia será admitida, dictará una orden indicando la evidencia que puede ser presentada por la parte demandada y la naturaleza de las preguntas permitidas.&lt;/p&gt;  &lt;p&gt;(C) Nada de lo dispuesto en esta Regla afecta la admisibilidad de cualquier evidencia ofrecida para impugnar la credibilidad de una persona testigo.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloivregla413</string>
 					<key>sectionLabel</key>
 					<string>Regla 413</string>
 					<key>sectionTitle</key>
-					<string>Hostigamiento Sexual; Agresión Sexual; Evidencia De Reputación Y Opinión Sobre Conducta Sexual De La Parte Demandante; Inadmisibilidad; Excepción; Contrainterrogatorio</string>
+					<string>Hostigamiento Sexual; Agresión Sexual; Evidencia De Reputación y Opinión Sobre Conducta Sexual De La Parte Demandante; Inadmisibilidad; Excepción; Contrainterrogatorio</string>
 				</dict>
 			</array>
+			<key>sectionID</key>
+			<string>evidenciacapituloiv</string>
 			<key>sectionLabel</key>
 			<string>Capítulo IV</string>
 			<key>sectionTitle</key>
-			<string>Admisibilidad Y Pertinencia</string>
+			<string>Admisibilidad y Pertinencia</string>
 		</dict>
 		<dict>
 			<key>sectionChildren</key>
@@ -286,6 +354,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;En la medida en que así sea reconocido en la Constitución de los Estados Unidos o en la Constitución del Estado Libre Asociado de Puerto Rico, una persona imputada o acusada tiene derecho, en una causa criminal en su contra, a no ser llamada como testigo, a no declarar y a que no sea hecha inferencia alguna del ejercicio de tal derecho.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapitulovregla501</string>
 					<key>sectionLabel</key>
 					<string>Regla 501</string>
 					<key>sectionTitle</key>
@@ -294,6 +364,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;En la medida en que así sea reconocido en la Constitución de los Estados Unidos o en la Constitución del Estado Libre Asociado de Puerto Rico, toda persona tiene el privilegio de rehusar revelar cualquier materia que tienda a incriminarle.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapitulovregla502</string>
 					<key>sectionLabel</key>
 					<string>Regla 502</string>
 					<key>sectionTitle</key>
@@ -302,54 +374,68 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Según usadas en esta Regla, las siguientes expresiones tendrán el significado que a continuación se indica:&lt;/p&gt;  &lt;p&gt;(1) Abogada o Abogado: Persona autorizada o a quien el o la cliente razonablemente creyó autorizada a ejercer la profesión de la abogacía en Puerto Rico o en cualquier otra jurisdicción; incluyendo a sus asociadas, ayudantes y empleadas.&lt;/p&gt;  &lt;p&gt;(2) Cliente: Persona natural o jurídica que, directamente o a través de representante autorizado, consulta a una abogada o a un abogado con el propósito de contratarle o de obtener servicios legales o consejo en su capacidad profesional. Incluye a la persona incapaz que consulta a una abogada o a un abogado o cuyo tutor, tutora o encargada hace tal gestión con la abogada o el abogado a nombre de la persona incapaz.&lt;/p&gt;  &lt;p&gt;(3) Representante autorizado: Persona facultada para obtener servicios legales o actuar a base de consejo legal ofrecido, en representación de la que es cliente. Incluye a una persona que, con el propósito de que se brinde representación legal a quien es cliente, hace o recibe una comunicación confidencial mientras actúa dentro del alcance de su empleo con el o la cliente.&lt;/p&gt;  &lt;p&gt;(4) Comunicación confidencial: Aquélla habida entre una abogada o un abogado y su cliente en relación con alguna gestión profesional, basada en la confianza de que no será divulgada a terceras personas, salvo a aquéllas que sea necesario para llevar a efecto los propósitos de la comunicación.&lt;/p&gt;  &lt;p&gt;(B) Sujeto a lo dispuesto en esta Regla, el o la cliente –sea o no parte en el pleito o acción– tiene el privilegio de rehusar revelar, y de impedir que otra persona revele, una comunicación confidencial entre ella y su abogada o abogado. El privilegio puede ser invocado no sólo por quien lo posee –que es la persona cliente– sino también por una persona autorizada a invocarlo en beneficio de ésta, o por la abogada o el abogado a quien la comunicación fue hecha si lo invoca a nombre de y para beneficio de la que es cliente.&lt;/p&gt;  &lt;p&gt;(C) No existe privilegio bajo esta Regla si:&lt;/p&gt;  &lt;p&gt;(1) Los servicios de la abogada o del abogado fueron solicitados u obtenidos para permitir o ayudar a cualquier persona a cometer o planear la comisión de un delito o un fraude.&lt;/p&gt;  &lt;p&gt;(2) La comunicación es pertinente a una controversia entre los herederos de la persona cliente ya fallecido, independientemente de que las reclamaciones provengan de un testamento o de sucesión intestada o de transacción entre vivos.&lt;/p&gt;  &lt;p&gt;(3) La comunicación es pertinente a una controversia relativa a una violación de los deberes mutuos que surjan de la relación abogada o abogado-cliente.&lt;/p&gt;  &lt;p&gt;(4) La comunicación es pertinente a una controversia relativa a un documento en que intervino la abogada o el abogado en calidad de notaria o notario.&lt;/p&gt;  &lt;p&gt;(5) La comunicación es pertinente a una materia de común interés para dos o más personas que son clientes de la abogada o del abogado, en cuyo caso una de las personas clientes no puede invocar el privilegio contra las otras.&lt;/p&gt;  &lt;p&gt;(D) Cuando dos o más personas se unen como clientes de una misma abogada o un mismo abogado en cuanto a un asunto de interés común entre ellas, ninguna podrá renunciar al privilegio sin el consentimiento de las otras.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapitulovregla503</string>
 					<key>sectionLabel</key>
 					<string>Regla 503</string>
 					<key>sectionTitle</key>
-					<string>Relación Abogada O Abogado Y Cliente</string>
+					<string>Relación Abogada o Abogado y Cliente</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Según usadas en esta Regla, las siguientes expresiones tendrán el significado que a continuación se indica:&lt;/p&gt;  &lt;p&gt;(1) Contadora o Contador Público Autorizado: Toda persona que posea una licencia para dedicarse a la práctica de la contabilidad pública en Puerto Rico o en los Estados Unidos de América.&lt;/p&gt;  &lt;p&gt;(2) Cliente: Persona natural o jurídica que consulta a una contadora o contador público autorizado, o a quien creyó con autorización para ejercer la profesión de la contabilidad, con el propósito de contratarle o de obtener servicios en su capacidad profesional.&lt;/p&gt;  &lt;p&gt;(3) Comunicación confidencial: Aquélla habida entre una contadora o contador público autorizado – incluyendo a las personas que son sus asociadas, ayudantes y empleadas de oficina– y su cliente en relación con alguna gestión profesional, realizada en el ejercicio de la profesión de contabilidad, basada en la confianza de que no será divulgada a terceras personas, salvo a aquéllas que sea necesario para llevar a efecto los propósitos de la comunicación.&lt;/p&gt;  &lt;p&gt;(B) Sujeto a lo dispuesto en esta Regla, la persona cliente - sea o no parte en el pleito o acción- tiene el privilegio de rehusar revelar, y de impedir que otra persona revele, una comunicación confidencial entre ella y su contadora o contador público autorizado. El privilegio puede ser invocado sólo por quien posee el privilegio, que es la persona cliente.&lt;/p&gt;  &lt;p&gt;(C) No existe privilegio bajo esta Regla si:&lt;/p&gt;  &lt;p&gt;(1) Los servicios a la contadora o contador público autorizado fueron solicitados y obtenidos para permitir o ayudar a cualquier persona a cometer o planear la comisión de un delito o un fraude.&lt;/p&gt;  &lt;p&gt;(2) La comunicación es pertinente a una controversia relativa a una violación de los deberes mutuos que surjan de la relación contadora o contador público autorizado y cliente.&lt;/p&gt;  &lt;p&gt;(3) La comunicación es pertinente a una materia de común interés para dos o más clientes de la contadora o contador público autorizado, en cuyo caso una de las personas clientes no puede invocar el privilegio contra las otras.&lt;/p&gt;  &lt;p&gt;(4) El contenido de la comunicación se le requiere durante un procedimiento civil o penal bajo la Ley de Armas, Ley de Sustancias Controladas, Ley de Explosivos, Ley Contra el Crimen Organizado, las disposiciones del Código Penal y las leyes especiales sobre estas materias.&lt;/p&gt;  &lt;p&gt;(5) Las normas que regulan la profesión de la contabilidad requieren que se divulgue la comunicación.&lt;/p&gt;  &lt;p&gt;(6) La comunicación entre la contadora o contador público autorizado y su cliente puede ser divulgada por mandato de ley o por razón de interés público apremiante.&lt;/p&gt;  &lt;p&gt;(D) Cuando dos o más personas se unen como clientes de la misma contadora o el mismo contador público autorizado en cuanto a un asunto de interés común entre ellas, ninguna podrá renunciar al privilegio sin el consentimiento de las otras.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapitulovregla504</string>
 					<key>sectionLabel</key>
 					<string>Regla 504</string>
 					<key>sectionTitle</key>
-					<string>Relación Contadora O Contador Público Autorizado Y Cliente</string>
+					<string>Relación Contadora o Contador Público Autorizado y Cliente</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Aplicabilidad de esta Regla&lt;/p&gt;  &lt;p&gt;Las disposiciones de esta Regla aplican a comunicaciones o información protegida por el privilegio abogada o abogado-cliente, contadora o contador público autorizado-cliente o por el privilegio para el producto del trabajo, según se definen dichos términos a continuación:&lt;/p&gt;  &lt;p&gt;(1) Privilegio abogada o abogado-cliente o contadora o contador público autorizadocliente: Significa la protección provista a comunicaciones confidenciales entre abogada o abogado y cliente o contadora o contador público autorizado y cliente de conformidad con el Derecho aplicable.&lt;/p&gt;  &lt;p&gt;(2) Privilegio para el producto del trabajo: Significa la protección provista a información que es el producto del trabajo de una parte o de la persona que es abogada, consultora, fiadora, aseguradora o agente de dicha parte, preparada u obtenida en anticipación de, o como parte de una investigación o procedimiento civil, administrativo o penal.&lt;/p&gt;  &lt;p&gt;(B) Renuncia voluntaria&lt;/p&gt;  &lt;p&gt;La divulgación voluntaria de una información protegida por el privilegio abogada o abogado-cliente, contadora o contador público autorizado-cliente o el privilegio para el producto del trabajo constituye una renuncia a estos privilegios, la cual no se extiende a una comunicación no divulgada o a información sobre la misma materia. Esta Regla no aplica si la comunicación no divulgada o los datos en cuestión deben ser considerados para la más cabal comprensión de la información divulgada.&lt;/p&gt;  &lt;p&gt;(C) Renuncia involuntaria&lt;/p&gt;  &lt;p&gt;La divulgación de una comunicación o información protegida por el privilegio abogada o abogado-cliente, contadora o contador público autorizado-cliente o el privilegio para el producto del trabajo, no se considerará una renuncia al privilegio si se cumple con todos los requisitos siguientes:&lt;/p&gt;  &lt;p&gt;(1) si fue realizada por inadvertencia,&lt;/p&gt;  &lt;p&gt;(2) como parte del procedimiento judicial o administrativo en el cual se invoca la renuncia,&lt;/p&gt;  &lt;p&gt;(3) quien posee el privilegio tomó medidas de precaución razonables para evitar la divulgación y&lt;/p&gt;  &lt;p&gt;(4) una vez el poseedor o la poseedora del privilegio conoció o debió conocer de la divulgación, con razonable prontitud tomó medidas para rectificar el error.&lt;/p&gt;  &lt;p&gt;(D) Efectos de una renuncia mediante estipulación Un acuerdo entre las partes en un litigio en relación con el efecto que tendrá la divulgación de una información o comunicación protegida por el privilegio abogada o abogado-cliente, contadora o contador público autorizado-cliente o el privilegio para el producto del trabajo, sólo tendrá efecto vinculante entre las partes en el litigio, excepto si el acuerdo de las partes es incorporado en una orden del Tribunal.&lt;/p&gt;  &lt;p&gt;(E) Órdenes Judiciales&lt;/p&gt;  &lt;p&gt;Una orden emitida como parte de un procedimiento judicial en un Tribunal del Estado Libre Asociado de Puerto Rico, y la cual dispone que el privilegio abogada o abogado-cliente, el privilegio contadora o contador público autorizado-cliente o el privilegio para el producto del trabajo no debe considerarse renunciado en virtud de una divulgación de información efectuada en dicho procedimiento judicial, obliga a todas las personas o entidades en todos los procedimientos judiciales o administrativos ante el Estado Libre Asociado de Puerto Rico, independientemente de que dichas personas o entidades hayan sido parte en el procedimiento judicial, si (1) la orden incorpora el acuerdo de las partes ante el Tribunal o (2) en caso de surgir controversia entre las partes respecto a si hubo una renuncia al privilegio como resultado de una divulgación, la orden determina que no hubo tal renuncia al privilegio en cuestión.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapitulovregla505</string>
 					<key>sectionLabel</key>
 					<string>Regla 505</string>
 					<key>sectionTitle</key>
-					<string>Renuncia A Los Privilegios De Abogada O Abogado-cliente; Contadora O Contador Público Autorizado-cliente; Renuncia Al Privilegio Para El Producto Del Trabajo Realizado Por Una Parte O Sus Representantes En Anticipación O Como Parte De Un Litigio</string>
+					<string>Renuncia a Los Privilegios De Abogada o Abogado-cliente; Contadora o Contador Público Autorizado-cliente; Renuncia Al Privilegio Para El Producto Del Trabajo Realizado Por Una Parte o Sus Representantes En Anticipación o Como Parte De Un Litigio</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Según usadas en esta Regla, las siguientes expresiones tendrán el significado que a continuación se indica:&lt;/p&gt;  &lt;p&gt;(1) Médico: Persona autorizada, o a quien el o la paciente razonablemente cree que está autorizada a ejercer la medicina en el lugar en que se efectúa la consulta o el examen médico.&lt;/p&gt;  &lt;p&gt;(2) Paciente: Persona que con el único fin de obtener tratamiento médico, o un diagnóstico preliminar a dicho tratamiento, consulta a aquélla que es médico o se somete a examen por ésta.&lt;/p&gt;  &lt;p&gt;(3) Comunicación confidencial: Aquélla habida entre el o la médico y el o la paciente en relación con alguna gestión profesional basada en la confianza de que ésta no será divulgada a terceras personas, salvo a aquéllas que sea necesario para llevar a efecto el propósito de la comunicación.&lt;/p&gt;  &lt;p&gt;(B) Sujeto a lo dispuesto en esta Regla, el o la paciente -sea o no parte en el pleito o acción- tiene el privilegio de rehusar revelar, y de impedir que otra persona revele, una comunicación confidencial habida entre el o la paciente y su médico si uno u otro razonablemente creían que la comunicación era necesaria para permitir el diagnóstico o ayudar en un diagnóstico de la condición del o de la paciente o para prescribir o darle tratamiento. El privilegio puede ser invocado no sólo por quien lo posee –que es el o la paciente- sino también por una persona autorizada para ello en beneficio del o de la paciente. También puede ser invocado por el o la médico a quien se hizo la comunicación confidencial, si éste o ésta lo invoca a nombre de y para beneficio de su paciente.&lt;/p&gt;  &lt;p&gt;(C) No existe privilegio bajo esta Regla si:&lt;/p&gt;  &lt;p&gt;(1) La cuestión en controversia concierne a la condición del o de la paciente, sea una acción para recluirle o ponerle bajo custodia por razón de alegada incapacidad mental o una acción en la que el o la paciente trata de establecer su capacidad.&lt;/p&gt;  &lt;p&gt;(2) Los servicios del médico fueron solicitados u obtenidos para hacer posible o ayudar a cometer o planear la comisión de un delito o fraude.&lt;/p&gt;  &lt;p&gt;(3) El procedimiento es de naturaleza criminal.&lt;/p&gt;  &lt;p&gt;(4) El procedimiento es una acción civil para recobrar daños con motivo de conducta del o de la paciente y se demuestra justa causa para revelar la comunicación.&lt;/p&gt;  &lt;p&gt;(5) El procedimiento es sobre una controversia relacionada con la validez de un alegado testamento del o de la paciente.&lt;/p&gt;  &lt;p&gt;(6) La controversia es entre partes que derivan sus derechos del o de la paciente, ya sea por sucesión testada o intestada.&lt;/p&gt;  &lt;p&gt;(7) La comunicación es pertinente a una controversia basada en el incumplimiento de los deberes mutuos que surgen de la relación médico y paciente.&lt;/p&gt;  &lt;p&gt;(8) Se trata de una acción en que la condición del o de la paciente constituye un elemento o factor de la reclamación o defensa del o de la paciente, o de cualquier persona que reclama al amparo del derecho del o de la paciente o a través de éste o ésta, o como beneficiario del o de la paciente en virtud de un contrato en el cual él o ella es o fue parte.&lt;/p&gt;  &lt;p&gt;(9) La persona poseedora del privilegio hizo que quien es el o la médico, su agente, empleada o empleado declarara en una acción respecto a cualquier materia que vino en conocimiento del o de la médico, su agente, empleada o empleado por medio de la comunicación.&lt;/p&gt;  &lt;p&gt;(10) La comunicación es pertinente a una controversia relacionada con un examen médico ordenado por el Tribunal al o la paciente, sea éste o ésta parte o testigo en el pleito.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapitulovregla506</string>
 					<key>sectionLabel</key>
 					<string>Regla 506</string>
 					<key>sectionTitle</key>
-					<string>Relación Médico Y Paciente</string>
+					<string>Relación Médico y Paciente</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Según usadas en esta Regla, las siguientes expresiones tendrán el significado que a continuación se indica:&lt;/p&gt;  &lt;p&gt;(1) Consejera o consejero: Toda persona autorizada, certificada o licenciada por el Estado Libre Asociado de Puerto Rico para realizar funciones de consejería, orientación, consultoría, funciones terapéuticas o cualquier persona empleada o voluntaria bajo la supervisión de un centro de ayuda y consejería que brinde tratamiento y ayuda a víctimas de delito.&lt;/p&gt;  &lt;p&gt;(2) Víctima: Persona que ha sufrido daño emocional o psicológico como consecuencia de la comisión de un delito y que acude a una consejera o consejero o a un centro de ayuda y consejería para obtener asistencia o tratamiento.&lt;/p&gt;  &lt;p&gt;(3) Comunicación confidencial: Aquélla habida entre la víctima de delito y su consejera o consejero, ya fuere en privado o ante una tercera persona cuya presencia es necesaria para que se establezca comunicación entre la víctima y quien brinda consejería o para facilitar los servicios de consejería que necesita la víctima, cuando tal información se divulga durante el curso del tratamiento que ofrece la consejera o el consejero para atender una condición emocional o psicológica de la víctima producida por la comisión del delito y que se hace bajo la confianza de que ésta no será divulgada a terceras personas.&lt;/p&gt;  &lt;p&gt;(4) Centro de ayuda y consejería: Cualquier persona o entidad privada o gubernamental que tiene como uno de sus principales propósitos ofrecer tratamiento y ayuda a las víctimas de delito.&lt;/p&gt;  &lt;p&gt;(5) Consejería: La asistencia, el diagnóstico o tratamiento ofrecido a la víctima para aliviar los efectos adversos, emocionales o psicológicos causados a consecuencia de la comisión del delito. Incluye, pero no está limitada a, tratamiento en periodo de crisis emocional o mental.&lt;/p&gt;  &lt;p&gt;(B) Sujeto a lo dispuesto en esta Regla, toda víctima de delito -sea o no parte en el pleito o acción- tiene el privilegio de rehusar revelar, y de impedir que otra persona revele una comunicación confidencial entre la víctima y la consejera o consejero, si cualquiera de ellos razonablemente creía que la comunicación era necesaria para el tratamiento y la ayuda requerida. El privilegio puede ser invocado no sólo por quien lo posee, sino también por una persona autorizada por la víctima, su representante legal o por la consejera o consejero a quien se hizo la comunicación.&lt;/p&gt;  &lt;p&gt;(C) Sujeto a lo dispuesto en esta Regla, ni la consejera o consejero ni la víctima -sean o no parte en el pleito o acción- podrán ser requeridos para que informen el nombre, dirección, localización o número telefónico de una casa de auxilio, refugio u otra entidad que brinde refugio temporero a víctimas de delito, a menos que la entidad en cuestión sea parte en la acción.&lt;/p&gt;  &lt;p&gt;(D) El hecho de que una víctima testifique en el Tribunal acerca del delito no constituye una renuncia del privilegio.&lt;/p&gt;  &lt;p&gt;(1) No obstante lo anterior, si como parte de este testimonio la víctima revela parte de la comunicación confidencial, se entenderá que renuncia al privilegio en cuanto a esa parte del testimonio solamente.&lt;/p&gt;  &lt;p&gt;(2) Cualquier renuncia al privilegio se extenderá únicamente a aquello que sea necesario para responder a las preguntas que formule la abogada o el abogado concernientes a la comunicación confidencial y que sean relevantes a los hechos y circunstancias del caso.&lt;/p&gt;  &lt;p&gt;(E) La víctima no podrá renunciar al privilegio por medio de su abogada o abogado. No obstante lo anterior, si la víctima insta acción por impericia profesional contra la consejera o el consejero o contra el centro de ayuda y consejería en el cual la persona consejera está empleada o sirve como voluntaria bajo supervisión, dicha persona podrá declarar sin sujeción al privilegio y no será responsable por tal declaración.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapitulovregla507</string>
 					<key>sectionLabel</key>
 					<string>Regla 507</string>
 					<key>sectionTitle</key>
-					<string>Relación Consejera O Consejero Y Víctima De Delito</string>
+					<string>Relación Consejera o Consejero y Víctima De Delito</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Según usadas en esta Regla, las siguientes expresiones tendrán el significado que a continuación se indica:&lt;/p&gt;  &lt;p&gt;(1) Psicoterapeuta: Persona autorizada o a quien el o la paciente razonablemente cree que está autorizada a ejercer, en Puerto Rico o en cualquier otra jurisdicción la medicina, o la psicología; para diagnosticar o tratar una condición mental o emocional de la persona paciente, incluyendo la drogadicción o el alcoholismo.&lt;/p&gt;  &lt;p&gt;(2) Paciente: Persona que consulta o es examinada o entrevistada por otra que es psicoterapeuta.&lt;/p&gt;  &lt;p&gt;(3) Comunicación Confidencial: Aquélla que se hace sin el propósito de que sea divulgada a terceras personas que no sean:&lt;/p&gt;  &lt;p&gt;(a) aquellas personas presentes cuando se hace la comunicación y cuya presencia tiene el propósito de adelantar los intereses del o de la paciente en la consulta, examen o entrevista, o&lt;/p&gt;  &lt;p&gt;(b) aquellas personas razonablemente necesarias para la transmisión de la comunicación, o&lt;/p&gt;  &lt;p&gt;(c) aquellas personas que están participando en el diagnóstico y tratamiento bajo la dirección de quien es psicoterapeuta, incluyendo a familiares del o de la paciente.&lt;/p&gt;  &lt;p&gt;(B) El o la paciente tiene el privilegio de rehusar revelar, y de impedir que otra persona revele, una comunicación confidencial hecha para propósitos de diagnóstico o tratamiento de su condición mental o emocional, incluyendo la drogadicción o el alcoholismo, efectuada entre el o la paciente, su psicoterapeuta u otras personas que están participando en el diagnóstico o tratamiento bajo la dirección de quien es psicoterapeuta, incluyendo a familiares del o de la paciente.&lt;/p&gt;  &lt;p&gt;(C) El privilegio puede ser invocado por el o la paciente, por su tutora, tutor, defensora o defensor judicial o por quien representa al o la paciente que falleció. La persona que actuó como psicoterapeuta puede invocar el privilegio pero sólo en representación del o de la paciente y su autoridad para invocarlo se presumirá, en ausencia de evidencia contrario.&lt;/p&gt;  &lt;p&gt;(D) No existe el privilegio bajo esta Regla si:&lt;/p&gt;  &lt;p&gt;(1) Las comunicaciones son pertinentes a una controversia en un procedimiento para hospitalizar al o la paciente por razón de enfermedad mental, si quien es psicoterapeuta en el curso del diagnóstico o tratamiento ha determinado que el o la paciente requiere hospitalización.&lt;/p&gt;  &lt;p&gt;(2) Un Tribunal ordena un examen de la condición mental o emocional del o de la paciente.&lt;/p&gt;  &lt;p&gt;(3) Las comunicaciones son pertinentes a una controversia material sobre la condición mental o emocional del o de la paciente, en cualquier procedimiento en el cual éste o ésta invoca dicha condición como un elemento de su reclamación o defensa. Esta excepción no aplica cuando el o la paciente es alguien menor de edad a quien el o la psicoterapeuta le brinda o le ha brindado servicios de diagnóstico o tratamiento y el privilegio lo invoca una persona autorizada en beneficio del o de la paciente.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapitulovregla508</string>
 					<key>sectionLabel</key>
 					<string>Regla 508</string>
 					<key>sectionTitle</key>
-					<string>Privilegio De Psicoterapeuta Y Paciente</string>
+					<string>Privilegio De Psicoterapeuta y Paciente</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Una persona casada tiene el privilegio de no testificar contra su cónyuge en ningún procedimiento.&lt;/p&gt;  &lt;p&gt;(B) Una persona casada, cuyo cónyuge es una parte en cualquier procedimiento, tiene el privilegio de no ser llamada a declarar como testigo en ese procedimiento por una parte adversa, sin su previo expreso consentimiento, a no ser que la parte que la llama lo haga de buena fe, sin conocimiento de la relación conyugal.&lt;/p&gt;  &lt;p&gt;(C) Una persona casada no tiene el privilegio reconocido en los incisos (A) y (B) de esta Regla en:&lt;/p&gt;  &lt;p&gt;(1) Un procedimiento instado por o en nombre de un cónyuge contra otro.&lt;/p&gt;  &lt;p&gt;(2) Un procedimiento para recluir a cualquiera de los cónyuges o de otra forma poner a su persona o a su propiedad, o ambos, bajo el control de otra persona, por motivo de su alegada condición mental o física.&lt;/p&gt;  &lt;p&gt;(3) Un procedimiento instado por o a nombre de cualquiera de los cónyuges para establecer su capacidad.&lt;/p&gt;  &lt;p&gt;(4) Un procedimiento bajo la Ley de Menores o de custodia de menores relacionado con menor de edad que es hija o hijo de uno o de ambos cónyuges.&lt;/p&gt;  &lt;p&gt;(5) Un procedimiento criminal en el cual uno de los cónyuges es acusada o acusado de:&lt;/p&gt;  &lt;p&gt;(a) Un delito cometido contra la persona o la propiedad del otro cónyuge o de una hija o un hijo de cualquiera de los dos.&lt;/p&gt;  &lt;p&gt;(b) Un delito contra la persona o la propiedad de una tercera persona mientras cometía un delito contra la persona o propiedad del otro cónyuge.&lt;/p&gt;  &lt;p&gt;(c) Bigamia o adulterio.&lt;/p&gt;  &lt;p&gt;(d) Incumplimiento de la obligación alimentaria de una hija o un hijo de cualquiera de los cónyuges.&lt;/p&gt;  &lt;p&gt;(D) Renuncia al privilegio&lt;/p&gt;  &lt;p&gt;(1) Salvo que hubiera sido erróneamente compelida a hacerlo, una persona casada que testifica en un procedimiento en el que es parte su cónyuge, o que testifica contra su cónyuge en cualquier procedimiento, no tiene el privilegio reconocido en esta Regla en el procedimiento en el que presta ese testimonio. Para que se produzca una renuncia válida de acuerdo con este inciso, la persona casada debe ser advertida previamente por las autoridades pertinentes de la existencia del privilegio y de su derecho a invocarlo.&lt;/p&gt;  &lt;p&gt;(2) No existe el privilegio bajo esta Regla en una acción civil instada o defendida por una persona casada para el beneficio inmediato de su cónyuge o de ambos.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapitulovregla509</string>
 					<key>sectionLabel</key>
 					<string>Regla 509</string>
 					<key>sectionTitle</key>
@@ -358,6 +444,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Comunicación confidencial entre cónyuges: Aquélla habida privadamente sin intención de transmitirla a una tercera persona y bajo la creencia de que la comunicación no sería divulgada.&lt;/p&gt;  &lt;p&gt;(B) Sujeto a lo dispuesto en la Regla 517, sobre renuncia a privilegios de comunicaciones confidenciales, un cónyuge, o su tutora o tutor -si lo tuviera- sea o no parte en el procedimiento, tiene el privilegio de negarse a divulgar o impedir que otra persona divulgue, durante la vigencia y luego del matrimonio, una comunicación confidencial habida entre los cónyuges, hecha mientras estaban casados.&lt;/p&gt;  &lt;p&gt;(C) No existe el privilegio bajo esta Regla cuando la comunicación:&lt;/p&gt;  &lt;p&gt;(1) Fue hecha, total o parcialmente, con el propósito de cometer o ayudar a cometer o planificar la comisión de un delito, fraude o acto torticero.&lt;/p&gt;  &lt;p&gt;(2) Se ofrece en un procedimiento para recluir a cualquiera de los cónyuges o de otra forma poner a su persona o a su propiedad, o ambos, bajo el control de otra persona por motivo de su alegada condición mental o física.&lt;/p&gt;  &lt;p&gt;(3) Se ofrece en un procedimiento instado por o a nombre de cualquiera de los cónyuges con el propósito de establecer su capacidad.&lt;/p&gt;  &lt;p&gt;(4) Se ofrece en un procedimiento instado por o a nombre de un cónyuge contra el otro.&lt;/p&gt;  &lt;p&gt;(5) Se ofrece en un procedimiento entre quien es cónyuge sobreviviente y una persona que reclama a través del cónyuge que falleció, independientemente de si se trata de una sucesión testada o intestada o de una transacción entre vivos.&lt;/p&gt;  &lt;p&gt;(6) Se ofrece en un procedimiento en el que a uno de los cónyuges se le acusa por: (a) Un delito cometido contra la persona o la propiedad del otro cónyuge o de una hija o un hijo de cualquiera de los dos.&lt;/p&gt;  &lt;p&gt;(b) Un delito cometido contra la persona o la propiedad de una tercera persona mientras cometía un delito contra la persona o propiedad del otro cónyuge.&lt;/p&gt;  &lt;p&gt;(c) Bigamia o adulterio.&lt;/p&gt;  &lt;p&gt;(d) Incumplimiento de la obligación alimentaria en relación con una hija o un hijo de cualquiera de los cónyuges.&lt;/p&gt;  &lt;p&gt;(7) Se ofrece en un procedimiento bajo la Ley de Menores o de custodia de menores relacionado con menor de edad que es hija o hijo de uno o de ambos cónyuges.&lt;/p&gt;  &lt;p&gt;(8) Se ofrece en una acción penal por la persona acusada, quien es uno de los cónyuges entre los cuales se hizo la comunicación.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapitulovregla510</string>
 					<key>sectionLabel</key>
 					<string>Regla 510</string>
 					<key>sectionTitle</key>
@@ -366,14 +454,18 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Según usadas en esta Regla, las siguientes expresiones tendrán el significado que a continuación se indica:&lt;/p&gt;  &lt;p&gt;(1) Religiosa o Religioso: Sacerdote, pastora, pastor, ministra, ministro, rabino, practicante de una religión, funcionaria o funcionario similar de una iglesia, secta o denominación religiosa o de cualquier organización religiosa.&lt;/p&gt;  &lt;p&gt;(2) Creyente: Persona que le hace una comunicación penitencial o confidencial a una religiosa o un religioso.&lt;/p&gt;  &lt;p&gt;(3) Comunicación penitencial o confidencial: Aquélla hecha por una persona creyente, en confidencia, sin la presencia de una tercera persona, a una que es religiosa y quien, en el curso de la disciplina o la práctica de su iglesia, secta, denominación u organización religiosa, está autorizada o acostumbrada a oír tales comunicaciones y que bajo tal disciplina tiene el deber de mantenerlas en secreto.&lt;/p&gt;  &lt;p&gt;(B) Una religiosa o un religioso, o una persona creyente, sea o no parte en el pleito, tiene el privilegio de rehusar revelar una comunicación penitencial o confidencial o impedir que otra persona la divulgue.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapitulovregla511</string>
 					<key>sectionLabel</key>
 					<string>Regla 511</string>
 					<key>sectionTitle</key>
-					<string>Relación Religiosa O Religioso Y Creyente</string>
+					<string>Relación Religiosa o Religioso y Creyente</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Toda persona tiene el privilegio de no divulgar la forma en que votó en una elección política, a menos que se determinare que dicha persona hubiera votado ilegalmente.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapitulovregla512</string>
 					<key>sectionLabel</key>
 					<string>Regla 512</string>
 					<key>sectionTitle</key>
@@ -382,6 +474,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;La dueña o el dueño de un secreto comercial o de negocio tiene el privilegio -que podrá ser invocado por ella o por él o por la persona que es su agente o empleada- de rehusar divulgarlo y de impedir que otra persona lo divulgue, siempre que ello no tienda a encubrir un fraude o causar una injusticia. Si fuere ordenada su divulgación, el Tribunal deberá tomar aquellas medidas necesarias para proteger los intereses de la dueña o del dueño del secreto comercial, de las partes y de la justicia.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapitulovregla513</string>
 					<key>sectionLabel</key>
 					<string>Regla 513</string>
 					<key>sectionTitle</key>
@@ -390,6 +484,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Según usada en esta Regla, "información oficial" significa aquélla adquirida en confidencia por una persona que es funcionaria o empleada pública en el desempeño de su deber y que no ha sido oficialmente revelada ni está accesible al público hasta el momento en que se invoca el privilegio.&lt;/p&gt;  &lt;p&gt;(B) Una persona que es funcionaria o empleada pública tiene el privilegio de no divulgar una materia por razón de que constituye información oficial. No se admitirá evidencia sobre la misma si el Tribunal concluye que la materia es información oficial y su divulgación está prohibida por ley, o que divulgar la información en la acción sería perjudicial a los intereses del gobierno.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapitulovregla514</string>
 					<key>sectionLabel</key>
 					<string>Regla 514</string>
 					<key>sectionTitle</key>
@@ -398,14 +494,18 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Una entidad pública tiene el privilegio de no revelar la identidad de una persona que ha suministrado información tendente a descubrir la violación de una ley del Estado Libre Asociado de Puerto Rico o de los Estados Unidos de América, si la información es dada en confidencia por la persona informante a una que es funcionaria del orden público, a representante de la agencia encargada de la administración o ejecución de la ley que se alega fue violada o a cualquier persona con el propósito de que la transmitiera a tal persona funcionaria o representante. Evidencia sobre dicha identidad no será admisible a menos que el Tribunal determine que la identidad de la persona que dio la información ya ha sido divulgada en alguna otra forma, o que la información sobre su identidad es esencial para una justa decisión de la controversia, particularmente cuando es esencial a la defensa de la persona acusada.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapitulovregla515</string>
 					<key>sectionLabel</key>
 					<string>Regla 515</string>
 					<key>sectionTitle</key>
-					<string>Privilegio En Cuanto A La Identidad De La Persona Informante</string>
+					<string>Privilegio En Cuanto a La Identidad De La Persona Informante</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;(A) Se considera privilegiada y confidencial cualquier información ofrecida y los documentos y expedientes de trabajo referentes a un proceso de método alterno para la solución de conflictos, según sea reconocido por ley o reglamento.&lt;/p&gt;  &lt;p&gt;(B) Evidencia que sea de otra manera admisible o que esté sujeta a descubrimiento fuera de un proceso de método alterno, no será ni se convertirá en evidencia inadmisible o protegida del descubrimiento únicamente porque se ha presentado o utilizado en dicho proceso.&lt;/p&gt;  &lt;p&gt;(C) La renuncia de este privilegio se regirá por las disposiciones que se establezcan por ley o reglamento.&lt;/p&gt; </string>
+					<string>&lt;p&gt;(a) Se considera privilegiada y confidencial cualquier información ofrecida y los documentos y expedientes de trabajo referentes a un proceso de método alterno para la solución de conflictos, según sea reconocido por ley o reglamento.&lt;/p&gt;  &lt;p&gt;(B) Evidencia que sea de otra manera admisible o que esté sujeta a descubrimiento fuera de un proceso de método alterno, no será ni se convertirá en evidencia inadmisible o protegida del descubrimiento únicamente porque se ha presentado o utilizado en dicho proceso.&lt;/p&gt;  &lt;p&gt;(C) La renuncia de este privilegio se regirá por las disposiciones que se establezcan por ley o reglamento.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapitulovregla516</string>
 					<key>sectionLabel</key>
 					<string>Regla 516</string>
 					<key>sectionTitle</key>
@@ -414,20 +514,26 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Renuncia expresa&lt;/p&gt;  &lt;p&gt;Una persona, que de otro modo tendría el privilegio de no divulgar un asunto o materia específico, o de impedir que otra persona los divulgue, no tiene tal privilegio respecto a dicho asunto o materia si el Tribunal determina que (1) esa persona, o cualquier otra mientras era la poseedora del privilegio, se obligó con otra a no invocar el privilegio, o (2) que sin haber sido coaccionada y con conocimiento del privilegio, divulgó cualquier parte del asunto o materia, o permitió tal divulgación por otra persona.&lt;/p&gt;  &lt;p&gt;(B) Renuncia implícita&lt;/p&gt;  &lt;p&gt;La Jueza o el Juez que preside un caso podrá admitir una comunicación de otra manera privilegiada cuando determine que la conducta de quien posee el privilegio equivale a una renuncia, independientemente de lo dispuesto en el inciso (A) de esta Regla.&lt;/p&gt;  &lt;p&gt;(C) Esta Regla no se aplicará a los privilegios establecidos en las Reglas 501, 502 y 512.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapitulovregla517</string>
 					<key>sectionLabel</key>
 					<string>Regla 517</string>
 					<key>sectionTitle</key>
-					<string>Renuncia A Privilegios</string>
+					<string>Renuncia a Privilegios</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Las Reglas de privilegios se interpretarán restrictivamente en relación con cualquier determinación sobre la existencia de un privilegio, a excepción de las Reglas 501, 502 y 512 relativas a privilegios de rango constitucional&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapitulovregla518</string>
 					<key>sectionLabel</key>
 					<string>Regla 518</string>
 					<key>sectionTitle</key>
 					<string>Interpretación Restrictiva</string>
 				</dict>
 			</array>
+			<key>sectionID</key>
+			<string>evidenciacapitulov</string>
 			<key>sectionLabel</key>
 			<string>Capítulo V</string>
 			<key>sectionTitle</key>
@@ -439,14 +545,18 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Toda persona es apta para ser testigo, salvo disposición en contrario en estas Reglas o en la ley. Una persona no podrá servir como testigo cuando, por objeción de parte o a iniciativa propia, el Tribunal determina que ella es incapaz de expresarse en relación con el asunto sobre el cual declararía, en forma tal que pueda ser entendida –bien por sí misma o mediante intérprete– o que ella es incapaz de comprender la obligación de decir la verdad que tiene una persona testigo. Esta determinación se hará conforme a la Regla 109(A).&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviregla601</string>
 					<key>sectionLabel</key>
 					<string>Regla 601</string>
 					<key>sectionTitle</key>
-					<string>Capacidad Y Descalificación De Testigos</string>
+					<string>Capacidad y Descalificación De Testigos</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Salvo lo dispuesto en estas Reglas sobre opiniones de peritos, una persona testigo sólo podrá declarar sobre materia de la cual tenga conocimiento personal. Si una parte formula objeción, tal conocimiento personal deberá ser demostrado antes de que la persona testigo pueda declarar sobre el asunto. El conocimiento personal de la persona testigo sobre la materia o asunto objeto de su declaración podrá ser demostrado por medio de cualquier prueba admisible, incluyendo su propio testimonio. Si la falta de conocimiento personal surge después de presentado el testimonio, a petición de parte, el Tribunal deberá excluirlo e impartir la instrucción correspondiente al jurado.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviregla602</string>
 					<key>sectionLabel</key>
 					<string>Regla 602</string>
 					<key>sectionTitle</key>
@@ -455,6 +565,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Antes de declarar, toda persona testigo expresará su propósito de decir la verdad, lo cual hará prestando juramento o de cualquier otro modo solemne, incluyendo afirmación que, a juicio del Tribunal, obliga a la persona testigo a decir la verdad y que entiende que está sujeta a perjurio o desacato sumario por perjurio en caso contrario.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviregla603</string>
 					<key>sectionLabel</key>
 					<string>Regla 603</string>
 					<key>sectionTitle</key>
@@ -463,6 +575,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Una persona testigo podrá testificar únicamente en presencia de todas las partes en la acción y estará sujeta a ser interrogada por todas ellas, si éstas optan por asistir a la vista e interrogarla.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviregla604</string>
 					<key>sectionLabel</key>
 					<string>Regla 604</string>
 					<key>sectionTitle</key>
@@ -471,14 +585,18 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;La Jueza o el Juez que preside un juicio no podrá declarar en ese juicio como testigo. No será necesario objetar para preservar el planteamiento de error en un proceso apelativo.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviregla605</string>
 					<key>sectionLabel</key>
 					<string>Regla 605</string>
 					<key>sectionTitle</key>
-					<string>Jueza O Juez Como Testigo</string>
+					<string>Jueza o Juez Como Testigo</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) “Jurado” significa aquí el cuerpo total y “jurado” se refiere a un miembro del cuerpo.&lt;/p&gt;  &lt;p&gt;(B) Una persona que haya prestado juramento definitivo como jurado no podrá declarar como testigo en el juicio. Si fuera llamada a declarar, la parte contraria podrá objetar en ausencia del Jurado.&lt;/p&gt;  &lt;p&gt;(C) De investigarse la validez de un veredicto, una persona que es jurado no podrá testificar sobre cualquier asunto o declaración que haya ocurrido durante las deliberaciones del Jurado ni sobre aquello que haya influido en su mente o sus emociones, o en las de cualquier otra u otro jurado, para asentir o disentir del veredicto, o en los procesos mentales del jurado al respecto.&lt;/p&gt;  &lt;p&gt;Sin embargo, la persona jurado podrá testificar sobre:&lt;/p&gt;  &lt;p&gt;(1) si se trajo indebidamente a su consideración alguna información perjudicial ajena,&lt;/p&gt;  &lt;p&gt;(2) si hubo alguna influencia o presión externa para tratar de influir en alguna o algún jurado; o&lt;/p&gt;  &lt;p&gt;(3) si hubo un error al anotar el veredicto en el formulario.&lt;/p&gt;  &lt;p&gt;Tampoco se recibirá ningún affidávit o prueba de alguna declaración hecha por una persona jurado acerca de asuntos sobre los cuales a ésta se le impida testificar.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviregla606</string>
 					<key>sectionLabel</key>
 					<string>Regla 606</string>
 					<key>sectionTitle</key>
@@ -487,30 +605,38 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) La Jueza o el Juez que preside un juicio o vista tendrá amplia discreción sobre el modo en que se presenta la prueba e interroga a las personas testigos de manera que:&lt;/p&gt;  &lt;p&gt;(1) La prueba se presente en la forma más efectiva posible para el esclarecimiento de la verdad, velando por la mayor rapidez de los procedimientos evitando dilaciones innecesarias.&lt;/p&gt;  &lt;p&gt;(2) Se proteja el derecho de las personas testigos contra preguntas impropias, humillantes o insultantes, o toda conducta ofensiva.&lt;/p&gt;  &lt;p&gt;(3) Se proteja también el derecho de éstas a que no se les detenga más tiempo del que exija el interés de la justicia y a que se les examine únicamente sobre materias pertinentes a la cuestión.&lt;/p&gt;  &lt;p&gt;(B) Como regla general, el interrogatorio de las personas testigos será efectuado en el siguiente orden:&lt;/p&gt;  &lt;p&gt;(1) Interrogatorio directo: Primer examen de una persona testigo sobre un asunto no comprendido dentro del alcance de un interrogatorio previo de esa persona testigo.&lt;/p&gt;  &lt;p&gt;(2) Contrainterrogatorio: Primer examen de una persona testigo por una parte diferente a la que efectuó el interrogatorio directo. El contrainterrogatorio se limitará a la materia objeto del interrogatorio directo y a cuestiones que afecten la credibilidad de testigos. El Tribunal puede, sin embargo, en el ejercicio de su discreción, permitir preguntas sobre otras materias como si fuera un interrogatorio directo.&lt;/p&gt;  &lt;p&gt;(3) Interrogatorio redirecto: Examen de una persona testigo que, con posterioridad a su contrainterrogatorio, le hace la parte que le sometió al interrogatorio directo. El interrogatorio redirecto se limitará a la materia objeto del contrainterrogatorio.&lt;/p&gt;  &lt;p&gt;(4) Recontrainterrogatorio: Examen de una persona testigo que, con posterioridad al interrogatorio redirecto de dicha testigo, le hace la parte que le sometió al contrainterrogatorio. El recontrainterrogatorio se limitará a la materia objeto del interrogatorio redirecto.&lt;/p&gt;  &lt;p&gt;(C) La persona testigo dará contestaciones responsivas a las preguntas que le sean hechas y aquéllas que no sean responsivas serán eliminadas previa moción de cualquiera de las partes. Una contestación responsiva es una respuesta directa y concreta a la pregunta efectuada a la persona testigo.&lt;/p&gt;  &lt;p&gt;(D) No se podrá hacer una pregunta sugestiva a una persona testigo durante el interrogatorio directo o el redirecto, excepto cuando sea una pregunta introductoria o una parte llame a una o a un testigo hostil. También será excepción cuando se trate de una parte adversa, de una persona testigo identificada con la parte adversa, de una persona que -por su edad, pobre educación u otra condición- sea mentalmente deficiente o tenga dificultad de expresión, o de una persona que por pudor esté renuente a expresarse libremente. De igual modo, podrá considerarse excepción cuando los intereses de la justicia así lo requieran. Como norma general, podrán hacerse preguntas sugestivas durante el contrainterrogatorio o recontrainterrogatorio. Una pregunta sugestiva es aquélla que sugiere al testigo la contestación que desea la parte que le interroga.&lt;/p&gt;  &lt;p&gt;(E) La parte demandante, promovente o el Ministerio Público podrá presentar prueba de refutación luego de finalizada la prueba de la parte demandada, la promovida o la persona acusada para refutar la prueba de cualquiera de éstas. En este turno la parte demandante, promovente o el Ministerio Público no podrá presentar prueba que debió haber sido sometida durante el desfile inicial de su prueba. Luego de presentada la prueba de refutación, la parte demandada, promovida o la persona acusada podrá presentar prueba de contrarrefutación.&lt;/p&gt;  &lt;p&gt;(F) La Jueza o el Juez podrá -a iniciativa propia o a petición de una parte- llamar testigos a declarar, lo cual permitirá a todas las partes contrainterrogar a la persona testigo así llamada. La Jueza o el Juez también podrá, en cualquier caso, interrogar a una o a un testigo, sea ésta o éste llamado a declarar por la propia Jueza o el propio Juez o por la parte. El examen de la Jueza o el Juez debe ir dirigido a aclarar las dudas que tenga o para aclarar el récord. En todo momento, la Jueza o el Juez debe evitar convertirse en abogado o abogada de una de las partes, evitando sugerir a la persona declarante una respuesta en particular.&lt;/p&gt;  &lt;p&gt;(G) A petición de parte, la Jueza o el Juez excluirá del salón de sesión a las personas testigos que habrán de declarar, para evitar que éstos escuchen el testimonio de las demás. De igual modo, la Jueza o el Juez, a iniciativa propia, podrá ordenar esta exclusión. Esta Regla, sin embargo, no autoriza la exclusión de las siguientes personas testigos:&lt;/p&gt;  &lt;p&gt;(1) Una parte que sea persona natural.&lt;/p&gt;  &lt;p&gt;(2) Una persona cuya presencia sea indispensable para la presentación de la prueba de una parte y así se haya demostrado previamente al Tribunal.&lt;/p&gt;  &lt;p&gt;(3) Una persona que sea oficial, funcionaria o empleada de una parte que no sea una persona natural y que ha sido designada por la abogada o el abogado de dicha parte como su representante. En procedimientos criminales, el Tribunal exigirá que la persona representante designada por el Ministerio Público testifique antes de permanecer en el salón de sesión, si es que el Ministerio Público se propone utilizarla como testigo. Una vez testifique, no podrá ser llamada a declarar nuevamente, excepto como prueba de refutación. En ningún caso, la representación del Pueblo recaerá en más de una persona y ésta no podrá ser sustituida sin autorización del Tribunal.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviregla607</string>
 					<key>sectionLabel</key>
 					<string>Regla 607</string>
 					<key>sectionTitle</key>
-					<string>Orden Y Modo De Interrogatorio Y Presentación De La Prueba</string>
+					<string>Orden y Modo De Interrogatorio y Presentación De La Prueba</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Quién puede impugnar&lt;/p&gt;  &lt;p&gt;La credibilidad de una persona testigo puede impugnarse por cualquier parte, incluyendo a la que llama a dicha persona testigo a declarar.&lt;/p&gt;  &lt;p&gt;(B) Medios de prueba&lt;/p&gt;  &lt;p&gt;La credibilidad de una persona testigo podrá impugnarse o sostenerse mediante cualquier prueba pertinente, incluyendo los aspectos siguientes:&lt;/p&gt;  &lt;p&gt;(1) comportamiento de la persona testigo mientras declara y la forma en que lo hace;&lt;/p&gt;  &lt;p&gt;(2) naturaleza o carácter del testimonio;&lt;/p&gt;  &lt;p&gt;(3) grado de capacidad de la persona testigo para percibir, recordar o comunicar cualquier hecho sobre el cual declara;&lt;/p&gt;  &lt;p&gt;(4) declaraciones anteriores de la persona testigo, sujeto a lo dispuesto en la Regla 611;&lt;/p&gt;  &lt;p&gt;(5) existencia o inexistencia de cualquier prejuicio, interés u otro motivo de parcialidad por parte de la persona testigo, sujeto a lo dispuesto en la Regla 611;&lt;/p&gt;  &lt;p&gt;(6) existencia o inexistencia, falsedad, ambigüedad o imprecisión de un hecho declarado por la persona testigo, sujeto a lo dispuesto en la Regla 403;&lt;/p&gt;  &lt;p&gt;(7) carácter o conducta de la persona testigo en cuanto a veracidad o mendacidad, sujeto a lo dispuesto en las Reglas 609 y 610;&lt;/p&gt;  &lt;p&gt;(C) Impugnación y autoincriminación Una persona testigo no renuncia al privilegio contra la autoincriminación cuando se le interroga sobre una materia que afecta únicamente a cuestiones de credibilidad.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviregla608</string>
 					<key>sectionLabel</key>
 					<string>Regla 608</string>
 					<key>sectionTitle</key>
-					<string>Credibilidad E Impugnación De Testigos</string>
+					<string>Credibilidad o Impugnación De Testigos</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Evidencia de carácter en forma de opinión y reputación&lt;/p&gt;  &lt;p&gt;La credibilidad de una persona testigo podrá impugnarse o sostenerse mediante evidencia en forma de opinión o reputación de carácter, sujeto a las siguientes limitaciones:&lt;/p&gt;  &lt;p&gt;(1) la evidencia podrá referirse únicamente al carácter veraz o mendaz de la persona testigo, y&lt;/p&gt;  &lt;p&gt;(2) la evidencia sobre el carácter veraz sólo será admisible después que el carácter veraz de la persona testigo se haya impugnado mediante evidencia en forma de opinión o reputación o de alguna otra manera.&lt;/p&gt;  &lt;p&gt;(B) Actos específicos de conducta&lt;/p&gt;  &lt;p&gt;No se permitirá prueba extrínseca de actos específicos de conducta de una persona testigo para impugnar o sostener su carácter veraz.&lt;/p&gt;  &lt;p&gt;En el contrainterrogatorio, se podrá inquirir sobre actos específicos de veracidad o mendacidad a discreción del Tribunal:&lt;/p&gt;  &lt;p&gt;(1) en cuanto al carácter veraz o mendaz de la persona testigo, o&lt;/p&gt;  &lt;p&gt;(2) en cuanto al carácter veraz o mendaz de otra u otro testigo sobre cuyo carácter la persona testigo contrainterrogada ha declarado. Esta Regla no afectará lo dispuesto en la Regla 610, en cuanto a condenas por delito.&lt;/p&gt;  &lt;p&gt;(C) El testimonio ofrecido por la persona acusada o por cualquier otra que sea testigo, no constituye una renuncia al privilegio contra la autoincriminación cuando se interroga a dicha persona sobre asuntos relacionados con veracidad o mendacidad.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviregla609</string>
 					<key>sectionLabel</key>
 					<string>Regla 609</string>
 					<key>sectionTitle</key>
-					<string>Impugnación Mediante Carácter Y Conducta Específica</string>
+					<string>Impugnación Mediante Carácter y Conducta Específica</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Con el objetivo de impugnar la credibilidad de una persona ya sea ésta testigo o persona acusada, y sujeto a lo dispuesto en la Regla 403, es admisible evidencia de que ha sido condenada por delito que, sin importar su clasificación, conlleve falsedad. Esto puede establecerse por cualquier prueba admisible bajo estas Reglas, lo que incluye el récord público correspondiente y la admisión de la persona testigo cuya credibilidad es impugnada.&lt;/p&gt;  &lt;p&gt;(B) No se admitirá evidencia de condena por delito, para impugnar la credibilidad de una persona testigo, si al momento de la presentación han transcurrido diez años desde la fecha de la comisión de los hechos que dieron base a la sentencia.&lt;/p&gt;  &lt;p&gt;(C) No será admitida evidencia de condena por delito bajo esta Regla, si la condena ha sido objeto de indulto, perdón, anulación o su equivalente, fundados en una determinación de inocencia o rehabilitación.&lt;/p&gt;  &lt;p&gt;(D) Para propósitos de esta Regla, una adjudicación en un Tribunal de menores no será considerada una condena por delito. Sin embargo, en una causa criminal, a discreción del Tribunal, se puede admitir evidencia de una adjudicación de falta en un procedimiento de menores, cuando se ofrece contra una o un testigo que no sea la persona acusada, siempre que una condena por el delito correspondiente hubiera sido admisible para impugnar la credibilidad de una persona adulta, y el Tribunal considera que la admisión es necesaria para una justa determinación en cuanto a la culpabilidad o no culpabilidad de la persona acusada.&lt;/p&gt;  &lt;p&gt;(E) Prueba de una condena por delito es admisible bajo el inciso (A) de esta Regla, aunque dicha condena esté pendiente en apelación. Podrá presentarse prueba de la pendencia de dicha apelación.&lt;/p&gt;  &lt;p&gt;(F) Antes de que la persona acusada declare o antes del juicio, podrá solicitar del Tribunal que haga una determinación sobre la admisibilidad de determinada condena anterior que pudiera ofrecer el Ministerio Público a fines de impugnar su credibilidad. Si la persona acusada opta por no declarar a la luz de la determinación sobre la admisión de las condenas, puede presentar una oferta de prueba sobre su testimonio en ausencia del Jurado. No obstante, el hecho de que ante la determinación de admisibilidad por el Tribunal la persona acusada opte por no declarar, esto no será impedimento para que en caso de una apelación de la sentencia condenatoria la persona acusada señale como error la determinación de admisibilidad bajo esta Regla.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviregla610</string>
 					<key>sectionLabel</key>
 					<string>Regla 610</string>
 					<key>sectionTitle</key>
@@ -519,14 +645,18 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) No será necesario mostrar o leerle parte alguna de un escrito a una persona testigo al interrogársele para impugnar su credibilidad mediante lo manifestado en tal escrito. De ser solicitado, el Tribunal exigirá que le sean indicados a la persona testigo la fecha y lugar del escrito y la persona a quien fue dirigido. Si así se solicita, el Tribunal ordenará la presentación del escrito para que sea examinado por la abogada o el abogado de la parte contraria.&lt;/p&gt;  &lt;p&gt;(B) No se admitirá prueba extrínseca sobre una declaración de una persona testigo, que resulta incongruente con cualquier parte de su testimonio en el juicio o vista, ni sobre prejuicio, interés o parcialidad, con el propósito de impugnar su credibilidad, a menos que se le haya dado la oportunidad de admitir, negar o explicar el alegado fundamento de impugnación. Esto no aplicará, cuando circunstancias especiales o los intereses de la justicia requieran lo contrario. Este inciso no es de aplicación a las admisiones conforme a la Regla 801(B)(2).&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviregla611</string>
 					<key>sectionLabel</key>
 					<string>Regla 611</string>
 					<key>sectionTitle</key>
-					<string>Impugnación Y Evidencia Extrínseca</string>
+					<string>Impugnación y Evidencia Extrínseca</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;No es admisible prueba sobre creencias religiosas, o carencia de ellas, para impugnar o sostener la credibilidad de una persona testigo.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviregla612</string>
 					<key>sectionLabel</key>
 					<string>Regla 612</string>
 					<key>sectionTitle</key>
@@ -535,6 +665,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Sujeto a lo dispuesto en el inciso (C) de esta Regla, si durante su testimonio o con anterioridad al mismo, una persona testigo utilizare un escrito para refrescar su memoria sobre cualquier asunto objeto de su testimonio, será necesario presentar en la vista dicho escrito a solicitud de cualquier parte adversa. De no presentarse el escrito, se ordenará la eliminación del testimonio de la persona testigo sobre dicho asunto.&lt;/p&gt;  &lt;p&gt;(B) Si se presenta dicho escrito en la vista, la parte adversa puede inspeccionarlo, contrainterrogar a la persona testigo sobre tal escrito y presentar como prueba cualesquiera de sus partes que sean pertinentes.&lt;/p&gt;  &lt;p&gt;(C) Se eximirá la presentación del escrito en el juicio, y el testimonio del testigo no será eliminado, si dicho escrito:&lt;/p&gt;  &lt;p&gt;(1) No está en posesión o bajo control de la persona testigo o de la parte que ofreció su testimonio sobre el particular.&lt;/p&gt;  &lt;p&gt;(2) No era razonablemente asequible a dicha parte mediante el uso de las órdenes para la presentación de prueba documental o por cualquier otro medio disponible.&lt;/p&gt;  &lt;p&gt;(3) Sólo es utilizado para refrescar la memoria antes de testificar en el juicio, y en su discreción, el Tribunal estima que es innecesario requerir su presentación.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviregla613</string>
 					<key>sectionLabel</key>
 					<string>Regla 613</string>
 					<key>sectionTitle</key>
@@ -543,16 +675,20 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Cuando por desconocimiento del idioma español o cualquier incapacidad por parte de una persona testigo, sea necesario el uso de una o un intérprete, ésta o éste cualificará como tal si la Jueza o el Juez determina que puede entender o interpretar las expresiones de la persona testigo. La persona que actúa como intérprete estará sujeta a juramento de que hará una interpretación y traducción fiel y exacta de lo declarado por la persona testigo&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviregla614</string>
 					<key>sectionLabel</key>
 					<string>Regla 614</string>
 					<key>sectionTitle</key>
 					<string>Intérpretes</string>
 				</dict>
 			</array>
+			<key>sectionID</key>
+			<string>evidenciacapitulovi</string>
 			<key>sectionLabel</key>
 			<string>Capítulo VI</string>
 			<key>sectionTitle</key>
-			<string>Credibilidad E Impugnación De Testigos</string>
+			<string>Credibilidad o Impugnación De Testigos</string>
 		</dict>
 		<dict>
 			<key>sectionChildren</key>
@@ -560,14 +696,18 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Si una persona testigo no estuviere declarando como perito, su declaración en forma de opiniones o inferencias se limitará a aquéllas que:&lt;/p&gt;  &lt;p&gt;(a) estén racionalmente fundadas en la percepción de la persona testigo,&lt;/p&gt;  &lt;p&gt;(b) sean de ayuda para una mejor comprensión de su declaración o para la determinación de un hecho en controversia, y&lt;/p&gt;  &lt;p&gt;(c) no estén basadas en conocimiento científico, técnico o cualquier otro conocimiento especializado dentro del ámbito de la Regla 702.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviiregla701</string>
 					<key>sectionLabel</key>
 					<string>Regla 701</string>
 					<key>sectionTitle</key>
-					<string>Opiniones O Inferencias Por Testigos No Peritos</string>
+					<string>Opiniones o Inferencias Por Testigos No Peritos</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Cuando conocimiento científico, técnico o especializado sea de ayuda para la juzgadora o el juzgador poder entender la prueba o determinar un hecho en controversia, una persona testigo capacitada como perita -conforme a la Regla 703- podrá testificar en forma de opiniones o de otra manera.&lt;/p&gt;  &lt;p&gt;El valor probatorio del testimonio dependerá, entre otros, de:&lt;/p&gt;  &lt;p&gt;(a) si el testimonio está basado en hechos o información suficiente;&lt;/p&gt;  &lt;p&gt;(b) si el testimonio es el producto de principios y métodos confiables;&lt;/p&gt;  &lt;p&gt;(c) si la persona testigo aplicó los principios y métodos de manera confiable a los hechos del caso;&lt;/p&gt;  &lt;p&gt;(d) si el principio subyacente al testimonio ha sido aceptado generalmente en la comunidad científica;&lt;/p&gt;  &lt;p&gt;(e) las calificaciones o credenciales de la persona testigo; y&lt;/p&gt;  &lt;p&gt;(f) la parcialidad de la persona testigo.&lt;/p&gt;  &lt;p&gt;La admisibilidad del testimonio pericial será determinada por el Tribunal de conformidad con los factores enumerados en la Regla 403.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviiregla702</string>
 					<key>sectionLabel</key>
 					<string>Regla 702</string>
 					<key>sectionTitle</key>
@@ -576,6 +716,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Toda persona está calificada para declarar como testigo pericial si posee especial conocimiento, destreza, experiencia, adiestramiento o instrucción suficiente para calificarla como experta o perita en el asunto sobre el cual habrá de prestar testimonio. Si hubiere objeción de parte, dicho especial conocimiento, destreza, adiestramiento o instrucción deberá ser probado antes de que la persona testigo pueda declarar como perita.&lt;/p&gt;  &lt;p&gt;(B) El especial conocimiento, destreza, experiencia, adiestramiento o instrucción de una persona que es testigo pericial podrá ser probado por cualquier evidencia admisible, incluyendo su propio testimonio.&lt;/p&gt;  &lt;p&gt;(C) La estipulación sobre la calificación de una persona perita no es impedimento para que las partes puedan presentar prueba sobre el valor probatorio del testimonio pericial.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviiregla703</string>
 					<key>sectionLabel</key>
 					<string>Regla 703</string>
 					<key>sectionTitle</key>
@@ -584,6 +726,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Las opiniones o inferencias de una persona como testigo pericial pueden estar basadas en hechos o datos percibidos por ella o dentro de su conocimiento personal o informados a ella antes de o durante el juicio o vista. Si se trata de materia de naturaleza tal que las personas expertas en ese campo razonablemente descansan en ella para formar opiniones o hacer inferencias sobre el asunto en cuestión, los hechos o datos no tienen que ser admisibles en evidencia.&lt;/p&gt;  &lt;p&gt;La persona proponente de una opinión o inferencia fundamentada en hechos o datos que no sean admisibles de otra manera, no revelará al Jurado esos hechos o datos, a menos que el Tribunal determine que su valor probatorio para asistir al Jurado en la evaluación del testimonio pericial es sustancialmente mayor que su efecto perjudicial.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviiregla704</string>
 					<key>sectionLabel</key>
 					<string>Regla 704</string>
 					<key>sectionTitle</key>
@@ -592,6 +736,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;No será objetable la opinión o inferencia de una persona perita por el hecho de que se refiera a la cuestión que finalmente ha de ser decidida por la juzgadora o el juzgador de los hechos.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviiregla705</string>
 					<key>sectionLabel</key>
 					<string>Regla 705</string>
 					<key>sectionTitle</key>
@@ -600,6 +746,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;La persona perita puede declarar sobre sus opiniones o inferencias y expresar las razones que las fundamentan sin haber declarado antes sobre los hechos o datos en que sus opiniones o inferencias están basadas, salvo que el Tribunal lo requiera. En todo caso, se le podrá requerir a la persona perita que revele los hechos o datos en los que basa sus opiniones o inferencias durante el contrainterrogatorio.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviiregla706</string>
 					<key>sectionLabel</key>
 					<string>Regla 706</string>
 					<key>sectionTitle</key>
@@ -608,6 +756,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Además de lo dispuesto en la Regla 607, toda persona testigo que declare en calidad de perita podrá ser contrainterrogada siempre sobre sus calificaciones como perita, el asunto objeto de su opinión pericial y los fundamentos de su opinión.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviiregla707</string>
 					<key>sectionLabel</key>
 					<string>Regla 707</string>
 					<key>sectionTitle</key>
@@ -616,6 +766,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) La admisibilidad de prueba del resultado de un experimento será determinada por el Tribunal de conformidad con los factores enumerados en la Regla 403.&lt;/p&gt;  &lt;p&gt;(B) Si el experimento tiene como fin demostrar que ciertos hechos ocurrieron de determinada manera, la parte que ofrece la evidencia debe persuadir al Tribunal de que el experimento se realizó bajo circunstancias sustancialmente similares a las que existían al momento de ocurrir dichos hechos.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviiregla708</string>
 					<key>sectionLabel</key>
 					<string>Regla 708</string>
 					<key>sectionTitle</key>
@@ -624,16 +776,20 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Nombramiento&lt;/p&gt;  &lt;p&gt;El Tribunal podrá, a iniciativa propia o solicitud de parte, nombrar una o más personas como peritas del Tribunal mediante orden escrita, previa oportunidad a las partes de expresarse sobre la necesidad del nombramiento y sugerir candidatas o candidatos y la aceptación de la persona perita. El Tribunal podrá nombrar a cualquier persona como perita estipulada por las partes y a peritas o peritos de su elección. La orden donde se nombre a la persona perita incluirá su encomienda y compensación. La persona nombrada como perita deberá notificar a las partes sus hallazgos, si alguno; podrá ser depuesta por cualquier parte y podrá ser citada para testificar, por el Tribunal o cualquiera de las partes. La persona nombrada perita estará sujeta a contrainterrogatorio por cualquiera de las partes, incluyendo la que le citó.&lt;/p&gt;  &lt;p&gt;(B) Compensación&lt;/p&gt;  &lt;p&gt;Las personas nombradas como peritas tienen derecho a una compensación razonable por la cantidad que determine el Tribunal. En toda acción criminal o procedimiento de menores, la compensación será pagada con fondos del Estado. En las demás acciones civiles, la compensación será pagada por las partes en la proporción y en el momento en que el Tribunal lo determine, sujeto a que luego sea recobrada como otras costas.&lt;/p&gt;  &lt;p&gt;(C) Divulgación de nombramiento&lt;/p&gt;  &lt;p&gt;El Tribunal podrá, en el ejercicio de su discreción, previa oportunidad a las partes de expresarse, autorizar la divulgación al Jurado del hecho de que el Tribunal nombró a la persona perita.&lt;/p&gt;  &lt;p&gt;(D) Peritas o peritos elegidos por las partes&lt;/p&gt;  &lt;p&gt;Esta Regla no limita que cualquier parte presente el testimonio de peritas o peritos de su propia elección.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviiregla709</string>
 					<key>sectionLabel</key>
 					<string>Regla 709</string>
 					<key>sectionTitle</key>
 					<string>Nombramiento De Persona Perita Por El Tribunal</string>
 				</dict>
 			</array>
+			<key>sectionID</key>
+			<string>evidenciacapitulovii</string>
 			<key>sectionLabel</key>
 			<string>Capítulo VII</string>
 			<key>sectionTitle</key>
-			<string>Opiniones Y Testimonio Pericial</string>
+			<string>Opiniones y Testimonio Pericial</string>
 		</dict>
 		<dict>
 			<key>sectionChildren</key>
@@ -641,6 +797,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Se adoptan las siguientes definiciones relativas a pruebas de referencia:&lt;/p&gt;  &lt;p&gt;(a) Declaración: Es (a) una aseveración oral o escrita; o (b) conducta no verbalizada de la persona, si su intención es que se tome como una aseveración.&lt;/p&gt;  &lt;p&gt;(b) Declarante: Es la persona que hace una declaración.&lt;/p&gt;  &lt;p&gt;(c) Prueba de referencia: Es una declaración que no sea la que la persona declarante hace en el juicio o vista, que se ofrece en evidencia para probar la verdad de lo aseverado.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviiiregla801</string>
 					<key>sectionLabel</key>
 					<string>Regla 801</string>
 					<key>sectionTitle</key>
@@ -649,6 +807,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;No empece a lo dispuesto en la Regla 801, no se considerará prueba de referencia una declaración anterior si la persona declarante testifica en el juicio o vista sujeto a contrainterrogatorio en relación con la declaración anterior y ésta hubiera sido admisible de ser hecha por la persona declarante en el juicio o vista, y:&lt;/p&gt;  &lt;p&gt;(a) es inconsistente con el testimonio prestado en el juicio o vista y fue dada bajo juramento y sujeta a perjurio;&lt;/p&gt;  &lt;p&gt;(b) es consistente con el testimonio prestado en el juicio o vista y se presenta con el propósito de refutar una alegación expresa o implícita contra la persona declarante sobre fabricación reciente, influencia o motivación indebida; o&lt;/p&gt;  &lt;p&gt;(c) identifica a una parte o a otra persona que participó en un delito o en otro suceso, se hizo en el momento en que el delito o suceso estaba fresco en la memoria de la persona testigo y se ofrece luego de que la persona testigo haya testificado haber hecho la identificación y que ésta reflejaba fielmente su opinión en aquel momento.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviiiregla802</string>
 					<key>sectionLabel</key>
 					<string>Regla 802</string>
 					<key>sectionTitle</key>
@@ -657,6 +817,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;No empece a lo dispuesto en la Regla 801, no se considerará prueba de referencia una admisión si se ofrece contra una parte y es:&lt;/p&gt;  &lt;p&gt;(a) una declaración que hace la propia parte, ya sea en su carácter personal o en su capacidad representativa,&lt;/p&gt;  &lt;p&gt;(b) una declaración que dicha parte, teniendo conocimiento de su contenido, ha adoptado como suya de forma verbal o por conducta o ha expresado creer en su veracidad,&lt;/p&gt;  &lt;p&gt;(c) una declaración hecha por una persona autorizada por dicha parte para hacer expresiones sobre la materia objeto de la declaración,&lt;/p&gt;  &lt;p&gt;(d) una declaración por una persona agente o empleada de dicha parte, que esté relacionada con un asunto dentro del ámbito de la agencia o empleo, y que haya sido hecha durante la vigencia de la relación, o&lt;/p&gt;  &lt;p&gt;(e) una declaración de persona que actuó como conspiradora de la parte hecha en el transcurso de la conspiración y para lograr su objetivo.&lt;/p&gt;  &lt;p&gt;El contenido de la declaración se tomará en consideración, pero no será suficiente por sí solo para establecer la autoridad de la persona declarante bajo el inciso (c), ni la relación de agencia o empleo y su ámbito bajo el inciso (d), ni la existencia de la conspiración y la participación en ésta de la persona declarante y de la parte contra quien se ofrece la declaración bajo el inciso (e).&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviiiregla803</string>
 					<key>sectionLabel</key>
 					<string>Regla 803</string>
 					<key>sectionTitle</key>
@@ -665,6 +827,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Salvo que de otra manera se disponga por ley, no será admisible prueba de referencia, sino de conformidad con lo dispuesto en este capítulo. Esta regla se denominará &lt;strong&gt;Regla de prueba de referencia&lt;/strong&gt;.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviiiregla804</string>
 					<key>sectionLabel</key>
 					<string>Regla 804</string>
 					<key>sectionTitle</key>
@@ -673,14 +837,18 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Aun cuando la persona declarante esté disponible como testigo, una declaración no estará sujeta a la regla general de exclusión de prueba de referencia en las siguientes circunstancias:&lt;/p&gt;  &lt;p&gt;(A) Declaraciones contemporáneas a la percepción: Una declaración que narra, describe o explica un acto, condición o evento percibido por la persona declarante y que haya sido hecha mientras la persona declarante percibía dicho acto, condición o evento, o hecha inmediatamente después.&lt;/p&gt;  &lt;p&gt;(B) Declaraciones espontáneas por excitación: Una declaración hecha mientras la persona declarante estaba bajo el estrés de la excitación causada por la percepción de un acto, evento o condición si la declaración se refiere a dicho acto, evento o condición.&lt;/p&gt;  &lt;p&gt;(C) Condición mental, física o emocional: Una declaración sobre el entonces existente estado mental, emocional o sensación física de la persona declarante (tales como una declaración sobre intención, plan, motivo, designio, sentimiento mental o emocional, dolor o salud corporal), excepto que se trate de una declaración sobre recuerdo o creencia para probar el hecho recordado o creído, a no ser que ello se relacione con la ejecución, revocación, identificación o términos del testamento de la persona declarante.&lt;/p&gt;  &lt;p&gt;(D) Declaraciones para fines de diagnóstico o tratamiento médico: Declaraciones hechas para fines de diagnóstico o tratamiento médico y que describan el historial médico o síntomas, dolor o sensaciones pasadas o presentes, o el origen o la naturaleza general de la causa o fuente externa de éstos, en la medida en que sean razonablemente pertinentes al diagnóstico o al tratamiento.&lt;/p&gt;  &lt;p&gt;(E) Escrito de pasada memoria: Un escrito o un récord relativo a algún asunto del cual una persona testigo tuvo conocimiento pleno alguna vez, pero al presente no recuerda lo suficiente para poder testificar sobre ello con cabalidad y precisión, si se ha demostrado que dicho escrito o récord lo hizo o lo adoptó la persona testigo cuando el asunto estaba aún fresco en su memoria y refleja correctamente su conocimiento sobre dicho asunto. Si se admite, el escrito o récord se podrá leer o escuchar como prueba, pero no se recibirá como exhibit a menos que lo ofrezca la parte contraria.&lt;/p&gt;  &lt;p&gt;(F) Récords de actividades que se realizan con regularidad: Un escrito, informe, récord, memorando o compilación de datos -en cualquier forma- relativo a actos, sucesos, condiciones, opiniones o diagnósticos que se hayan preparado en o cerca del momento en que éstos surgieron, por una persona que tiene conocimiento de dichos asuntos, o mediante información transmitida por ésta, si dichos récords se efectuaron en el curso de una actividad de negocios realizada con regularidad, y si la preparación de dicho escrito, informe, récord, memorando o compilación de datos se hizo en el curso regular de dicha actividad de negocio, según lo demuestre el testimonio de su custodio o de alguna otra persona testigo cualificada, o según se demuestre mediante una certificación que cumpla con las disposiciones de la Regla 902(K) o con algún estatuto que permita dicha certificación, a menos que la fuente de información, el método o las circunstancias de su preparación inspiren falta de confiabilidad. El término negocio, según se utiliza en este inciso, incluye, además de negocio propiamente, una actividad gubernamental y todo tipo de institución, asociación, profesión, ocupación y vocación, con o sin fines de lucro.&lt;/p&gt;  &lt;p&gt;(G) Ausencia de entradas en los récords que se lleven conforme a las disposiciones del inciso (F): Evidencia de que un asunto no se incluyó en los escritos, informes, récords, memorandos o compilaciones de datos en cualquier formato, preparados conforme a las disposiciones del inciso (F), para probar que dicho asunto no ocurrió o no existió, si el asunto es del tipo que requiere que se lleven y conserven regularmente entradas en los escritos, informes, récords, memorandos o compilaciones de datos, a menos que las fuentes de información u otras circunstancias inspiren falta de confiabilidad.&lt;/p&gt;  &lt;p&gt;(H) Récords e informes públicos: Cualquier forma de récords, informes, declaraciones o compilaciones de datos de oficinas o agencias gubernamentales que describan (1) las actividades que se realizan en dicha oficina o agencia; (2) los asuntos observados conforme al deber impuesto por ley de informar sobre dichos asuntos, excluyendo, sin embargo, en los casos criminales, cualquier asunto observado por oficiales de policía y otro personal del orden público; o (3) en casos o procedimientos civiles y en casos criminales en contra del gobierno, las determinaciones de hecho que surjan de una investigación realizada conforme a la autoridad que confiere la ley. El informe se excluirá cuando las fuentes de información u otras circunstancias inspiren falta de confiabilidad.&lt;/p&gt;  &lt;p&gt;(I) Récord de estadística vital: Un escrito como récord de un nacimiento, muerte fetal, muerte o matrimonio, si la ley requería a quien lo hizo presentarlo en una oficina pública determinada y si fue hecho y presentado según requerido por ley.&lt;/p&gt;  &lt;p&gt;(J) Ausencia de récord público: Un escrito hecho por la persona que es custodia oficial de los récords de una oficina pública, en el que se hace constar que se ha buscado diligentemente y no se ha hallado un récord determinado, cuando se ofrece para probar la ausencia de dicho récord en esa oficina.&lt;/p&gt;  &lt;p&gt;(K) Récords de organizaciones religiosas: Declaraciones referentes al nacimiento, matrimonio, divorcio, fallecimiento, filiación, ascendencia, raza, parentesco - por consanguinidad o afinidad - u otro hecho similar del historial personal o familiar de una persona, que estén contenidas en un récord, ordinariamente llevado, de una iglesia u otra organización religiosa.&lt;/p&gt;  &lt;p&gt;(L) Certificados de matrimonio, bautismo y otros similares: Una declaración de hecho referente al nacimiento, matrimonio, fallecimiento, raza, ascendencia, parentesco –por consanguinidad o afinidad– u otro hecho similar del historial familiar de una persona, si la declaración estuviere contenida en un certificado de quien ofició la ceremonia correspondiente, efectuó un matrimonio o administró un sacramento. Ello, siempre que quien la oficiare fuere una persona autorizada por ley o por los reglamentos de una organización religiosa para celebrar los actos informados en el certificado, y éste fuera expedido por quien lo hizo en el momento y lugar de la ceremonia o sacramento, o dentro de un tiempo razonable después del mismo.&lt;/p&gt;  &lt;p&gt;(M) Récords de familia: Declaraciones de hechos sobre historial personal o familiar, anotadas en Biblias familiares, árboles genealógicos, gráficas, o en inscripciones grabadas en anillos, anotaciones en fotos de familia, inscripciones grabadas en urnas, criptas, lápidas u otras similares.&lt;/p&gt;  &lt;p&gt;(N) Récords oficiales sobre propiedad: El récord oficial de un documento que afecte un derecho o interés en propiedad, mueble o inmueble, para demostrar el contenido del documento original y su otorgamiento, inclusive la entrega por cada persona que aparece otorgándolo, siempre que el registro fuera un récord oficial de una oficina gubernamental y estuviere autorizado por ley su registro en dicha oficina.&lt;/p&gt;  &lt;p&gt;(O) Declaraciones en documentos que afecten intereses en propiedad: Una declaración contenida en un documento cuyo propósito haya sido establecer o afectar un interés en propiedad, si lo declarado es pertinente al propósito del documento, a menos que las transacciones efectuadas en relación con la propiedad desde que se hizo el documento hayan sido inconsistentes con la veracidad de la declaración o el propósito del documento.&lt;/p&gt;  &lt;p&gt;(P) Declaraciones en documentos antiguos: Declaraciones contenidas en un documento que tenga veinte años o más y cuya autenticidad se haya establecido.&lt;/p&gt;  &lt;p&gt;(Q) Listas comerciales y otras similares: Una declaración – que no sea una opinión – contenida en una tabulación, lista, directorio, registro u otra compilación publicada si se utilizan generalmente en el curso de una actividad de negocios, según se define en el inciso (F) de esta Regla y si se le consideran confiables y precisas.&lt;/p&gt;  &lt;p&gt;(R) Tratados: Declaraciones contenidas en un tratado, revista o folleto, u otra publicación similar, sobre un tema histórico, médico, científico, técnico o artístico siempre que se establezca, mediante conocimiento judicial o testimonio pericial, que la publicación constituye una autoridad confiable sobre el asunto. En la medida que se hayan traído a la atención de una persona perita durante el contrainterrogatorio o que el testimonio de la persona perita se haya basado en éstas durante el interrogatorio directo, de ser admitidas, las declaraciones podrán leerse como prueba, pero no se recibirán como exhibits.&lt;/p&gt;  &lt;p&gt;(S) Reputación sobre historial personal o familiar: Evidencia de reputación entre los miembros de la familia a la que pertenece una persona – ya sea por consanguinidad, adopción o matrimonio – o entre los asociados de la persona, o en la comunidad, en cuanto a su nacimiento, adopción, matrimonio, divorcio, muerte, legitimidad, o a su parentesco por consanguinidad, adopción o matrimonio, ascendencia, o cualquier otro dato similar del historial personal o familiar de esa persona.&lt;/p&gt;  &lt;p&gt;(T) Reputación sobre colindancias o historial general: Evidencia de reputación en la comunidad – que haya surgido antes de la controversia – en cuanto a colindancias de terrenos o a costumbres que afecten los terrenos en la comunidad, y evidencia de reputación en cuanto a hechos históricos generales que sean importantes para la comunidad, el estado o la nación de que se trate.&lt;/p&gt;  &lt;p&gt;(U) Reputación sobre carácter: Evidencia de reputación en la comunidad en que reside una persona o entre un grupo con el cual la persona se asocia, sobre el carácter o un rasgo particular del carácter de ésta.&lt;/p&gt;  &lt;p&gt;(V) Sentencia por condena previa: Evidencia de una sentencia final, tras un juicio o declaración de culpabilidad, en la que se declara culpable de delito a una persona y que conlleve una pena de reclusión mayor de seis meses, si dicha evidencia es ofrecida para probar cualquier hecho esencial para fundamentar la sentencia. La pendencia de una apelación no afectará la admisibilidad bajo esta Regla, aunque podrá traerse a la consideración del Tribunal el hecho de que la sentencia aún no es firme. Esta Regla no permite al Ministerio Público en una acción criminal ofrecer en evidencia la sentencia por condena previa de una persona que no sea la persona acusada, salvo para fines de impugnación de una o un testigo.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviiiregla805</string>
 					<key>sectionLabel</key>
 					<string>Regla 805</string>
 					<key>sectionTitle</key>
-					<string>Excepciones A La Regla De Prueba De Referencia Aunque La Persona Declarante Esté Disponible Como Testigo</string>
+					<string>Excepciones a La Regla De Prueba De Referencia Aunque La Persona Declarante Esté Disponible Como Testigo</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Definición: No disponible como testigo incluye situaciones en que la persona declarante:&lt;/p&gt;  &lt;p&gt;(1) está exenta de testificar por una determinación del Tribunal por razón de un privilegio reconocido en estas Reglas en relación con el asunto u objeto de su declaración;&lt;/p&gt;  &lt;p&gt;(2) insiste en no testificar en relación con el asunto u objeto de su declaración a pesar de una orden del Tribunal para que lo haga;&lt;/p&gt;  &lt;p&gt;(3) testifica que no puede recordar sobre el asunto u objeto de su declaración;&lt;/p&gt;  &lt;p&gt;(4) al momento del juicio o vista, ha fallecido o está imposibilitada de comparecer a testificar por razón de enfermedad o impedimento mental o físico; o&lt;/p&gt;  &lt;p&gt;(5) está ausente de la vista y quien propone la declaración ha desplegado diligencia para conseguir su comparecencia mediante citación del Tribunal. No se entenderá que una persona declarante está no disponible como testigo si ello ha sido motivado por la gestión o conducta de quien propone la declaración con el propósito de evitar que la persona declarante comparezca o testifique.&lt;/p&gt;  &lt;p&gt;(B) Cuando la persona declarante no está disponible como testigo, es admisible como excepción a la regla general de exclusión de prueba de referencia lo siguiente:&lt;/p&gt;  &lt;p&gt;(1) Testimonio anterior&lt;/p&gt;  &lt;p&gt;Testimonio dado como testigo en otra vista del mismo u otro procedimiento, en una deposición tomada conforme a Derecho durante el mismo u otro procedimiento. Ello si la parte contra quien se ofrece ahora el testimonio – o un predecesor en interés si se trata de una acción o procedimiento civil – tuvo la oportunidad y motivo similar para desarrollar el testimonio en interrogatorio directo, contrainterrogatorio o en redirecto.&lt;/p&gt;  &lt;p&gt;(2) Declaración en peligro de muerte&lt;/p&gt;  &lt;p&gt;Una declaración hecha por una persona declarante mientras creía estar en peligro de muerte inminente si la declaración se relaciona con la causa o las circunstancias de lo que creyó era su muerte inminente.&lt;/p&gt;  &lt;p&gt;(3) Declaraciones contra interés&lt;/p&gt;  &lt;p&gt;Una declaración que al momento de ser hecha era tan contraria al interés pecuniario o propietario de la persona declarante o le sometía a riesgo de responsabilidad civil o criminal, o tendía de tal modo a desvirtuar una reclamación suya contra otra persona, o creaba tal riesgo de convertirla en objeto de odio, ridículo o desgracia social en la comunidad, que una persona razonable en su situación no hubiera hecho la declaración a menos que la creyera cierta.&lt;/p&gt;  &lt;p&gt;(4) Declaraciones sobre historial personal o familiar&lt;/p&gt;  &lt;p&gt;(i) Una declaración sobre el nacimiento, adopción, matrimonio, divorcio, filiación, parentesco por consanguinidad o afinidad, raza, linaje u otro hecho similar de historial familiar o personal de la misma persona declarante, aunque ésta no tuviera medios de adquirir conocimiento personal del asunto declarado.&lt;/p&gt;  &lt;p&gt;(ii) Una declaración sobre la materia señalada en el subinciso (i) y de otra persona incluyendo la muerte de ésta si dicha persona está relacionada con la persona declarante por parentesco de consanguinidad, afinidad o adopción o existe una relación tal entre la persona declarante y la familia de la otra persona que hiciera probable que dicha persona declarante tuviera información precisa referente al asunto declarado.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviiiregla806</string>
 					<key>sectionLabel</key>
 					<string>Regla 806</string>
 					<key>sectionTitle</key>
@@ -689,6 +857,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;La prueba de referencia que contenga otra prueba de referencia no estará sujeta a la regla general de exclusión, si cada parte de las declaraciones combinadas satisface alguna excepción a dicha regla.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviiiregla807</string>
 					<key>sectionLabel</key>
 					<string>Regla 807</string>
 					<key>sectionTitle</key>
@@ -697,6 +867,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Cuando se admite una declaración que constituya prueba de referencia bajo las Reglas 805 a 809, la credibilidad de la persona declarante puede ser impugnada - y si es impugnada, puede ser rehabilitada- por cualquier evidencia admisible para esos propósitos si la persona declarante hubiera prestado testimonio como testigo. Los requisitos para la impugnación por declaraciones anteriores y parcialidad dispuestos en las Reglas 608(B)(4) y 611 no serán aplicables a la impugnación de la persona declarante bajo esta Regla. Si la parte contra la cual se ha admitido prueba de referencia llama como testigo a la persona declarante de esa prueba, dicha persona declarante queda sujeta a ser examinada por la parte como si estuviera bajo contrainterrogatorio.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviiiregla808</string>
 					<key>sectionLabel</key>
 					<string>Regla 808</string>
 					<key>sectionTitle</key>
@@ -705,12 +877,16 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Una declaración no expresamente comprendida en las Reglas 805 a 806, pero que contenga garantías circunstanciales de confiabilidad comparables, no estará sujeta a la regla general de exclusión de prueba de referencia si el Tribunal determina que:&lt;/p&gt;  &lt;p&gt;(A) la declaración tiene mayor valor probatorio, para el propósito para el cual se ofrece, que cualquier otra prueba que la persona proponente hubiera podido conseguir de haber desplegado diligencia razonable y&lt;/p&gt;  &lt;p&gt;(B) la persona proponente notificó con razonable anterioridad a la parte contra quien la ofrece su intención de presentar tal declaración, para informarle sobre las circunstancias particulares de ésta, incluyendo el nombre y la dirección de la persona declarante.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloviiiregla809</string>
 					<key>sectionLabel</key>
 					<string>Regla 809</string>
 					<key>sectionTitle</key>
 					<string>Cláusula Residual</string>
 				</dict>
 			</array>
+			<key>sectionID</key>
+			<string>evidenciacapituloviii</string>
 			<key>sectionLabel</key>
 			<string>Capítulo VIII</string>
 			<key>sectionTitle</key>
@@ -722,14 +898,18 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) El requisito de autenticación o identificación como una condición previa a la admisibilidad se satisface con la presentación de evidencia suficiente para sostener una determinación de que la materia en cuestión es lo que la persona proponente sostiene.&lt;/p&gt;  &lt;p&gt;(B) De conformidad con los requisitos del inciso (A) de esta Regla y sin que se interprete como una limitación, son ejemplos de autenticación o identificación los siguientes:&lt;/p&gt;  &lt;p&gt;(1) Testimonio por testigo con conocimiento&lt;/p&gt;  &lt;p&gt;Testimonio de que una cosa es lo que se alega.&lt;/p&gt;  &lt;p&gt;(2) Autenticidad mediante evidencia de la letra&lt;/p&gt;  &lt;p&gt;Un escrito podrá autenticarse mediante evidencia de que la letra de la autora o del autor es genuina. Una persona testigo no perita podrá expresar su opinión sobre si un escrito es de puño y letra de la persona que es presunta autora a base de su familiaridad con la letra de la persona que es presunta autora, si dicha familiaridad no se adquirió con miras al pleito. La autenticidad podrá demostrarse también mediante la comparación o cotejo que haga la juzgadora o el juzgador o una persona testigo perita del escrito en controversia con otro escrito autenticado.&lt;/p&gt;  &lt;p&gt;(3) Identificación de voz&lt;/p&gt;  &lt;p&gt;La voz de una persona podrá identificarse, ya sea escuchada directamente o a través de grabación u otro medio mecánico, electrónico o digital, o por opinión formada a base de haberse escuchado dicha voz en alguna ocasión bajo circunstancias que la vinculan con la voz de la referida persona.&lt;/p&gt;  &lt;p&gt;(4) Conversaciones telefónicas&lt;/p&gt;  &lt;p&gt;Podrán autenticarse o identificarse conversaciones telefónicas mediante evidencia de que se hizo una llamada al número asignado en ese momento por la compañía telefónica a una persona o negocio en particular, cuando:&lt;/p&gt;  &lt;p&gt;(a) En el caso de una persona, las circunstancias, incluyendo autoidentificación, demuestran que la persona que contestó fue a la que se llamó.&lt;/p&gt;  &lt;p&gt;(b) En el caso de un negocio, la llamada fue hecha a un establecimiento comercial y la conversación fue en relación con un negocio razonablemente susceptible de ser discutido por teléfono.&lt;/p&gt;  &lt;p&gt;(5) Escritos antiguos o compilación de datos&lt;/p&gt;  &lt;p&gt;Cuando se determina que un escrito o compilación de datos tiene por lo menos 20 años a la fecha en que se ofrece y que generalmente es tratado y respetado como auténtico por personas interesadas en conocer su autenticidad, y que al ser descubierto se hallaba en un sitio en que probablemente se hallaría de ser auténtico, el escrito o compilación de datos quedará suficientemente autenticado, salvo que esté en condiciones tales que cree serias dudas sobre autenticidad.&lt;/p&gt;  &lt;p&gt;(6) Escritos en contestación&lt;/p&gt;  &lt;p&gt;Un escrito podrá autenticarse con evidencia de que fue recibido en contestación a una comunicación enviada a la persona que la parte que presenta la evidencia alega es el autor del escrito.&lt;/p&gt;  &lt;p&gt;(7) Contenido de escritos&lt;/p&gt;  &lt;p&gt;Un escrito podrá autenticarse con evidencia de que se refiere a, o contiene, asuntos que no es probable fueren conocidos por otra persona que no sea la que la parte que presenta la evidencia alega ser el autor del asunto.&lt;/p&gt;  &lt;p&gt;(8) Autenticación mediante admisión&lt;/p&gt;  &lt;p&gt;Un escrito, u otro material, puede ser autenticado mediante evidencia de que la parte contra quien se ofrece admitió su autenticidad en cualquier momento, o mediante evidencia de que ha sido aceptado como auténtico por la parte contra la cual se ofrece.&lt;/p&gt;  &lt;p&gt;(9) Testamento&lt;/p&gt;  &lt;p&gt;Un testamento hecho en Puerto Rico se autenticará de acuerdo con lo dispuesto en las leyes aplicables.&lt;/p&gt;  &lt;p&gt;(10) Características distintivas&lt;/p&gt;  &lt;p&gt;Apariencia, contenido, sustancia, patrones internos, o cualquier otra característica distintiva, considerada en conjunto con las circunstancias.&lt;/p&gt;  &lt;p&gt;(11) Cadena de custodia&lt;/p&gt;  &lt;p&gt;La evidencia demostrativa real puede ser autenticada mediante su cadena de custodia.&lt;/p&gt;  &lt;p&gt;(12) Proceso o sistema&lt;/p&gt;  &lt;p&gt;Evidencia que describa el proceso o sistema utilizado para obtener un resultado y que demuestre que el proceso o sistema produce resultados certeros.&lt;/p&gt;  &lt;p&gt;(13) Récord electrónico&lt;/p&gt;  &lt;p&gt;Un récord electrónico podrá autenticarse mediante evidencia de la integridad del sistema en el cual o por el cual los datos fueron grabados o almacenados. La integridad del sistema se demuestra a través de evidencia que sustente la determinación que en todo momento pertinente el sistema de computadoras o dispositivo similar estaba operando correctamente o en caso contrario, el hecho de que su no operación correcta no afectó la integridad del récord electrónico.&lt;/p&gt;  &lt;p&gt;(14) Correo electrónico&lt;/p&gt;  &lt;p&gt;Un correo electrónico podrá autenticarse mediante evidencia de la integridad del sistema en el cual o por el cual fue creado, enviado o recibido.&lt;/p&gt;  &lt;p&gt;(15) Métodos provistos por ley o reglamento&lt;/p&gt;  &lt;p&gt;Cualquier método de autenticación o identificación provisto por legislación especial o reglamentación aplicable.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloixregla901</string>
 					<key>sectionLabel</key>
 					<string>Regla 901</string>
 					<key>sectionTitle</key>
-					<string>Requisito De Autenticación O Identificación</string>
+					<string>Requisito De Autenticación o Identificación</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;No se requerirá evidencia extrínseca de autenticación como condición previa a la admisibilidad de:&lt;/p&gt;  &lt;p&gt;(A) Documentos reconocidos&lt;/p&gt;  &lt;p&gt;Documentos acompañados de un certificado de reconocimiento o de prueba, si el certificado cumple con los requisitos pertinentes en ley relativos a certificaciones, particularmente con las disposiciones sobre derecho notarial.&lt;/p&gt;  &lt;p&gt;(B) Documentos públicos bajo sello oficial&lt;/p&gt;  &lt;p&gt;Documentos bajo sello si éste parenta ser el sello oficial de:&lt;/p&gt;  &lt;p&gt;(1) el Estado Libre Asociado de Puerto Rico,&lt;/p&gt;  &lt;p&gt;(2) los Estados Unidos de América,&lt;/p&gt;  &lt;p&gt;(3) un estado, territorio o posesión de los Estados Unidos de América, o&lt;/p&gt;  &lt;p&gt;(4) un departamento, agencia pública, corporación pública o funcionario de cualquiera de las entidades enumeradas en los subincisos (1), (2) y (3) anteriores.&lt;/p&gt;  &lt;p&gt;Dichos documentos deben estar firmados por la persona que aparenta ser la que los otorga.&lt;/p&gt;  &lt;p&gt;(C) Documentos públicos firmados por funcionarios&lt;/p&gt;  &lt;p&gt;Documentos -aunque no estén bajo sellopresuntamente firmados en su capacidad oficial por una persona que es funcionaria de cualquiera de las entidades enumeradas en los subincisos (1), (2) y (3) del apartado (B) de esta Regla, siempre que tales documentos sean acompañados por una certificación bajo sello expedida por la persona que en calidad de funcionaria competente da fe de que la firma es genuina y de que es la funcionaria con capacidad oficial para firmar los documentos.&lt;/p&gt;  &lt;p&gt;(D) Documentos públicos extranjeros&lt;/p&gt;  &lt;p&gt;Documento presuntamente otorgado o firmado en su capacidad oficial por una persona autorizada por las leyes de un país extranjero para su otorgamiento. Éste deberá estar acompañado de una certificación final sobre la autenticidad de la firma y el cargo oficial de (1) la persona que lo otorga o certifica, o (2) cualquier persona funcionaria cuyo certificado de autenticidad y el cargo oficial trata el otorgamiento o certificación. El documento puede también ser parte de una cadena de certificados de autenticidad de la firma y puesto oficial relacionados con el otorgamiento o certificación por autoridad competente en cumplimiento con lo establecido en el Tratado de la Convención de la Haya del 5 de octubre de 1961.&lt;/p&gt;  &lt;p&gt;Si le hubiere sido concedida a todas las partes una oportunidad razonable para investigar la autenticidad y exactitud de los documentos oficiales, el Tribunal podrá, si se muestra justa causa, ordenar que sean tratados como presuntamente auténticos sin la certificación final o permitir que sean probados mediante un resumen certificado aunque sin la certificación final.&lt;/p&gt;  &lt;p&gt;(E) Copias certificadas de récords y documentos públicos&lt;/p&gt;  &lt;p&gt;Copias de un récord oficial, o parte de éste, o de un documento archivado en una oficina pública conforme a disposición de ley o reglamento público, incluyendo compilación de datos en cualquier formato, si están certificadas como correctas por la persona a cargo de su custodia o por la persona autorizada en ley para expedir este tipo de certificación, siempre que la certificación cumpla con los requisitos establecidos en los incisos (B), (C) o (D) de esta Regla, o con cualquier ley o reglamento público pertinente.&lt;/p&gt;  &lt;p&gt;(F) Publicaciones oficiales&lt;/p&gt;  &lt;p&gt;Libros, folletos u otras publicaciones presuntamente emitidas por autoridad pública.&lt;/p&gt;  &lt;p&gt;(G) Periódicos o revistas&lt;/p&gt;  &lt;p&gt;Material impreso que presuntamente sean periódicos o revistas.&lt;/p&gt;  &lt;p&gt;(H) Etiquetas comerciales&lt;/p&gt;  &lt;p&gt;Inscripciones, marbetes, etiquetas, u otros documentos análogos, presuntamente fijados en el curso de los negocios y que indican propiedad, control y origen.&lt;/p&gt;  &lt;p&gt;(I) Papeles comerciales y documentos relacionados Papeles comerciales, las firmas estampadas en éstos y los documentos relacionados, conforme lo dispone el derecho comercial general.&lt;/p&gt;  &lt;p&gt;(J) Presunciones según las Leyes del Congreso de los Estados Unidos de América o de la Asamblea Legislativa del Estado Libre Asociado de Puerto Rico Cualquier firma, documento u otra materia que, mediante una Ley del Congreso o Asamblea Legislativa de Puerto Rico, se declare presuntamente genuino o auténtico prima facie.&lt;/p&gt;  &lt;p&gt;(K) Récords certificados de actividades que se realizan con regularidad&lt;/p&gt;  &lt;p&gt;El original o un duplicado de un récord de actividades que se realizan con regularidad dentro de la jurisdicción del Estado Libre Asociado de Puerto Rico y los Estados Unidos de América, el cual sería admisible conforme a la Regla 805 (F), si se acompaña de una declaración jurada de la persona a cargo de su custodia o de alguna otra persona cualificada, que certifique que dicho récord:&lt;/p&gt;  &lt;p&gt;(1) se preparó en o cerca del momento en que ocurrieron los sucesos o las actividades mencionadas por una persona que tiene conocimiento de dichos asuntos, o mediante información transmitida por ésta;&lt;/p&gt;  &lt;p&gt;(2) se llevó a cabo en el curso de la actividad realizada con regularidad, y&lt;/p&gt;  &lt;p&gt;(3) se preparó como una práctica regular de dicha actividad.&lt;/p&gt;  &lt;p&gt;La parte que se proponga someter un récord como evidencia, conforme a lo dispuesto en este inciso, tendrá que notificar por escrito su intención a todas las partes contrarias. Además, tendrá que tener el récord y la declaración jurada disponibles para inspección con suficiente antelación a su presentación como evidencia a fin de brindar a la parte contraria una oportunidad justa para refutarlos.&lt;/p&gt;  &lt;p&gt;(L) Récord electrónico&lt;/p&gt;  &lt;p&gt;Se presumirá la integridad del récord si:&lt;/p&gt;  &lt;p&gt;(1) se establece mediante declaración jurada que fue grabado o almacenado por una parte adversa a la que lo propone, otra&lt;/p&gt;  &lt;p&gt;(2) se establece mediante declaración jurada que fue grabado o almacenado en el curso usual y ordinario de negocios por una persona que no es parte en los procedimientos y quien no lo ha grabado o almacenado bajo el control de la que lo propone.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloixregla902</string>
 					<key>sectionLabel</key>
 					<string>Regla 902</string>
 					<key>sectionTitle</key>
@@ -738,16 +918,20 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) A menos que un estatuto disponga lo contrario, el testimonio de una persona que haya actuado como testigo instrumental no se requerirá para autenticar un escrito.&lt;/p&gt;  &lt;p&gt;(B) Si el testimonio de una persona que haya actuado como testigo instrumental se requiere por estatuto para autenticar un escrito y esa persona niega o no recuerda el otorgamiento del escrito, éste puede ser autenticado mediante otra evidencia.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloixregla903</string>
 					<key>sectionLabel</key>
 					<string>Regla 903</string>
 					<key>sectionTitle</key>
 					<string>Testigos Instrumentales</string>
 				</dict>
 			</array>
+			<key>sectionID</key>
+			<string>evidenciacapituloix</string>
 			<key>sectionLabel</key>
 			<string>Capítulo IX</string>
 			<key>sectionTitle</key>
-			<string>Autenticación E Identificación</string>
+			<string>Autenticación o Identificación</string>
 		</dict>
 		<dict>
 			<key>sectionChildren</key>
@@ -755,6 +939,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Para propósitos de este capítulo los siguientes términos tendrán el significado que a continuación se indica:&lt;/p&gt;  &lt;p&gt;(A) Escritos o grabaciones: Consiste en letras, palabras, números, sonidos o sus equivalentes, por medio de escritura manual, maquinilla, en computadora, grabación mecánica o electrónica, micrografía, microfilmación, impresión, fotocopia, fotografía o impulso magnético, u otra forma de compilación de datos.&lt;/p&gt;  &lt;p&gt;(B) Fotografías: Incluye la reproducción mediante fotografías, películas de rayos X, películas cinematográficas, videomagnetofónicas, digitales u otras técnicas de reproducción de imágenes.&lt;/p&gt;  &lt;p&gt;(C) Original: Original de un escrito o grabación es el escrito o grabación mismo o cualquier contraparte de éstos, siempre que la intención de la persona que los ejecuta o emita sea que éstos tengan el mismo efecto que aquellos. El original de una fotografía incluye su negativo o archivo digital, y cualquier ejemplar positivo obtenido de éste. Es también un original, el impreso legible que refleja con precisión la información que haya sido almacenada o acumulada o producida en computadora o artefacto similar.&lt;/p&gt;  &lt;p&gt;(D) Duplicado: Copia o imagen producida por la misma impresión que el original, o por la misma matriz o por medio de fotografía, incluyendo ampliaciones y miniaturas, o por regrabaciones mecánicas, electrónicas o digitales o por reproducciones químicas, digitales o por otras técnicas equivalentes que reproduzcan adecuadamente el original.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloxregla1001</string>
 					<key>sectionLabel</key>
 					<string>Regla 1001</string>
 					<key>sectionTitle</key>
@@ -763,14 +949,18 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Para probar el contenido de un escrito, grabación o fotografía se requiere la presentación del original de éstos.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloxregla1002</string>
 					<key>sectionLabel</key>
 					<string>Regla 1002</string>
 					<key>sectionTitle</key>
-					<string>Regla Sobre El Contenido De Un Escrito, Grabación O Fotografía</string>
+					<string>Regla Sobre El Contenido De Un Escrito, Grabación o Fotografía</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Un duplicado es tan admisible como el original a no ser que surja una genuina controversia sobre la autenticidad del original o que, bajo las circunstancias del caso, sea injusto admitir el duplicado en lugar del original.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloxregla1003</string>
 					<key>sectionLabel</key>
 					<string>Regla 1003</string>
 					<key>sectionTitle</key>
@@ -779,6 +969,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Será admisible otra evidencia del contenido de un escrito, grabación o fotografía que no sea el original mismo cuando:&lt;/p&gt;  &lt;p&gt;(A) El original y el duplicado, si existiera, se han extraviado o destruido, a menos que quien lo propone los haya perdido o destruido de mala fe.&lt;/p&gt;  &lt;p&gt;(B) El original y el duplicado, si existiera, no pudieron obtenerse por ningún procedimiento judicial disponible ni de ninguna otra manera.&lt;/p&gt;  &lt;p&gt;(C) El original está en poder de la parte contra quien se ofrece y ésta no lo produce en la vista a pesar de haber sido previamente advertida de que se necesitaría producirlo en la vista.&lt;/p&gt;  &lt;p&gt;(D) El original no está íntimamente relacionado con las controversias esenciales y resultare inconveniente requerir su presentación.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloxregla1004</string>
 					<key>sectionLabel</key>
 					<string>Regla 1004</string>
 					<key>sectionTitle</key>
@@ -787,14 +979,18 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;El contenido de un récord público, u otro documento bajo la custodia de una entidad u oficina pública, o un documento unido al protocolo de una notaria o un notario, puede ser probado mediante copia certificada del original expedida por funcionaria o funcionario autorizado, o mediante copia declarada como correcta o fiel por una persona testigo que la haya comparado con el original. Si ello no es posible, a pesar del ejercicio de diligencias razonables por parte de la persona proponente, otra evidencia secundaria del contenido del original será admisible.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloxregla1005</string>
 					<key>sectionLabel</key>
 					<string>Regla 1005</string>
 					<key>sectionTitle</key>
-					<string>Récords Y Documentos Públicos</string>
+					<string>Récords y Documentos Públicos</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;El contenido de escritos, grabaciones o fotografías, que por su gran volumen o tamaño no pueden examinarse convenientemente en el Tribunal, podrá ser presentado mediante esquemas, resúmenes o cómputos, o cualquier otra evidencia similar. Los originales o duplicados, así como los resúmenes o evidencia similar, deben ponerse a la disposición de las otras partes para ser examinados o copiados, en tiempo y lugar razonables.&lt;/p&gt;  &lt;p&gt;El Tribunal podrá ordenar que se produzcan los originales o duplicados.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloxregla1006</string>
 					<key>sectionLabel</key>
 					<string>Regla 1006</string>
 					<key>sectionTitle</key>
@@ -803,24 +999,30 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;El contenido de escritos, grabaciones o fotografías puede probarse por el testimonio o deposición de la parte contra quien se ofrece o por su admisión escrita, sin necesidad de producir el original.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloxregla1007</string>
 					<key>sectionLabel</key>
 					<string>Regla 1007</string>
 					<key>sectionTitle</key>
-					<string>Testimonio O Admisión De Parte</string>
+					<string>Testimonio o Admisión De Parte</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Cuando la admisibilidad de evidencia secundaria del contenido de un escrito, grabación o fotografía dependa de que se satisfaga una condición de hecho, la determinación de si fue satisfecha tal condición la hará el Tribunal bajo la Regla 109(A). Sin embargo, será la juzgadora o el juzgador de hechos quien resolverá lo relativo a:&lt;/p&gt;  &lt;p&gt;(A) si el escrito, grabación o fotografía existió o no, cuando está en controversia su existencia;&lt;/p&gt;  &lt;p&gt;(B) si otro escrito, grabación o fotografía producida en el juicio es el original; o&lt;/p&gt;  &lt;p&gt;(C) si otra evidencia del contenido refleja correctamente el mismo.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloxregla1008</string>
 					<key>sectionLabel</key>
 					<string>Regla 1008</string>
 					<key>sectionTitle</key>
-					<string>Funciones De La Jueza O Del Juez Y El Jurado</string>
+					<string>Funciones De La Jueza o Del Juez y El Jurado</string>
 				</dict>
 			</array>
+			<key>sectionID</key>
+			<string>evidenciacapitulox</string>
 			<key>sectionLabel</key>
 			<string>Capítulo X</string>
 			<key>sectionTitle</key>
-			<string>Contenido De Escritos, Grabaciones Y Fotografías</string>
+			<string>Contenido De Escritos, Grabaciones y Fotografías</string>
 		</dict>
 		<dict>
 			<key>sectionChildren</key>
@@ -828,6 +1030,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Siempre que un objeto perceptible a los sentidos resultare pertinente de conformidad a lo dispuesto en la Regla 401, dicho objeto, previa identificación o autenticación, es admisible como prueba, sujeto ello a la discreción del Tribunal de conformidad con los factores o criterios establecidos en la Regla 403.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloxiregla1101</string>
 					<key>sectionLabel</key>
 					<string>Regla 1101</string>
 					<key>sectionTitle</key>
@@ -836,12 +1040,16 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;La inspección ocular es un medio de prueba que el Tribunal puede admitir cuando lo permita la ley o conforme a su poder inherente para recibir las pruebas y hacer justicia. En toda inspección ocular el Tribunal levantará un acta detallada del trámite y los hechos observados que formará parte de los autos con el valor probatorio que corresponda luego de presentada toda la prueba. El Tribunal puede denegar una inspección ocular a base de los factores señalados en la Regla 403.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloxiregla1102</string>
 					<key>sectionLabel</key>
 					<string>Regla 1102</string>
 					<key>sectionTitle</key>
 					<string>Inspecciones Oculares</string>
 				</dict>
 			</array>
+			<key>sectionID</key>
+			<string>evidenciacapituloxi</string>
 			<key>sectionLabel</key>
 			<string>Capítulo XI</string>
 			<key>sectionTitle</key>
@@ -853,6 +1061,8 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Estas Reglas comenzarán a regir el primero de enero de 2010. Las Reglas se aplicarán a todos los juicios, procedimientos o acciones iniciadas, en o después de esa fecha. A esos fines, se entenderá que un juicio comienza con la prestación de juramento del primer testigo o cuando se admite en evidencia el primer exhibit. Si se decreta un nuevo juicio y éste comienza, en o después de la vigencia de las Reglas, éstas se aplicarán en dicho juicio, sin importar cuándo comenzaron los procedimientos originales.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloxiiregla1201</string>
 					<key>sectionLabel</key>
 					<string>Regla 1201</string>
 					<key>sectionTitle</key>
@@ -861,16 +1071,20 @@
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;(A) Derogación&lt;/p&gt;  &lt;p&gt;Quedan derogadas las Reglas de Evidencia de Puerto Rico en vigor desde el 1 de octubre de 1979 y el artículo 527 del Código de Enjuiciamiento Civil de 1933.&lt;/p&gt;  &lt;p&gt;(B) Vigencia Provisional&lt;/p&gt;  &lt;p&gt;Quedarán provisionalmente vigentes los siguientes artículos del Código de Enjuiciamiento Civil de 1933: 392, 394, 409, 421, 426, 429, 528, 529, 530 y 531, y los incisos (C) y (D) de la Regla 82 de Evidencia de 1979 hasta tanto sean modificados, derogados o reubicados por leyes especiales.&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>evidenciacapituloxiiregla1202</string>
 					<key>sectionLabel</key>
 					<string>Regla 1202</string>
 					<key>sectionTitle</key>
-					<string>Derogación Y Vigencia Provisional</string>
+					<string>Derogación y Vigencia Provisional</string>
 				</dict>
 			</array>
+			<key>sectionID</key>
+			<string>evidenciacapituloxii</string>
 			<key>sectionLabel</key>
 			<string>Capítulo XII</string>
 			<key>sectionTitle</key>
-			<string>Vigencia Y Derogación</string>
+			<string>Vigencia y Derogación</string>
 		</dict>
 	</array>
 </dict>

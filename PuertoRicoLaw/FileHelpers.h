@@ -5,5 +5,7 @@
 //
 
 NSString *pathInDocumentDirectory(NSString *fileName);
+NSString *mainSectionPathForBookName(NSString *bookName);
+NSString *bookDataPath(void);
 BOOL deletePathInDocumentDirectory(NSString *fileName);
 

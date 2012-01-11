@@ -20,13 +20,13 @@
 #define kBookListKey @"bookList"
 
 #define kBookNameKey @"bookName"
-#define kBookShortNameKey @"bookShortName"
+#define kBookShortTitleKey @"bookShortTitle"
 #define kBookTitleKey @"bookTitle"
 #define kBookFavoritesTitleKey @"bookFavoritesTitle"
 #define kBookDescriptionKey @"bookDescription"
-#define kBookDateKey @"bookDate"
 #define kBookLastUpdateKey @"bookLastUpdate"
 
+#define kSectionIDKey @"sectionID"
 #define kSectionTitleKey @"sectionTitle"
 #define kSectionLabelKey @"sectionLabel"
 #define kSectionContentKey @"sectionContent"

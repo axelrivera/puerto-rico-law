@@ -6,7 +6,8 @@
 
 #include "FileHelpers.h"
 
-NSString *pathInDocumentDirectory(NSString *fileName) {
+NSString *pathInDocumentDirectory(NSString *fileName)
+{
 	// Get list of document directories in sandbox
 	NSArray *documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	
@@ -15,6 +16,17 @@ NSString *pathInDocumentDirectory(NSString *fileName) {
 	
 	// Append passed in file name to that directory, return it
 	return [documentDirectory stringByAppendingPathComponent:fileName];
+}
+
+NSString *mainSectionPathForBookName(NSString *bookName)
+{
+	NSString *fileName = [NSString stringWithFormat:@"%@_mainSection.data", bookName];
+	return pathInDocumentDirectory(fileName);
+}
+
+NSString *bookDataPath(void)
+{
+	return pathInDocumentDirectory(@"bookData.data");
 }
 
 BOOL deletePathInDocumentDirectory(NSString *fileName)

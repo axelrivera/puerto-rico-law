@@ -206,7 +206,7 @@
 		Book *book = [self.favoritesDataSource objectAtIndex:indexPath.row];
 		textStr = book.title;
 		detailTextStr = book.bookDescription;
-		favorite = book.favorite;
+		favorite = YES;
 	} else {
 		Section *section = [self.favoritesDataSource objectAtIndex:indexPath.row];
 		textStr = section.title;

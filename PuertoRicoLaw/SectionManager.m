@@ -154,7 +154,7 @@
 
 - (void)updateFavoriteIndex
 {
-	self.favoriteIndex = [self.section.book unsignedIndexOfFavoritesWithMd5String:[self.section md5String]];
+	self.favoriteIndex = [self.section.book unsignedIndexOfFavoritesWithSectionID:self.section.sectionID];
 }
 
 - (void)addToFavorites
@@ -275,7 +275,7 @@
 		[controller dismissModalViewControllerAnimated:YES];
 	}
 	if (section) {
-		Section *favoriteSection = [self.section.book sectionInMainSectionMatchingMd5String:[section md5String]];
+		Section *favoriteSection = [self.section.book sectionInMainSectionMatchingSectionID:section.sectionID];
 		[self.controller reloadControllerWithSection:favoriteSection];
 	}
 }

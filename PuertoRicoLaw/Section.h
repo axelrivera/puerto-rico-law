@@ -12,6 +12,7 @@
 
 @interface Section : NSObject <NSCoding>
 
+@property (strong, nonatomic) NSString *sectionID;
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *label;
 @property (strong, nonatomic) NSString *content;
@@ -24,6 +25,5 @@
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 - (NSString *)asciiStringForContent;
 - (NSInteger)indexPositionAtParent;
-- (NSString *)md5String;
 
 @end

@@ -13,7 +13,7 @@
 
 @interface Book (Private)
 
-- (void)findInSection:(Section *)section md5String:(NSString *)string;
+- (void)findInSection:(Section *)section sectionID:(NSString *)sectionID;
 - (void)findString:(NSString *)string inSection:(Section *)section titleOnly:(BOOL)titleOnly;
 - (BOOL)foundString:(NSString *)string inSection:(Section *)section titleOnly:(BOOL)titleOnly;
 
@@ -26,34 +26,27 @@
 }
 
 @synthesize name = name_;
-@synthesize shortName = shortName_;
+@synthesize shortTitle = shortTitle_;
 @synthesize title = title_;
 @synthesize bookDescription = bookDescription_;
-@synthesize date = date_;
 @synthesize lastUpdate = lastUpdate_;
 @synthesize mainSection = mainSection_;
-@synthesize favorite = favorite_;
 @synthesize favoritesTitle = favoritesTitle_;
 @synthesize favorites = favorites_;
 
-// FIXME: Remember to remove the automatic file deletion
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
 	self = [super init];
 	if (self) {
-		// Remove this
-		deletePathInDocumentDirectory([self mainSectionDataFileName]);
 		findSection_ = nil;
 		findArray_ = nil;
 		self.name = [dictionary objectForKey:kBookNameKey];
-		self.shortName = [dictionary objectForKey:kBookShortNameKey];
+		self.shortTitle = [dictionary objectForKey:kBookShortTitleKey];
 		self.title = [dictionary objectForKey:kBookTitleKey];
 		self.bookDescription = [dictionary objectForKey:kBookDescriptionKey];
-		self.date = [dictionary objectForKey:kBookDateKey];
 		self.lastUpdate = [dictionary objectForKey:kBookLastUpdateKey];
 		self.favoritesTitle = [dictionary objectForKey:kBookFavoritesTitleKey];
 		self.mainSection = nil;
-		self.favorite = NO;
 		self.favorites = [[NSMutableArray alloc] initWithCapacity:0];
 	}
 	return self;
@@ -65,13 +58,11 @@
 	if (self) {
 		//self.object = [decoder decodeObjectForKey:@"objectName"];
 		self.name = [decoder decodeObjectForKey:@"bookName"];
-		self.shortName = [decoder decodeObjectForKey:@"bookShortName"];
+		self.shortTitle = [decoder decodeObjectForKey:@"bookShortTitle"];
 		self.title = [decoder decodeObjectForKey:@"bookTitle"];
 		self.bookDescription = [decoder decodeObjectForKey:@"bookBookDescription"];
-		self.date = [decoder decodeObjectForKey:@"bookDate"];
 		self.lastUpdate = [decoder decodeObjectForKey:@"bookLastUpdate"];
 		self.mainSection = [decoder decodeObjectForKey:@"bookMainSection"];
-		self.favorite = [decoder decodeBoolForKey:@"bookFavorite"];
 		self.favoritesTitle = [decoder decodeObjectForKey:@"bookFavoritesTitle"];
 		self.favorites = [decoder decodeObjectForKey:@"bookFavorites"];
 	}
@@ -83,15 +74,18 @@
 	// add [super encodeWithCoder:encoder] if the superclass implements NSCoding
 	//[encoder encodeObject:object forKey:@"objectName"];
 	[encoder encodeObject:self.name forKey:@"bookName"];
-	[encoder encodeObject:self.shortName forKey:@"bookShortName"];
+	[encoder encodeObject:self.shortTitle forKey:@"bookShortTitle"];
 	[encoder encodeObject:self.title forKey:@"bookTitle"];
 	[encoder encodeObject:self.bookDescription forKey:@"bookBookDescription"];
-	[encoder encodeObject:self.date forKey:@"bookDate"];
 	[encoder encodeObject:self.lastUpdate forKey:@"bookLastUpdate"];
 	[encoder encodeObject:self.mainSection forKey:@"bookMainSection"];
-	[encoder encodeBool:self.isFavorite forKey:@"bookFavorite"];
 	[encoder encodeObject:self.favoritesTitle forKey:@"bookFavoritesTitle"];
 	[encoder encodeObject:self.favorites forKey:@"bookFavorites"];
+}
+
+- (NSString *)description
+{
+	return [NSString stringWithFormat:@"Title: %@", self.title];
 }
 
 - (void)loadSections
@@ -132,22 +126,17 @@
 	self.mainSection = nil;
 }
 
-- (NSInteger)unsignedIndexOfFavoritesWithMd5String:(NSString *)string
+- (NSInteger)unsignedIndexOfFavoritesWithSectionID:(NSString *)sectionID
 {
 	NSInteger index = -1;
 	for (NSInteger i = 0; i < [self.favorites count]; i++) {
 		Section *section = [self.favorites objectAtIndex:i];
-		if ([[section md5String] isEqualToString:string]) {
+		if ([section.sectionID isEqualToString:sectionID]) {
 			index = i;
 			break;
 		}
 	}
 	return index;
-}
-
-- (NSString *)md5String
-{
-	return [[NSString stringWithFormat:@"%@%@%@%@", self.name, self.title, self.shortName, self.bookDescription] md5];
 }
 
 - (void)archiveMainSection
@@ -162,8 +151,7 @@
 
 - (NSString *)mainSectionDataFileName
 {
-	NSString *filePath = pathInDocumentDirectory([NSString stringWithFormat:@"%@_mainSection.data", self.name]);
-	return filePath;
+	return mainSectionPathForBookName(self.name);
 }
 
 - (void)reloadSection:(Section *)section andParent:(Section *)parent
@@ -175,10 +163,10 @@
 	section.parent = parent;
 }
 
-- (Section *)sectionInMainSectionMatchingMd5String:(NSString *)string
+- (Section *)sectionInMainSectionMatchingSectionID:(NSString *)sectionID
 {
 	findSection_ = nil;
-	[self findInSection:self.mainSection md5String:string];
+	[self findInSection:self.mainSection sectionID:sectionID];
 	return findSection_;
 }
 
@@ -191,18 +179,18 @@
 
 #pragma mark - Private Methods
 
-- (void)findInSection:(Section *)section md5String:(NSString *)string
+- (void)findInSection:(Section *)section sectionID:(NSString *)sectionID
 {
 	if (findSection_ != nil) {
 		return;
 	}
 	
-	if ([[section md5String] isEqualToString:string]) {
+	if ([section.sectionID isEqualToString:sectionID]) {
 		findSection_ = section;
 		return;
 	} else {
 		for (Section *child in section.children) {
-			[self findInSection:child md5String:string];
+			[self findInSection:child sectionID:sectionID];
 		}
 	}
 }
@@ -238,6 +226,14 @@
 		}
 	}
 	
+	return NO;
+}
+
+- (BOOL)isOlderComparedToBook:(Book *)book
+{
+	if ([self.lastUpdate compare:book.lastUpdate] == NSOrderedAscending) {
+		return  YES;
+	}
 	return NO;
 }
 

@@ -37,6 +37,8 @@ static FontSizeType const kDefaultValueFontSize = FontSizeTypeSmall;
 static ContentBackgroundType const kDefaultValueContentBackground = ContentBackgroundTypeWhite;
 static BOOL const kDefaultValueLandscapeMode = YES;
 
+static Settings *sharedSettings_ = nil;
+
 @interface Settings (Private)
 
 + (FontFamilyType)fontFamilyTypeForValueString:(NSString *)string;
@@ -366,12 +368,12 @@ static BOOL const kDefaultValueLandscapeMode = YES;
 
 + (Settings *)sharedSettings
 {
-	static dispatch_once_t pred = 0;
-	__strong static id _sharedObject = nil;
-	dispatch_once(&pred, ^{
-		_sharedObject = [[self alloc] init]; // or some other init method
-	});
-	return _sharedObject;
+    @synchronized(self) {
+        if (sharedSettings_ == nil) {
+            sharedSettings_ = [[self alloc] init];
+		}
+    }
+    return sharedSettings_;
 }
 
 @end
