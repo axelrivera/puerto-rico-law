@@ -12,14 +12,26 @@
 #import "BookData.h"
 #import "FileHelpers.h"
 
+#define kResetDataKey @"reset_data_preference"
+
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize navigationController = _navigationController;
 @synthesize splitViewController = _splitViewController;
+@synthesize bookViewController = _bookViewController;
+@synthesize resetDataFlag = _resetDataFlag;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	// Set Default Preferences
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	NSDictionary *appDefaults = [NSDictionary dictionaryWithObjectsAndKeys:
+								 @"NO", kResetDataKey,
+								 nil];
+	[defaults registerDefaults:appDefaults];
+	[defaults synchronize];
+	
 	BookData *bookData = [NSKeyedUnarchiver unarchiveObjectWithFile:bookDataPath()];
 	if (bookData == nil) {
 		bookData = [BookData sharedBookData];
@@ -29,14 +41,15 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	// Override point for customization after application launch.
 	
-	BookViewController *bookController = [[BookViewController alloc] init];
+	self.bookViewController = [[BookViewController alloc] init];
 	
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 		SectionListViewController *listController =
 		[[SectionListViewController alloc] initWithSection:nil dataSource:nil siblingSections:nil currentSiblingIndex:-1];
 		
-		bookController.delegate = listController;
-		UINavigationController *bookNavigationController = [[UINavigationController alloc] initWithRootViewController:bookController];
+		self.bookViewController.delegate = listController;
+		UINavigationController *bookNavigationController =
+			[[UINavigationController alloc] initWithRootViewController:self.bookViewController];
 		UINavigationController *listNavigationController = [[UINavigationController alloc] initWithRootViewController:listController];
 		
 		self.splitViewController = [[UISplitViewController alloc] init];
@@ -45,7 +58,7 @@
 		self.window.rootViewController = self.splitViewController;
 		
 	} else {
-		self.navigationController = [[UINavigationController alloc] initWithRootViewController:bookController];
+		self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.bookViewController];
 		self.window.rootViewController = self.navigationController;
 	}
 	
@@ -82,6 +95,7 @@
 	/*
 	 Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 	 */
+	[self checkSettingsBundle];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -97,6 +111,36 @@
 - (void)archiveBookData
 {
 	[NSKeyedArchiver archiveRootObject:[BookData sharedBookData] toFile:bookDataPath()];
+}
+
+- (void)resetData
+{
+	NSString *documentsPath = pathInDocumentDirectory(@"");
+	
+	NSDirectoryEnumerator *fileEnumerator = [[NSFileManager defaultManager] enumeratorAtPath:documentsPath];
+	
+	for (NSString *filename in fileEnumerator) {
+		if ([[filename pathExtension] isEqualToString:@"data"]) {
+			deletePathInDocumentDirectory(filename);
+		}
+	}
+}
+
+- (void)checkSettingsBundle
+{
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	[defaults synchronize];
+	
+	self.resetDataFlag = [defaults boolForKey:kResetDataKey];	
+	if (self.resetDataFlag == YES) {
+		[defaults setBool:NO forKey:kResetDataKey];
+		[self resetData];
+		[[BookData sharedBookData].books removeAllObjects];
+		[[BookData sharedBookData].favoriteBooks removeAllObjects];
+		[[BookData sharedBookData] loadBooks];
+		[self.bookViewController.tableView reloadData];
+	}	
+
 }
 
 @end

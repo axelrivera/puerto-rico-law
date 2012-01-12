@@ -15,7 +15,7 @@
 
 @interface SectionManager (Private)
 
-- (void)displayComposerSheet;
+- (void)displayComposerSheetTo:(NSArray *)toRecipients subject:(NSString *)subject body:(NSString *)body;
 
 @end
 
@@ -229,6 +229,7 @@
 	
 	if ([self.controller isKindOfClass:[SectionContentViewController class]]) {
 		[self.actionSheet addButtonWithTitle:@"Enviar E-mail"];
+		[self.actionSheet addButtonWithTitle:@"Reportar Error"];
 	}
 	
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
@@ -249,15 +250,17 @@
 
 #pragma mark - Private Methods
 
-- (void)displayComposerSheet {
+- (void)displayComposerSheetTo:(NSArray *)toRecipients subject:(NSString *)subject body:(NSString *)body
+{
 	MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
 	picker.mailComposeDelegate = self;
 	
-	NSString *subjectStr = [NSString stringWithFormat:@"%@ [Leyes de Puerto Rico]", self.section.book.title];
-	[picker setSubject:subjectStr];
-		
-	[picker setMessageBody:[self.controller htmlStringForEmail] isHTML:YES];
+	if (toRecipients) {
+		[picker setToRecipients:toRecipients];
+	}
 	
+	[picker setSubject:subject];
+	[picker setMessageBody:body isHTML:YES];
 	[self.controller presentModalViewController:picker animated:YES];
 }
 
@@ -308,7 +311,18 @@
 		}
 	} else {
 		if ([self.controller isKindOfClass:[SectionContentViewController class]] && buttonIndex == 1) {
-			[self displayComposerSheet];
+			NSString *subjectStr = [NSString stringWithFormat:@"Leyes de Puerto Rico - %@", self.section.book.title];
+			NSString *bodyStr = [self.controller htmlStringForEmail];
+			[self displayComposerSheetTo:nil subject:subjectStr body:bodyStr];
+		} else if ([self.controller isKindOfClass:[SectionContentViewController class]] && buttonIndex == 2) {
+			NSString *subjectStr = [NSString stringWithFormat:@"Reportar Error - Leyes de Puerto Rico"];
+			NSString *htmlStr = [self.controller htmlStringForEmail];
+			NSString *headerStr = 
+			@"<br />---<br />He encontrado un error la siguiente sección del app "
+			@"Leyes de Puerto Rico y deseo reportarlo.<br />";
+			NSString *bodyStr = [NSString stringWithFormat:@"%@%@", headerStr, htmlStr];
+			NSArray *toRecipients = [NSArray arrayWithObject:@"apps@riveralabs.com"];
+			[self displayComposerSheetTo:toRecipients subject:subjectStr body:bodyStr];
 		}
 	}
 }

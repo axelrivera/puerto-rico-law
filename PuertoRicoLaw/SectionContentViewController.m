@@ -140,7 +140,7 @@
 	}
 	
 	NSString *aboutStr = @"<p>----------<br/>Esta información fue generada con el App Leyes de Puerto Rico para iPhone, "
-	@"iPod touch y iPad. Para más información visite http://riveralabs.com</p>";
+	@"iPod touch y iPad. Visite http://riveralabs.com/leyes/ para más información.</p>";
 	
 	return [NSString stringWithFormat:@"<html><body>%@%@%@</body></html>", headerStr, contentStr, aboutStr];
 }

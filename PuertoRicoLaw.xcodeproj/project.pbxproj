@@ -39,6 +39,7 @@
 		165DCF0414A409300045F8EC /* star_cell_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 165DCF0014A409300045F8EC /* star_cell_selected@2x.png */; };
 		165DCF0514A409300045F8EC /* star_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = 165DCF0114A409300045F8EC /* star_cell.png */; };
 		165DCF0614A409300045F8EC /* star_cell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 165DCF0214A409300045F8EC /* star_cell@2x.png */; };
+		1661C59B14BF333300C5603F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1661C59A14BF333300C5603F /* Settings.bundle */; };
 		1663261D14A65249003279C3 /* SectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1663261C14A65249003279C3 /* SectionTableViewCell.m */; };
 		1663802114BE154400A1882A /* Constitucion.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1663802014BE154400A1882A /* Constitucion.plist */; };
 		1671F10F14AF91FA0019B181 /* UIViewController+Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671F10E14AF91FA0019B181 /* UIViewController+Section.m */; };
@@ -117,6 +118,7 @@
 		165DCF0014A409300045F8EC /* star_cell_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_cell_selected@2x.png"; sourceTree = "<group>"; };
 		165DCF0114A409300045F8EC /* star_cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_cell.png; sourceTree = "<group>"; };
 		165DCF0214A409300045F8EC /* star_cell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_cell@2x.png"; sourceTree = "<group>"; };
+		1661C59A14BF333300C5603F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		1663261B14A65249003279C3 /* SectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionTableViewCell.h; sourceTree = "<group>"; };
 		1663261C14A65249003279C3 /* SectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionTableViewCell.m; sourceTree = "<group>"; };
 		1663802014BE154400A1882A /* Constitucion.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Constitucion.plist; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 				16DD4CAF14A10D200063163D /* main.m */,
 				16DD4CB114A10D200063163D /* PuertoRicoLaw-Prefix.pch */,
 				16DFA24B14B4C79C00517778 /* SearchWebView.js */,
+				1661C59A14BF333300C5603F /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				1679FC7314BC9E3E00656291 /* Evidencia.plist in Resources */,
 				1679FC7514BC9E4800656291 /* ProcedimientoCivil.plist in Resources */,
 				1663802114BE154400A1882A /* Constitucion.plist in Resources */,
+				1661C59B14BF333300C5603F /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "TableSelectViewController.h"
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
 @protocol SettingsViewControllerDelegate;
 
-@interface SettingsViewController : UITableViewController <TableSelectViewControllerDelegate>
+@interface SettingsViewController : UITableViewController <TableSelectViewControllerDelegate, MFMailComposeViewControllerDelegate>
 
 @property (unsafe_unretained, nonatomic) id <SettingsViewControllerDelegate> delegate;
 

@@ -14,6 +14,12 @@
 #define kFontSizeControllerTag 102
 #define kContentBackgroundControllerTag 103
 
+@interface SettingsViewController (Private)
+
+- (void)displayComposerSheetTo:(NSArray *)toRecipients subject:(NSString *)subject body:(NSString *)body;
+
+@end
+
 @implementation SettingsViewController
 
 @synthesize delegate = delegate_;
@@ -87,6 +93,22 @@
 	}
 }
 
+#pragma mark - Private Methods
+
+- (void)displayComposerSheetTo:(NSArray *)toRecipients subject:(NSString *)subject body:(NSString *)body
+{
+	MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+	picker.mailComposeDelegate = self;
+	
+	if (toRecipients) {
+		[picker setToRecipients:toRecipients];
+	}
+	
+	[picker setSubject:subject];
+	[picker setMessageBody:body isHTML:YES];
+	[self presentModalViewController:picker animated:YES];
+}
+
 #pragma mark - Selector Actions
 
 - (void)dismissAction:(id)sender
@@ -104,7 +126,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -114,6 +136,10 @@
 		row = 1;
 	} else if (section == 1) {
 		row = 4;
+	} else if (section == 2) {
+		row = 2;
+	} else if (section == 3) {
+		row = 1;
 	}
 	return row;
 }
@@ -138,6 +164,28 @@
 		[switchView setOn:[Settings sharedSettings].landscapeMode animated:NO];
 		
 		return cell;
+	} else if (indexPath.section == 2) {
+		NSString *CellIdentifier = @"ButtonCell";
+		
+		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+		if (cell == nil) {
+			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+		}
+		
+		NSString *textStr = nil;
+		
+		if (indexPath.row == 0) {
+			textStr = @"Recomiendanos a tus Amigos";
+		} else {
+			textStr = @"Enviar Sugerencias";
+		}
+		
+		cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+		cell.accessoryType = UITableViewCellAccessoryNone;
+		cell.textLabel.textAlignment = UITextAlignmentCenter;
+		cell.textLabel.text = textStr;
+		
+		return cell;
 	}
 	
     NSString *CellIdentifier = @"Value1Cell";
@@ -150,17 +198,22 @@
 	NSString *textStr = nil;
 	NSString *detailTextStr = nil;
 	
-	if (indexPath.row == 0) {
-		textStr = @"Tipo";
-		detailTextStr = [[Settings sharedSettings] fontFamilyString];
-	} else if (indexPath.row == 1) {
-		textStr = @"Tamaño";
-		detailTextStr = [[Settings sharedSettings] fontSizeString];
-	} else if (indexPath.row == 2) {
-		textStr = @"Background";
-		detailTextStr = [[Settings sharedSettings] contentBackgroundString];
-	} else if (indexPath.row == 3) {
-		textStr = @"Ver Ejemplo";
+	if (indexPath.section == 1) {
+		if (indexPath.row == 0) {
+			textStr = @"Tipo";
+			detailTextStr = [[Settings sharedSettings] fontFamilyString];
+		} else if (indexPath.row == 1) {
+			textStr = @"Tamaño";
+			detailTextStr = [[Settings sharedSettings] fontSizeString];
+		} else if (indexPath.row == 2) {
+			textStr = @"Background";
+			detailTextStr = [[Settings sharedSettings] contentBackgroundString];
+		} else if (indexPath.row == 3) {
+			textStr = @"Ver Ejemplo";
+			detailTextStr = nil;
+		}
+	} else {
+		textStr = @"Sobre Rivera Labs";
 		detailTextStr = nil;
 	}
 	
@@ -204,6 +257,23 @@
 			selectController.title = @"Color del Background";
 		}
 		[self.navigationController pushViewController:selectController animated:YES];
+	} else if (indexPath.section == 2) {
+		NSArray *toRecipients = nil;
+		NSString *subjectStr = nil;
+		NSString *bodyStr = nil;
+		if (indexPath.row == 0) {
+			subjectStr = @"Te Recomiendo el App Leyes de Puerto Rico para iPhone, iPod touch y iPad";
+			bodyStr =
+				@"Estoy usando el app Leyes de Puerto Rico. Lo puedes bajar buscando "
+				@"\"Leyes de Puerto Rico\" en el App Store.  Visita http://riveralabs.com/leyes/ para más información.";
+		} else {
+			toRecipients = [NSArray arrayWithObject:@"apps@riveralabs.com"];
+			subjectStr = @"Enviar Sugerencia - Leyes de Puerto Rico";
+			bodyStr = @"He estado usando el app Leyes de Puerto Rico y me gustaría enviar las siguientes sugerencias.<br />";
+		}
+		[self displayComposerSheetTo:toRecipients subject:subjectStr body:bodyStr];
+	} else if (indexPath.section == 3) {
+		
 	}
 }
 
@@ -221,6 +291,13 @@
 	NSString *title = nil;
 	if (section == 1) {
 		title = @"Fonts visibles en el contenido.";
+	} else if (section == 2) {
+		title = @"Envianos sugerencias sobre mejoras o leyes que deseas que incluyamos.";
+	} else if (section == 3) {
+		title = [NSString stringWithFormat:
+				 @"Leyes de Puerto Rico %@\n"
+				 @"Copyright © 2012; Rivera Labs",
+				 [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
 	}
 	return title;
 }
@@ -235,6 +312,49 @@
 		[Settings sharedSettings].fontSizeType = controller.currentIndex;
 	} else if (controller.selectID == kContentBackgroundControllerTag) {
 		[Settings sharedSettings].contentBackgroundType = controller.currentIndex;
+	}
+}
+
+#pragma mark - MFMailComposeViewController Delegate
+
+// Dismisses the email composition interface when users tap Cancel or Send.
+// Proceeds to update the message field with the result of the operation.
+- (void)mailComposeController:(MFMailComposeViewController *)controller
+		  didFinishWithResult:(MFMailComposeResult)result
+						error:(NSError*)error
+{	
+	NSString *errorString = nil;
+	
+	BOOL showAlert = NO;
+	// Notifies users about errors associated with the interface
+	switch (result)  {
+		case MFMailComposeResultCancelled:
+			break;
+		case MFMailComposeResultSaved:
+			break;
+		case MFMailComposeResultSent:
+			break;
+		case MFMailComposeResultFailed:
+			errorString = [NSString stringWithFormat:@"E-mail failed: %@", 
+						   [error localizedDescription]];
+			showAlert = YES;
+			break;
+		default:
+			errorString = [NSString stringWithFormat:@"E-mail was not sent: %@", 
+						   [error localizedDescription]];
+			showAlert = YES;
+			break;
+	}
+	
+	[self dismissModalViewControllerAnimated:YES];
+	
+	if (showAlert == YES) {
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"E-mail Error"
+														message:errorString
+													   delegate:self
+											  cancelButtonTitle:@"OK"
+											  otherButtonTitles: nil];
+		[alert show];
 	}
 }
 
