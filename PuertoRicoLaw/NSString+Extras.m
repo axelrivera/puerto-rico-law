@@ -26,7 +26,12 @@
 							[settings fontSizeStylePoints]];
 	
 	return [NSString stringWithFormat:
-			@"<html><head>%@</head><body><h2>%@</h2>%@</body></html>",
+			@"<html>"
+			@"<head>"
+			@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />"
+			@"%@"
+			@"</head>"
+			@"<body><h2>%@</h2>%@</body></html>",
 			stylesheet,
 			title,
 			body];

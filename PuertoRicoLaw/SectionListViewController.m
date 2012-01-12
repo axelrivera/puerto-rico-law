@@ -191,7 +191,7 @@
 
 - (void)clearCurrentSection
 {
-	
+	[self goHomeAnimated:NO];
 }
 
 #pragma mark - Table view data source

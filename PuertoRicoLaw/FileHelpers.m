@@ -18,6 +18,11 @@ NSString *pathInDocumentDirectory(NSString *fileName)
 	return [documentDirectory stringByAppendingPathComponent:fileName];
 }
 
+NSString *pathInTemporaryDirectory(NSString *fileName)
+{
+	return [NSTemporaryDirectory() stringByAppendingPathComponent:fileName];
+}
+
 NSString *mainSectionPathForBookName(NSString *bookName)
 {
 	NSString *fileName = [NSString stringWithFormat:@"%@_mainSection.data", bookName];

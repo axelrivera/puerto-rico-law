@@ -54,6 +54,7 @@
 	[super layoutSubviews];
 
 #define kTextWidth 70.0
+#define kTextIpadWidth 100.0
 #define kTextDetailHeight 30.0
 #define kSubtitleTextHeight 16.0
 	
@@ -61,27 +62,32 @@
 	CGRect detailFrame;
 	CGRect subtitleFrame;
 	
+	CGFloat textWidth = kTextWidth;
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		textWidth = kTextIpadWidth;
+	}
+	
 	if (self.subtitleTextLabel == nil) {
 		textFrame = CGRectMake(10.0,
 							   (self.contentView.frame.size.height / 2.0) - (kTextDetailHeight / 2.0),
-							   kTextWidth,
+							   textWidth,
 							   kTextDetailHeight);
 		
-		detailFrame = CGRectMake(10.0 + kTextWidth + 10.0,
+		detailFrame = CGRectMake(10.0 + textWidth + 10.0,
 								 (self.contentView.frame.size.height / 2.0) - (kTextDetailHeight / 2.0),
-								 self.contentView.frame.size.width - (10.0 + kTextWidth + 10.0 + 10.0),
+								 self.contentView.frame.size.width - (10.0 + textWidth + 10.0 + 10.0),
 								 kTextDetailHeight);
 		
 		subtitleFrame = CGRectZero;
 	} else {
 		textFrame = CGRectMake(10.0,
 							   10.0,
-							   kTextWidth,
+							   textWidth,
 							   kTextDetailHeight);
 		
-		detailFrame = CGRectMake(10.0 + kTextWidth + 5.0,
+		detailFrame = CGRectMake(10.0 + textWidth + 5.0,
 								 10.0,
-								 self.contentView.frame.size.width - (10.0 + kTextWidth + 5.0 + 10.0),
+								 self.contentView.frame.size.width - (10.0 + textWidth + 5.0 + 10.0),
 								 kTextDetailHeight);
 		
 		subtitleFrame = CGRectMake(10.0,

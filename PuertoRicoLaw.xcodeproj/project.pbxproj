@@ -40,13 +40,13 @@
 		165DCF0514A409300045F8EC /* star_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = 165DCF0114A409300045F8EC /* star_cell.png */; };
 		165DCF0614A409300045F8EC /* star_cell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 165DCF0214A409300045F8EC /* star_cell@2x.png */; };
 		1663261D14A65249003279C3 /* SectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1663261C14A65249003279C3 /* SectionTableViewCell.m */; };
+		1663802114BE154400A1882A /* Constitucion.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1663802014BE154400A1882A /* Constitucion.plist */; };
 		1671F10F14AF91FA0019B181 /* UIViewController+Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671F10E14AF91FA0019B181 /* UIViewController+Section.m */; };
 		1671F11214AF9F290019B181 /* SectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671F11114AF9F290019B181 /* SectionManager.m */; };
 		1673F16A14ACAED90065126B /* TableSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1673F16814ACAED90065126B /* TableSelectViewController.m */; };
 		1673F16B14ACAED90065126B /* TableSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1673F16914ACAED90065126B /* TableSelectViewController.xib */; };
 		1673F17814ACDF1D0065126B /* ContentPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1673F17614ACDF1D0065126B /* ContentPreviewViewController.m */; };
 		1673F17914ACDF1D0065126B /* ContentPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1673F17714ACDF1D0065126B /* ContentPreviewViewController.xib */; };
-		1679FC7114BC9E3400656291 /* Constitucion.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1679FC7014BC9E3400656291 /* Constitucion.plist */; };
 		1679FC7314BC9E3E00656291 /* Evidencia.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1679FC7214BC9E3E00656291 /* Evidencia.plist */; };
 		1679FC7514BC9E4800656291 /* ProcedimientoCivil.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1679FC7414BC9E4800656291 /* ProcedimientoCivil.plist */; };
 		167EF1D714A23DAA0058F8D1 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167EF1D614A23DAA0058F8D1 /* BookViewController.m */; };
@@ -119,6 +119,7 @@
 		165DCF0214A409300045F8EC /* star_cell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_cell@2x.png"; sourceTree = "<group>"; };
 		1663261B14A65249003279C3 /* SectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionTableViewCell.h; sourceTree = "<group>"; };
 		1663261C14A65249003279C3 /* SectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionTableViewCell.m; sourceTree = "<group>"; };
+		1663802014BE154400A1882A /* Constitucion.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Constitucion.plist; sourceTree = "<group>"; };
 		1671F10B14AF813B0019B181 /* SectionSelectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionSelectionDelegate.h; sourceTree = "<group>"; };
 		1671F10D14AF91FA0019B181 /* UIViewController+Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Section.h"; sourceTree = "<group>"; };
 		1671F10E14AF91FA0019B181 /* UIViewController+Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Section.m"; sourceTree = "<group>"; };
@@ -130,7 +131,6 @@
 		1673F17514ACDF1D0065126B /* ContentPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentPreviewViewController.h; sourceTree = "<group>"; };
 		1673F17614ACDF1D0065126B /* ContentPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentPreviewViewController.m; sourceTree = "<group>"; };
 		1673F17714ACDF1D0065126B /* ContentPreviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentPreviewViewController.xib; sourceTree = "<group>"; };
-		1679FC7014BC9E3400656291 /* Constitucion.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Constitucion.plist; sourceTree = "<group>"; };
 		1679FC7214BC9E3E00656291 /* Evidencia.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Evidencia.plist; sourceTree = "<group>"; };
 		1679FC7414BC9E4800656291 /* ProcedimientoCivil.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ProcedimientoCivil.plist; sourceTree = "<group>"; };
 		167EF1D514A23DAA0058F8D1 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
@@ -268,9 +268,9 @@
 		164DF01014A2948F0087CBD2 /* Books */ = {
 			isa = PBXGroup;
 			children = (
+				1663802014BE154400A1882A /* Constitucion.plist */,
 				1679FC7414BC9E4800656291 /* ProcedimientoCivil.plist */,
 				1679FC7214BC9E3E00656291 /* Evidencia.plist */,
-				1679FC7014BC9E3400656291 /* Constitucion.plist */,
 				164DF08514A294910087CBD2 /* PuertoRicoLawBooks.plist */,
 			);
 			path = Books;
@@ -491,9 +491,9 @@
 				163E2B2714B33FAF008C50DE /* SearchViewController.xib in Resources */,
 				161B5D6814B3598400700D86 /* orgchart.png in Resources */,
 				161B5D6914B3598400700D86 /* orgchart@2x.png in Resources */,
-				1679FC7114BC9E3400656291 /* Constitucion.plist in Resources */,
 				1679FC7314BC9E3E00656291 /* Evidencia.plist in Resources */,
 				1679FC7514BC9E4800656291 /* ProcedimientoCivil.plist in Resources */,
+				1663802114BE154400A1882A /* Constitucion.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

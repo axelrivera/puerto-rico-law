@@ -18,5 +18,6 @@
 - (void)reloadControllerWithSection:(Section *)section;
 
 - (void)goHome;
+- (void)goHomeAnimated:(BOOL)animated;
 
 @end

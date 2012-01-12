@@ -16,6 +16,9 @@
 #import "NSString+Extras.h"
 #import "SectionManager.h"
 #import "UIWebView+Highlight.h"
+#import "FileHelpers.h"
+
+#define kContentTemporaryFileName @"sectionContent.html"
 
 @implementation SectionContentViewController
 
@@ -87,7 +90,7 @@
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
 	[super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
-	[self.webView setNeedsDisplay];
+	[self.webView reload];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -142,6 +145,11 @@
 	return [NSString stringWithFormat:@"<html><body>%@%@%@</body></html>", headerStr, contentStr, aboutStr];
 }
 
+- (NSString *)pathForContentFile
+{
+	return pathInTemporaryDirectory(kContentTemporaryFileName);
+}
+
 #pragma mark - Private Methods
 
 - (void)refresh
@@ -149,9 +157,7 @@
 	if ([self.manager.actionSheet isVisible]) {
 		[self.manager.actionSheet dismissWithClickedButtonIndex:-1 animated:NO];
 	}
-	
-	self.webView.scrollView.indicatorStyle = [[Settings sharedSettings] scrollViewIndicator];
-	
+		
 	if (self.manager.section == nil) {
 		self.navigationItem.rightBarButtonItem.enabled = NO;
 		self.title = @"Leyes Puerto Rico";
@@ -166,7 +172,18 @@
 	self.title = self.manager.section.label;
 	if (self.contentStr == nil) {
 		self.contentStr = [self.manager.section content];
-		[self.webView loadHTMLString:[self htmlStringForSection] baseURL:nil];
+		
+		NSURL *url = [[NSURL alloc] initWithString:[self pathForContentFile]];
+		[[self htmlStringForSection] writeToFile:[self pathForContentFile]
+									 atomically:YES
+									   encoding:NSUTF8StringEncoding
+										  error:nil];
+		NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:url
+														 cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
+													 timeoutInterval:30];
+		[self.webView loadRequest:urlRequest];
+	} else {
+		[self.webView reload];
 	}
 	[self.manager checkItemsAndUpdateFavoriteIndex];
 	self.navigationController.toolbarHidden = NO;

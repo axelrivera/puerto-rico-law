@@ -273,6 +273,9 @@
 	Book *book = [bookData_.books objectAtIndex:indexPath.row];
 	
 	if (!tableView.isEditing) {
+		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+			[self.delegate clearCurrentSection];
+		}
 		[self loadBook:book];
 		return;
 	}

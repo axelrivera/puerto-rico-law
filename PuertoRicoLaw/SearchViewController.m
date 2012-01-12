@@ -167,8 +167,14 @@
 
 - (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
 {
+	//self.searchDataSource = nil;
+	//[controller.searchResultsTableView reloadData];
+}
+
+- (void)searchDisplayController:(UISearchDisplayController *)controller willShowSearchResultsTableView:(UITableView *)tableView
+{
 	self.searchDataSource = nil;
-	[controller.searchResultsTableView reloadData];
+	[tableView reloadData];
 }
 
 - (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller
@@ -182,7 +188,7 @@
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
-	return YES;
+	return NO;
 }
 
 

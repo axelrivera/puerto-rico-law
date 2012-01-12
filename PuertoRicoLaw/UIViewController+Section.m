@@ -129,17 +129,22 @@
 			[viewControllers addObject:sectionController];
 		}
 	}
-	[self.navigationController setViewControllers:(NSArray *)viewControllers animated:YES];
+	[self.navigationController setViewControllers:(NSArray *)viewControllers animated:NO];
 }
 
 - (void)goHome
 {
+	[self goHomeAnimated:YES];
+}
+
+- (void)goHomeAnimated:(BOOL)animated
+{
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		[self.navigationController popToRootViewControllerAnimated:YES];
+		[self.navigationController popToRootViewControllerAnimated:animated];
 		return;
 	}
 	UIViewController *controller = [[self.navigationController viewControllers] objectAtIndex:1];
-	[self.navigationController popToViewController:controller animated:YES];
+	[self.navigationController popToViewController:controller animated:animated];
 }
 
 @end
