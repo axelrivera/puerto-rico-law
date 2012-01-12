@@ -311,15 +311,17 @@
 		}
 	} else {
 		if ([self.controller isKindOfClass:[SectionContentViewController class]] && buttonIndex == 1) {
-			NSString *subjectStr = [NSString stringWithFormat:@"Leyes de Puerto Rico - %@", self.section.book.title];
+			NSString *subjectStr = [NSString stringWithFormat:@"Leyes Puerto Rico - %@ - %@",
+									self.section.book.shortTitle,
+									self.section.title];
 			NSString *bodyStr = [self.controller htmlStringForEmail];
 			[self displayComposerSheetTo:nil subject:subjectStr body:bodyStr];
 		} else if ([self.controller isKindOfClass:[SectionContentViewController class]] && buttonIndex == 2) {
-			NSString *subjectStr = [NSString stringWithFormat:@"Reportar Error - Leyes de Puerto Rico"];
+			NSString *subjectStr = [NSString stringWithFormat:@"Reportar Error - Leyes Puerto Rico"];
 			NSString *htmlStr = [self.controller htmlStringForEmail];
 			NSString *headerStr = 
 			@"<br />---<br />He encontrado un error la siguiente sección del app "
-			@"Leyes de Puerto Rico y deseo reportarlo.<br />";
+			@"Leyes Puerto Rico y deseo reportarlo.<br />";
 			NSString *bodyStr = [NSString stringWithFormat:@"%@%@", headerStr, htmlStr];
 			NSArray *toRecipients = [NSArray arrayWithObject:@"apps@riveralabs.com"];
 			[self displayComposerSheetTo:toRecipients subject:subjectStr body:bodyStr];

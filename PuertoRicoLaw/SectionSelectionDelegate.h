@@ -15,7 +15,7 @@
 					 dataSource:(NSArray *)data
 				siblingSections:(NSArray *)siblings
 			currentSiblingIndex:(NSInteger)index;
-- (void)refreshCurrentSection;
+- (void)enableMainView:(BOOL)enable;
 - (void)clearCurrentSection;
 
 @end

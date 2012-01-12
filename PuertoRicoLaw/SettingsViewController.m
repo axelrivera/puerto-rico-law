@@ -262,14 +262,14 @@
 		NSString *subjectStr = nil;
 		NSString *bodyStr = nil;
 		if (indexPath.row == 0) {
-			subjectStr = @"Te Recomiendo el App Leyes de Puerto Rico para iPhone, iPod touch y iPad";
+			subjectStr = @"Te Recomiendo el App Leyes Puerto Rico para iPhone, iPod touch y iPad";
 			bodyStr =
-				@"Estoy usando el app Leyes de Puerto Rico. Lo puedes bajar buscando "
-				@"\"Leyes de Puerto Rico\" en el App Store.  Visita http://riveralabs.com/leyes/ para más información.";
+				@"Estoy usando el app Leyes Puerto Rico. Lo puedes bajar buscando "
+				@"\"Leyes Puerto Rico\" en el App Store.  Visita http://riveralabs.com/leyes/ para más información.";
 		} else {
 			toRecipients = [NSArray arrayWithObject:@"apps@riveralabs.com"];
-			subjectStr = @"Enviar Sugerencia - Leyes de Puerto Rico";
-			bodyStr = @"He estado usando el app Leyes de Puerto Rico y me gustaría enviar las siguientes sugerencias.<br />";
+			subjectStr = @"Enviar Sugerencia - Leyes Puerto Rico";
+			bodyStr = @"He estado usando el app Leyes Puerto Rico y me gustaría enviar las siguientes sugerencias.<br />";
 		}
 		[self displayComposerSheetTo:toRecipients subject:subjectStr body:bodyStr];
 	} else if (indexPath.section == 3) {
@@ -295,7 +295,7 @@
 		title = @"Envianos sugerencias sobre mejoras o leyes que deseas que incluyamos.";
 	} else if (section == 3) {
 		title = [NSString stringWithFormat:
-				 @"Leyes de Puerto Rico %@\n"
+				 @"Leyes Puerto Rico %@\n"
 				 @"Copyright © 2012; Rivera Labs",
 				 [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
 	}

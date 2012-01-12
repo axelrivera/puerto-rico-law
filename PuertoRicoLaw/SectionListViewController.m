@@ -184,9 +184,11 @@
 	[self refresh];
 }
 
-- (void)refreshCurrentSection
+- (void)enableMainView:(BOOL)enable
 {
-	
+	self.navigationController.view.userInteractionEnabled = enable;
+	self.navigationController.navigationItem.leftBarButtonItem.enabled = enable;
+	self.navigationController.navigationItem.rightBarButtonItem.enabled = enable;
 }
 
 - (void)clearCurrentSection

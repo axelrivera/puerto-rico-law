@@ -132,6 +132,7 @@
 	Section *section = bookData_.currentBook.mainSection;
 	
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		[self.delegate enableMainView:YES];
 		[self.delegate sectionSelectionChanged:section dataSource:section.children siblingSections:nil currentSiblingIndex:-1];
 	} else {
 		SectionListViewController *sectionController =
@@ -190,6 +191,7 @@
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:favoritesController];
 	
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		[self.delegate enableMainView:NO];
 		[self.navigationController pushViewController:favoritesController animated:YES];
 	} else {
 		[self presentModalViewController:navigationController animated:YES];
@@ -204,6 +206,7 @@
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:settingsController];
 	
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		[self.delegate enableMainView:NO];
 		[self.navigationController pushViewController:settingsController animated:YES];
 	} else {
 		[self presentModalViewController:navigationController animated:YES];
@@ -333,6 +336,7 @@
 	
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 		[self.navigationController popViewControllerAnimated:YES];
+		[self.delegate enableMainView:YES];
 	} else {
 		[self dismissModalViewControllerAnimated:YES];
 	}
@@ -367,6 +371,7 @@
 			[rightController refresh];
 		}
 		[self.navigationController popViewControllerAnimated:YES];
+		[self.delegate enableMainView:YES];
 	} else {
 		[self dismissModalViewControllerAnimated:YES];
 	}

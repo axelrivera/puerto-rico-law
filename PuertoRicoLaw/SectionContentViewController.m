@@ -139,7 +139,7 @@
 		headerStr = [NSString stringWithFormat:@"<p>%@</p>", tmpStr];
 	}
 	
-	NSString *aboutStr = @"<p>----------<br/>Esta información fue generada con el App Leyes de Puerto Rico para iPhone, "
+	NSString *aboutStr = @"<p>----------<br/>Esta información fue generada con el App Leyes Puerto Rico para iPhone, "
 	@"iPod touch y iPad. Visite http://riveralabs.com/leyes/ para más información.</p>";
 	
 	return [NSString stringWithFormat:@"<html><body>%@%@%@</body></html>", headerStr, contentStr, aboutStr];
