@@ -16,7 +16,8 @@
 @class SectionListViewController;
 @class SectionContentViewController;
 
-@interface SectionManager : NSObject <FavoritesViewControllerDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
+@interface SectionManager : NSObject
+<FavoritesViewControllerDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
 
 @property (strong, nonatomic) Section *section;
 @property (strong, nonatomic) NSArray *siblings;

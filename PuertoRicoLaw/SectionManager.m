@@ -171,6 +171,15 @@
 
 - (void)showFavorites:(id)sender
 {
+	if ([self.favoritesPopover isPopoverVisible]) {
+		[self.favoritesPopover dismissPopoverAnimated:YES];
+		return;
+	}
+	
+	if ([self.actionSheet isVisible]) {
+		[self.actionSheet dismissWithClickedButtonIndex:-1 animated:NO];
+	}
+	
 	FavoritesViewController *favoritesController = [[FavoritesViewController alloc] initWithFavoritesType:FavoritesTypeSection];
 	favoritesController.delegate = self;
 	favoritesController.favoritesDataSource = self.section.book.favorites;
@@ -211,8 +220,12 @@
 - (void)showOptions:(id)sender
 {
 	if ([self.actionSheet isVisible]) {
-		[self.actionSheet dismissWithClickedButtonIndex:-1 animated:NO];
+		[self.actionSheet dismissWithClickedButtonIndex:-1 animated:YES];
 		return;
+	}
+
+	if ([self.favoritesPopover isPopoverVisible]) {
+		[self.favoritesPopover dismissPopoverAnimated:NO];
 	}
 	
 	self.actionSheet = [[UIActionSheet alloc] init];
