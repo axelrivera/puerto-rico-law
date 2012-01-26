@@ -46,6 +46,34 @@
 			<key>bookLastUpdate</key>
 			<date>2012-01-09T04:00:00Z</date>
 		</dict>
+		<dict>
+			<key>bookName</key>
+			<string>Notarial</string>
+			<key>bookShortTitle</key>
+			<string>Notarial</string>
+			<key>bookTitle</key>
+			<string>Ley Notarial de Puerto Rico</string>
+			<key>bookFavoritesTitle</key>
+			<string>Ley Notarial</string>
+			<key>bookDescription</key>
+			<string>Fecha de Enmendada</string>
+			<key>bookLastUpdate</key>
+			<date>2012-01-25T04:00:00Z</date>
+		</dict>
+		<dict>
+			<key>bookName</key>
+			<string>ProcedimientoAdministrativoUniforme</string>
+			<key>bookShortTitle</key>
+			<string>Procedimiento Administrativo</string>
+			<key>bookTitle</key>
+			<string>Procedimiento Administrativo Uniforme</string>
+			<key>bookFavoritesTitle</key>
+			<string>Procedimiento Administrativo</string>
+			<key>bookDescription</key>
+			<string>Fecha de Enmendada</string>
+			<key>bookLastUpdate</key>
+			<date>2012-01-26T04:00:00Z</date>
+		</dict>
 	</array>
 </dict>
 </plist>

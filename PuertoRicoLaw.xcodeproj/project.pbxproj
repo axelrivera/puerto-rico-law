@@ -67,6 +67,7 @@
 		169151A214A2BF3B001E59C2 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519B14A2BF3B001E59C2 /* iTunesArtwork.png */; };
 		169151A714A2C11D001E59C2 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 169151A514A2C11D001E59C2 /* FavoritesViewController.m */; };
 		169151A814A2C11D001E59C2 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169151A614A2C11D001E59C2 /* FavoritesViewController.xib */; };
+		169B8DE014D1DBF300D337A7 /* ProcedimientoAdministrativoUniforme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 169B8DDF14D1DBF300D337A7 /* ProcedimientoAdministrativoUniforme.plist */; };
 		16D8D96514A8E1CE00E88215 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D8D96414A8E1CE00E88215 /* MessageUI.framework */; };
 		16DD4CA414A10D200063163D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DD4CA314A10D200063163D /* UIKit.framework */; };
 		16DD4CA614A10D200063163D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DD4CA514A10D200063163D /* Foundation.framework */; };
@@ -78,6 +79,7 @@
 		16DD4DAC14A1569F0063163D /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DD4DAB14A1569F0063163D /* Section.m */; };
 		16DD4DB114A16D1E0063163D /* BookData.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DD4DB014A16D1E0063163D /* BookData.m */; };
 		16DFA25014B4C7FB00517778 /* UIWebView+Highlight.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DFA24F14B4C7FB00517778 /* UIWebView+Highlight.m */; };
+		16E039FB14D076590003CCC3 /* Notarial.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16E039FA14D076590003CCC3 /* Notarial.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +159,7 @@
 		169151A414A2C11D001E59C2 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
 		169151A514A2C11D001E59C2 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
 		169151A614A2C11D001E59C2 /* FavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
+		169B8DDF14D1DBF300D337A7 /* ProcedimientoAdministrativoUniforme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ProcedimientoAdministrativoUniforme.plist; sourceTree = "<group>"; };
 		16D8D96414A8E1CE00E88215 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		16DD4C9F14A10D200063163D /* PuertoRicoLaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuertoRicoLaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16DD4CA314A10D200063163D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -178,6 +181,7 @@
 		16DFA24B14B4C79C00517778 /* SearchWebView.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = SearchWebView.js; sourceTree = "<group>"; };
 		16DFA24E14B4C7FB00517778 /* UIWebView+Highlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Highlight.h"; sourceTree = "<group>"; };
 		16DFA24F14B4C7FB00517778 /* UIWebView+Highlight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Highlight.m"; sourceTree = "<group>"; };
+		16E039FA14D076590003CCC3 /* Notarial.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Notarial.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +274,8 @@
 		164DF01014A2948F0087CBD2 /* Books */ = {
 			isa = PBXGroup;
 			children = (
+				169B8DDF14D1DBF300D337A7 /* ProcedimientoAdministrativoUniforme.plist */,
+				16E039FA14D076590003CCC3 /* Notarial.plist */,
 				1663802014BE154400A1882A /* Constitucion.plist */,
 				1679FC7414BC9E4800656291 /* ProcedimientoCivil.plist */,
 				1679FC7214BC9E3E00656291 /* Evidencia.plist */,
@@ -498,6 +504,8 @@
 				1679FC7514BC9E4800656291 /* ProcedimientoCivil.plist in Resources */,
 				1663802114BE154400A1882A /* Constitucion.plist in Resources */,
 				1661C59B14BF333300C5603F /* Settings.bundle in Resources */,
+				16E039FB14D076590003CCC3 /* Notarial.plist in Resources */,
+				169B8DE014D1DBF300D337A7 /* ProcedimientoAdministrativoUniforme.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
