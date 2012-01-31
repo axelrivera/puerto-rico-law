@@ -17,6 +17,7 @@
 
 @implementation SectionTableViewCell
 
+@synthesize subtextLabel = subtextLabel_;
 @synthesize subtitleTextLabel = subtitleTextLabel_;
 
 - (id)initWithRLStyle:(RLTableCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -27,16 +28,30 @@
 		self.textLabel.font = [UIFont boldSystemFontOfSize:12.0];
 		self.textLabel.minimumFontSize = 10.0;
 		self.textLabel.adjustsFontSizeToFitWidth = YES;
+		self.textLabel.textAlignment = UITextAlignmentLeft;
 		self.detailTextLabel.font = [UIFont boldSystemFontOfSize:13.0];
 		self.detailTextLabel.numberOfLines = 2.0;
 		self.detailTextLabel.lineBreakMode = UILineBreakModeTailTruncation;
+		
+		subtextLabel_ = [[UILabel alloc] initWithFrame:CGRectZero];
+		subtextLabel_.font = [UIFont systemFontOfSize:12.0];
+		subtextLabel_.minimumFontSize = 10.0;
+		subtextLabel_.adjustsFontSizeToFitWidth = YES;
+		subtextLabel_.textAlignment = UITextAlignmentRight;
+		subtextLabel_.backgroundColor = [UIColor clearColor];
+		subtextLabel_.textColor = [UIColor darkGrayColor];
+		subtextLabel_.highlightedTextColor = [UIColor whiteColor];
+		subtextLabel_.numberOfLines = 1;
+		subtextLabel_.lineBreakMode = UILineBreakModeTailTruncation;
+		subtextLabel_.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
+		[self.contentView addSubview:subtextLabel_];
 		
 		subtitleTextLabel_ = nil;
 		if (style == RLTableCellStyleSectionSubtitle) {
 			subtitleTextLabel_ = [[UILabel alloc] initWithFrame:CGRectZero];
 			subtitleTextLabel_.font = [UIFont italicSystemFontOfSize:12.0]; 
 			subtitleTextLabel_.textAlignment = UITextAlignmentLeft;
-			subtitleTextLabel_.backgroundColor = [UIColor whiteColor];
+			subtitleTextLabel_.backgroundColor = [UIColor clearColor];
 			subtitleTextLabel_.textColor = [UIColor lightGrayColor];
 			subtitleTextLabel_.highlightedTextColor = [UIColor whiteColor];
 			subtitleTextLabel_.numberOfLines = 1;
@@ -53,57 +68,44 @@
 {
 	[super layoutSubviews];
 
-#define kTextWidth 70.0
-#define kTextIpadWidth 100.0
+#define kTextHeight 14.0
 #define kTextDetailHeight 30.0
 #define kSubtitleTextHeight 16.0
 	
 	CGRect textFrame;
 	CGRect detailFrame;
-	CGRect subtitleFrame;
+	CGRect subtextFrame;
 	
-	CGFloat textWidth = kTextWidth;
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		textWidth = kTextIpadWidth;
-	}
+	CGFloat contentWidth = self.contentView.frame.size.width;
 	
-	if (self.subtitleTextLabel == nil) {
-		textFrame = CGRectMake(10.0,
-							   (self.contentView.frame.size.height / 2.0) - (kTextDetailHeight / 2.0),
-							   textWidth,
-							   kTextDetailHeight);
-		
-		detailFrame = CGRectMake(10.0 + textWidth + 10.0,
-								 (self.contentView.frame.size.height / 2.0) - (kTextDetailHeight / 2.0),
-								 self.contentView.frame.size.width - (10.0 + textWidth + 10.0 + 10.0),
-								 kTextDetailHeight);
-		
-		subtitleFrame = CGRectZero;
-	} else {
-		textFrame = CGRectMake(10.0,
-							   10.0,
-							   textWidth,
-							   kTextDetailHeight);
-		
-		detailFrame = CGRectMake(10.0 + textWidth + 5.0,
-								 10.0,
-								 self.contentView.frame.size.width - (10.0 + textWidth + 5.0 + 10.0),
-								 kTextDetailHeight);
-		
-		subtitleFrame = CGRectMake(10.0,
-								   10.0 + kTextDetailHeight,
-								   self.contentView.frame.size.width - (10.0 + 10.0),
-								   kSubtitleTextHeight);
-		
-	}
+	// Padding between textFrame and subtextFrame is 6.0. When positioning either one in the x-axis
+	// only 3.0 is used since we are using the center as the reference
+	textFrame = CGRectMake(10.0,
+						   7.0,
+						   (contentWidth / 2.0) - (10.0 + 3.0),
+						   kTextHeight);
+	
+	subtextFrame = CGRectMake(10.0 + textFrame.size.width + 6.0,
+							  7.0,
+							  (contentWidth / 2.0) - (10.0 + 3.0),
+							  kTextHeight);
+	
+	detailFrame = CGRectMake(10.0,
+							 7.0 + kTextHeight + 2.0,
+							 contentWidth - (10.0 + 10.0),
+							 kTextDetailHeight);
 	
 	self.textLabel.frame = textFrame;	
 	self.detailTextLabel.frame = detailFrame;
+	self.subtextLabel.frame = subtextFrame;
 	
-	if (!CGRectEqualToRect(subtitleFrame, CGRectZero)) {
+	if (self.subtitleTextLabel != nil) {
+		CGRect subtitleFrame = CGRectMake(10.0,
+										  7.0 + kTextHeight + 2.0 + kTextDetailHeight,
+										  contentWidth - (10.0 + 10.0),
+										  kSubtitleTextHeight);
 		self.subtitleTextLabel.frame = subtitleFrame;
 	}
-
 }
 
 @end

@@ -15,6 +15,7 @@
 @property (strong, nonatomic) NSString *sectionID;
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *label;
+@property (strong, nonatomic) NSString *sublabel;
 @property (strong, nonatomic) NSString *content;
 @property (strong, nonatomic) NSArray *children;
 @property (unsafe_unretained, nonatomic) Book *book;

@@ -15,6 +15,7 @@ typedef enum {
 
 @interface SectionTableViewCell : UITableViewCell
 
+@property (strong, nonatomic) UILabel *subtextLabel;
 @property (strong, nonatomic) UILabel *subtitleTextLabel;
 
 - (id)initWithRLStyle:(RLTableCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;

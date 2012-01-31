@@ -29,6 +29,7 @@
 #define kSectionIDKey @"sectionID"
 #define kSectionTitleKey @"sectionTitle"
 #define kSectionLabelKey @"sectionLabel"
+#define kSectionSublabelKey @"sectionSublabel"
 #define kSectionContentKey @"sectionContent"
 #define kSectionChildrenKey @"sectionChildren"
 

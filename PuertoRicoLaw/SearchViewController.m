@@ -108,6 +108,7 @@
 	Section *section = [self.searchDataSource objectAtIndex:indexPath.row];
 	
 	cell.textLabel.text = section.label;
+	cell.subtextLabel.text = section.sublabel;
 	cell.detailTextLabel.text = section.title;
 	if (section.parent == nil) {
 		cell.subtitleTextLabel.text = section.book.title;
@@ -145,7 +146,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	return 68.0;
+	return 76.0;
 }
 
 #pragma mark - UISearchBar Delegate

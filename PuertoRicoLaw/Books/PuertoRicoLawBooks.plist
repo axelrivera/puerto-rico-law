@@ -74,6 +74,20 @@
 			<key>bookLastUpdate</key>
 			<date>2012-01-26T04:00:00Z</date>
 		</dict>
+		<dict>
+			<key>bookName</key>
+			<string>ViolenciaDomestica</string>
+			<key>bookShortTitle</key>
+			<string>Ley 54</string>
+			<key>bookTitle</key>
+			<string>Ley Núm. 54 Contra la Violencia Doméstica</string>
+			<key>bookFavoritesTitle</key>
+			<string>Violencia Doméstica</string>
+			<key>bookDescription</key>
+			<string>Fecha de Enmendada</string>
+			<key>bookLastUpdate</key>
+			<date>2012-01-31T04:00:00Z</date>
+		</dict>
 	</array>
 </dict>
 </plist>

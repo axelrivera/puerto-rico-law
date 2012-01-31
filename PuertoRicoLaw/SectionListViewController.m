@@ -70,6 +70,8 @@
 																				 action:@selector(searchAction:)];
 	}
 	
+	self.tableView.rowHeight = 60.0;
+	
 	[self setToolbarItems:[self sectionToolbarItems] animated:NO];
 	self.manager.prevItem = [self.toolbarItems objectAtIndex:kToolbarItemPosition2];
 	self.manager.nextItem = [self.toolbarItems objectAtIndex:kToolbarItemPosition3];
@@ -217,6 +219,7 @@
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 	cell.textLabel.text = section.label;
+	cell.subtextLabel.text = section.sublabel;
 	cell.detailTextLabel.text = section.title;
     
     return cell;
