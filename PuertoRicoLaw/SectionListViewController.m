@@ -70,7 +70,7 @@
 																				 action:@selector(searchAction:)];
 	}
 	
-	self.tableView.rowHeight = 60.0;
+	self.tableView.rowHeight = 62.0;
 	
 	[self setToolbarItems:[self sectionToolbarItems] animated:NO];
 	self.manager.prevItem = [self.toolbarItems objectAtIndex:kToolbarItemPosition2];

@@ -25,7 +25,7 @@
 	// The Style will be ignored
     self = [super initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:reuseIdentifier];
     if (self) {
-		self.textLabel.font = [UIFont boldSystemFontOfSize:12.0];
+		self.textLabel.font = [UIFont boldSystemFontOfSize:13.0];
 		self.textLabel.minimumFontSize = 10.0;
 		self.textLabel.adjustsFontSizeToFitWidth = YES;
 		self.textLabel.textAlignment = UITextAlignmentLeft;
@@ -34,7 +34,7 @@
 		self.detailTextLabel.lineBreakMode = UILineBreakModeTailTruncation;
 		
 		subtextLabel_ = [[UILabel alloc] initWithFrame:CGRectZero];
-		subtextLabel_.font = [UIFont systemFontOfSize:12.0];
+		subtextLabel_.font = [UIFont systemFontOfSize:13.0];
 		subtextLabel_.minimumFontSize = 10.0;
 		subtextLabel_.adjustsFontSizeToFitWidth = YES;
 		subtextLabel_.textAlignment = UITextAlignmentRight;
@@ -68,9 +68,10 @@
 {
 	[super layoutSubviews];
 
-#define kTextHeight 14.0
+#define kTextHeight 16.0
 #define kTextDetailHeight 30.0
 #define kSubtitleTextHeight 16.0
+#define kVerticalOffset 2.0
 	
 	CGRect textFrame;
 	CGRect detailFrame;
@@ -91,7 +92,7 @@
 							  kTextHeight);
 	
 	detailFrame = CGRectMake(10.0,
-							 7.0 + kTextHeight + 2.0,
+							 7.0 + kTextHeight + kVerticalOffset,
 							 contentWidth - (10.0 + 10.0),
 							 kTextDetailHeight);
 	
@@ -101,7 +102,7 @@
 	
 	if (self.subtitleTextLabel != nil) {
 		CGRect subtitleFrame = CGRectMake(10.0,
-										  7.0 + kTextHeight + 2.0 + kTextDetailHeight,
+										  7.0 + kTextHeight + kVerticalOffset + kTextDetailHeight,
 										  contentWidth - (10.0 + 10.0),
 										  kSubtitleTextHeight);
 		self.subtitleTextLabel.frame = subtitleFrame;

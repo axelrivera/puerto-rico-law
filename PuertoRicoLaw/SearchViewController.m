@@ -146,7 +146,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	return 76.0;
+	return 80.0;
 }
 
 #pragma mark - UISearchBar Delegate
