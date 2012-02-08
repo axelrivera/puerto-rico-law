@@ -88,6 +88,48 @@
 			<key>bookLastUpdate</key>
 			<date>2012-01-31T04:00:00Z</date>
 		</dict>
+		<dict>
+			<key>bookName</key>
+			<string>ASUME</string>
+			<key>bookShortTitle</key>
+			<string>ASUME</string>
+			<key>bookTitle</key>
+			<string>Ley Orgánica de la Administración para el Sustento de Menores (ASUME)</string>
+			<key>bookFavoritesTitle</key>
+			<string>ASUME</string>
+			<key>bookDescription</key>
+			<string>Fecha de Enmendada</string>
+			<key>bookLastUpdate</key>
+			<date>2012-02-01T04:00:00Z</date>
+		</dict>
+		<dict>
+			<key>bookName</key>
+			<string>ProcedimientoCriminal</string>
+			<key>bookShortTitle</key>
+			<string>Procedimiento Criminal</string>
+			<key>bookTitle</key>
+			<string>Reglas de Procedimiento Criminal</string>
+			<key>bookFavoritesTitle</key>
+			<string>Procedimiento Criminal</string>
+			<key>bookDescription</key>
+			<string>Fecha de Enmendada</string>
+			<key>bookLastUpdate</key>
+			<date>2012-02-03T04:00:00Z</date>
+		</dict>
+		<dict>
+			<key>bookName</key>
+			<string>CodigoPenal</string>
+			<key>bookShortTitle</key>
+			<string>Código Penal</string>
+			<key>bookTitle</key>
+			<string>Código Penal</string>
+			<key>bookFavoritesTitle</key>
+			<string>Código Penal</string>
+			<key>bookDescription</key>
+			<string>Fecha de Enmendada</string>
+			<key>bookLastUpdate</key>
+			<date>2012-02-07T04:00:00Z</date>
+		</dict>
 	</array>
 </dict>
 </plist>

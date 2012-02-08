@@ -39,7 +39,7 @@
 		subtextLabel_.adjustsFontSizeToFitWidth = YES;
 		subtextLabel_.textAlignment = UITextAlignmentRight;
 		subtextLabel_.backgroundColor = [UIColor clearColor];
-		subtextLabel_.textColor = [UIColor darkGrayColor];
+		subtextLabel_.textColor = [UIColor lightGrayColor	];
 		subtextLabel_.highlightedTextColor = [UIColor whiteColor];
 		subtextLabel_.numberOfLines = 1;
 		subtextLabel_.lineBreakMode = UILineBreakModeTailTruncation;
