@@ -183,7 +183,7 @@
 	FavoritesViewController *favoritesController = [[FavoritesViewController alloc] initWithFavoritesType:FavoritesTypeSection];
 	favoritesController.delegate = self;
 	favoritesController.favoritesDataSource = self.section.book.favorites;
-	favoritesController.navigationItem.prompt = self.section.book.favoritesTitle;
+	favoritesController.navigationItem.prompt = self.section.book.shortTitle;
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:favoritesController];
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 		self.favoritesPopover = [[UIPopoverController alloc] initWithContentViewController:navigationController];

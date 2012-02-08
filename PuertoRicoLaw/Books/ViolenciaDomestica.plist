@@ -2,7 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>ViolenciaDomestica</key>
+	<key>Book</key>
+	<dict>
+		<key>bookDescription</key>
+		<string>Descripción debe ir aquí...</string>
+		<key>bookLastUpdate</key>
+		<date>2012-01-09T04:00:00Z</date>
+		<key>bookName</key>
+		<string>ViolenciaDomestica</string>
+		<key>bookNotes</key>
+		<string></string>
+		<key>bookShortTitle</key>
+		<string>Ley 54</string>
+		<key>bookTitle</key>
+		<string>Ley Núm. 54 Contra la Violencia Doméstica</string>
+		<key>bookVersion</key>
+		<integer>1</integer>
+	</dict>
+	<key>Sections</key>
 	<array>
 		<dict>
 			<key>sectionChildren</key>

@@ -16,9 +16,10 @@
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *shortTitle;
 @property (strong, nonatomic) NSString *bookDescription;
+@property (strong, nonatomic) NSString *bookNotes;
 @property (strong, nonatomic) NSDate *lastUpdate;
+@property (strong, nonatomic) NSNumber *bookVersion;
 @property (strong, nonatomic) Section *mainSection;
-@property (strong, nonatomic) NSString *favoritesTitle;
 @property (strong, nonatomic) NSMutableArray *favorites;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
@@ -31,6 +32,6 @@
 - (void)reloadSection:(Section *)section andParent:(Section *)parent;
 - (Section *)sectionInMainSectionMatchingSectionID:(NSString *)sectionID;
 - (NSArray *)searchMainSectionWithString:(NSString *)string titleOnly:(BOOL)titleOnly;
-- (BOOL)isOlderComparedToBook:(Book *)book;
+- (BOOL)isNewComparedToBook:(Book *)book;
 
 @end

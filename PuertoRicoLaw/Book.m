@@ -29,9 +29,10 @@
 @synthesize shortTitle = shortTitle_;
 @synthesize title = title_;
 @synthesize bookDescription = bookDescription_;
+@synthesize bookNotes = bookNotes_;
 @synthesize lastUpdate = lastUpdate_;
+@synthesize bookVersion = bookVersion_;
 @synthesize mainSection = mainSection_;
-@synthesize favoritesTitle = favoritesTitle_;
 @synthesize favorites = favorites_;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
@@ -44,8 +45,9 @@
 		self.shortTitle = [dictionary objectForKey:kBookShortTitleKey];
 		self.title = [dictionary objectForKey:kBookTitleKey];
 		self.bookDescription = [dictionary objectForKey:kBookDescriptionKey];
+		self.bookNotes = [dictionary objectForKey:kBookNotesKey];
 		self.lastUpdate = [dictionary objectForKey:kBookLastUpdateKey];
-		self.favoritesTitle = [dictionary objectForKey:kBookFavoritesTitleKey];
+		self.bookVersion = [dictionary objectForKey:kBookVersionKey];
 		self.mainSection = nil;
 		self.favorites = [[NSMutableArray alloc] initWithCapacity:0];
 	}
@@ -61,9 +63,10 @@
 		self.shortTitle = [decoder decodeObjectForKey:@"bookShortTitle"];
 		self.title = [decoder decodeObjectForKey:@"bookTitle"];
 		self.bookDescription = [decoder decodeObjectForKey:@"bookBookDescription"];
+		self.bookNotes = [decoder decodeObjectForKey:@"bookBookNotes"];
 		self.lastUpdate = [decoder decodeObjectForKey:@"bookLastUpdate"];
+		self.bookVersion = [decoder decodeObjectForKey:@"bookBookVersion"];
 		self.mainSection = [decoder decodeObjectForKey:@"bookMainSection"];
-		self.favoritesTitle = [decoder decodeObjectForKey:@"bookFavoritesTitle"];
 		self.favorites = [decoder decodeObjectForKey:@"bookFavorites"];
 	}
 	return self;
@@ -77,9 +80,10 @@
 	[encoder encodeObject:self.shortTitle forKey:@"bookShortTitle"];
 	[encoder encodeObject:self.title forKey:@"bookTitle"];
 	[encoder encodeObject:self.bookDescription forKey:@"bookBookDescription"];
+	[encoder encodeObject:self.bookNotes forKey:@"bookBookNotes"];
 	[encoder encodeObject:self.lastUpdate forKey:@"bookLastUpdate"];
+	[encoder encodeObject:self.bookVersion forKey:@"bookBookVersion"];
 	[encoder encodeObject:self.mainSection forKey:@"bookMainSection"];
-	[encoder encodeObject:self.favoritesTitle forKey:@"bookFavoritesTitle"];
 	[encoder encodeObject:self.favorites forKey:@"bookFavorites"];
 }
 
@@ -99,11 +103,11 @@
 	self.favorites = [[NSMutableArray alloc] initWithCapacity:0];
 	self.mainSection = [[Section alloc] initWithBook:self];
 	
-	NSString *plistPath = [[NSBundle mainBundle] pathForResource:self.name ofType:@"plist"]; 
+	NSString *bookPath = [[NSBundle mainBundle] pathForResource:self.name ofType:@"plist"]; 
     
     // Read in the plist file
-    NSDictionary *plistDictionary = [NSDictionary dictionaryWithContentsOfFile:plistPath];
-	NSArray *sectionArray = [plistDictionary objectForKey:self.name];
+    NSDictionary *bookDictionary = [NSDictionary dictionaryWithContentsOfFile:bookPath];
+	NSArray *sectionArray = [bookDictionary objectForKey:kBookSectionsKey];
 	
 	NSMutableArray *sections = [[NSMutableArray alloc] initWithCapacity:[sectionArray count]];
 	
@@ -229,10 +233,10 @@
 	return NO;
 }
 
-- (BOOL)isOlderComparedToBook:(Book *)book
+- (BOOL)isNewComparedToBook:(Book *)book
 {
-	if ([self.lastUpdate compare:book.lastUpdate] == NSOrderedAscending) {
-		return  YES;
+	if ([self.bookVersion integerValue] > [book.bookVersion integerValue]) {
+		return YES;
 	}
 	return NO;
 }

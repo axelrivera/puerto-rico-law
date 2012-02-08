@@ -17,14 +17,17 @@
 #define kToolbarItemPosition5 9
 
 #define kBookListFileName @"PuertoRicoLawBooks"
-#define kBookListKey @"bookList"
+#define kBookListKey @"Books"
+#define kBookInfoKey @"Book"
+#define kBookSectionsKey @"Sections"
 
 #define kBookNameKey @"bookName"
 #define kBookShortTitleKey @"bookShortTitle"
 #define kBookTitleKey @"bookTitle"
-#define kBookFavoritesTitleKey @"bookFavoritesTitle"
 #define kBookDescriptionKey @"bookDescription"
+#define kBookNotesKey @"bookNotes"
 #define kBookLastUpdateKey @"bookLastUpdate"
+#define kBookVersionKey @"bookVersion"
 
 #define kSectionIDKey @"sectionID"
 #define kSectionTitleKey @"sectionTitle"

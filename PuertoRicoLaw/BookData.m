@@ -71,16 +71,22 @@ static BookData *sharedBookData_ = nil;
 	NSArray *booksArray = [plistDictionary objectForKey:kBookListKey];
 	
 	NSInteger bookIndex;
-	for (NSDictionary *dictionary in booksArray) {
-		Book *dictionaryBook = [[Book alloc] initWithDictionary:dictionary];
-		bookIndex = [self indexOfBookWithName:dictionaryBook.name];
+	for (NSString *string in booksArray) {
+		NSString *dictionaryPath = [[NSBundle mainBundle] pathForResource:string ofType:@"plist"];
+		NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:dictionaryPath];
+		NSDictionary *bookDictionary = [dictionary objectForKey:kBookInfoKey];
+		dictionary = nil;
+		
+		Book *defaultBook = [[Book alloc] initWithDictionary:bookDictionary];
+		bookIndex = [self indexOfBookWithName:defaultBook.name];
+		
 		if (bookIndex == -1) {
-			[self.books addObject:dictionaryBook];
+			[self.books addObject:defaultBook];
 		} else {
 			Book *currentBook = [self.books objectAtIndex:bookIndex];
-			if ([currentBook isOlderComparedToBook:dictionaryBook]) {
-				[self.books replaceObjectAtIndex:bookIndex withObject:dictionaryBook];
-				deletePathInDocumentDirectory(mainSectionPathForBookName(dictionaryBook.name));
+			if ([defaultBook isNewComparedToBook:currentBook]) {
+				[self.books replaceObjectAtIndex:bookIndex withObject:defaultBook];
+				deletePathInDocumentDirectory(mainSectionPathForBookName(defaultBook.name));
 			}
 		}
 	}

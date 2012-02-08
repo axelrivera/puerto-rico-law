@@ -2,134 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>bookList</key>
+	<key>Books</key>
 	<array>
-		<dict>
-			<key>bookName</key>
-			<string>Constitucion</string>
-			<key>bookShortTitle</key>
-			<string>Constitución</string>
-			<key>bookTitle</key>
-			<string>Constitución del Estado Libre Asociado de Puerto Rico</string>
-			<key>bookFavoritesTitle</key>
-			<string>Constitución de Puerto Rico</string>
-			<key>bookDescription</key>
-			<string>Entró en vigor el 28 de julio de 1952</string>
-			<key>bookLastUpdate</key>
-			<date>2012-01-09T04:00:00Z</date>
-		</dict>
-		<dict>
-			<key>bookName</key>
-			<string>ProcedimientoCivil</string>
-			<key>bookShortTitle</key>
-			<string>Procedimiento Civil</string>
-			<key>bookTitle</key>
-			<string>Reglas de Procedimiento Civil</string>
-			<key>bookFavoritesTitle</key>
-			<string>Reglas de Procedimiento Civil</string>
-			<key>bookDescription</key>
-			<string>Enmendado el 29 de diciembre de 2009</string>
-			<key>bookLastUpdate</key>
-			<date>2012-01-10T04:00:00Z</date>
-		</dict>
-		<dict>
-			<key>bookName</key>
-			<string>Evidencia</string>
-			<key>bookShortTitle</key>
-			<string>Evidencia</string>
-			<key>bookTitle</key>
-			<string>Reglas de Evidencia</string>
-			<key>bookFavoritesTitle</key>
-			<string>Reglas de Evidencia</string>
-			<key>bookDescription</key>
-			<string>Enmendado el 30 de julio de 2009</string>
-			<key>bookLastUpdate</key>
-			<date>2012-01-09T04:00:00Z</date>
-		</dict>
-		<dict>
-			<key>bookName</key>
-			<string>Notarial</string>
-			<key>bookShortTitle</key>
-			<string>Notarial</string>
-			<key>bookTitle</key>
-			<string>Ley Notarial de Puerto Rico</string>
-			<key>bookFavoritesTitle</key>
-			<string>Ley Notarial</string>
-			<key>bookDescription</key>
-			<string>Fecha de Enmendada</string>
-			<key>bookLastUpdate</key>
-			<date>2012-01-25T04:00:00Z</date>
-		</dict>
-		<dict>
-			<key>bookName</key>
-			<string>ProcedimientoAdministrativoUniforme</string>
-			<key>bookShortTitle</key>
-			<string>Procedimiento Administrativo</string>
-			<key>bookTitle</key>
-			<string>Procedimiento Administrativo Uniforme</string>
-			<key>bookFavoritesTitle</key>
-			<string>Procedimiento Administrativo</string>
-			<key>bookDescription</key>
-			<string>Fecha de Enmendada</string>
-			<key>bookLastUpdate</key>
-			<date>2012-01-26T04:00:00Z</date>
-		</dict>
-		<dict>
-			<key>bookName</key>
-			<string>ViolenciaDomestica</string>
-			<key>bookShortTitle</key>
-			<string>Ley 54</string>
-			<key>bookTitle</key>
-			<string>Ley Núm. 54 Contra la Violencia Doméstica</string>
-			<key>bookFavoritesTitle</key>
-			<string>Violencia Doméstica</string>
-			<key>bookDescription</key>
-			<string>Fecha de Enmendada</string>
-			<key>bookLastUpdate</key>
-			<date>2012-01-31T04:00:00Z</date>
-		</dict>
-		<dict>
-			<key>bookName</key>
-			<string>ASUME</string>
-			<key>bookShortTitle</key>
-			<string>ASUME</string>
-			<key>bookTitle</key>
-			<string>Ley Orgánica de la Administración para el Sustento de Menores (ASUME)</string>
-			<key>bookFavoritesTitle</key>
-			<string>ASUME</string>
-			<key>bookDescription</key>
-			<string>Fecha de Enmendada</string>
-			<key>bookLastUpdate</key>
-			<date>2012-02-01T04:00:00Z</date>
-		</dict>
-		<dict>
-			<key>bookName</key>
-			<string>ProcedimientoCriminal</string>
-			<key>bookShortTitle</key>
-			<string>Procedimiento Criminal</string>
-			<key>bookTitle</key>
-			<string>Reglas de Procedimiento Criminal</string>
-			<key>bookFavoritesTitle</key>
-			<string>Procedimiento Criminal</string>
-			<key>bookDescription</key>
-			<string>Fecha de Enmendada</string>
-			<key>bookLastUpdate</key>
-			<date>2012-02-03T04:00:00Z</date>
-		</dict>
-		<dict>
-			<key>bookName</key>
-			<string>CodigoPenal</string>
-			<key>bookShortTitle</key>
-			<string>Código Penal</string>
-			<key>bookTitle</key>
-			<string>Código Penal</string>
-			<key>bookFavoritesTitle</key>
-			<string>Código Penal</string>
-			<key>bookDescription</key>
-			<string>Fecha de Enmendada</string>
-			<key>bookLastUpdate</key>
-			<date>2012-02-07T04:00:00Z</date>
-		</dict>
+		<string>ConstitucionPR</string>
+		<string>ReglasProcedimientoCivil2009</string>
+		<string>ReglasEvidencia2009</string>
+		<string>Notarial</string>
+		<string>ProcedimientoAdministrativoUniforme</string>
+		<string>CodigoPenal2004</string>
+		<string>ReglasProcedimientoCriminal</string>
+		<string>ViolenciaDomestica</string>
+		<string>ASUME</string>
 	</array>
 </dict>
 </plist>
