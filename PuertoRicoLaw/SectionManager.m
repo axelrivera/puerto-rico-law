@@ -285,14 +285,14 @@
 	if (save) {
 		section = controller.selection;
 	}
+	if (section) {
+		Section *favoriteSection = [self.section.book sectionInMainSectionMatchingSectionID:section.sectionID];
+		[self.controller reloadControllerWithSection:favoriteSection];
+	}
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 		[self.favoritesPopover dismissPopoverAnimated:YES];
 	} else {
 		[controller dismissModalViewControllerAnimated:YES];
-	}
-	if (section) {
-		Section *favoriteSection = [self.section.book sectionInMainSectionMatchingSectionID:section.sectionID];
-		[self.controller reloadControllerWithSection:favoriteSection];
 	}
 }
 

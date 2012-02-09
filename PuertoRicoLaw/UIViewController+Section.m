@@ -129,7 +129,7 @@
 			[viewControllers addObject:sectionController];
 		}
 	}
-	[self.navigationController setViewControllers:(NSArray *)viewControllers animated:NO];
+	[self.navigationController setViewControllers:viewControllers animated:NO];
 }
 
 - (void)goHome

@@ -16,6 +16,7 @@
 #import "BookTableViewCell.h"
 #import "Section.h"
 #import "Settings.h"
+#import "BookDetailViewController.h"
 
 @interface BookViewController (Private)
 
@@ -257,7 +258,7 @@
 	
 	cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 	cell.showsReorderControl = YES;
-	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
 	
 	cell.bookTableView.textLabel.text = book.title;
 	cell.bookTableView.detailTextLabel.text = book.bookDescription;
@@ -323,6 +324,24 @@
 - (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	return NO;
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+	Book *book = [[bookData_ books] objectAtIndex:indexPath.row];
+	
+	BookDetailViewController *controller = [[BookDetailViewController alloc] initWithTitle:book.title
+																			   description:book.bookDescription
+																				lastUpdate:@"Date Goes Here"
+																					 notes:book.bookNotes];
+	
+	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		
+	} else {
+		[self.navigationController presentModalViewController:navController animated:YES];
+	}
 }
 
 #pragma mark - UIViewController Delegates
