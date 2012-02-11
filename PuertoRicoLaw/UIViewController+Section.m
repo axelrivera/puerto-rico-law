@@ -12,10 +12,24 @@
 #import "SectionListViewController.h"
 #import "SectionContentViewController.h"
 
+static NSDateFormatter *dateFormatter_;
+
 @implementation UIViewController (Section)
 
-- (NSArray *)sectionToolbarItems
++ (NSDateFormatter *)dateFormatter
 {
+	if (dateFormatter_ == nil) {
+		NSLocale *spanishLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"es_ES"];
+		dateFormatter_ = [[NSDateFormatter alloc] init];
+		dateFormatter_.locale = spanishLocale;
+		dateFormatter_.timeStyle = NSDateFormatterNoStyle;
+		dateFormatter_.dateStyle = NSDateFormatterLongStyle;
+	}
+	return dateFormatter_;
+}
+
+- (NSArray *)sectionToolbarItems
+{	
 	CGFloat fixedWidth = 0.0;
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 		fixedWidth = 100.0;
@@ -45,28 +59,40 @@
 																target:self
 																action:@selector(nextAction:)];
 	
-	UIBarButtonItem *position4 = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"star.png"]
-																	  style:UIBarButtonItemStylePlain
-																	 target:self
-																	 action:@selector(favoritesAction:)];
-	
-	UIBarButtonItem *position5 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+	UIBarButtonItem *position4 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
 																			   target:self
 																			   action:@selector(optionsAction:)];
 	
-	return [NSArray arrayWithObjects:
-			fixedItem,
-			position1,
-			flexibleItem,
-			position2,
-			flexibleItem,
-			position3,
-			flexibleItem,
-			position4,
-			flexibleItem,
-			position5,
-			fixedItem,
-			nil];
+	UIBarButtonItem *position5 = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"star.png"]
+																  style:UIBarButtonItemStylePlain
+																 target:self
+																 action:@selector(favoritesAction:)];
+	
+	NSMutableArray *array = [NSMutableArray arrayWithCapacity:0];
+	
+	[array addObject:fixedItem];
+	[array addObject:position1];
+	[array addObject:flexibleItem];
+	[array addObject:position2];
+	[array addObject:flexibleItem];
+	[array addObject:position3];
+	[array addObject:flexibleItem];
+	[array addObject:position4];
+	[array addObject:flexibleItem];
+	[array addObject:position5];
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		UIBarButtonItem *position6 = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"info.png"]
+																	  style:UIBarButtonItemStylePlain
+																	 target:self
+																	 action:@selector(detailsAction:)];
+		[array addObject:flexibleItem];
+		[array addObject:position6];
+	}
+	
+	[array addObject:fixedItem];
+	
+	return array;
 }
 
 - (NSArray *)searchToolbarItems

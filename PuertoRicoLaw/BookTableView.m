@@ -8,6 +8,8 @@
 
 #import "BookTableView.h"
 
+#define kNumberOfLines 2
+
 @interface BookTableView (Private)
 
 - (void)checkAndLoadFavoriteImage;
@@ -16,6 +18,10 @@
 @end
 
 @implementation BookTableView
+{
+	UIFont *textFont_;
+	UIFont *detailFont_;
+}
 
 @synthesize textLabel = textLabel_;
 @synthesize detailTextLabel = detailTextLabel_;
@@ -34,6 +40,9 @@
 		favorite_ = NO;
 		editing_ = NO;
 		
+		textFont_ = [UIFont boldSystemFontOfSize:14.0];
+		detailFont_ = [UIFont systemFontOfSize:14.0];
+		
 		contentView_ = [[UIView alloc] initWithFrame:CGRectZero];
 		contentView_.backgroundColor = [UIColor clearColor];
 		contentView_.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
@@ -43,23 +52,24 @@
 		[contentView_ addSubview:imageView_];
 		
         textLabel_ = [[UILabel alloc] initWithFrame:CGRectZero];
-		textLabel_.font = [UIFont boldSystemFontOfSize:14.0];
+		textLabel_.font = textFont_;
 		textLabel_.backgroundColor = [UIColor clearColor];
 		textLabel_.textAlignment = UITextAlignmentLeft;
 		textLabel_.textColor = [UIColor blackColor];
 		textLabel_.highlightedTextColor = [UIColor whiteColor];
 		textLabel_.numberOfLines = 2;
 		textLabel_.lineBreakMode = UILineBreakModeTailTruncation;
+		textLabel_.adjustsFontSizeToFitWidth = NO;
 		textLabel_.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
 		[contentView_ addSubview:textLabel_];
 		
 		detailTextLabel_ = [[UILabel alloc] initWithFrame:CGRectZero];
-		detailTextLabel_.font = [UIFont italicSystemFontOfSize:14.0]; 
+		detailTextLabel_.font = detailFont_; 
 		detailTextLabel_.textAlignment = UITextAlignmentLeft;
 		detailTextLabel_.backgroundColor = [UIColor clearColor];
 		detailTextLabel_.textColor = [UIColor lightGrayColor];
 		detailTextLabel_.highlightedTextColor = [UIColor whiteColor];
-		detailTextLabel_.numberOfLines = 1;
+		detailTextLabel_.numberOfLines = 2;
 		detailTextLabel_.lineBreakMode = UILineBreakModeTailTruncation;
 		detailTextLabel_.minimumFontSize = 12.0;
 		detailTextLabel_.adjustsFontSizeToFitWidth = YES;
@@ -74,28 +84,41 @@
 	[super layoutSubviews];
 
 #define kImageViewWidthHeight 13.0
-#define kTextLabelHeight 34.0
-#define kDetailTextLabelHeight 16.0
+#define kTextLabelHeight 36.0
+#define kDetailTextLabelHeight 36.0
 	
 	contentView_.frame = CGRectMake(10.0,
-									(self.bounds.size.height / 2.0) - ((kTextLabelHeight + kDetailTextLabelHeight) / 2.0),
+									2.0,
 									self.bounds.size.width - 20.0,
-									kTextLabelHeight + kDetailTextLabelHeight);
+									kTextLabelHeight + kDetailTextLabelHeight + 4.0);
 	
 	imageView_.frame = CGRectMake(0.0,
 								  (contentView_.frame.size.height / 2.0) - (kImageViewWidthHeight / 2.0),
 								  kImageViewWidthHeight,
 								  kImageViewWidthHeight);
 	
+	NSString *textStr = textLabel_.text;
+	CGSize textLimitSize = CGSizeMake(contentView_.bounds.size.width - (kImageViewWidthHeight + 10.0),
+									  kTextLabelHeight);
+	CGSize textSize = [textStr sizeWithFont:textFont_
+						  constrainedToSize:textLimitSize
+							  lineBreakMode:UILineBreakModeTailTruncation];
+	
 	textLabel_.frame = CGRectMake(kImageViewWidthHeight + 10.0,
 								  0.0,
-								  contentView_.bounds.size.width - (kImageViewWidthHeight + 10.0),
-								  kTextLabelHeight);
+								  textLimitSize.width,
+								  textSize.height);
 	
-	detailTextLabel_.frame = CGRectMake(kImageViewWidthHeight + 10.0,
-										kTextLabelHeight,
-										contentView_.bounds.size.width - (kImageViewWidthHeight + 10.0),
+	NSString *detailStr = detailTextLabel_.text;
+	CGSize detailLimitSize = CGSizeMake(contentView_.bounds.size.width - (kImageViewWidthHeight + 10.0),
 										kDetailTextLabelHeight);
+	CGSize detailSize = [detailStr sizeWithFont:detailFont_
+							  constrainedToSize:detailLimitSize
+								  lineBreakMode:UILineBreakModeTailTruncation];
+	detailTextLabel_.frame = CGRectMake(kImageViewWidthHeight + 10.0,
+										textLabel_.frame.origin.y + textLabel_.frame.size.height,
+										detailLimitSize.width,
+										detailSize.height);
 }
 
 - (void)setFavorite:(BOOL)favorite

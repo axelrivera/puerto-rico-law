@@ -16,6 +16,12 @@
 @end
 
 @implementation SectionTableViewCell
+{
+	UIFont *textFont_;
+	UIFont *detailFont_;
+	UIFont *subtextFont_;
+	UIFont *subtitleFont_;
+}
 
 @synthesize subtextLabel = subtextLabel_;
 @synthesize subtitleTextLabel = subtitleTextLabel_;
@@ -25,16 +31,20 @@
 	// The Style will be ignored
     self = [super initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:reuseIdentifier];
     if (self) {
-		self.textLabel.font = [UIFont boldSystemFontOfSize:13.0];
+		textFont_ = [UIFont boldSystemFontOfSize:13.0];
+		detailFont_ = [UIFont boldSystemFontOfSize:13.0];
+		subtextFont_ = [UIFont systemFontOfSize:13.0];
+		
+		self.textLabel.font = textFont_;
 		self.textLabel.minimumFontSize = 10.0;
 		self.textLabel.adjustsFontSizeToFitWidth = YES;
 		self.textLabel.textAlignment = UITextAlignmentLeft;
-		self.detailTextLabel.font = [UIFont boldSystemFontOfSize:13.0];
+		self.detailTextLabel.font = detailFont_;
 		self.detailTextLabel.numberOfLines = 2.0;
 		self.detailTextLabel.lineBreakMode = UILineBreakModeTailTruncation;
 		
 		subtextLabel_ = [[UILabel alloc] initWithFrame:CGRectZero];
-		subtextLabel_.font = [UIFont systemFontOfSize:13.0];
+		subtextLabel_.font = subtextFont_;
 		subtextLabel_.minimumFontSize = 10.0;
 		subtextLabel_.adjustsFontSizeToFitWidth = YES;
 		subtextLabel_.textAlignment = UITextAlignmentRight;
@@ -48,8 +58,10 @@
 		
 		subtitleTextLabel_ = nil;
 		if (style == RLTableCellStyleSectionSubtitle) {
+			subtitleFont_ = [UIFont systemFontOfSize:13.0];
+			
 			subtitleTextLabel_ = [[UILabel alloc] initWithFrame:CGRectZero];
-			subtitleTextLabel_.font = [UIFont italicSystemFontOfSize:12.0]; 
+			subtitleTextLabel_.font = subtextFont_;
 			subtitleTextLabel_.textAlignment = UITextAlignmentLeft;
 			subtitleTextLabel_.backgroundColor = [UIColor clearColor];
 			subtitleTextLabel_.textColor = [UIColor lightGrayColor];
@@ -68,10 +80,10 @@
 {
 	[super layoutSubviews];
 
-#define kTextHeight 16.0
-#define kTextDetailHeight 30.0
-#define kSubtitleTextHeight 16.0
-#define kVerticalOffset 2.0
+#define kTextHeight 17.0
+#define kTextDetailHeight 34.0
+#define kSubtitleTextHeight 17.0
+#define kVerticalOffset 3.0
 	
 	CGRect textFrame;
 	CGRect detailFrame;
@@ -82,19 +94,23 @@
 	// Padding between textFrame and subtextFrame is 6.0. When positioning either one in the x-axis
 	// only 3.0 is used since we are using the center as the reference
 	textFrame = CGRectMake(10.0,
-						   7.0,
+						   3.0,
 						   (contentWidth / 2.0) - (10.0 + 3.0),
 						   kTextHeight);
 	
 	subtextFrame = CGRectMake(10.0 + textFrame.size.width + 6.0,
-							  7.0,
+							  3.0,
 							  (contentWidth / 2.0) - (10.0 + 3.0),
 							  kTextHeight);
 	
+	NSString *detailStr = self.detailTextLabel.text;
+	CGSize detailSize = [detailStr sizeWithFont:detailFont_
+							  constrainedToSize:CGSizeMake(contentWidth - 20.0, kTextDetailHeight)
+								  lineBreakMode:UILineBreakModeTailTruncation];
 	detailFrame = CGRectMake(10.0,
-							 7.0 + kTextHeight + kVerticalOffset,
-							 contentWidth - (10.0 + 10.0),
-							 kTextDetailHeight);
+							 3.0 + kTextHeight + kVerticalOffset,
+							 contentWidth - 20.0,
+							 detailSize.height);
 	
 	self.textLabel.frame = textFrame;	
 	self.detailTextLabel.frame = detailFrame;
@@ -102,8 +118,8 @@
 	
 	if (self.subtitleTextLabel != nil) {
 		CGRect subtitleFrame = CGRectMake(10.0,
-										  7.0 + kTextHeight + kVerticalOffset + kTextDetailHeight,
-										  contentWidth - (10.0 + 10.0),
+										  detailFrame.origin.y + detailFrame.size.height,
+										  contentWidth - 20.0,
 										  kSubtitleTextHeight);
 		self.subtitleTextLabel.frame = subtitleFrame;
 	}

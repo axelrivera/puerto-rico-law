@@ -13,6 +13,8 @@
 
 @interface UIViewController (Section)
 
++ (NSDateFormatter *)dateFormatter;
+
 - (NSArray *)sectionToolbarItems;
 - (NSArray *)searchToolbarItems;
 - (void)reloadControllerWithSection:(Section *)section;

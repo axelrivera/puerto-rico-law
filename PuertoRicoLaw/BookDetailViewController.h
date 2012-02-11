@@ -8,17 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol BookDetailViewControllerDelegate;
+
 @interface BookDetailViewController : UIViewController
 
-@property (unsafe_unretained, nonatomic) IBOutlet UILabel *titleLabel;
-@property (unsafe_unretained, nonatomic) IBOutlet UILabel *descriptionLabel;
-@property (unsafe_unretained, nonatomic) IBOutlet UILabel *lastUpdatedLabel;
-@property (unsafe_unretained, nonatomic) IBOutlet UIScrollView *notesContainer;
+@property (unsafe_unretained, nonatomic) id <BookDetailViewControllerDelegate> delegate;
+@property (unsafe_unretained, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) UILabel *titleLabel;
+@property (strong, nonatomic) UILabel *descriptionLabel;
+@property (strong, nonatomic) UILabel *lastUpdatedLabel;
+@property (strong, nonatomic) UILabel *notesLabel;
 @property (strong, nonatomic) NSString *bookTitle;
 @property (strong, nonatomic) NSString *bookDescription;
 @property (strong, nonatomic) NSString *bookLastUpdate;
 @property (strong, nonatomic) NSString *bookNotes;
 
 - (id)initWithTitle:(NSString *)title description:(NSString *)description lastUpdate:(NSString *)lastUpdate notes:(NSString *)notes;
+
+@end
+
+@protocol BookDetailViewControllerDelegate
+
+- (void)detailsViewControllerDidFinish:(UIViewController *)controller;
 
 @end

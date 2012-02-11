@@ -60,7 +60,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.tableView.rowHeight = 64.0;
+	self.tableView.rowHeight = 76.0;
 	self.navigationItem.hidesBackButton = YES;
 }
 

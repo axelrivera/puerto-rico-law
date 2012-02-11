@@ -16,11 +16,11 @@
 #import "BookTableViewCell.h"
 #import "Section.h"
 #import "Settings.h"
-#import "BookDetailViewController.h"
+#import "UIViewController+Section.h"
 
 @interface BookViewController (Private)
 
-- (void)loadBook:(Book *)book;
+- (void)loadBook:(Book *)book animated:(BOOL)animated;
 - (NSArray *)toolbarItemsArray;
 
 @end
@@ -72,7 +72,7 @@
 	[self setToolbarItems:[self toolbarItemsArray]];
 	
 	self.tableView.allowsSelectionDuringEditing = YES;
-	self.tableView.rowHeight = 64.0;
+	self.tableView.rowHeight = 76.0;
 	
 	doneItem_ = [[UIBarButtonItem alloc] initWithTitle:@"OK"
 												 style:UIBarButtonItemStyleDone
@@ -125,7 +125,7 @@
 
 #pragma mark - Private Methods
 
-- (void)loadBook:(Book *)book
+- (void)loadBook:(Book *)book animated:(BOOL)animated
 {
 	bookData_.currentBook = book;
 	[bookData_.currentBook loadSections];
@@ -142,7 +142,7 @@
 										   siblingSections:nil
 									   currentSiblingIndex:0];
 		self.title = kHomeNavigationLabel;
-		[self.navigationController pushViewController:sectionController animated:YES];
+		[self.navigationController pushViewController:sectionController animated:animated];
 	}
 }
 
@@ -258,7 +258,13 @@
 	
 	cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 	cell.showsReorderControl = YES;
-	cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+		cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+	} else {
+		cell.accessoryType = UITableViewCellAccessoryNone;
+	}
+	
 	
 	cell.bookTableView.textLabel.text = book.title;
 	cell.bookTableView.detailTextLabel.text = book.bookDescription;
@@ -280,7 +286,7 @@
 		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 			[self.delegate clearCurrentSection];
 		}
-		[self loadBook:book];
+		[self loadBook:book animated:YES];
 		return;
 	}
 
@@ -330,18 +336,18 @@
 {
 	Book *book = [[bookData_ books] objectAtIndex:indexPath.row];
 	
+	NSString *dateStr = [NSString stringWithFormat:@"Actualizado: %@",
+						 [[UIViewController dateFormatter] stringFromDate:book.lastUpdate]];
+	
 	BookDetailViewController *controller = [[BookDetailViewController alloc] initWithTitle:book.title
 																			   description:book.bookDescription
-																				lastUpdate:@"Date Goes Here"
+																				lastUpdate:dateStr
 																					 notes:book.bookNotes];
+	controller.delegate = self;
 	
 	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
 	
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		
-	} else {
-		[self.navigationController presentModalViewController:navController animated:YES];
-	}
+	[self.navigationController presentModalViewController:navController animated:YES];
 }
 
 #pragma mark - UIViewController Delegates
@@ -361,7 +367,7 @@
 	}
 	
 	if (book) {
-		[self loadBook:book];
+		[self loadBook:book animated:NO];
 	}
 }
 
@@ -379,6 +385,11 @@
 	if ([controller.favoritesDataSource count] <= 0) {
 		[controller setEditing:NO animated:YES];
 	}
+}
+
+- (void)detailsViewControllerDidFinish:(UIViewController *)controller
+{
+	[self dismissModalViewControllerAnimated:YES];
 }
 
 - (void)settingsViewControllerDidFinish:(UIViewController *)controller

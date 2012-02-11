@@ -18,7 +18,7 @@
 
 @implementation SectionListViewController
 {
-	UIView *headerView_;
+	UIView *tableHeaderView_;
 }
 
 @synthesize manager = manager_;
@@ -62,26 +62,45 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+		
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"magnify_mini.png"]
+																			  style:UIBarButtonItemStyleBordered
+																			 target:self
+																			 action:@selector(searchAction:)];
 	
-	if (self.manager.section == self.manager.section.book.mainSection) {
-		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"magnify_mini.png"]
-																				  style:UIBarButtonItemStyleBordered
-																				 target:self
-																				 action:@selector(searchAction:)];
-	}
-	
-	self.tableView.rowHeight = 62.0;
+	self.tableView.rowHeight = 60.0;
 	
 	[self setToolbarItems:[self sectionToolbarItems] animated:NO];
 	self.manager.prevItem = [self.toolbarItems objectAtIndex:kToolbarItemPosition2];
 	self.manager.nextItem = [self.toolbarItems objectAtIndex:kToolbarItemPosition3];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+	
+	// Setup Table Header View
+	
+	CGRect screenRect = [UIScreen mainScreen].bounds;
+	
+	CGFloat constrainedWidth = screenRect.size.width - 20.0;
+	CGSize labelSize = [self.manager.section.title sizeWithFont:[UIFont boldSystemFontOfSize:16.0]
+											  constrainedToSize:CGSizeMake(constrainedWidth, 999.0)];
+	
+	CGRect labelFrame = CGRectMake(10.0, 10.0, constrainedWidth, labelSize.height);
+	
+	tableHeaderView_ = [[UIView alloc] initWithFrame:CGRectZero];
+	tableHeaderView_.backgroundColor = [UIColor clearColor];
+	tableHeaderView_.frame =  CGRectMake(0.0, 0.0, screenRect.size.width, labelSize.height + 20.0);
+	
+	UILabel *textLabel = [[UILabel alloc] initWithFrame:labelFrame];
+	textLabel.font = [UIFont boldSystemFontOfSize:16.0];
+	textLabel.backgroundColor = [UIColor clearColor];
+	textLabel.textColor = [UIColor darkGrayColor];
+	textLabel.textAlignment = UITextAlignmentCenter;
+	textLabel.numberOfLines = 0;
+	textLabel.lineBreakMode = UILineBreakModeWordWrap;
+	textLabel.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
+	textLabel.shadowColor = [UIColor whiteColor];
+	textLabel.shadowOffset = CGSizeMake(0.0, -1.0);
+	textLabel.text = self.manager.section.title;
+	
+	[tableHeaderView_ addSubview:textLabel];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -145,6 +164,10 @@
 
 - (void)homeAction:(id)sender
 {
+	if ([self.manager.favoritesPopover isPopoverVisible] || [self.manager.detailsPopover isPopoverVisible]) {
+		return;
+	}
+	
 	[self goHome];
 }
 
@@ -166,6 +189,11 @@
 - (void)nextAction:(id)sender
 {
 	[self.manager showNext];
+}
+
+- (void)detailsAction:(id)sender
+{
+	[self.manager showDetails:(id)sender];
 }
 
 #pragma mark - Section Selection Delegate Methods
@@ -250,33 +278,12 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-	CGRect screenRect = [UIScreen mainScreen].bounds;
-	CGRect headerFrame = CGRectMake(0.0, 0.0, screenRect.size.width, 52.0);
-	CGRect labelFrame = CGRectMake(10.0, 0.0, screenRect.size.width - 20.0, headerFrame.size.height);
-	
-	headerView_ = [[UIView alloc] initWithFrame:headerFrame];
-	headerView_.backgroundColor = [UIColor clearColor];
-	
-	UILabel *textLabel = [[UILabel alloc] initWithFrame:labelFrame];
-	textLabel.font = [UIFont boldSystemFontOfSize:16.0];
-	textLabel.backgroundColor = [UIColor clearColor];
-	textLabel.textColor = [UIColor darkGrayColor];
-	textLabel.textAlignment = UITextAlignmentCenter;
-	textLabel.numberOfLines = 2.0;
-	textLabel.lineBreakMode = UILineBreakModeTailTruncation;
-	textLabel.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
-	textLabel.shadowColor = [UIColor whiteColor];
-	textLabel.shadowOffset = CGSizeMake(0.0, -1.0);
-	textLabel.text = self.manager.section.title;
-	
-	[headerView_ addSubview:textLabel];
-	
-	return headerView_;
+	return tableHeaderView_;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-	return 52.0;
+	return tableHeaderView_.bounds.size.height;
 }
 
 #pragma mark Split View Delegate

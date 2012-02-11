@@ -193,6 +193,10 @@
 
 - (void)homeAction:(id)sender
 {
+	if ([self.manager.favoritesPopover isPopoverVisible] || [self.manager.detailsPopover isPopoverVisible]) {
+		return;
+	}
+		
 	[self goHome];
 }
 
@@ -204,6 +208,11 @@
 - (void)optionsAction:(id)sender
 {
 	[self.manager showOptions:sender];
+}
+
+- (void)detailsAction:(id)sender
+{
+	[self.manager showDetails:sender];
 }
 
 - (void)prevAction:(id)sender

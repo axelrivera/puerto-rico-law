@@ -175,7 +175,7 @@
 		NSString *textStr = nil;
 		
 		if (indexPath.row == 0) {
-			textStr = @"Recomiendanos a tus Amigos";
+			textStr = @"Recomendar a un Amigo";
 		} else {
 			textStr = @"Enviar Sugerencias";
 		}
@@ -264,8 +264,8 @@
 		if (indexPath.row == 0) {
 			subjectStr = @"Te Recomiendo el App Leyes Puerto Rico para iPhone, iPod touch y iPad";
 			bodyStr =
-				@"Estoy usando el app Leyes Puerto Rico. Lo puedes bajar buscando "
-				@"\"Leyes Puerto Rico\" en el App Store.  Visita http://riveralabs.com/leyes/ para más información.";
+				@"Estoy usando el app Leyes Puerto Rico para iPhone, iPod touch y iPad. Lo puedes bajar buscando "
+				@"\"Leyes Puerto Rico\" en el App Store o visita http://riveralabs.com/leyes/ para más información.";
 		} else {
 			toRecipients = [NSArray arrayWithObject:@"apps@riveralabs.com"];
 			subjectStr = @"Enviar Sugerencia - Leyes Puerto Rico";

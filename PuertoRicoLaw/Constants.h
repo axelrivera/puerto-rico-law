@@ -15,6 +15,7 @@
 #define kToolbarItemPosition3 5
 #define kToolbarItemPosition4 7
 #define kToolbarItemPosition5 9
+#define kToolbarItemPosition6 11
 
 #define kBookListFileName @"PuertoRicoLawBooks"
 #define kBookListKey @"Books"

@@ -12,6 +12,8 @@
 #import "UIViewController+Section.h"
 #import "SectionListViewController.h"
 #import "SectionContentViewController.h"
+#import "BookDetailViewController.h"
+#import "UIViewController+Section.h"
 
 @interface SectionManager (Private)
 
@@ -30,6 +32,7 @@
 @synthesize prevItem = prevItem_;
 @synthesize actionSheet = actionSheet_;
 @synthesize favoritesPopover = favoritesPopover_;
+@synthesize detailsPopover = detailsPopover_;
 @synthesize controller = controller_;
 
 - (id)init
@@ -112,7 +115,7 @@
 }
 
 - (void)checkItemsAndUpdateFavoriteIndex
-{
+{	
 	[self checkGoNextItem];
 	[self checkGoPrevItem];
 	[self updateFavoriteIndex];
@@ -172,8 +175,12 @@
 - (void)showFavorites:(id)sender
 {
 	if ([self.favoritesPopover isPopoverVisible]) {
-		[self.favoritesPopover dismissPopoverAnimated:YES];
+		//[self.favoritesPopover dismissPopoverAnimated:YES];
 		return;
+	}
+	
+	if ([self.detailsPopover isPopoverVisible]) {
+		[self.detailsPopover dismissPopoverAnimated:NO];
 	}
 	
 	if ([self.actionSheet isVisible]) {
@@ -195,6 +202,10 @@
 
 - (void)showNext
 {
+	if ([self.favoritesPopover isPopoverVisible] || [self.detailsPopover isPopoverVisible]) {
+		return;
+	}
+	
 	if ([self canGoNext]) {
 		self.currentIndex++;
 		if ([self.controller isKindOfClass:[SectionListViewController class]]) {
@@ -207,6 +218,10 @@
 
 - (void)showPrev
 {
+	if ([self.favoritesPopover isPopoverVisible] || [self.detailsPopover isPopoverVisible]) {
+		return;
+	}
+	
 	if ([self canGoPrev]) {
 		self.currentIndex--;
 		if ([self.controller isKindOfClass:[SectionListViewController class]]) {
@@ -222,6 +237,10 @@
 	if ([self.actionSheet isVisible]) {
 		[self.actionSheet dismissWithClickedButtonIndex:-1 animated:YES];
 		return;
+	}
+	
+	if ([self.detailsPopover isPopoverVisible]) {
+		[self.detailsPopover dismissPopoverAnimated:NO];
 	}
 
 	if ([self.favoritesPopover isPopoverVisible]) {
@@ -252,6 +271,35 @@
 		self.actionSheet.cancelButtonIndex = [self.actionSheet numberOfButtons] - 1;
 		[self.actionSheet showFromToolbar:[[self.controller navigationController] toolbar]];
 	}
+}
+
+- (void)showDetails:(id)sender
+{
+	if ([self.detailsPopover isPopoverVisible]) {
+		return;
+	}
+	
+	if ([self.actionSheet isVisible]) {
+		[self.actionSheet dismissWithClickedButtonIndex:-1 animated:YES];
+	}
+	
+	if ([self.favoritesPopover isPopoverVisible]) {
+		[self.favoritesPopover dismissPopoverAnimated:NO];
+	}
+	
+	Book *book = self.section.book;
+	
+	NSString *dateStr = [NSString stringWithFormat:@"Actualizado: %@",
+						 [[UIViewController dateFormatter] stringFromDate:book.lastUpdate]];
+	
+	BookDetailViewController *detailsController = [[BookDetailViewController alloc] initWithTitle:book.title
+																					  description:book.bookDescription
+																					   lastUpdate:dateStr
+																							notes:book.bookNotes];
+	detailsController.delegate = self;
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:detailsController];
+	self.detailsPopover = [[UIPopoverController alloc] initWithContentViewController:navigationController];
+	[self.detailsPopover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 }
 
 - (void)resetSection
@@ -310,6 +358,11 @@
 	if ([controller.favoritesDataSource count] <= 0) {
 		[controller setEditing:NO animated:YES];
 	}
+}
+
+- (void)detailsViewControllerDidFinish:(UIViewController *)controller
+{
+	[self.detailsPopover dismissPopoverAnimated:YES];
 }
 
 #pragma mark - UIActionSheet Delegate Methods

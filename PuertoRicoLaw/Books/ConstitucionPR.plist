@@ -5,19 +5,19 @@
 	<key>Book</key>
 	<dict>
 		<key>bookDescription</key>
-		<string>Entró en vigor el 28 de julio de 1952</string>
+		<string>Entró en vigor el 28 de julio de 1952. Gracias al Tribunal Supremo de Puerto Rico.</string>
 		<key>bookLastUpdate</key>
 		<date>2012-01-09T04:00:00Z</date>
 		<key>bookName</key>
 		<string>ConstitucionPR</string>
 		<key>bookNotes</key>
-		<string></string>
+		<string>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ligula nisi, gravida et varius ac, lobortis in turpis. Nam sit amet sem augue, et egestas turpis. Quisque vitae velit arcu. Sed ut rutrum nulla. Mauris congue lacus at sem sagittis iaculis. Ut vulputate pretium ligula, vitae congue augue venenatis vel. Fusce bibendum semper urna ut vulputate. Fusce non leo faucibus metus mollis rhoncus. Pellentesque sollicitudin, ligula quis imperdiet fringilla, nulla massa aliquam ante, nec pulvinar nibh tellus id ligula. Etiam semper pellentesque turpis sed fermentum.\n\nMauris sit amet tincidunt metus. Nulla quis sapien tortor, nec blandit nisi. Quisque pulvinar erat purus, aliquet laoreet arcu. Maecenas vehicula tempus molestie. Proin eu velit quam, mollis congue mauris. Nunc ac ullamcorper sapien. Sed purus eros, tempus imperdiet commodo at, egestas gravida diam. Etiam pretium, urna quis posuere vulputate, nunc diam vestibulum libero, sed scelerisque nulla eros vel massa. Proin auctor convallis lorem vitae tristique.\n\nSuspendisse euismod tempus nulla, nec faucibus risus tempor non. Phasellus vestibulum augue ut magna sollicitudin rutrum. Nullam rhoncus, neque non consectetur suscipit, felis felis faucibus enim, id viverra libero libero vitae nulla. Curabitur vitae enim non justo tristique fringilla. In ultricies egestas sollicitudin. Phasellus feugiat ipsum et elit dapibus eu molestie justo congue. Aliquam mauris elit, pellentesque eget posuere et, fringilla vel nisi. In ut ultricies justo. Morbi quis massa quis tellus dictum tincidunt at eget elit. Cras at arcu sit amet risus aliquet dictum eget et neque. In vel ante lacus, eget laoreet elit. Cras et sapien eget massa aliquam sollicitudin. Phasellus malesuada mi quis massa feugiat vestibulum. Nullam dui mi, pharetra a tristique eu, semper non nibh.\n\nDonec vehicula turpis ut odio iaculis sit amet commodo metus semper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam vehicula nibh vel quam consectetur gravida. Praesent accumsan risus id neque fringilla eu tristique ante dignissim. Nunc nunc tortor, fringilla ac congue id, imperdiet ac metus. Mauris quis tempor nisi. Morbi ornare leo ut ligula mattis lacinia egestas lorem placerat. Aenean tristique, diam non posuere commodo, elit leo scelerisque magna, in tincidunt diam magna sit amet sem. Donec venenatis, felis pharetra convallis rhoncus, odio velit volutpat lorem, sit amet dapibus est turpis quis elit. Nunc nec pharetra nunc. Maecenas vel leo vel ipsum malesuada convallis. Suspendisse nisi dolor, ullamcorper eu luctus vitae, varius at eros. Phasellus quis bibendum orci. Duis mattis ornare odio vitae dapibus. In ultrices eleifend lectus, vitae malesuada tellus aliquet at. Suspendisse eu elit odio, a tristique leo.\n\nAliquam non dui ac nisi tempus sollicitudin ut quis mi. Cras rutrum iaculis lectus, et sodales magna euismod vel. Ut congue, est sed consectetur rhoncus, elit arcu euismod urna, vel venenatis mi orci vitae leo. Etiam pharetra adipiscing ultricies. Aliquam malesuada fringilla lacus in sagittis. Praesent pharetra quam vulputate risus sodales tincidunt. Donec id justo nisi. Proin sit amet mi nec tortor facilisis fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce nulla nisi, interdum eget ullamcorper eget, bibendum eget dui. Etiam sed blandit ante. Ut tempus, enim ac eleifend egestas, neque erat fringilla metus, nec mattis lorem enim vitae mauris.</string>
 		<key>bookShortTitle</key>
 		<string>Constitución PR</string>
 		<key>bookTitle</key>
 		<string>Constitución del Estado Libre Asociado de Puerto Rico</string>
 		<key>bookVersion</key>
-		<integer>1</integer>
+		<integer>4</integer>
 	</dict>
 	<key>Sections</key>
 	<array>

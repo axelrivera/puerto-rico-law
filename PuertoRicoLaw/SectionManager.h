@@ -11,13 +11,14 @@
 #import "FavoritesViewController.h"
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
+#import "BookDetailViewController.h"
 
 @class Section;
 @class SectionListViewController;
 @class SectionContentViewController;
 
 @interface SectionManager : NSObject
-<FavoritesViewControllerDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
+<FavoritesViewControllerDelegate, UIActionSheetDelegate, BookDetailViewControllerDelegate, MFMailComposeViewControllerDelegate>
 
 @property (strong, nonatomic) Section *section;
 @property (strong, nonatomic) NSArray *siblings;
@@ -28,6 +29,7 @@
 @property (unsafe_unretained, nonatomic) UIBarButtonItem *prevItem;
 @property (strong, nonatomic) UIActionSheet *actionSheet;
 @property (strong, nonatomic) UIPopoverController *favoritesPopover;
+@property (strong, nonatomic) UIPopoverController *detailsPopover;
 @property (unsafe_unretained, nonatomic) id controller;
 
 - (id)initWithSection:(Section *)section siblings:(NSArray *)siblings currentIndex:(NSInteger)currentIndex;
@@ -48,6 +50,7 @@
 - (void)showNext;
 - (void)showPrev;
 - (void)showOptions:(id)sender;
+- (void)showDetails:(id)sender;
 
 - (void)resetSection;
 
