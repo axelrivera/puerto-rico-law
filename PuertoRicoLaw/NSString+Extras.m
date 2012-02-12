@@ -18,7 +18,8 @@
 	NSString *stylesheet = [NSString stringWithFormat:
 							@"<style type=\"text/css\">"
 							@"body {background-color:%@;color:%@;font-family:%@;font-size:%ipt;}"
-							@"h2 {font-size:1.3em; margin-bottom: 0.8em;}"
+							@"ul {list-style-position:outside;padding-left:1.5em;margin-left:0;font-style:italic;}"
+							@"li {margin-bottom:0.5em}"
 							@"</style>",
 							[settings contentBackgroundStyleString],
 							[settings contentBackgroundFontColorStyleString],
@@ -28,10 +29,13 @@
 	return [NSString stringWithFormat:
 			@"<html>"
 			@"<head>"
+			@"<base href=\"file://%@\" />"
 			@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />"
+			@"<link rel=\"stylesheet\" type=\"text/css\" href=\"stylesheet.css\" />"
 			@"%@"
 			@"</head>"
 			@"<body><h2>%@</h2>%@</body></html>",
+			[[NSBundle mainBundle] resourcePath],
 			stylesheet,
 			title,
 			body];

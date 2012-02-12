@@ -19,6 +19,7 @@
 #import "FileHelpers.h"
 
 #define kContentTemporaryFileName @"sectionContent.html"
+#define kContentTemporaryStylesheetFileName @"stylesheet.css"
 
 @implementation SectionContentViewController
 

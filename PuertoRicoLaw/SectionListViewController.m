@@ -73,34 +73,6 @@
 	[self setToolbarItems:[self sectionToolbarItems] animated:NO];
 	self.manager.prevItem = [self.toolbarItems objectAtIndex:kToolbarItemPosition2];
 	self.manager.nextItem = [self.toolbarItems objectAtIndex:kToolbarItemPosition3];
-	
-	// Setup Table Header View
-	
-	CGRect screenRect = [UIScreen mainScreen].bounds;
-	
-	CGFloat constrainedWidth = screenRect.size.width - 20.0;
-	CGSize labelSize = [self.manager.section.title sizeWithFont:[UIFont boldSystemFontOfSize:16.0]
-											  constrainedToSize:CGSizeMake(constrainedWidth, 999.0)];
-	
-	CGRect labelFrame = CGRectMake(10.0, 10.0, constrainedWidth, labelSize.height);
-	
-	tableHeaderView_ = [[UIView alloc] initWithFrame:CGRectZero];
-	tableHeaderView_.backgroundColor = [UIColor clearColor];
-	tableHeaderView_.frame =  CGRectMake(0.0, 0.0, screenRect.size.width, labelSize.height + 20.0);
-	
-	UILabel *textLabel = [[UILabel alloc] initWithFrame:labelFrame];
-	textLabel.font = [UIFont boldSystemFontOfSize:16.0];
-	textLabel.backgroundColor = [UIColor clearColor];
-	textLabel.textColor = [UIColor darkGrayColor];
-	textLabel.textAlignment = UITextAlignmentCenter;
-	textLabel.numberOfLines = 0;
-	textLabel.lineBreakMode = UILineBreakModeWordWrap;
-	textLabel.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
-	textLabel.shadowColor = [UIColor whiteColor];
-	textLabel.shadowOffset = CGSizeMake(0.0, -1.0);
-	textLabel.text = self.manager.section.title;
-	
-	[tableHeaderView_ addSubview:textLabel];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -137,6 +109,38 @@
 	if ([self.manager.actionSheet isVisible]) {
 		[self.manager.actionSheet dismissWithClickedButtonIndex:-1 animated:NO];
 	}
+	
+	// Setup Table Header View
+	
+	CGRect screenRect = [UIScreen mainScreen].bounds;
+	
+	CGFloat constrainedWidth = screenRect.size.width - 20.0;
+	CGSize labelSize = [self.manager.section.title sizeWithFont:[UIFont boldSystemFontOfSize:17.0]
+											  constrainedToSize:CGSizeMake(constrainedWidth, 999.0)];
+	
+	CGRect labelFrame = CGRectMake(10.0, 10.0, constrainedWidth, labelSize.height);
+	
+	if (tableHeaderView_ != nil) {
+		tableHeaderView_ = nil;
+	}
+	
+	tableHeaderView_ = [[UIView alloc] initWithFrame:CGRectZero];
+	tableHeaderView_.backgroundColor = [UIColor clearColor];
+	tableHeaderView_.frame =  CGRectMake(0.0, 0.0, screenRect.size.width, labelSize.height + 20.0);
+	
+	UILabel *textLabel = [[UILabel alloc] initWithFrame:labelFrame];
+	textLabel.font = [UIFont boldSystemFontOfSize:17.0];
+	textLabel.backgroundColor = [UIColor clearColor];
+	textLabel.textColor = [UIColor darkGrayColor];
+	textLabel.textAlignment = UITextAlignmentCenter;
+	textLabel.numberOfLines = 0;
+	textLabel.lineBreakMode = UILineBreakModeWordWrap;
+	textLabel.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
+	textLabel.shadowColor = [UIColor whiteColor];
+	textLabel.shadowOffset = CGSizeMake(0.0, -1.0);
+	textLabel.text = self.manager.section.title;
+	
+	[tableHeaderView_ addSubview:textLabel];
 	
 	if (self.sectionDataSource == nil) {
 		self.navigationController.toolbarHidden = YES;

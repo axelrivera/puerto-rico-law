@@ -98,7 +98,8 @@
 	self.navigationController.toolbarHidden = NO;
 	
 	self.title = @"Leyes Puerto Rico";
-	if (bookData_.currentBook != nil) {
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && bookData_.currentBook != nil) {
 		[bookData_.currentBook clearSections];
 		bookData_.currentBook = nil;
 	}

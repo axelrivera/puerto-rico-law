@@ -16,6 +16,7 @@
 		161B5D6814B3598400700D86 /* orgchart.png in Resources */ = {isa = PBXBuildFile; fileRef = 161B5D6614B3598400700D86 /* orgchart.png */; };
 		161B5D6914B3598400700D86 /* orgchart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 161B5D6714B3598400700D86 /* orgchart@2x.png */; };
 		1620F80114A196910070E512 /* FileHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1620F80014A196910070E512 /* FileHelpers.m */; };
+		1624EA6214E84CE900B11EBB /* ConstitucionPR.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1624EA6114E84CE900B11EBB /* ConstitucionPR.plist */; };
 		1631D87414B4E98D00F77790 /* SearchWebView.js in Resources */ = {isa = PBXBuildFile; fileRef = 16DFA24B14B4C79C00517778 /* SearchWebView.js */; };
 		163E2B2614B33FAF008C50DE /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 163E2B2414B33FAF008C50DE /* SearchViewController.m */; };
 		163E2B2714B33FAF008C50DE /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 163E2B2514B33FAF008C50DE /* SearchViewController.xib */; };
@@ -68,7 +69,6 @@
 		16A7062214E6014500E21931 /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16A7062014E6014500E21931 /* info@2x.png */; };
 		16D1464614E438850026D7AE /* ASUME.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16D1463D14E438850026D7AE /* ASUME.plist */; };
 		16D1464714E438850026D7AE /* CodigoPenal2004.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16D1463E14E438850026D7AE /* CodigoPenal2004.plist */; };
-		16D1464814E438850026D7AE /* ConstitucionPR.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16D1463F14E438850026D7AE /* ConstitucionPR.plist */; };
 		16D1464914E438850026D7AE /* Notarial.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16D1464014E438850026D7AE /* Notarial.plist */; };
 		16D1464A14E438850026D7AE /* ProcedimientoAdministrativoUniforme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16D1464114E438850026D7AE /* ProcedimientoAdministrativoUniforme.plist */; };
 		16D1464B14E438850026D7AE /* ReglasEvidencia2009.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16D1464214E438850026D7AE /* ReglasEvidencia2009.plist */; };
@@ -101,6 +101,7 @@
 		161B5D6714B3598400700D86 /* orgchart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orgchart@2x.png"; sourceTree = "<group>"; };
 		1620F7FF14A196910070E512 /* FileHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHelpers.h; sourceTree = "<group>"; };
 		1620F80014A196910070E512 /* FileHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileHelpers.m; sourceTree = "<group>"; };
+		1624EA6114E84CE900B11EBB /* ConstitucionPR.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConstitucionPR.plist; sourceTree = "<group>"; };
 		163E2B2314B33FAF008C50DE /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		163E2B2414B33FAF008C50DE /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		163E2B2514B33FAF008C50DE /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
@@ -168,7 +169,6 @@
 		16A7062014E6014500E21931 /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@2x.png"; sourceTree = "<group>"; };
 		16D1463D14E438850026D7AE /* ASUME.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ASUME.plist; sourceTree = "<group>"; };
 		16D1463E14E438850026D7AE /* CodigoPenal2004.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CodigoPenal2004.plist; sourceTree = "<group>"; };
-		16D1463F14E438850026D7AE /* ConstitucionPR.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConstitucionPR.plist; sourceTree = "<group>"; };
 		16D1464014E438850026D7AE /* Notarial.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Notarial.plist; sourceTree = "<group>"; };
 		16D1464114E438850026D7AE /* ProcedimientoAdministrativoUniforme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ProcedimientoAdministrativoUniforme.plist; sourceTree = "<group>"; };
 		16D1464214E438850026D7AE /* ReglasEvidencia2009.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ReglasEvidencia2009.plist; sourceTree = "<group>"; };
@@ -293,9 +293,9 @@
 		164DF01014A2948F0087CBD2 /* Books */ = {
 			isa = PBXGroup;
 			children = (
+				1624EA6114E84CE900B11EBB /* ConstitucionPR.plist */,
 				16D1463D14E438850026D7AE /* ASUME.plist */,
 				16D1463E14E438850026D7AE /* CodigoPenal2004.plist */,
-				16D1463F14E438850026D7AE /* ConstitucionPR.plist */,
 				16D1464014E438850026D7AE /* Notarial.plist */,
 				16D1464114E438850026D7AE /* ProcedimientoAdministrativoUniforme.plist */,
 				16D1464214E438850026D7AE /* ReglasEvidencia2009.plist */,
@@ -529,7 +529,6 @@
 				1661C59B14BF333300C5603F /* Settings.bundle in Resources */,
 				16D1464614E438850026D7AE /* ASUME.plist in Resources */,
 				16D1464714E438850026D7AE /* CodigoPenal2004.plist in Resources */,
-				16D1464814E438850026D7AE /* ConstitucionPR.plist in Resources */,
 				16D1464914E438850026D7AE /* Notarial.plist in Resources */,
 				16D1464A14E438850026D7AE /* ProcedimientoAdministrativoUniforme.plist in Resources */,
 				16D1464B14E438850026D7AE /* ReglasEvidencia2009.plist in Resources */,
@@ -539,6 +538,7 @@
 				16D1465314E448750026D7AE /* BookDetailViewController.xib in Resources */,
 				16A7062114E6014500E21931 /* info.png in Resources */,
 				16A7062214E6014500E21931 /* info@2x.png in Resources */,
+				1624EA6214E84CE900B11EBB /* ConstitucionPR.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

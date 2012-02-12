@@ -47,7 +47,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.searchDisplayController.searchBar.placeholder = [NSString stringWithFormat:@"Buscar en %@", bookData_.currentBook.title];
 	self.searchDisplayController.searchBar.scopeButtonTitles = [NSArray arrayWithObjects:@"Todo el Texto", @"Títulos", nil];
 	[self setToolbarItems:[self searchToolbarItems] animated:NO];
 }
@@ -62,6 +61,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+	self.searchDisplayController.searchBar.placeholder = [NSString stringWithFormat:@"Buscar en %@", bookData_.currentBook.title];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
