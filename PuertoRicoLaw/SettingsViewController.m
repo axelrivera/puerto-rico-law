@@ -8,6 +8,7 @@
 
 #import "SettingsViewController.h"
 #import "ContentPreviewViewController.h"
+#import "InformationViewController.h"
 #import "Settings.h"
 
 #define kFontFamilyControllerTag 101
@@ -213,7 +214,7 @@
 			detailTextStr = nil;
 		}
 	} else {
-		textStr = @"Sobre Rivera Labs";
+		textStr = @"Información";
 		detailTextStr = nil;
 	}
 	
@@ -273,7 +274,8 @@
 		}
 		[self displayComposerSheetTo:toRecipients subject:subjectStr body:bodyStr];
 	} else if (indexPath.section == 3) {
-		
+		InformationViewController *infoController = [[InformationViewController alloc] init];
+		[self.navigationController pushViewController:infoController animated:YES];
 	}
 }
 

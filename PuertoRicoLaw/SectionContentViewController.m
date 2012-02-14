@@ -91,6 +91,21 @@
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
 	[super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		if ([self.manager.favoritesPopover isPopoverVisible]) {
+			[self.manager.favoritesPopover dismissPopoverAnimated:NO];
+		}
+		
+		if ([self.manager.detailsPopover isPopoverVisible]) {
+			[self.manager.detailsPopover dismissPopoverAnimated:NO];
+		}
+		
+		if ([self.manager.actionSheet isVisible]) {
+			[self.manager.actionSheet dismissWithClickedButtonIndex:-1 animated:NO];
+		}
+	}
+	
 	[self.webView reload];
 }
 

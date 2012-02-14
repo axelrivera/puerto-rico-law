@@ -7,6 +7,13 @@
 //
 
 #import "BookDetailViewController.h"
+#import "Settings.h"
+
+@interface BookDetailViewController (Private)
+
+- (void)adjustContentSize;
+
+@end
 
 @implementation BookDetailViewController
 
@@ -176,15 +183,18 @@
 	self.notesLabel.adjustsFontSizeToFitWidth = NO;
 	self.notesLabel.text = self.bookNotes;
 	
-	// Setup Scrollview Content Size and Add Subviews
+	// Setup Autoresizing
 	
-	CGFloat endY = notesFrame.origin.y + notesFrame.size.height;
-	
-	CGSize scrollViewSize = contentSize;
-	if (endY >= contentSize.height) {
-		scrollViewSize = CGSizeMake(contentSize.width, endY + 10.0);
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+		self.titleLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleWidth;
+		titleDivider.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+		self.descriptionLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleWidth;
+		descDivider.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+		self.notesLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin|
+											UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
 	}
-	self.scrollView.contentSize = scrollViewSize;
+	
+	// Add Subviews
 	
 	[self.scrollView addSubview:self.titleLabel];
 	[self.scrollView addSubview:titleDivider];
@@ -193,6 +203,27 @@
 	[self.scrollView addSubview:descDivider];
 	[self.scrollView addSubview:notesTitleLabel];
 	[self.scrollView addSubview:self.notesLabel];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+	if (UIDeviceOrientationIsLandscape(interfaceOrientation) && ![Settings sharedSettings].landscapeMode) {
+		return NO;
+	}
+    // Return YES for supported orientations
+	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+	    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+	} else {
+		// The iPad version uses a Popover. No rotation required.
+	    return NO;
+	}
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+		[self adjustContentSize];
+	}
 }
 
 - (void)viewDidUnload
@@ -205,6 +236,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
+	[self adjustContentSize];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -218,6 +250,19 @@
 - (void)dismissAction:(id)sender
 {
 	[self.delegate detailsViewControllerDidFinish:self];
+}
+
+#pragma mark - Private Methods
+
+- (void)adjustContentSize
+{
+	CGFloat endY = self.notesLabel.frame.origin.y + self.notesLabel.frame.size.height;
+	
+	CGSize scrollViewSize = self.view.bounds.size;
+	if (endY >= self.view.bounds.size.height) {
+		scrollViewSize = CGSizeMake(self.view.bounds.size.width, endY + 10.0);
+	}
+	self.scrollView.contentSize = scrollViewSize;
 }
 
 @end

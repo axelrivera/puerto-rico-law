@@ -77,6 +77,17 @@
 		16D1464E14E438850026D7AE /* ViolenciaDomestica.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16D1464514E438850026D7AE /* ViolenciaDomestica.plist */; };
 		16D1465214E448750026D7AE /* BookDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D1465014E448750026D7AE /* BookDetailViewController.m */; };
 		16D1465314E448750026D7AE /* BookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D1465114E448750026D7AE /* BookDetailViewController.xib */; };
+		16D442A114EAD5AB009B072E /* PolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D4429F14EAD5AB009B072E /* PolicyViewController.m */; };
+		16D442A214EAD5AB009B072E /* PolicyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D442A014EAD5AB009B072E /* PolicyViewController.xib */; };
+		16D442A514EAD6EA009B072E /* terminos.htm in Resources */ = {isa = PBXBuildFile; fileRef = 16D442A414EAD6EA009B072E /* terminos.htm */; };
+		16D4D04514E9B6B300321BF3 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D4D04314E9B6B300321BF3 /* InformationViewController.m */; };
+		16D4D04614E9B6B300321BF3 /* InformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D4D04414E9B6B300321BF3 /* InformationViewController.xib */; };
+		16D5E3DC14EABE5E00F52FE0 /* ftc_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D5E3D814EABE5E00F52FE0 /* ftc_icon.png */; };
+		16D5E3DD14EABE5E00F52FE0 /* ftc_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D5E3D914EABE5E00F52FE0 /* ftc_icon@2x.png */; };
+		16D5E3DE14EABE5E00F52FE0 /* loteria_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D5E3DA14EABE5E00F52FE0 /* loteria_icon.png */; };
+		16D5E3DF14EABE5E00F52FE0 /* loteria_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D5E3DB14EABE5E00F52FE0 /* loteria_icon@2x.png */; };
+		16D5E3E414EABE9300F52FE0 /* RLAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D5E3E214EABE9300F52FE0 /* RLAppsViewController.m */; };
+		16D5E3E514EABE9300F52FE0 /* RLAppsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D5E3E314EABE9300F52FE0 /* RLAppsViewController.xib */; };
 		16D8D96514A8E1CE00E88215 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D8D96414A8E1CE00E88215 /* MessageUI.framework */; };
 		16DD4CA414A10D200063163D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DD4CA314A10D200063163D /* UIKit.framework */; };
 		16DD4CA614A10D200063163D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DD4CA514A10D200063163D /* Foundation.framework */; };
@@ -178,6 +189,20 @@
 		16D1464F14E448750026D7AE /* BookDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetailViewController.h; sourceTree = "<group>"; };
 		16D1465014E448750026D7AE /* BookDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetailViewController.m; sourceTree = "<group>"; };
 		16D1465114E448750026D7AE /* BookDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookDetailViewController.xib; sourceTree = "<group>"; };
+		16D4429E14EAD5AB009B072E /* PolicyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolicyViewController.h; sourceTree = "<group>"; };
+		16D4429F14EAD5AB009B072E /* PolicyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolicyViewController.m; sourceTree = "<group>"; };
+		16D442A014EAD5AB009B072E /* PolicyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PolicyViewController.xib; sourceTree = "<group>"; };
+		16D442A414EAD6EA009B072E /* terminos.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = terminos.htm; sourceTree = "<group>"; };
+		16D4D04214E9B6B300321BF3 /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationViewController.h; sourceTree = "<group>"; };
+		16D4D04314E9B6B300321BF3 /* InformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationViewController.m; sourceTree = "<group>"; };
+		16D4D04414E9B6B300321BF3 /* InformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationViewController.xib; sourceTree = "<group>"; };
+		16D5E3D814EABE5E00F52FE0 /* ftc_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ftc_icon.png; sourceTree = "<group>"; };
+		16D5E3D914EABE5E00F52FE0 /* ftc_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ftc_icon@2x.png"; sourceTree = "<group>"; };
+		16D5E3DA14EABE5E00F52FE0 /* loteria_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loteria_icon.png; sourceTree = "<group>"; };
+		16D5E3DB14EABE5E00F52FE0 /* loteria_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loteria_icon@2x.png"; sourceTree = "<group>"; };
+		16D5E3E114EABE9300F52FE0 /* RLAppsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLAppsViewController.h; sourceTree = "<group>"; };
+		16D5E3E214EABE9300F52FE0 /* RLAppsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLAppsViewController.m; sourceTree = "<group>"; };
+		16D5E3E314EABE9300F52FE0 /* RLAppsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLAppsViewController.xib; sourceTree = "<group>"; };
 		16D8D96414A8E1CE00E88215 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		16DD4C9F14A10D200063163D /* PuertoRicoLaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuertoRicoLaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16DD4CA314A10D200063163D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -262,6 +287,10 @@
 		164DF00A14A293CD0087CBD2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				16D5E3D814EABE5E00F52FE0 /* ftc_icon.png */,
+				16D5E3D914EABE5E00F52FE0 /* ftc_icon@2x.png */,
+				16D5E3DA14EABE5E00F52FE0 /* loteria_icon.png */,
+				16D5E3DB14EABE5E00F52FE0 /* loteria_icon@2x.png */,
 				16A7061F14E6014500E21931 /* info.png */,
 				16A7062014E6014500E21931 /* info@2x.png */,
 				165CAC0714AAA78C007469DC /* trash_mini.png */,
@@ -328,6 +357,12 @@
 				1673F17614ACDF1D0065126B /* ContentPreviewViewController.m */,
 				163E2B2314B33FAF008C50DE /* SearchViewController.h */,
 				163E2B2414B33FAF008C50DE /* SearchViewController.m */,
+				16D4D04214E9B6B300321BF3 /* InformationViewController.h */,
+				16D4D04314E9B6B300321BF3 /* InformationViewController.m */,
+				16D5E3E114EABE9300F52FE0 /* RLAppsViewController.h */,
+				16D5E3E214EABE9300F52FE0 /* RLAppsViewController.m */,
+				16D4429E14EAD5AB009B072E /* PolicyViewController.h */,
+				16D4429F14EAD5AB009B072E /* PolicyViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -340,10 +375,13 @@
 				167EF24214A24D250058F8D1 /* SectionListViewController.xib */,
 				167EF24714A251320058F8D1 /* SectionContentViewController.xib */,
 				164DF0F214A29D160087CBD2 /* SettingsViewController.xib */,
+				16D4D04414E9B6B300321BF3 /* InformationViewController.xib */,
 				169151A614A2C11D001E59C2 /* FavoritesViewController.xib */,
 				1673F16914ACAED90065126B /* TableSelectViewController.xib */,
 				1673F17714ACDF1D0065126B /* ContentPreviewViewController.xib */,
 				163E2B2514B33FAF008C50DE /* SearchViewController.xib */,
+				16D5E3E314EABE9300F52FE0 /* RLAppsViewController.xib */,
+				16D442A014EAD5AB009B072E /* PolicyViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -410,6 +448,7 @@
 				16DD4CB114A10D200063163D /* PuertoRicoLaw-Prefix.pch */,
 				16DFA24B14B4C79C00517778 /* SearchWebView.js */,
 				1661C59A14BF333300C5603F /* Settings.bundle */,
+				16D442A414EAD6EA009B072E /* terminos.htm */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -539,6 +578,14 @@
 				16A7062114E6014500E21931 /* info.png in Resources */,
 				16A7062214E6014500E21931 /* info@2x.png in Resources */,
 				1624EA6214E84CE900B11EBB /* ConstitucionPR.plist in Resources */,
+				16D4D04614E9B6B300321BF3 /* InformationViewController.xib in Resources */,
+				16D5E3DC14EABE5E00F52FE0 /* ftc_icon.png in Resources */,
+				16D5E3DD14EABE5E00F52FE0 /* ftc_icon@2x.png in Resources */,
+				16D5E3DE14EABE5E00F52FE0 /* loteria_icon.png in Resources */,
+				16D5E3DF14EABE5E00F52FE0 /* loteria_icon@2x.png in Resources */,
+				16D5E3E514EABE9300F52FE0 /* RLAppsViewController.xib in Resources */,
+				16D442A214EAD5AB009B072E /* PolicyViewController.xib in Resources */,
+				16D442A514EAD6EA009B072E /* terminos.htm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,6 +619,9 @@
 				163E2B2614B33FAF008C50DE /* SearchViewController.m in Sources */,
 				16DFA25014B4C7FB00517778 /* UIWebView+Highlight.m in Sources */,
 				16D1465214E448750026D7AE /* BookDetailViewController.m in Sources */,
+				16D4D04514E9B6B300321BF3 /* InformationViewController.m in Sources */,
+				16D5E3E414EABE9300F52FE0 /* RLAppsViewController.m in Sources */,
+				16D442A114EAD5AB009B072E /* PolicyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

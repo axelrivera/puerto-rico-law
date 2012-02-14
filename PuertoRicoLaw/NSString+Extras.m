@@ -29,13 +29,10 @@
 	return [NSString stringWithFormat:
 			@"<html>"
 			@"<head>"
-			@"<base href=\"file://%@\" />"
 			@"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />"
-			@"<link rel=\"stylesheet\" type=\"text/css\" href=\"stylesheet.css\" />"
 			@"%@"
 			@"</head>"
 			@"<body><h2>%@</h2>%@</body></html>",
-			[[NSBundle mainBundle] resourcePath],
 			stylesheet,
 			title,
 			body];

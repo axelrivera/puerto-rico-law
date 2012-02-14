@@ -102,6 +102,25 @@
 	}
 }
 
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+	[super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		if ([self.manager.favoritesPopover isPopoverVisible]) {
+			[self.manager.favoritesPopover dismissPopoverAnimated:NO];
+		}
+		
+		if ([self.manager.detailsPopover isPopoverVisible]) {
+			[self.manager.detailsPopover dismissPopoverAnimated:NO];
+		}
+		
+		if ([self.manager.actionSheet isVisible]) {
+			[self.manager.actionSheet dismissWithClickedButtonIndex:-1 animated:NO];
+		}
+	}
+}
+
 #pragma mark - Custom Methods
 
 - (void)refresh
@@ -216,13 +235,6 @@
 	self.manager.siblings = siblings;
 	self.manager.currentIndex = index;
 	[self refresh];
-}
-
-- (void)enableMainView:(BOOL)enable
-{
-	self.navigationController.view.userInteractionEnabled = enable;
-	self.navigationController.navigationItem.leftBarButtonItem.enabled = enable;
-	self.navigationController.navigationItem.rightBarButtonItem.enabled = enable;
 }
 
 - (void)clearCurrentSection
