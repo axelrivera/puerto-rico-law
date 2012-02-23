@@ -5,13 +5,20 @@
 	<key>Book</key>
 	<dict>
 		<key>bookDescription</key>
-		<string>Descripción debe ir aquí...</string>
+		<string>Incluye enmiendas hasta el 23 de junio de 2011</string>
 		<key>bookLastUpdate</key>
-		<date>2012-01-09T04:00:00Z</date>
+		<date>2012-02-23T04:00:00Z</date>
 		<key>bookName</key>
 		<string>ASUME</string>
 		<key>bookNotes</key>
-		<string></string>
+		<string>* 8 L.P.R.A. - Bienestar Público e Instituciones Caritativas
+
+* Capítulo 25 - Ley Orgánica de la Administración para el Sustento de Menores
+
+* Ley Núm. 71 de 20 de Junio de 1956, según enmendada por
+
+* Ley Núm. 5 de 30 de Diciembre de 1986, según enmendada
+</string>
 		<key>bookShortTitle</key>
 		<string>ASUME</string>
 		<key>bookTitle</key>
@@ -41,7 +48,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 2</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 501</string>
+			<string>8 L.P.R.A. § 501</string>
 			<key>sectionTitle</key>
 			<string>Definiciones</string>
 		</dict>
@@ -53,7 +60,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 3</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 502</string>
+			<string>8 L.P.R.A. § 502</string>
 			<key>sectionTitle</key>
 			<string>Declaración de política pública</string>
 		</dict>
@@ -65,7 +72,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 4</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 503</string>
+			<string>8 L.P.R.A. § 503</string>
 			<key>sectionTitle</key>
 			<string>Deberes recíprocos</string>
 		</dict>
@@ -77,7 +84,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 5</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 504</string>
+			<string>8 L.P.R.A. § 504</string>
 			<key>sectionTitle</key>
 			<string>Administración para Sustento de Menores - Creación</string>
 		</dict>
@@ -89,7 +96,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 5a</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 504a</string>
+			<string>8 L.P.R.A. § 504a</string>
 			<key>sectionTitle</key>
 			<string>Poderes y funciones - Transferencia</string>
 		</dict>
@@ -101,7 +108,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 5b</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 504b</string>
+			<string>8 L.P.R.A. § 504b</string>
 			<key>sectionTitle</key>
 			<string>Prestación de servicios de sustento de menores</string>
 		</dict>
@@ -113,7 +120,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 6</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 505</string>
+			<string>8 L.P.R.A. § 505</string>
 			<key>sectionTitle</key>
 			<string>Fondo Especial</string>
 		</dict>
@@ -125,7 +132,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 6a</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 505a</string>
+			<string>8 L.P.R.A. § 505a</string>
 			<key>sectionTitle</key>
 			<string>Funciones del Secretario</string>
 		</dict>
@@ -137,7 +144,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 7</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 506</string>
+			<string>8 L.P.R.A. § 506</string>
 			<key>sectionTitle</key>
 			<string>Administrador; facultades y poderes</string>
 		</dict>
@@ -149,7 +156,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 7a</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 506a</string>
+			<string>8 L.P.R.A. § 506a</string>
 			<key>sectionTitle</key>
 			<string>Subadministrador</string>
 		</dict>
@@ -161,7 +168,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 7b</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 506b</string>
+			<string>8 L.P.R.A. § 506b</string>
 			<key>sectionTitle</key>
 			<string>Juez Administrativo; nombramiento; facultades</string>
 		</dict>
@@ -173,7 +180,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 7c</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 506c</string>
+			<string>8 L.P.R.A. § 506c</string>
 			<key>sectionTitle</key>
 			<string>Procurador Auxiliar; facultades</string>
 		</dict>
@@ -185,7 +192,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 7d</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 506d</string>
+			<string>8 L.P.R.A. § 506d</string>
 			<key>sectionTitle</key>
 			<string>Compras y suministros</string>
 		</dict>
@@ -197,7 +204,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 8</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 507</string>
+			<string>8 L.P.R.A. § 507</string>
 			<key>sectionTitle</key>
 			<string>Solicitud de servicios</string>
 		</dict>
@@ -209,7 +216,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 9</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 508</string>
+			<string>8 L.P.R.A. § 508</string>
 			<key>sectionTitle</key>
 			<string>Elegibilidad para recibir asistencia; condiciones</string>
 		</dict>
@@ -221,7 +228,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 10</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 509</string>
+			<string>8 L.P.R.A. § 509</string>
 			<key>sectionTitle</key>
 			<string>Servicio de localización de personas; facultad para investigar</string>
 		</dict>
@@ -233,7 +240,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 10a</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 509a</string>
+			<string>8 L.P.R.A. § 509a</string>
 			<key>sectionTitle</key>
 			<string>Registro estatal de nuevos empleados</string>
 		</dict>
@@ -245,7 +252,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 11</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 510</string>
+			<string>8 L.P.R.A. § 510</string>
 			<key>sectionTitle</key>
 			<string>Procedimiento administrativo expedito</string>
 		</dict>
@@ -257,7 +264,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 11a</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 510a</string>
+			<string>8 L.P.R.A. § 510a</string>
 			<key>sectionTitle</key>
 			<string>Procedimiento administrativo expedito - Revisión judicial</string>
 		</dict>
@@ -269,7 +276,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 12</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 511</string>
+			<string>8 L.P.R.A. § 511</string>
 			<key>sectionTitle</key>
 			<string>Procedimiento administrativo expedito - Petición</string>
 		</dict>
@@ -281,7 +288,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 13</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 512</string>
+			<string>8 L.P.R.A. § 512</string>
 			<key>sectionTitle</key>
 			<string>Procedimiento administrativo expedito - Examinadores</string>
 		</dict>
@@ -293,7 +300,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 14</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 513</string>
+			<string>8 L.P.R.A. § 513</string>
 			<key>sectionTitle</key>
 			<string>Procedimiento administrativo expedito - Acuerdos o estipulaciones</string>
 		</dict>
@@ -305,7 +312,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 15</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 514</string>
+			<string>8 L.P.R.A. § 514</string>
 			<key>sectionTitle</key>
 			<string>Procedimiento administrativo expedito - Notificación de la acción</string>
 		</dict>
@@ -317,7 +324,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 16</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 515</string>
+			<string>8 L.P.R.A. § 515</string>
 			<key>sectionTitle</key>
 			<string>Procedimiento administrativo expedito - Descubrimiento compulsorio de información</string>
 		</dict>
@@ -329,7 +336,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 17</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 516</string>
+			<string>8 L.P.R.A. § 516</string>
 			<key>sectionTitle</key>
 			<string>Procedimiento administrativo expedito - Orden provisional de pensión</string>
 		</dict>
@@ -341,7 +348,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 18</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 517</string>
+			<string>8 L.P.R.A. § 517</string>
 			<key>sectionTitle</key>
 			<string>Procedimiento administrativo expedito - Tramitación</string>
 		</dict>
@@ -353,7 +360,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 19</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 518</string>
+			<string>8 L.P.R.A. § 518</string>
 			<key>sectionTitle</key>
 			<string>Orden sobre pensión alimentaria – Determinación, revisión y modificación; Guías Mandatorias</string>
 		</dict>
@@ -365,7 +372,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 20</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 519</string>
+			<string>8 L.P.R.A. § 519</string>
 			<key>sectionTitle</key>
 			<string>Orden sobre pensión alimentaria - Formas de pago</string>
 		</dict>
@@ -377,7 +384,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 21</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 520</string>
+			<string>8 L.P.R.A. § 520</string>
 			<key>sectionTitle</key>
 			<string>Orden sobre pensión alimentaria – Unidad estatal de recaudaciones</string>
 		</dict>
@@ -389,7 +396,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 22</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 521</string>
+			<string>8 L.P.R.A. § 521</string>
 			<key>sectionTitle</key>
 			<string>Horarios de abogado</string>
 		</dict>
@@ -401,7 +408,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 22a</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 521a</string>
+			<string>8 L.P.R.A. § 521a</string>
 			<key>sectionTitle</key>
 			<string>Orden sobre pensión alimentaria - Pagos; cobro y distribución</string>
 		</dict>
@@ -413,7 +420,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 23</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 522</string>
+			<string>8 L.P.R.A. § 522</string>
 			<key>sectionTitle</key>
 			<string>Medidas para asegurar la efectividad del pago - Información</string>
 		</dict>
@@ -425,7 +432,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 24</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 523</string>
+			<string>8 L.P.R.A. § 523</string>
 			<key>sectionTitle</key>
 			<string>Medidas para asegurar la efectividad del pago - Retención de ingresos; orden y notificación</string>
 		</dict>
@@ -437,7 +444,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 25</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 524</string>
+			<string>8 L.P.R.A. § 524</string>
 			<key>sectionTitle</key>
 			<string>Medidas para asegurar la efectividad del pago - Embargo de bienes</string>
 		</dict>
@@ -449,7 +456,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 26</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 525</string>
+			<string>8 L.P.R.A. § 525</string>
 			<key>sectionTitle</key>
 			<string>Medidas para asegurar la efectividad del pago; Retención de reintegros de contribuciones estatales</string>
 		</dict>
@@ -461,7 +468,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 27</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 526</string>
+			<string>8 L.P.R.A. § 526</string>
 			<key>sectionTitle</key>
 			<string>Medidas para asegurar la efectividad del pago; Retención de reintegros de contribuciones federales</string>
 		</dict>
@@ -473,7 +480,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 28</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 527</string>
+			<string>8 L.P.R.A. § 527</string>
 			<key>sectionTitle</key>
 			<string>Medidas para asegurar la efectividad del pago; Fianza o garantía</string>
 		</dict>
@@ -485,7 +492,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 29</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 528</string>
+			<string>8 L.P.R.A. § 528</string>
 			<key>sectionTitle</key>
 			<string>Medidas para asegurar la efectividad del pago; Información sobre crédito</string>
 		</dict>
@@ -497,7 +504,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 30</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 528a</string>
+			<string>8 L.P.R.A. § 528a</string>
 			<key>sectionTitle</key>
 			<string>Medidas adicionales para asegurar la efectividad del pago</string>
 		</dict>
@@ -509,7 +516,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 30a</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 528b</string>
+			<string>8 L.P.R.A. § 528b</string>
 			<key>sectionTitle</key>
 			<string>Certificación de Deuda de Pensión Alimentaria</string>
 		</dict>
@@ -521,7 +528,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 31</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 529</string>
+			<string>8 L.P.R.A. § 529</string>
 			<key>sectionTitle</key>
 			<string>Medidas adicionales - Otros remedios</string>
 		</dict>
@@ -533,7 +540,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 32</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 529a</string>
+			<string>8 L.P.R.A. § 529a</string>
 			<key>sectionTitle</key>
 			<string>Aseguramiento Administrativo de Efectividad en la Ejecución de Obligaciones Alimentarias en Casos Interestatales</string>
 		</dict>
@@ -545,7 +552,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 34</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. § 530</string>
+			<string>8 L.P.R.A. § 530</string>
 			<key>sectionTitle</key>
 			<string>Penalidades; multas administrativas</string>
 		</dict>

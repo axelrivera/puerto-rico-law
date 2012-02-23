@@ -5,13 +5,14 @@
 	<key>Book</key>
 	<dict>
 		<key>bookDescription</key>
-		<string>Descripción debe ir aquí...</string>
+		<string>Incluye enmiendas hasta el 11 de noviembre de 2011</string>
 		<key>bookLastUpdate</key>
-		<date>2012-01-09T04:00:00Z</date>
+		<date>2012-02-23T04:00:00Z</date>
 		<key>bookName</key>
 		<string>CodigoPenal2004</string>
 		<key>bookNotes</key>
-		<string></string>
+		<string>* Ley Núm. 149 de 18 de junio de 2004, según enmendada  
+</string>
 		<key>bookShortTitle</key>
 		<string>Código Penal</string>
 		<key>bookTitle</key>
@@ -402,7 +403,7 @@
 										</dict>
 										<dict>
 											<key>sectionContent</key>
-											<string>&lt;p&gt;El delito se considera cometido por negligencia cuando se realiza sin intención, pero por imprudencia, al no observar el cuidado debido que hubiera tenido una persona normalmente prudente en la situación del autor para evitar el resultado.&lt;/p&gt; </string>
+											<string>&lt;p&gt;El delito se considera cometido por negligencia cuando se realiza sin intención, pero por imprudencia, al no observar el cuidado debido que hubiera tenido una persona normalmente prudente en la situación del autor para evitar el resultado.            &lt;/p&gt; </string>
 											<key>sectionID</key>
 											<string>D13CE644-553E-40C8-969E-6D0E13427645</string>
 											<key>sectionLabel</key>
@@ -4331,7 +4332,7 @@
 											<key>sectionSublabel</key>
 											<string></string>
 											<key>sectionTitle</key>
-											<string></string>
+											<string>Compra y venta ilegal de bienes en pago de contribuciones</string>
 										</dict>
 										<dict>
 											<key>sectionContent</key>

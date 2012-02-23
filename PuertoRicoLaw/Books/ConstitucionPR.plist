@@ -5,37 +5,20 @@
 	<key>Book</key>
 	<dict>
 		<key>bookDescription</key>
-		<string>Entró en vigor el 28 de julio de 1952. Esto es una descripción larga a ver que pasa cuando hay mas de una linea en la descripción.</string>
+		<string>Entró en vigor el 28 de julio de 1952</string>
 		<key>bookLastUpdate</key>
-		<date>2012-01-09T04:00:00Z</date>
+		<date>2012-02-21T04:00:00Z</date>
 		<key>bookName</key>
 		<string>ConstitucionPR</string>
 		<key>bookNotes</key>
-		<string>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu lectus in sapien pulvinar laoreet ut id purus. Donec et mi magna, blandit porta metus. In hac habitasse platea dictumst. Cras elementum tincidunt mauris sed aliquet. Fusce molestie pharetra sem sed elementum. Ut quis aliquet lectus. Ut metus purus, tempor vitae sollicitudin id, consequat eget ante.
-			
-			Nam nec convallis magna. Fusce commodo, urna scelerisque facilisis placerat, odio tortor vehicula leo, in suscipit tortor quam in eros. Pellentesque posuere felis ut urna tempor viverra. Suspendisse lacinia venenatis semper. Maecenas tincidunt ultricies nunc, in sodales libero accumsan vel. Sed egestas pulvinar nulla quis pulvinar. Phasellus congue, libero vel imperdiet interdum, mi urna blandit arcu, ut congue libero quam non ipsum. Etiam nec suscipit lorem. Morbi in ante metus. Etiam ac nulla eu tortor adipiscing viverra. Phasellus volutpat magna sed tellus viverra at venenatis leo bibendum. Donec convallis suscipit massa vitae commodo. Duis ligula quam, commodo eget auctor a, malesuada at nisl. Fusce nec dui quis dui porta tincidunt.
-			
-			Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla eget dapibus tellus. Nam iaculis interdum dui commodo porttitor. Etiam vehicula pulvinar nulla, at rhoncus sem malesuada quis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum laoreet blandit elit. Duis mollis rhoncus sapien sit amet tempus. Aliquam facilisis eros vitae elit aliquet at convallis orci tempus. Nam quis magna ipsum. Mauris faucibus hendrerit tortor at lacinia. Nullam cursus luctus neque, a interdum lorem commodo non. Curabitur vel eros non justo pharetra adipiscing at accumsan felis. Morbi nibh nisl, dictum at imperdiet eu, malesuada vitae velit. Fusce id nibh quis nisl convallis facilisis eget nec nulla. Maecenas auctor arcu ut nisi adipiscing vel tempus ante volutpat.
-			
-			Nunc sed libero justo. Mauris eleifend pretium sollicitudin. Ut convallis pulvinar odio. Maecenas luctus risus ut felis fermentum adipiscing. Mauris lobortis, metus ac sagittis egestas, velit mi adipiscing justo, ut facilisis nunc est vitae ligula. Suspendisse eros massa, volutpat sed porta at, gravida eget orci. Duis id risus a risus accumsan pulvinar non quis leo. Cras sagittis velit non orci pretium mattis. Nullam at lacus et lacus venenatis pretium in ac nunc. Etiam condimentum mauris et augue dictum a convallis ipsum dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta urna at mi porta tempor.
-			
-			Mauris nisi turpis, rhoncus quis semper eu, sodales interdum justo. In hac habitasse platea dictumst. Quisque sollicitudin turpis ut mi aliquet eu elementum enim tincidunt. Sed ultricies felis sed massa adipiscing vestibulum. In hac habitasse platea dictumst. Sed semper urna vel elit pulvinar eget fermentum turpis mollis. Phasellus lacinia magna quis orci commodo non dapibus turpis tincidunt. Fusce bibendum arcu sit amet ipsum pellentesque id mollis metus mattis. Integer vitae sodales enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean gravida semper dolor ac faucibus. Donec commodo enim purus. Fusce sollicitudin dolor sit amet purus consectetur id egestas urna pharetra. Sed semper aliquet velit nec dictum. Fusce id aliquet diam.
-			
-			Mauris eu justo elit, vitae blandit est. Aenean neque libero, euismod quis consequat sed, ornare eu est. Nunc sit amet nulla sit amet lorem eleifend dapibus et eget elit. Donec consequat sodales adipiscing. In facilisis dui ut sapien tristique vestibulum mattis tellus iaculis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis in nisi sit amet nisi fermentum ullamcorper. Phasellus in nisi in tellus blandit sagittis sed vel quam. Donec tempus semper enim id tincidunt. Donec pulvinar, est vitae lobortis adipiscing, augue odio condimentum sem, ut pharetra metus nisi ac est. Ut ac eros purus, non tristique nisl. Duis fermentum consectetur cursus.
-			
-			Ut suscipit, magna ac auctor tincidunt, ligula felis blandit velit, sed luctus nunc dui vitae lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed lectus libero, fermentum eget tempus ac, iaculis at ligula. Duis tristique dui eget dolor pharetra sodales porttitor massa ullamcorper. Aliquam eros augue, vestibulum id sollicitudin at, luctus ac metus. Praesent ipsum ligula, eleifend vitae fermentum eu, elementum sed velit. Integer rutrum laoreet sem. Aenean ornare egestas lacus et egestas. Aenean et mauris in dolor congue varius. Quisque lectus est, laoreet a tempus et, ornare quis enim. Quisque ipsum ipsum, pellentesque at vulputate non, tincidunt a nibh. Sed id lectus nisl.
-			
-			Aliquam erat volutpat. Fusce felis odio, dignissim non mattis sed, gravida quis diam. Nam vel tortor a ante viverra adipiscing. Sed tellus ligula, ultrices nec dictum id, congue ut quam. Nunc at neque leo. Sed enim lorem, sodales in adipiscing in, porta vel justo. Integer erat lorem, dictum ut varius quis, tempus eget neque. Nulla sagittis rutrum faucibus. Nullam ligula nisl, dapibus eu pharetra congue, tempus vel quam. Duis faucibus pharetra placerat.
-			
-			Etiam congue sodales lacinia. Pellentesque dictum egestas pulvinar. Donec purus mi, euismod nec laoreet vitae, porttitor quis nulla. Integer rutrum risus ut augue blandit sollicitudin. Praesent accumsan, erat vestibulum rhoncus ultrices, lectus ligula commodo mi, id auctor nisi ligula dictum lorem. Nam eget odio ornare eros pretium aliquam ut a felis. Sed pellentesque laoreet ultricies. Quisque risus enim, dignissim nec tristique nec, pulvinar non massa. Vestibulum in sem a est ornare luctus. In accumsan nulla sed purus mattis faucibus. Aenean eget tortor felis. Proin vel ipsum et magna vehicula lacinia eu sed ante.
-			
-			Integer egestas justo non purus venenatis et pellentesque mi ullamcorper. Aliquam dui leo, facilisis eu sagittis a, sodales eu velit. Morbi sem nunc, pellentesque commodo posuere a, rhoncus ut augue. Fusce mollis aliquam libero. Vivamus placerat, tellus convallis dignissim fringilla, eros justo iaculis neque, at convallis justo felis a massa. Cras et lacus vitae quam rhoncus pulvinar. Fusce dignissim felis vel sapien malesuada eu rutrum elit lobortis. Proin in metus et lorem ornare rhoncus. Mauris pharetra suscipit lacus. Aliquam commodo massa nec ipsum consequat imperdiet. Aliquam varius, velit at feugiat tincidunt, mauris turpis tristique neque, sed luctus magna elit vitae lacus.</string>
+		<string>* 1AP L.P.R.A. - Constituciones y Leyes Históricas
+</string>
 		<key>bookShortTitle</key>
 		<string>Constitución PR</string>
 		<key>bookTitle</key>
 		<string>Constitución del Estado Libre Asociado de Puerto Rico</string>
 		<key>bookVersion</key>
-		<integer>3</integer>
+		<integer>1</integer>
 	</dict>
 	<key>Sections</key>
 	<array>
@@ -221,7 +204,7 @@
 					<key>sectionLabel</key>
 					<string>Sección 12</string>
 					<key>sectionTitle</key>
-					<string>Esclavitud; servidumbre involuntaria; castigos crueles e inusitados; derechos civiles; leyes &quot;ex post facto&quot;; &quot;proyectos&quot; para condenar sin celebración de juicio</string>
+					<string>Esclavitud; servidumbre involuntaria; castigos crueles e inusitados; derechos civiles; leyes "ex post facto"; "proyectos" para condenar sin celebración de juicio</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
@@ -969,7 +952,7 @@
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;Texto de los Estatutos&lt;/p&gt;  &lt;p&gt;Toda acción criminal en los tribunales del Estado Libre Asociado se instruirá a nombre y por autoridad de &quot;&quot;El Pueblo de Puerto Rico,&quot; mientras otra cosa no se dispusiere por ley.&lt;/p&gt; </string>
+					<string>&lt;p&gt;Texto de los Estatutos&lt;/p&gt;  &lt;p&gt;Toda acción criminal en los tribunales del Estado Libre Asociado se instruirá a nombre y por autoridad de ""El Pueblo de Puerto Rico," mientras otra cosa no se dispusiere por ley.&lt;/p&gt; </string>
 					<key>sectionID</key>
 					<string>3D5CDB4E-D9EE-49FB-89D6-044FCC768731</string>
 					<key>sectionLabel</key>
@@ -1112,13 +1095,13 @@
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;En lo sucesivo la expresión &quot;ciudadano del Estado Libre Asociado de Puerto Rico&quot;, sustituirá a la expresión &quot;ciudadano de Puerto Rico&quot; según ésta ha sido usada antes de la vigencia de esta Constitución.&lt;/p&gt; </string>
+					<string>&lt;p&gt;En lo sucesivo la expresión "ciudadano del Estado Libre Asociado de Puerto Rico", sustituirá a la expresión "ciudadano de Puerto Rico" según ésta ha sido usada antes de la vigencia de esta Constitución.&lt;/p&gt; </string>
 					<key>sectionID</key>
 					<string>F1BE4006-CED8-4847-B226-09B27CAB2BFD</string>
 					<key>sectionLabel</key>
 					<string>Sección 5</string>
 					<key>sectionTitle</key>
-					<string>Expresión &quot;Ciudadano del Estado Libre Asociado de Puerto Rico&quot; sustituirá la de &quot;Ciudadano de Puerto Rico&quot;</string>
+					<string>Expresión "Ciudadano del Estado Libre Asociado de Puerto Rico" sustituirá la de "Ciudadano de Puerto Rico"</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>

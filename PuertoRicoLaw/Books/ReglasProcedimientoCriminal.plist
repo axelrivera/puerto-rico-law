@@ -5,17 +5,20 @@
 	<key>Book</key>
 	<dict>
 		<key>bookDescription</key>
-		<string>Descripción debe ir aquí...</string>
+		<string>Incluye enmiendas hasta el 27 de diciembre de 2011</string>
 		<key>bookLastUpdate</key>
-		<date>2012-01-09T04:00:00Z</date>
+		<date>2012-02-23T04:00:00Z</date>
 		<key>bookName</key>
 		<string>ReglasProcedimientoCriminal</string>
 		<key>bookNotes</key>
-		<string></string>
+		<string>* 34 Ap. II L.P.R.A. - Reglas de Procedimientos Criminales
+
+* Reglas de Procedimiento Criminal de 1963, según enmendada
+</string>
 		<key>bookShortTitle</key>
 		<string>Procedimiento Criminal</string>
 		<key>bookTitle</key>
-		<string>Reglas de Procedimiento Criminal de Puerto Rico</string>
+		<string>Reglas de Procedimiento Criminal</string>
 		<key>bookVersion</key>
 		<integer>1</integer>
 	</dict>

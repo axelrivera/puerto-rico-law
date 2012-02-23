@@ -5,13 +5,16 @@
 	<key>Book</key>
 	<dict>
 		<key>bookDescription</key>
-		<string>Descripción debe ir aquí...</string>
+		<string>Incluye enmiendas hasta el 30 de julio de 2009</string>
 		<key>bookLastUpdate</key>
-		<date>2012-01-09T04:00:00Z</date>
+		<date>2012-02-21T04:00:00Z</date>
 		<key>bookName</key>
 		<string>ReglasEvidencia2009</string>
 		<key>bookNotes</key>
-		<string></string>
+		<string>* Adoptadas por el Tribunal Supremo de Puerto Rico el 9 de febrero de 2009
+
+* Enmendadas por la Ley Núm. 46, 30 de julio de 2009, ef. 1 de enero de 2010
+</string>
 		<key>bookShortTitle</key>
 		<string>Evidencia</string>
 		<key>bookTitle</key>

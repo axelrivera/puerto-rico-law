@@ -5,13 +5,18 @@
 	<key>Book</key>
 	<dict>
 		<key>bookDescription</key>
-		<string>Descripción debe ir aquí...</string>
+		<string>Incluye enmiendas hasta el 29 de agosto de 2011</string>
 		<key>bookLastUpdate</key>
-		<date>2012-01-09T04:00:00Z</date>
+		<date>2012-02-23T04:00:00Z</date>
 		<key>bookName</key>
 		<string>ViolenciaDomestica</string>
 		<key>bookNotes</key>
-		<string></string>
+		<string>* 8 L.P.R.A. - Bienestar Público e Instituciones Caritativas
+
+* Capítulo 29 - Prevención e Intervención contra la Violencia Doméstica
+
+* Ley Núm. 54 de 15 de agosto de 1989, según enmendada
+</string>
 		<key>bookShortTitle</key>
 		<string>Ley 54</string>
 		<key>bookTitle</key>
@@ -44,7 +49,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 1.2</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 601</string>
+					<string>8 L.P.R.A. § 601</string>
 					<key>sectionTitle</key>
 					<string>Política pública</string>
 				</dict>
@@ -56,7 +61,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 1.3</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 602</string>
+					<string>8 L.P.R.A. § 602</string>
 					<key>sectionTitle</key>
 					<string>Definiciones</string>
 				</dict>
@@ -66,7 +71,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 1.0</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. §§ 601-602</string>
+			<string>8 L.P.R.A. §§ 601-602</string>
 			<key>sectionTitle</key>
 			<string>Disposiciones Generales</string>
 		</dict>
@@ -81,7 +86,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 2.1</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 621</string>
+					<string>8 L.P.R.A. § 621</string>
 					<key>sectionTitle</key>
 					<string>Ordenes de protección</string>
 				</dict>
@@ -93,7 +98,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 2.1A</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 621a</string>
+					<string>8 L.P.R.A. § 621a</string>
 					<key>sectionTitle</key>
 					<string>Prohibición de órdenes de protección reciprocas</string>
 				</dict>
@@ -105,7 +110,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 2.1</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 622</string>
+					<string>8 L.P.R.A. § 622</string>
 					<key>sectionTitle</key>
 					<string>Competencia</string>
 				</dict>
@@ -117,7 +122,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 2.3</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 623</string>
+					<string>8 L.P.R.A. § 623</string>
 					<key>sectionTitle</key>
 					<string>Procedimiento</string>
 				</dict>
@@ -129,7 +134,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 2.4</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 624</string>
+					<string>8 L.P.R.A. § 624</string>
 					<key>sectionTitle</key>
 					<string>Notificación</string>
 				</dict>
@@ -141,7 +146,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 2.5</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 625</string>
+					<string>8 L.P.R.A. § 625</string>
 					<key>sectionTitle</key>
 					<string>Ordenes ex parte</string>
 				</dict>
@@ -153,7 +158,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 2.6</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 626</string>
+					<string>8 L.P.R.A. § 626</string>
 					<key>sectionTitle</key>
 					<string>Contenido de las órdenes de protección</string>
 				</dict>
@@ -165,7 +170,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 2.7</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 627</string>
+					<string>8 L.P.R.A. § 627</string>
 					<key>sectionTitle</key>
 					<string>Notificación a las partes y a las agencias del orden público</string>
 				</dict>
@@ -177,7 +182,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 2.8</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 628</string>
+					<string>8 L.P.R.A. § 628</string>
 					<key>sectionTitle</key>
 					<string>Incumplimiento de órdenes de protección</string>
 				</dict>
@@ -189,7 +194,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 2.9</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 629</string>
+					<string>8 L.P.R.A. § 629</string>
 					<key>sectionTitle</key>
 					<string>Evaluación de Trabajo Social</string>
 				</dict>
@@ -199,7 +204,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 2.0</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. §§ 621-629</string>
+			<string>8 L.P.R.A. §§ 621-629</string>
 			<key>sectionTitle</key>
 			<string>Ordenes de Proteccion y Aspectos Procesales</string>
 		</dict>
@@ -214,7 +219,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 3.1</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 631</string>
+					<string>8 L.P.R.A. § 631</string>
 					<key>sectionTitle</key>
 					<string>Maltrato</string>
 				</dict>
@@ -226,7 +231,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 3.2</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 632</string>
+					<string>8 L.P.R.A. § 632</string>
 					<key>sectionTitle</key>
 					<string>Maltrato agravado</string>
 				</dict>
@@ -238,7 +243,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 3.3</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 633</string>
+					<string>8 L.P.R.A. § 633</string>
 					<key>sectionTitle</key>
 					<string>Maltrato mediante amenaza</string>
 				</dict>
@@ -250,7 +255,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 3.4</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 634</string>
+					<string>8 L.P.R.A. § 634</string>
 					<key>sectionTitle</key>
 					<string>Maltrato mediante restricción de la libertad</string>
 				</dict>
@@ -262,7 +267,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 3.5</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 635</string>
+					<string>8 L.P.R.A. § 635</string>
 					<key>sectionTitle</key>
 					<string>Agresión sexual conyugal</string>
 				</dict>
@@ -274,7 +279,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 3.6</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 636</string>
+					<string>8 L.P.R.A. § 636</string>
 					<key>sectionTitle</key>
 					<string>Desvío del procedimiento</string>
 				</dict>
@@ -286,7 +291,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 3.7</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 637</string>
+					<string>8 L.P.R.A. § 637</string>
 					<key>sectionTitle</key>
 					<string>Disposiciones especiales sobre la fianza, libertad condicional, permisos a confinados para salir de instituciones y otros</string>
 				</dict>
@@ -298,7 +303,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 3.8</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 638</string>
+					<string>8 L.P.R.A. § 638</string>
 					<key>sectionTitle</key>
 					<string>Arresto</string>
 				</dict>
@@ -310,7 +315,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 3.9</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 639</string>
+					<string>8 L.P.R.A. § 639</string>
 					<key>sectionTitle</key>
 					<string>Firma y juramento de la denuncia</string>
 				</dict>
@@ -322,7 +327,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 3.10</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 640</string>
+					<string>8 L.P.R.A. § 640</string>
 					<key>sectionTitle</key>
 					<string>Asistencia a la víctima de maltrato</string>
 				</dict>
@@ -334,7 +339,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 3.11</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 641</string>
+					<string>8 L.P.R.A. § 641</string>
 					<key>sectionTitle</key>
 					<string>Preparación de informes</string>
 				</dict>
@@ -344,7 +349,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 3.0</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. §§ 631-641</string>
+			<string>8 L.P.R.A. §§ 631-641</string>
 			<key>sectionTitle</key>
 			<string>Conducta Delictiva; Penalidades y Otras Medidas</string>
 		</dict>
@@ -359,7 +364,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 4.1</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 651</string>
+					<string>8 L.P.R.A. § 651</string>
 					<key>sectionTitle</key>
 					<string>Medidas para prevenir</string>
 				</dict>
@@ -371,7 +376,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 4.2</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 652</string>
+					<string>8 L.P.R.A. § 652</string>
 					<key>sectionTitle</key>
 					<string>Confidencialidad de comunicaciones</string>
 				</dict>
@@ -383,7 +388,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 4.3</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 653</string>
+					<string>8 L.P.R.A. § 653</string>
 					<key>sectionTitle</key>
 					<string>Registro de Direcciones Sustitutas</string>
 				</dict>
@@ -395,7 +400,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 4.4</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 654</string>
+					<string>8 L.P.R.A. § 654</string>
 					<key>sectionTitle</key>
 					<string>Colaboración de agencias gubernamentales</string>
 				</dict>
@@ -405,7 +410,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 4.0</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. §§ 651-654</string>
+			<string>8 L.P.R.A. §§ 651-654</string>
 			<key>sectionTitle</key>
 			<string>Medidas Para Prevenir la Violencia Domestica</string>
 		</dict>
@@ -420,7 +425,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 5.1</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 661</string>
+					<string>8 L.P.R.A. § 661</string>
 					<key>sectionTitle</key>
 					<string>Independencia de las acciones civiles</string>
 				</dict>
@@ -432,7 +437,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 5.2</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 662</string>
+					<string>8 L.P.R.A. § 662</string>
 					<key>sectionTitle</key>
 					<string>Salvedad constitucional</string>
 				</dict>
@@ -444,7 +449,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 5.3</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 663</string>
+					<string>8 L.P.R.A. § 663</string>
 					<key>sectionTitle</key>
 					<string>Reglas para las acciones civiles y penales</string>
 				</dict>
@@ -456,7 +461,7 @@
 					<key>sectionLabel</key>
 					<string>Artículo 5.4</string>
 					<key>sectionSublabel</key>
-					<string>L.P.R.A. § 664</string>
+					<string>8 L.P.R.A. § 664</string>
 					<key>sectionTitle</key>
 					<string>Formularios</string>
 				</dict>
@@ -478,7 +483,7 @@
 			<key>sectionLabel</key>
 			<string>Artículo 5.0</string>
 			<key>sectionSublabel</key>
-			<string>L.P.R.A. §§ 661-664</string>
+			<string>8 L.P.R.A. §§ 661-664</string>
 			<key>sectionTitle</key>
 			<string>Disposiciones Suplementarias</string>
 		</dict>

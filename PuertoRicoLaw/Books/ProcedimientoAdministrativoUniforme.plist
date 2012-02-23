@@ -5,13 +5,18 @@
 	<key>Book</key>
 	<dict>
 		<key>bookDescription</key>
-		<string>Descripción debe ir aquí...</string>
+		<string>Incluye enmiendas hasta el 29 de diciembre de 2009</string>
 		<key>bookLastUpdate</key>
-		<date>2012-01-09T04:00:00Z</date>
+		<date>2012-02-21T04:00:00Z</date>
 		<key>bookName</key>
 		<string>ProcedimientoAdministrativoUniforme</string>
 		<key>bookNotes</key>
-		<string></string>
+		<string>* 3 L.P.R.A. - Poder Ejecutivo
+
+* Capítulo 75 - Procedimiento Administrativo Uniforme
+
+* Ley Núm. 170 de 12 de agosto de 1988
+</string>
 		<key>bookShortTitle</key>
 		<string>Procedimiento Administrativo</string>
 		<key>bookTitle</key>
@@ -26,21 +31,37 @@
 			<array>
 				<dict>
 					<key>sectionContent</key>
+					<string>&lt;p&gt;Esta ley se conocerá como la "Ley de Procedimiento Administrativo Uniforme".&lt;/p&gt; </string>
+					<key>sectionID</key>
+					<string>7A9261C0-523A-4B5C-81CA-74AC6E7CCBE2</string>
+					<key>sectionLabel</key>
+					<string>Sección 1.1</string>
+					<key>sectionSublabel</key>
+					<string></string>
+					<key>sectionTitle</key>
+					<string>Título</string>
+				</dict>
+				<dict>
+					<key>sectionContent</key>
 					<string>&lt;p&gt;Se declara como política pública del Estado Libre Asociado el alentar la solución informal de las controversias administrativas de manera que resulte innecesaria la solución formal de los asuntos sometidos ante la agencia. Las agencias establecerán las reglas y procedimientos que permitan la solución informal de los asuntos sometidos ante su consideración sin menoscabar los derechos garantizados por este capítulo. Esta sección tiene el propósito de alentar, pero no requiere u obliga a una parte a someter y resolver una controversia a través de medios informales.&lt;/p&gt;  &lt;p&gt;Las disposiciones de este capítulo se interpretarán liberalmente, de forma tal que garanticen que los procedimientos administrativos se efectúen en forma rápida, justa y económica y que aseguren una solución equitativa en los casos bajo la consideración de la agencia.&lt;/p&gt; </string>
 					<key>sectionID</key>
 					<string>07AA6B40-F569-4A52-A336-08C35FBFC58E</string>
 					<key>sectionLabel</key>
-					<string>§ 2101</string>
+					<string>Sección 1.2</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2101</string>
 					<key>sectionTitle</key>
 					<string>Política pública; interpretación</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;A los efectos de este capítulo los siguientes términos o frases tendrán el significado que a continuación se expresa:&lt;/p&gt;  &lt;p&gt;(a) Agencia - Significa cualquier junta, cuerpo, tribunal examinador, corporación pública, comisión, oficina independiente, división, administración, negociado, departamento, autoridad, funcionario, persona, entidad o cualquier instrumentalidad del Estado Libre Asociado de Puerto Rico u organismo administrativo autorizado por ley a llevar a cabo funciones de reglamentar, investigar, o que pueda emitir una decisión, o con facultades para expedir licencias, certificados, permisos, concesiones, acreditaciones, privilegios, franquicias, acusar o adjudicar, excepto:&lt;/p&gt;  &lt;p&gt;(1) El Senado y la Cámara de Representantes de la Asamblea Legislativa.&lt;/p&gt;  &lt;p&gt;(2) La Rama Judicial.&lt;/p&gt;  &lt;p&gt;(3) La Oficina del Gobernador y todas sus oficinas adscritas exceptuando aquéllas en donde se haya expresado literalmente la aplicación de las disposiciones de este capítulo.&lt;/p&gt;  &lt;p&gt;(4) La Guardia Nacional de Puerto Rico.&lt;/p&gt;  &lt;p&gt;(5) Los gobiernos municipales o sus entidades o corporaciones.&lt;/p&gt;  &lt;p&gt;(6) La Comisión Estatal de Elecciones.&lt;/p&gt;  &lt;p&gt;(7) El Negociado de Conciliación y Arbitraje del Departamento del Trabajo y Recursos Humanos.&lt;/p&gt;  &lt;p&gt;(8) La Junta Asesora del Departamento de Asuntos del Consumidor Sobre el Sistema de Clasificación de Programas de Televisión y Juguetes peligrosos.&lt;/p&gt;  &lt;p&gt;(9) La Comisión para Resolver Controversias sobre Pagos y Deudas entre Agencias Gubernamentales.&lt;/p&gt;  &lt;p&gt;(b) Adjudicación - Significa el pronunciamiento mediante el cual una agencia determina los derechos, obligaciones o privilegios que correspondan a una parte.&lt;/p&gt;  &lt;p&gt;(c) Expediente - Significa todos los documentos que no hayan sido declarados como materia exenta de divulgación por una ley y otros materiales relacionados con un asunto específico que esté o haya estado ante la consideración de una agencia.&lt;/p&gt;  &lt;p&gt;(ch) Jefe de agencia -  Significa toda persona o grupo de personas a quienes se les confiere por disposición de ley la autoridad legal final de una agencia.&lt;/p&gt;  &lt;p&gt;(d) Interpretación oficial -  Significa la interpretación oficial de la agencia sobre alguna ley o reglamento que esté bajo su administración, que se expide a solicitud de parte o por iniciativa de la agencia, y se hace formar parte del repertorio formal de interpretaciones de la agencia.&lt;/p&gt;  &lt;p&gt;(e) Interventor - Significa aquella persona que no sea parte original en cualquier procedimiento adjudicativo que la agencia lleve a cabo y que haya demostrado su capacidad o interés en el procedimiento.&lt;/p&gt;  &lt;p&gt;(f) Orden o resolución - Significa cualquier decisión o acción agencial de aplicación particular que adjudique derechos u obligaciones de una (1) o más personas específicas, o que imponga penalidades o sanciones administrativas excluyendo órdenes ejecutivas emitidas por el Gobernador.&lt;/p&gt;  &lt;p&gt;(g) Orden o resolución parcial - Significa la acción agencial que adjudique algún derecho u obligación que no ponga fin a la controversia total sino a un aspecto específico de la misma.&lt;/p&gt;  &lt;p&gt;(h) Orden interlocutoria - Significa aquella acción de la agencia en un procedimiento adjudicativo que disponga de algún asunto meramente procesal.&lt;/p&gt;  &lt;p&gt;(i) Persona - Significa toda persona natural o jurídica de carácter público o privado que no sea una agencia.&lt;/p&gt;  &lt;p&gt;(j) Parte - Significa toda persona o agencia autorizada por ley a quien se dirija específicamente la acción de una agencia o que sea parte en dicha acción, o que se le permita intervenir o participar en la misma, o que haya radicado una petición para la revisión o cumplimiento de una orden, o que sea designada como parte en dicho procedimiento.&lt;/p&gt;  &lt;p&gt;(k) Procedimiento administrativo - Significa la formulación de reglas y reglamentos, la adjudicación formal de toda controversia o planteamiento ante la consideración de una agencia, el otorgamiento de licencias y cualquier proceso investigativo que inicie una agencia dentro del ámbito de su autoridad legal.&lt;/p&gt;  &lt;p&gt;(l) Regla o reglamento - Significa cualquier norma o conjunto de normas de una agencia que sea de aplicación general que ejecute o interprete la política pública o la ley, o que regule los requisitos de los procedimientos o prácticas de una agencia. El término incluye la enmienda, revocación o suspensión de una regla existente. Quedan excluidos de esta definición:&lt;/p&gt;  &lt;p&gt;(1) Reglas relacionadas con la administración interna de la agencia que no afectan directa y sustancialmente los derechos o los procedimientos o prácticas disponibles para el público en general.&lt;/p&gt;  &lt;p&gt;(2) Formas e instrucciones, declaraciones interpretativas y declaraciones de política general, que son meramente explicativas y no tienen ningún efecto legal.&lt;/p&gt;  &lt;p&gt;(3) Decretos mandatorios aprobados por la Junta de Salario Mínimo.&lt;/p&gt;  &lt;p&gt;(4) Ordenes de precios del Departamento de Asuntos del Consumidor y otros decretos u órdenes similares que se emitan o puedan emitir en el futuro por otras agencias, y que meramente realizan una determinación de uno o varios parámetros de reglamentación con base a un reglamento previamente aprobado y que contiene las normas para su expedición.&lt;/p&gt;  &lt;p&gt;(m) Reglamentación - Significa el procedimiento seguido por una agencia para la formulación, adopción, enmienda o derogación de una regla o reglamento.&lt;/p&gt;  &lt;p&gt;(n)  Secretario - Significa el Secretario de Estado.&lt;/p&gt; </string>
+					<string>&lt;p&gt;A los efectos de este capítulo los siguientes términos o frases tendrán el significado que a continuación se expresa:&lt;/p&gt;  &lt;p&gt;(a) Agencia - Significa cualquier junta, cuerpo, tribunal examinador, corporación pública, comisión, oficina independiente, división, administración, negociado, departamento, autoridad, funcionario, persona, entidad o cualquier instrumentalidad del Estado Libre Asociado de Puerto Rico u organismo administrativo autorizado por ley a llevar a cabo funciones de reglamentar, investigar, o que pueda emitir una decisión, o con facultades para expedir licencias, certificados, permisos, concesiones, acreditaciones, privilegios, franquicias, acusar o adjudicar, excepto:&lt;/p&gt;  &lt;p&gt;(1) El Senado y la Cámara de Representantes de la Asamblea Legislativa.&lt;/p&gt;  &lt;p&gt;(2) La Rama Judicial.&lt;/p&gt;  &lt;p&gt;(3) La Oficina del Gobernador y todas sus oficinas adscritas exceptuando aquéllas en donde se haya expresado literalmente la aplicación de las disposiciones de este capítulo.&lt;/p&gt;  &lt;p&gt;(4) La Guardia Nacional de Puerto Rico.&lt;/p&gt;  &lt;p&gt;(5) Los gobiernos municipales o sus entidades o corporaciones.&lt;/p&gt;  &lt;p&gt;(6) La Comisión Estatal de Elecciones.&lt;/p&gt;  &lt;p&gt;(7) El Negociado de Conciliación y Arbitraje del Departamento del Trabajo y Recursos Humanos.&lt;/p&gt;  &lt;p&gt;(8) La Junta Asesora del Departamento de Asuntos del Consumidor Sobre el Sistema de Clasificación de Programas de Televisión y Juguetes peligrosos.&lt;/p&gt;  &lt;p&gt;(9) La Comisión para Resolver Controversias sobre Pagos y Deudas entre Agencias Gubernamentales.&lt;/p&gt;  &lt;p&gt;(b) Adjudicación - Significa el pronunciamiento mediante el cual una agencia determina los derechos, obligaciones o privilegios que correspondan a una parte.&lt;/p&gt;  &lt;p&gt;(c) Expediente - Significa todos los documentos que no hayan sido declarados como materia exenta de divulgación por una ley y otros materiales relacionados con un asunto específico que esté o haya estado ante la consideración de una agencia.&lt;/p&gt;  &lt;p&gt;(ch) Jefe de agencia -  Significa toda persona o grupo de personas a quienes se les confiere por disposición de ley la autoridad legal final de una agencia.&lt;/p&gt;  &lt;p&gt;(d) Interpretación oficial -  Significa la interpretación oficial de la agencia sobre alguna ley o reglamento que esté bajo su administración, que se expide a solicitud de parte o por iniciativa de la agencia, y se hace formar parte del repertorio formal de interpretaciones de la agencia.&lt;/p&gt;  &lt;p&gt;(e) Interventor - Significa aquella persona que no sea parte original en cualquier procedimiento adjudicativo que la agencia lleve a cabo y que haya demostrado su capacidad o interés en el procedimiento.&lt;/p&gt;  &lt;p&gt;(f) Orden o resolución - Significa cualquier decisión o acción agencial de aplicación particular que adjudique derechos u obligaciones de una (1) o más personas específicas, o que imponga penalidades o sanciones administrativas excluyendo órdenes ejecutivas emitidas por el Gobernador.&lt;/p&gt;  &lt;p&gt;(g) Orden o resolución parcial - Significa la acción agencial que adjudique algún derecho u obligación que no ponga fin a la controversia total sino a un aspecto específico de la misma.&lt;/p&gt;  &lt;p&gt;(h) Orden interlocutoria - Significa aquella acción de la agencia en un procedimiento adjudicativo que disponga de algún asunto meramente procesal.&lt;/p&gt;  &lt;p&gt;(i) Persona - Significa toda persona natural o jurídica de carácter público o privado que no sea una agencia.&lt;/p&gt;  &lt;p&gt;(j) Parte - Significa toda persona o agencia autorizada por ley a quien se dirija específicamente la acción de una agencia o que sea parte en dicha acción, o que se le permita intervenir o participar en la misma, o que haya radicado una petición para la revisión o cumplimiento de una orden, o que sea designada como parte en dicho procedimiento.&lt;/p&gt;  &lt;p&gt;(k) Procedimiento administrativo - Significa la formulación de reglas y reglamentos, la adjudicación formal de toda controversia o planteamiento ante la consideración de una agencia, el otorgamiento de licencias y cualquier proceso investigativo que inicie una agencia dentro del ámbito de su autoridad legal.&lt;/p&gt;  &lt;p&gt;(l) Regla o reglamento - Significa cualquier norma o conjunto de normas de una agencia que sea de aplicación general que ejecute o interprete la política pública o la ley, o que regule los requisitos de los procedimientos o prácticas de una agencia. El término incluye la enmienda, revocación o suspensión de una regla existente. Quedan excluidos de esta definición:&lt;/p&gt;  &lt;p&gt;(1) Reglas relacionadas con la administración interna de la agencia que no afectan directa y sustancialmente los derechos o los procedimientos o prácticas disponibles para el público en general.&lt;/p&gt;  &lt;p&gt;(2) Formas e instrucciones, declaraciones interpretativas y declaraciones de política general, que son meramente explicativas y no tienen ningún efecto legal.&lt;/p&gt;  &lt;p&gt;(3) Decretos mandatorios aprobados por la Junta de Salario Mínimo.&lt;/p&gt;  &lt;p&gt;(4) Ordenes de precios del Departamento de Asuntos del Consumidor y otros decretos u órdenes similares que se emitan o puedan emitir en el futuro por otras agencias, y que meramente realizan una determinación de uno o varios parámetros de reglamentación con base a un reglamento previamente aprobado y que contiene las normas para su expedición.&lt;/p&gt;  &lt;p&gt;(m) Reglamentación - Significa el procedimiento seguido por una agencia para la formulación, adopción, enmienda o derogación de una regla o reglamento.&lt;/p&gt;  &lt;p&gt;(n)  Secretario - Significa el Secretario de Estado.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Noviembre 30, 1990, Num. 18, p. 1458, art. 1&lt;/li&gt; &lt;li&gt;Agosto 8, 1997, Num. 60, sec. 5&lt;/li&gt; &lt;li&gt;Agosto 17, 2002, Num. 190, art. 1&lt;/li&gt; &lt;li&gt;Enero 10, 2004, Num. 44, art. 1&lt;/li&gt; &lt;li&gt;Febrero 17, 2006, Num. 61, art. 9&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>A0AC3D2D-235E-43D0-B74B-52958813A9A5</string>
 					<key>sectionLabel</key>
-					<string>§ 2102</string>
+					<string>Sección 1.3</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2102</string>
 					<key>sectionTitle</key>
 					<string>Definiciones</string>
 				</dict>
@@ -50,37 +71,58 @@
 					<key>sectionID</key>
 					<string>2F02454F-1AE8-4498-AD70-A21418F78B1E</string>
 					<key>sectionLabel</key>
-					<string>§ 2103</string>
+					<string>Sección 1.4</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2103</string>
 					<key>sectionTitle</key>
 					<string>Aplicabilidad</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;El Gobernador designará una Comisión de cinco (5) miembros, de entre los Secretarios de su Gabinete, Jefes de Agencias, miembros de Juntas o Comisiones colegiadas u otras personas de reconocida valía en el campo del Derecho Administrativo, para que le rindan el informe a él y a la Asamblea Legislativa sobre el progreso en la implantación de este capítulo en las diferentes agencias del Gobierno de Puerto Rico, con sus recomendaciones. La Comisión tendrá a su cargo la función de supervisar y facilitar el proceso de implantación de este capítulo. Esta Comisión estará en funciones por cuatro (4) años contados a partir de la fecha de vigencia de esta ley, pero su gestión podrá ser prorrogada por términos adicionales, a discreción del Gobernador.&lt;/p&gt; </string>
+					<string>&lt;p&gt;El Gobernador designará una Comisión de cinco (5) miembros, de entre los Secretarios de su Gabinete, Jefes de Agencias, miembros de Juntas o Comisiones colegiadas u otras personas de reconocida valía en el campo del Derecho Administrativo, para que le rindan el informe a él y a la Asamblea Legislativa sobre el progreso en la implantación de este capítulo en las diferentes agencias del Gobierno de Puerto Rico, con sus recomendaciones. La Comisión tendrá a su cargo la función de supervisar y facilitar el proceso de implantación de este capítulo. Esta Comisión estará en funciones por cuatro (4) años contados a partir de la fecha de vigencia de esta ley, pero su gestión podrá ser prorrogada por términos adicionales, a discreción del Gobernador.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Noviembre 30, 1990, Num. 18, p. 1458, art. 3&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>D702730A-A309-4571-806A-593D41328669</string>
 					<key>sectionLabel</key>
-					<string>§ 2104</string>
+					<string>Sección 1.5</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2104</string>
 					<key>sectionTitle</key>
 					<string>Implantación</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;Cada agencia deberá dentro de un plazo de un año a partir de la fecha de aprobación de esta ley:&lt;/p&gt;  &lt;p&gt;(a) Preparar un diagrama y un resumen describiendo su organización administrativa y funcional, los procedimientos para la aprobación de reglamentos, la manera de radicar peticiones formales o informales y los medios por los cuales el público puede obtener información de la agencia. (b) Conformar sus reglas o reglamentos que establezcan los procedimientos formales de reglamentación y adjudicación, a tono con las disposiciones de este capítulo.&lt;/p&gt;  &lt;p&gt;(c)  Compilar las reglas o reglamentos aprobados que estuvieren en vigor para el 8 de febrero de 1989 y que no hubiesen sido previamente radicados en el Departamento de Estado a tenor con la Ley Núm. 112 del 30 de junio de 1957, según enmendada. Cada agencia someterá las reglas o reglamentos descritos en la oración precedente a la Oficina del Secretario para su publicación de conformidad con la sec. 2129 de este título, indicando como fecha de vigencia de cada regla o reglamento aquélla en la que originalmente entró en vigor; Disponiéndose, que también se cumpliera con los requisitos del inciso (b) de esta sección durante el plazo allí dispuesto.&lt;/p&gt;  &lt;p&gt;(d) Tener disponible para reproducción, a requerimiento de persona interesada, previo el pago de los costos razonables de reproducción, las órdenes finales, las decisiones e interpretaciones de las leyes adoptadas por la agencia. Disponiéndose, que en casos de emergencias o desastres naturales, accidentes catastróficos o siniestros y para la protección civil en general, de acuerdo con la Ley Núm. 22 de 23 de junio de 1976, según enmendada, titulada “Ley de la Defensa Civil de Puerto Rico”, la agencia proveerá un número de control o una copia que sirva de recibo de toda petición hecha por cualquier persona ante la misma, con el fin de garantizar el debido proceso y la adjudicación de diversas ayudas a ser otorgadas como consecuencia de tales acontecimientos. Deberá preparar y mantener, además, un registro de las decisiones e interpretaciones emitidas hasta el 30 de junio de 1991, con sus índices temáticos, que sientan precedente o fijan normas. A partir del 1ro de julio de 1991, dichos registros e índices incluirán todas las interpretaciones y decisiones.&lt;/p&gt; </string>
+					<string>&lt;p&gt;Cada agencia deberá dentro de un plazo de un año a partir de la fecha de aprobación de esta ley:&lt;/p&gt;  &lt;p&gt;(a) Preparar un diagrama y un resumen describiendo su organización administrativa y funcional, los procedimientos para la aprobación de reglamentos, la manera de radicar peticiones formales o informales y los medios por los cuales el público puede obtener información de la agencia. (b) Conformar sus reglas o reglamentos que establezcan los procedimientos formales de reglamentación y adjudicación, a tono con las disposiciones de este capítulo.&lt;/p&gt;  &lt;p&gt;(c)  Compilar las reglas o reglamentos aprobados que estuvieren en vigor para el 8 de febrero de 1989 y que no hubiesen sido previamente radicados en el Departamento de Estado a tenor con la Ley Núm. 112 del 30 de junio de 1957, según enmendada. Cada agencia someterá las reglas o reglamentos descritos en la oración precedente a la Oficina del Secretario para su publicación de conformidad con la sec. 2129 de este título, indicando como fecha de vigencia de cada regla o reglamento aquélla en la que originalmente entró en vigor; Disponiéndose, que también se cumpliera con los requisitos del inciso (b) de esta sección durante el plazo allí dispuesto.&lt;/p&gt;  &lt;p&gt;(d) Tener disponible para reproducción, a requerimiento de persona interesada, previo el pago de los costos razonables de reproducción, las órdenes finales, las decisiones e interpretaciones de las leyes adoptadas por la agencia. Disponiéndose, que en casos de emergencias o desastres naturales, accidentes catastróficos o siniestros y para la protección civil en general, de acuerdo con la Ley Núm. 22 de 23 de junio de 1976, según enmendada, titulada “Ley de la Defensa Civil de Puerto Rico”, la agencia proveerá un número de control o una copia que sirva de recibo de toda petición hecha por cualquier persona ante la misma, con el fin de garantizar el debido proceso y la adjudicación de diversas ayudas a ser otorgadas como consecuencia de tales acontecimientos. Deberá preparar y mantener, además, un registro de las decisiones e interpretaciones emitidas hasta el 30 de junio de 1991, con sus índices temáticos, que sientan precedente o fijan normas. A partir del 1ro de julio de 1991, dichos registros e índices incluirán todas las interpretaciones y decisiones.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Agosto 5, 1989, Num. 43, p. 160, art. 1&lt;/li&gt; &lt;li&gt;Noviembre 30, 1990, Num. 18, p. 1458, art. 4&lt;/li&gt; &lt;li&gt;Septiembre 1, 2000, Num. 279, art. 1, ef. 60 dias despues de Septiembre 1, 2000&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>77AFFBFF-4CE0-4A7D-B465-6EC69CD6F005</string>
 					<key>sectionLabel</key>
-					<string>§ 2105</string>
+					<string>Sección 1.6</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2105</string>
 					<key>sectionTitle</key>
 					<string>Implantación - Términos y requerimientos</string>
 				</dict>
+			</array>
+			<key>sectionID</key>
+			<string>42FB3BE5-4B0C-4CFC-88BF-4AB2526913B9</string>
+			<key>sectionLabel</key>
+			<string>Subcapítulo I</string>
+			<key>sectionSublabel</key>
+			<string>3 L.P.R.A §§ 2101-2105</string>
+			<key>sectionTitle</key>
+			<string>Disposiciones Generales</string>
+		</dict>
+		<dict>
+			<key>sectionChildren</key>
+			<array>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;Siempre que la agencia pretenda adoptar, enmendar o derogar una regla o reglamento, publicará un aviso en español y en inglés que no menos de un periódico de circulación general en Puerto Rico, y en español e inglés en la red de internet. Disponiéndose, que si la adopción, enmienda, o derogación de la regla o reglamento afecta, a una comunidad de residentes en específicos, la agencia deberá publicar el mismo aviso en un periódico regional que circule en el área donde ubique dicha comunidad, y además deberá pautar un anuncio en una emisora de radio de difusión local de mayor audiencia o mayor cercanía a la comunidad afectada por lo menos en dos (2) ocasiones en cualquier momento en el horario comprendido entre las 7:00 de la mañana y las 7:00 de la noche. El anuncio en la radio deberá indicar la fecha en que se publicó el aviso en el periódico. Tanto el anuncio radial como el aviso contendrán un resumen o explicación breve de los propósitos de la propuesta acción, una cita de la adopción legal que autoriza dicha acción y la forma, el sitio, los días y las horas en que se podrán someter comentarios por escrito o por correo electrónico o solicitar por escrito una vista oral sobre la propuesta acción con los fundamentos que a juicio del solicitante hagan necesaria la concesión de dicha vista oral e indicará el lugar físico y la dirección electrónica donde estará disponible al público, el texto completo de la reglamentación a adoptarse. Al recibir comentarios por correo electrónico, la agencia acusará recibo de los mismos por correo electrónico dentro de dos (2) días laborables de su recibo. El aviso publicado en el periódico contendrá, además, la dirección electrónica de la pagina donde la agencia haya elegido publicar el aviso en la Red y el texto completo de la regla o reglamento.&lt;/p&gt;  &lt;p&gt;Todo aviso sobre propuesta de adopción de reglamentación que se publique o pretenda publicar a tenor con las disposiciones de esta sección, estará exento de la aplicación de las disposiciones de la sec. 3351 del Título 16.&lt;/p&gt; </string>
+					<string>&lt;p&gt;Siempre que la agencia pretenda adoptar, enmendar o derogar una regla o reglamento, publicará un aviso en español y en inglés que no menos de un periódico de circulación general en Puerto Rico, y en español e inglés en la red de internet. Disponiéndose, que si la adopción, enmienda, o derogación de la regla o reglamento afecta, a una comunidad de residentes en específicos, la agencia deberá publicar el mismo aviso en un periódico regional que circule en el área donde ubique dicha comunidad, y además deberá pautar un anuncio en una emisora de radio de difusión local de mayor audiencia o mayor cercanía a la comunidad afectada por lo menos en dos (2) ocasiones en cualquier momento en el horario comprendido entre las 7:00 de la mañana y las 7:00 de la noche. El anuncio en la radio deberá indicar la fecha en que se publicó el aviso en el periódico. Tanto el anuncio radial como el aviso contendrán un resumen o explicación breve de los propósitos de la propuesta acción, una cita de la adopción legal que autoriza dicha acción y la forma, el sitio, los días y las horas en que se podrán someter comentarios por escrito o por correo electrónico o solicitar por escrito una vista oral sobre la propuesta acción con los fundamentos que a juicio del solicitante hagan necesaria la concesión de dicha vista oral e indicará el lugar físico y la dirección electrónica donde estará disponible al público, el texto completo de la reglamentación a adoptarse. Al recibir comentarios por correo electrónico, la agencia acusará recibo de los mismos por correo electrónico dentro de dos (2) días laborables de su recibo. El aviso publicado en el periódico contendrá, además, la dirección electrónica de la pagina donde la agencia haya elegido publicar el aviso en la Red y el texto completo de la regla o reglamento.&lt;/p&gt;  &lt;p&gt;Todo aviso sobre propuesta de adopción de reglamentación que se publique o pretenda publicar a tenor con las disposiciones de esta sección, estará exento de la aplicación de las disposiciones de la sec. 3351 del Título 16.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Noviembre 30, 1990, Num. 18, p. 1458, art. 5&lt;/li&gt; &lt;li&gt;Octubre 5, 1999, Num. 310, art. 1&lt;/li&gt; &lt;li&gt;Septiembre 1, 2000, Num. 293, art. 1&lt;/li&gt; &lt;li&gt;Diciembre 29, 2009, Num. 207, art. 1, ef. 90 días después de Diciembre 29, 2009&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>DE4866CA-872D-4D1A-BC2A-7FE9F72689F6</string>
 					<key>sectionLabel</key>
-					<string>§ 2121</string>
+					<string>Sección 2.1</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2121</string>
 					<key>sectionTitle</key>
 					<string>Notificación de propuesta de adopción de reglamentación</string>
 				</dict>
@@ -90,7 +132,9 @@
 					<key>sectionID</key>
 					<string>60035031-2EB3-45F9-A922-D8AD1284AECE</string>
 					<key>sectionLabel</key>
-					<string>§ 2122</string>
+					<string>Sección 2.2</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2122</string>
 					<key>sectionTitle</key>
 					<string>Participación ciudadana</string>
 				</dict>
@@ -100,7 +144,9 @@
 					<key>sectionID</key>
 					<string>E1DC1550-CE5B-4E1C-B2C1-6DEC24DE05B5</string>
 					<key>sectionLabel</key>
-					<string>§ 2123</string>
+					<string>Sección 2.3</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2123</string>
 					<key>sectionTitle</key>
 					<string>Vistas públicas</string>
 				</dict>
@@ -110,7 +156,9 @@
 					<key>sectionID</key>
 					<string>AA04B3BE-49C6-40F1-9F18-BCFEA5E84802</string>
 					<key>sectionLabel</key>
-					<string>§ 2124</string>
+					<string>Sección 2.4</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2124</string>
 					<key>sectionTitle</key>
 					<string>Determinación de la agencia</string>
 				</dict>
@@ -120,7 +168,9 @@
 					<key>sectionID</key>
 					<string>B93E1A42-A1DA-4E6D-81B2-0A506A6EEF88</string>
 					<key>sectionLabel</key>
-					<string>§ 2125</string>
+					<string>Sección 2.5</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2125</string>
 					<key>sectionTitle</key>
 					<string>Regla o reglamento - Contenido, estilo y forma</string>
 				</dict>
@@ -130,37 +180,45 @@
 					<key>sectionID</key>
 					<string>2AB671A2-EBCD-42D4-9E57-B61BCB8FBC6E</string>
 					<key>sectionLabel</key>
-					<string>§ 2126</string>
+					<string>Sección 2.6</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2126</string>
 					<key>sectionTitle</key>
 					<string>Regla o reglamento - Expediente</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;(a) Una regla o reglamento aprobado después de la fecha de efectividad de esta ley será nulo si no cumpliera sustancialmente con las disposiciones de este capítulo.&lt;/p&gt;  &lt;p&gt;(b) Cualquier acción para impugnar la validez de su faz de una regla o reglamento por el incumplimiento de las disposiciones de este capítulo deberá iniciarse en el Tribunal de Apelaciones dentro de los treinta (30) días siguientes a la fecha de vigencia de dicha regla o reglamento. La competencia sobre la acción corresponderá a la región judicial donde esté ubicado el domicilio del recurrente.&lt;/p&gt;  &lt;p&gt;(c) La acción que se inicie para impugnar el procedimiento seguido al adoptar las reglas o reglamentos de que se trate no paralizará la vigencia de los mismos, a menos que la ley al amparo de la cual se adopta disponga expresamente lo contrario.&lt;/p&gt; </string>
+					<string>&lt;p&gt;(a) Una regla o reglamento aprobado después de la fecha de efectividad de esta ley será nulo si no cumpliera sustancialmente con las disposiciones de este capítulo.&lt;/p&gt;  &lt;p&gt;(b) Cualquier acción para impugnar la validez de su faz de una regla o reglamento por el incumplimiento de las disposiciones de este capítulo deberá iniciarse en el Tribunal de Apelaciones dentro de los treinta (30) días siguientes a la fecha de vigencia de dicha regla o reglamento. La competencia sobre la acción corresponderá a la región judicial donde esté ubicado el domicilio del recurrente.&lt;/p&gt;  &lt;p&gt;(c) La acción que se inicie para impugnar el procedimiento seguido al adoptar las reglas o reglamentos de que se trate no paralizará la vigencia de los mismos, a menos que la ley al amparo de la cual se adopta disponga expresamente lo contrario.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Diciembre 25, 1995, Num. 247, art. 1&lt;/li&gt; &lt;li&gt;Septiembre 16, 2004, Num. 331, art. 1&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>45DF3889-CF24-4EDE-B2BC-B005DD4E491D</string>
 					<key>sectionLabel</key>
-					<string>§ 2127</string>
+					<string>Sección 2.7</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2127</string>
 					<key>sectionTitle</key>
 					<string>Regla o reglamento - Nulidad y término para radicar la acción</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;(a) Todo reglamento aprobado por cualquier agencia del Estado Libre Asociado de Puerto Rico tendrá que ser presentado en el Departamento de Estado en español, con su traducción al inglés, si la misma fue presentada simultáneamente, en original y tres (3) copias. Una vez recibido un reglamento en el Departamento de Estado, esta agencia será responsable de presentar una copia del mismo en la Biblioteca Legislativa de la Oficina de Servicios Legislativos. El Director de la Oficina de Servicios Legislativos dispondrá por reglamento el formato para la radicación de los documentos, y su medio, que podrá ser en papel o por cualquier vía electrónica. Como regla general, los reglamentos comenzarán a regir a los treinta (30) días después de su radicación, a menos que:&lt;/p&gt;  &lt;p&gt;(1) De otro modo lo disponga el estatuto con arreglo al cual se adoptare el reglamento, en cuyo caso empezará a regir el día prescrito por dicho estatuto;&lt;/p&gt;  &lt;p&gt;(2) como parte del reglamento, la agencia prescriba una fecha de vigencia posterior, si así lo dispusiere el estatuto que autoriza a la agencia a promulgar dicho reglamento, o&lt;/p&gt;  &lt;p&gt;(3) el reglamento sea uno de emergencia, según lo dispone la sec. 2133 de este título.&lt;/p&gt;  &lt;p&gt;(b) La agencia podrá radicar conjunta o posteriormente una traducción al inglés del reglamento. En los casos en que la agencia radique una traducción, este hecho no afectará la vigencia del reglamento.&lt;/p&gt;  &lt;p&gt;(c) El requisito establecido en el inciso (a) de esta sección en cuanto a la radicación de los reglamentos y sus copias en español podrá ser excusado por el Secretario en cuanto a normas nacionales (national standards ) técnicas que se hayan hecho formar parte de un reglamento a ser promulgado, siempre que la agencia adoptante solicite y justifique adecuadamente, mediante memorando al efecto, lo impráctico que resultaría su traducción al español por razón de su alto contenido técnico. De encontrar justificada la solicitud, el Secretario expedirá su aprobación por escrito adhiriéndose copia al reglamento radicado. En tal caso se permitirá la radicación de la norma (standard ) en el idioma inglés acompañada del reglamento y las copias del mismo redactados en español.&lt;/p&gt;  &lt;p&gt;(d) El Secretario publicará en dos (2) periódicos de circulación general una síntesis del contenido de cada reglamento radicado, con expresión de su número, fecha de vigencia y agencia que lo aprobó. Esta publicación se llevará a efecto dentro de los veinticinco (25) días siguientes a la fecha de su radicación.&lt;/p&gt;  &lt;p&gt;(e) En todo caso en que un ciudadano, una agencia, incluyendo además de las mencionadas en el inciso (a) de la sec. 2102 de este título a las de la Rama Legislativa y de la Rama Judicial, una sociedad, corporación o cualquier otra persona jurídica, solicite y justifique adecuadamente ante el Secretario la necesidad de obtener una traducción al inglés de algún reglamento o parte del mismo o de las enmiendas o algunas de sus disposiciones dicho funcionario dispondrá que la agencia concernida prepare y radique en la Oficina del Secretario la traducción correspondiente dentro del plazo que éste disponga, sujeto a lo dispuesto en las secs. 2129 a 2132 de este título.&lt;/p&gt; </string>
+					<string>&lt;p&gt;(a) Todo reglamento aprobado por cualquier agencia del Estado Libre Asociado de Puerto Rico tendrá que ser presentado en el Departamento de Estado en español, con su traducción al inglés, si la misma fue presentada simultáneamente, en original y tres (3) copias. Una vez recibido un reglamento en el Departamento de Estado, esta agencia será responsable de presentar una copia del mismo en la Biblioteca Legislativa de la Oficina de Servicios Legislativos. El Director de la Oficina de Servicios Legislativos dispondrá por reglamento el formato para la radicación de los documentos, y su medio, que podrá ser en papel o por cualquier vía electrónica. Como regla general, los reglamentos comenzarán a regir a los treinta (30) días después de su radicación, a menos que:&lt;/p&gt;  &lt;p&gt;(1) De otro modo lo disponga el estatuto con arreglo al cual se adoptare el reglamento, en cuyo caso empezará a regir el día prescrito por dicho estatuto;&lt;/p&gt;  &lt;p&gt;(2) como parte del reglamento, la agencia prescriba una fecha de vigencia posterior, si así lo dispusiere el estatuto que autoriza a la agencia a promulgar dicho reglamento, o&lt;/p&gt;  &lt;p&gt;(3) el reglamento sea uno de emergencia, según lo dispone la sec. 2133 de este título.&lt;/p&gt;  &lt;p&gt;(b) La agencia podrá radicar conjunta o posteriormente una traducción al inglés del reglamento. En los casos en que la agencia radique una traducción, este hecho no afectará la vigencia del reglamento.&lt;/p&gt;  &lt;p&gt;(c) El requisito establecido en el inciso (a) de esta sección en cuanto a la radicación de los reglamentos y sus copias en español podrá ser excusado por el Secretario en cuanto a normas nacionales (national standards ) técnicas que se hayan hecho formar parte de un reglamento a ser promulgado, siempre que la agencia adoptante solicite y justifique adecuadamente, mediante memorando al efecto, lo impráctico que resultaría su traducción al español por razón de su alto contenido técnico. De encontrar justificada la solicitud, el Secretario expedirá su aprobación por escrito adhiriéndose copia al reglamento radicado. En tal caso se permitirá la radicación de la norma (standard ) en el idioma inglés acompañada del reglamento y las copias del mismo redactados en español.&lt;/p&gt;  &lt;p&gt;(d) El Secretario publicará en dos (2) periódicos de circulación general una síntesis del contenido de cada reglamento radicado, con expresión de su número, fecha de vigencia y agencia que lo aprobó. Esta publicación se llevará a efecto dentro de los veinticinco (25) días siguientes a la fecha de su radicación.&lt;/p&gt;  &lt;p&gt;(e) En todo caso en que un ciudadano, una agencia, incluyendo además de las mencionadas en el inciso (a) de la sec. 2102 de este título a las de la Rama Legislativa y de la Rama Judicial, una sociedad, corporación o cualquier otra persona jurídica, solicite y justifique adecuadamente ante el Secretario la necesidad de obtener una traducción al inglés de algún reglamento o parte del mismo o de las enmiendas o algunas de sus disposiciones dicho funcionario dispondrá que la agencia concernida prepare y radique en la Oficina del Secretario la traducción correspondiente dentro del plazo que éste disponga, sujeto a lo dispuesto en las secs. 2129 a 2132 de este título.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Agosto 5, 1989, Num. 43, p. 160, art. 2&lt;/li&gt; &lt;li&gt;Noviembre 30, 1990, Num. 18, p. 1458, art. 6&lt;/li&gt; &lt;li&gt;Agosto 25, 2000, Num. 205, art. 1&lt;/li&gt; &lt;li&gt;Septiembre 22, 2001, Num. 133, art. 1&lt;/li&gt; &lt;li&gt;Diciembre 12, 2005, Num. 149, art. 1&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>E0BD31F0-5594-464C-A2A2-FA25EE5D39E6</string>
 					<key>sectionLabel</key>
-					<string>§ 2128</string>
+					<string>Sección 2.8</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2128</string>
 					<key>sectionTitle</key>
 					<string>Regla o reglamento - Radicación de reglamentos nuevos</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;El Secretario prescribirá, por reglamento, la forma en que serán publicados los reglamentos radicados a tenor con la sec. 2128 de este título. Su reglamentación prescribirá un tamaño convencional a ser usado en la radicación de reglamentos de conformidad con dicha sección, y dispondrá que todo reglamento vendrá acompañado de la cita de la autoridad de ley de conformidad con la cual dicho reglamento o cualquier parte del mismo sea adoptado, así como la referencia a las disposiciones específicas de ley que el mismo implante, complemente o interprete, de ser ese el caso, y de copia del aviso público al que se alude en la sec. 2121 de este título. El reglamento también exigirá que todas las enmiendas a los reglamentos se refieran al reglamento original.&lt;/p&gt;  &lt;p&gt;El Secretario podrá redactar reglamentos modelo para uso de las agencias, así como manuales y otros instrumentos que faciliten la implantación de este capítulo. En aquellos casos en que leyes especiales imponen la obligación de reglamentar a varias agencias, el Secretario podráradicar un reglamento modelo siguiendo los procedimientos establecidos en las secs. 2121 et seq. de este título. Dicho reglamento modelo tendrá vigencia en todas aquellas agencias con obligación de reglamentar, excepto en aquellas agencias que hayan previamente aprobado reglamentos sobre la materia objeto del reglamento modelo.&lt;/p&gt; </string>
+					<string>&lt;p&gt;El Secretario prescribirá, por reglamento, la forma en que serán publicados los reglamentos radicados a tenor con la sec. 2128 de este título. Su reglamentación prescribirá un tamaño convencional a ser usado en la radicación de reglamentos de conformidad con dicha sección, y dispondrá que todo reglamento vendrá acompañado de la cita de la autoridad de ley de conformidad con la cual dicho reglamento o cualquier parte del mismo sea adoptado, así como la referencia a las disposiciones específicas de ley que el mismo implante, complemente o interprete, de ser ese el caso, y de copia del aviso público al que se alude en la sec. 2121 de este título. El reglamento también exigirá que todas las enmiendas a los reglamentos se refieran al reglamento original.&lt;/p&gt;  &lt;p&gt;El Secretario podrá redactar reglamentos modelo para uso de las agencias, así como manuales y otros instrumentos que faciliten la implantación de este capítulo. En aquellos casos en que leyes especiales imponen la obligación de reglamentar a varias agencias, el Secretario podráradicar un reglamento modelo siguiendo los procedimientos establecidos en las secs. 2121 et seq. de este título. Dicho reglamento modelo tendrá vigencia en todas aquellas agencias con obligación de reglamentar, excepto en aquellas agencias que hayan previamente aprobado reglamentos sobre la materia objeto del reglamento modelo.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Noviembre 30, 1990, Num. 18, p. 1458, art. 7&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>AD3BDF6F-302B-40C0-8C24-906459F0BBA2</string>
 					<key>sectionLabel</key>
-					<string>§ 2129</string>
+					<string>Sección 2.9</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2129</string>
 					<key>sectionTitle</key>
 					<string>Regla o reglamento - Reglamentación en cuanto a publicación y forma; referencias estatutarias</string>
 				</dict>
@@ -170,7 +228,9 @@
 					<key>sectionID</key>
 					<string>7FCC0F7B-A9D1-4270-9758-AE131DFD49A9</string>
 					<key>sectionLabel</key>
-					<string>§ 2130</string>
+					<string>Sección 2.10</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2130</string>
 					<key>sectionTitle</key>
 					<string>Constancia de radicación; archivo permanente; inspección pública</string>
 				</dict>
@@ -180,7 +240,9 @@
 					<key>sectionID</key>
 					<string>C2785CF7-2228-40F4-9F9C-AEDFC3845E89</string>
 					<key>sectionLabel</key>
-					<string>§ 2131</string>
+					<string>Sección 2.11</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2131</string>
 					<key>sectionTitle</key>
 					<string>Aprobación por el Secretario de Estado</string>
 				</dict>
@@ -190,7 +252,9 @@
 					<key>sectionID</key>
 					<string>34758121-BD47-4512-A6A4-7E38B9F53E6D</string>
 					<key>sectionLabel</key>
-					<string>§ 2132</string>
+					<string>Sección 2.12</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2132</string>
 					<key>sectionTitle</key>
 					<string>Corrección de reglamentos</string>
 				</dict>
@@ -200,77 +264,106 @@
 					<key>sectionID</key>
 					<string>E36BC475-01BA-48F5-A802-B10A1E3EC029</string>
 					<key>sectionLabel</key>
-					<string>§ 2133</string>
+					<string>Sección 2.13</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2133</string>
 					<key>sectionTitle</key>
 					<string>Emergencias que exigen vigencia sin previa publicación</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;(a) La publicación de un reglamento en la obra “Reglamentos del Estado Libre Asociado de Puerto Rico” conlleva la presunción controvertible de que el texto de dicho reglamento así publicado es el texto del reglamento según fue aprobado.&lt;/p&gt;  &lt;p&gt;(b) Los tribunales del Estado Libre Asociado tomarán conocimiento judicial del contenido de todo reglamento publicado en la obra “Reglamentos del Estado Libre Asociado de Puerto Rico”.&lt;/p&gt;  &lt;p&gt;A tales efectos el Secretario entregará una copia de la publicación libre de costo a las bibliotecas del Tribunal Supremo, del Tribunal de Apelaciones, del Tribunal de Primera Instancia y a las Bibliotecas de las Facultades de Derecho de las universidades del país, así como la Biblioteca del Tribunal de Distrito Federal de Estados Unidos para el Distrito de Puerto Rico.&lt;/p&gt; </string>
+					<string>&lt;p&gt;(a) La publicación de un reglamento en la obra “Reglamentos del Estado Libre Asociado de Puerto Rico” conlleva la presunción controvertible de que el texto de dicho reglamento así publicado es el texto del reglamento según fue aprobado.&lt;/p&gt;  &lt;p&gt;(b) Los tribunales del Estado Libre Asociado tomarán conocimiento judicial del contenido de todo reglamento publicado en la obra “Reglamentos del Estado Libre Asociado de Puerto Rico”.&lt;/p&gt;  &lt;p&gt;A tales efectos el Secretario entregará una copia de la publicación libre de costo a las bibliotecas del Tribunal Supremo, del Tribunal de Apelaciones, del Tribunal de Primera Instancia y a las Bibliotecas de las Facultades de Derecho de las universidades del país, así como la Biblioteca del Tribunal de Distrito Federal de Estados Unidos para el Distrito de Puerto Rico.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Noviembre 30, 1990, Num. 18, p. 1458, art. 10&lt;/li&gt; &lt;li&gt;Diciembre 25, 1995, Num. 247, art. 2&lt;/li&gt; &lt;li&gt;Septiembre 16, 2004, Num. 331, art. 1.&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>BD03A7E8-071C-4F66-9DE7-F10221BC6EBC</string>
 					<key>sectionLabel</key>
-					<string>§ 2134</string>
+					<string>Sección 2.14</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2134</string>
 					<key>sectionTitle</key>
 					<string>Reglamentos publicados; presunción de corrección; conocimiento judicial</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;El Secretario queda autorizado para:&lt;/p&gt;  &lt;p&gt;(a) Contratar la complicación, codificación y publicación de todos los reglamentos radicados en su oficina a tenor con la sec. 2129 de este título. La publicación de tales reglamentos compilados será conocida como “Reglamentos del Estado Libre Asociado de Puerto Rico”.&lt;/p&gt;  &lt;p&gt;(b) Determinar la manera y forma en que tal compilación y codificación será publicada, impresa y ordenada.&lt;/p&gt; </string>
+					<string>&lt;p&gt;El Secretario queda autorizado para:&lt;/p&gt;  &lt;p&gt;(a) Contratar la complicación, codificación y publicación de todos los reglamentos radicados en su oficina a tenor con la sec. 2129 de este título. La publicación de tales reglamentos compilados será conocida como “Reglamentos del Estado Libre Asociado de Puerto Rico”.&lt;/p&gt;  &lt;p&gt;(b) Determinar la manera y forma en que tal compilación y codificación será publicada, impresa y ordenada.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Agosto 5, 1989, Num. 43, p. 160, art. 4&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>34D996B6-4348-4634-A4C8-8023BF85E324</string>
 					<key>sectionLabel</key>
-					<string>§ 2135</string>
+					<string>Sección 2.15</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2135</string>
 					<key>sectionTitle</key>
 					<string>Reglamentos del Estado Libre Asociado - Codificación y publicación</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;(a) El Secretario podrá vender las publicaciones provistas en este subcapítulo a un precio que sea justo y razonable para el Estado Libre Asociado de Puerto Rico. Todos los fondos recibidos de la venta de publicaciones, así como los fondos recibidos de las corporaciones públicas, a las que el Secretario podrá cobrar por la publicación de sus reglamentos, serán depositados en el Departamento de Hacienda e ingresados en un Fondo Especial que se denominará “Fondo Especial de Publicaciones del Departamento del Estado”. Este Fondo será utilizado únicamente para sufragar en todo o parte los costos directos de las publicaciones, incluyendo el costo de preparar las compilaciones y suplementos periódicos. Este Fondo será uno separado del creado bajo la Sección 8.4.&lt;/p&gt;  &lt;p&gt;El Secretario podrá contratar con un editor o editores la publicación, venta y distribución de la obra “Reglamentos del Estado Libre Asociado de Puerto Rico”, cualquier parte de ella, o cualquier reglamento individual. Esta contratación podrá realizarla el Secretario por separado para la publicación convencional, para la publicación electrónica de los reglamentos, y para proveer cualesquiera reglamentos para su divulgación y/o prestar cualquier servicio informativo sobre ellos.&lt;/p&gt;  &lt;p&gt;(b) El Secretario entregará copias de la publicación y de su correspondiente suplemento provisto en este capítulo, libre de costo, a las oficinas del Gobernador de Puerto Rico, de los jefes de departamentos y agencias ejecutivas del Gobierno de Puerto Rico y a los registradores de la propiedad que así lo soliciten. También entregará, libre de costo y previa solicitud al efecto, un ejemplar de dicha publicación a los miembros de la Asamblea Legislativa de Puerto Rico y, además, una copia al Secretario de la Cámara de Representantes y otra copia al Secretario del Senado, para uso de ambos cuerpos legislativos, un ejemplar a la Oficina de Servicios Legislativos de la Asamblea Legislativa y un ejemplar a las facultades de Derecho de la Universidad de Puerto Rico y de las demás universidades del país debidamente reconocidas. Por disposición legislativa o del Gobernador podrán entregarse ejemplares de la referida publicación en otras oficinas públicas.&lt;/p&gt; </string>
+					<string>&lt;p&gt;(a) El Secretario podrá vender las publicaciones provistas en este subcapítulo a un precio que sea justo y razonable para el Estado Libre Asociado de Puerto Rico. Todos los fondos recibidos de la venta de publicaciones, así como los fondos recibidos de las corporaciones públicas, a las que el Secretario podrá cobrar por la publicación de sus reglamentos, serán depositados en el Departamento de Hacienda e ingresados en un Fondo Especial que se denominará “Fondo Especial de Publicaciones del Departamento del Estado”. Este Fondo será utilizado únicamente para sufragar en todo o parte los costos directos de las publicaciones, incluyendo el costo de preparar las compilaciones y suplementos periódicos. Este Fondo será uno separado del creado bajo la Sección 8.4.&lt;/p&gt;  &lt;p&gt;El Secretario podrá contratar con un editor o editores la publicación, venta y distribución de la obra “Reglamentos del Estado Libre Asociado de Puerto Rico”, cualquier parte de ella, o cualquier reglamento individual. Esta contratación podrá realizarla el Secretario por separado para la publicación convencional, para la publicación electrónica de los reglamentos, y para proveer cualesquiera reglamentos para su divulgación y/o prestar cualquier servicio informativo sobre ellos.&lt;/p&gt;  &lt;p&gt;(b) El Secretario entregará copias de la publicación y de su correspondiente suplemento provisto en este capítulo, libre de costo, a las oficinas del Gobernador de Puerto Rico, de los jefes de departamentos y agencias ejecutivas del Gobierno de Puerto Rico y a los registradores de la propiedad que así lo soliciten. También entregará, libre de costo y previa solicitud al efecto, un ejemplar de dicha publicación a los miembros de la Asamblea Legislativa de Puerto Rico y, además, una copia al Secretario de la Cámara de Representantes y otra copia al Secretario del Senado, para uso de ambos cuerpos legislativos, un ejemplar a la Oficina de Servicios Legislativos de la Asamblea Legislativa y un ejemplar a las facultades de Derecho de la Universidad de Puerto Rico y de las demás universidades del país debidamente reconocidas. Por disposición legislativa o del Gobernador podrán entregarse ejemplares de la referida publicación en otras oficinas públicas.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Noviembre 30, 1990, Num. 18, p. 1458, art. 12&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>B47869D3-771A-499E-A148-C6B88C840251</string>
 					<key>sectionLabel</key>
-					<string>§ 2139</string>
+					<string>Sección 2.16</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2139</string>
 					<key>sectionTitle</key>
 					<string>Distribución de publicaciones</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;Los reglamentos aprobados por cualquier agencia en virtud de alguna ley federal, o en virtud de alguna delegación de autoridad de algún funcionario federal se regirán en todo lo relativo a su aprobación, procedimiento, promulgación e implantación, por lo dispuesto en la legislación federal aplicable.&lt;/p&gt; </string>
+					<string>&lt;p&gt;Los reglamentos aprobados por cualquier agencia en virtud de alguna ley federal, o en virtud de alguna delegación de autoridad de algún funcionario federal se regirán en todo lo relativo a su aprobación, procedimiento, promulgación e implantación, por lo dispuesto en la legislación federal aplicable.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Noviembre 30, 1990, Num. 18, p. 1458, art. 13&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>6B65C376-DEBC-41A9-95EC-A6CB392AD963</string>
 					<key>sectionLabel</key>
-					<string>§ 2140</string>
+					<string>Sección 2.17</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2140</string>
 					<key>sectionTitle</key>
 					<string>Reglamentos y reglas aprobadas en virtud de ley federal</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;Dos o más agencias podrán aprobar reglamentos en conjunto, al amparo de las leyes que respectivamente administran, en aquellos casos en que el servicio a la ciudadanía lo amerite.&lt;/p&gt;  &lt;p&gt;Dos [Los] jefes de agencia concernidos designarán en conjunto al funcionario examinador, o panel examinador, que estará a cargo del procedimiento de reglamentación, el que rendirá un solo informe dirigido a todos los jefes de agencia concernidos.&lt;/p&gt; </string>
+					<string>&lt;p&gt;Dos o más agencias podrán aprobar reglamentos en conjunto, al amparo de las leyes que respectivamente administran, en aquellos casos en que el servicio a la ciudadanía lo amerite.&lt;/p&gt;  &lt;p&gt;Dos [Los] jefes de agencia concernidos designarán en conjunto al funcionario examinador, o panel examinador, que estará a cargo del procedimiento de reglamentación, el que rendirá un solo informe dirigido a todos los jefes de agencia concernidos.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Noviembre 30, 1990, Num. 18, p. 1458, art. 13&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>6A4F1E4B-F279-4EBD-B368-86F0A9B2E07F</string>
 					<key>sectionLabel</key>
-					<string>§ 2141</string>
+					<string>Sección 2.18</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2141</string>
 					<key>sectionTitle</key>
 					<string>Reglamentos conjuntos</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;Será deber de todas las agencias revisar cada cinco (5) años sus reglamentos para evaluar si los mismos efectivamente adelantan la política pública de la agencia o de la legislación bajo el cual fue aprobado el reglamento. Al momento de la aprobación de esta ley todas las agencias deberán comenzar con el proceso de revisión de sus reglamentos. No obstante, si algún reglamento de una agencia lleva menos de cinco (5) años de aprobado y no ha sido afectado por una ley reciente, no estará obligada a revisar su reglamento hasta que se cumpla el término de cinco (5) años de haberse aprobado.&lt;/p&gt;  &lt;p&gt;(1) El o los reglamento(s) que por disposición de ley o por enmienda a una ley orgánica de la agencia o entidad administrativa se le ordene hacer una revisión antes del proceso de revisión periódica aquí dispuesto, el término de cinco (5) años establecido para la revisión periódica comenzará a decursar a partir de esta última revisión.&lt;/p&gt;  &lt;p&gt;(2) Concluido el proceso de revisión si se determina que no hay necesidad de enmendar el o los reglamento(s) se publicará un aviso en dos (2) periódicos de circulación general invitando a la comunidad interesada a emitir sus comentarios por escrito en un periodo de treinta (30) días contados a partir del último anuncio. Una vez sea final la determinación de que no hace falta enmendar el o los reglamento(s), la agencia o entidad administrativa le certificará al Departamento de Estado la vigencia del reglamento actual en o antes de diez (10) días de tomarse dicha decisión. De concluirse que se necesita enmiendas al o los reglamento(s) el proceso se hará de conformidad a las disposiciones de las secs. 2121 a 2128 de este título.&lt;/p&gt;  &lt;p&gt;(3) Todo reglamento que en el proceso de revisión, por disposición de ley o por enmienda a una ley orgánica de la agencia o entidad administrativa, haya sido derogado, se incluirá en una compilación de reglamentos en desuso que será presentado a la División de Certificados y Reglamentos del Departamento de Estado adjunto a la certificación de vigencia del reglamento actual o la radicación del reglamento nuevo.&lt;/p&gt; </string>
+					<string>&lt;p&gt;Será deber de todas las agencias revisar cada cinco (5) años sus reglamentos para evaluar si los mismos efectivamente adelantan la política pública de la agencia o de la legislación bajo el cual fue aprobado el reglamento. Al momento de la aprobación de esta ley todas las agencias deberán comenzar con el proceso de revisión de sus reglamentos. No obstante, si algún reglamento de una agencia lleva menos de cinco (5) años de aprobado y no ha sido afectado por una ley reciente, no estará obligada a revisar su reglamento hasta que se cumpla el término de cinco (5) años de haberse aprobado.&lt;/p&gt;  &lt;p&gt;(1) El o los reglamento(s) que por disposición de ley o por enmienda a una ley orgánica de la agencia o entidad administrativa se le ordene hacer una revisión antes del proceso de revisión periódica aquí dispuesto, el término de cinco (5) años establecido para la revisión periódica comenzará a decursar a partir de esta última revisión.&lt;/p&gt;  &lt;p&gt;(2) Concluido el proceso de revisión si se determina que no hay necesidad de enmendar el o los reglamento(s) se publicará un aviso en dos (2) periódicos de circulación general invitando a la comunidad interesada a emitir sus comentarios por escrito en un periodo de treinta (30) días contados a partir del último anuncio. Una vez sea final la determinación de que no hace falta enmendar el o los reglamento(s), la agencia o entidad administrativa le certificará al Departamento de Estado la vigencia del reglamento actual en o antes de diez (10) días de tomarse dicha decisión. De concluirse que se necesita enmiendas al o los reglamento(s) el proceso se hará de conformidad a las disposiciones de las secs. 2121 a 2128 de este título.&lt;/p&gt;  &lt;p&gt;(3) Todo reglamento que en el proceso de revisión, por disposición de ley o por enmienda a una ley orgánica de la agencia o entidad administrativa, haya sido derogado, se incluirá en una compilación de reglamentos en desuso que será presentado a la División de Certificados y Reglamentos del Departamento de Estado adjunto a la certificación de vigencia del reglamento actual o la radicación del reglamento nuevo.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Adicionada en Febrero 11, 2008, Num. 4, art. 1&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>E79C1B00-A90B-42C8-9BBF-87A05B6FFBDF</string>
 					<key>sectionLabel</key>
-					<string>§ 2142</string>
+					<string>Sección 2.19</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2142</string>
 					<key>sectionTitle</key>
 					<string>Deber de revisión periódica de reglamentos</string>
 				</dict>
+			</array>
+			<key>sectionID</key>
+			<string>6800809F-1800-4111-8A67-19BC1035E9AB</string>
+			<key>sectionLabel</key>
+			<string>Subcapítulo II</string>
+			<key>sectionSublabel</key>
+			<string>3 L.P.R.A §§ 2121-2142</string>
+			<key>sectionTitle</key>
+			<string>Procedimiento para la Reglamentación</string>
+		</dict>
+		<dict>
+			<key>sectionChildren</key>
+			<array>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;(a) Cuando por disposición de una ley, regla o reglamento o de este capítulo una agencia deba adjudicar formalmente una controversia, los procedimientos deberán regirse por las disposiciones de este subcapítulo. No estarán incluidos los procedimientos voluntarios de resolución de disputas establecidos por ley o por reglamentos. Los procedimientos relativos a los asuntos y actuaciones del Secretario de Hacienda con respecto a las leyes de rentas internas del Estado Libre Asociado de Puerto Rico se regirán por las siguientes normas:&lt;/p&gt;  &lt;p&gt;(1) Un funcionario designado por el Secretario de Hacienda realizará una determinación preliminar.&lt;/p&gt;  &lt;p&gt;(2) El contribuyente no conforme con la determinación preliminar solicitará una vista informal que presidirá un funcionario distinto al que realizó la determinación preliminar. Este realizará la determinación final por delegación del Secretario de Hacienda.&lt;/p&gt;  &lt;p&gt;Se considerarán procedimientos informales no cuasijudiciales y, por tanto, no estarán sujetos a este capítulo, excepto según se provee más adelante, la adjudicación de subastas, la concesión de préstamos, becas, subsidios, subvenciones, emisiones de deuda, inversiones de capital, reconocimientos o premios, y todos los trámites o etapas del proceso de evaluación de documentos ambientales requeridos por la sec. 671c del Título 23, conocida como “Ley Sobre Política Pública Ambiental” y el reglamento aprobado al amparo de ésta. En ninguno de éstos procedimientos o las etapas en que éstos se dividan, se requerirá a la agencia que fundamente sus resoluciones con determinaciones de hecho y conclusiones de derecho. El procedimiento administrativo para el trámite de documentos ambientales se regirá exclusivamente por la reglamentación adoptada por la Junta de Calidad Ambiental para estos fines. La reconsideración de las decisiones emitidas en todos estos casos se regirán por lo dispuesto en la sec. 2165 de este título, excepto las relativas a subastas que se regirán por lo dispuesto en la sec. 2169 de este título.&lt;/p&gt;  &lt;p&gt;En todo procedimiento adjudicativo formal ante una agencia se salvaguardarán los siguientes derechos:&lt;/p&gt;  &lt;p&gt;(A) Derecho a notificación oportuna de los cargos o querellas o reclamos en contra de una parte.&lt;/p&gt;  &lt;p&gt;(B) Derecho a presentar evidencia.&lt;/p&gt;  &lt;p&gt;(C) Derecho a una adjudicación imparcial.&lt;/p&gt;  &lt;p&gt;(D) Derecho a que la decisión sea basada en el expediente.&lt;/p&gt;  &lt;p&gt;(b) La Junta de Calidad Ambiental rendirá un informe a la Asamblea Legislativa no más tarde de ciento cincuenta (150) días después de la fecha de vigencia de esta ley en torno al efecto que la misma ha tenido durante sus primeros ciento veinte (120) días de vigencia en la agilización del trámite y la exposición ambiental.&lt;/p&gt; </string>
+					<string>&lt;p&gt;(a) Cuando por disposición de una ley, regla o reglamento o de este capítulo una agencia deba adjudicar formalmente una controversia, los procedimientos deberán regirse por las disposiciones de este subcapítulo. No estarán incluidos los procedimientos voluntarios de resolución de disputas establecidos por ley o por reglamentos. Los procedimientos relativos a los asuntos y actuaciones del Secretario de Hacienda con respecto a las leyes de rentas internas del Estado Libre Asociado de Puerto Rico se regirán por las siguientes normas:&lt;/p&gt;  &lt;p&gt;(1) Un funcionario designado por el Secretario de Hacienda realizará una determinación preliminar.&lt;/p&gt;  &lt;p&gt;(2) El contribuyente no conforme con la determinación preliminar solicitará una vista informal que presidirá un funcionario distinto al que realizó la determinación preliminar. Este realizará la determinación final por delegación del Secretario de Hacienda.&lt;/p&gt;  &lt;p&gt;Se considerarán procedimientos informales no cuasijudiciales y, por tanto, no estarán sujetos a este capítulo, excepto según se provee más adelante, la adjudicación de subastas, la concesión de préstamos, becas, subsidios, subvenciones, emisiones de deuda, inversiones de capital, reconocimientos o premios, y todos los trámites o etapas del proceso de evaluación de documentos ambientales requeridos por la sec. 671c del Título 23, conocida como “Ley Sobre Política Pública Ambiental” y el reglamento aprobado al amparo de ésta. En ninguno de éstos procedimientos o las etapas en que éstos se dividan, se requerirá a la agencia que fundamente sus resoluciones con determinaciones de hecho y conclusiones de derecho. El procedimiento administrativo para el trámite de documentos ambientales se regirá exclusivamente por la reglamentación adoptada por la Junta de Calidad Ambiental para estos fines. La reconsideración de las decisiones emitidas en todos estos casos se regirán por lo dispuesto en la sec. 2165 de este título, excepto las relativas a subastas que se regirán por lo dispuesto en la sec. 2169 de este título.&lt;/p&gt;  &lt;p&gt;En todo procedimiento adjudicativo formal ante una agencia se salvaguardarán los siguientes derechos:&lt;/p&gt;  &lt;p&gt;(A) Derecho a notificación oportuna de los cargos o querellas o reclamos en contra de una parte.&lt;/p&gt;  &lt;p&gt;(B) Derecho a presentar evidencia.&lt;/p&gt;  &lt;p&gt;(C) Derecho a una adjudicación imparcial.&lt;/p&gt;  &lt;p&gt;(D) Derecho a que la decisión sea basada en el expediente.&lt;/p&gt;  &lt;p&gt;(b) La Junta de Calidad Ambiental rendirá un informe a la Asamblea Legislativa no más tarde de ciento cincuenta (150) días después de la fecha de vigencia de esta ley en torno al efecto que la misma ha tenido durante sus primeros ciento veinte (120) días de vigencia en la agilización del trámite y la exposición ambiental.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Noviembre 30, 1990, Num. 18, p. 1458, art. 14&lt;/li&gt; &lt;li&gt;Diciembre 8, 1998, Num. 295, art. 1&lt;/li&gt; &lt;li&gt;Noviembre 6, 1999, Num. 323, art. 1&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>8A044E73-7C7E-435A-8AA5-76638DBAD2F4</string>
 					<key>sectionLabel</key>
-					<string>§ 2151</string>
+					<string>Sección 3.1</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2151</string>
 					<key>sectionTitle</key>
 					<string>Derechos</string>
 				</dict>
@@ -280,7 +373,9 @@
 					<key>sectionID</key>
 					<string>569750E5-1E3F-49E1-AB59-F90ADB3109DF</string>
 					<key>sectionLabel</key>
-					<string>§ 2152</string>
+					<string>Sección 3.2</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2152</string>
 					<key>sectionTitle</key>
 					<string>Iniciación del procedimiento</string>
 				</dict>
@@ -290,7 +385,9 @@
 					<key>sectionID</key>
 					<string>58930D8A-B171-4E46-9AF5-52AADDE5301A</string>
 					<key>sectionLabel</key>
-					<string>§ 2153</string>
+					<string>Sección 3.3</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2153</string>
 					<key>sectionTitle</key>
 					<string>Funcionarios de adjudicación</string>
 				</dict>
@@ -300,7 +397,9 @@
 					<key>sectionID</key>
 					<string>7E22C608-55BF-44F2-937A-D89E056A0BC3</string>
 					<key>sectionLabel</key>
-					<string>§ 2154</string>
+					<string>Sección 3.4</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2154</string>
 					<key>sectionTitle</key>
 					<string>Querella; solicitud o petición; información requerida</string>
 				</dict>
@@ -310,7 +409,9 @@
 					<key>sectionID</key>
 					<string>7B80626E-3793-4C29-B7BE-A2BB114BA403</string>
 					<key>sectionLabel</key>
-					<string>§ 2155</string>
+					<string>Sección 3.5</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2155</string>
 					<key>sectionTitle</key>
 					<string>Intervención - Solicitud</string>
 				</dict>
@@ -320,37 +421,45 @@
 					<key>sectionID</key>
 					<string>843EEB54-EC56-4790-B0E2-20899191D108</string>
 					<key>sectionLabel</key>
-					<string>§ 2156</string>
+					<string>Sección 3.6</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2156</string>
 					<key>sectionTitle</key>
 					<string>Intervención - Denegatoria</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;(a) Si la agencia determina que es necesario celebrar una vista adjudicativa, podrá citar a todas las partes o sus representantes autorizados e interventores, ya sea por su propia iniciativa o a petición de una de las partes, a una conferencia con antelación a la vista, con el propósito de lograr un acuerdo definitivo o simplificar las cuestiones o la prueba a considerarse en la vista. Se podrán aceptar estipulaciones, siempre que la agencia determine que ello sirve a los mejores intereses públicos.&lt;/p&gt;  &lt;p&gt;(b) Si la agencia determina a solicitud de alguna de las partes y luego de analizar los documentos que acompañan la solicitud de orden o resolución sumaria y los documentos incluidos con la moción en oposición, así como aquéllos que obren en el expediente de la agencia, que no es necesario celebrar una vista adjudicativa, podrá dictar órdenes o resoluciones sumarias, ya sean de carácter final, o parcial resolviendo cualquier controversia entre las partes, que sea separable de las controversias, excepto en aquellos casos donde la ley orgánica de la agencia disponga lo contrario.&lt;/p&gt;  &lt;p&gt;La agencia no podrá dictar órdenes o resoluciones sumarias en los casos en que:&lt;/p&gt;  &lt;p&gt;(1)  Existen hechos materiales o esenciales controvertidos;&lt;/p&gt;  &lt;p&gt;(2)  hay alegaciones afirmativas en la querella que no han sido refutadas;&lt;/p&gt;  &lt;p&gt;(3)  surge de los propios documentos que se acompañan con la petición una controversia real sobre algún hecho material y esencial, o&lt;/p&gt;  &lt;p&gt;(4)  como cuestión de derechos no procede.&lt;/p&gt; </string>
+					<string>&lt;p&gt;(a) Si la agencia determina que es necesario celebrar una vista adjudicativa, podrá citar a todas las partes o sus representantes autorizados e interventores, ya sea por su propia iniciativa o a petición de una de las partes, a una conferencia con antelación a la vista, con el propósito de lograr un acuerdo definitivo o simplificar las cuestiones o la prueba a considerarse en la vista. Se podrán aceptar estipulaciones, siempre que la agencia determine que ello sirve a los mejores intereses públicos.&lt;/p&gt;  &lt;p&gt;(b) Si la agencia determina a solicitud de alguna de las partes y luego de analizar los documentos que acompañan la solicitud de orden o resolución sumaria y los documentos incluidos con la moción en oposición, así como aquéllos que obren en el expediente de la agencia, que no es necesario celebrar una vista adjudicativa, podrá dictar órdenes o resoluciones sumarias, ya sean de carácter final, o parcial resolviendo cualquier controversia entre las partes, que sea separable de las controversias, excepto en aquellos casos donde la ley orgánica de la agencia disponga lo contrario.&lt;/p&gt;  &lt;p&gt;La agencia no podrá dictar órdenes o resoluciones sumarias en los casos en que:&lt;/p&gt;  &lt;p&gt;(1)  Existen hechos materiales o esenciales controvertidos;&lt;/p&gt;  &lt;p&gt;(2)  hay alegaciones afirmativas en la querella que no han sido refutadas;&lt;/p&gt;  &lt;p&gt;(3)  surge de los propios documentos que se acompañan con la petición una controversia real sobre algún hecho material y esencial, o&lt;/p&gt;  &lt;p&gt;(4)  como cuestión de derechos no procede.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Diciembre 26, 2006, Num. 299, art. 1, ef. 6 meses despues de Diciembre 26, 2006&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>F4B999CF-5B3A-4C62-9964-5DE696F89C4E</string>
 					<key>sectionLabel</key>
-					<string>§ 2157</string>
+					<string>Sección 3.7</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2157</string>
 					<key>sectionTitle</key>
 					<string>Conferencia con antelación a la vista; órdenes y resoluciones sumarias</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;(a) Los procedimientos de descubrimiento de prueba no serán de aplicación a los casos de adjudicación administrativa, a menos que se autoricen en los reglamentos de procedimiento de adjudicación de la agencia y así lo autorice el funcionario que presida el procedimiento adjudicativo. No obstante lo anteriormente dispuesto, en los reglamentos de las agencias se garantizará a todo querellado el derecho a los mecanismos de descubrimiento de prueba para los casos en que el procedimiento de adjudicación sea promovido a iniciativa de la agencia.&lt;/p&gt;  &lt;p&gt;(b) Podrá, además, emitir citaciones para la comparecencia de testigos; órdenes para la producción de documentos, materiales u otros objetos; y órdenes protectoras, conforme a las Reglas de Procedimiento Civil.&lt;/p&gt;  &lt;p&gt;(c) En caso de incumplimiento de una orden o requerimiento emitido al amparo del inciso (b) de esta sección, la agencia podrá presentar una solicitud en auxilio de su jurisdicción en la sala con competencia del Tribunal de Primera Instancia, y éste podrá emitir una orden judicial en la que ordene el cumplimiento de la persona en cuestión bajo apercibimiento de que incurrirá en desacato si no cumple con dicha orden.&lt;/p&gt; </string>
+					<string>&lt;p&gt;(a) Los procedimientos de descubrimiento de prueba no serán de aplicación a los casos de adjudicación administrativa, a menos que se autoricen en los reglamentos de procedimiento de adjudicación de la agencia y así lo autorice el funcionario que presida el procedimiento adjudicativo. No obstante lo anteriormente dispuesto, en los reglamentos de las agencias se garantizará a todo querellado el derecho a los mecanismos de descubrimiento de prueba para los casos en que el procedimiento de adjudicación sea promovido a iniciativa de la agencia.&lt;/p&gt;  &lt;p&gt;(b) Podrá, además, emitir citaciones para la comparecencia de testigos; órdenes para la producción de documentos, materiales u otros objetos; y órdenes protectoras, conforme a las Reglas de Procedimiento Civil.&lt;/p&gt;  &lt;p&gt;(c) En caso de incumplimiento de una orden o requerimiento emitido al amparo del inciso (b) de esta sección, la agencia podrá presentar una solicitud en auxilio de su jurisdicción en la sala con competencia del Tribunal de Primera Instancia, y éste podrá emitir una orden judicial en la que ordene el cumplimiento de la persona en cuestión bajo apercibimiento de que incurrirá en desacato si no cumple con dicha orden.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Diciembre 25, 1995, Num. 247, art. 3, ef. Mayo 1, 1996&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>AA1116F4-5B2B-409C-A07E-861AB266920E</string>
 					<key>sectionLabel</key>
-					<string>§ 2158</string>
+					<string>Sección 3.8</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2158</string>
 					<key>sectionTitle</key>
 					<string>Mecanismos de descubrimiento de prueba</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;La agencia notificará por escrito a todas las partes o a sus representantes autorizados e interventores la fecha, hora y lugar en que se celebrará la vista adjudicativa. La notificación se deberá efectuar por correo o personalmente con no menos de quince (15) días de anticipación a la fecha de la vista, excepto que por causa debidamente justificada, consignada en la notificación, sea necesario acortar dicho período, y deberá contener la siguiente información:&lt;/p&gt;  &lt;p&gt;(a) Fecha, hora y lugar en que se celebrará la vista, así como su naturaleza y propósito.&lt;/p&gt;  &lt;p&gt;(b) Advertencia de que las partes podrán comparecer por derecho propio o asistidas de abogados incluyendo los casos de corporaciones y sociedades.&lt;/p&gt;  &lt;p&gt;(c) Cita de la disposición legal o reglamentaria que autoriza la celebración de la vista.&lt;/p&gt;  &lt;p&gt;(d) Referencia a las disposiciones legales o reglamentarias presuntamente infringidas, si se imputa una infracción a las mismas, y a los hechos constitutivos de tal infracción.&lt;/p&gt;  &lt;p&gt;(e) Apercibimiento de las medidas que la agencia podrá tomar si una parte no comparece a la vista.&lt;/p&gt;  &lt;p&gt;(f)  Advertencia de que la vista no podrá ser suspendida.&lt;/p&gt; </string>
+					<string>&lt;p&gt;La agencia notificará por escrito a todas las partes o a sus representantes autorizados e interventores la fecha, hora y lugar en que se celebrará la vista adjudicativa. La notificación se deberá efectuar por correo o personalmente con no menos de quince (15) días de anticipación a la fecha de la vista, excepto que por causa debidamente justificada, consignada en la notificación, sea necesario acortar dicho período, y deberá contener la siguiente información:&lt;/p&gt;  &lt;p&gt;(a) Fecha, hora y lugar en que se celebrará la vista, así como su naturaleza y propósito.&lt;/p&gt;  &lt;p&gt;(b) Advertencia de que las partes podrán comparecer por derecho propio o asistidas de abogados incluyendo los casos de corporaciones y sociedades.&lt;/p&gt;  &lt;p&gt;(c) Cita de la disposición legal o reglamentaria que autoriza la celebración de la vista.&lt;/p&gt;  &lt;p&gt;(d) Referencia a las disposiciones legales o reglamentarias presuntamente infringidas, si se imputa una infracción a las mismas, y a los hechos constitutivos de tal infracción.&lt;/p&gt;  &lt;p&gt;(e) Apercibimiento de las medidas que la agencia podrá tomar si una parte no comparece a la vista.&lt;/p&gt;  &lt;p&gt;(f) Advertencia de que la vista no podrá ser suspendida.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Agosto 8, 2002, Num. 130, art. 1&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>567FD0A6-8A0C-471B-A5B4-C694223C0503</string>
 					<key>sectionLabel</key>
-					<string>§ 2159</string>
+					<string>Sección 3.9</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2159</string>
 					<key>sectionTitle</key>
 					<string>Notificación de vista</string>
 				</dict>
@@ -360,7 +469,9 @@
 					<key>sectionID</key>
 					<string>316125CA-62F2-4690-9238-DB8A40E353C8</string>
 					<key>sectionLabel</key>
-					<string>§ 2160</string>
+					<string>Sección 3.10</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2160</string>
 					<key>sectionTitle</key>
 					<string>Rebeldía</string>
 				</dict>
@@ -370,7 +481,9 @@
 					<key>sectionID</key>
 					<string>3747DBAB-D4CF-48FC-A2D6-E5C59871646A</string>
 					<key>sectionLabel</key>
-					<string>§ 2161</string>
+					<string>Sección 3.11</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2161</string>
 					<key>sectionTitle</key>
 					<string>Vista - Privada; solicitud</string>
 				</dict>
@@ -380,7 +493,9 @@
 					<key>sectionID</key>
 					<string>FD9AF644-0A3A-4ADB-BB46-C808D7BA3D6B</string>
 					<key>sectionLabel</key>
-					<string>§ 2162</string>
+					<string>Sección 3.12</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2162</string>
 					<key>sectionTitle</key>
 					<string>Vista - Señalada; suspensión</string>
 				</dict>
@@ -390,17 +505,21 @@
 					<key>sectionID</key>
 					<string>74113564-7B75-436C-84DB-40952578B7C7</string>
 					<key>sectionLabel</key>
-					<string>§ 2163</string>
+					<string>Sección 3.13</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2163</string>
 					<key>sectionTitle</key>
 					<string>Vista - Procedimiento</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;Una orden o resolución final deberá ser emitida por escrito dentro de noventa (90) días después de concluida la vista o después de la presentación de las propuestas determinaciones de hechos y conclusiones de derecho, a menos que este término sea renunciado o ampliado con el consentimiento escrito de todas las partes o por causa justificada.&lt;/p&gt;  &lt;p&gt;La orden o resolución deberá incluir y exponer separadamente determinaciones de hecho si éstas no se han renunciado, conclusiones de derecho, que fundamentan la adjudicación, la disponibilidad del recurso de reconsideración o revisión según sea el caso. La orden o resolución deberá ser firmada por el jefe de la agencia o por cualquier otro funcionario autorizado por ley.&lt;/p&gt;  &lt;p&gt;La orden o resolución advertirá el derecho de solicitar la reconsideración ante la agencia o de instar el recurso de revisión como cuestión de derecho ante el Tribunal de Apelaciones, así como las partes que deberán ser notificadas del recurso de revisión, con expresión de los términos correspondientes. Cumplido este requisito comenzarán a correr dichos términos.&lt;/p&gt;  &lt;p&gt;La agencia deberá especificar en la certificación de sus órdenes o resoluciones los nombres y direcciones de las personas-naturales o jurídicas-a quienes, en calidad de partes, les fue notificado el dictamen, a los fines de que éstas puedan ejercer efectivamente el derecho a la revisión judicial conferido por ley.&lt;/p&gt;  &lt;p&gt;La agencia deberá notificar por correo a las partes, y a sus abogados de tenerlos, la orden o resolución a la brevedad posible, y deberá archivar en autos copia de la orden o resolución final y de la constancia de la notificación. Una parte no podrá ser requerida a cumplir con una orden final a menos que dicha parte haya sido notificada de la misma.&lt;/p&gt; </string>
+					<string>&lt;p&gt;Una orden o resolución final deberá ser emitida por escrito dentro de noventa (90) días después de concluida la vista o después de la presentación de las propuestas determinaciones de hechos y conclusiones de derecho, a menos que este término sea renunciado o ampliado con el consentimiento escrito de todas las partes o por causa justificada.&lt;/p&gt;  &lt;p&gt;La orden o resolución deberá incluir y exponer separadamente determinaciones de hecho si éstas no se han renunciado, conclusiones de derecho, que fundamentan la adjudicación, la disponibilidad del recurso de reconsideración o revisión según sea el caso. La orden o resolución deberá ser firmada por el jefe de la agencia o por cualquier otro funcionario autorizado por ley.&lt;/p&gt;  &lt;p&gt;La orden o resolución advertirá el derecho de solicitar la reconsideración ante la agencia o de instar el recurso de revisión como cuestión de derecho ante el Tribunal de Apelaciones, así como las partes que deberán ser notificadas del recurso de revisión, con expresión de los términos correspondientes. Cumplido este requisito comenzarán a correr dichos términos.&lt;/p&gt;  &lt;p&gt;La agencia deberá especificar en la certificación de sus órdenes o resoluciones los nombres y direcciones de las personas-naturales o jurídicas-a quienes, en calidad de partes, les fue notificado el dictamen, a los fines de que éstas puedan ejercer efectivamente el derecho a la revisión judicial conferido por ley.&lt;/p&gt;  &lt;p&gt;La agencia deberá notificar por correo a las partes, y a sus abogados de tenerlos, la orden o resolución a la brevedad posible, y deberá archivar en autos copia de la orden o resolución final y de la constancia de la notificación. Una parte no podrá ser requerida a cumplir con una orden final a menos que dicha parte haya sido notificada de la misma.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Agosto 8, 2002, Num. 130, art. 2&lt;/li&gt; &lt;li&gt;Septiembre 16, 2004, Num. 331, art. 1&lt;/li&gt; &lt;li&gt;Diciembre 26, 2006, Num. 299, art. 2, ef. 6 meses despues de Diciembre 26, 2006&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>DC9444A7-C7ED-4A16-8552-E2966D5D3ACD</string>
 					<key>sectionLabel</key>
-					<string>§ 2164</string>
+					<string>Sección 3.14</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2164</string>
 					<key>sectionTitle</key>
 					<string>Ordenes o resoluciones finales</string>
 				</dict>
@@ -410,17 +529,21 @@
 					<key>sectionID</key>
 					<string>A090DF6F-F1E4-461C-8379-C2B71CE6F6F8</string>
 					<key>sectionLabel</key>
-					<string>§ 2165</string>
+					<string>Sección 3.15</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2165</string>
 					<key>sectionTitle</key>
 					<string>Ordenes o resoluciones finales - Reconsideración</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;Si la agencia concluye o decide no iniciar o continuar un procedimiento adjudicativo en un caso en particular, terminará el procedimiento y notificará por escrito por correo certificado con acuse de recibo a las partes su determinación, los fundamentos para la misma y el recurso de revisión disponible, incluyendo las advertencias dispuestas en la sec. 2164 de este título.&lt;/p&gt; </string>
+					<string>&lt;p&gt;Si la agencia concluye o decide no iniciar o continuar un procedimiento adjudicativo en un caso en particular, terminará el procedimiento y notificará por escrito por correo certificado con acuse de recibo a las partes su determinación, los fundamentos para la misma y el recurso de revisión disponible, incluyendo las advertencias dispuestas en la sec. 2164 de este título.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Septiembre 16, 2004, Num. 331, art. 1&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>8621C9C9-ECA8-4FE7-85F0-A387255EF754</string>
 					<key>sectionLabel</key>
-					<string>§ 2166</string>
+					<string>Sección 3.16</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2166</string>
 					<key>sectionTitle</key>
 					<string>Terminación; notificación</string>
 				</dict>
@@ -430,7 +553,9 @@
 					<key>sectionID</key>
 					<string>AAB524AA-36C7-4DCC-9B9B-45E7B23956AB</string>
 					<key>sectionLabel</key>
-					<string>§ 2167</string>
+					<string>Sección 3.17</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2167</string>
 					<key>sectionTitle</key>
 					<string>Procedimiento adjudicativo de acción inmediata</string>
 				</dict>
@@ -440,57 +565,82 @@
 					<key>sectionID</key>
 					<string>BCC706BA-1583-4999-B25B-D36BA0103A16</string>
 					<key>sectionLabel</key>
-					<string>§ 2168</string>
+					<string>Sección 3.18</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2168</string>
 					<key>sectionTitle</key>
 					<string>Archivo de expediente oficial</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;Los procedimientos de adjudicación de subastas serán procedimientos informales; su reglamentación y términos serán establecidos por las agencias. La parte adversamente afectada por una decisión podrá, dentro del término de diez (10) días a partir de la adjudicación de la subasta, presentar una moción de reconsideración ante la agencia o la entidad apelativa de subastas, de existir una en la agencia, según sea el caso. La agencia o la entidad deberá considerarla dentro de los diez (10) días de haberse presentado. Si se tomare alguna determinación en su consideración, el término para instar el recurso de revisión judicial empezará a contarse desde la fecha en que se archiva en autos una copia de la notificación de la decisión de la agencia o la entidad apelativa resolviendo la moción. Si la agencia o la entidad apelativa dejare de tomar alguna acción con relación a la moción de reconsideración dentro de los diez (10) días de haberse presentado, se entenderá que ésta ha sido rechazada de plano, y a partir de esa fecha comenzará a correr el término para la revisión judicial.&lt;/p&gt; </string>
+					<string>&lt;p&gt;Los procedimientos de adjudicación de subastas serán procedimientos informales; su reglamentación y términos serán establecidos por las agencias. La parte adversamente afectada por una decisión podrá, dentro del término de diez (10) días a partir de la adjudicación de la subasta, presentar una moción de reconsideración ante la agencia o la entidad apelativa de subastas, de existir una en la agencia, según sea el caso. La agencia o la entidad deberá considerarla dentro de los diez (10) días de haberse presentado. Si se tomare alguna determinación en su consideración, el término para instar el recurso de revisión judicial empezará a contarse desde la fecha en que se archiva en autos una copia de la notificación de la decisión de la agencia o la entidad apelativa resolviendo la moción. Si la agencia o la entidad apelativa dejare de tomar alguna acción con relación a la moción de reconsideración dentro de los diez (10) días de haberse presentado, se entenderá que ésta ha sido rechazada de plano, y a partir de esa fecha comenzará a correr el término para la revisión judicial.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Agosto 5, 1989, Num. 43, p. 160, art. 7&lt;/li&gt; &lt;li&gt;Septiembre 16, 2004, Num. 331, art. 1&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>653246F2-783B-479B-9922-AA6CBE364D2E</string>
 					<key>sectionLabel</key>
-					<string>§ 2169</string>
+					<string>Sección 3.19</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2169</string>
 					<key>sectionTitle</key>
 					<string>Procedimiento y término para solicitar reconsideración en la adjudicación de subastas</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;En toda decisión de un organismo administrativo que ordene el pago de dinero se incluirán intereses sobre la cuantía impuesta en la misma desde la fecha en que se ordenó dicho pago y hasta que éste sea satisfecho, al tipo que para sentencias judiciales de naturaleza civil fije por reglamento la Junta Financiera, según el mismo sea certificado por el Comisionado de Instituciones de Puerto Rico y que esté en vigor al momento de dictarse la decisión.&lt;/p&gt; </string>
+					<string>&lt;p&gt;En toda decisión de un organismo administrativo que ordene el pago de dinero se incluirán intereses sobre la cuantía impuesta en la misma desde la fecha en que se ordenó dicho pago y hasta que éste sea satisfecho, al tipo que para sentencias judiciales de naturaleza civil fije por reglamento la Junta Financiera, según el mismo sea certificado por el Comisionado de Instituciones de Puerto Rico y que esté en vigor al momento de dictarse la decisión.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Julio 30, 1990, Num. 21, p. 93, art. 1&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>636F9314-870B-4720-AD31-E9A1A4171BDF</string>
 					<key>sectionLabel</key>
-					<string>§ 2170</string>
+					<string>Sección 3.20</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2170</string>
 					<key>sectionTitle</key>
 					<string>Pago de intereses</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;La agencia podrá imponer sanciones, en su función cuasi judicial, en los siguientes casos:&lt;/p&gt;  &lt;p&gt;(a) Si el promovente de una acción, o el promovido por ella, dejare de cumplir con las reglas y reglamentos o con cualquier orden del jefe de la agencia, del juez administrativo o del oficial examinador, la agencia a iniciativa propia o a instancia de parte podrá ordenarle que muestre causa por la cual no deba imponérsele una sanción. La orden informará de las reglas, reglamentos u órdenes con las cuales no se haya cumplido, y se concederá un término de veinte (20) días, contados a partir de la fecha de notificación de la orden, para la mostración de causa. De no cumplirse con esa orden, o de determinarse que no hubo causa que justificare el incumplimiento, entonces se podrá imponer una sanción económica a favor de la agencia o de cualquier parte, que no excederá de doscientos dólares ($200) por cada imposición separada, a la parte o a su abogado, si este último es el responsable del incumplimiento.&lt;/p&gt;  &lt;p&gt;(b) Ordenar la desestimación de la acción en el caso del promovente, o eliminar las alegaciones en el caso del promovido, si después de haber impuesto sanciones económicas y de haberlas notificado a la parte correspondiente, dicha parte continúa en su incumplimiento de las órdenes de la agencia.&lt;/p&gt;  &lt;p&gt;(c) Imponer costas y honorarios de abogados, en los mismos casos que dispone la Regla 44 de Procedimiento Civil, según enmendada, Apéndice III del Título 32.&lt;/p&gt; </string>
+					<string>&lt;p&gt;La agencia podrá imponer sanciones, en su función cuasi judicial, en los siguientes casos:&lt;/p&gt;  &lt;p&gt;(a) Si el promovente de una acción, o el promovido por ella, dejare de cumplir con las reglas y reglamentos o con cualquier orden del jefe de la agencia, del juez administrativo o del oficial examinador, la agencia a iniciativa propia o a instancia de parte podrá ordenarle que muestre causa por la cual no deba imponérsele una sanción. La orden informará de las reglas, reglamentos u órdenes con las cuales no se haya cumplido, y se concederá un término de veinte (20) días, contados a partir de la fecha de notificación de la orden, para la mostración de causa. De no cumplirse con esa orden, o de determinarse que no hubo causa que justificare el incumplimiento, entonces se podrá imponer una sanción económica a favor de la agencia o de cualquier parte, que no excederá de doscientos dólares ($200) por cada imposición separada, a la parte o a su abogado, si este último es el responsable del incumplimiento.&lt;/p&gt;  &lt;p&gt;(b) Ordenar la desestimación de la acción en el caso del promovente, o eliminar las alegaciones en el caso del promovido, si después de haber impuesto sanciones económicas y de haberlas notificado a la parte correspondiente, dicha parte continúa en su incumplimiento de las órdenes de la agencia.&lt;/p&gt;  &lt;p&gt;(c) Imponer costas y honorarios de abogados, en los mismos casos que dispone la Regla 44 de Procedimiento Civil, según enmendada, Apéndice III del Título 32.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Noviembre 30, 1990, Num. 18, p. 1458, art. 15&lt;/li&gt; &lt;li&gt;Julio 31, 1999, Num. 204, art. 1&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>E13DD494-755F-4A6B-97A6-F7DE1CB89B91</string>
 					<key>sectionLabel</key>
-					<string>§ 2170a</string>
+					<string>Sección 3.21</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2170a</string>
 					<key>sectionTitle</key>
 					<string>Sanciones</string>
 				</dict>
+			</array>
+			<key>sectionID</key>
+			<string>56535627-1B46-4351-84D1-1930662EB68A</string>
+			<key>sectionLabel</key>
+			<string>Subcapítulo III</string>
+			<key>sectionSublabel</key>
+			<string>3 L.P.R.A §§ 2151-2170a</string>
+			<key>sectionTitle</key>
+			<string>Procedimientos Adjudicativos</string>
+		</dict>
+		<dict>
+			<key>sectionChildren</key>
+			<array>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;Las disposiciones de este capítulo serán aplicables a aquellas órdenes, resoluciones y providencias adjudicativas finales dictadas por agencias o funcionarios administrativos que serán revisadas por el Tribunal de Apelaciones mediante Recurso de Revisión, excepto:&lt;/p&gt;  &lt;p&gt;(1) Las dictadas por el Secretario de Hacienda con relación a las leyes de rentas internas del Estado Libre Asociado de Puerto Rico, las cuales se revisarán mediante la presentación de una demanda y la celebración de un juicio de novo, ante la sala con competencia del Tribunal de Primera Instancia. Todo demandante que impugne la determinación de cualquier deficiencia realizada por el Secretario de Hacienda vendrá obligado a pagar la porción de la contribución no impugnada y a prestar fianza por la totalidad del balance impago de la contribución determinada por el Secretario de Hacienda, en o antes de la presentación de la demanda, y&lt;/p&gt;  &lt;p&gt;(2) las dictadas por el Centro de Recaudación de Ingresos Municipales con relación a las deficiencias, tasaciones e imposiciones contributivas de la Ley sobre la Contribución sobre la Propiedad Mueble e Inmueble, las cuales se regirán por las disposiciones aplicables de las secs. 5001 et seq. del Título 21.&lt;/p&gt; </string>
+					<string>&lt;p&gt;Las disposiciones de este capítulo serán aplicables a aquellas órdenes, resoluciones y providencias adjudicativas finales dictadas por agencias o funcionarios administrativos que serán revisadas por el Tribunal de Apelaciones mediante Recurso de Revisión, excepto:&lt;/p&gt;  &lt;p&gt;(1) Las dictadas por el Secretario de Hacienda con relación a las leyes de rentas internas del Estado Libre Asociado de Puerto Rico, las cuales se revisarán mediante la presentación de una demanda y la celebración de un juicio de novo, ante la sala con competencia del Tribunal de Primera Instancia. Todo demandante que impugne la determinación de cualquier deficiencia realizada por el Secretario de Hacienda vendrá obligado a pagar la porción de la contribución no impugnada y a prestar fianza por la totalidad del balance impago de la contribución determinada por el Secretario de Hacienda, en o antes de la presentación de la demanda, y&lt;/p&gt;  &lt;p&gt;(2) las dictadas por el Centro de Recaudación de Ingresos Municipales con relación a las deficiencias, tasaciones e imposiciones contributivas de la Ley sobre la Contribución sobre la Propiedad Mueble e Inmueble, las cuales se regirán por las disposiciones aplicables de las secs. 5001 et seq. del Título 21.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Noviembre 30, 1990, Num. 18, p. 1458, art. 16&lt;/li&gt; &lt;li&gt;Diciembre 25, 1995, Num. 247, art. 5&lt;/li&gt; &lt;li&gt;Julio 11, 1998, Num. 135, sec. 4&lt;/li&gt; &lt;li&gt;Septiembre 16, 2004, Num. 331, art. 1&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>20557BB8-0629-4515-9585-33D2E73F90CC</string>
 					<key>sectionLabel</key>
-					<string>§ 2171</string>
+					<string>Sección 4.1</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2171</string>
 					<key>sectionTitle</key>
 					<string>Aplicabilidad</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;Una parte adversamente afectada por una orden o resolución final de una agencia y que haya agotado todos los remedios provistos por la agencia o por el organismo administrativo apelativo correspondiente podrá presentar una solicitud de revisión ante el Tribunal de Apelaciones, dentro de un término de treinta (30) días contados a partir de la fecha del archivo en autos de la copia de la notificación de la orden o resolución final de la agencia o a partir de la fecha aplicable de las dispuestas en la sec. 2165 de este título cuando el término para solicitar la revisión judicial haya sido interrumpido mediante la presentación oportuna de una moción de reconsideración. La parte notificará la presentación de la solicitud de revisión a la agencia y a todas las partes dentro del término para solicitar dicha revisión. La notificación podrá hacerse por correo. Disponiéndose, que si la fecha de archivo en autos de copia de la notificación de la orden o resolución final de la agencia o del organismo administrativo apelativo correspondiente es distinta a la del depósito en el correo de dicha notificación, el término se calculará a partir de la fecha del depósito en el correo.&lt;/p&gt;  &lt;p&gt;En los casos de impugnación de subasta, la parte adversamente afectada por una orden o resolución final de la agencia, o de la entidad apelativa de subastas, según sea el caso, podrá presentar una solicitud de revisión ante el Tribunal de Apelaciones dentro de un término de diez (10) días contados a partir del archivo en autos de la copia de la notificación de la orden o resolución final de la agencia o la entidad apelativa, o dentro de los diez (10) días de haber transcurrido el plazo dispuesto por la sec. 2169 de este título. La mera presentación de una solicitud de revisión al amparo de esta sección no tendrá el efecto de paralizar la adjudicación de la subasta impugnada.&lt;/p&gt;  &lt;p&gt;El recurso de revisión judicial será atendido por el panel o paneles designados para atender los asuntos que se originen en la región judicial o regiones judiciales correspondientes al lugar donde se planee, se esté llevando a cabo o se haya llevado a cabo la actividad o incidente que hubiera dado lugar a la controversia; o el lugar de trámite y adjudicación de una subasta; o por los paneles designados para atender recursos por su materia o características, conforme lo dispuesto en el Reglamento del Tribunal de Apelaciones.&lt;/p&gt;  &lt;p&gt;Una orden o resolución interlocutoria de una agencia, incluyendo aquéllas que se emitan en procesos que se desarrollen por etapas, no serán revisables directamente. La disposición interlocutoria de la agencia podrá ser objeto de un señalamiento de error en el recurso de revisión de la orden o resolución final de la agencia.&lt;/p&gt;  &lt;p&gt;La revisión judicial aquí dispuesta será el recurso exclusivo para revisar los méritos de una decisión administrativa sea ésta de naturaleza adjudicativa o de naturaleza informal emitida al amparo de este capítulo.&lt;/p&gt; </string>
+					<string>&lt;p&gt;Una parte adversamente afectada por una orden o resolución final de una agencia y que haya agotado todos los remedios provistos por la agencia o por el organismo administrativo apelativo correspondiente podrá presentar una solicitud de revisión ante el Tribunal de Apelaciones, dentro de un término de treinta (30) días contados a partir de la fecha del archivo en autos de la copia de la notificación de la orden o resolución final de la agencia o a partir de la fecha aplicable de las dispuestas en la sec. 2165 de este título cuando el término para solicitar la revisión judicial haya sido interrumpido mediante la presentación oportuna de una moción de reconsideración. La parte notificará la presentación de la solicitud de revisión a la agencia y a todas las partes dentro del término para solicitar dicha revisión. La notificación podrá hacerse por correo. Disponiéndose, que si la fecha de archivo en autos de copia de la notificación de la orden o resolución final de la agencia o del organismo administrativo apelativo correspondiente es distinta a la del depósito en el correo de dicha notificación, el término se calculará a partir de la fecha del depósito en el correo.&lt;/p&gt;  &lt;p&gt;En los casos de impugnación de subasta, la parte adversamente afectada por una orden o resolución final de la agencia, o de la entidad apelativa de subastas, según sea el caso, podrá presentar una solicitud de revisión ante el Tribunal de Apelaciones dentro de un término de diez (10) días contados a partir del archivo en autos de la copia de la notificación de la orden o resolución final de la agencia o la entidad apelativa, o dentro de los diez (10) días de haber transcurrido el plazo dispuesto por la sec. 2169 de este título. La mera presentación de una solicitud de revisión al amparo de esta sección no tendrá el efecto de paralizar la adjudicación de la subasta impugnada.&lt;/p&gt;  &lt;p&gt;El recurso de revisión judicial será atendido por el panel o paneles designados para atender los asuntos que se originen en la región judicial o regiones judiciales correspondientes al lugar donde se planee, se esté llevando a cabo o se haya llevado a cabo la actividad o incidente que hubiera dado lugar a la controversia; o el lugar de trámite y adjudicación de una subasta; o por los paneles designados para atender recursos por su materia o características, conforme lo dispuesto en el Reglamento del Tribunal de Apelaciones.&lt;/p&gt;  &lt;p&gt;Una orden o resolución interlocutoria de una agencia, incluyendo aquéllas que se emitan en procesos que se desarrollen por etapas, no serán revisables directamente. La disposición interlocutoria de la agencia podrá ser objeto de un señalamiento de error en el recurso de revisión de la orden o resolución final de la agencia.&lt;/p&gt;  &lt;p&gt;La revisión judicial aquí dispuesta será el recurso exclusivo para revisar los méritos de una decisión administrativa sea ésta de naturaleza adjudicativa o de naturaleza informal emitida al amparo de este capítulo.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Agosto 5, 1989, Num. 43, p. 160, art. 8&lt;/li&gt; &lt;li&gt;Diciembre 25, 1995, Num. 247, art. 6&lt;/li&gt; &lt;li&gt;Diciembre 26, 1997, Num. 186, art. 1&lt;/li&gt; &lt;li&gt;Noviembre 6, 1999, Num. 323, art. 2&lt;/li&gt; &lt;li&gt;Septiembre 16, 2004, Num. 331, art. 1&lt;/li&gt; &lt;li&gt;Diciembre 22, 2006, Num. 277, art. 1&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>A3A453B6-D76D-4168-BB24-E20D85EEF95F</string>
 					<key>sectionLabel</key>
-					<string>§ 2172</string>
+					<string>Sección 4.2</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2172</string>
 					<key>sectionTitle</key>
 					<string>Revisión - Términos para radicar</string>
 				</dict>
@@ -500,57 +650,82 @@
 					<key>sectionID</key>
 					<string>BE027612-5FE2-412A-87FC-80682F5E64A0</string>
 					<key>sectionLabel</key>
-					<string>§ 2173</string>
+					<string>Sección 4.3</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2173</string>
 					<key>sectionTitle</key>
 					<string>Revisión - Agotamiento de remedios administrativos; relevo</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;El Tribunal Supremo de Puerto Rico adoptará unas reglas para regular los procedimientos de revisión judicial, las que promoverán el acceso fácil, económico y efectivo a los ciudadanos, evitarán las desestimaciones del recurso de revisión por defectos de forma y de notificación y permitirán la comparecencia efectiva de recurrentes por derecho propio y en forma pauperis. A los fines de hacer efectiva la comparecencia por derecho propio y en forma pauperis, el Tribunal Supremo podrá adoptar procedimientos especiales y formularios simples.&lt;/p&gt; </string>
+					<string>&lt;p&gt;El Tribunal Supremo de Puerto Rico adoptará unas reglas para regular los procedimientos de revisión judicial, las que promoverán el acceso fácil, económico y efectivo a los ciudadanos, evitarán las desestimaciones del recurso de revisión por defectos de forma y de notificación y permitirán la comparecencia efectiva de recurrentes por derecho propio y en forma pauperis. A los fines de hacer efectiva la comparecencia por derecho propio y en forma pauperis, el Tribunal Supremo podrá adoptar procedimientos especiales y formularios simples.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Septiembre 16, 2004, Num. 331, art. 1&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>464F6902-E966-4D76-907A-B1FC286EBCC6</string>
 					<key>sectionLabel</key>
-					<string>§ 2174</string>
+					<string>Sección 4.4</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2174</string>
 					<key>sectionTitle</key>
 					<string>Revisión - Reglas procesales para el recurso</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;El tribunal podrá conceder el remedio apropiado si determina que el recurrente tiene derecho a un remedio.&lt;/p&gt;  &lt;p&gt;Las determinaciones de hechos de las decisiones de las agencias serán sostenidas por el tribunal, si se basan en evidencia sustancial que obra en el expediente administrativo.&lt;/p&gt;  &lt;p&gt;Las conclusiones de derecho serán revisables en todos sus aspectos por el tribunal.&lt;/p&gt; </string>
+					<string>&lt;p&gt;El tribunal podrá conceder el remedio apropiado si determina que el recurrente tiene derecho a un remedio.&lt;/p&gt;  &lt;p&gt;Las determinaciones de hechos de las decisiones de las agencias serán sostenidas por el tribunal, si se basan en evidencia sustancial que obra en el expediente administrativo.&lt;/p&gt;  &lt;p&gt;Las conclusiones de derecho serán revisables en todos sus aspectos por el tribunal.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Septiembre 16, 2004, Num. 331, art. 1&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>F3C54893-DD92-4898-B237-63D550A16AD2</string>
 					<key>sectionLabel</key>
-					<string>§ 2175</string>
+					<string>Sección 4.5</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2175</string>
 					<key>sectionTitle</key>
 					<string>Revisión - Alcance</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;El Tribunal de Apelaciones revisará como cuestión de derecho las decisiones, órdenes y resoluciones finales de organismos o agencias administrativas. La mera presentación del recurso no paralizará el trámite en el organismo o agencia administrativa, a menos que el tribunal así lo determine.&lt;/p&gt;  &lt;p&gt;El procedimiento a seguir para los recursos de revisión será de acuerdo con lo establecido en el Reglamento del Tribunal de Apelaciones aprobado por el Tribunal Supremo.&lt;/p&gt;  &lt;p&gt;No será obligatoria la comparecencia del Estado Libre Asociado ante el Tribunal de Apelaciones a menos que así lo ordene el tribunal.&lt;/p&gt;  &lt;p&gt;El tribunal podrá conceder el remedio solicitado o cualquier otro remedio que considere apropiado, incluyendo recursos extraordinarios aunque no haya sido solicitado, y podrá conceder honorarios razonables de abogados, costos y gastos a cualquier parte que haya prevalecido en la revisión judicial.&lt;/p&gt; </string>
+					<string>&lt;p&gt;El Tribunal de Apelaciones revisará como cuestión de derecho las decisiones, órdenes y resoluciones finales de organismos o agencias administrativas. La mera presentación del recurso no paralizará el trámite en el organismo o agencia administrativa, a menos que el tribunal así lo determine.&lt;/p&gt;  &lt;p&gt;El procedimiento a seguir para los recursos de revisión será de acuerdo con lo establecido en el Reglamento del Tribunal de Apelaciones aprobado por el Tribunal Supremo.&lt;/p&gt;  &lt;p&gt;No será obligatoria la comparecencia del Estado Libre Asociado ante el Tribunal de Apelaciones a menos que así lo ordene el tribunal.&lt;/p&gt;  &lt;p&gt;El tribunal podrá conceder el remedio solicitado o cualquier otro remedio que considere apropiado, incluyendo recursos extraordinarios aunque no haya sido solicitado, y podrá conceder honorarios razonables de abogados, costos y gastos a cualquier parte que haya prevalecido en la revisión judicial.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Septiembre 16, 2004, Num. 331, art. 1&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>FEE8C0C2-26E1-4E99-AE41-44E9D30CC0A0</string>
 					<key>sectionLabel</key>
-					<string>§ 2176</string>
+					<string>Sección 4.6</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2176</string>
 					<key>sectionTitle</key>
 					<string>Revisión - Procedimientos y remedios</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;Cualquier parte adversamente afectada por la resolución del Tribunal de Apelaciones podrá solicitar la revisión de la misma mediante la presentación de recurso de certiorari  ante el Tribunal Supremo en el término jurisdiccional de treinta (30) días desde el archivo en autos de la notificación de la sentencia del Tribunal de Apelaciones o de la resolución de éste resolviendo una moción de reconsideración debidamente presentada.&lt;/p&gt; </string>
+					<string>&lt;p&gt;Cualquier parte adversamente afectada por la resolución del Tribunal de Apelaciones podrá solicitar la revisión de la misma mediante la presentación de recurso de certiorari  ante el Tribunal Supremo en el término jurisdiccional de treinta (30) días desde el archivo en autos de la notificación de la sentencia del Tribunal de Apelaciones o de la resolución de éste resolviendo una moción de reconsideración debidamente presentada.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Agosto 5, 1989, Num. 43, p. 160, art. 9&lt;/li&gt; &lt;li&gt;Diciembre 25, 1995, Num. 247, art. 8&lt;/li&gt; &lt;li&gt;Septiembre 16, 2004, Num. 331, art. 1&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>9149A831-FF1A-4F54-9CC4-C51B39AC9F81</string>
 					<key>sectionLabel</key>
-					<string>§ 2177</string>
+					<string>Sección 4.7</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2177</string>
 					<key>sectionTitle</key>
 					<string>Revisión - Certiorari</string>
 				</dict>
+			</array>
+			<key>sectionID</key>
+			<string>AD0BFF11-66AE-4E71-94A1-F43B87A684F3</string>
+			<key>sectionLabel</key>
+			<string>Subcapítulo IV</string>
+			<key>sectionSublabel</key>
+			<string>3 L.P.R.A §§ 2171-2177</string>
+			<key>sectionTitle</key>
+			<string>Revisión Judicial</string>
+		</dict>
+		<dict>
+			<key>sectionChildren</key>
+			<array>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;Las agencias deberán establecer un procedimiento rápido y eficiente para la expedición de licencias, franquicias, permisos, endosos y cualesquiera gestiones similares. Establecerán por reglamento las normas de tramitación de los referidos documentos y los términos dentro de los cuales se completará el proceso de consideración de la licencia, franquicia, permiso, endoso y similares. Se establece un término directivo de treinta (30) días para la expedición de las aprobaciones a que se refiere la presente sección, pudiendo las agencias establecer otros más breves o más largos, en este último caso.&lt;/p&gt; </string>
+					<string>&lt;p&gt;Las agencias deberán establecer un procedimiento rápido y eficiente para la expedición de licencias, franquicias, permisos, endosos y cualesquiera gestiones similares. Establecerán por reglamento las normas de tramitación de los referidos documentos y los términos dentro de los cuales se completará el proceso de consideración de la licencia, franquicia, permiso, endoso y similares. Se establece un término directivo de treinta (30) días para la expedición de las aprobaciones a que se refiere la presente sección, pudiendo las agencias establecer otros más breves o más largos, en este último caso.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Agosto 12, 1988, Num. 170, p. 825, sec. 5.1, ef. 6 meses despues de Agosto 12, 1988&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>9CFEF1C2-D862-4450-BAD7-D51EB439BE4C</string>
 					<key>sectionLabel</key>
-					<string>§ 2181</string>
+					<string>Sección 5.1</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2181</string>
 					<key>sectionTitle</key>
 					<string>Procedimientos</string>
 				</dict>
@@ -560,7 +735,9 @@
 					<key>sectionID</key>
 					<string>EE3F8735-22A8-4A62-B7EF-41A9501946C1</string>
 					<key>sectionLabel</key>
-					<string>§ 2182</string>
+					<string>Sección 5.2</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2182</string>
 					<key>sectionTitle</key>
 					<string>Aprobaciones conjuntas</string>
 				</dict>
@@ -570,7 +747,9 @@
 					<key>sectionID</key>
 					<string>DDA9C445-B0D0-4142-94F5-67BA10CC470C</string>
 					<key>sectionLabel</key>
-					<string>§ 2183</string>
+					<string>Sección 5.3</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2183</string>
 					<key>sectionTitle</key>
 					<string>Regionalización de funciones</string>
 				</dict>
@@ -580,17 +759,34 @@
 					<key>sectionID</key>
 					<string>6806AD6D-6EFB-4FD2-AAF0-C229690B3188</string>
 					<key>sectionLabel</key>
-					<string>§ 2184</string>
+					<string>Sección 5.4</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2184</string>
 					<key>sectionTitle</key>
 					<string>Denegación; impugnación</string>
 				</dict>
+			</array>
+			<key>sectionID</key>
+			<string>4E6BBD7F-15BB-4057-A259-13697070BC7D</string>
+			<key>sectionLabel</key>
+			<string>Subcapítulo V</string>
+			<key>sectionSublabel</key>
+			<string>3 L.P.R.A §§ 2181-2184</string>
+			<key>sectionTitle</key>
+			<string>Procedimiento para la Concesión de Licencias, Franquicias, Permisos y Acciones Similares</string>
+		</dict>
+		<dict>
+			<key>sectionChildren</key>
+			<array>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Las agencias podrán realizar inspecciones para asegurarse del cumplimiento de las leyes y reglamentos que administran y de las resoluciones, órdenes y autorizaciones que expidan, sin previa orden de registro o allanamiento, en los siguientes casos:&lt;/p&gt;  &lt;p&gt;(a) En casos de emergencias, o que afecten la seguridad o salud pública;&lt;/p&gt;  &lt;p&gt;(b) al amparo de las facultades de licenciamiento, concesión de franquicias, permisos u otras similares;&lt;/p&gt;  &lt;p&gt;(c) en casos en que la información es obtenible a simple vista o en sitios públicos por mera observación.&lt;/p&gt; </string>
 					<key>sectionID</key>
 					<string>BCCD35D5-44DF-4F20-ACFF-5FC5E3E41CF7</string>
 					<key>sectionLabel</key>
-					<string>§ 2191</string>
+					<string>Sección 6.1</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2191</string>
 					<key>sectionTitle</key>
 					<string>Inspecciones</string>
 				</dict>
@@ -600,17 +796,21 @@
 					<key>sectionID</key>
 					<string>26FBB3E3-83DB-4C3F-A710-4160079B364E</string>
 					<key>sectionLabel</key>
-					<string>§ 2192</string>
+					<string>Sección 6.2</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2192</string>
 					<key>sectionTitle</key>
 					<string>Requerimiento de información</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
-					<string>&lt;p&gt;Toda persona que invoque su privilegio constitucional de no autoincriminarse podrá ser compelida a producir la información requerida por la agencia mediante orden judicial expedida por el Tribunal de Primera Instancia; en cuyo caso el tribunal ordenará que no podrá usarse dicha información en ningún proceso criminal contra la persona que suministró la información.&lt;/p&gt; </string>
+					<string>&lt;p&gt;Toda persona que invoque su privilegio constitucional de no autoincriminarse podrá ser compelida a producir la información requerida por la agencia mediante orden judicial expedida por el Tribunal de Primera Instancia; en cuyo caso el tribunal ordenará que no podrá usarse dicha información en ningún proceso criminal contra la persona que suministró la información.&lt;/p&gt;  &lt;ul&gt; &lt;li&gt;Diciembre 25, 1995, Num. 247, art. 7, ef. Mayo 1, 1996&lt;/li&gt; &lt;/ul&gt; </string>
 					<key>sectionID</key>
 					<string>213D08DD-A597-4AB7-B262-ED23184F1D11</string>
 					<key>sectionLabel</key>
-					<string>§ 2193</string>
+					<string>Sección 6.3</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2193</string>
 					<key>sectionTitle</key>
 					<string>Autoincriminación</string>
 				</dict>
@@ -620,7 +820,9 @@
 					<key>sectionID</key>
 					<string>8E582BB5-109B-4C97-AB37-862AFEB86C1C</string>
 					<key>sectionLabel</key>
-					<string>§ 2194</string>
+					<string>Sección 6.4</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2194</string>
 					<key>sectionTitle</key>
 					<string>Inspecciones e investigaciones conjuntas</string>
 				</dict>
@@ -630,27 +832,46 @@
 					<key>sectionID</key>
 					<string>CD0D00C9-FDD2-4A74-B249-42A85873D370</string>
 					<key>sectionLabel</key>
-					<string>§ 2195</string>
+					<string>Sección 6.5</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2195</string>
 					<key>sectionTitle</key>
 					<string>Querellas radicadas por agencias</string>
 				</dict>
+			</array>
+			<key>sectionID</key>
+			<string>433E00DD-548A-47AC-BA7E-18559384308C</string>
+			<key>sectionLabel</key>
+			<string>Subcapítulo VI</string>
+			<key>sectionSublabel</key>
+			<string>3 L.P.R.A §§ 2191-2195</string>
+			<key>sectionTitle</key>
+			<string>Fiscalizacion e Inspección y Gestiones Conjuntas</string>
+		</dict>
+		<dict>
+			<key>sectionChildren</key>
+			<array>
 				<dict>
 					<key>sectionContent</key>
 					<string>&lt;p&gt;Toda violación a las leyes que administran las agencias o a los reglamentos emitidos al amparo de las mismas podrá ser penalizada con multas administrativas que no excederán de cinco mil dólares ($5,000) por cada violación.&lt;/p&gt;  &lt;p&gt;En caso de que la ley especial de que se trate sólo provea penalidades criminales, el jefe de la agencia, a su opción, podrá radicar una querella administrativa al amparo de esta sección para procesar el caso por la vía administrativa.&lt;/p&gt;  &lt;p&gt;Si la ley especial de que se trate dispone una penalidad administrativa mayor a la que se establece en esta sección, la agencia podrá imponer la penalidad mayor.&lt;/p&gt; </string>
 					<key>sectionID</key>
 					<string>6BE180EB-E9C7-4C0C-87E2-A188642E8CCE</string>
 					<key>sectionLabel</key>
-					<string>§ 2201</string>
+					<string>Sección 7.1</string>
+					<key>sectionSublabel</key>
+					<string>3 L.P.R.A § 2201</string>
 					<key>sectionTitle</key>
 					<string>Multas administrativas</string>
 				</dict>
 			</array>
 			<key>sectionID</key>
-			<string>42FB3BE5-4B0C-4CFC-88BF-4AB2526913B9</string>
+			<string>5ADBED0C-DAFD-41B4-AD12-D62E34F2B146</string>
 			<key>sectionLabel</key>
-			<string>Capítulo 75</string>
+			<string>Subcapítulo VII</string>
+			<key>sectionSublabel</key>
+			<string>3 L.P.R.A § 2201</string>
 			<key>sectionTitle</key>
-			<string>Procedimiento Administrativo Uniforme</string>
+			<string>Penalidades Administrativas</string>
 		</dict>
 	</array>
 </dict>
