@@ -49,7 +49,7 @@
 		subtextLabel_.adjustsFontSizeToFitWidth = YES;
 		subtextLabel_.textAlignment = UITextAlignmentRight;
 		subtextLabel_.backgroundColor = [UIColor clearColor];
-		subtextLabel_.textColor = [UIColor lightGrayColor	];
+		subtextLabel_.textColor = [UIColor colorWithRed:37.0/255.0 green:113.0/255.0 blue:216.0/255.0 alpha:1.0];
 		subtextLabel_.highlightedTextColor = [UIColor whiteColor];
 		subtextLabel_.numberOfLines = 1;
 		subtextLabel_.lineBreakMode = UILineBreakModeTailTruncation;
@@ -91,16 +91,16 @@
 	
 	CGFloat contentWidth = self.contentView.frame.size.width;
 	
-	// Padding between textFrame and subtextFrame is 6.0. When positioning either one in the x-axis
-	// only 3.0 is used since we are using the center as the reference
+	// Padding between textFrame and subtextFrame is 2.0. When positioning either one in the x-axis
+	// only 1.0 is used since we are using the center as the reference
 	textFrame = CGRectMake(10.0,
 						   3.0,
-						   (contentWidth / 2.0) - (10.0 + 3.0),
+						   (contentWidth * 0.45) - (10.0 + 1.0),
 						   kTextHeight);
 	
-	subtextFrame = CGRectMake(10.0 + textFrame.size.width + 6.0,
+	subtextFrame = CGRectMake(10.0 + textFrame.size.width + 2.0,
 							  3.0,
-							  (contentWidth / 2.0) - (10.0 + 3.0),
+							  (contentWidth * 0.55) - 1.0,
 							  kTextHeight);
 	
 	NSString *detailStr = self.detailTextLabel.text;

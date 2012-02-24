@@ -10,7 +10,7 @@
 			<key>Key</key>
 			<string>reset_data_preference</string>
 			<key>Title</key>
-			<string>Reset Data</string>
+			<string>Reset All Data</string>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 		</dict>

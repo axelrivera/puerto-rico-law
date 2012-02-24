@@ -6,6 +6,8 @@
 	<dict>
 		<key>bookDescription</key>
 		<string>Entró en vigor el 28 de julio de 1952</string>
+		<key>bookID</key>
+		<string>773B68E4-4399-495E-946C-EB22A84201E2</string>
 		<key>bookLastUpdate</key>
 		<date>2012-02-21T04:00:00Z</date>
 		<key>bookName</key>

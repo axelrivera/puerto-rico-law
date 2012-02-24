@@ -41,7 +41,7 @@
 {
 	self = [super init];
 	if (self) {
-		sectionID_ = [dictionary objectForKey:kSectionIDKey];
+		sectionID_ = [[dictionary objectForKey:kSectionIDKey] lowercaseString];
 		title_ = [dictionary objectForKey:kSectionTitleKey];
 		label_ = [dictionary objectForKey:kSectionLabelKey];
 		book_ = book;
@@ -137,6 +137,11 @@
 		}
 	}
 	return index;
+}
+
+- (BOOL)isEqualToSection:(Section *)section
+{
+	return [self.sectionID caseInsensitiveCompare:section.sectionID] == NSOrderedSame;
 }
 
 #pragma mark - Parent Methods

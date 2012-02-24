@@ -146,16 +146,26 @@ static NSDateFormatter *dateFormatter_;
 			contentController.title = mySection.label;
 			[viewControllers addObject:contentController];
 		} else {
-			SectionListViewController *sectionController =
-			[[SectionListViewController alloc] initWithSection:mySection
-													dataSource:mySection.children
-											   siblingSections:mySection.parent.children
-										   currentSiblingIndex:[mySection indexPositionAtParent]];
-			sectionController.title = mySection.label;
-			[viewControllers addObject:sectionController];
+			if (!(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad && mySection.parent == nil)) {
+				SectionListViewController *sectionController =
+				[[SectionListViewController alloc] initWithSection:mySection
+														dataSource:mySection.children
+												   siblingSections:mySection.parent.children
+											   currentSiblingIndex:[mySection indexPositionAtParent]];
+				sectionController.title = mySection.label;
+				[viewControllers addObject:sectionController];
+			}
 		}
 	}
-	[self.navigationController setViewControllers:viewControllers animated:NO];
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		// The first object is the same for all
+		id currentRootController =
+			[[[self.splitViewController.viewControllers objectAtIndex:1] viewControllers] objectAtIndex:0];
+		[viewControllers insertObject:currentRootController atIndex:0];
+		[self.navigationController setViewControllers:viewControllers animated:NO];
+	} else {
+		[self.navigationController setViewControllers:viewControllers animated:NO];
+	}
 }
 
 - (void)goHome

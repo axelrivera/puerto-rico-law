@@ -16,5 +16,6 @@
 				siblingSections:(NSArray *)siblings
 			currentSiblingIndex:(NSInteger)index;
 - (void)clearCurrentSection;
+- (void)resetCurrentSection;
 
 @end

@@ -6,6 +6,8 @@
 	<dict>
 		<key>bookDescription</key>
 		<string>Incluye enmiendas hasta el 11 de noviembre de 2011</string>
+		<key>bookID</key>
+		<string>3630BF30-A8B1-4107-BDFD-CBBEE473A444</string>
 		<key>bookLastUpdate</key>
 		<date>2012-02-23T04:00:00Z</date>
 		<key>bookName</key>

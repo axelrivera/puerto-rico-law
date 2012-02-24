@@ -12,6 +12,7 @@
 
 @interface Book : NSObject <NSCoding>
 
+@property (strong, nonatomic) NSString *bookID;
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *shortTitle;
@@ -25,7 +26,7 @@
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 - (void)loadSections;
 - (void)clearSections;
-- (NSInteger)unsignedIndexOfFavoritesWithSectionID:(NSString *)sectionID;
+- (NSInteger)unsignedIndexOfSectionInFavorites:(Section *)section;
 - (void)archiveMainSection;
 - (id)unarchiveMainSection;
 - (NSString *)mainSectionDataFileName;
@@ -33,5 +34,6 @@
 - (Section *)sectionInMainSectionMatchingSectionID:(NSString *)sectionID;
 - (NSArray *)searchMainSectionWithString:(NSString *)string titleOnly:(BOOL)titleOnly;
 - (BOOL)isNewComparedToBook:(Book *)book;
+- (BOOL)isEqualToBook:(Book *)book;
 
 @end

@@ -32,6 +32,9 @@
 	[defaults registerDefaults:appDefaults];
 	[defaults synchronize];
 	
+	// Check Settings Bundle Flags to delete data files if necessary before unarchiving.
+	[self checkSettingsBundle];
+	
 	BookData *bookData = [NSKeyedUnarchiver unarchiveObjectWithFile:bookDataPath()];
 	if (bookData == nil) {
 		bookData = [BookData sharedBookData];
@@ -88,6 +91,21 @@
 	/*
 	 Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 	 */
+	[self checkSettingsBundle];
+	
+	if (self.resetDataFlag) {
+		deletePathInDocumentDirectory(bookDataPath());
+		[BookData sharedBookData].currentBook = nil;
+		[[BookData sharedBookData].books removeAllObjects];
+		[[BookData sharedBookData].favoriteBooks removeAllObjects];
+		[[BookData sharedBookData] loadBooks];
+		[self.bookViewController.navigationController popToRootViewControllerAnimated:NO];
+		[self.bookViewController.tableView reloadData];
+		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+			[self.bookViewController.delegate resetCurrentSection];
+			[self.bookViewController.delegate clearCurrentSection];
+		}
+	}
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -95,7 +113,6 @@
 	/*
 	 Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 	 */
-	[self checkSettingsBundle];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -116,11 +133,9 @@
 - (void)resetData
 {
 	NSString *documentsPath = pathInDocumentDirectory(@"");
-	
 	NSDirectoryEnumerator *fileEnumerator = [[NSFileManager defaultManager] enumeratorAtPath:documentsPath];
-	
 	for (NSString *filename in fileEnumerator) {
-		if ([[filename pathExtension] isEqualToString:@"data"]) {
+		if ([filename hasSuffix:@".data"]) {
 			deletePathInDocumentDirectory(filename);
 		}
 	}
@@ -131,16 +146,12 @@
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	[defaults synchronize];
 	
-	self.resetDataFlag = [defaults boolForKey:kResetDataKey];	
+	self.resetDataFlag = [defaults boolForKey:kResetDataKey];
+	
 	if (self.resetDataFlag == YES) {
 		[defaults setBool:NO forKey:kResetDataKey];
 		[self resetData];
-		[[BookData sharedBookData].books removeAllObjects];
-		[[BookData sharedBookData].favoriteBooks removeAllObjects];
-		[[BookData sharedBookData] loadBooks];
-		[self.bookViewController.tableView reloadData];
-	}	
-
+	}
 }
 
 @end

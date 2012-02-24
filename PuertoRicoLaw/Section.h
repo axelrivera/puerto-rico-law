@@ -26,5 +26,6 @@
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 - (NSString *)asciiStringForContent;
 - (NSInteger)indexPositionAtParent;
+- (BOOL)isEqualToSection:(Section *)section;
 
 @end

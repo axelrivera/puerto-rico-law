@@ -25,6 +25,7 @@
 	NSMutableArray *findArray_;
 }
 
+@synthesize bookID = bookID_;
 @synthesize name = name_;
 @synthesize shortTitle = shortTitle_;
 @synthesize title = title_;
@@ -41,6 +42,7 @@
 	if (self) {
 		findSection_ = nil;
 		findArray_ = nil;
+		self.bookID = [dictionary objectForKey:kBookIDKey];
 		self.name = [dictionary objectForKey:kBookNameKey];
 		self.shortTitle = [dictionary objectForKey:kBookShortTitleKey];
 		self.title = [dictionary objectForKey:kBookTitleKey];
@@ -59,6 +61,7 @@
 	self = [super init];  // this needs to be [super initWithCoder:aDecoder] if the superclass implements NSCoding
 	if (self) {
 		//self.object = [decoder decodeObjectForKey:@"objectName"];
+		self.bookID = [decoder decodeObjectForKey:@"bookID"];
 		self.name = [decoder decodeObjectForKey:@"bookName"];
 		self.shortTitle = [decoder decodeObjectForKey:@"bookShortTitle"];
 		self.title = [decoder decodeObjectForKey:@"bookTitle"];
@@ -67,7 +70,8 @@
 		self.lastUpdate = [decoder decodeObjectForKey:@"bookLastUpdate"];
 		self.bookVersion = [decoder decodeObjectForKey:@"bookBookVersion"];
 		self.mainSection = [decoder decodeObjectForKey:@"bookMainSection"];
-		self.favorites = [decoder decodeObjectForKey:@"bookFavorites"];
+		NSMutableArray *favorites = [decoder decodeObjectForKey:@"bookFavorites"];
+		self.favorites = favorites;
 	}
 	return self;
 }
@@ -76,6 +80,7 @@
 {
 	// add [super encodeWithCoder:encoder] if the superclass implements NSCoding
 	//[encoder encodeObject:object forKey:@"objectName"];
+	[encoder encodeObject:self.bookID forKey:@"bookID"];
 	[encoder encodeObject:self.name forKey:@"bookName"];
 	[encoder encodeObject:self.shortTitle forKey:@"bookShortTitle"];
 	[encoder encodeObject:self.title forKey:@"bookTitle"];
@@ -130,12 +135,12 @@
 	self.mainSection = nil;
 }
 
-- (NSInteger)unsignedIndexOfFavoritesWithSectionID:(NSString *)sectionID
+- (NSInteger)unsignedIndexOfSectionInFavorites:(Section *)section
 {
 	NSInteger index = -1;
 	for (NSInteger i = 0; i < [self.favorites count]; i++) {
-		Section *section = [self.favorites objectAtIndex:i];
-		if ([section.sectionID isEqualToString:sectionID]) {
+		Section *favoriteSection = [self.favorites objectAtIndex:i];
+		if ([favoriteSection isEqualToSection:section]) {
 			index = i;
 			break;
 		}
@@ -235,10 +240,12 @@
 
 - (BOOL)isNewComparedToBook:(Book *)book
 {
-	if ([self.bookVersion integerValue] > [book.bookVersion integerValue]) {
-		return YES;
-	}
-	return NO;
+	return [self.bookVersion integerValue] > [book.bookVersion integerValue];
+}
+
+- (BOOL)isEqualToBook:(Book *)book
+{
+	return [self.bookID caseInsensitiveCompare:book.bookID] == NSOrderedSame;
 }
 
 @end

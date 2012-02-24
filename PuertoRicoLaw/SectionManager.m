@@ -157,7 +157,7 @@
 
 - (void)updateFavoriteIndex
 {
-	self.favoriteIndex = [self.section.book unsignedIndexOfFavoritesWithSectionID:self.section.sectionID];
+	self.favoriteIndex = [self.section.book unsignedIndexOfSectionInFavorites:self.section];
 }
 
 - (void)addToFavorites

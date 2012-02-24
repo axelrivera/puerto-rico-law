@@ -246,7 +246,7 @@
     
 	Book *book = [bookData_.books objectAtIndex:indexPath.row];
 	
-	NSInteger favoriteIndex = [bookData_ indexOfFavoriteBookWithName:book.name];
+	NSInteger favoriteIndex = [bookData_ indexOfBookInFavorites:book];
 	
 	BOOL isFavorite = NO;
 	
@@ -282,7 +282,7 @@
 	
 	if (!tableView.isEditing) {
 		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-			[self.delegate clearCurrentSection];
+			[self.delegate resetCurrentSection];
 		}
 		[self loadBook:book animated:YES];
 		return;
@@ -292,7 +292,7 @@
 	
 	if (cell.bookTableView.isFavorite) {
 		cell.bookTableView.favorite = NO;
-		NSInteger index = [bookData_ indexOfFavoriteBookWithName:book.name];
+		NSInteger index = [bookData_ indexOfBookInFavorites:book];
 		if (index >= 0) {
 			[bookData_.favoriteBooks removeObjectAtIndex:index];
 		}

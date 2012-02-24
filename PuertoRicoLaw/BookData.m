@@ -78,7 +78,7 @@ static BookData *sharedBookData_ = nil;
 		dictionary = nil;
 		
 		Book *defaultBook = [[Book alloc] initWithDictionary:bookDictionary];
-		bookIndex = [self indexOfBookWithName:defaultBook.name];
+		bookIndex = [self indexOfBook:defaultBook];
 		
 		if (bookIndex == -1) {
 			[self.books addObject:defaultBook];
@@ -86,18 +86,18 @@ static BookData *sharedBookData_ = nil;
 			Book *currentBook = [self.books objectAtIndex:bookIndex];
 			if ([defaultBook isNewComparedToBook:currentBook]) {
 				[self.books replaceObjectAtIndex:bookIndex withObject:defaultBook];
-				deletePathInDocumentDirectory(mainSectionPathForBookName(defaultBook.name));
+				deletePathInDocumentDirectory(mainSectionFilenameForBookName(defaultBook.name));
 			}
 		}
 	}
 }
 
-- (NSInteger)indexOfBookWithName:(NSString *)name
+- (NSInteger)indexOfBook:(Book *)book
 {
 	NSInteger index = -1;
 	for (NSInteger i = 0; i < [self.books count]; i++) {
-		Book *book = [self.books objectAtIndex:i];
-		if ([book.name isEqualToString:name]) {
+		Book *currentBook = [self.books objectAtIndex:i];
+		if ([currentBook isEqualToBook:book]) {
 			index = i;
 			break;
 		}
@@ -105,12 +105,12 @@ static BookData *sharedBookData_ = nil;
 	return index;
 }
 
-- (NSInteger)indexOfFavoriteBookWithName:(NSString *)name
+- (NSInteger)indexOfBookInFavorites:(Book *)book
 {
 	NSInteger index = -1;
 	for (NSInteger i = 0; i < [self.favoriteBooks count]; i++) {
-		Book *book = [self.favoriteBooks objectAtIndex:i];
-		if ([book.name isEqualToString:name]) {
+		Book *favoriteBook = [self.favoriteBooks objectAtIndex:i];
+		if ([favoriteBook isEqualToBook:book]) {
 			index = i;
 			break;
 		}

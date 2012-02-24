@@ -20,7 +20,7 @@
 + (BookData *)sharedBookData;
 
 - (void)loadBooks;
-- (NSInteger)indexOfBookWithName:(NSString *)name;
-- (NSInteger)indexOfFavoriteBookWithName:(NSString *)name;
+- (NSInteger)indexOfBook:(Book *)book;
+- (NSInteger)indexOfBookInFavorites:(Book *)book;
 
 @end

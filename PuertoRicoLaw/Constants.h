@@ -22,6 +22,7 @@
 #define kBookInfoKey @"Book"
 #define kBookSectionsKey @"Sections"
 
+#define kBookIDKey @"bookID"
 #define kBookNameKey @"bookName"
 #define kBookShortTitleKey @"bookShortTitle"
 #define kBookTitleKey @"bookTitle"

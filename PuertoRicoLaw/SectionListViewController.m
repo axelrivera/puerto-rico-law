@@ -239,6 +239,13 @@
 
 - (void)clearCurrentSection
 {
+	[self.manager resetSection];
+	self.sectionDataSource = nil;
+	[self refresh];
+}
+
+- (void)resetCurrentSection
+{
 	[self goHomeAnimated:NO];
 }
 
