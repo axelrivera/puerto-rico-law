@@ -56,6 +56,10 @@
 		167EF24914A251320058F8D1 /* SectionContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167EF24714A251320058F8D1 /* SectionContentViewController.xib */; };
 		16822ED214A931B8006344D1 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 16822ED114A931B8006344D1 /* NSString+Extras.m */; };
 		16822ED514A9338B006344D1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16822ED414A9338B006344D1 /* Security.framework */; };
+		1689961D14FFC5EB00D06AB9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1689961B14FFC5EB00D06AB9 /* Default.png */; };
+		1689961E14FFC5EB00D06AB9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1689961C14FFC5EB00D06AB9 /* Default@2x.png */; };
+		1689962314FFCB1200D06AB9 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 1689962114FFCB1200D06AB9 /* Default-Portrait.png */; };
+		1689962714FFCEB500D06AB9 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 1689962614FFCEB500D06AB9 /* Default-Landscape.png */; };
 		1691519C14A2BF3B001E59C2 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519514A2BF3B001E59C2 /* Icon-72.png */; };
 		1691519D14A2BF3B001E59C2 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519614A2BF3B001E59C2 /* Icon-Small-50.png */; };
 		1691519E14A2BF3B001E59C2 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519714A2BF3B001E59C2 /* Icon-Small.png */; };
@@ -72,6 +76,9 @@
 		16D442A114EAD5AB009B072E /* PolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D4429F14EAD5AB009B072E /* PolicyViewController.m */; };
 		16D442A214EAD5AB009B072E /* PolicyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D442A014EAD5AB009B072E /* PolicyViewController.xib */; };
 		16D442A514EAD6EA009B072E /* terminos.htm in Resources */ = {isa = PBXBuildFile; fileRef = 16D442A414EAD6EA009B072E /* terminos.htm */; };
+		16D45B3714FFEC3D0012BE90 /* EndorsementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D45B3614FFEC3D0012BE90 /* EndorsementView.m */; };
+		16D45B3A14FFEF4A0012BE90 /* abogados_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D45B3814FFEF4A0012BE90 /* abogados_logo.png */; };
+		16D45B3B14FFEF4A0012BE90 /* abogados_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D45B3914FFEF4A0012BE90 /* abogados_logo@2x.png */; };
 		16D4D04514E9B6B300321BF3 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D4D04314E9B6B300321BF3 /* InformationViewController.m */; };
 		16D4D04614E9B6B300321BF3 /* InformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D4D04414E9B6B300321BF3 /* InformationViewController.xib */; };
 		16D5E3DC14EABE5E00F52FE0 /* ftc_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D5E3D814EABE5E00F52FE0 /* ftc_icon.png */; };
@@ -166,6 +173,10 @@
 		16822ED014A931B8006344D1 /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extras.h"; sourceTree = "<group>"; };
 		16822ED114A931B8006344D1 /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extras.m"; sourceTree = "<group>"; };
 		16822ED414A9338B006344D1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1689961B14FFC5EB00D06AB9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1689961C14FFC5EB00D06AB9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1689962114FFCB1200D06AB9 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
+		1689962614FFCEB500D06AB9 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
 		1691519514A2BF3B001E59C2 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		1691519614A2BF3B001E59C2 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		1691519714A2BF3B001E59C2 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
@@ -185,6 +196,10 @@
 		16D4429F14EAD5AB009B072E /* PolicyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolicyViewController.m; sourceTree = "<group>"; };
 		16D442A014EAD5AB009B072E /* PolicyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PolicyViewController.xib; sourceTree = "<group>"; };
 		16D442A414EAD6EA009B072E /* terminos.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = terminos.htm; sourceTree = "<group>"; };
+		16D45B3514FFEC3D0012BE90 /* EndorsementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndorsementView.h; sourceTree = "<group>"; };
+		16D45B3614FFEC3D0012BE90 /* EndorsementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndorsementView.m; sourceTree = "<group>"; };
+		16D45B3814FFEF4A0012BE90 /* abogados_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abogados_logo.png; sourceTree = "<group>"; };
+		16D45B3914FFEF4A0012BE90 /* abogados_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "abogados_logo@2x.png"; sourceTree = "<group>"; };
 		16D4D04214E9B6B300321BF3 /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationViewController.h; sourceTree = "<group>"; };
 		16D4D04314E9B6B300321BF3 /* InformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationViewController.m; sourceTree = "<group>"; };
 		16D4D04414E9B6B300321BF3 /* InformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationViewController.xib; sourceTree = "<group>"; };
@@ -280,6 +295,8 @@
 				1646AB2B14A3B55800B27123 /* BookTableViewCell.m */,
 				1663261B14A65249003279C3 /* SectionTableViewCell.h */,
 				1663261C14A65249003279C3 /* SectionTableViewCell.m */,
+				16D45B3514FFEC3D0012BE90 /* EndorsementView.h */,
+				16D45B3614FFEC3D0012BE90 /* EndorsementView.m */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -287,6 +304,8 @@
 		164DF00A14A293CD0087CBD2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				16D45B3814FFEF4A0012BE90 /* abogados_logo.png */,
+				16D45B3914FFEF4A0012BE90 /* abogados_logo@2x.png */,
 				16D5E3D814EABE5E00F52FE0 /* ftc_icon.png */,
 				16D5E3D914EABE5E00F52FE0 /* ftc_icon@2x.png */,
 				16D5E3DA14EABE5E00F52FE0 /* loteria_icon.png */,
@@ -433,6 +452,10 @@
 		16DD4CAA14A10D200063163D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1689962614FFCEB500D06AB9 /* Default-Landscape.png */,
+				1689962114FFCB1200D06AB9 /* Default-Portrait.png */,
+				1689961B14FFC5EB00D06AB9 /* Default.png */,
+				1689961C14FFC5EB00D06AB9 /* Default@2x.png */,
 				164DF01014A2948F0087CBD2 /* Books */,
 				164DF00A14A293CD0087CBD2 /* Images */,
 				1691519514A2BF3B001E59C2 /* Icon-72.png */,
@@ -586,6 +609,12 @@
 				16DAE64F14F7D1710011DD19 /* ReglasProcedimientoCriminal.plist in Resources */,
 				16DAE65014F7D1710011DD19 /* ViolenciaDomestica.plist in Resources */,
 				16511B4A14F7F9C200B661E2 /* Notarial.plist in Resources */,
+				1689961D14FFC5EB00D06AB9 /* Default.png in Resources */,
+				1689961E14FFC5EB00D06AB9 /* Default@2x.png in Resources */,
+				1689962314FFCB1200D06AB9 /* Default-Portrait.png in Resources */,
+				1689962714FFCEB500D06AB9 /* Default-Landscape.png in Resources */,
+				16D45B3A14FFEF4A0012BE90 /* abogados_logo.png in Resources */,
+				16D45B3B14FFEF4A0012BE90 /* abogados_logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,6 +651,7 @@
 				16D4D04514E9B6B300321BF3 /* InformationViewController.m in Sources */,
 				16D5E3E414EABE9300F52FE0 /* RLAppsViewController.m in Sources */,
 				16D442A114EAD5AB009B072E /* PolicyViewController.m in Sources */,
+				16D45B3714FFEC3D0012BE90 /* EndorsementView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

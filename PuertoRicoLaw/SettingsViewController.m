@@ -10,6 +10,7 @@
 #import "ContentPreviewViewController.h"
 #import "InformationViewController.h"
 #import "Settings.h"
+#import "EndorsementView.h"
 
 #define kFontFamilyControllerTag 101
 #define kFontSizeControllerTag 102
@@ -127,7 +128,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 4;
+    return 5;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -140,6 +141,8 @@
 	} else if (section == 2) {
 		row = 2;
 	} else if (section == 3) {
+		row = 1;
+	} else if (section == 4) {
 		row = 1;
 	}
 	return row;
@@ -185,6 +188,29 @@
 		cell.accessoryType = UITableViewCellAccessoryNone;
 		cell.textLabel.textAlignment = UITextAlignmentCenter;
 		cell.textLabel.text = textStr;
+		
+		return cell;
+	} else if (indexPath.section == 4) {
+		NSString *CellIdentifier = @"EndorsementCell";
+		
+		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+		if (cell == nil) {
+			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+			UIView *backView = [[UIView alloc] initWithFrame:CGRectZero];
+			backView.backgroundColor = [UIColor clearColor];
+			cell.backgroundView = backView;
+			CGRect contentFrame = cell.contentView.bounds;
+			CGRect endorsementFrame = CGRectMake(contentFrame.origin.x,
+												 contentFrame.origin.y,
+												 contentFrame.size.width,
+												 153.0);
+			cell.contentView.frame = endorsementFrame;
+			EndorsementView *endorsementView = [[EndorsementView alloc] initWithFrame:endorsementFrame];
+			[cell.contentView addSubview:endorsementView];
+		}
+		
+		cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+		cell.accessoryType = UITableViewCellAccessoryNone;
 		
 		return cell;
 	}
@@ -294,14 +320,23 @@
 	if (section == 1) {
 		title = @"Fonts visibles en el contenido.";
 	} else if (section == 2) {
-		title = @"Envianos sugerencias sobre mejoras o leyes que deseas que incluyamos.";
-	} else if (section == 3) {
+		title = @"Envianos sugerencias sobre mejoras o leyes que te parecen importantes.";
+	} else if (section == 4) {
 		title = [NSString stringWithFormat:
 				 @"Leyes Puerto Rico %@\n"
 				 @"Copyright © 2012; Rivera Labs",
 				 [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
 	}
 	return title;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	CGFloat height = 44.0;
+	if (indexPath.section == 4) {
+		height = 153.0;
+	}
+	return height;
 }
 
 #pragma mark - UIViewController Delegate Methods

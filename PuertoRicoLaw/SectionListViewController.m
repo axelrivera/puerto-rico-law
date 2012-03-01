@@ -311,13 +311,20 @@
 
 #pragma mark Split View Delegate
 
+- (BOOL)splitViewController:(UISplitViewController *)splitController
+   shouldHideViewController:(UIViewController *)viewController
+			  inOrientation:(UIInterfaceOrientation)orientation
+{
+	return UIDeviceOrientationIsPortrait(orientation);
+}
+
 - (void)splitViewController:(UISplitViewController *)splitController
 	 willHideViewController:(UIViewController *)viewController
 		  withBarButtonItem:(UIBarButtonItem *)barButtonItem
 	   forPopoverController:(UIPopoverController *)popoverController
 {
     barButtonItem.title = @"Leyes Puerto Rico";
-    [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
+    [self.navigationItem setLeftBarButtonItem:barButtonItem animated:NO];
     self.masterPopoverController = popoverController;
 }
 
@@ -326,7 +333,7 @@
   invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
 {
     // Called when the view is shown again in the split view, invalidating the button and popover controller.
-    [self.navigationItem setLeftBarButtonItem:nil animated:YES];
+    [self.navigationItem setLeftBarButtonItem:nil animated:NO];
     self.masterPopoverController = nil;
 }
 

@@ -76,7 +76,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 4;
+    return 5;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -119,13 +119,16 @@
 			textStr = @"Términos y Condiciones";
 			detailStr = nil;
 		} else if (indexPath.section == 2) {
+			textStr = @"Website";
+			detailStr = @"www.capr.org";
+		} else if (indexPath.section == 3) {
+			textStr = @"Icon";
+			detailStr = @"James Lynn";
+		} else if (indexPath.section == 4) {
 			cell.accessoryType = UITableViewCellAccessoryNone;
 			cell.selectionStyle = UITableViewCellSelectionStyleNone;
 			textStr = @"Versión";
 			detailStr = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
-		} else if (indexPath.section == 3) {
-			textStr = @"Icon";
-			detailStr = @"James Lynn";
 		}
 	}
 	
@@ -153,6 +156,8 @@
 			RLAppsViewController *appsViewController = [[RLAppsViewController alloc] init];
 			[self.navigationController pushViewController:appsViewController animated:YES];
 		}
+	} else if (indexPath.section == 2) {
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.capr.org"]];
 	} else if (indexPath.section == 3) {
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.jameslynn.com"]];
 	}
@@ -163,6 +168,8 @@
 	NSString *title = nil;
 	if (section == 1) {
 		title = @"Rivera Labs";
+	} else if (section == 2) {
+		title = @"Colegio de Abogados";
 	} else if (section == 3) {
 		title = @"Créditos";
 	}
@@ -172,7 +179,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 {
 	NSString *title = nil;
-	if (section == 3) {
+	if (section == 4) {
 		title = [NSString stringWithFormat:
 				 @"Leyes Puerto Rico %@\n"
 				 @"Copyright © 2012; Rivera Labs",
