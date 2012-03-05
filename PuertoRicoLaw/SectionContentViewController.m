@@ -155,10 +155,12 @@
 		headerStr = [NSString stringWithFormat:@"<p>%@</p>", tmpStr];
 	}
 	
+	
+	NSString *preStr = @"<p>Estoy usando el app móvil Leyes Puerto Rico y quiero compartir la siguiente información.</p>";
 	NSString *aboutStr = @"<p>----------<br/>Esta información fue generada con el App Leyes Puerto Rico para iPhone, "
 	@"iPod touch y iPad. Visite http://riveralabs.com/leyes/ para más información.</p>";
 	
-	return [NSString stringWithFormat:@"<html><body>%@%@%@</body></html>", headerStr, contentStr, aboutStr];
+	return [NSString stringWithFormat:@"<html><body>%@%@%@%@</body></html>", preStr, headerStr, contentStr, aboutStr];
 }
 
 - (NSString *)pathForContentFile

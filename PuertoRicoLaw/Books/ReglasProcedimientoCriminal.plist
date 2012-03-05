@@ -1548,7 +1548,7 @@
 					<key>sectionSublabel</key>
 					<string></string>
 					<key>sectionTitle</key>
-					<string></string>
+					<string>Jurados; juramento definitivo</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
@@ -1704,7 +1704,7 @@
 					<key>sectionSublabel</key>
 					<string></string>
 					<key>sectionTitle</key>
-					<string></string>
+					<string>Absolución perentoria</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>
@@ -2957,7 +2957,7 @@
 					<key>sectionSublabel</key>
 					<string></string>
 					<key>sectionTitle</key>
-					<string></string>
+					<string>Fianza; procedimiento para su confiscación; incumplimiento de condiciones; detención</string>
 				</dict>
 				<dict>
 					<key>sectionContent</key>

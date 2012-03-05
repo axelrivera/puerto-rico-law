@@ -569,9 +569,9 @@
 											<key>sectionLabel</key>
 											<string>Artículo 35</string>
 											<key>sectionSublabel</key>
-											<string>Definición de tentativa</string>
-											<key>sectionTitle</key>
 											<string></string>
+											<key>sectionTitle</key>
+											<string>Definición de tentativa</string>
 										</dict>
 										<dict>
 											<key>sectionContent</key>
@@ -1184,7 +1184,7 @@
 										</dict>
 										<dict>
 											<key>sectionContent</key>
-											<string>&lt;p&gt;Diferimiento de la ejecución de la sentencia&lt;/p&gt;  &lt;p&gt;El tribunal puede diferir la ejecución de una pena:&lt;/p&gt;  &lt;p&gt;(a) Cuando el convicto que deba cumplirla se halle gravemente enfermo, certificada su condición por prueba médica a satisfacción del tribunal. La sentencia quedará sin efecto transcurridos diez (10) años naturales.&lt;/p&gt;  &lt;p&gt;(b) Cuando se trata de una mujer en estado de embarazo o no hubieren transcurrido seis (6) meses desde el alumbramiento.&lt;/p&gt;  &lt;p&gt;(c) Cuando otras circunstancias lo justifiquen por un plazo no mayor de diez (10) días.&lt;/p&gt; </string>
+											<string>&lt;p&gt;El tribunal puede diferir la ejecución de una pena:&lt;/p&gt;  &lt;p&gt;(a) Cuando el convicto que deba cumplirla se halle gravemente enfermo, certificada su condición por prueba médica a satisfacción del tribunal. La sentencia quedará sin efecto transcurridos diez (10) años naturales.&lt;/p&gt;  &lt;p&gt;(b) Cuando se trata de una mujer en estado de embarazo o no hubieren transcurrido seis (6) meses desde el alumbramiento.&lt;/p&gt;  &lt;p&gt;(c) Cuando otras circunstancias lo justifiquen por un plazo no mayor de diez (10) días.&lt;/p&gt; </string>
 											<key>sectionID</key>
 											<string>769D47E5-1590-4442-AC91-53CE4360607B</string>
 											<key>sectionLabel</key>
@@ -1192,7 +1192,7 @@
 											<key>sectionSublabel</key>
 											<string></string>
 											<key>sectionTitle</key>
-											<string></string>
+											<string>Diferimiento de la ejecución de la sentencia</string>
 										</dict>
 									</array>
 									<key>sectionID</key>
@@ -3112,7 +3112,7 @@
 											<key>sectionSublabel</key>
 											<string></string>
 											<key>sectionTitle</key>
-											<string></string>
+											<string>Operación ilegal de cualquier aparato de grabación</string>
 										</dict>
 										<dict>
 											<key>sectionContent</key>
@@ -3882,7 +3882,7 @@
 											<key>sectionSublabel</key>
 											<string></string>
 											<key>sectionTitle</key>
-											<string></string>
+											<string>Contaminación ambiental agravada</string>
 										</dict>
 									</array>
 									<key>sectionID</key>

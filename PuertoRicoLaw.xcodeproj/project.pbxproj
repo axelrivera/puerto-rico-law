@@ -18,6 +18,22 @@
 		161B5D6914B3598400700D86 /* orgchart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 161B5D6714B3598400700D86 /* orgchart@2x.png */; };
 		1620F80114A196910070E512 /* FileHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1620F80014A196910070E512 /* FileHelpers.m */; };
 		1631D87414B4E98D00F77790 /* SearchWebView.js in Resources */ = {isa = PBXBuildFile; fileRef = 16DFA24B14B4C79C00517778 /* SearchWebView.js */; };
+		163252FC150510DC00259E10 /* ASUME.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163252F3150510DC00259E10 /* ASUME.plist */; };
+		163252FD150510DC00259E10 /* CodigoPenal2004.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163252F4150510DC00259E10 /* CodigoPenal2004.plist */; };
+		163252FE150510DC00259E10 /* ConstitucionPR.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163252F5150510DC00259E10 /* ConstitucionPR.plist */; };
+		163252FF150510DC00259E10 /* Notarial.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163252F6150510DC00259E10 /* Notarial.plist */; };
+		16325300150510DC00259E10 /* ProcedimientoAdministrativoUniforme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163252F7150510DC00259E10 /* ProcedimientoAdministrativoUniforme.plist */; };
+		16325301150510DC00259E10 /* ReglasEvidencia2009.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163252F8150510DC00259E10 /* ReglasEvidencia2009.plist */; };
+		16325302150510DC00259E10 /* ReglasProcedimientoCivil2009.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163252F9150510DC00259E10 /* ReglasProcedimientoCivil2009.plist */; };
+		16325303150510DC00259E10 /* ReglasProcedimientoCriminal.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163252FA150510DC00259E10 /* ReglasProcedimientoCriminal.plist */; };
+		16325304150510DC00259E10 /* ViolenciaDomestica.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163252FB150510DC00259E10 /* ViolenciaDomestica.plist */; };
+		1632531A1505182300259E10 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 163253131505182300259E10 /* Icon-72.png */; };
+		1632531B1505182300259E10 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 163253141505182300259E10 /* Icon-Small-50.png */; };
+		1632531C1505182300259E10 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 163253151505182300259E10 /* Icon-Small.png */; };
+		1632531D1505182300259E10 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 163253161505182300259E10 /* Icon-Small@2x.png */; };
+		1632531E1505182300259E10 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 163253171505182300259E10 /* Icon.png */; };
+		1632531F1505182300259E10 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 163253181505182300259E10 /* Icon@2x.png */; };
+		163253201505182300259E10 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 163253191505182300259E10 /* iTunesArtwork */; };
 		163E2B2614B33FAF008C50DE /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 163E2B2414B33FAF008C50DE /* SearchViewController.m */; };
 		163E2B2714B33FAF008C50DE /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 163E2B2514B33FAF008C50DE /* SearchViewController.xib */; };
 		1646AB2914A3AB7100B27123 /* BookTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1646AB2814A3AB7100B27123 /* BookTableView.m */; };
@@ -32,7 +48,6 @@
 		164DF11014A2B1B90087CBD2 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF10414A2B1B90087CBD2 /* star@2x.png */; };
 		164DF11314A2B6B20087CBD2 /* gears.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF11114A2B6B20087CBD2 /* gears.png */; };
 		164DF11414A2B6B20087CBD2 /* gears@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 164DF11214A2B6B20087CBD2 /* gears@2x.png */; };
-		16511B4A14F7F9C200B661E2 /* Notarial.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16511B4914F7F9C200B661E2 /* Notarial.plist */; };
 		165BB8EE14A38758000F8BF3 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 165BB8ED14A38758000F8BF3 /* Settings.m */; };
 		165CAC0914AAA78C007469DC /* trash_mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 165CAC0714AAA78C007469DC /* trash_mini.png */; };
 		165CAC0A14AAA78C007469DC /* trash_mini@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 165CAC0814AAA78C007469DC /* trash_mini@2x.png */; };
@@ -60,13 +75,6 @@
 		1689961E14FFC5EB00D06AB9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1689961C14FFC5EB00D06AB9 /* Default@2x.png */; };
 		1689962314FFCB1200D06AB9 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 1689962114FFCB1200D06AB9 /* Default-Portrait.png */; };
 		1689962714FFCEB500D06AB9 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 1689962614FFCEB500D06AB9 /* Default-Landscape.png */; };
-		1691519C14A2BF3B001E59C2 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519514A2BF3B001E59C2 /* Icon-72.png */; };
-		1691519D14A2BF3B001E59C2 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519614A2BF3B001E59C2 /* Icon-Small-50.png */; };
-		1691519E14A2BF3B001E59C2 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519714A2BF3B001E59C2 /* Icon-Small.png */; };
-		1691519F14A2BF3B001E59C2 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519814A2BF3B001E59C2 /* Icon-Small@2x.png */; };
-		169151A014A2BF3B001E59C2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519914A2BF3B001E59C2 /* Icon.png */; };
-		169151A114A2BF3B001E59C2 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519A14A2BF3B001E59C2 /* Icon@2x.png */; };
-		169151A214A2BF3B001E59C2 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 1691519B14A2BF3B001E59C2 /* iTunesArtwork.png */; };
 		169151A714A2C11D001E59C2 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 169151A514A2C11D001E59C2 /* FavoritesViewController.m */; };
 		169151A814A2C11D001E59C2 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169151A614A2C11D001E59C2 /* FavoritesViewController.xib */; };
 		16A7062114E6014500E21931 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 16A7061F14E6014500E21931 /* info.png */; };
@@ -88,14 +96,6 @@
 		16D5E3E414EABE9300F52FE0 /* RLAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D5E3E214EABE9300F52FE0 /* RLAppsViewController.m */; };
 		16D5E3E514EABE9300F52FE0 /* RLAppsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D5E3E314EABE9300F52FE0 /* RLAppsViewController.xib */; };
 		16D8D96514A8E1CE00E88215 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D8D96414A8E1CE00E88215 /* MessageUI.framework */; };
-		16DAE64814F7D1710011DD19 /* ASUME.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16DAE63F14F7D1710011DD19 /* ASUME.plist */; };
-		16DAE64914F7D1710011DD19 /* CodigoPenal2004.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16DAE64014F7D1710011DD19 /* CodigoPenal2004.plist */; };
-		16DAE64A14F7D1710011DD19 /* ConstitucionPR.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16DAE64114F7D1710011DD19 /* ConstitucionPR.plist */; };
-		16DAE64C14F7D1710011DD19 /* ProcedimientoAdministrativoUniforme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16DAE64314F7D1710011DD19 /* ProcedimientoAdministrativoUniforme.plist */; };
-		16DAE64D14F7D1710011DD19 /* ReglasEvidencia2009.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16DAE64414F7D1710011DD19 /* ReglasEvidencia2009.plist */; };
-		16DAE64E14F7D1710011DD19 /* ReglasProcedimientoCivil2009.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16DAE64514F7D1710011DD19 /* ReglasProcedimientoCivil2009.plist */; };
-		16DAE64F14F7D1710011DD19 /* ReglasProcedimientoCriminal.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16DAE64614F7D1710011DD19 /* ReglasProcedimientoCriminal.plist */; };
-		16DAE65014F7D1710011DD19 /* ViolenciaDomestica.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16DAE64714F7D1710011DD19 /* ViolenciaDomestica.plist */; };
 		16DD4CA414A10D200063163D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DD4CA314A10D200063163D /* UIKit.framework */; };
 		16DD4CA614A10D200063163D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DD4CA514A10D200063163D /* Foundation.framework */; };
 		16DD4CA814A10D200063163D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DD4CA714A10D200063163D /* CoreGraphics.framework */; };
@@ -115,11 +115,27 @@
 		1617A41814A3184C0016AAF1 /* left_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_arrow@2x.png"; sourceTree = "<group>"; };
 		1617A41914A3184C0016AAF1 /* right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_arrow.png; sourceTree = "<group>"; };
 		1617A41A14A3184C0016AAF1 /* right_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_arrow@2x.png"; sourceTree = "<group>"; };
-		1619833D14F684EE0024302E /* PuertoRicoLawBooks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PuertoRicoLawBooks.plist; sourceTree = "<group>"; };
+		1619833D14F684EE0024302E /* PuertoRicoLawBooks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PuertoRicoLawBooks.plist; path = Books/PuertoRicoLawBooks.plist; sourceTree = "<group>"; };
 		161B5D6614B3598400700D86 /* orgchart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orgchart.png; sourceTree = "<group>"; };
 		161B5D6714B3598400700D86 /* orgchart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orgchart@2x.png"; sourceTree = "<group>"; };
 		1620F7FF14A196910070E512 /* FileHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHelpers.h; sourceTree = "<group>"; };
 		1620F80014A196910070E512 /* FileHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileHelpers.m; sourceTree = "<group>"; };
+		163252F3150510DC00259E10 /* ASUME.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ASUME.plist; sourceTree = "<group>"; };
+		163252F4150510DC00259E10 /* CodigoPenal2004.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CodigoPenal2004.plist; sourceTree = "<group>"; };
+		163252F5150510DC00259E10 /* ConstitucionPR.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConstitucionPR.plist; sourceTree = "<group>"; };
+		163252F6150510DC00259E10 /* Notarial.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Notarial.plist; sourceTree = "<group>"; };
+		163252F7150510DC00259E10 /* ProcedimientoAdministrativoUniforme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ProcedimientoAdministrativoUniforme.plist; sourceTree = "<group>"; };
+		163252F8150510DC00259E10 /* ReglasEvidencia2009.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ReglasEvidencia2009.plist; sourceTree = "<group>"; };
+		163252F9150510DC00259E10 /* ReglasProcedimientoCivil2009.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ReglasProcedimientoCivil2009.plist; sourceTree = "<group>"; };
+		163252FA150510DC00259E10 /* ReglasProcedimientoCriminal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ReglasProcedimientoCriminal.plist; sourceTree = "<group>"; };
+		163252FB150510DC00259E10 /* ViolenciaDomestica.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ViolenciaDomestica.plist; sourceTree = "<group>"; };
+		163253131505182300259E10 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		163253141505182300259E10 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		163253151505182300259E10 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		163253161505182300259E10 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		163253171505182300259E10 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		163253181505182300259E10 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		163253191505182300259E10 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		163E2B2314B33FAF008C50DE /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		163E2B2414B33FAF008C50DE /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		163E2B2514B33FAF008C50DE /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
@@ -138,7 +154,6 @@
 		164DF10414A2B1B90087CBD2 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
 		164DF11114A2B6B20087CBD2 /* gears.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gears.png; sourceTree = "<group>"; };
 		164DF11214A2B6B20087CBD2 /* gears@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gears@2x.png"; sourceTree = "<group>"; };
-		16511B4914F7F9C200B661E2 /* Notarial.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Notarial.plist; sourceTree = "<group>"; };
 		165BB8EC14A38758000F8BF3 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		165BB8ED14A38758000F8BF3 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		165CAC0714AAA78C007469DC /* trash_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trash_mini.png; sourceTree = "<group>"; };
@@ -177,13 +192,6 @@
 		1689961C14FFC5EB00D06AB9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		1689962114FFCB1200D06AB9 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
 		1689962614FFCEB500D06AB9 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
-		1691519514A2BF3B001E59C2 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
-		1691519614A2BF3B001E59C2 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
-		1691519714A2BF3B001E59C2 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
-		1691519814A2BF3B001E59C2 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
-		1691519914A2BF3B001E59C2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		1691519A14A2BF3B001E59C2 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		1691519B14A2BF3B001E59C2 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		169151A414A2C11D001E59C2 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
 		169151A514A2C11D001E59C2 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
 		169151A614A2C11D001E59C2 /* FavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
@@ -211,14 +219,6 @@
 		16D5E3E214EABE9300F52FE0 /* RLAppsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLAppsViewController.m; sourceTree = "<group>"; };
 		16D5E3E314EABE9300F52FE0 /* RLAppsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLAppsViewController.xib; sourceTree = "<group>"; };
 		16D8D96414A8E1CE00E88215 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		16DAE63F14F7D1710011DD19 /* ASUME.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ASUME.plist; sourceTree = "<group>"; };
-		16DAE64014F7D1710011DD19 /* CodigoPenal2004.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CodigoPenal2004.plist; sourceTree = "<group>"; };
-		16DAE64114F7D1710011DD19 /* ConstitucionPR.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConstitucionPR.plist; sourceTree = "<group>"; };
-		16DAE64314F7D1710011DD19 /* ProcedimientoAdministrativoUniforme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ProcedimientoAdministrativoUniforme.plist; sourceTree = "<group>"; };
-		16DAE64414F7D1710011DD19 /* ReglasEvidencia2009.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ReglasEvidencia2009.plist; sourceTree = "<group>"; };
-		16DAE64514F7D1710011DD19 /* ReglasProcedimientoCivil2009.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ReglasProcedimientoCivil2009.plist; sourceTree = "<group>"; };
-		16DAE64614F7D1710011DD19 /* ReglasProcedimientoCriminal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ReglasProcedimientoCriminal.plist; sourceTree = "<group>"; };
-		16DAE64714F7D1710011DD19 /* ViolenciaDomestica.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ViolenciaDomestica.plist; sourceTree = "<group>"; };
 		16DD4C9F14A10D200063163D /* PuertoRicoLaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuertoRicoLaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16DD4CA314A10D200063163D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		16DD4CA514A10D200063163D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -341,16 +341,15 @@
 		164DF01014A2948F0087CBD2 /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				16511B4914F7F9C200B661E2 /* Notarial.plist */,
-				16DAE63F14F7D1710011DD19 /* ASUME.plist */,
-				16DAE64014F7D1710011DD19 /* CodigoPenal2004.plist */,
-				16DAE64114F7D1710011DD19 /* ConstitucionPR.plist */,
-				16DAE64314F7D1710011DD19 /* ProcedimientoAdministrativoUniforme.plist */,
-				16DAE64414F7D1710011DD19 /* ReglasEvidencia2009.plist */,
-				16DAE64514F7D1710011DD19 /* ReglasProcedimientoCivil2009.plist */,
-				16DAE64614F7D1710011DD19 /* ReglasProcedimientoCriminal.plist */,
-				16DAE64714F7D1710011DD19 /* ViolenciaDomestica.plist */,
-				1619833D14F684EE0024302E /* PuertoRicoLawBooks.plist */,
+				163252F3150510DC00259E10 /* ASUME.plist */,
+				163252F4150510DC00259E10 /* CodigoPenal2004.plist */,
+				163252F5150510DC00259E10 /* ConstitucionPR.plist */,
+				163252F6150510DC00259E10 /* Notarial.plist */,
+				163252F7150510DC00259E10 /* ProcedimientoAdministrativoUniforme.plist */,
+				163252F8150510DC00259E10 /* ReglasEvidencia2009.plist */,
+				163252F9150510DC00259E10 /* ReglasProcedimientoCivil2009.plist */,
+				163252FA150510DC00259E10 /* ReglasProcedimientoCriminal.plist */,
+				163252FB150510DC00259E10 /* ViolenciaDomestica.plist */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -452,20 +451,21 @@
 		16DD4CAA14A10D200063163D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				163253131505182300259E10 /* Icon-72.png */,
+				163253141505182300259E10 /* Icon-Small-50.png */,
+				163253151505182300259E10 /* Icon-Small.png */,
+				163253161505182300259E10 /* Icon-Small@2x.png */,
+				163253171505182300259E10 /* Icon.png */,
+				163253181505182300259E10 /* Icon@2x.png */,
+				163253191505182300259E10 /* iTunesArtwork */,
 				1689962614FFCEB500D06AB9 /* Default-Landscape.png */,
 				1689962114FFCB1200D06AB9 /* Default-Portrait.png */,
 				1689961B14FFC5EB00D06AB9 /* Default.png */,
 				1689961C14FFC5EB00D06AB9 /* Default@2x.png */,
 				164DF01014A2948F0087CBD2 /* Books */,
 				164DF00A14A293CD0087CBD2 /* Images */,
-				1691519514A2BF3B001E59C2 /* Icon-72.png */,
-				1691519614A2BF3B001E59C2 /* Icon-Small-50.png */,
-				1691519714A2BF3B001E59C2 /* Icon-Small.png */,
-				1691519814A2BF3B001E59C2 /* Icon-Small@2x.png */,
-				1691519914A2BF3B001E59C2 /* Icon.png */,
-				1691519A14A2BF3B001E59C2 /* Icon@2x.png */,
-				1691519B14A2BF3B001E59C2 /* iTunesArtwork.png */,
 				16DD4CAB14A10D200063163D /* PuertoRicoLaw-Info.plist */,
+				1619833D14F684EE0024302E /* PuertoRicoLawBooks.plist */,
 				16DD4CAC14A10D200063163D /* InfoPlist.strings */,
 				16DD4CAF14A10D200063163D /* main.m */,
 				16DD4CB114A10D200063163D /* PuertoRicoLaw-Prefix.pch */,
@@ -562,13 +562,6 @@
 				164DF11014A2B1B90087CBD2 /* star@2x.png in Resources */,
 				164DF11314A2B6B20087CBD2 /* gears.png in Resources */,
 				164DF11414A2B6B20087CBD2 /* gears@2x.png in Resources */,
-				1691519C14A2BF3B001E59C2 /* Icon-72.png in Resources */,
-				1691519D14A2BF3B001E59C2 /* Icon-Small-50.png in Resources */,
-				1691519E14A2BF3B001E59C2 /* Icon-Small.png in Resources */,
-				1691519F14A2BF3B001E59C2 /* Icon-Small@2x.png in Resources */,
-				169151A014A2BF3B001E59C2 /* Icon.png in Resources */,
-				169151A114A2BF3B001E59C2 /* Icon@2x.png in Resources */,
-				169151A214A2BF3B001E59C2 /* iTunesArtwork.png in Resources */,
 				169151A814A2C11D001E59C2 /* FavoritesViewController.xib in Resources */,
 				1617A40114A2FC570016AAF1 /* list.png in Resources */,
 				1617A40214A2FC570016AAF1 /* list@2x.png in Resources */,
@@ -600,21 +593,28 @@
 				16D442A214EAD5AB009B072E /* PolicyViewController.xib in Resources */,
 				16D442A514EAD6EA009B072E /* terminos.htm in Resources */,
 				1619833E14F684EE0024302E /* PuertoRicoLawBooks.plist in Resources */,
-				16DAE64814F7D1710011DD19 /* ASUME.plist in Resources */,
-				16DAE64914F7D1710011DD19 /* CodigoPenal2004.plist in Resources */,
-				16DAE64A14F7D1710011DD19 /* ConstitucionPR.plist in Resources */,
-				16DAE64C14F7D1710011DD19 /* ProcedimientoAdministrativoUniforme.plist in Resources */,
-				16DAE64D14F7D1710011DD19 /* ReglasEvidencia2009.plist in Resources */,
-				16DAE64E14F7D1710011DD19 /* ReglasProcedimientoCivil2009.plist in Resources */,
-				16DAE64F14F7D1710011DD19 /* ReglasProcedimientoCriminal.plist in Resources */,
-				16DAE65014F7D1710011DD19 /* ViolenciaDomestica.plist in Resources */,
-				16511B4A14F7F9C200B661E2 /* Notarial.plist in Resources */,
 				1689961D14FFC5EB00D06AB9 /* Default.png in Resources */,
 				1689961E14FFC5EB00D06AB9 /* Default@2x.png in Resources */,
 				1689962314FFCB1200D06AB9 /* Default-Portrait.png in Resources */,
 				1689962714FFCEB500D06AB9 /* Default-Landscape.png in Resources */,
 				16D45B3A14FFEF4A0012BE90 /* abogados_logo.png in Resources */,
 				16D45B3B14FFEF4A0012BE90 /* abogados_logo@2x.png in Resources */,
+				163252FC150510DC00259E10 /* ASUME.plist in Resources */,
+				163252FD150510DC00259E10 /* CodigoPenal2004.plist in Resources */,
+				163252FE150510DC00259E10 /* ConstitucionPR.plist in Resources */,
+				163252FF150510DC00259E10 /* Notarial.plist in Resources */,
+				16325300150510DC00259E10 /* ProcedimientoAdministrativoUniforme.plist in Resources */,
+				16325301150510DC00259E10 /* ReglasEvidencia2009.plist in Resources */,
+				16325302150510DC00259E10 /* ReglasProcedimientoCivil2009.plist in Resources */,
+				16325303150510DC00259E10 /* ReglasProcedimientoCriminal.plist in Resources */,
+				16325304150510DC00259E10 /* ViolenciaDomestica.plist in Resources */,
+				1632531A1505182300259E10 /* Icon-72.png in Resources */,
+				1632531B1505182300259E10 /* Icon-Small-50.png in Resources */,
+				1632531C1505182300259E10 /* Icon-Small.png in Resources */,
+				1632531D1505182300259E10 /* Icon-Small@2x.png in Resources */,
+				1632531E1505182300259E10 /* Icon.png in Resources */,
+				1632531F1505182300259E10 /* Icon@2x.png in Resources */,
+				163253201505182300259E10 /* iTunesArtwork in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,11 +738,13 @@
 		16DD4CB914A10D200063163D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Axel Rivera";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PuertoRicoLaw/PuertoRicoLaw-Prefix.pch";
 				INFOPLIST_FILE = "PuertoRicoLaw/PuertoRicoLaw-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "233FD11B-7E19-4EFC-BD4F-BB1102DADC74";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
