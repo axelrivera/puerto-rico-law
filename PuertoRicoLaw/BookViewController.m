@@ -128,6 +128,7 @@
 
 - (void)loadBook:(Book *)book animated:(BOOL)animated
 {
+	bookData_.currentBook.mainSection = nil;
 	bookData_.currentBook = book;
 	[bookData_.currentBook loadSections];
 	
@@ -278,7 +279,12 @@
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
 		[tableView deselectRowAtIndexPath:indexPath animated:YES];
 	}
+	
 	Book *book = [bookData_.books objectAtIndex:indexPath.row];
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad && [bookData_.currentBook isEqualToBook:book]) {
+		return;
+	}
 	
 	if (!tableView.isEditing) {
 		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
