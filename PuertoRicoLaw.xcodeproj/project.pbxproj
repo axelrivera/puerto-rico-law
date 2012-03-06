@@ -57,6 +57,11 @@
 		165DCF0614A409300045F8EC /* star_cell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 165DCF0214A409300045F8EC /* star_cell@2x.png */; };
 		1661C59B14BF333300C5603F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1661C59A14BF333300C5603F /* Settings.bundle */; };
 		1663261D14A65249003279C3 /* SectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1663261C14A65249003279C3 /* SectionTableViewCell.m */; };
+		16690F26150660D700AC452F /* LocalyticsDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 16690F20150660D700AC452F /* LocalyticsDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		16690F27150660D700AC452F /* LocalyticsSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 16690F22150660D700AC452F /* LocalyticsSession.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		16690F28150660D700AC452F /* UploaderThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 16690F24150660D700AC452F /* UploaderThread.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		16690F2B150661A200AC452F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 16690F2A150661A200AC452F /* libsqlite3.dylib */; };
+		16690F2D150661BD00AC452F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 16690F2C150661BD00AC452F /* libz.dylib */; };
 		1671F10F14AF91FA0019B181 /* UIViewController+Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671F10E14AF91FA0019B181 /* UIViewController+Section.m */; };
 		1671F11214AF9F290019B181 /* SectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1671F11114AF9F290019B181 /* SectionManager.m */; };
 		1673F16A14ACAED90065126B /* TableSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1673F16814ACAED90065126B /* TableSelectViewController.m */; };
@@ -73,12 +78,12 @@
 		16822ED514A9338B006344D1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16822ED414A9338B006344D1 /* Security.framework */; };
 		1689961D14FFC5EB00D06AB9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1689961B14FFC5EB00D06AB9 /* Default.png */; };
 		1689961E14FFC5EB00D06AB9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1689961C14FFC5EB00D06AB9 /* Default@2x.png */; };
-		1689962314FFCB1200D06AB9 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 1689962114FFCB1200D06AB9 /* Default-Portrait.png */; };
-		1689962714FFCEB500D06AB9 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 1689962614FFCEB500D06AB9 /* Default-Landscape.png */; };
 		169151A714A2C11D001E59C2 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 169151A514A2C11D001E59C2 /* FavoritesViewController.m */; };
 		169151A814A2C11D001E59C2 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169151A614A2C11D001E59C2 /* FavoritesViewController.xib */; };
 		16A7062114E6014500E21931 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 16A7061F14E6014500E21931 /* info.png */; };
 		16A7062214E6014500E21931 /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16A7062014E6014500E21931 /* info@2x.png */; };
+		16C9361F15053CA300E6122F /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 16C9361D15053CA300E6122F /* Default-Landscape.png */; };
+		16C9362015053CA300E6122F /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 16C9361E15053CA300E6122F /* Default-Portrait.png */; };
 		16D1465214E448750026D7AE /* BookDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D1465014E448750026D7AE /* BookDetailViewController.m */; };
 		16D1465314E448750026D7AE /* BookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D1465114E448750026D7AE /* BookDetailViewController.xib */; };
 		16D442A114EAD5AB009B072E /* PolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D4429F14EAD5AB009B072E /* PolicyViewController.m */; };
@@ -165,6 +170,15 @@
 		1661C59A14BF333300C5603F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		1663261B14A65249003279C3 /* SectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionTableViewCell.h; sourceTree = "<group>"; };
 		1663261C14A65249003279C3 /* SectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionTableViewCell.m; sourceTree = "<group>"; };
+		16690F1F150660D700AC452F /* LocalyticsDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsDatabase.h; sourceTree = "<group>"; };
+		16690F20150660D700AC452F /* LocalyticsDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalyticsDatabase.m; sourceTree = "<group>"; };
+		16690F21150660D700AC452F /* LocalyticsSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsSession.h; sourceTree = "<group>"; };
+		16690F22150660D700AC452F /* LocalyticsSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalyticsSession.m; sourceTree = "<group>"; };
+		16690F23150660D700AC452F /* UploaderThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploaderThread.h; sourceTree = "<group>"; };
+		16690F24150660D700AC452F /* UploaderThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploaderThread.m; sourceTree = "<group>"; };
+		16690F25150660D700AC452F /* WebserviceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebserviceConstants.h; sourceTree = "<group>"; };
+		16690F2A150661A200AC452F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		16690F2C150661BD00AC452F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		1671F10B14AF813B0019B181 /* SectionSelectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionSelectionDelegate.h; sourceTree = "<group>"; };
 		1671F10D14AF91FA0019B181 /* UIViewController+Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Section.h"; sourceTree = "<group>"; };
 		1671F10E14AF91FA0019B181 /* UIViewController+Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Section.m"; sourceTree = "<group>"; };
@@ -190,13 +204,13 @@
 		16822ED414A9338B006344D1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		1689961B14FFC5EB00D06AB9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		1689961C14FFC5EB00D06AB9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		1689962114FFCB1200D06AB9 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
-		1689962614FFCEB500D06AB9 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
 		169151A414A2C11D001E59C2 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
 		169151A514A2C11D001E59C2 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
 		169151A614A2C11D001E59C2 /* FavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
 		16A7061F14E6014500E21931 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 		16A7062014E6014500E21931 /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@2x.png"; sourceTree = "<group>"; };
+		16C9361D15053CA300E6122F /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
+		16C9361E15053CA300E6122F /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
 		16D1464F14E448750026D7AE /* BookDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetailViewController.h; sourceTree = "<group>"; };
 		16D1465014E448750026D7AE /* BookDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetailViewController.m; sourceTree = "<group>"; };
 		16D1465114E448750026D7AE /* BookDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookDetailViewController.xib; sourceTree = "<group>"; };
@@ -246,6 +260,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16690F2D150661BD00AC452F /* libz.dylib in Frameworks */,
+				16690F2B150661A200AC452F /* libsqlite3.dylib in Frameworks */,
 				16822ED514A9338B006344D1 /* Security.framework in Frameworks */,
 				16D8D96514A8E1CE00E88215 /* MessageUI.framework in Frameworks */,
 				16DD4CA414A10D200063163D /* UIKit.framework in Frameworks */,
@@ -354,6 +370,21 @@
 			path = Books;
 			sourceTree = "<group>";
 		};
+		16690F1E150660D700AC452F /* Localytics */ = {
+			isa = PBXGroup;
+			children = (
+				16690F1F150660D700AC452F /* LocalyticsDatabase.h */,
+				16690F20150660D700AC452F /* LocalyticsDatabase.m */,
+				16690F21150660D700AC452F /* LocalyticsSession.h */,
+				16690F22150660D700AC452F /* LocalyticsSession.m */,
+				16690F23150660D700AC452F /* UploaderThread.h */,
+				16690F24150660D700AC452F /* UploaderThread.m */,
+				16690F25150660D700AC452F /* WebserviceConstants.h */,
+			);
+			name = Localytics;
+			path = PuertoRicoLaw/Localytics;
+			sourceTree = "<group>";
+		};
 		167EF1D414A23D700058F8D1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				16DD4CA914A10D200063163D /* PuertoRicoLaw */,
+				16690F1E150660D700AC452F /* Localytics */,
 				16DD4CA214A10D200063163D /* Frameworks */,
 				16DD4CA014A10D200063163D /* Products */,
 			);
@@ -424,6 +456,8 @@
 		16DD4CA214A10D200063163D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				16690F2C150661BD00AC452F /* libz.dylib */,
+				16690F2A150661A200AC452F /* libsqlite3.dylib */,
 				16822ED414A9338B006344D1 /* Security.framework */,
 				16D8D96414A8E1CE00E88215 /* MessageUI.framework */,
 				16DD4CA314A10D200063163D /* UIKit.framework */,
@@ -451,6 +485,8 @@
 		16DD4CAA14A10D200063163D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				16C9361D15053CA300E6122F /* Default-Landscape.png */,
+				16C9361E15053CA300E6122F /* Default-Portrait.png */,
 				163253131505182300259E10 /* Icon-72.png */,
 				163253141505182300259E10 /* Icon-Small-50.png */,
 				163253151505182300259E10 /* Icon-Small.png */,
@@ -458,8 +494,6 @@
 				163253171505182300259E10 /* Icon.png */,
 				163253181505182300259E10 /* Icon@2x.png */,
 				163253191505182300259E10 /* iTunesArtwork */,
-				1689962614FFCEB500D06AB9 /* Default-Landscape.png */,
-				1689962114FFCB1200D06AB9 /* Default-Portrait.png */,
 				1689961B14FFC5EB00D06AB9 /* Default.png */,
 				1689961C14FFC5EB00D06AB9 /* Default@2x.png */,
 				164DF01014A2948F0087CBD2 /* Books */,
@@ -595,8 +629,6 @@
 				1619833E14F684EE0024302E /* PuertoRicoLawBooks.plist in Resources */,
 				1689961D14FFC5EB00D06AB9 /* Default.png in Resources */,
 				1689961E14FFC5EB00D06AB9 /* Default@2x.png in Resources */,
-				1689962314FFCB1200D06AB9 /* Default-Portrait.png in Resources */,
-				1689962714FFCEB500D06AB9 /* Default-Landscape.png in Resources */,
 				16D45B3A14FFEF4A0012BE90 /* abogados_logo.png in Resources */,
 				16D45B3B14FFEF4A0012BE90 /* abogados_logo@2x.png in Resources */,
 				163252FC150510DC00259E10 /* ASUME.plist in Resources */,
@@ -615,6 +647,8 @@
 				1632531E1505182300259E10 /* Icon.png in Resources */,
 				1632531F1505182300259E10 /* Icon@2x.png in Resources */,
 				163253201505182300259E10 /* iTunesArtwork in Resources */,
+				16C9361F15053CA300E6122F /* Default-Landscape.png in Resources */,
+				16C9362015053CA300E6122F /* Default-Portrait.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +686,9 @@
 				16D5E3E414EABE9300F52FE0 /* RLAppsViewController.m in Sources */,
 				16D442A114EAD5AB009B072E /* PolicyViewController.m in Sources */,
 				16D45B3714FFEC3D0012BE90 /* EndorsementView.m in Sources */,
+				16690F26150660D700AC452F /* LocalyticsDatabase.m in Sources */,
+				16690F27150660D700AC452F /* LocalyticsSession.m in Sources */,
+				16690F28150660D700AC452F /* UploaderThread.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,7 +753,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3BC08D2E-AC29-4AE5-BF2B-A71620554F0C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B2E4DA6F-B2EE-4A3A-9F31-EAE50BE2BD53";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -744,7 +781,7 @@
 				INFOPLIST_FILE = "PuertoRicoLaw/PuertoRicoLaw-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "233FD11B-7E19-4EFC-BD4F-BB1102DADC74";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B2E4DA6F-B2EE-4A3A-9F31-EAE50BE2BD53";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
