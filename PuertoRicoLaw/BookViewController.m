@@ -128,7 +128,7 @@
 
 - (void)loadBook:(Book *)book animated:(BOOL)animated
 {
-	bookData_.currentBook.mainSection = nil;
+	[bookData_.currentBook clearSections];
 	bookData_.currentBook = book;
 	[bookData_.currentBook loadSections];
 	

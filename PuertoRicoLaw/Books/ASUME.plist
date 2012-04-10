@@ -9,7 +9,7 @@
 		<key>bookID</key>
 		<string>7E40F6E5-E6C4-49B0-A2C8-F59285A4E6FA</string>
 		<key>bookLastUpdate</key>
-		<date>2012-02-23T04:00:00Z</date>
+		<date>2012-03-12T04:00:00Z</date>
 		<key>bookName</key>
 		<string>ASUME</string>
 		<key>bookNotes</key>
@@ -26,7 +26,7 @@
 		<key>bookTitle</key>
 		<string>Ley Orgánica de la Administración para el Sustento de Menores (ASUME)</string>
 		<key>bookVersion</key>
-		<integer>1</integer>
+		<integer>2</integer>
 	</dict>
 	<key>Sections</key>
 	<array>
@@ -400,7 +400,7 @@
 			<key>sectionSublabel</key>
 			<string>8 L.P.R.A. § 521</string>
 			<key>sectionTitle</key>
-			<string>Horarios de abogado</string>
+			<string>Honorarios de abogado</string>
 		</dict>
 		<dict>
 			<key>sectionContent</key>

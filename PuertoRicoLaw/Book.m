@@ -131,7 +131,7 @@
 
 - (void)clearSections
 {
-	[self archiveMainSection];
+	//[self archiveMainSection];
 	self.mainSection = nil;
 }
 

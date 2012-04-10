@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1616E2781534A6030029E916 /* CodigoCivil.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1616E2751534A6030029E916 /* CodigoCivil.plist */; };
+		1616E2791534A6030029E916 /* Electoral.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1616E2761534A6030029E916 /* Electoral.plist */; };
+		1616E27A1534A6030029E916 /* Transito.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1616E2771534A6030029E916 /* Transito.plist */; };
 		1617A40114A2FC570016AAF1 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 1617A3FF14A2FC570016AAF1 /* list.png */; };
 		1617A40214A2FC570016AAF1 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1617A40014A2FC570016AAF1 /* list@2x.png */; };
 		1617A41B14A3184C0016AAF1 /* left_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1617A41714A3184C0016AAF1 /* left_arrow.png */; };
@@ -18,7 +21,6 @@
 		161B5D6914B3598400700D86 /* orgchart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 161B5D6714B3598400700D86 /* orgchart@2x.png */; };
 		1620F80114A196910070E512 /* FileHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1620F80014A196910070E512 /* FileHelpers.m */; };
 		1631D87414B4E98D00F77790 /* SearchWebView.js in Resources */ = {isa = PBXBuildFile; fileRef = 16DFA24B14B4C79C00517778 /* SearchWebView.js */; };
-		163252FC150510DC00259E10 /* ASUME.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163252F3150510DC00259E10 /* ASUME.plist */; };
 		163252FD150510DC00259E10 /* CodigoPenal2004.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163252F4150510DC00259E10 /* CodigoPenal2004.plist */; };
 		163252FE150510DC00259E10 /* ConstitucionPR.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163252F5150510DC00259E10 /* ConstitucionPR.plist */; };
 		163252FF150510DC00259E10 /* Notarial.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163252F6150510DC00259E10 /* Notarial.plist */; };
@@ -82,6 +84,7 @@
 		169151A814A2C11D001E59C2 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169151A614A2C11D001E59C2 /* FavoritesViewController.xib */; };
 		16A7062114E6014500E21931 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 16A7061F14E6014500E21931 /* info.png */; };
 		16A7062214E6014500E21931 /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16A7062014E6014500E21931 /* info@2x.png */; };
+		16C262CF151B6DB100B63843 /* ASUME.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16C262CD151B6DB100B63843 /* ASUME.plist */; };
 		16C9361F15053CA300E6122F /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 16C9361D15053CA300E6122F /* Default-Landscape.png */; };
 		16C9362015053CA300E6122F /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 16C9361E15053CA300E6122F /* Default-Portrait.png */; };
 		16D1465214E448750026D7AE /* BookDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D1465014E448750026D7AE /* BookDetailViewController.m */; };
@@ -114,6 +117,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1616E2751534A6030029E916 /* CodigoCivil.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CodigoCivil.plist; sourceTree = "<group>"; };
+		1616E2761534A6030029E916 /* Electoral.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Electoral.plist; sourceTree = "<group>"; };
+		1616E2771534A6030029E916 /* Transito.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Transito.plist; sourceTree = "<group>"; };
 		1617A3FF14A2FC570016AAF1 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
 		1617A40014A2FC570016AAF1 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
 		1617A41714A3184C0016AAF1 /* left_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_arrow.png; sourceTree = "<group>"; };
@@ -125,7 +131,6 @@
 		161B5D6714B3598400700D86 /* orgchart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orgchart@2x.png"; sourceTree = "<group>"; };
 		1620F7FF14A196910070E512 /* FileHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHelpers.h; sourceTree = "<group>"; };
 		1620F80014A196910070E512 /* FileHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileHelpers.m; sourceTree = "<group>"; };
-		163252F3150510DC00259E10 /* ASUME.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ASUME.plist; sourceTree = "<group>"; };
 		163252F4150510DC00259E10 /* CodigoPenal2004.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CodigoPenal2004.plist; sourceTree = "<group>"; };
 		163252F5150510DC00259E10 /* ConstitucionPR.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConstitucionPR.plist; sourceTree = "<group>"; };
 		163252F6150510DC00259E10 /* Notarial.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Notarial.plist; sourceTree = "<group>"; };
@@ -209,6 +214,7 @@
 		169151A614A2C11D001E59C2 /* FavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
 		16A7061F14E6014500E21931 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 		16A7062014E6014500E21931 /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@2x.png"; sourceTree = "<group>"; };
+		16C262CD151B6DB100B63843 /* ASUME.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ASUME.plist; sourceTree = "<group>"; };
 		16C9361D15053CA300E6122F /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
 		16C9361E15053CA300E6122F /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
 		16D1464F14E448750026D7AE /* BookDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetailViewController.h; sourceTree = "<group>"; };
@@ -357,7 +363,10 @@
 		164DF01014A2948F0087CBD2 /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				163252F3150510DC00259E10 /* ASUME.plist */,
+				1616E2751534A6030029E916 /* CodigoCivil.plist */,
+				1616E2761534A6030029E916 /* Electoral.plist */,
+				1616E2771534A6030029E916 /* Transito.plist */,
+				16C262CD151B6DB100B63843 /* ASUME.plist */,
 				163252F4150510DC00259E10 /* CodigoPenal2004.plist */,
 				163252F5150510DC00259E10 /* ConstitucionPR.plist */,
 				163252F6150510DC00259E10 /* Notarial.plist */,
@@ -631,7 +640,6 @@
 				1689961E14FFC5EB00D06AB9 /* Default@2x.png in Resources */,
 				16D45B3A14FFEF4A0012BE90 /* abogados_logo.png in Resources */,
 				16D45B3B14FFEF4A0012BE90 /* abogados_logo@2x.png in Resources */,
-				163252FC150510DC00259E10 /* ASUME.plist in Resources */,
 				163252FD150510DC00259E10 /* CodigoPenal2004.plist in Resources */,
 				163252FE150510DC00259E10 /* ConstitucionPR.plist in Resources */,
 				163252FF150510DC00259E10 /* Notarial.plist in Resources */,
@@ -649,6 +657,10 @@
 				163253201505182300259E10 /* iTunesArtwork in Resources */,
 				16C9361F15053CA300E6122F /* Default-Landscape.png in Resources */,
 				16C9362015053CA300E6122F /* Default-Portrait.png in Resources */,
+				16C262CF151B6DB100B63843 /* ASUME.plist in Resources */,
+				1616E2781534A6030029E916 /* CodigoCivil.plist in Resources */,
+				1616E2791534A6030029E916 /* Electoral.plist in Resources */,
+				1616E27A1534A6030029E916 /* Transito.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

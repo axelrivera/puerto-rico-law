@@ -13,6 +13,9 @@
 		<string>ReglasProcedimientoCriminal</string>
 		<string>ViolenciaDomestica</string>
 		<string>ASUME</string>
+		<string>Electoral</string>
+		<string>CodigoCivil</string>
+		<string>Transito</string>
 	</array>
 </dict>
 </plist>
