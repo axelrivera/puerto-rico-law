@@ -20,6 +20,12 @@
 		161B5D6814B3598400700D86 /* orgchart.png in Resources */ = {isa = PBXBuildFile; fileRef = 161B5D6614B3598400700D86 /* orgchart.png */; };
 		161B5D6914B3598400700D86 /* orgchart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 161B5D6714B3598400700D86 /* orgchart@2x.png */; };
 		1620F80114A196910070E512 /* FileHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1620F80014A196910070E512 /* FileHelpers.m */; };
+		16240C33153773740052E274 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16240C2D153773740052E274 /* CFNetwork.framework */; };
+		16240C34153773740052E274 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16240C2E153773740052E274 /* CoreData.framework */; };
+		16240C35153773740052E274 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 16240C2F153773740052E274 /* libxml2.dylib */; };
+		16240C36153773740052E274 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16240C30153773740052E274 /* MobileCoreServices.framework */; };
+		16240C37153773740052E274 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16240C31153773740052E274 /* QuartzCore.framework */; };
+		16240C38153773740052E274 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16240C32153773740052E274 /* SystemConfiguration.framework */; };
 		1631D87414B4E98D00F77790 /* SearchWebView.js in Resources */ = {isa = PBXBuildFile; fileRef = 16DFA24B14B4C79C00517778 /* SearchWebView.js */; };
 		163252FD150510DC00259E10 /* CodigoPenal2004.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163252F4150510DC00259E10 /* CodigoPenal2004.plist */; };
 		163252FE150510DC00259E10 /* ConstitucionPR.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163252F5150510DC00259E10 /* ConstitucionPR.plist */; };
@@ -120,6 +126,51 @@
 		16DFA25014B4C7FB00517778 /* UIWebView+Highlight.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DFA24F14B4C7FB00517778 /* UIWebView+Highlight.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		16240C20153771440052E274 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16240C15153771440052E274 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D1614564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+		16240C22153771440052E274 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16240C15153771440052E274 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D2614564E820060A5C5;
+			remoteInfo = RestKitTests;
+		};
+		16240C24153771440052E274 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16240C15153771440052E274 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E62145651060060A5C5;
+			remoteInfo = RestKitFramework;
+		};
+		16240C26153771440052E274 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16240C15153771440052E274 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E78145651060060A5C5;
+			remoteInfo = RestKitFrameworkTests;
+		};
+		16240C28153771440052E274 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16240C15153771440052E274 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 259C301615128079003066A2;
+			remoteInfo = RestKitResources;
+		};
+		16240C2B153772CE0052E274 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16240C15153771440052E274 /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 25160D1514564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1616E2751534A6030029E916 /* CodigoCivil.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CodigoCivil.plist; sourceTree = "<group>"; };
 		1616E2761534A6030029E916 /* Electoral.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Electoral.plist; sourceTree = "<group>"; };
@@ -135,6 +186,13 @@
 		161B5D6714B3598400700D86 /* orgchart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orgchart@2x.png"; sourceTree = "<group>"; };
 		1620F7FF14A196910070E512 /* FileHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHelpers.h; sourceTree = "<group>"; };
 		1620F80014A196910070E512 /* FileHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileHelpers.m; sourceTree = "<group>"; };
+		16240C15153771440052E274 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = Libraries/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
+		16240C2D153773740052E274 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		16240C2E153773740052E274 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		16240C2F153773740052E274 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		16240C30153773740052E274 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		16240C31153773740052E274 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		16240C32153773740052E274 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		163252F4150510DC00259E10 /* CodigoPenal2004.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CodigoPenal2004.plist; sourceTree = "<group>"; };
 		163252F5150510DC00259E10 /* ConstitucionPR.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConstitucionPR.plist; sourceTree = "<group>"; };
 		163252F6150510DC00259E10 /* Notarial.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Notarial.plist; sourceTree = "<group>"; };
@@ -274,9 +332,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16240C33153773740052E274 /* CFNetwork.framework in Frameworks */,
+				16240C34153773740052E274 /* CoreData.framework in Frameworks */,
+				16240C35153773740052E274 /* libxml2.dylib in Frameworks */,
+				16240C36153773740052E274 /* MobileCoreServices.framework in Frameworks */,
+				16240C37153773740052E274 /* QuartzCore.framework in Frameworks */,
+				16240C38153773740052E274 /* SystemConfiguration.framework in Frameworks */,
+				16822ED514A9338B006344D1 /* Security.framework in Frameworks */,
 				16690F2D150661BD00AC452F /* libz.dylib in Frameworks */,
 				16690F2B150661A200AC452F /* libsqlite3.dylib in Frameworks */,
-				16822ED514A9338B006344D1 /* Security.framework in Frameworks */,
 				16D8D96514A8E1CE00E88215 /* MessageUI.framework in Frameworks */,
 				16DD4CA414A10D200063163D /* UIKit.framework in Frameworks */,
 				16DD4CA614A10D200063163D /* Foundation.framework in Frameworks */,
@@ -301,6 +365,18 @@
 				16DFA24F14B4C7FB00517778 /* UIWebView+Highlight.m */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		16240C16153771440052E274 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16240C21153771440052E274 /* libRestKit.a */,
+				16240C23153771440052E274 /* RestKitTests.octest */,
+				16240C25153771440052E274 /* RestKit.framework */,
+				16240C27153771440052E274 /* RestKitFrameworkTests.octest */,
+				16240C29153771440052E274 /* RestKitResources.bundle */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		1646AB2414A3AAC800B27123 /* Singletons */ = {
@@ -459,6 +535,7 @@
 				16690F1E150660D700AC452F /* Localytics */,
 				16DD4CA214A10D200063163D /* Frameworks */,
 				16DD4CA014A10D200063163D /* Products */,
+				16240C15153771440052E274 /* RestKit.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -473,6 +550,12 @@
 		16DD4CA214A10D200063163D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				16240C2D153773740052E274 /* CFNetwork.framework */,
+				16240C2E153773740052E274 /* CoreData.framework */,
+				16240C2F153773740052E274 /* libxml2.dylib */,
+				16240C30153773740052E274 /* MobileCoreServices.framework */,
+				16240C31153773740052E274 /* QuartzCore.framework */,
+				16240C32153773740052E274 /* SystemConfiguration.framework */,
 				16690F2C150661BD00AC452F /* libz.dylib */,
 				16690F2A150661A200AC452F /* libsqlite3.dylib */,
 				16822ED414A9338B006344D1 /* Security.framework */,
@@ -566,6 +649,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				16240C2C153772CE0052E274 /* PBXTargetDependency */,
 			);
 			name = PuertoRicoLaw;
 			productName = PuertoRicoLaw;
@@ -591,12 +675,56 @@
 			mainGroup = 16DD4C9414A10D200063163D;
 			productRefGroup = 16DD4CA014A10D200063163D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 16240C16153771440052E274 /* Products */;
+					ProjectRef = 16240C15153771440052E274 /* RestKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				16DD4C9E14A10D200063163D /* PuertoRicoLaw */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		16240C21153771440052E274 /* libRestKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKit.a;
+			remoteRef = 16240C20153771440052E274 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		16240C23153771440052E274 /* RestKitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitTests.octest;
+			remoteRef = 16240C22153771440052E274 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		16240C25153771440052E274 /* RestKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RestKit.framework;
+			remoteRef = 16240C24153771440052E274 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		16240C27153771440052E274 /* RestKitFrameworkTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitFrameworkTests.octest;
+			remoteRef = 16240C26153771440052E274 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		16240C29153771440052E274 /* RestKitResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitResources.bundle;
+			remoteRef = 16240C28153771440052E274 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		16DD4C9D14A10D200063163D /* Resources */ = {
@@ -722,6 +850,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		16240C2C153772CE0052E274 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKit;
+			targetProxy = 16240C2B153772CE0052E274 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		16DD4CAC14A10D200063163D /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -790,10 +926,16 @@
 		16DD4CB814A10D200063163D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PuertoRicoLaw/PuertoRicoLaw-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"/**";
 				INFOPLIST_FILE = "PuertoRicoLaw/PuertoRicoLaw-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -803,11 +945,17 @@
 		16DD4CB914A10D200063163D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Axel Rivera";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PuertoRicoLaw/PuertoRicoLaw-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"/**";
 				INFOPLIST_FILE = "PuertoRicoLaw/PuertoRicoLaw-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B2E4DA6F-B2EE-4A3A-9F31-EAE50BE2BD53";
 				TARGETED_DEVICE_FAMILY = "1,2";

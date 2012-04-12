@@ -12,6 +12,7 @@
 #import "BookData.h"
 #import "FileHelpers.h"
 #import "LocalyticsSession.h"
+#import <RestKit/RestKit.h>
 
 #define ANALYTICS_ID @"92e8903fd104523f326e1f2-037e2ace-679d-11e1-1dd5-00a68a4c01fc"
 
