@@ -99,16 +99,16 @@
 
 - (void)loadSections
 {
-	self.mainSection = [self unarchiveMainSection];
-	if (self.mainSection) {
-		[self reloadSection:self.mainSection andParent:nil];
-		return;
-	}
+//	self.mainSection = [self unarchiveMainSection];
+//	if (self.mainSection) {
+//		[self reloadSection:self.mainSection andParent:nil];
+//		return;
+//	}
 	
 	self.favorites = [[NSMutableArray alloc] initWithCapacity:0];
 	self.mainSection = [[Section alloc] initWithBook:self];
 	
-	NSString *bookPath = [[NSBundle mainBundle] pathForResource:self.name ofType:@"plist"]; 
+	NSString *bookPath = pathInBooksDirectory([self.name stringByAppendingPathExtension:@"plist"]);
     
     // Read in the plist file
     NSDictionary *bookDictionary = [NSDictionary dictionaryWithContentsOfFile:bookPath];
@@ -126,7 +126,7 @@
 		self.mainSection.children = (NSArray *)sections;
 	}
 	
-	[self archiveMainSection];
+	//[self archiveMainSection];
 }
 
 - (void)clearSections

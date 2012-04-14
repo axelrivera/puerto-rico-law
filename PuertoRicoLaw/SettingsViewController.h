@@ -16,6 +16,7 @@
 @interface SettingsViewController : UITableViewController <TableSelectViewControllerDelegate, MFMailComposeViewControllerDelegate>
 
 @property (unsafe_unretained, nonatomic) id <SettingsViewControllerDelegate> delegate;
+@property (strong, nonatomic) UIButton *upgradeButton;
 
 @end
 

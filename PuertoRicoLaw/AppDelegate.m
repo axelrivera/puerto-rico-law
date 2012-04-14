@@ -7,16 +7,25 @@
 //
 
 #import "AppDelegate.h"
+#import <RestKit/RestKit.h>
 #import "BookViewController.h"
 #import "SectionListViewController.h"
 #import "BookData.h"
 #import "FileHelpers.h"
 #import "LocalyticsSession.h"
-#import <RestKit/RestKit.h>
+#import "APIBook.h"
 
 #define ANALYTICS_ID @"92e8903fd104523f326e1f2-037e2ace-679d-11e1-1dd5-00a68a4c01fc"
-
 #define kResetDataKey @"reset_data_preference"
+
+#ifdef DEBUG
+	#define API_URL @"http://riveralabs-book-sandbox.herokuapp.com"
+#else
+	#define API_URL @"http://riveralabs-book-sandbox.herokuapp.com"
+#endif
+
+#define API_USERNAME @"admin"
+#define API_PASSWORD @"123_data"
 
 @implementation AppDelegate
 
@@ -30,6 +39,21 @@
 {
 	// Setup Analytics
 	[[LocalyticsSession sharedLocalyticsSession] startSession:ANALYTICS_ID];
+	
+	
+	RKObjectManager *manager = [RKObjectManager objectManagerWithBaseURLString:API_URL];
+	manager.client.username = API_USERNAME;
+	manager.client.password = API_PASSWORD;
+	
+	RKObjectMapping *apiMapping = [RKObjectMapping mappingForClass:[APIBook class]];
+	[apiMapping mapKeyPath:@"title" toAttribute:@"title"];
+	[apiMapping mapKeyPath:@"name" toAttribute:@"name"];
+	[apiMapping mapKeyPath:@"date" toAttribute:@"date"];
+	[apiMapping mapKeyPath:@"is_purchase" toAttribute:@"isPurchase"];
+	[apiMapping mapKeyPath:@"version" toAttribute:@"bookVersion"];
+	[apiMapping mapKeyPath:@"md5" toAttribute:@"md5"];
+	
+	[manager.mappingProvider setMapping:apiMapping forKeyPath:@"books"];
 	
 	// Set Default Preferences
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -47,6 +71,8 @@
 		bookData = [BookData sharedBookData];
 		[bookData loadBooks];
 	}
+	
+	[bookData getBooksFromAPI];
 	
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	// Override point for customization after application launch.
@@ -150,11 +176,11 @@
 
 - (void)resetData
 {
-	NSString *documentsPath = pathInDocumentDirectory(@"");
+	NSString *documentsPath = pathInBooksDirectory(@"");
 	NSDirectoryEnumerator *fileEnumerator = [[NSFileManager defaultManager] enumeratorAtPath:documentsPath];
 	for (NSString *filename in fileEnumerator) {
-		if ([filename hasSuffix:@".data"]) {
-			deletePathInDocumentDirectory(filename);
+		if ([filename hasSuffix:@".plist"]) {
+			deletePathInBooksDirectory(filename);
 		}
 	}
 }

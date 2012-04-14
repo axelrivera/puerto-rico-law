@@ -25,6 +25,7 @@
 @implementation SettingsViewController
 
 @synthesize delegate = delegate_;
+@synthesize upgradeButton = upgradeButton_;
 
 - (id)init
 {
@@ -60,6 +61,12 @@
 																			  style:UIBarButtonItemStyleDone
 																			 target:self
 																			 action:@selector(dismissAction:)];
+	
+	self.upgradeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+	[self.upgradeButton setTitle:@"Actualizar Leyes" forState:UIControlStateNormal];
+	[self.upgradeButton setTitle:@"Verificando..." forState:UIControlStateHighlighted];
+	[self.upgradeButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
+	self.upgradeButton.enabled = NO;
 }
 
 - (void)viewDidUnload
@@ -128,7 +135,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 5;
+    return 6;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -137,12 +144,14 @@
     if (section == 0) {
 		row = 1;
 	} else if (section == 1) {
-		row = 4;
-	} else if (section == 2) {
-		row = 2;
-	} else if (section == 3) {
 		row = 1;
+	} else if (section == 2) {
+		row = 4;
+	} else if (section == 3) {
+		row = 2;
 	} else if (section == 4) {
+		row = 1;
+	} else if (section == 5) {
 		row = 1;
 	}
 	return row;
@@ -151,6 +160,29 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	if (indexPath.section == 0) {
+		NSString *CellIdentifier = @"UpgradeCell";
+		
+		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+		if (cell == nil) {
+			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+			UIView *backView = [[UIView alloc] initWithFrame:CGRectZero];
+			backView.backgroundColor = [UIColor clearColor];
+			cell.backgroundView = backView;
+			CGRect contentFrame = cell.contentView.bounds;
+			CGRect buttonFrame = CGRectMake(contentFrame.origin.x,
+											contentFrame.origin.y,
+											contentFrame.size.width - 20.0,
+											44.0);
+			cell.contentView.frame = buttonFrame;
+			self.upgradeButton.frame = buttonFrame;
+			[cell.contentView addSubview:self.upgradeButton];
+		}
+		
+		cell.selectionStyle = UITableViewCellSelectionStyleNone;
+		cell.accessoryType = UITableViewCellAccessoryNone;
+		
+		return cell;
+	} else if (indexPath.section == 1) {
 		NSString *CellIdentifier = @"SwitchCell";
 		
 		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -168,7 +200,7 @@
 		[switchView setOn:[Settings sharedSettings].landscapeMode animated:NO];
 		
 		return cell;
-	} else if (indexPath.section == 2) {
+	} else if (indexPath.section == 3) {
 		NSString *CellIdentifier = @"ButtonCell";
 		
 		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -190,7 +222,7 @@
 		cell.textLabel.text = textStr;
 		
 		return cell;
-	} else if (indexPath.section == 4) {
+	} else if (indexPath.section == 5) {
 		NSString *CellIdentifier = @"EndorsementCell";
 		
 		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -225,7 +257,7 @@
 	NSString *textStr = nil;
 	NSString *detailTextStr = nil;
 	
-	if (indexPath.section == 1) {
+	if (indexPath.section == 2) {
 		if (indexPath.row == 0) {
 			textStr = @"Tipo";
 			detailTextStr = [[Settings sharedSettings] fontFamilyString];
@@ -258,7 +290,7 @@
 {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 	
-    if (indexPath.section == 1) {
+    if (indexPath.section == 2) {
 		if (indexPath.row == 3) {
 			ContentPreviewViewController *previewController = [[ContentPreviewViewController alloc] init];
 			previewController.title = @"Ejemplo Contenido";
@@ -284,7 +316,7 @@
 			selectController.title = @"Color del Background";
 		}
 		[self.navigationController pushViewController:selectController animated:YES];
-	} else if (indexPath.section == 2) {
+	} else if (indexPath.section == 3) {
 		NSArray *toRecipients = nil;
 		NSString *subjectStr = nil;
 		NSString *bodyStr = nil;
@@ -299,7 +331,7 @@
 			bodyStr = @"He estado usando el app Leyes Puerto Rico y me gustaría enviar las siguientes sugerencias.<br />";
 		}
 		[self displayComposerSheetTo:toRecipients subject:subjectStr body:bodyStr];
-	} else if (indexPath.section == 3) {
+	} else if (indexPath.section == 4) {
 		InformationViewController *infoController = [[InformationViewController alloc] init];
 		[self.navigationController pushViewController:infoController animated:YES];
 	}
@@ -308,7 +340,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
 	NSString *title = nil;
-	if (section == 1) {
+	if (section == 2) {
 		title = @"Fonts";
 	}
 	return title;
@@ -317,9 +349,11 @@
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 {
 	NSString *title = nil;
-	if (section == 1) {
-		title = @"Fonts visibles en el contenido.";
+	if (section == 0) {
+		title = @"Todas las leyes están actualizadas.\nActualizado: 2 de abril de 2012";
 	} else if (section == 2) {
+		title = @"Fonts visibles en el contenido.";
+	} else if (section == 3) {
 		title = @"Envianos sugerencias sobre mejoras o leyes que te parecen importantes.";
 	} else if (section == 4) {
 		title = [NSString stringWithFormat:
@@ -333,7 +367,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	CGFloat height = 44.0;
-	if (indexPath.section == 4) {
+	if (indexPath.section == 5) {
 		height = 153.0;
 	}
 	return height;

@@ -18,6 +18,12 @@ NSString *pathInDocumentDirectory(NSString *fileName)
 	return [documentDirectory stringByAppendingPathComponent:fileName];
 }
 
+NSString *pathInBooksDirectory(NSString *fileName)
+{
+	NSString *path = pathInDocumentDirectory(@"Books");
+	return [path stringByAppendingPathComponent:fileName];
+}
+
 NSString *pathInTemporaryDirectory(NSString *fileName)
 {
 	return [NSTemporaryDirectory() stringByAppendingPathComponent:fileName];
@@ -41,5 +47,11 @@ NSString *bookDataPath(void)
 BOOL deletePathInDocumentDirectory(NSString *fileName)
 {
 	NSString *filePath = pathInDocumentDirectory(fileName);
+	return [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
+}
+
+BOOL deletePathInBooksDirectory(NSString *fileName)
+{
+	NSString *filePath = pathInBooksDirectory(fileName);
 	return [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
 }

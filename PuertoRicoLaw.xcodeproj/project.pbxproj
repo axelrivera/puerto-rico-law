@@ -19,6 +19,7 @@
 		1619833E14F684EE0024302E /* PuertoRicoLawBooks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1619833D14F684EE0024302E /* PuertoRicoLawBooks.plist */; };
 		161B5D6814B3598400700D86 /* orgchart.png in Resources */ = {isa = PBXBuildFile; fileRef = 161B5D6614B3598400700D86 /* orgchart.png */; };
 		161B5D6914B3598400700D86 /* orgchart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 161B5D6714B3598400700D86 /* orgchart@2x.png */; };
+		161D27311537A61700118393 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16240C21153771440052E274 /* libRestKit.a */; };
 		1620F80114A196910070E512 /* FileHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 1620F80014A196910070E512 /* FileHelpers.m */; };
 		16240C33153773740052E274 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16240C2D153773740052E274 /* CFNetwork.framework */; };
 		16240C34153773740052E274 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16240C2E153773740052E274 /* CoreData.framework */; };
@@ -80,6 +81,12 @@
 		1673F16B14ACAED90065126B /* TableSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1673F16914ACAED90065126B /* TableSelectViewController.xib */; };
 		1673F17814ACDF1D0065126B /* ContentPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1673F17614ACDF1D0065126B /* ContentPreviewViewController.m */; };
 		1673F17914ACDF1D0065126B /* ContentPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1673F17714ACDF1D0065126B /* ContentPreviewViewController.xib */; };
+		167E35B41538528600EA535E /* APIBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 167E35B31538528600EA535E /* APIBook.m */; };
+		167E368715389A3200EA535E /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 167E367D15389A3200EA535E /* ioapi.c */; };
+		167E368815389A3200EA535E /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 167E367F15389A3200EA535E /* mztools.c */; };
+		167E368915389A3200EA535E /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 167E368115389A3200EA535E /* unzip.c */; };
+		167E368A15389A3200EA535E /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 167E368315389A3200EA535E /* zip.c */; };
+		167E368B15389A3200EA535E /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 167E368615389A3200EA535E /* ZipArchive.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		167EF1D714A23DAA0058F8D1 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167EF1D614A23DAA0058F8D1 /* BookViewController.m */; };
 		167EF1DA14A23F790058F8D1 /* BookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167EF1D914A23F790058F8D1 /* BookViewController.xib */; };
 		167EF24314A24D250058F8D1 /* SectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167EF24114A24D250058F8D1 /* SectionListViewController.m */; };
@@ -261,6 +268,19 @@
 		1673F17514ACDF1D0065126B /* ContentPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentPreviewViewController.h; sourceTree = "<group>"; };
 		1673F17614ACDF1D0065126B /* ContentPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentPreviewViewController.m; sourceTree = "<group>"; };
 		1673F17714ACDF1D0065126B /* ContentPreviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentPreviewViewController.xib; sourceTree = "<group>"; };
+		167E35B21538528600EA535E /* APIBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIBook.h; sourceTree = "<group>"; };
+		167E35B31538528600EA535E /* APIBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIBook.m; sourceTree = "<group>"; };
+		167E367C15389A3200EA535E /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		167E367D15389A3200EA535E /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		167E367E15389A3200EA535E /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		167E367F15389A3200EA535E /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		167E368015389A3200EA535E /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		167E368115389A3200EA535E /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		167E368215389A3200EA535E /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		167E368315389A3200EA535E /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		167E368415389A3200EA535E /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		167E368515389A3200EA535E /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		167E368615389A3200EA535E /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZipArchive.mm; sourceTree = "<group>"; };
 		167EF1D514A23DAA0058F8D1 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
 		167EF1D614A23DAA0058F8D1 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
 		167EF1D914A23F790058F8D1 /* BookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookViewController.xib; sourceTree = "<group>"; };
@@ -332,6 +352,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				161D27311537A61700118393 /* libRestKit.a in Frameworks */,
 				16240C33153773740052E274 /* CFNetwork.framework in Frameworks */,
 				16240C34153773740052E274 /* CoreData.framework in Frameworks */,
 				16240C35153773740052E274 /* libxml2.dylib in Frameworks */,
@@ -478,6 +499,33 @@
 			path = PuertoRicoLaw/Localytics;
 			sourceTree = "<group>";
 		};
+		167E367A15389A3200EA535E /* ZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				167E367B15389A3200EA535E /* minizip */,
+				167E368515389A3200EA535E /* ZipArchive.h */,
+				167E368615389A3200EA535E /* ZipArchive.mm */,
+			);
+			name = ZipArchive;
+			path = Libraries/ZipArchive;
+			sourceTree = "<group>";
+		};
+		167E367B15389A3200EA535E /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				167E367C15389A3200EA535E /* crypt.h */,
+				167E367D15389A3200EA535E /* ioapi.c */,
+				167E367E15389A3200EA535E /* ioapi.h */,
+				167E367F15389A3200EA535E /* mztools.c */,
+				167E368015389A3200EA535E /* mztools.h */,
+				167E368115389A3200EA535E /* unzip.c */,
+				167E368215389A3200EA535E /* unzip.h */,
+				167E368315389A3200EA535E /* zip.c */,
+				167E368415389A3200EA535E /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
 		167EF1D414A23D700058F8D1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -532,6 +580,7 @@
 			isa = PBXGroup;
 			children = (
 				16DD4CA914A10D200063163D /* PuertoRicoLaw */,
+				167E367A15389A3200EA535E /* ZipArchive */,
 				16690F1E150660D700AC452F /* Localytics */,
 				16DD4CA214A10D200063163D /* Frameworks */,
 				16DD4CA014A10D200063163D /* Products */,
@@ -623,6 +672,8 @@
 				16DD4DAB14A1569F0063163D /* Section.m */,
 				1671F11014AF9F290019B181 /* SectionManager.h */,
 				1671F11114AF9F290019B181 /* SectionManager.m */,
+				167E35B21538528600EA535E /* APIBook.h */,
+				167E35B31538528600EA535E /* APIBook.m */,
 			);
 			name = "Model + Data";
 			sourceTree = "<group>";
@@ -845,6 +896,12 @@
 				16690F26150660D700AC452F /* LocalyticsDatabase.m in Sources */,
 				16690F27150660D700AC452F /* LocalyticsSession.m in Sources */,
 				16690F28150660D700AC452F /* UploaderThread.m in Sources */,
+				167E35B41538528600EA535E /* APIBook.m in Sources */,
+				167E368715389A3200EA535E /* ioapi.c in Sources */,
+				167E368815389A3200EA535E /* mztools.c in Sources */,
+				167E368915389A3200EA535E /* unzip.c in Sources */,
+				167E368A15389A3200EA535E /* zip.c in Sources */,
+				167E368B15389A3200EA535E /* ZipArchive.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -889,6 +946,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -911,6 +969,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Axel Rivera";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -929,15 +988,14 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PuertoRicoLaw/PuertoRicoLaw-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"/**";
 				INFOPLIST_FILE = "PuertoRicoLaw/PuertoRicoLaw-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/Libraries/ZipArchive\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -949,16 +1007,15 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Axel Rivera";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PuertoRicoLaw/PuertoRicoLaw-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"/**";
 				INFOPLIST_FILE = "PuertoRicoLaw/PuertoRicoLaw-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B2E4DA6F-B2EE-4A3A-9F31-EAE50BE2BD53";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/Libraries/ZipArchive\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
