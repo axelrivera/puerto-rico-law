@@ -11,6 +11,8 @@
 #import "InformationViewController.h"
 #import "Settings.h"
 #import "EndorsementView.h"
+#import "APIBook.h"
+#import "Book.h"
 
 #define kFontFamilyControllerTag 101
 #define kFontSizeControllerTag 102
@@ -25,7 +27,7 @@
 @implementation SettingsViewController
 
 @synthesize delegate = delegate_;
-@synthesize upgradeButton = upgradeButton_;
+@synthesize updateButton = updateButton_;
 
 - (id)init
 {
@@ -62,11 +64,11 @@
 																			 target:self
 																			 action:@selector(dismissAction:)];
 	
-	self.upgradeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[self.upgradeButton setTitle:@"Actualizar Leyes" forState:UIControlStateNormal];
-	[self.upgradeButton setTitle:@"Verificando..." forState:UIControlStateHighlighted];
-	[self.upgradeButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
-	self.upgradeButton.enabled = NO;
+	self.updateButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+	[self.updateButton setTitle:@"Actualizar Contenido" forState:UIControlStateNormal];
+	[self.updateButton setTitle:@"En Proceso..." forState:UIControlStateSelected];
+	self.updateButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+	[self.updateButton addTarget:self action:@selector(updateAction:) forControlEvents:UIControlEventTouchDown];
 }
 
 - (void)viewDidUnload
@@ -79,6 +81,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+	[[BookData sharedBookData] setDelegate:self];
 	[self.tableView reloadData];
 }
 
@@ -87,6 +90,12 @@
 	[super viewDidAppear:animated];
 	self.modalInPopover = YES;
 	self.navigationController.toolbarHidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+	[[BookData sharedBookData] setDelegate:nil];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -129,6 +138,58 @@
 {
 	UISwitch *switchView = (UISwitch *)sender;
 	[[Settings sharedSettings] setLandscapeMode:switchView.isOn];
+}
+
+- (void)updateAction:(id)selector
+{
+	[[BookData sharedBookData] getBooksFromAPI];
+}
+
+#pragma mark - BookDataUpdate Delegate Methods
+
+- (void)didStartCheckingForUpdate
+{
+	NSLog(@"Did start checking for Update");
+	self.updateButton.selected = YES;
+}
+
+- (void)didLoadObjectsForUpdate:(NSArray *)objects
+{
+	BOOL updateAvailable = NO;
+	
+	NSDictionary *books = [[BookData sharedBookData] booksDictionary];
+	
+	for (APIBook *apiBook in objects) {
+		Book *book = [books objectForKey:apiBook.name];
+		if (book && [apiBook.bookVersion integerValue] > [book.bookVersion integerValue]) {
+			updateAvailable = YES;
+			break;
+		}
+	}
+	
+	UIAlertView *alertView = nil;
+	if (updateAvailable) {
+		alertView = [[UIAlertView alloc] initWithTitle:@"Actualización Disponible"
+											   message:@"Hay actualizaciones disponibles. Oprima OK para continuar."
+											  delegate:self
+									 cancelButtonTitle:@"Cancelar"
+									 otherButtonTitles:@"OK", nil];
+	} else {
+		alertView = [[UIAlertView alloc] initWithTitle:@"No Hay Actualizaciones"
+											   message:@"Todas las leyes estan actualizadas."
+											  delegate:nil
+									 cancelButtonTitle:@"OK"
+									 otherButtonTitles:nil];
+	}
+	
+	[alertView show];
+	
+	self.updateButton.selected = NO;
+}
+
+- (void)didFailToLoadObjectsForUpdate:(NSError *)error
+{
+	self.updateButton.selected = NO;
 }
 
 #pragma mark - Table view data source
@@ -174,8 +235,8 @@
 											contentFrame.size.width - 20.0,
 											44.0);
 			cell.contentView.frame = buttonFrame;
-			self.upgradeButton.frame = buttonFrame;
-			[cell.contentView addSubview:self.upgradeButton];
+			self.updateButton.frame = buttonFrame;
+			[cell.contentView addSubview:self.updateButton];
 		}
 		
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -350,12 +411,12 @@
 {
 	NSString *title = nil;
 	if (section == 0) {
-		title = @"Todas las leyes están actualizadas.\nActualizado: 2 de abril de 2012";
+		title = @"Oprime para actualizar el contenido con enmiendas o corrección de errores.";
 	} else if (section == 2) {
 		title = @"Fonts visibles en el contenido.";
 	} else if (section == 3) {
 		title = @"Envianos sugerencias sobre mejoras o leyes que te parecen importantes.";
-	} else if (section == 4) {
+	} else if (section == 5) {
 		title = [NSString stringWithFormat:
 				 @"Leyes Puerto Rico %@\n"
 				 @"Copyright © 2012; Rivera Labs",
@@ -422,10 +483,19 @@
 	if (showAlert == YES) {
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"E-mail Error"
 														message:errorString
-													   delegate:self
+													   delegate:nil
 											  cancelButtonTitle:@"OK"
 											  otherButtonTitles: nil];
 		[alert show];
+	}
+}
+
+#pragma mark UIAlertView Delegate Methods
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	if (buttonIndex == 1) {
+		[[BookData sharedBookData] updateBooksFromAPI];
 	}
 }
 

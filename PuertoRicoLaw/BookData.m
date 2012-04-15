@@ -15,8 +15,18 @@
 
 static BookData *sharedBookData_ = nil;
 
-@implementation BookData
+@interface BookData (Private)
 
+- (void)runRequests;
+
+@end
+
+@implementation BookData
+{
+	NSMutableArray *updateRequests_;
+}
+
+@synthesize delegate = delegate_;
 @synthesize currentBook = currentBook_;
 @synthesize books = books_;
 @synthesize favoriteBooks = favoriteBooks_;
@@ -35,6 +45,7 @@ static BookData *sharedBookData_ = nil;
 		booksFromAPI_ = nil;
 		booksFromAPILastUpdate_ = nil;
 		favoritesSegmentedControlIndex_ = 0;
+		updateRequests_ = [[NSMutableArray alloc] initWithCapacity:0];
 	}
 	return self;
 }
@@ -157,10 +168,14 @@ static BookData *sharedBookData_ = nil;
 - (void)getBooksFromAPI
 {
 	[[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/books" delegate:self];
+	if ([self.delegate respondsToSelector:@selector(didStartCheckingForUpdate)]) {
+		[self.delegate didStartCheckingForUpdate];
+	}
 }
 
 - (void)updateBooksFromAPI
 {
+	[updateRequests_ removeAllObjects];
 	RKRequestQueue *queue = [RKRequestQueue requestQueue];
 	queue.delegate = self;
 	queue.concurrentRequestsLimit = 1;
@@ -190,25 +205,13 @@ static BookData *sharedBookData_ = nil;
 	self.requestQueue = queue;
 }
 
-#pragma mark - RestKit Delegate Methods
+#pragma mark - Private Methods
 
-- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
+- (void)runRequests
 {
-	self.booksFromAPI = objects;
-	self.booksFromAPILastUpdate = [NSDate date];
-	[self updateBooksFromAPI];
-}
-
-- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
-{
-	// Error Code
-}
-
-- (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response
-{
-	if ([response isSuccessful]) {
-		APIBook *apiBook = request.userData;
-		NSData *fileData = [response body];
+	for (NSDictionary *dictionary in updateRequests_) {
+		APIBook *apiBook = [dictionary objectForKey:@"apiBook"];
+		NSData *fileData = [dictionary objectForKey:@"apiData"];
 		
 		if (![[fileData MD5] isEqualToString:apiBook.md5]) {
 			return;
@@ -246,6 +249,39 @@ static BookData *sharedBookData_ = nil;
 	}
 }
 
+#pragma mark - RestKit Delegate Methods
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
+{
+	self.booksFromAPI = objects;
+	self.booksFromAPILastUpdate = [NSDate date];
+	
+	if ([self.delegate respondsToSelector:@selector(didLoadObjectsForUpdate:)]) {
+		[self.delegate didLoadObjectsForUpdate:objects];
+	} else {
+		[self updateBooksFromAPI];
+	}
+}
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
+{
+	NSLog(@"%@", error);
+	if ([self.delegate respondsToSelector:@selector(didFailToLoadObjectsForUpdate:)]) {
+		[self.delegate didFailToLoadObjectsForUpdate:error];
+	}
+}
+
+- (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response
+{
+	if ([response isSuccessful]) {
+		NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
+									request.userData, @"apiBook",
+									[response body], @"apiData",
+									nil];
+		[updateRequests_ addObject:dictionary];
+	}
+}
+
 - (void)requestQueue:(RKRequestQueue *)queue didSendRequest:(RKRequest *)request
 {
     // Code here
@@ -258,6 +294,7 @@ static BookData *sharedBookData_ = nil;
 
 - (void)requestQueueDidFinishLoading:(RKRequestQueue *)queue
 {
+	[self runRequests];
     [self loadBooks];	
 }
 

@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <RestKit/RestKit.h>
 
+@protocol BookDataUpdateDelegate;
+
 @class Book;
 
 @interface BookData : NSObject <NSCoding, RKObjectLoaderDelegate, RKRequestQueueDelegate, RKRequestDelegate>
 
+@property (unsafe_unretained, nonatomic) id <BookDataUpdateDelegate> delegate;
 @property (unsafe_unretained, nonatomic) Book *currentBook;
 @property (strong, nonatomic) NSMutableArray *books;
 @property (strong, nonatomic) NSMutableArray *favoriteBooks;
@@ -29,5 +32,14 @@
 - (NSDictionary *)booksDictionary;
 - (void)getBooksFromAPI;
 - (void)updateBooksFromAPI;
+
+@end
+
+@protocol BookDataUpdateDelegate <NSObject>
+
+@optional
+- (void)didStartCheckingForUpdate;
+- (void)didLoadObjectsForUpdate:(NSArray *)objects;
+- (void)didFailToLoadObjectsForUpdate:(NSError *)error;
 
 @end

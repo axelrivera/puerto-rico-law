@@ -72,7 +72,8 @@
 		[bookData loadBooks];
 	}
 	
-	[bookData getBooksFromAPI];
+#warning You should remove the comments here
+//	[bookData getBooksFromAPI];
 	
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	// Override point for customization after application launch.

@@ -83,9 +83,9 @@
 		1673F17914ACDF1D0065126B /* ContentPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1673F17714ACDF1D0065126B /* ContentPreviewViewController.xib */; };
 		167E35B41538528600EA535E /* APIBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 167E35B31538528600EA535E /* APIBook.m */; };
 		167E368715389A3200EA535E /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 167E367D15389A3200EA535E /* ioapi.c */; };
-		167E368815389A3200EA535E /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 167E367F15389A3200EA535E /* mztools.c */; };
-		167E368915389A3200EA535E /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 167E368115389A3200EA535E /* unzip.c */; };
-		167E368A15389A3200EA535E /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 167E368315389A3200EA535E /* zip.c */; };
+		167E368815389A3200EA535E /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 167E367F15389A3200EA535E /* mztools.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		167E368915389A3200EA535E /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 167E368115389A3200EA535E /* unzip.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		167E368A15389A3200EA535E /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 167E368315389A3200EA535E /* zip.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		167E368B15389A3200EA535E /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 167E368615389A3200EA535E /* ZipArchive.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		167EF1D714A23DAA0058F8D1 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167EF1D614A23DAA0058F8D1 /* BookViewController.m */; };
 		167EF1DA14A23F790058F8D1 /* BookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167EF1D914A23F790058F8D1 /* BookViewController.xib */; };
