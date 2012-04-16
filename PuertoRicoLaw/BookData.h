@@ -22,6 +22,7 @@
 @property (strong, nonatomic) NSArray *booksFromAPI;
 @property (strong, nonatomic) NSDate *booksFromAPILastUpdate;
 @property (assign, nonatomic) NSInteger favoritesSegmentedControlIndex;
+@property (strong, nonatomic) RKRequestQueue *requestQueue;
 
 + (BookData *)sharedBookData;
 
@@ -31,6 +32,7 @@
 - (NSDictionary *)booksDictionary;
 - (void)getBooksFromAPI;
 - (void)updateBooksFromAPI;
+- (void)cancelAllBookRequests;
 
 @end
 

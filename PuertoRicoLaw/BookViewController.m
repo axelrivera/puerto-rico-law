@@ -58,6 +58,10 @@
 
 - (void)dealloc
 {
+	[[NSNotificationCenter defaultCenter] removeObserver:self
+													name:kUpdateBooksNotification
+												  object:nil];
+	
 	self.delegate = nil;
 }
 
@@ -66,6 +70,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(handleBookUpdate:)
+												 name:kUpdateBooksNotification
+											   object:nil];
 	
 	self.clearsSelectionOnViewWillAppear = YES;
 	
@@ -86,6 +95,11 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	
+	[[NSNotificationCenter defaultCenter] removeObserver:self
+													name:kUpdateBooksNotification
+												  object:nil];
+	
 	searchItem_ = nil;
 	doneItem_ = nil;
 	self.delegate = nil;
@@ -121,6 +135,19 @@
 	    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 	} else {
 	    return YES;
+	}
+}
+
+#pragma mark - Custom Methods
+
+- (void)handleBookUpdate:(id)notification
+{
+	NSLog(@"I received a notification to update books");
+	bookData_.currentBook = nil;
+	[self.tableView reloadData];
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		[self.delegate resetCurrentSection];
+		[self.delegate clearCurrentSection];
 	}
 }
 
@@ -282,12 +309,11 @@
 	
 	Book *book = [bookData_.books objectAtIndex:indexPath.row];
 	
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad && [bookData_.currentBook isEqualToBook:book]) {
-		return;
-	}
-	
 	if (!tableView.isEditing) {
 		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+			if ([bookData_.currentBook isEqualToBook:book]) {
+				return;
+			}
 			[self.delegate resetCurrentSection];
 		}
 		[self loadBook:book animated:YES];

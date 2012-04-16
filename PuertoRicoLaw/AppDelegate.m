@@ -41,10 +41,6 @@
 	[Parse setApplicationId:@"bFOkLJlKMTIRQnogwWHCn8XxfH0r8LsbjXuHhm1S" 
 				  clientKey:@"6fjTcuXceXIr81YlKoVWXFNfSbURSrUv1w2YUF9O"];
 	
-	PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-	[testObject setObject:@"bar" forKey:@"foo"];
-	[testObject save];
-	
 	// Register for push notifications
     [application registerForRemoteNotificationTypes:
 	 UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound];

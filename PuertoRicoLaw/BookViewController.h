@@ -17,4 +17,6 @@
 
 @property (unsafe_unretained, nonatomic) id <SectionSelectionDelegate> delegate;
 
+- (void)handleBookUpdate:(id)notification;
+
 @end

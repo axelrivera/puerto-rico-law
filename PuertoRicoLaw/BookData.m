@@ -13,6 +13,8 @@
 #import "APIBook.h"
 #import "ZipArchive.h"
 
+#define kDownloadQueueName @"DownloadQueueName"
+
 static BookData *sharedBookData_ = nil;
 
 @interface BookData (Private)
@@ -33,6 +35,7 @@ static BookData *sharedBookData_ = nil;
 @synthesize booksFromAPI = booksFromAPI_;
 @synthesize booksFromAPILastUpdate = booksFromAPILastUpdate_;
 @synthesize favoritesSegmentedControlIndex = favoritesSegmentedControlIndex_;
+@synthesize requestQueue = requestQueue_;
 
 - (id)init
 {
@@ -175,7 +178,7 @@ static BookData *sharedBookData_ = nil;
 - (void)updateBooksFromAPI
 {
 	[updateRequests_ removeAllObjects];
-	RKRequestQueue *queue = [RKObjectManager sharedManager].client.requestQueue;
+	RKRequestQueue *queue = [RKRequestQueue newRequestQueueWithName:kDownloadQueueName];
 	queue.suspended = YES;
 	queue.delegate = self;
 	queue.concurrentRequestsLimit = 1;
@@ -199,7 +202,14 @@ static BookData *sharedBookData_ = nil;
 	}
 	
 	queue.suspended = NO;
-	//[queue start];
+	self.requestQueue = queue;
+}
+
+- (void)cancelAllBookRequests
+{
+	[[RKObjectManager sharedManager].client.requestQueue cancelAllRequests];
+	[self.requestQueue cancelAllRequests];
+	self.requestQueue = nil;
 }
 
 #pragma mark - Private Methods
@@ -290,14 +300,15 @@ static BookData *sharedBookData_ = nil;
 
 - (void)requestQueueDidFinishLoading:(RKRequestQueue *)queue
 {
-	NSLog(@"Queue finished loading with total objects: %d", [queue count]);
-	[self performSelectorOnMainThread:@selector(runRequests) withObject:nil waitUntilDone:YES];
-    [self performSelectorOnMainThread:@selector(loadBooks) withObject:nil waitUntilDone:YES];
-	
-	if ([queue count] == 1) {
-		if ([self.delegate respondsToSelector:@selector(didFinishUpdatingBooks)]) {
-			NSLog(@"Finished Updating Books");
-			[self.delegate didFinishUpdatingBooks];
+	if ([queue.name isEqualToString:kDownloadQueueName]) {
+		[self performSelectorOnMainThread:@selector(runRequests) withObject:nil waitUntilDone:YES];
+		[self performSelectorOnMainThread:@selector(loadBooks) withObject:nil waitUntilDone:YES];
+		
+		if ([queue count] == 1) {
+			if ([self.delegate respondsToSelector:@selector(didFinishUpdatingBooks)]) {
+				NSLog(@"Finished Updating Books");
+				[self.delegate didFinishUpdatingBooks];
+			}
 		}
 	}
 }

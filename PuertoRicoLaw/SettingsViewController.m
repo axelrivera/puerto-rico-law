@@ -71,6 +71,8 @@
 	self.updateButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 	[self.updateButton setTitle:@"Actualizar Contenido" forState:UIControlStateNormal];
 	[self.updateButton setTitle:@"En Proceso..." forState:UIControlStateSelected];
+	[self.updateButton setTitle:@"Actualización No Disponible" forState:UIControlStateDisabled];
+	[self.updateButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
 	self.updateButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	[self.updateButton addTarget:self action:@selector(checkUpdateAction:) forControlEvents:UIControlEventTouchDown];
 }
@@ -85,6 +87,11 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+	
+	if (![[RKObjectManager sharedManager].client isNetworkReachable]) {
+		self.updateButton.enabled = NO;
+	}
+	
 	[[BookData sharedBookData] setDelegate:self];
 	[self.tableView reloadData];
 }
@@ -99,6 +106,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
+	[[BookData sharedBookData] cancelAllBookRequests];
 	[[BookData sharedBookData] setDelegate:nil];
 }
 
@@ -179,13 +187,13 @@
 	UIAlertView *alertView = nil;
 	if (updateAvailable) {
 		alertView = [[UIAlertView alloc] initWithTitle:@"Actualización Disponible"
-											   message:@"Hay actualizaciones disponibles. Oprima OK para continuar."
+											   message:@"Hay actualizaciones disponibles. Oprima OK para actualizar el contenido de las leyes instaladas."
 											  delegate:self
 									 cancelButtonTitle:@"Cancelar"
 									 otherButtonTitles:@"OK", nil];
 	} else {
-		alertView = [[UIAlertView alloc] initWithTitle:@"No Hay Actualizaciones"
-											   message:@"Todas las leyes estan actualizadas."
+		alertView = [[UIAlertView alloc] initWithTitle:@"No hay Actualizaciones"
+											   message:@"El contenido de todas las leyes está actualizado."
 											  delegate:nil
 									 cancelButtonTitle:@"OK"
 									 otherButtonTitles:nil];
@@ -205,6 +213,7 @@
 {
 	[HUD_ hide:YES];
 	HUD_ = nil;
+	[[NSNotificationCenter defaultCenter] postNotificationName:kUpdateBooksNotification object:nil];
 }
 
 #pragma mark - Table view data source
@@ -511,12 +520,9 @@
 {
 	if (buttonIndex == 1) {
 		[self performSelector:@selector(updateBooksAction:) withObject:nil];
-		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-			HUD_ = [MBProgressHUD showHUDAddedTo:self.splitViewController.view animated:YES];
-		} else {
-			HUD_ = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-		}
+		HUD_ = [MBProgressHUD showHUDAddedTo:self.view.window animated:YES];
 		
+		//HUD_.removeFromSuperViewOnHide = YES;
 		HUD_.dimBackground = YES;
 		HUD_.labelText = @"Actualizando...";
 	}
