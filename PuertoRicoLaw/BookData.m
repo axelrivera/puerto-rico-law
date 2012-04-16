@@ -33,7 +33,6 @@ static BookData *sharedBookData_ = nil;
 @synthesize booksFromAPI = booksFromAPI_;
 @synthesize booksFromAPILastUpdate = booksFromAPILastUpdate_;
 @synthesize favoritesSegmentedControlIndex = favoritesSegmentedControlIndex_;
-@synthesize requestQueue = requestQueue_;
 
 - (id)init
 {
@@ -168,15 +167,16 @@ static BookData *sharedBookData_ = nil;
 - (void)getBooksFromAPI
 {
 	[[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/books" delegate:self];
-	if ([self.delegate respondsToSelector:@selector(didStartCheckingForUpdate)]) {
-		[self.delegate didStartCheckingForUpdate];
+	if ([self.delegate respondsToSelector:@selector(didBeginCheckingForUpdate)]) {
+		[self.delegate didBeginCheckingForUpdate];
 	}
 }
 
 - (void)updateBooksFromAPI
 {
 	[updateRequests_ removeAllObjects];
-	RKRequestQueue *queue = [RKRequestQueue requestQueue];
+	RKRequestQueue *queue = [RKObjectManager sharedManager].client.requestQueue;
+	queue.suspended = YES;
 	queue.delegate = self;
 	queue.concurrentRequestsLimit = 1;
 	queue.showsNetworkActivityIndicatorWhenBusy = YES;
@@ -198,11 +198,8 @@ static BookData *sharedBookData_ = nil;
 		}
 	}
 	
-	if ([queue count] > 0) {
-		[queue start];
-	}
-	
-	self.requestQueue = queue;
+	queue.suspended = NO;
+	//[queue start];
 }
 
 #pragma mark - Private Methods
@@ -256,23 +253,22 @@ static BookData *sharedBookData_ = nil;
 	self.booksFromAPI = objects;
 	self.booksFromAPILastUpdate = [NSDate date];
 	
-	if ([self.delegate respondsToSelector:@selector(didLoadObjectsForUpdate:)]) {
-		[self.delegate didLoadObjectsForUpdate:objects];
-	} else {
-		[self updateBooksFromAPI];
+	if ([self.delegate respondsToSelector:@selector(didLoadBooksForUpdate:)]) {
+		[self.delegate didLoadBooksForUpdate:objects];
 	}
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
 {
 	NSLog(@"%@", error);
-	if ([self.delegate respondsToSelector:@selector(didFailToLoadObjectsForUpdate:)]) {
-		[self.delegate didFailToLoadObjectsForUpdate:error];
+	if ([self.delegate respondsToSelector:@selector(didFailToLoadBooksForUpdate:)]) {
+		[self.delegate didFailToLoadBooksForUpdate:error];
 	}
 }
 
 - (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response
 {
+	NSLog(@"finished request");
 	if ([response isSuccessful]) {
 		NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
 									request.userData, @"apiBook",
@@ -284,20 +280,27 @@ static BookData *sharedBookData_ = nil;
 
 - (void)requestQueue:(RKRequestQueue *)queue didSendRequest:(RKRequest *)request
 {
-    // Code here
+	NSLog(@"RKRequestQueue %@ is current loading %d of %d requests", queue, [queue loadingCount], [queue count]);
 }
 
 - (void)requestQueueDidBeginLoading:(RKRequestQueue *)queue
 {
-	// Code here
+	NSLog(@"Queue began loading with objects: %d", [queue count]);
 }
 
 - (void)requestQueueDidFinishLoading:(RKRequestQueue *)queue
 {
-	[self runRequests];
-    [self loadBooks];	
+	NSLog(@"Queue finished loading with total objects: %d", [queue count]);
+	[self performSelectorOnMainThread:@selector(runRequests) withObject:nil waitUntilDone:YES];
+    [self performSelectorOnMainThread:@selector(loadBooks) withObject:nil waitUntilDone:YES];
+	
+	if ([queue count] == 1) {
+		if ([self.delegate respondsToSelector:@selector(didFinishUpdatingBooks)]) {
+			NSLog(@"Finished Updating Books");
+			[self.delegate didFinishUpdatingBooks];
+		}
+	}
 }
-
 
 #pragma mark - Singleton Code
 

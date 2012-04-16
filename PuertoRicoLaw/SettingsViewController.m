@@ -13,6 +13,7 @@
 #import "EndorsementView.h"
 #import "APIBook.h"
 #import "Book.h"
+#import "MBProgressHUD.h"
 
 #define kFontFamilyControllerTag 101
 #define kFontSizeControllerTag 102
@@ -25,6 +26,9 @@
 @end
 
 @implementation SettingsViewController
+{
+	MBProgressHUD *HUD_;
+}
 
 @synthesize delegate = delegate_;
 @synthesize updateButton = updateButton_;
@@ -68,7 +72,7 @@
 	[self.updateButton setTitle:@"Actualizar Contenido" forState:UIControlStateNormal];
 	[self.updateButton setTitle:@"En Proceso..." forState:UIControlStateSelected];
 	self.updateButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-	[self.updateButton addTarget:self action:@selector(updateAction:) forControlEvents:UIControlEventTouchDown];
+	[self.updateButton addTarget:self action:@selector(checkUpdateAction:) forControlEvents:UIControlEventTouchDown];
 }
 
 - (void)viewDidUnload
@@ -140,27 +144,32 @@
 	[[Settings sharedSettings] setLandscapeMode:switchView.isOn];
 }
 
-- (void)updateAction:(id)selector
+- (void)checkUpdateAction:(id)sender
 {
 	[[BookData sharedBookData] getBooksFromAPI];
 }
 
+- (void)updateBooksAction:(id)sender
+{
+	[[BookData sharedBookData] updateBooksFromAPI];
+}
+
 #pragma mark - BookDataUpdate Delegate Methods
 
-- (void)didStartCheckingForUpdate
+- (void)didBeginCheckingForUpdate
 {
 	NSLog(@"Did start checking for Update");
 	self.updateButton.selected = YES;
 }
 
-- (void)didLoadObjectsForUpdate:(NSArray *)objects
+- (void)didLoadBooksForUpdate:(NSArray *)books
 {
 	BOOL updateAvailable = NO;
 	
-	NSDictionary *books = [[BookData sharedBookData] booksDictionary];
+	NSDictionary *currentBooks = [[BookData sharedBookData] booksDictionary];
 	
-	for (APIBook *apiBook in objects) {
-		Book *book = [books objectForKey:apiBook.name];
+	for (APIBook *apiBook in books) {
+		Book *book = [currentBooks objectForKey:apiBook.name];
 		if (book && [apiBook.bookVersion integerValue] > [book.bookVersion integerValue]) {
 			updateAvailable = YES;
 			break;
@@ -187,9 +196,15 @@
 	self.updateButton.selected = NO;
 }
 
-- (void)didFailToLoadObjectsForUpdate:(NSError *)error
+- (void)didFailToLoadBooksForUpdate:(NSError *)error
 {
 	self.updateButton.selected = NO;
+}
+
+- (void)didFinishUpdatingBooks
+{
+	[HUD_ hide:YES];
+	HUD_ = nil;
 }
 
 #pragma mark - Table view data source
@@ -495,7 +510,15 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
 	if (buttonIndex == 1) {
-		[[BookData sharedBookData] updateBooksFromAPI];
+		[self performSelector:@selector(updateBooksAction:) withObject:nil];
+		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+			HUD_ = [MBProgressHUD showHUDAddedTo:self.splitViewController.view animated:YES];
+		} else {
+			HUD_ = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+		}
+		
+		HUD_.dimBackground = YES;
+		HUD_.labelText = @"Actualizando...";
 	}
 }
 

@@ -14,6 +14,7 @@
 #import "FileHelpers.h"
 #import "LocalyticsSession.h"
 #import "APIBook.h"
+#import <Parse/Parse.h>
 
 #define ANALYTICS_ID @"92e8903fd104523f326e1f2-037e2ace-679d-11e1-1dd5-00a68a4c01fc"
 #define kResetDataKey @"reset_data_preference"
@@ -37,6 +38,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	[Parse setApplicationId:@"bFOkLJlKMTIRQnogwWHCn8XxfH0r8LsbjXuHhm1S" 
+				  clientKey:@"6fjTcuXceXIr81YlKoVWXFNfSbURSrUv1w2YUF9O"];
+	
+	PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+	[testObject setObject:@"bar" forKey:@"foo"];
+	[testObject save];
+	
+	// Register for push notifications
+    [application registerForRemoteNotificationTypes:
+	 UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound];
+	
 	// Setup Analytics
 	[[LocalyticsSession sharedLocalyticsSession] startSession:ANALYTICS_ID];
 	
@@ -73,6 +85,8 @@
 	}
 	
 #warning You should remove the comments here
+	[self deleteBookFiles];
+	[self resetBookData];
 //	[bookData getBooksFromAPI];
 	
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -135,17 +149,7 @@
 	[self checkSettingsBundle];
 	
 	if (self.resetDataFlag) {
-		deletePathInDocumentDirectory(bookDataPath());
-		[BookData sharedBookData].currentBook = nil;
-		[[BookData sharedBookData].books removeAllObjects];
-		[[BookData sharedBookData].favoriteBooks removeAllObjects];
-		[[BookData sharedBookData] loadBooks];
-		[self.bookViewController.navigationController popToRootViewControllerAnimated:NO];
-		[self.bookViewController.tableView reloadData];
-		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-			[self.bookViewController.delegate resetCurrentSection];
-			[self.bookViewController.delegate clearCurrentSection];
-		}
+		[self resetBookData];
 	}
 }
 
@@ -170,12 +174,45 @@
 	[self archiveBookData];
 }
 
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken
+{
+    [PFPush storeDeviceToken:newDeviceToken]; // Send parse the device token
+    // Subscribe this user to the broadcast channel, "" 
+    [PFPush subscribeToChannelInBackground:@"" block:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"Successfully subscribed to the broadcast channel.");
+        } else {
+            NSLog(@"Failed to subscribe to the broadcast channel.");
+        }
+    }];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    [PFPush handlePush:userInfo];
+}
+
 - (void)archiveBookData
 {
 	[NSKeyedArchiver archiveRootObject:[BookData sharedBookData] toFile:bookDataPath()];
 }
 
-- (void)resetData
+- (void)resetBookData
+{
+	deletePathInDocumentDirectory(bookDataPath());
+	[BookData sharedBookData].currentBook = nil;
+	[[BookData sharedBookData].books removeAllObjects];
+	[[BookData sharedBookData].favoriteBooks removeAllObjects];
+	[[BookData sharedBookData] loadBooks];
+	[self.bookViewController.navigationController popToRootViewControllerAnimated:NO];
+	[self.bookViewController.tableView reloadData];
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		[self.bookViewController.delegate resetCurrentSection];
+		[self.bookViewController.delegate clearCurrentSection];
+	}
+}
+
+- (void)deleteBookFiles
 {
 	NSString *documentsPath = pathInBooksDirectory(@"");
 	NSDirectoryEnumerator *fileEnumerator = [[NSFileManager defaultManager] enumeratorAtPath:documentsPath];
@@ -195,7 +232,7 @@
 	
 	if (self.resetDataFlag == YES) {
 		[defaults setBool:NO forKey:kResetDataKey];
-		[self resetData];
+		[self deleteBookFiles];
 	}
 }
 

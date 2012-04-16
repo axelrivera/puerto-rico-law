@@ -22,7 +22,6 @@
 @property (strong, nonatomic) NSArray *booksFromAPI;
 @property (strong, nonatomic) NSDate *booksFromAPILastUpdate;
 @property (assign, nonatomic) NSInteger favoritesSegmentedControlIndex;
-@property (strong, nonatomic) RKRequestQueue *requestQueue;
 
 + (BookData *)sharedBookData;
 
@@ -38,8 +37,9 @@
 @protocol BookDataUpdateDelegate <NSObject>
 
 @optional
-- (void)didStartCheckingForUpdate;
-- (void)didLoadObjectsForUpdate:(NSArray *)objects;
-- (void)didFailToLoadObjectsForUpdate:(NSError *)error;
+- (void)didBeginCheckingForUpdate;
+- (void)didLoadBooksForUpdate:(NSArray *)books;
+- (void)didFailToLoadBooksForUpdate:(NSError *)error;
+- (void)didFinishUpdatingBooks;
 
 @end

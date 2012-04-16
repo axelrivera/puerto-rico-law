@@ -19,7 +19,8 @@
 @property (assign, nonatomic) BOOL resetDataFlag;
 
 - (void)archiveBookData;
-- (void)resetData;
+- (void)resetBookData;
+- (void)deleteBookFiles;
 - (void)checkSettingsBundle;
 
 @end
