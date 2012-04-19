@@ -30,6 +30,7 @@
 	BookData *bookData_;
 	UIBarButtonItem *searchItem_;
 	UIBarButtonItem *doneItem_;
+	UIBarButtonItem *optionsItem_;
 }
 
 @synthesize delegate = delegate_;
@@ -87,6 +88,10 @@
 												 style:UIBarButtonItemStyleDone
 												target:self
 												action:@selector(reorderAction:)];
+	
+	optionsItem_ = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+																target:self
+																action:@selector(optionsAction:)];
 	[self setEditing:NO animated:NO];
 }
 
@@ -211,6 +216,16 @@
 	[self setEditing:!self.isEditing animated:YES];
 }
 
+- (void)optionsAction:(id)sender
+{
+	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"¿Deseas cambiar el orden de las leyes?"
+															 delegate:self
+													cancelButtonTitle:@"Cancelar"
+											   destructiveButtonTitle:nil
+													otherButtonTitles:@"Orden Alfabético", nil];
+	[actionSheet showFromToolbar:self.navigationController.toolbar];
+}
+
 - (void)favoritesAction:(id)sender
 {
 	[self setEditing:NO animated:YES];
@@ -249,8 +264,10 @@
 	
 	if (editing) {
 		self.navigationItem.rightBarButtonItem = doneItem_;
+		self.navigationItem.leftBarButtonItem = optionsItem_;
 	} else {
 		self.navigationItem.rightBarButtonItem = nil;
+		self.navigationItem.leftBarButtonItem = nil;
 	}
 }
 
@@ -432,6 +449,16 @@
 		[self.navigationController popViewControllerAnimated:YES];
 	} else {
 		[self dismissModalViewControllerAnimated:YES];
+	}
+}
+
+#pragma mark - UIActionSheet Delegate Methods
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	if (buttonIndex == 0) {
+		[bookData_ sortBooksAlphabetically];
+		[self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationTop];
 	}
 }
 

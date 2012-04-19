@@ -33,6 +33,7 @@
 - (void)getBooksFromAPI;
 - (void)updateBooksFromAPI;
 - (void)cancelAllBookRequests;
+- (void)sortBooksAlphabetically;
 
 @end
 

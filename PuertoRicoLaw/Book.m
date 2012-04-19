@@ -186,6 +186,11 @@
 	return findArray_;
 }
 
+- (NSComparisonResult)compareTitleAlphabetically:(Book *)book
+{
+	return [self.title caseInsensitiveCompare:book.title];
+}
+
 #pragma mark - Private Methods
 
 - (void)findInSection:(Section *)section sectionID:(NSString *)sectionID

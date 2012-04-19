@@ -35,5 +35,6 @@
 - (NSArray *)searchMainSectionWithString:(NSString *)string titleOnly:(BOOL)titleOnly;
 - (BOOL)isNewComparedToBook:(Book *)book;
 - (BOOL)isEqualToBook:(Book *)book;
+- (NSComparisonResult)compareTitleAlphabetically:(Book *)book;
 
 @end

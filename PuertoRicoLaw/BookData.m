@@ -212,6 +212,11 @@ static BookData *sharedBookData_ = nil;
 	self.requestQueue = nil;
 }
 
+- (void)sortBooksAlphabetically
+{
+	[self.books sortUsingSelector:@selector(compareTitleAlphabetically:)];
+}
+
 #pragma mark - Private Methods
 
 - (void)runRequests

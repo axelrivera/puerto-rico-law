@@ -13,7 +13,7 @@
 #import "BookDetailViewController.h"
 
 @interface BookViewController : UITableViewController
-<FavoritesViewControllerDelegate, SettingsViewControllerDelegate, BookDetailViewControllerDelegate>
+<FavoritesViewControllerDelegate, SettingsViewControllerDelegate, BookDetailViewControllerDelegate, UIActionSheetDelegate>
 
 @property (unsafe_unretained, nonatomic) id <SectionSelectionDelegate> delegate;
 
