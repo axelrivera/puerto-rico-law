@@ -459,6 +459,7 @@
 	if (buttonIndex == 0) {
 		[bookData_ sortBooksAlphabetically];
 		[self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationTop];
+		[self setEditing:NO animated:YES];
 	}
 }
 

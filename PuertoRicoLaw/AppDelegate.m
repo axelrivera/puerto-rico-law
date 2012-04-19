@@ -185,7 +185,16 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
-    [PFPush handlePush:userInfo];
+	NSString *alertBody = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
+	if ([alertBody isKindOfClass:[NSString class]]) {
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Leyes Puerto Rico"
+														message:alertBody
+													   delegate:nil
+											  cancelButtonTitle:@"OK"
+											  otherButtonTitles:nil];
+		[alert show];
+		AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+	}
 }
 
 - (void)archiveBookData
