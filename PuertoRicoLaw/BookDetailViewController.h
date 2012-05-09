@@ -27,7 +27,7 @@
 
 @end
 
-@protocol BookDetailViewControllerDelegate
+@protocol BookDetailViewControllerDelegate <NSObject>
 
 - (void)detailsViewControllerDidFinish:(UIViewController *)controller;
 

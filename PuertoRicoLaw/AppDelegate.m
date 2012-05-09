@@ -20,9 +20,9 @@
 #define kResetDataKey @"reset_data_preference"
 
 #ifdef DEBUG
-	#define API_URL @"http://riveralabs-book-sandbox.herokuapp.com"
+	#define API_URL @"http://leyespr.herokuapp.com"
 #else
-	#define API_URL @"http://riveralabs-book-sandbox.herokuapp.com"
+	#define API_URL @"http://leyespr.herokuapp.com"
 #endif
 
 #define API_USERNAME @"admin"
@@ -80,10 +80,12 @@
 		[bookData loadBooks];
 	}
 	
-#warning You should remove the comments here
+	// Reset the book data every time the app starts.
+	// I'm leaving this here just in case I need to test it in the future.
+#warning Remove This
 	[self deleteBookFiles];
 	[self resetBookData];
-//	[bookData getBooksFromAPI];
+	//[bookData getBooksFromAPI];
 	
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	// Override point for customization after application launch.

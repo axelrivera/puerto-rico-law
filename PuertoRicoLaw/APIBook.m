@@ -29,7 +29,7 @@
 
 - (NSString *)zipFile
 {
-	return [NSString stringWithFormat:@"%@_%d.zip", self.name, [self.bookVersion integerValue]];
+	return [NSString stringWithFormat:@"%@.zip", self.name, [self.bookVersion integerValue]];
 }
 
 - (NSString *)plistFile

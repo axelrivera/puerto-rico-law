@@ -28,7 +28,6 @@
 @implementation BookViewController
 {
 	BookData *bookData_;
-	UIBarButtonItem *searchItem_;
 	UIBarButtonItem *doneItem_;
 	UIBarButtonItem *optionsItem_;
 }
@@ -105,7 +104,6 @@
 													name:kUpdateBooksNotification
 												  object:nil];
 	
-	searchItem_ = nil;
 	doneItem_ = nil;
 	self.delegate = nil;
 }
@@ -195,6 +193,11 @@
 																target:self
 																action:@selector(favoritesAction:)];
 	
+	UIBarButtonItem *downloadItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"download.png"]
+																	 style:UIBarButtonItemStylePlain
+																	target:self
+																	action:@selector(downloadAction:)];
+	
 	UIBarButtonItem *settingsItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"gears.png"]
 																	 style:UIBarButtonItemStylePlain
 																	target:self
@@ -204,6 +207,8 @@
 			listItem,
 			flexibleItem,
 			favoritesItem,
+			flexibleItem,
+			downloadItem,
 			flexibleItem,
 			settingsItem,
 			nil];;
@@ -232,11 +237,25 @@
 	FavoritesViewController *favoritesController = [[FavoritesViewController alloc] initWithFavoritesType:FavoritesTypeBook];
 	favoritesController.delegate = self;
 	favoritesController.favoritesDataSource = bookData_.favoriteBooks;
-	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:favoritesController];
 	
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 		[self.navigationController pushViewController:favoritesController animated:YES];
 	} else {
+		UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:favoritesController];
+		[self presentModalViewController:navigationController animated:YES];
+	}
+}
+
+- (void)downloadAction:(id)sender
+{
+	[self setEditing:NO animated:YES];
+	DownloadsViewController *downloadController = [[DownloadsViewController alloc] init];
+	downloadController.delegate = self;
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		[self.navigationController pushViewController:downloadController animated:YES];
+	} else {
+		UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:downloadController];
 		[self presentModalViewController:navigationController animated:YES];
 	}
 }
@@ -246,11 +265,11 @@
 	[self setEditing:NO animated:YES];
 	SettingsViewController *settingsController = [[SettingsViewController alloc] init];
 	settingsController.delegate = self;
-	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:settingsController];
 	
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 		[self.navigationController pushViewController:settingsController animated:YES];
 	} else {
+		UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:settingsController];
 		[self presentModalViewController:navigationController animated:YES];
 	}
 }
@@ -398,6 +417,15 @@
 }
 
 #pragma mark - UIViewController Delegates
+
+- (void)downloadsViewControllerDidFinish:(UIViewController *)controller
+{
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		[self.navigationController popViewControllerAnimated:YES];
+	} else {
+		[self dismissModalViewControllerAnimated:YES];
+	}
+}
 
 - (void)favoritesViewControllerDidFinish:(FavoritesViewController *)controller save:(BOOL)save
 {

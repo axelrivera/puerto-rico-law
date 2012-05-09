@@ -22,7 +22,7 @@
 
 @end
 
-@protocol SettingsViewControllerDelegate
+@protocol SettingsViewControllerDelegate <NSObject>
 
 - (void)settingsViewControllerDidFinish:(UIViewController *)controller;
 

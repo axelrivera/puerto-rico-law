@@ -26,7 +26,7 @@ typedef enum {
 
 @end
 
-@protocol FavoritesViewControllerDelegate
+@protocol FavoritesViewControllerDelegate <NSObject>
 
 - (void)favoritesViewControllerDidFinish:(FavoritesViewController *)controller save:(BOOL)save;
 - (void)favoritesViewControllerDeleteDataSource:(FavoritesViewController *)controller;

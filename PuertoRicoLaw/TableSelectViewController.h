@@ -21,7 +21,7 @@
 
 @end
 
-@protocol TableSelectViewControllerDelegate
+@protocol TableSelectViewControllerDelegate <NSObject>
 
 - (void)tableSelectViewControllerDidFinish:(TableSelectViewController *)controller;
 

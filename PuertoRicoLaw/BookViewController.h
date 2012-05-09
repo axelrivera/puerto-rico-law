@@ -11,9 +11,11 @@
 #import "SettingsViewController.h"
 #import "SectionSelectionDelegate.h"
 #import "BookDetailViewController.h"
+#import "DownloadsViewController.h"
 
 @interface BookViewController : UITableViewController
-<FavoritesViewControllerDelegate, SettingsViewControllerDelegate, BookDetailViewControllerDelegate, UIActionSheetDelegate>
+<DownloadsViewControllerDelegate, FavoritesViewControllerDelegate, SettingsViewControllerDelegate,
+BookDetailViewControllerDelegate, UIActionSheetDelegate>
 
 @property (unsafe_unretained, nonatomic) id <SectionSelectionDelegate> delegate;
 
