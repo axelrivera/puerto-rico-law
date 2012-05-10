@@ -8,10 +8,24 @@
 
 #import "DownloadsViewController.h"
 #import "Settings.h"
+#import "DownloadTableViewCell.h"
+
+#define kBarButtonItemWidth 140.0
+
+@interface DownloadsViewController (Private)
+
+- (NSArray *)toolbarItemsArray;
+
+@end
 
 @implementation DownloadsViewController
+{
+	UIBarButtonItem *installAllButtonItem_;
+	UIBarButtonItem *updateAllButtonItem_;
+}
 
 @synthesize delegate = delegate_;
+@synthesize dataSource = dataSource_;
 
 - (id)init
 {
@@ -21,6 +35,38 @@
 			self.contentSizeForViewInPopover = kMainPopoverSize;
 		}
 		self.title = @"Downloads";
+		
+		dataSource_ = [[NSMutableArray alloc] initWithCapacity:0];
+		
+		NSDictionary *dictionary = nil;
+		
+		dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+					  @"Title 1", @"title",
+					  @"Subtitle 1", @"subtitle",
+					  @"Instalar", @"button_title",
+					  @"GRATIS", @"download_text",
+					  nil];
+		
+		[dataSource_ addObject:dictionary];
+		
+		dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+					  @"Title 2", @"title",
+					  @"Subtitle 2", @"subtitle",
+					  @"Actualizar", @"button_title",
+					  @"GRATIS", @"download_text",
+					  nil];
+		
+		[dataSource_ addObject:dictionary];
+		
+		dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+					  @"Title 3", @"title",
+					  @"Subtitle 3", @"subtitle",
+					  @"Instalado", @"button_title",
+					  @"GRATIS", @"download_text",
+					  nil];
+		
+		[dataSource_ addObject:dictionary];
+		
 	}
 	return self;
 }
@@ -33,10 +79,38 @@
 		self.navigationItem.hidesBackButton = YES;
 	}
 	
+	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+																						  target:self
+																						  action:@selector(refreshAction:)];
+	
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"OK"
 																			  style:UIBarButtonItemStyleDone
 																			 target:self
 																			 action:@selector(dismissAction:)];
+	
+	installAllButtonItem_ = [[UIBarButtonItem alloc] initWithTitle:@"Instalar Todos"
+															 style:UIBarButtonItemStyleBordered
+															target:self
+															action:@selector(installAllAction:)];
+	
+	if ([installAllButtonItem_ respondsToSelector:@selector(tintColor)]) {
+		installAllButtonItem_.tintColor = [UIColor blueColor];
+	}
+	
+	updateAllButtonItem_ = [[UIBarButtonItem alloc] initWithTitle:@"Actualizar Todos"
+															style:UIBarButtonItemStyleBordered
+														   target:self action:@selector(updateAllAction:)];
+	
+	if ([updateAllButtonItem_ respondsToSelector:@selector(tintColor)]) {
+		updateAllButtonItem_.tintColor = [UIColor orangeColor];
+	}
+	
+	installAllButtonItem_.width = updateAllButtonItem_.width = kBarButtonItemWidth;
+	
+	self.navigationController.toolbarHidden = NO;
+	[self setToolbarItems:[self toolbarItemsArray]];
+	
+	self.tableView.rowHeight = 60.0;
 }
 
 - (void)viewDidUnload
@@ -44,6 +118,8 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	installAllButtonItem_ = nil;
+	updateAllButtonItem_ = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -70,35 +146,70 @@
 	}
 }
 
+#pragma mark - Private Methods
+
+- (NSArray *)toolbarItemsArray
+{
+	UIBarButtonItem *flexibleItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+																				  target:nil
+																				  action:nil];
+	NSArray *array = [NSArray arrayWithObjects:
+					  flexibleItem,
+					  installAllButtonItem_,
+					  flexibleItem,
+					  updateAllButtonItem_,
+					  flexibleItem,
+					  nil];
+	return array;
+}
+
 #pragma mark - Selector Actions
+
+- (void)refreshAction:(id)sender
+{
+	
+}
 
 - (void)dismissAction:(id)sender
 {
 	[self.delegate downloadsViewControllerDidFinish:self];
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (void)installAllAction:(id)sender
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+	
 }
+
+- (void)updateAllAction:(id)sender
+{
+	
+}
+
+#pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+	return [self.dataSource count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    // Configure the cell...
+    DownloadTableViewCell *cell = (DownloadTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+		cell = [[DownloadTableViewCell alloc] initWithReuseIdentifier:CellIdentifier];
+	}
+	
+	cell.selectionStyle = UITableViewCellSelectionStyleNone;
+	
+	NSDictionary *dictionary = [self.dataSource objectAtIndex:indexPath.row];
+	
+	cell.textLabel.text = [dictionary objectForKey:@"title"];
+	cell.detailTextLabel.text = [dictionary objectForKey:@"subtitle"];
+	
+	[cell.downloadButton setTitle:[dictionary objectForKey:@"button_title"] forState:UIControlStateNormal];
+	
+	cell.downloadLabel.text = [dictionary objectForKey:@"download_text"];
     
     return cell;
 }

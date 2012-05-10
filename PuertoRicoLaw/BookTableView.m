@@ -87,38 +87,41 @@
 #define kTextLabelHeight 36.0
 #define kDetailTextLabelHeight 36.0
 	
-	contentView_.frame = CGRectMake(10.0,
-									2.0,
-									self.bounds.size.width - 20.0,
-									kTextLabelHeight + kDetailTextLabelHeight + 4.0);
+	self.contentView.frame = CGRectMake(10.0,
+										2.0,
+										self.bounds.size.width - 20.0,
+										kTextLabelHeight + kDetailTextLabelHeight + 4.0);
 	
-	imageView_.frame = CGRectMake(0.0,
-								  (contentView_.frame.size.height / 2.0) - (kImageViewWidthHeight / 2.0),
-								  kImageViewWidthHeight,
-								  kImageViewWidthHeight);
+	self.imageView.frame = CGRectMake(0.0,
+									  (self.contentView.frame.size.height / 2.0) - (kImageViewWidthHeight / 2.0),
+									  kImageViewWidthHeight,
+									  kImageViewWidthHeight);
 	
 	NSString *textStr = textLabel_.text;
-	CGSize textLimitSize = CGSizeMake(contentView_.bounds.size.width - (kImageViewWidthHeight + 10.0),
+	CGSize textLimitSize = CGSizeMake(self.contentView.bounds.size.width - (kImageViewWidthHeight + 10.0),
 									  kTextLabelHeight);
 	CGSize textSize = [textStr sizeWithFont:textFont_
 						  constrainedToSize:textLimitSize
 							  lineBreakMode:UILineBreakModeTailTruncation];
 	
-	textLabel_.frame = CGRectMake(kImageViewWidthHeight + 10.0,
-								  0.0,
-								  textLimitSize.width,
-								  textSize.height);
+	self.textLabel.frame = CGRectMake(kImageViewWidthHeight + 10.0,
+									  0.0,
+									  textLimitSize.width,
+									  textSize.height);
 	
-	NSString *detailStr = detailTextLabel_.text;
-	CGSize detailLimitSize = CGSizeMake(contentView_.bounds.size.width - (kImageViewWidthHeight + 10.0),
+	NSString *detailStr = self.detailTextLabel.text;
+	
+	CGSize detailLimitSize = CGSizeMake(self.contentView.bounds.size.width - (kImageViewWidthHeight + 10.0),
 										kDetailTextLabelHeight);
+	
 	CGSize detailSize = [detailStr sizeWithFont:detailFont_
 							  constrainedToSize:detailLimitSize
 								  lineBreakMode:UILineBreakModeTailTruncation];
-	detailTextLabel_.frame = CGRectMake(kImageViewWidthHeight + 10.0,
-										textLabel_.frame.origin.y + textLabel_.frame.size.height,
-										detailLimitSize.width,
-										detailSize.height);
+	
+	self.detailTextLabel.frame = CGRectMake(kImageViewWidthHeight + 10.0,
+											self.textLabel.frame.origin.y + self.textLabel.frame.size.height,
+											detailLimitSize.width,
+											detailSize.height);
 }
 
 - (void)setFavorite:(BOOL)favorite

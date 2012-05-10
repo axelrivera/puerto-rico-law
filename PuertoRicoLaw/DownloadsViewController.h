@@ -13,6 +13,7 @@
 @interface DownloadsViewController : UITableViewController
 
 @property (unsafe_unretained, nonatomic) id <DownloadsViewControllerDelegate> delegate;
+@property (strong, nonatomic) NSMutableArray *dataSource;
 
 @end
 

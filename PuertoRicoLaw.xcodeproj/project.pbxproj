@@ -31,6 +31,7 @@
 		16240C36153773740052E274 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16240C30153773740052E274 /* MobileCoreServices.framework */; };
 		16240C37153773740052E274 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16240C31153773740052E274 /* QuartzCore.framework */; };
 		16240C38153773740052E274 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16240C32153773740052E274 /* SystemConfiguration.framework */; };
+		162B2851155B43D3001451B7 /* DownloadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 162B2850155B43D3001451B7 /* DownloadTableViewCell.m */; };
 		1631D87414B4E98D00F77790 /* SearchWebView.js in Resources */ = {isa = PBXBuildFile; fileRef = 16DFA24B14B4C79C00517778 /* SearchWebView.js */; };
 		163252FD150510DC00259E10 /* CodigoPenal2004.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163252F4150510DC00259E10 /* CodigoPenal2004.plist */; };
 		163252FE150510DC00259E10 /* ConstitucionPR.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163252F5150510DC00259E10 /* ConstitucionPR.plist */; };
@@ -213,6 +214,8 @@
 		16240C30153773740052E274 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		16240C31153773740052E274 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		16240C32153773740052E274 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		162B284F155B43D3001451B7 /* DownloadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTableViewCell.h; sourceTree = "<group>"; };
+		162B2850155B43D3001451B7 /* DownloadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTableViewCell.m; sourceTree = "<group>"; };
 		163252F4150510DC00259E10 /* CodigoPenal2004.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CodigoPenal2004.plist; sourceTree = "<group>"; };
 		163252F5150510DC00259E10 /* ConstitucionPR.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConstitucionPR.plist; sourceTree = "<group>"; };
 		163252F6150510DC00259E10 /* Notarial.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Notarial.plist; sourceTree = "<group>"; };
@@ -445,6 +448,8 @@
 				1663261C14A65249003279C3 /* SectionTableViewCell.m */,
 				16D45B3514FFEC3D0012BE90 /* EndorsementView.h */,
 				16D45B3614FFEC3D0012BE90 /* EndorsementView.m */,
+				162B284F155B43D3001451B7 /* DownloadTableViewCell.h */,
+				162B2850155B43D3001451B7 /* DownloadTableViewCell.m */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -954,6 +959,7 @@
 				167E368B15389A3200EA535E /* ZipArchive.mm in Sources */,
 				16CAD3F8153B346900B737DB /* MBProgressHUD.m in Sources */,
 				16024A3F1559F9B000D84546 /* DownloadsViewController.m in Sources */,
+				162B2851155B43D3001451B7 /* DownloadTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
