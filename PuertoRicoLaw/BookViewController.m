@@ -193,7 +193,7 @@
 																target:self
 																action:@selector(favoritesAction:)];
 	
-	UIBarButtonItem *downloadItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"download.png"]
+	UIBarButtonItem *downloadItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"cloud.png"]
 																	 style:UIBarButtonItemStylePlain
 																	target:self
 																	action:@selector(downloadAction:)];

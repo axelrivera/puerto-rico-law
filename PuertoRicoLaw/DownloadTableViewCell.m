@@ -47,7 +47,9 @@
 		
 		downloadButton_ = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 		[downloadButton_ setTitle:@"My Button" forState:UIControlStateNormal];
-		downloadLabel_.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
+		[downloadButton_ setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
+		downloadButton_.titleLabel.font = [UIFont boldSystemFontOfSize:12.0];
+		downloadButton_.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
 		[self.contentView addSubview:downloadButton_];
 		
 		downloadLabel_ = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -68,11 +70,13 @@
 {
 	[super layoutSubviews];
 
+#define kCellTopBottom 5.0
+#define kCellLeftRight 10.0
 #define kTextHeight 34.0
 #define kDetailTextHeight 17.0
 #define kDownloadButtonWidth 80.0
-#define kDownloadButtonHeight 37.0
-#define kDownloadTextHeight 14.0
+#define kDownloadButtonHeight 30.0
+#define kDownloadTextHeight 17.0
 #define kVerticalOffset 3.0
 #define kHorizontalOffset 5.0
 	
@@ -83,23 +87,23 @@
 	
 	CGFloat contentWidth = self.contentView.frame.size.width;
 	
-	textFrame = CGRectMake(10.0,
-						   3.0,
-						   contentWidth - (10.0 + kHorizontalOffset + kDownloadButtonWidth + 10.0),
+	textFrame = CGRectMake(kCellLeftRight,
+						   kCellTopBottom,
+						   contentWidth - (kCellLeftRight + kHorizontalOffset + kDownloadButtonWidth + kCellLeftRight),
 						   kTextHeight);
 	
-	detailFrame = CGRectMake(10.0,
-							 3.0 + kTextHeight + 3.0,
-							 contentWidth - (10.0 + kHorizontalOffset + kDownloadButtonWidth + 10.0),
+	detailFrame = CGRectMake(kCellLeftRight,
+							 kCellTopBottom + kTextHeight + 3.0,
+							 contentWidth - (kCellLeftRight + kHorizontalOffset + kDownloadButtonWidth + kCellLeftRight),
 							 kDetailTextHeight);
 	
 	buttonFrame = CGRectMake(textFrame.origin.x + textFrame.size.width + kVerticalOffset,
-							 3.0,
+							 kCellTopBottom,
 							 kDownloadButtonWidth,
 							 kDownloadButtonHeight);
 	
 	downloadFrame = CGRectMake(textFrame.origin.x + textFrame.size.width,
-							   3.0 + kDownloadButtonHeight + 3.0,
+							   kCellTopBottom + kDownloadButtonHeight + 5.0,
 							   kDownloadButtonWidth,
 							   kDownloadTextHeight);
 	

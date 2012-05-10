@@ -41,7 +41,7 @@
 		NSDictionary *dictionary = nil;
 		
 		dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-					  @"Title 1", @"title",
+					  @"This is a long title because I want to see what happens when I have a very long title", @"title",
 					  @"Subtitle 1", @"subtitle",
 					  @"Instalar", @"button_title",
 					  @"GRATIS", @"download_text",
@@ -66,7 +66,6 @@
 					  nil];
 		
 		[dataSource_ addObject:dictionary];
-		
 	}
 	return self;
 }
@@ -94,7 +93,7 @@
 															action:@selector(installAllAction:)];
 	
 	if ([installAllButtonItem_ respondsToSelector:@selector(tintColor)]) {
-		installAllButtonItem_.tintColor = [UIColor blueColor];
+		installAllButtonItem_.tintColor = [UIColor purpleColor];
 	}
 	
 	updateAllButtonItem_ = [[UIBarButtonItem alloc] initWithTitle:@"Actualizar Todos"
@@ -110,7 +109,7 @@
 	self.navigationController.toolbarHidden = NO;
 	[self setToolbarItems:[self toolbarItemsArray]];
 	
-	self.tableView.rowHeight = 60.0;
+	self.tableView.rowHeight = 64.0;
 }
 
 - (void)viewDidUnload
@@ -208,6 +207,10 @@
 	cell.detailTextLabel.text = [dictionary objectForKey:@"subtitle"];
 	
 	[cell.downloadButton setTitle:[dictionary objectForKey:@"button_title"] forState:UIControlStateNormal];
+	
+	if (indexPath.row == 2) {
+		cell.downloadButton.enabled = NO;
+	}
 	
 	cell.downloadLabel.text = [dictionary objectForKey:@"download_text"];
     

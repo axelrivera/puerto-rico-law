@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		16024A3A1559F74400D84546 /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = 16024A381559F74400D84546 /* download.png */; };
-		16024A3B1559F74400D84546 /* download@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16024A391559F74400D84546 /* download@2x.png */; };
 		16024A3F1559F9B000D84546 /* DownloadsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16024A3D1559F9B000D84546 /* DownloadsViewController.m */; };
 		16024A401559F9B000D84546 /* DownloadsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16024A3E1559F9B000D84546 /* DownloadsViewController.xib */; };
+		1615DB63155B6CEE00429C25 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 1615DB61155B6CEE00429C25 /* cloud.png */; };
+		1615DB64155B6CEE00429C25 /* cloud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1615DB62155B6CEE00429C25 /* cloud@2x.png */; };
 		1616E2781534A6030029E916 /* CodigoCivil.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1616E2751534A6030029E916 /* CodigoCivil.plist */; };
 		1616E2791534A6030029E916 /* Electoral.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1616E2761534A6030029E916 /* Electoral.plist */; };
 		1616E27A1534A6030029E916 /* Transito.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1616E2771534A6030029E916 /* Transito.plist */; };
@@ -188,11 +188,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		16024A381559F74400D84546 /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
-		16024A391559F74400D84546 /* download@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "download@2x.png"; sourceTree = "<group>"; };
 		16024A3C1559F9B000D84546 /* DownloadsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadsViewController.h; sourceTree = "<group>"; };
 		16024A3D1559F9B000D84546 /* DownloadsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadsViewController.m; sourceTree = "<group>"; };
 		16024A3E1559F9B000D84546 /* DownloadsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadsViewController.xib; sourceTree = "<group>"; };
+		1615DB61155B6CEE00429C25 /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
+		1615DB62155B6CEE00429C25 /* cloud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud@2x.png"; sourceTree = "<group>"; };
 		1616E2751534A6030029E916 /* CodigoCivil.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CodigoCivil.plist; sourceTree = "<group>"; };
 		1616E2761534A6030029E916 /* Electoral.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Electoral.plist; sourceTree = "<group>"; };
 		1616E2771534A6030029E916 /* Transito.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Transito.plist; sourceTree = "<group>"; };
@@ -457,8 +457,8 @@
 		164DF00A14A293CD0087CBD2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				16024A381559F74400D84546 /* download.png */,
-				16024A391559F74400D84546 /* download@2x.png */,
+				1615DB61155B6CEE00429C25 /* cloud.png */,
+				1615DB62155B6CEE00429C25 /* cloud@2x.png */,
 				16D45B3814FFEF4A0012BE90 /* abogados_logo.png */,
 				16D45B3914FFEF4A0012BE90 /* abogados_logo@2x.png */,
 				16D5E3D814EABE5E00F52FE0 /* ftc_icon.png */,
@@ -908,9 +908,9 @@
 				1659E6E11534D29200E52053 /* Default-Portrait@2x.png in Resources */,
 				16CCD28815350A4700F43CB4 /* Icon-72@2x.png in Resources */,
 				16CCD28915350A4700F43CB4 /* Icon-Small-50@2x.png in Resources */,
-				16024A3A1559F74400D84546 /* download.png in Resources */,
-				16024A3B1559F74400D84546 /* download@2x.png in Resources */,
 				16024A401559F9B000D84546 /* DownloadsViewController.xib in Resources */,
+				1615DB63155B6CEE00429C25 /* cloud.png in Resources */,
+				1615DB64155B6CEE00429C25 /* cloud@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
