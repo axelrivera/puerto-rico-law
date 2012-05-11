@@ -34,7 +34,7 @@ static BookData *sharedBookData_ = nil;
 @synthesize favoriteBooks = favoriteBooks_;
 @synthesize booksFromAPI = booksFromAPI_;
 @synthesize booksFromAPILastUpdate = booksFromAPILastUpdate_;
-@synthesize favoritesSegmentedControlIndex = favoritesSegmentedControlIndex_;
+@synthesize downloadsSegmentedControlIndex = downloadsSegmentedControlIndex_;
 @synthesize requestQueue = requestQueue_;
 
 - (id)init
@@ -46,7 +46,7 @@ static BookData *sharedBookData_ = nil;
 		favoriteBooks_ = [[NSMutableArray alloc] initWithCapacity:0];
 		booksFromAPI_ = nil;
 		booksFromAPILastUpdate_ = nil;
-		favoritesSegmentedControlIndex_ = 0;
+		downloadsSegmentedControlIndex_ = 0;
 		updateRequests_ = [[NSMutableArray alloc] initWithCapacity:0];
 	}
 	return self;
@@ -66,10 +66,13 @@ static BookData *sharedBookData_ = nil;
 		
 		self.booksFromAPILastUpdate = [decoder decodeObjectForKey:@"booksFromAPILastUpdate"];
 		
-		NSNumber *number = [decoder decodeObjectForKey:@"bookDataFavoritesSegmentControlIndex"];
-		self.favoritesSegmentedControlIndex = [number integerValue];
-		[self loadBooks];
+		NSNumber *downloadsIndex = [decoder decodeObjectForKey:@"bookDataDownloadsSegmentedControlIndex"];
+		if (downloadsIndex == nil) {
+			downloadsIndex = [NSNumber numberWithInteger:0];
+		}
+		self.downloadsSegmentedControlIndex = [downloadsIndex integerValue];
 		
+		[self loadBooks];
 		self.booksFromAPI = nil;
 	}
 	return self;
@@ -82,9 +85,9 @@ static BookData *sharedBookData_ = nil;
 	[encoder encodeObject:self.books forKey:@"bookDataBooks"];
 	[encoder encodeObject:self.favoriteBooks forKey:@"bookDataFavoriteBooks"];
 	[encoder encodeObject:self.booksFromAPILastUpdate forKey:@"booksFromAPILastUpdate"];
-	
-	[encoder encodeObject:[NSNumber numberWithInteger:self.favoritesSegmentedControlIndex]
-				   forKey:@"bookDataFavoritesSegmentControlIndex"];
+		
+	[encoder encodeObject:[NSNumber numberWithInteger:self.downloadsSegmentedControlIndex]
+				   forKey:@"bookDataDownloadsSegmentedControlIndex"];
 }
 
 - (void)loadBooks

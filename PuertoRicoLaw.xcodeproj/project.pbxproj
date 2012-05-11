@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		16024A3F1559F9B000D84546 /* DownloadsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16024A3D1559F9B000D84546 /* DownloadsViewController.m */; };
 		16024A401559F9B000D84546 /* DownloadsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16024A3E1559F9B000D84546 /* DownloadsViewController.xib */; };
-		1615DB63155B6CEE00429C25 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 1615DB61155B6CEE00429C25 /* cloud.png */; };
-		1615DB64155B6CEE00429C25 /* cloud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1615DB62155B6CEE00429C25 /* cloud@2x.png */; };
 		1616E2781534A6030029E916 /* CodigoCivil.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1616E2751534A6030029E916 /* CodigoCivil.plist */; };
 		1616E2791534A6030029E916 /* Electoral.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1616E2761534A6030029E916 /* Electoral.plist */; };
 		1616E27A1534A6030029E916 /* Transito.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1616E2771534A6030029E916 /* Transito.plist */; };
@@ -31,6 +29,8 @@
 		16240C36153773740052E274 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16240C30153773740052E274 /* MobileCoreServices.framework */; };
 		16240C37153773740052E274 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16240C31153773740052E274 /* QuartzCore.framework */; };
 		16240C38153773740052E274 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16240C32153773740052E274 /* SystemConfiguration.framework */; };
+		1626E231155C99C700CB7FA6 /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = 1626E22D155C99C700CB7FA6 /* download.png */; };
+		1626E232155C99C700CB7FA6 /* download@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1626E22E155C99C700CB7FA6 /* download@2x.png */; };
 		162B2851155B43D3001451B7 /* DownloadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 162B2850155B43D3001451B7 /* DownloadTableViewCell.m */; };
 		1631D87414B4E98D00F77790 /* SearchWebView.js in Resources */ = {isa = PBXBuildFile; fileRef = 16DFA24B14B4C79C00517778 /* SearchWebView.js */; };
 		163252FD150510DC00259E10 /* CodigoPenal2004.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163252F4150510DC00259E10 /* CodigoPenal2004.plist */; };
@@ -191,8 +191,6 @@
 		16024A3C1559F9B000D84546 /* DownloadsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadsViewController.h; sourceTree = "<group>"; };
 		16024A3D1559F9B000D84546 /* DownloadsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadsViewController.m; sourceTree = "<group>"; };
 		16024A3E1559F9B000D84546 /* DownloadsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadsViewController.xib; sourceTree = "<group>"; };
-		1615DB61155B6CEE00429C25 /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
-		1615DB62155B6CEE00429C25 /* cloud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud@2x.png"; sourceTree = "<group>"; };
 		1616E2751534A6030029E916 /* CodigoCivil.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CodigoCivil.plist; sourceTree = "<group>"; };
 		1616E2761534A6030029E916 /* Electoral.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Electoral.plist; sourceTree = "<group>"; };
 		1616E2771534A6030029E916 /* Transito.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Transito.plist; sourceTree = "<group>"; };
@@ -214,6 +212,8 @@
 		16240C30153773740052E274 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		16240C31153773740052E274 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		16240C32153773740052E274 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1626E22D155C99C700CB7FA6 /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
+		1626E22E155C99C700CB7FA6 /* download@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "download@2x.png"; sourceTree = "<group>"; };
 		162B284F155B43D3001451B7 /* DownloadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTableViewCell.h; sourceTree = "<group>"; };
 		162B2850155B43D3001451B7 /* DownloadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTableViewCell.m; sourceTree = "<group>"; };
 		163252F4150510DC00259E10 /* CodigoPenal2004.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CodigoPenal2004.plist; sourceTree = "<group>"; };
@@ -457,8 +457,8 @@
 		164DF00A14A293CD0087CBD2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				1615DB61155B6CEE00429C25 /* cloud.png */,
-				1615DB62155B6CEE00429C25 /* cloud@2x.png */,
+				1626E22D155C99C700CB7FA6 /* download.png */,
+				1626E22E155C99C700CB7FA6 /* download@2x.png */,
 				16D45B3814FFEF4A0012BE90 /* abogados_logo.png */,
 				16D45B3914FFEF4A0012BE90 /* abogados_logo@2x.png */,
 				16D5E3D814EABE5E00F52FE0 /* ftc_icon.png */,
@@ -909,8 +909,8 @@
 				16CCD28815350A4700F43CB4 /* Icon-72@2x.png in Resources */,
 				16CCD28915350A4700F43CB4 /* Icon-Small-50@2x.png in Resources */,
 				16024A401559F9B000D84546 /* DownloadsViewController.xib in Resources */,
-				1615DB63155B6CEE00429C25 /* cloud.png in Resources */,
-				1615DB64155B6CEE00429C25 /* cloud@2x.png in Resources */,
+				1626E231155C99C700CB7FA6 /* download.png in Resources */,
+				1626E232155C99C700CB7FA6 /* download@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

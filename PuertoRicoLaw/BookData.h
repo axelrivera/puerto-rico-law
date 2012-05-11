@@ -21,7 +21,7 @@
 @property (strong, nonatomic) NSMutableArray *favoriteBooks;
 @property (strong, nonatomic) NSArray *booksFromAPI;
 @property (strong, nonatomic) NSDate *booksFromAPILastUpdate;
-@property (assign, nonatomic) NSInteger favoritesSegmentedControlIndex;
+@property (assign, nonatomic) NSInteger downloadsSegmentedControlIndex;
 @property (strong, nonatomic) RKRequestQueue *requestQueue;
 
 + (BookData *)sharedBookData;

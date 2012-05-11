@@ -9,19 +9,22 @@
 #import "DownloadsViewController.h"
 #import "Settings.h"
 #import "DownloadTableViewCell.h"
+#import "BookData.h"
 
-#define kBarButtonItemWidth 140.0
+#define kSegmentedControlItemWidth 100.0
 
 @interface DownloadsViewController (Private)
 
 - (NSArray *)toolbarItemsArray;
+- (NSArray *)segmentedControlTitles;
 
 @end
 
 @implementation DownloadsViewController
 {
-	UIBarButtonItem *installAllButtonItem_;
-	UIBarButtonItem *updateAllButtonItem_;
+	UISegmentedControl *segmentedControl_;
+	UIBarButtonItem *downloadButtonItem_;
+	UIBarButtonItem *refreshButtonItem_;
 }
 
 @synthesize delegate = delegate_;
@@ -78,33 +81,27 @@
 		self.navigationItem.hidesBackButton = YES;
 	}
 	
-	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
-																						  target:self
-																						  action:@selector(refreshAction:)];
-	
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"OK"
 																			  style:UIBarButtonItemStyleDone
 																			 target:self
 																			 action:@selector(dismissAction:)];
 	
-	installAllButtonItem_ = [[UIBarButtonItem alloc] initWithTitle:@"Instalar Todos"
-															 style:UIBarButtonItemStyleBordered
-															target:self
-															action:@selector(installAllAction:)];
+	downloadButtonItem_ = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize
+																		target:self
+																		action:@selector(downloadAllAction:)];
 	
-	if ([installAllButtonItem_ respondsToSelector:@selector(tintColor)]) {
-		installAllButtonItem_.tintColor = [UIColor purpleColor];
+	refreshButtonItem_ = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+																	   target:self
+																	   action:@selector(refreshAction:)];
+	
+	segmentedControl_ = [[UISegmentedControl alloc] initWithItems:[self segmentedControlTitles]];
+	segmentedControl_.segmentedControlStyle = UISegmentedControlStyleBar;
+	for (NSInteger i = 0; i < [segmentedControl_ numberOfSegments]; i++) {
+		[segmentedControl_ setWidth:kSegmentedControlItemWidth forSegmentAtIndex:i];
 	}
-	
-	updateAllButtonItem_ = [[UIBarButtonItem alloc] initWithTitle:@"Actualizar Todos"
-															style:UIBarButtonItemStyleBordered
-														   target:self action:@selector(updateAllAction:)];
-	
-	if ([updateAllButtonItem_ respondsToSelector:@selector(tintColor)]) {
-		updateAllButtonItem_.tintColor = [UIColor orangeColor];
-	}
-	
-	installAllButtonItem_.width = updateAllButtonItem_.width = kBarButtonItemWidth;
+	[segmentedControl_ addTarget:self
+						  action:@selector(segmentedControlChangedIndex:)
+				forControlEvents:UIControlEventValueChanged];
 	
 	self.navigationController.toolbarHidden = NO;
 	[self setToolbarItems:[self toolbarItemsArray]];
@@ -117,13 +114,17 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-	installAllButtonItem_ = nil;
-	updateAllButtonItem_ = nil;
+	downloadButtonItem_ = nil;
+	refreshButtonItem_ = nil;
+	segmentedControl_ = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
+	
+	segmentedControl_.selectedSegmentIndex = [[BookData sharedBookData] downloadsSegmentedControlIndex];
+	[self performSelector:@selector(segmentedControlChangedIndex:) withObject:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -152,17 +153,33 @@
 	UIBarButtonItem *flexibleItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
 																				  target:nil
 																				  action:nil];
+	
+	UIBarButtonItem *segmentedItem = [[UIBarButtonItem alloc] initWithCustomView:segmentedControl_];
+	
 	NSArray *array = [NSArray arrayWithObjects:
 					  flexibleItem,
-					  installAllButtonItem_,
+					  refreshButtonItem_,
 					  flexibleItem,
-					  updateAllButtonItem_,
+					  segmentedItem,
+					  flexibleItem,
+					  downloadButtonItem_,
 					  flexibleItem,
 					  nil];
 	return array;
 }
 
+- (NSArray *)segmentedControlTitles
+{
+	return [NSArray arrayWithObjects:@"Instaladas", @"Tienda", nil];
+}
+
 #pragma mark - Selector Actions
+
+- (void)segmentedControlChangedIndex:(id)sender
+{
+	[[BookData sharedBookData] setDownloadsSegmentedControlIndex:[segmentedControl_ selectedSegmentIndex]];
+	NSLog(@"Segmented Control Action");
+}
 
 - (void)refreshAction:(id)sender
 {
@@ -174,12 +191,7 @@
 	[self.delegate downloadsViewControllerDidFinish:self];
 }
 
-- (void)installAllAction:(id)sender
-{
-	
-}
-
-- (void)updateAllAction:(id)sender
+- (void)downloadAllAction:(id)sender
 {
 	
 }
