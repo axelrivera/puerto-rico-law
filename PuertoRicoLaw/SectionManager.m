@@ -14,6 +14,7 @@
 #import "SectionContentViewController.h"
 #import "BookDetailViewController.h"
 #import "UIViewController+Section.h"
+#import "NSDateFormatter+Book.h"
 
 @interface SectionManager (Private)
 
@@ -289,9 +290,8 @@
 	
 	Book *book = self.section.book;
 	
-	NSString *dateStr = [NSString stringWithFormat:@"Actualizado: %@",
-						 [[UIViewController dateFormatter] stringFromDate:book.lastUpdate]];
-	
+	NSString *dateStr = [NSString stringWithFormat:@"Actualizado el %@",
+						 [NSDateFormatter spanishLongStringFromDate:book.lastUpdate]];
 	BookDetailViewController *detailsController = [[BookDetailViewController alloc] initWithTitle:book.title
 																					  description:book.bookDescription
 																					   lastUpdate:dateStr

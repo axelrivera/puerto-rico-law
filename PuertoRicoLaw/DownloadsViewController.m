@@ -9,7 +9,9 @@
 #import "DownloadsViewController.h"
 #import "Settings.h"
 #import "DownloadTableViewCell.h"
-#import "BookData.h"
+#import "RLBackgroundLoadingView.h"
+#import "APIBook.h"
+#import "NSDateFormatter+Book.h"
 
 #define kSegmentedControlItemWidth 100.0
 
@@ -22,6 +24,7 @@
 
 @implementation DownloadsViewController
 {
+	RLBackgroundLoadingView *backgroundView_;
 	UISegmentedControl *segmentedControl_;
 	UIBarButtonItem *downloadButtonItem_;
 	UIBarButtonItem *refreshButtonItem_;
@@ -37,38 +40,6 @@
 		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 			self.contentSizeForViewInPopover = kMainPopoverSize;
 		}
-		self.title = @"Downloads";
-		
-		dataSource_ = [[NSMutableArray alloc] initWithCapacity:0];
-		
-		NSDictionary *dictionary = nil;
-		
-		dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-					  @"This is a long title because I want to see what happens when I have a very long title", @"title",
-					  @"Subtitle 1", @"subtitle",
-					  @"Instalar", @"button_title",
-					  @"GRATIS", @"download_text",
-					  nil];
-		
-		[dataSource_ addObject:dictionary];
-		
-		dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-					  @"Title 2", @"title",
-					  @"Subtitle 2", @"subtitle",
-					  @"Actualizar", @"button_title",
-					  @"GRATIS", @"download_text",
-					  nil];
-		
-		[dataSource_ addObject:dictionary];
-		
-		dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-					  @"Title 3", @"title",
-					  @"Subtitle 3", @"subtitle",
-					  @"Instalado", @"button_title",
-					  @"GRATIS", @"download_text",
-					  nil];
-		
-		[dataSource_ addObject:dictionary];
 	}
 	return self;
 }
@@ -107,6 +78,15 @@
 	[self setToolbarItems:[self toolbarItemsArray]];
 	
 	self.tableView.rowHeight = 64.0;
+	
+	backgroundView_ = [[RLBackgroundLoadingView alloc] init];
+	[backgroundView_ setTitle:@"Loading..." indicator:YES];
+	[self.view addSubview:backgroundView_];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(loadBooksNotificationAction:)
+												 name:BookManagerDidLoadBooksNotification
+											   object:nil];
 }
 
 - (void)viewDidUnload
@@ -114,6 +94,9 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:BookManagerDidLoadBooksNotification object:nil];
+	
+	backgroundView_ = nil;
 	downloadButtonItem_ = nil;
 	refreshButtonItem_ = nil;
 	segmentedControl_ = nil;
@@ -125,12 +108,24 @@
 	
 	segmentedControl_.selectedSegmentIndex = [[BookData sharedBookData] downloadsSegmentedControlIndex];
 	[self performSelector:@selector(segmentedControlChangedIndex:) withObject:nil];
+	
+	[BookData sharedBookData].delegate = self;
+	
+	if ([BookData sharedBookData].booksFromAPI == nil) {
+		[[BookData sharedBookData] getBooksFromAPI];
+	}
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
 	[super viewDidAppear:animated];
 	self.modalInPopover = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+	[BookData sharedBookData].delegate = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -142,7 +137,7 @@
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
 	    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 	} else {
-	    return YES;
+		return YES;
 	}
 }
 
@@ -170,7 +165,7 @@
 
 - (NSArray *)segmentedControlTitles
 {
-	return [NSArray arrayWithObjects:@"Instaladas", @"Tienda", nil];
+	return [NSArray arrayWithObjects:@"Actualizar", @"Tienda", nil];
 }
 
 #pragma mark - Selector Actions
@@ -178,12 +173,20 @@
 - (void)segmentedControlChangedIndex:(id)sender
 {
 	[[BookData sharedBookData] setDownloadsSegmentedControlIndex:[segmentedControl_ selectedSegmentIndex]];
-	NSLog(@"Segmented Control Action");
+	
+	if ([segmentedControl_ selectedSegmentIndex] == 0) {
+		self.title = @"Actualizar Leyes";
+		self.dataSource = [[BookData sharedBookData] booksAvailableForUpdate];
+	} else {
+		self.title = @"Leyes Tienda";
+		self.dataSource = [[BookData sharedBookData] booksAvailableforInstall];
+	}
+	[self.tableView reloadData];
 }
 
 - (void)refreshAction:(id)sender
 {
-	
+	[[BookData sharedBookData] getBooksFromAPI];
 }
 
 - (void)dismissAction:(id)sender
@@ -194,6 +197,11 @@
 - (void)downloadAllAction:(id)sender
 {
 	
+}
+
+- (void)loadBooksNotificationAction:(NSNotification *)notification
+{
+	NSLog(@"%@", [BookData sharedBookData].booksFromAPI);
 }
 
 #pragma mark - Table view data source
@@ -213,60 +221,30 @@
 	
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	
-	NSDictionary *dictionary = [self.dataSource objectAtIndex:indexPath.row];
+	APIBook *book = [self.dataSource objectAtIndex:indexPath.row];
 	
-	cell.textLabel.text = [dictionary objectForKey:@"title"];
-	cell.detailTextLabel.text = [dictionary objectForKey:@"subtitle"];
-	
-	[cell.downloadButton setTitle:[dictionary objectForKey:@"button_title"] forState:UIControlStateNormal];
-	
-	if (indexPath.row == 2) {
-		cell.downloadButton.enabled = NO;
+	NSString *buttonTitle = nil;
+	NSString *dateSubstring = nil;
+	if ([segmentedControl_ selectedSegmentIndex] == 0) {
+		buttonTitle = @"Actualizar";
+		dateSubstring = @"Actualizado";
+	} else {
+		buttonTitle = @"Instalar";
+		dateSubstring = @"Fecha";
 	}
 	
-	cell.downloadLabel.text = [dictionary objectForKey:@"download_text"];
+	NSString *dateStr = [NSString stringWithFormat:@"%@: %@",
+						 dateSubstring,
+						 [NSDateFormatter spanishMediumStringFromDate:book.date]];
+	
+	cell.textLabel.text = book.title;
+	cell.detailTextLabel.text = dateStr;
+	
+	[cell.downloadButton setTitle:buttonTitle forState:UIControlStateNormal];
+	cell.downloadLabel.text = @"GRATIS";
     
     return cell;
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
@@ -279,6 +257,24 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+#pragma mark - BookDataUpdateDelegate Methods
+
+- (void)didBeginCheckingForUpdate
+{
+	[backgroundView_ show];
+}
+
+- (void)didLoadBooksForUpdate:(NSArray *)books
+{
+	[backgroundView_ hide];
+	[self performSelector:@selector(segmentedControlChangedIndex:) withObject:nil];
+}
+
+- (void)didFailToLoadBooksForUpdate:(NSError *)error
+{
+	[backgroundView_ hide];
 }
 
 @end

@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BookData.h"
 
 @protocol DownloadsViewControllerDelegate;
 
-@interface DownloadsViewController : UITableViewController
+@interface DownloadsViewController : UITableViewController <BookDataUpdateDelegate>
 
 @property (unsafe_unretained, nonatomic) id <DownloadsViewControllerDelegate> delegate;
-@property (strong, nonatomic) NSMutableArray *dataSource;
+@property (strong, nonatomic) NSArray *dataSource;
 
 @end
 

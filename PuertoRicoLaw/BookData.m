@@ -15,10 +15,13 @@
 
 #define kDownloadQueueName @"DownloadQueueName"
 
+NSString * const BookManagerDidLoadBooksNotification = @"BookManagerDidLoadBooksNotification";
+
 static BookData *sharedBookData_ = nil;
 
 @interface BookData (Private)
 
+- (void)setupBooksforUpdateAndInstall;
 - (void)runRequests;
 
 @end
@@ -33,6 +36,8 @@ static BookData *sharedBookData_ = nil;
 @synthesize books = books_;
 @synthesize favoriteBooks = favoriteBooks_;
 @synthesize booksFromAPI = booksFromAPI_;
+@synthesize booksAvailableForUpdate = booksAvailableForUpdate_;
+@synthesize booksAvailableforInstall = booksAvailableForInstall_;
 @synthesize booksFromAPILastUpdate = booksFromAPILastUpdate_;
 @synthesize downloadsSegmentedControlIndex = downloadsSegmentedControlIndex_;
 @synthesize requestQueue = requestQueue_;
@@ -45,6 +50,8 @@ static BookData *sharedBookData_ = nil;
 		books_ = [[NSMutableArray alloc] initWithCapacity:0];
 		favoriteBooks_ = [[NSMutableArray alloc] initWithCapacity:0];
 		booksFromAPI_ = nil;
+		booksAvailableForUpdate_ = [NSArray array];
+		booksAvailableForInstall_ = [NSArray array];
 		booksFromAPILastUpdate_ = nil;
 		downloadsSegmentedControlIndex_ = 0;
 		updateRequests_ = [[NSMutableArray alloc] initWithCapacity:0];
@@ -59,21 +66,23 @@ static BookData *sharedBookData_ = nil;
 	if (self) {
 		//self.object = [decoder decodeObjectForKey:@"objectName"];
 		NSArray *books = [decoder decodeObjectForKey:@"bookDataBooks"];
-		self.books = [[NSMutableArray alloc] initWithArray:books];
+		books_ = [[NSMutableArray alloc] initWithArray:books];
 		
 		NSArray *favoriteBooks = [decoder decodeObjectForKey:@"bookDataFavoriteBooks"];
-		self.favoriteBooks = [[NSMutableArray alloc] initWithArray:favoriteBooks];
+		favoriteBooks_ = [[NSMutableArray alloc] initWithArray:favoriteBooks];
 		
-		self.booksFromAPILastUpdate = [decoder decodeObjectForKey:@"booksFromAPILastUpdate"];
+		booksFromAPILastUpdate_ = [decoder decodeObjectForKey:@"booksFromAPILastUpdate"];
 		
 		NSNumber *downloadsIndex = [decoder decodeObjectForKey:@"bookDataDownloadsSegmentedControlIndex"];
 		if (downloadsIndex == nil) {
 			downloadsIndex = [NSNumber numberWithInteger:0];
 		}
-		self.downloadsSegmentedControlIndex = [downloadsIndex integerValue];
+		downloadsSegmentedControlIndex_ = [downloadsIndex integerValue];
 		
 		[self loadBooks];
-		self.booksFromAPI = nil;
+		booksFromAPI_ = nil;
+		booksAvailableForUpdate_ = [NSArray array];
+		booksAvailableForInstall_ = [NSArray array];
 	}
 	return self;
 }
@@ -222,6 +231,25 @@ static BookData *sharedBookData_ = nil;
 
 #pragma mark - Private Methods
 
+- (void)setupBooksforUpdateAndInstall
+{
+	NSDictionary *installedBooks = [self booksDictionary];
+	NSMutableArray *updateArray = [[NSMutableArray alloc] initWithCapacity:0];
+	NSMutableArray *installArray = [[NSMutableArray alloc] initWithCapacity:0];
+	for (APIBook *book in self.booksFromAPI) {
+		Book *installed = [installedBooks objectForKey:book.name];
+		if (installed == nil) {
+			[installArray addObject:book];
+		} else {
+			if (!book.isPurchase && [book.bookVersion integerValue] > [installed.bookVersion integerValue]) {
+				[updateArray addObject:book];
+			}
+		}
+	}
+	self.booksAvailableForUpdate = updateArray;
+	self.booksAvailableforInstall = installArray;
+}
+
 - (void)runRequests
 {
 	for (NSDictionary *dictionary in updateRequests_) {
@@ -270,6 +298,9 @@ static BookData *sharedBookData_ = nil;
 {
 	self.booksFromAPI = objects;
 	self.booksFromAPILastUpdate = [NSDate date];
+	[self setupBooksforUpdateAndInstall];
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName:BookManagerDidLoadBooksNotification object:nil];
 	
 	if ([self.delegate respondsToSelector:@selector(didLoadBooksForUpdate:)]) {
 		[self.delegate didLoadBooksForUpdate:objects];

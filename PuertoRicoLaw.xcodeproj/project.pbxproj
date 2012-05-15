@@ -86,6 +86,8 @@
 		1673F16B14ACAED90065126B /* TableSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1673F16914ACAED90065126B /* TableSelectViewController.xib */; };
 		1673F17814ACDF1D0065126B /* ContentPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1673F17614ACDF1D0065126B /* ContentPreviewViewController.m */; };
 		1673F17914ACDF1D0065126B /* ContentPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1673F17714ACDF1D0065126B /* ContentPreviewViewController.xib */; };
+		16791DF115602C44002FA16C /* RLBackgroundLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16791DF015602C44002FA16C /* RLBackgroundLoadingView.m */; };
+		16791DF41560A498002FA16C /* NSDateFormatter+Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 16791DF31560A498002FA16C /* NSDateFormatter+Book.m */; };
 		167E35B41538528600EA535E /* APIBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 167E35B31538528600EA535E /* APIBook.m */; };
 		167E368715389A3200EA535E /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 167E367D15389A3200EA535E /* ioapi.c */; };
 		167E368815389A3200EA535E /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 167E367F15389A3200EA535E /* mztools.c */; settings = {COMPILER_FLAGS = "-w"; }; };
@@ -284,6 +286,10 @@
 		1673F17514ACDF1D0065126B /* ContentPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentPreviewViewController.h; sourceTree = "<group>"; };
 		1673F17614ACDF1D0065126B /* ContentPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentPreviewViewController.m; sourceTree = "<group>"; };
 		1673F17714ACDF1D0065126B /* ContentPreviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentPreviewViewController.xib; sourceTree = "<group>"; };
+		16791DEF15602C44002FA16C /* RLBackgroundLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLBackgroundLoadingView.h; sourceTree = "<group>"; };
+		16791DF015602C44002FA16C /* RLBackgroundLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLBackgroundLoadingView.m; sourceTree = "<group>"; };
+		16791DF21560A498002FA16C /* NSDateFormatter+Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Book.h"; sourceTree = "<group>"; };
+		16791DF31560A498002FA16C /* NSDateFormatter+Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Book.m"; sourceTree = "<group>"; };
 		167E35B21538528600EA535E /* APIBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIBook.h; sourceTree = "<group>"; };
 		167E35B31538528600EA535E /* APIBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIBook.m; sourceTree = "<group>"; };
 		167E367C15389A3200EA535E /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
@@ -408,6 +414,8 @@
 				1671F10E14AF91FA0019B181 /* UIViewController+Section.m */,
 				16DFA24E14B4C7FB00517778 /* UIWebView+Highlight.h */,
 				16DFA24F14B4C7FB00517778 /* UIWebView+Highlight.m */,
+				16791DF21560A498002FA16C /* NSDateFormatter+Book.h */,
+				16791DF31560A498002FA16C /* NSDateFormatter+Book.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -450,6 +458,8 @@
 				16D45B3614FFEC3D0012BE90 /* EndorsementView.m */,
 				162B284F155B43D3001451B7 /* DownloadTableViewCell.h */,
 				162B2850155B43D3001451B7 /* DownloadTableViewCell.m */,
+				16791DEF15602C44002FA16C /* RLBackgroundLoadingView.h */,
+				16791DF015602C44002FA16C /* RLBackgroundLoadingView.m */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -960,6 +970,8 @@
 				16CAD3F8153B346900B737DB /* MBProgressHUD.m in Sources */,
 				16024A3F1559F9B000D84546 /* DownloadsViewController.m in Sources */,
 				162B2851155B43D3001451B7 /* DownloadTableViewCell.m in Sources */,
+				16791DF115602C44002FA16C /* RLBackgroundLoadingView.m in Sources */,
+				16791DF41560A498002FA16C /* NSDateFormatter+Book.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

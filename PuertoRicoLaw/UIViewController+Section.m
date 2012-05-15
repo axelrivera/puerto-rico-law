@@ -12,21 +12,7 @@
 #import "SectionListViewController.h"
 #import "SectionContentViewController.h"
 
-static NSDateFormatter *dateFormatter_;
-
 @implementation UIViewController (Section)
-
-+ (NSDateFormatter *)dateFormatter
-{
-	if (dateFormatter_ == nil) {
-		NSLocale *spanishLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"es_ES"];
-		dateFormatter_ = [[NSDateFormatter alloc] init];
-		dateFormatter_.locale = spanishLocale;
-		dateFormatter_.timeStyle = NSDateFormatterNoStyle;
-		dateFormatter_.dateStyle = NSDateFormatterLongStyle;
-	}
-	return dateFormatter_;
-}
 
 - (NSArray *)sectionToolbarItems
 {	

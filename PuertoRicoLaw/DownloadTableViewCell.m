@@ -40,6 +40,7 @@
 		self.textLabel.textAlignment = UITextAlignmentLeft;
 		self.textLabel.lineBreakMode = UILineBreakModeTailTruncation;
 		self.detailTextLabel.font = detailFont_;
+		self.detailTextLabel.textColor = [UIColor lightGrayColor];
 		self.detailTextLabel.minimumFontSize = 10.0;
 		self.detailTextLabel.adjustsFontSizeToFitWidth = YES;
 		self.detailTextLabel.textAlignment = UITextAlignmentLeft;

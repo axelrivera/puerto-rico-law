@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <RestKit/RestKit.h>
 
+extern NSString * const BookManagerDidLoadBooksNotification;
+
 @protocol BookDataUpdateDelegate;
 
 @class Book;
@@ -20,6 +22,8 @@
 @property (strong, nonatomic) NSMutableArray *books;
 @property (strong, nonatomic) NSMutableArray *favoriteBooks;
 @property (strong, nonatomic) NSArray *booksFromAPI;
+@property (strong, nonatomic) NSArray *booksAvailableForUpdate;
+@property (strong, nonatomic) NSArray *booksAvailableforInstall;
 @property (strong, nonatomic) NSDate *booksFromAPILastUpdate;
 @property (assign, nonatomic) NSInteger downloadsSegmentedControlIndex;
 @property (strong, nonatomic) RKRequestQueue *requestQueue;
