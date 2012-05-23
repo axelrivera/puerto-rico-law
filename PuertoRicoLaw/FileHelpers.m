@@ -29,16 +29,6 @@ NSString *pathInTemporaryDirectory(NSString *fileName)
 	return [NSTemporaryDirectory() stringByAppendingPathComponent:fileName];
 }
 
-NSString *mainSectionFilenameForBookName(NSString *bookName)
-{
-	return [NSString stringWithFormat:@"%@_mainSection.data", bookName];
-}
-
-NSString *mainSectionPathForBookName(NSString *bookName)
-{
-	return pathInDocumentDirectory(mainSectionFilenameForBookName(bookName));
-}
-
 NSString *bookDataPath(void)
 {
 	return pathInDocumentDirectory(@"bookData.data");

@@ -14,7 +14,7 @@
 @interface DownloadsViewController : UITableViewController <BookDataUpdateDelegate>
 
 @property (unsafe_unretained, nonatomic) id <DownloadsViewControllerDelegate> delegate;
-@property (strong, nonatomic) NSArray *dataSource;
+@property (strong, nonatomic) NSMutableArray *dataSource;
 
 @end
 

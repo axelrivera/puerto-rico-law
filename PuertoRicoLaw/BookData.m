@@ -22,7 +22,7 @@ static BookData *sharedBookData_ = nil;
 @interface BookData (Private)
 
 - (void)setupBooksforUpdateAndInstall;
-- (void)runRequests;
+- (BOOL)installBook:(APIBook *)apiBook withData:(NSData *)fileData;
 
 @end
 
@@ -40,7 +40,6 @@ static BookData *sharedBookData_ = nil;
 @synthesize booksAvailableforInstall = booksAvailableForInstall_;
 @synthesize booksFromAPILastUpdate = booksFromAPILastUpdate_;
 @synthesize downloadsSegmentedControlIndex = downloadsSegmentedControlIndex_;
-@synthesize requestQueue = requestQueue_;
 
 - (id)init
 {
@@ -50,8 +49,8 @@ static BookData *sharedBookData_ = nil;
 		books_ = [[NSMutableArray alloc] initWithCapacity:0];
 		favoriteBooks_ = [[NSMutableArray alloc] initWithCapacity:0];
 		booksFromAPI_ = nil;
-		booksAvailableForUpdate_ = [NSArray array];
-		booksAvailableForInstall_ = [NSArray array];
+		booksAvailableForUpdate_ = [NSMutableArray arrayWithCapacity:0];
+		booksAvailableForInstall_ = [NSMutableArray arrayWithCapacity:0];
 		booksFromAPILastUpdate_ = nil;
 		downloadsSegmentedControlIndex_ = 0;
 		updateRequests_ = [[NSMutableArray alloc] initWithCapacity:0];
@@ -79,10 +78,11 @@ static BookData *sharedBookData_ = nil;
 		}
 		downloadsSegmentedControlIndex_ = [downloadsIndex integerValue];
 		
-		[self loadBooks];
+#warning Remove Comment
+		//[self loadBooks];
 		booksFromAPI_ = nil;
-		booksAvailableForUpdate_ = [NSArray array];
-		booksAvailableForInstall_ = [NSArray array];
+		booksAvailableForUpdate_ = [NSMutableArray arrayWithCapacity:0];
+		booksAvailableForInstall_ = [NSMutableArray arrayWithCapacity:0];
 	}
 	return self;
 }
@@ -103,45 +103,50 @@ static BookData *sharedBookData_ = nil;
 {
 	if (![[NSFileManager defaultManager] fileExistsAtPath:pathInBooksDirectory(@"")]) {
 		[[NSFileManager defaultManager] createDirectoryAtPath:pathInBooksDirectory(@"")
-												   withIntermediateDirectories:NO
+								  withIntermediateDirectories:NO
 												   attributes:nil
 														error:nil];
 	}
 	
+	// Path of File with the list of default books to install
 	NSString *plistPath = [[NSBundle mainBundle] pathForResource:kBookListFileName ofType:@"plist"];
     
     // Read in the plist file
     NSDictionary *plistDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
 	NSArray *booksArray = [plistDictionary objectForKey:kBookListKey];
 	
-	NSInteger bookIndex;
-	for (NSString *string in booksArray) {
-		NSString *dictionaryPath = pathInBooksDirectory([string stringByAppendingPathExtension:@"plist"]);
+	for (NSString *bookName in booksArray) {
+		NSString *dictionaryPath = pathInBooksDirectory([bookName stringByAppendingPathExtension:@"plist"]);
 		if (![[NSFileManager defaultManager] fileExistsAtPath:dictionaryPath]) {
 			NSError *error = nil;
-			[[NSFileManager defaultManager] copyItemAtPath:[[NSBundle mainBundle] pathForResource:string ofType:@"plist"]
+			[[NSFileManager defaultManager] copyItemAtPath:[[NSBundle mainBundle] pathForResource:bookName ofType:@"plist"]
 													toPath:dictionaryPath
 													 error:&error];
 			if (error) continue;
 		}
-		
-		NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:dictionaryPath];
-		NSDictionary *bookDictionary = [dictionary objectForKey:kBookInfoKey];
-		dictionary = nil;
-		
-		Book *defaultBook = [[Book alloc] initWithDictionary:bookDictionary];
-		bookIndex = [self indexOfBook:defaultBook];
-		
-		if (bookIndex == -1) {
-			[self.books addObject:defaultBook];
-		} else {
-			Book *currentBook = [self.books objectAtIndex:bookIndex];
-			if ([defaultBook isNewComparedToBook:currentBook]) {
-				[self.books replaceObjectAtIndex:bookIndex withObject:defaultBook];
-				deletePathInDocumentDirectory(mainSectionFilenameForBookName(defaultBook.name));
-			}
+		[self loadBookWithName:bookName];
+	}
+}
+
+- (BOOL)loadBookWithName:(NSString *)bookName
+{
+	NSString *dictionaryPath = pathInBooksDirectory([bookName stringByAppendingPathExtension:@"plist"]);
+	NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:dictionaryPath];
+	NSDictionary *bookDictionary = [dictionary objectForKey:kBookInfoKey];
+	dictionary = nil;
+	
+	Book *defaultBook = [[Book alloc] initWithDictionary:bookDictionary];
+	NSInteger bookIndex = [self indexOfBook:defaultBook];
+	
+	if (bookIndex == -1) {
+		[self.books addObject:defaultBook];
+	} else {
+		Book *currentBook = [self.books objectAtIndex:bookIndex];
+		if ([defaultBook isNewComparedToBook:currentBook]) {
+			[self.books replaceObjectAtIndex:bookIndex withObject:defaultBook];
 		}
 	}
+	return YES;
 }
 
 - (NSInteger)indexOfBook:(Book *)book
@@ -189,44 +194,45 @@ static BookData *sharedBookData_ = nil;
 
 - (void)updateBooksFromAPI
 {
-	[updateRequests_ removeAllObjects];
-	RKRequestQueue *queue = [RKRequestQueue newRequestQueueWithName:kDownloadQueueName];
-	queue.suspended = YES;
-	queue.delegate = self;
-	queue.concurrentRequestsLimit = 1;
-	queue.showsNetworkActivityIndicatorWhenBusy = YES;
 	
 	NSDictionary *installedBooks = [self booksDictionary];
-	
-	RKRequest *request = nil;
 	
 	for (APIBook *api in self.booksFromAPI) {
 		Book *installed = [installedBooks objectForKey:api.name];
 		if (installed) {
 			if ([api.bookVersion integerValue] > [installed.bookVersion integerValue]) {
-				NSString *resourcePath = [NSString stringWithFormat:@"/download/%@", [api zipFile]];
-				request = [[RKObjectManager sharedManager].client requestWithResourcePath:resourcePath];
-				request.userData = api;
-				request.delegate = self;
-				[queue addRequest:request];
+//				NSString *resourcePath = [NSString stringWithFormat:@"/download/%@", [api zipFile]];
+//				request = [[RKObjectManager sharedManager].client requestWithResourcePath:resourcePath];
+//				request.userData = api;
+//				request.delegate = self;
 			}
 		}
 	}
-	
-	queue.suspended = NO;
-	self.requestQueue = queue;
 }
 
 - (void)cancelAllBookRequests
 {
-	[[RKObjectManager sharedManager].client.requestQueue cancelAllRequests];
-	[self.requestQueue cancelAllRequests];
-	self.requestQueue = nil;
+
 }
 
 - (void)sortBooksAlphabetically
 {
 	[self.books sortUsingSelector:@selector(compareTitleAlphabetically:)];
+}
+
+- (void)downloadAndInstallBook:(APIBook *)book
+{
+	if ([self.delegate respondsToSelector:@selector(willBeginInstallingAPIBook:)]) {
+		[self.delegate willBeginInstallingAPIBook:book];
+	}
+	
+	NSString *resourcePath = [NSString stringWithFormat:@"/download/%@", [book zipFile]];
+	NSLog(@"Resource Path: %@", resourcePath);
+	RKRequest *request = [[RKObjectManager sharedManager].client requestWithResourcePath:resourcePath];
+	request.method = RKRequestMethodGET;
+	request.userData = book;
+	request.delegate = self;
+	[request send];
 }
 
 #pragma mark - Private Methods
@@ -241,6 +247,7 @@ static BookData *sharedBookData_ = nil;
 		if (installed == nil) {
 			[installArray addObject:book];
 		} else {
+			// We don't care about books that are In-App Purchases.  They will be handled somewhere else.
 			if (!book.isPurchase && [book.bookVersion integerValue] > [installed.bookVersion integerValue]) {
 				[updateArray addObject:book];
 			}
@@ -250,46 +257,68 @@ static BookData *sharedBookData_ = nil;
 	self.booksAvailableforInstall = installArray;
 }
 
-- (void)runRequests
+- (BOOL)installBook:(APIBook *)apiBook withData:(NSData *)fileData
 {
-	for (NSDictionary *dictionary in updateRequests_) {
-		APIBook *apiBook = [dictionary objectForKey:@"apiBook"];
-		NSData *fileData = [dictionary objectForKey:@"apiData"];
-		
-		if (![[fileData MD5] isEqualToString:apiBook.md5]) {
-			return;
-		}
-		
-		NSString *tmpZipFilepath = pathInTemporaryDirectory([apiBook zipFile]);
-		NSString *tmpPlistFilepath = pathInTemporaryDirectory([apiBook plistFile]);
-		NSString *bookPath = pathInBooksDirectory([apiBook plistFile]);
-		BOOL didWriteFile = [fileData writeToFile:tmpZipFilepath atomically:YES];
-		if (didWriteFile) {
-			ZipArchive *archive = [[ZipArchive alloc] init];
-			if ([archive UnzipOpenFile:tmpZipFilepath]) {
-				if ([archive UnzipFileTo:pathInTemporaryDirectory(@"") overWrite:YES]) {
-					[archive UnzipCloseFile];
-					if ([[NSFileManager defaultManager] fileExistsAtPath:tmpPlistFilepath]) {
-						if ([[NSFileManager defaultManager] fileExistsAtPath:bookPath]) {
-							NSString *tmpFilePath = pathInBooksDirectory(@"tmp.plist");
-							
-							NSError *error = nil;
-							[[NSFileManager defaultManager] moveItemAtPath:bookPath toPath:tmpFilePath error:&error];
-							if (error) return;
-							
-							error = nil;
-							[[NSFileManager defaultManager] moveItemAtPath:tmpPlistFilepath toPath:bookPath error:&error];
-							if (error) {
-								[[NSFileManager defaultManager] moveItemAtPath:tmpFilePath toPath:bookPath error:nil];
-							} else {
-								[[NSFileManager defaultManager] removeItemAtPath:tmpFilePath error:nil];
-							}
+	if (![[NSFileManager defaultManager] fileExistsAtPath:pathInBooksDirectory(@"")]) {
+		[[NSFileManager defaultManager] createDirectoryAtPath:pathInBooksDirectory(@"")
+								  withIntermediateDirectories:NO
+												   attributes:nil
+														error:nil];
+	}
+	
+	if (![[fileData MD5] isEqualToString:apiBook.md5]) {
+		NSLog(@"Hash mismatch");
+		return NO;
+	}
+	
+	NSString *tmpZipFilepath = pathInTemporaryDirectory([apiBook zipFile]);
+	NSString *tmpPlistFilepath = pathInTemporaryDirectory([apiBook plistFile]);
+	NSString *bookPath = pathInBooksDirectory([apiBook plistFile]);
+	BOOL didWriteFile = [fileData writeToFile:tmpZipFilepath atomically:YES];
+	if (didWriteFile) {
+		ZipArchive *archive = [[ZipArchive alloc] init];
+		if ([archive UnzipOpenFile:tmpZipFilepath]) {
+			if ([archive UnzipFileTo:pathInTemporaryDirectory(@"") overWrite:YES]) {
+				[archive UnzipCloseFile];
+				
+				NSError *error;
+				NSString *tmpFilePath = nil;
+				
+				if ([[NSFileManager defaultManager] fileExistsAtPath:tmpPlistFilepath])
+				{
+					if ([[NSFileManager defaultManager] fileExistsAtPath:bookPath]) {
+						tmpFilePath = pathInBooksDirectory(@"tmp.plist");
+						error = nil;
+						// Move the current book to a temporary file
+						[[NSFileManager defaultManager] moveItemAtPath:bookPath toPath:tmpFilePath error:&error];
+						if (error) {
+							NSLog(@"Error moving current book to temporary file");
+							return NO;
 						}
+					}
+						
+					error = nil;
+					// Move downloaded file to the documents directory
+					[[NSFileManager defaultManager] moveItemAtPath:tmpPlistFilepath toPath:bookPath error:&error];
+					if (error) {
+						// If we couldn't move the new file then move the old file back
+						[[NSFileManager defaultManager] moveItemAtPath:tmpFilePath toPath:bookPath error:nil];
+						NSLog(@"Error moving file back to old file");
+						return NO;
+					} else {
+						if (tmpFilePath) {
+							// Remove the temporary file if we succedded installing the new file
+							[[NSFileManager defaultManager] removeItemAtPath:tmpFilePath error:nil];
+						}
+						NSLog(@"Oh my YES");
+						return YES;
 					}
 				}
 			}
 		}
 	}
+	NSLog(@"WTF!");
+	return NO;
 }
 
 #pragma mark - RestKit Delegate Methods
@@ -319,35 +348,18 @@ static BookData *sharedBookData_ = nil;
 {
 	NSLog(@"finished request");
 	if ([response isSuccessful]) {
-		NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
-									request.userData, @"apiBook",
-									[response body], @"apiData",
-									nil];
-		[updateRequests_ addObject:dictionary];
-	}
-}
-
-- (void)requestQueue:(RKRequestQueue *)queue didSendRequest:(RKRequest *)request
-{
-	NSLog(@"RKRequestQueue %@ is current loading %d of %d requests", queue, [queue loadingCount], [queue count]);
-}
-
-- (void)requestQueueDidBeginLoading:(RKRequestQueue *)queue
-{
-	NSLog(@"Queue began loading with objects: %d", [queue count]);
-}
-
-- (void)requestQueueDidFinishLoading:(RKRequestQueue *)queue
-{
-	if ([queue.name isEqualToString:kDownloadQueueName]) {
-		[self performSelectorOnMainThread:@selector(runRequests) withObject:nil waitUntilDone:YES];
-		[self performSelectorOnMainThread:@selector(loadBooks) withObject:nil waitUntilDone:YES];
-		
-		if ([queue count] == 1) {
-			if ([self.delegate respondsToSelector:@selector(didFinishUpdatingBooks)]) {
-				NSLog(@"Finished Updating Books");
-				[self.delegate didFinishUpdatingBooks];
+		//NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
+		//							request.userData, @"apiBook",
+		//							[response body], @"apiData",
+		//							nil];
+		//[updateRequests_ addObject:dictionary];
+		NSLog(@"Content Type: %@, Content Length: %@", response.contentType, response.contentLength);
+		if ([self installBook:request.userData withData:[response body]]) {
+			if ([self.delegate respondsToSelector:@selector(didFinishInstallingAPIBook:)]) {
+				[self.delegate didFinishInstallingAPIBook:request.userData];
 			}
+		} else {
+			NSLog(@"Something happened");
 		}
 	}
 }

@@ -12,6 +12,7 @@
 #import "RLBackgroundLoadingView.h"
 #import "APIBook.h"
 #import "NSDateFormatter+Book.h"
+#import "MBProgressHUD.h"
 
 #define kSegmentedControlItemWidth 100.0
 
@@ -28,6 +29,7 @@
 	UISegmentedControl *segmentedControl_;
 	UIBarButtonItem *downloadButtonItem_;
 	UIBarButtonItem *refreshButtonItem_;
+	MBProgressHUD *HUD_;
 }
 
 @synthesize delegate = delegate_;
@@ -199,6 +201,12 @@
 	
 }
 
+- (void)downloadBookAction:(id)sender
+{
+	APIBook *book = [self.dataSource objectAtIndex:[sender tag]];
+	[[BookData sharedBookData] downloadAndInstallBook:book];
+}
+
 - (void)loadBooksNotificationAction:(NSNotification *)notification
 {
 	NSLog(@"%@", [BookData sharedBookData].booksFromAPI);
@@ -222,6 +230,7 @@
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	
 	APIBook *book = [self.dataSource objectAtIndex:indexPath.row];
+	book.userData = [NSNumber numberWithInteger:indexPath.row];
 	
 	NSString *buttonTitle = nil;
 	NSString *dateSubstring = nil;
@@ -241,6 +250,8 @@
 	cell.detailTextLabel.text = dateStr;
 	
 	[cell.downloadButton setTitle:buttonTitle forState:UIControlStateNormal];
+	cell.downloadButton.tag = indexPath.row;
+	[cell.downloadButton addTarget:self action:@selector(downloadBookAction:) forControlEvents:UIControlEventTouchUpInside];
 	cell.downloadLabel.text = @"GRATIS";
     
     return cell;
@@ -264,6 +275,30 @@
 - (void)didBeginCheckingForUpdate
 {
 	[backgroundView_ show];
+}
+
+- (void)willBeginInstallingAPIBook:(APIBook *)book
+{
+	HUD_ = [MBProgressHUD showHUDAddedTo:self.view.window animated:YES];
+	
+	HUD_.removeFromSuperViewOnHide = YES;
+	HUD_.dimBackground = YES;
+	HUD_.labelText = @"Instalando...";
+}
+
+- (void)didFinishInstallingAPIBook:(APIBook *)book
+{
+	// I should put an error in this delegate method
+	[[BookData sharedBookData] loadBookWithName:book.name];
+	[HUD_ hide:YES];
+	HUD_ = nil;
+	
+	NSInteger bookIndex = [book.userData integerValue];
+	
+	[self.dataSource removeObjectAtIndex:bookIndex];
+	[self.tableView beginUpdates];
+	[self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationTop];
+	[self.tableView endUpdates];
 }
 
 - (void)didLoadBooksForUpdate:(NSArray *)books

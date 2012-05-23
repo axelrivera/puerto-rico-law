@@ -77,7 +77,8 @@
 	BookData *bookData = [NSKeyedUnarchiver unarchiveObjectWithFile:bookDataPath()];
 	if (bookData == nil) {
 		bookData = [BookData sharedBookData];
-		[bookData loadBooks];
+#warning Remove Comment
+		//[bookData loadBooks];
 	}
 	
 	// Reset the book data every time the app starts.

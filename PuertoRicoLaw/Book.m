@@ -35,6 +35,7 @@
 @synthesize bookVersion = bookVersion_;
 @synthesize mainSection = mainSection_;
 @synthesize favorites = favorites_;
+@synthesize userData = userData_;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
 {
@@ -52,6 +53,7 @@
 		self.bookVersion = [dictionary objectForKey:kBookVersionKey];
 		self.mainSection = nil;
 		self.favorites = [[NSMutableArray alloc] initWithCapacity:0];
+		self.userData = nil;
 	}
 	return self;
 }
@@ -72,6 +74,7 @@
 		self.mainSection = [decoder decodeObjectForKey:@"bookMainSection"];
 		NSMutableArray *favorites = [decoder decodeObjectForKey:@"bookFavorites"];
 		self.favorites = favorites;
+		self.userData = nil;
 	}
 	return self;
 }
@@ -98,13 +101,7 @@
 }
 
 - (void)loadSections
-{
-//	self.mainSection = [self unarchiveMainSection];
-//	if (self.mainSection) {
-//		[self reloadSection:self.mainSection andParent:nil];
-//		return;
-//	}
-	
+{	
 	self.favorites = [[NSMutableArray alloc] initWithCapacity:0];
 	self.mainSection = [[Section alloc] initWithBook:self];
 	
@@ -124,14 +121,11 @@
 	
 	if ([sections count] > 0) {
 		self.mainSection.children = (NSArray *)sections;
-	}
-	
-	//[self archiveMainSection];
+	}	
 }
 
 - (void)clearSections
 {
-	//[self archiveMainSection];
 	self.mainSection = nil;
 }
 
@@ -146,21 +140,6 @@
 		}
 	}
 	return index;
-}
-
-- (void)archiveMainSection
-{
-	[NSKeyedArchiver archiveRootObject:self.mainSection toFile:[self mainSectionDataFileName]];
-}
-
-- (id)unarchiveMainSection
-{
-	return [NSKeyedUnarchiver unarchiveObjectWithFile:[self mainSectionDataFileName]];
-}
-
-- (NSString *)mainSectionDataFileName
-{
-	return mainSectionPathForBookName(self.name);
 }
 
 - (void)reloadSection:(Section *)section andParent:(Section *)parent

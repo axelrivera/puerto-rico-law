@@ -17,6 +17,7 @@
 @synthesize isPurchase = isPurchase_;
 @synthesize bookVersion = bookVersion_;
 @synthesize md5 = md5_;
+@synthesize userData = userData_;
 
 - (id)init
 {
@@ -29,7 +30,7 @@
 
 - (NSString *)zipFile
 {
-	return [NSString stringWithFormat:@"%@.zip", self.name, [self.bookVersion integerValue]];
+	return [NSString stringWithFormat:@"%@.zip", self.name];
 }
 
 - (NSString *)plistFile

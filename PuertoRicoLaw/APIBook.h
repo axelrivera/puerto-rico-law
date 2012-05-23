@@ -18,6 +18,7 @@
 @property (assign, nonatomic) BOOL isPurchase;
 @property (strong, nonatomic) NSNumber *bookVersion;
 @property (strong, nonatomic) NSString *md5;
+@property (strong, nonatomic) id userData;
 
 - (NSString *)zipFile;
 - (NSString *)plistFile;

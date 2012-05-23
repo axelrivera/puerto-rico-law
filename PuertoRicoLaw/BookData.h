@@ -14,23 +14,24 @@ extern NSString * const BookManagerDidLoadBooksNotification;
 @protocol BookDataUpdateDelegate;
 
 @class Book;
+@class APIBook;
 
-@interface BookData : NSObject <NSCoding, RKObjectLoaderDelegate, RKRequestQueueDelegate, RKRequestDelegate>
+@interface BookData : NSObject <NSCoding, RKObjectLoaderDelegate, RKRequestDelegate>
 
 @property (unsafe_unretained, nonatomic) id <BookDataUpdateDelegate> delegate;
 @property (unsafe_unretained, nonatomic) Book *currentBook;
 @property (strong, nonatomic) NSMutableArray *books;
 @property (strong, nonatomic) NSMutableArray *favoriteBooks;
 @property (strong, nonatomic) NSArray *booksFromAPI;
-@property (strong, nonatomic) NSArray *booksAvailableForUpdate;
-@property (strong, nonatomic) NSArray *booksAvailableforInstall;
+@property (strong, nonatomic) NSMutableArray *booksAvailableForUpdate;
+@property (strong, nonatomic) NSMutableArray *booksAvailableforInstall;
 @property (strong, nonatomic) NSDate *booksFromAPILastUpdate;
 @property (assign, nonatomic) NSInteger downloadsSegmentedControlIndex;
-@property (strong, nonatomic) RKRequestQueue *requestQueue;
 
 + (BookData *)sharedBookData;
 
 - (void)loadBooks;
+- (BOOL)loadBookWithName:(NSString *)bookName;
 - (NSInteger)indexOfBook:(Book *)book;
 - (NSInteger)indexOfBookInFavorites:(Book *)book;
 - (NSDictionary *)booksDictionary;
@@ -38,6 +39,7 @@ extern NSString * const BookManagerDidLoadBooksNotification;
 - (void)updateBooksFromAPI;
 - (void)cancelAllBookRequests;
 - (void)sortBooksAlphabetically;
+- (void)downloadAndInstallBook:(APIBook *)book;
 
 @end
 
@@ -47,6 +49,8 @@ extern NSString * const BookManagerDidLoadBooksNotification;
 - (void)didBeginCheckingForUpdate;
 - (void)didLoadBooksForUpdate:(NSArray *)books;
 - (void)didFailToLoadBooksForUpdate:(NSError *)error;
+- (void)willBeginInstallingAPIBook:(APIBook *)book;
+- (void)didFinishInstallingAPIBook:(APIBook *)book;
 - (void)didFinishUpdatingBooks;
 
 @end

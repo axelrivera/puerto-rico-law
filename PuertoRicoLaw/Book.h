@@ -22,14 +22,12 @@
 @property (strong, nonatomic) NSNumber *bookVersion;
 @property (strong, nonatomic) Section *mainSection;
 @property (strong, nonatomic) NSMutableArray *favorites;
+@property (strong, nonatomic) id userData;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 - (void)loadSections;
 - (void)clearSections;
 - (NSInteger)unsignedIndexOfSectionInFavorites:(Section *)section;
-- (void)archiveMainSection;
-- (id)unarchiveMainSection;
-- (NSString *)mainSectionDataFileName;
 - (void)reloadSection:(Section *)section andParent:(Section *)parent;
 - (Section *)sectionInMainSectionMatchingSectionID:(NSString *)sectionID;
 - (NSArray *)searchMainSectionWithString:(NSString *)string titleOnly:(BOOL)titleOnly;
