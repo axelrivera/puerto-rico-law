@@ -159,18 +159,17 @@
 
 - (void)updateBooksAction:(id)sender
 {
-	[[BookData sharedBookData] updateBooksFromAPI];
 }
 
 #pragma mark - BookDataUpdate Delegate Methods
 
-- (void)didBeginCheckingForUpdate
+- (void)willBeginLoadingBooks
 {
 	NSLog(@"Did start checking for Update");
 	self.updateButton.selected = YES;
 }
 
-- (void)didLoadBooksForUpdate:(NSArray *)books
+- (void)didLoadBooks:(NSArray *)books
 {
 	BOOL updateAvailable = NO;
 	
@@ -204,16 +203,9 @@
 	self.updateButton.selected = NO;
 }
 
-- (void)didFailToLoadBooksForUpdate:(NSError *)error
+- (void)didFailToLoadBooks:(NSError *)error
 {
 	self.updateButton.selected = NO;
-}
-
-- (void)didFinishUpdatingBooks
-{
-	[HUD_ hide:YES];
-	HUD_ = nil;
-	[[NSNotificationCenter defaultCenter] postNotificationName:kUpdateBooksNotification object:nil];
 }
 
 #pragma mark - Table view data source

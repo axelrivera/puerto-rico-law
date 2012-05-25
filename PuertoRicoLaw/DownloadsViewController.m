@@ -14,13 +14,14 @@
 #import "NSDateFormatter+Book.h"
 #import "MBProgressHUD.h"
 
-#define kSegmentedControlItemWidth 100.0
+#define kSegmentedControlItemWidth 130.0
 
 @interface DownloadsViewController (Private)
 
 - (NSArray *)toolbarItemsArray;
 - (NSArray *)segmentedControlTitles;
 - (void)checkEmptyView;
+- (void)downloadAll;
 
 @end
 
@@ -28,10 +29,11 @@
 {
 	RLBackgroundStatusView *backgroundLoadingView_;
 	RLBackgroundStatusView *backgroundEmptyView_;
+	UIBarButtonItem *downloadButton_;
 	UISegmentedControl *segmentedControl_;
-	UIBarButtonItem *downloadButtonItem_;
-	UIBarButtonItem *refreshButtonItem_;
 	MBProgressHUD *HUD_;
+	BOOL isDownloadingAll_;
+	NSInteger remainingDownloads_;
 }
 
 @synthesize delegate = delegate_;
@@ -67,13 +69,13 @@
 																			 target:self
 																			 action:@selector(dismissAction:)];
 	
-	downloadButtonItem_ = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize
-																		target:self
-																		action:@selector(downloadAllAction:)];
+	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+																						  target:self
+																						  action:@selector(refreshAction:)];
 	
-	refreshButtonItem_ = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
-																	   target:self
-																	   action:@selector(refreshAction:)];
+	downloadButton_ = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize
+																	target:self
+																	action:@selector(downloadAllAction:)];
 	
 	segmentedControl_ = [[UISegmentedControl alloc] initWithItems:[self segmentedControlTitles]];
 	segmentedControl_.segmentedControlStyle = UISegmentedControlStyleBar;
@@ -111,8 +113,7 @@
 	
 	backgroundLoadingView_ = nil;
 	backgroundEmptyView_ = nil;
-	downloadButtonItem_ = nil;
-	refreshButtonItem_ = nil;
+	downloadButton_ = nil;
 	segmentedControl_ = nil;
 	self.downloadsTableView = nil;
 }
@@ -168,11 +169,9 @@
 	
 	NSArray *array = [NSArray arrayWithObjects:
 					  flexibleItem,
-					  refreshButtonItem_,
-					  flexibleItem,
 					  segmentedItem,
 					  flexibleItem,
-					  downloadButtonItem_,
+					  downloadButton_,
 					  flexibleItem,
 					  nil];
 	return array;
@@ -202,12 +201,12 @@
 		self.title = @"Actualizar Leyes";
 		[backgroundEmptyView_ setTitle:@"No hay actualizaciones disponibles." indicator:NO];
 		self.dataSource = [[BookData sharedBookData] booksAvailableForUpdate];
-		downloadButtonItem_.enabled = YES;
+		downloadButton_.enabled = YES;
 	} else {
 		self.title = @"Tienda de Leyes";
 		[backgroundEmptyView_ setTitle:@"No hay leyes disponibles para instalar." indicator:NO];
 		self.dataSource = [[BookData sharedBookData] booksAvailableforInstall];
-		downloadButtonItem_.enabled = NO;
+		downloadButton_.enabled = NO;
 	}
 	
 	[self.downloadsTableView reloadData];
@@ -224,20 +223,51 @@
 	[self.delegate downloadsViewControllerDidFinish:self];
 }
 
-- (void)downloadAllAction:(id)sender
-{
-	
-}
-
 - (void)downloadBookAction:(id)sender
 {
+	isDownloadingAll_ = NO;
+	remainingDownloads_ = 1;
 	APIBook *book = [self.dataSource objectAtIndex:[sender tag]];
 	[[BookData sharedBookData] downloadAndInstallBook:book];
+}
+
+- (void)downloadAllAction:(id)sender
+{
+	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Actualizar todas las leyes disponibles."
+															 delegate:self
+													cancelButtonTitle:@"No"
+											   destructiveButtonTitle:nil
+													otherButtonTitles:@"Si", nil];
+	[actionSheet showFromToolbar:self.navigationController.toolbar];
 }
 
 - (void)loadBooksNotificationAction:(NSNotification *)notification
 {
 	NSLog(@"%@", [BookData sharedBookData].booksFromAPI);
+}
+
+- (void)showHUD
+{
+	HUD_ = [MBProgressHUD showHUDAddedTo:self.view.window animated:YES];
+	HUD_.removeFromSuperViewOnHide = YES;
+	HUD_.dimBackground = NO;
+	
+	NSString *labelStr = nil;
+	if ([segmentedControl_ selectedSegmentIndex] == 0) {
+		labelStr = @"Actualizando...";
+	} else {
+		labelStr = @"Instalando...";
+	}
+	HUD_.labelText = labelStr;
+}
+
+- (void)downloadAll
+{
+	isDownloadingAll_ = YES;
+	remainingDownloads_ = [self.dataSource count];
+	for (APIBook *book in self.dataSource) {
+		[[BookData sharedBookData] downloadAndInstallBook:book];
+	}
 }
 
 #pragma mark - Table view data source
@@ -285,69 +315,78 @@
     return cell;
 }
 
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
-
 #pragma mark - BookDataUpdateDelegate Methods
 
-- (void)didBeginCheckingForUpdate
+- (void)willBeginLoadingBooks
 {
 	[backgroundLoadingView_ show];
 }
 
-- (void)willBeginInstallingAPIBook:(APIBook *)book
+- (void)willBeginInstallingBook:(APIBook *)book
 {
-	HUD_ = [MBProgressHUD showHUDAddedTo:self.view.window animated:YES];
-	
-	HUD_.removeFromSuperViewOnHide = YES;
-	HUD_.dimBackground = YES;
-	
-	NSString *labelStr = nil;
-	if ([segmentedControl_ selectedSegmentIndex] == 0) {
-		labelStr = @"Actualizando...";
+	NSLog(@"Installing Book!!!");
+	if (!isDownloadingAll_ && remainingDownloads_ > 0) {
+		[self performSelector:@selector(showHUD) withObject:nil afterDelay:0.2];
 	} else {
-		labelStr = @"Instalando...";
+		if (remainingDownloads_ == [self.dataSource count]) {
+			[self performSelector:@selector(showHUD) withObject:nil afterDelay:0.2];
+		}
 	}
-	HUD_.labelText = labelStr;
 }
 
-- (void)didFinishInstallingAPIBook:(APIBook *)book
+- (void)didFinishInstallingBook:(APIBook *)book
 {
-	// I should put an error in this delegate method
-	[[BookData sharedBookData] loadBookWithName:book.name];
-	[HUD_ hide:YES];
-	HUD_ = nil;
-	
-	NSInteger bookIndex = [book.userData integerValue];
-	NSIndexPath *indexPath = [NSIndexPath indexPathForRow:bookIndex inSection:0];
-	
-	[self.dataSource removeObjectAtIndex:indexPath.row];
-	[self.downloadsTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
-								   withRowAnimation:UITableViewScrollPositionBottom];
-	[self.downloadsTableView reloadData];
-	[self checkEmptyView];
+	if (!isDownloadingAll_) {
+		// I should put an error in this delegate method
+		[[BookData sharedBookData] loadBookWithName:book.name];
+		[HUD_ hide:YES];
+		HUD_ = nil;
+		
+		NSInteger bookIndex = [book.userData integerValue];
+		NSIndexPath *indexPath = [NSIndexPath indexPathForRow:bookIndex inSection:0];
+		
+		[self.dataSource removeObjectAtIndex:indexPath.row];
+		[self.downloadsTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+									   withRowAnimation:UITableViewScrollPositionBottom];
+		[self.downloadsTableView reloadData];
+		[self checkEmptyView];
+	} else {
+		[[BookData sharedBookData] loadBookWithName:book.name];
+		NSLog(@"Count %d for Book %@", remainingDownloads_, book.name);
+		remainingDownloads_--;
+		if (remainingDownloads_ == 0) {
+			NSLog(@"Hud: %@", HUD_);
+			NSLog(@"Hud should hide");
+			[self.dataSource removeAllObjects];
+			[self.downloadsTableView reloadData];
+			[self checkEmptyView];
+			[HUD_ hide:YES];
+			HUD_ = nil;
+			isDownloadingAll_ = NO;
+			remainingDownloads_ = -1;
+		}
+	}
 }
 
-- (void)didLoadBooksForUpdate:(NSArray *)books
+- (void)didLoadBooks:(NSArray *)books
 {
 	[backgroundLoadingView_ hide];
 	[self performSelector:@selector(segmentedControlChangedIndex:) withObject:nil];
 }
 
-- (void)didFailToLoadBooksForUpdate:(NSError *)error
+- (void)didFailToLoadBooks:(NSError *)error
 {
 	[backgroundLoadingView_ hide];
 	[self checkEmptyView];
+}
+
+#pragma mark - UIActionSheet Methods
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	if (buttonIndex == 0) {
+		[self downloadAll];
+	}
 }
 
 @end

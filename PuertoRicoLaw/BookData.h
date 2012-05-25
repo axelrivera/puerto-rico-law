@@ -36,7 +36,6 @@ extern NSString * const BookManagerDidLoadBooksNotification;
 - (NSInteger)indexOfBookInFavorites:(Book *)book;
 - (NSDictionary *)booksDictionary;
 - (void)getBooksFromAPI;
-- (void)updateBooksFromAPI;
 - (void)cancelAllBookRequests;
 - (void)sortBooksAlphabetically;
 - (void)downloadAndInstallBook:(APIBook *)book;
@@ -46,11 +45,10 @@ extern NSString * const BookManagerDidLoadBooksNotification;
 @protocol BookDataUpdateDelegate <NSObject>
 
 @optional
-- (void)didBeginCheckingForUpdate;
-- (void)didLoadBooksForUpdate:(NSArray *)books;
-- (void)didFailToLoadBooksForUpdate:(NSError *)error;
-- (void)willBeginInstallingAPIBook:(APIBook *)book;
-- (void)didFinishInstallingAPIBook:(APIBook *)book;
-- (void)didFinishUpdatingBooks;
+- (void)willBeginLoadingBooks;
+- (void)didLoadBooks:(NSArray *)books;
+- (void)didFailToLoadBooks:(NSError *)error;
+- (void)willBeginInstallingBook:(APIBook *)book;
+- (void)didFinishInstallingBook:(APIBook *)book;
 
 @end

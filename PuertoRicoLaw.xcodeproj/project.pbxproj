@@ -286,7 +286,7 @@
 		1673F17514ACDF1D0065126B /* ContentPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentPreviewViewController.h; sourceTree = "<group>"; };
 		1673F17614ACDF1D0065126B /* ContentPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentPreviewViewController.m; sourceTree = "<group>"; };
 		1673F17714ACDF1D0065126B /* ContentPreviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentPreviewViewController.xib; sourceTree = "<group>"; };
-		16791DEF15602C44002FA16C /* RLBackgroundStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; path = RLBackgroundStatusView.h; sourceTree = "<group>"; };
+		16791DEF15602C44002FA16C /* RLBackgroundStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLBackgroundStatusView.h; sourceTree = "<group>"; };
 		16791DF015602C44002FA16C /* RLBackgroundStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLBackgroundStatusView.m; sourceTree = "<group>"; };
 		16791DF21560A498002FA16C /* NSDateFormatter+Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Book.h"; sourceTree = "<group>"; };
 		16791DF31560A498002FA16C /* NSDateFormatter+Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Book.m"; sourceTree = "<group>"; };

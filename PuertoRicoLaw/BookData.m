@@ -23,6 +23,7 @@ static BookData *sharedBookData_ = nil;
 
 - (void)setupBooksforUpdateAndInstall;
 - (BOOL)installBook:(APIBook *)apiBook withData:(NSData *)fileData;
+- (void)sendRequestToDownloadAndInstallBook:(APIBook *)book;
 
 @end
 
@@ -186,12 +187,12 @@ static BookData *sharedBookData_ = nil;
 - (void)getBooksFromAPI
 {
 	[[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/books" delegate:self];
-	if ([self.delegate respondsToSelector:@selector(didBeginCheckingForUpdate)]) {
-		[self.delegate didBeginCheckingForUpdate];
+	if ([self.delegate respondsToSelector:@selector(willBeginLoadingBooks)]) {
+		[self.delegate willBeginLoadingBooks];
 	}
 }
 
-- (void)updateBooksFromAPI
+- (void)downloadAndInstallBooks:(NSArray *)books
 {
 	
 	NSDictionary *installedBooks = [self booksDictionary];
@@ -221,17 +222,10 @@ static BookData *sharedBookData_ = nil;
 
 - (void)downloadAndInstallBook:(APIBook *)book
 {
-	if ([self.delegate respondsToSelector:@selector(willBeginInstallingAPIBook:)]) {
-		[self.delegate willBeginInstallingAPIBook:book];
+	if ([self.delegate respondsToSelector:@selector(willBeginInstallingBook:)]) {
+		[self.delegate willBeginInstallingBook:book];
 	}
-	
-	NSString *resourcePath = [NSString stringWithFormat:@"/download/%@", [book zipFile]];
-	NSLog(@"Resource Path: %@", resourcePath);
-	RKRequest *request = [[RKObjectManager sharedManager].client requestWithResourcePath:resourcePath];
-	request.method = RKRequestMethodGET;
-	request.userData = book;
-	request.delegate = self;
-	[request send];
+	[self sendRequestToDownloadAndInstallBook:book];
 }
 
 #pragma mark - Private Methods
@@ -320,6 +314,17 @@ static BookData *sharedBookData_ = nil;
 	return NO;
 }
 
+- (void)sendRequestToDownloadAndInstallBook:(APIBook *)book
+{
+	NSString *resourcePath = [NSString stringWithFormat:@"/download/%@", [book zipFile]];
+	NSLog(@"Resource Path: %@", resourcePath);
+	RKRequest *request = [[RKObjectManager sharedManager].client requestWithResourcePath:resourcePath];
+	request.method = RKRequestMethodGET;
+	request.userData = book;
+	request.delegate = self;
+	[request send];
+}
+
 #pragma mark - RestKit Delegate Methods
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
@@ -330,16 +335,16 @@ static BookData *sharedBookData_ = nil;
 	
 	[[NSNotificationCenter defaultCenter] postNotificationName:BookManagerDidLoadBooksNotification object:nil];
 	
-	if ([self.delegate respondsToSelector:@selector(didLoadBooksForUpdate:)]) {
-		[self.delegate didLoadBooksForUpdate:objects];
+	if ([self.delegate respondsToSelector:@selector(didLoadBooks:)]) {
+		[self.delegate didLoadBooks:objects];
 	}
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
 {
 	NSLog(@"%@", error);
-	if ([self.delegate respondsToSelector:@selector(didFailToLoadBooksForUpdate:)]) {
-		[self.delegate didFailToLoadBooksForUpdate:error];
+	if ([self.delegate respondsToSelector:@selector(didFailToLoadBooks:)]) {
+		[self.delegate didFailToLoadBooks:error];
 	}
 }
 
@@ -350,8 +355,8 @@ static BookData *sharedBookData_ = nil;
 		if ([response.contentType isEqualToString:@"application/zip"]) {
 			NSLog(@"Content Type: %@, Content Length: %@", response.contentType, response.contentLength);
 			if ([self installBook:request.userData withData:[response body]]) {
-				if ([self.delegate respondsToSelector:@selector(didFinishInstallingAPIBook:)]) {
-					[self.delegate didFinishInstallingAPIBook:request.userData];
+				if ([self.delegate respondsToSelector:@selector(didFinishInstallingBook:)]) {
+					[self.delegate didFinishInstallingBook:request.userData];
 				}
 			} else {
 				NSLog(@"Something happened");
