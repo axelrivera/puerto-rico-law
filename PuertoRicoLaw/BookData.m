@@ -78,8 +78,7 @@ static BookData *sharedBookData_ = nil;
 		}
 		downloadsSegmentedControlIndex_ = [downloadsIndex integerValue];
 		
-#warning Remove Comment
-		//[self loadBooks];
+		[self loadBooks];
 		booksFromAPI_ = nil;
 		booksAvailableForUpdate_ = [NSMutableArray arrayWithCapacity:0];
 		booksAvailableForInstall_ = [NSMutableArray arrayWithCapacity:0];
@@ -348,18 +347,15 @@ static BookData *sharedBookData_ = nil;
 {
 	NSLog(@"finished request");
 	if ([response isSuccessful]) {
-		//NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
-		//							request.userData, @"apiBook",
-		//							[response body], @"apiData",
-		//							nil];
-		//[updateRequests_ addObject:dictionary];
-		NSLog(@"Content Type: %@, Content Length: %@", response.contentType, response.contentLength);
-		if ([self installBook:request.userData withData:[response body]]) {
-			if ([self.delegate respondsToSelector:@selector(didFinishInstallingAPIBook:)]) {
-				[self.delegate didFinishInstallingAPIBook:request.userData];
+		if ([response.contentType isEqualToString:@"application/zip"]) {
+			NSLog(@"Content Type: %@, Content Length: %@", response.contentType, response.contentLength);
+			if ([self installBook:request.userData withData:[response body]]) {
+				if ([self.delegate respondsToSelector:@selector(didFinishInstallingAPIBook:)]) {
+					[self.delegate didFinishInstallingAPIBook:request.userData];
+				}
+			} else {
+				NSLog(@"Something happened");
 			}
-		} else {
-			NSLog(@"Something happened");
 		}
 	}
 }

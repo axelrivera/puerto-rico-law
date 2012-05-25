@@ -9,7 +9,7 @@
 #import "DownloadsViewController.h"
 #import "Settings.h"
 #import "DownloadTableViewCell.h"
-#import "RLBackgroundLoadingView.h"
+#import "RLBackgroundStatusView.h"
 #import "APIBook.h"
 #import "NSDateFormatter+Book.h"
 #import "MBProgressHUD.h"
@@ -20,12 +20,14 @@
 
 - (NSArray *)toolbarItemsArray;
 - (NSArray *)segmentedControlTitles;
+- (void)checkEmptyView;
 
 @end
 
 @implementation DownloadsViewController
 {
-	RLBackgroundLoadingView *backgroundView_;
+	RLBackgroundStatusView *backgroundLoadingView_;
+	RLBackgroundStatusView *backgroundEmptyView_;
 	UISegmentedControl *segmentedControl_;
 	UIBarButtonItem *downloadButtonItem_;
 	UIBarButtonItem *refreshButtonItem_;
@@ -33,6 +35,7 @@
 }
 
 @synthesize delegate = delegate_;
+@synthesize downloadsTableView = downloadsTableView_;
 @synthesize dataSource = dataSource_;
 
 - (id)init
@@ -44,6 +47,11 @@
 		}
 	}
 	return self;
+}
+
+- (void)dealloc
+{
+	self.downloadsTableView = nil;
 }
 
 - (void)viewDidLoad
@@ -79,11 +87,14 @@
 	self.navigationController.toolbarHidden = NO;
 	[self setToolbarItems:[self toolbarItemsArray]];
 	
-	self.tableView.rowHeight = 64.0;
+	self.downloadsTableView.rowHeight = 64.0;
 	
-	backgroundView_ = [[RLBackgroundLoadingView alloc] init];
-	[backgroundView_ setTitle:@"Loading..." indicator:YES];
-	[self.view addSubview:backgroundView_];
+	backgroundLoadingView_ = [[RLBackgroundStatusView alloc] init];
+	[backgroundLoadingView_ setTitle:@"Loading..." indicator:YES];
+	[self.view addSubview:backgroundLoadingView_];
+	
+	backgroundEmptyView_ = [[RLBackgroundStatusView alloc] init];
+	[self.view addSubview:backgroundEmptyView_];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(loadBooksNotificationAction:)
@@ -98,10 +109,12 @@
     // e.g. self.myOutlet = nil;
 	[[NSNotificationCenter defaultCenter] removeObserver:self name:BookManagerDidLoadBooksNotification object:nil];
 	
-	backgroundView_ = nil;
+	backgroundLoadingView_ = nil;
+	backgroundEmptyView_ = nil;
 	downloadButtonItem_ = nil;
 	refreshButtonItem_ = nil;
 	segmentedControl_ = nil;
+	self.downloadsTableView = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -170,6 +183,15 @@
 	return [NSArray arrayWithObjects:@"Actualizar", @"Tienda", nil];
 }
 
+- (void)checkEmptyView
+{
+	if ([self.dataSource count] > 0) {
+		[backgroundEmptyView_ hide];
+	} else {
+		[backgroundEmptyView_ show];
+	}
+}
+
 #pragma mark - Selector Actions
 
 - (void)segmentedControlChangedIndex:(id)sender
@@ -178,12 +200,18 @@
 	
 	if ([segmentedControl_ selectedSegmentIndex] == 0) {
 		self.title = @"Actualizar Leyes";
+		[backgroundEmptyView_ setTitle:@"No hay actualizaciones disponibles." indicator:NO];
 		self.dataSource = [[BookData sharedBookData] booksAvailableForUpdate];
+		downloadButtonItem_.enabled = YES;
 	} else {
-		self.title = @"Leyes Tienda";
+		self.title = @"Tienda de Leyes";
+		[backgroundEmptyView_ setTitle:@"No hay leyes disponibles para instalar." indicator:NO];
 		self.dataSource = [[BookData sharedBookData] booksAvailableforInstall];
+		downloadButtonItem_.enabled = NO;
 	}
-	[self.tableView reloadData];
+	
+	[self.downloadsTableView reloadData];
+	[self checkEmptyView];
 }
 
 - (void)refreshAction:(id)sender
@@ -274,7 +302,7 @@
 
 - (void)didBeginCheckingForUpdate
 {
-	[backgroundView_ show];
+	[backgroundLoadingView_ show];
 }
 
 - (void)willBeginInstallingAPIBook:(APIBook *)book
@@ -283,7 +311,14 @@
 	
 	HUD_.removeFromSuperViewOnHide = YES;
 	HUD_.dimBackground = YES;
-	HUD_.labelText = @"Instalando...";
+	
+	NSString *labelStr = nil;
+	if ([segmentedControl_ selectedSegmentIndex] == 0) {
+		labelStr = @"Actualizando...";
+	} else {
+		labelStr = @"Instalando...";
+	}
+	HUD_.labelText = labelStr;
 }
 
 - (void)didFinishInstallingAPIBook:(APIBook *)book
@@ -294,22 +329,25 @@
 	HUD_ = nil;
 	
 	NSInteger bookIndex = [book.userData integerValue];
+	NSIndexPath *indexPath = [NSIndexPath indexPathForRow:bookIndex inSection:0];
 	
-	[self.dataSource removeObjectAtIndex:bookIndex];
-	[self.tableView beginUpdates];
-	[self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationTop];
-	[self.tableView endUpdates];
+	[self.dataSource removeObjectAtIndex:indexPath.row];
+	[self.downloadsTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+								   withRowAnimation:UITableViewScrollPositionBottom];
+	[self.downloadsTableView reloadData];
+	[self checkEmptyView];
 }
 
 - (void)didLoadBooksForUpdate:(NSArray *)books
 {
-	[backgroundView_ hide];
+	[backgroundLoadingView_ hide];
 	[self performSelector:@selector(segmentedControlChangedIndex:) withObject:nil];
 }
 
 - (void)didFailToLoadBooksForUpdate:(NSError *)error
 {
-	[backgroundView_ hide];
+	[backgroundLoadingView_ hide];
+	[self checkEmptyView];
 }
 
 @end

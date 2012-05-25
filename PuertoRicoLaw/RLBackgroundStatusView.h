@@ -1,5 +1,5 @@
 //
-//  RLBackgroundLoadingView.h
+//  RLBackgroundStatusView.h
 //  PuertoRicoLaw
 //
 //  Created by Axel Rivera on 5/13/12.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RLBackgroundLoadingView : UIView
+@interface RLBackgroundStatusView : UIView
 
 @property (assign, readonly, nonatomic, getter=isShowing) BOOL showing;
 @property (assign, readwrite, nonatomic, getter=hasIndicator) BOOL indicator;

@@ -1,17 +1,17 @@
 //
-//  RLBackgroundLoadingView.m
+//  RLBackgroundStatusView.m
 //  PuertoRicoLaw
 //
 //  Created by Axel Rivera on 5/13/12.
 //  Copyright (c) 2012 Axel Rivera. All rights reserved.
 //
 
-#import "RLBackgroundLoadingView.h"
+#import "RLBackgroundStatusView.h"
 
 #define kActivityIndicatorWidth 20.0
 #define kActivityIndicatorHeight 20.0
 
-@implementation RLBackgroundLoadingView
+@implementation RLBackgroundStatusView
 
 @synthesize showing = showing_;
 @synthesize indicator = indicator_;
@@ -164,6 +164,8 @@
 		[activityIndicator_ stopAnimating];
 		self.alpha = 0.0;
 	}];
+	
+	[self.superview sendSubviewToBack:self];
 	
 	if ([self.superview isKindOfClass:[UIScrollView class]]) {
 		[(UIScrollView *)self.superview setScrollEnabled:YES];
