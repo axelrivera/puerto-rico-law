@@ -11,9 +11,8 @@
 #import "InformationViewController.h"
 #import "Settings.h"
 #import "EndorsementView.h"
-#import "APIBook.h"
 #import "Book.h"
-#import "MBProgressHUD.h"
+#import "BookData.h"
 
 #define kFontFamilyControllerTag 101
 #define kFontSizeControllerTag 102
@@ -26,12 +25,8 @@
 @end
 
 @implementation SettingsViewController
-{
-	MBProgressHUD *HUD_;
-}
 
 @synthesize delegate = delegate_;
-@synthesize updateButton = updateButton_;
 
 - (id)init
 {
@@ -67,14 +62,6 @@
 																			  style:UIBarButtonItemStyleDone
 																			 target:self
 																			 action:@selector(dismissAction:)];
-	
-	self.updateButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[self.updateButton setTitle:@"Actualizar Contenido" forState:UIControlStateNormal];
-	[self.updateButton setTitle:@"En Proceso..." forState:UIControlStateSelected];
-	[self.updateButton setTitle:@"Actualización No Disponible" forState:UIControlStateDisabled];
-	[self.updateButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
-	self.updateButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-	[self.updateButton addTarget:self action:@selector(checkUpdateAction:) forControlEvents:UIControlEventTouchDown];
 }
 
 - (void)viewDidUnload
@@ -87,12 +74,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-	
-	if (![[RKObjectManager sharedManager].client isNetworkReachable]) {
-		self.updateButton.enabled = NO;
-	}
-	
-	[[BookData sharedBookData] setDelegate:self];
 	[self.tableView reloadData];
 }
 
@@ -152,62 +133,6 @@
 	[[Settings sharedSettings] setLandscapeMode:switchView.isOn];
 }
 
-- (void)checkUpdateAction:(id)sender
-{
-	[[BookData sharedBookData] getBooksFromAPI];
-}
-
-- (void)updateBooksAction:(id)sender
-{
-}
-
-#pragma mark - BookDataUpdate Delegate Methods
-
-- (void)willBeginLoadingBooks
-{
-	NSLog(@"Did start checking for Update");
-	self.updateButton.selected = YES;
-}
-
-- (void)didLoadBooks:(NSArray *)books
-{
-	BOOL updateAvailable = NO;
-	
-	NSDictionary *currentBooks = [[BookData sharedBookData] booksDictionary];
-	
-	for (APIBook *apiBook in books) {
-		Book *book = [currentBooks objectForKey:apiBook.name];
-		if (book && [apiBook.bookVersion integerValue] > [book.bookVersion integerValue]) {
-			updateAvailable = YES;
-			break;
-		}
-	}
-	
-	UIAlertView *alertView = nil;
-	if (updateAvailable) {
-		alertView = [[UIAlertView alloc] initWithTitle:@"Actualización Disponible"
-											   message:@"Hay actualizaciones disponibles. Oprima OK para actualizar el contenido de las leyes instaladas."
-											  delegate:self
-									 cancelButtonTitle:@"Cancelar"
-									 otherButtonTitles:@"OK", nil];
-	} else {
-		alertView = [[UIAlertView alloc] initWithTitle:@"No hay Actualizaciones"
-											   message:@"El contenido de todas las leyes está actualizado."
-											  delegate:nil
-									 cancelButtonTitle:@"OK"
-									 otherButtonTitles:nil];
-	}
-	
-	[alertView show];
-	
-	self.updateButton.selected = NO;
-}
-
-- (void)didFailToLoadBooks:(NSError *)error
-{
-	self.updateButton.selected = NO;
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -218,17 +143,15 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSInteger row = 0;
-    if (section == 0) {
+	if (section == 0) {
 		row = 1;
 	} else if (section == 1) {
-		row = 1;
-	} else if (section == 2) {
 		row = 4;
-	} else if (section == 3) {
+	} else if (section == 2) {
 		row = 2;
-	} else if (section == 4) {
+	} else if (section == 3) {
 		row = 1;
-	} else if (section == 5) {
+	} else if (section == 4) {
 		row = 1;
 	}
 	return row;
@@ -237,29 +160,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	if (indexPath.section == 0) {
-		NSString *CellIdentifier = @"UpgradeCell";
-		
-		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-		if (cell == nil) {
-			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-			UIView *backView = [[UIView alloc] initWithFrame:CGRectZero];
-			backView.backgroundColor = [UIColor clearColor];
-			cell.backgroundView = backView;
-			CGRect contentFrame = cell.contentView.bounds;
-			CGRect buttonFrame = CGRectMake(contentFrame.origin.x,
-											contentFrame.origin.y,
-											contentFrame.size.width - 20.0,
-											44.0);
-			cell.contentView.frame = buttonFrame;
-			self.updateButton.frame = buttonFrame;
-			[cell.contentView addSubview:self.updateButton];
-		}
-		
-		cell.selectionStyle = UITableViewCellSelectionStyleNone;
-		cell.accessoryType = UITableViewCellAccessoryNone;
-		
-		return cell;
-	} else if (indexPath.section == 1) {
 		NSString *CellIdentifier = @"SwitchCell";
 		
 		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -277,7 +177,7 @@
 		[switchView setOn:[Settings sharedSettings].landscapeMode animated:NO];
 		
 		return cell;
-	} else if (indexPath.section == 3) {
+	} else if (indexPath.section == 2) {
 		NSString *CellIdentifier = @"ButtonCell";
 		
 		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -299,7 +199,7 @@
 		cell.textLabel.text = textStr;
 		
 		return cell;
-	} else if (indexPath.section == 5) {
+	} else if (indexPath.section == 4) {
 		NSString *CellIdentifier = @"EndorsementCell";
 		
 		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -334,7 +234,7 @@
 	NSString *textStr = nil;
 	NSString *detailTextStr = nil;
 	
-	if (indexPath.section == 2) {
+	if (indexPath.section == 1) {
 		if (indexPath.row == 0) {
 			textStr = @"Tipo";
 			detailTextStr = [[Settings sharedSettings] fontFamilyString];
@@ -367,7 +267,7 @@
 {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 	
-    if (indexPath.section == 2) {
+    if (indexPath.section == 1) {
 		if (indexPath.row == 3) {
 			ContentPreviewViewController *previewController = [[ContentPreviewViewController alloc] init];
 			previewController.title = @"Ejemplo Contenido";
@@ -393,7 +293,7 @@
 			selectController.title = @"Color del Background";
 		}
 		[self.navigationController pushViewController:selectController animated:YES];
-	} else if (indexPath.section == 3) {
+	} else if (indexPath.section == 2) {
 		NSArray *toRecipients = nil;
 		NSString *subjectStr = nil;
 		NSString *bodyStr = nil;
@@ -408,7 +308,7 @@
 			bodyStr = @"He estado usando el app Leyes Puerto Rico y me gustaría enviar las siguientes sugerencias.<br />";
 		}
 		[self displayComposerSheetTo:toRecipients subject:subjectStr body:bodyStr];
-	} else if (indexPath.section == 4) {
+	} else if (indexPath.section == 3) {
 		InformationViewController *infoController = [[InformationViewController alloc] init];
 		[self.navigationController pushViewController:infoController animated:YES];
 	}
@@ -417,7 +317,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
 	NSString *title = nil;
-	if (section == 2) {
+	if (section == 1) {
 		title = @"Fonts";
 	}
 	return title;
@@ -426,13 +326,11 @@
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 {
 	NSString *title = nil;
-	if (section == 0) {
-		title = @"Oprime para actualizar el contenido con enmiendas o corrección de errores.";
-	} else if (section == 2) {
+	if (section == 1) {
 		title = @"Fonts visibles en el contenido.";
-	} else if (section == 3) {
+	} else if (section == 2) {
 		title = @"Envianos sugerencias sobre mejoras o leyes que te parecen importantes.";
-	} else if (section == 5) {
+	} else if (section == 4) {
 		title = [NSString stringWithFormat:
 				 @"Leyes Puerto Rico %@\n"
 				 @"Copyright © 2012; Rivera Labs",
@@ -444,7 +342,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	CGFloat height = 44.0;
-	if (indexPath.section == 5) {
+	if (indexPath.section == 4) {
 		height = 153.0;
 	}
 	return height;
@@ -503,20 +401,6 @@
 											  cancelButtonTitle:@"OK"
 											  otherButtonTitles: nil];
 		[alert show];
-	}
-}
-
-#pragma mark UIAlertView Delegate Methods
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-	if (buttonIndex == 1) {
-		[self performSelector:@selector(updateBooksAction:) withObject:nil];
-		HUD_ = [MBProgressHUD showHUDAddedTo:self.view.window animated:YES];
-		
-		//HUD_.removeFromSuperViewOnHide = YES;
-		HUD_.dimBackground = YES;
-		HUD_.labelText = @"Actualizando...";
 	}
 }
 

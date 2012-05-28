@@ -10,15 +10,13 @@
 #import "TableSelectViewController.h"
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
-#import "BookData.h"
 
 @protocol SettingsViewControllerDelegate;
 
 @interface SettingsViewController : UITableViewController
-<BookDataUpdateDelegate, TableSelectViewControllerDelegate, MFMailComposeViewControllerDelegate, UIAlertViewDelegate>
+<TableSelectViewControllerDelegate, MFMailComposeViewControllerDelegate>
 
 @property (unsafe_unretained, nonatomic) id <SettingsViewControllerDelegate> delegate;
-@property (strong, nonatomic) UIButton *updateButton;
 
 @end
 
