@@ -13,8 +13,9 @@
 #import "APIBook.h"
 #import "NSDateFormatter+Book.h"
 #import "MBProgressHUD.h"
+#import "RLCustomButton.h"
 
-#define kSegmentedControlItemWidth 130.0
+#define kSegmentedControlItemWidth 150.0
 
 @interface DownloadsViewController (Private)
 
@@ -29,7 +30,6 @@
 {
 	RLBackgroundStatusView *backgroundLoadingView_;
 	RLBackgroundStatusView *backgroundEmptyView_;
-	UIBarButtonItem *downloadButton_;
 	UISegmentedControl *segmentedControl_;
 	MBProgressHUD *HUD_;
 	BOOL isDownloadingAll_;
@@ -72,11 +72,7 @@
 	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
 																						  target:self
 																						  action:@selector(refreshAction:)];
-	
-	downloadButton_ = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize
-																	target:self
-																	action:@selector(downloadAllAction:)];
-	
+		
 	segmentedControl_ = [[UISegmentedControl alloc] initWithItems:[self segmentedControlTitles]];
 	segmentedControl_.segmentedControlStyle = UISegmentedControlStyleBar;
 	for (NSInteger i = 0; i < [segmentedControl_ numberOfSegments]; i++) {
@@ -97,23 +93,15 @@
 	
 	backgroundEmptyView_ = [[RLBackgroundStatusView alloc] init];
 	[self.view addSubview:backgroundEmptyView_];
-	
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(loadBooksNotificationAction:)
-												 name:BookManagerDidLoadBooksNotification
-											   object:nil];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-	[[NSNotificationCenter defaultCenter] removeObserver:self name:BookManagerDidLoadBooksNotification object:nil];
-	
+    // e.g. self.myOutlet = nil;	
 	backgroundLoadingView_ = nil;
 	backgroundEmptyView_ = nil;
-	downloadButton_ = nil;
 	segmentedControl_ = nil;
 	self.downloadsTableView = nil;
 }
@@ -171,15 +159,13 @@
 					  flexibleItem,
 					  segmentedItem,
 					  flexibleItem,
-					  downloadButton_,
-					  flexibleItem,
 					  nil];
 	return array;
 }
 
 - (NSArray *)segmentedControlTitles
 {
-	return [NSArray arrayWithObjects:@"Actualizar", @"Tienda", nil];
+	return [NSArray arrayWithObjects:@"Actualizar", @"Instalar", nil];
 }
 
 - (void)checkEmptyView
@@ -201,12 +187,10 @@
 		self.title = @"Actualizar Leyes";
 		[backgroundEmptyView_ setTitle:@"No hay actualizaciones disponibles." indicator:NO];
 		self.dataSource = [[BookData sharedBookData] booksAvailableForUpdate];
-		downloadButton_.enabled = YES;
 	} else {
-		self.title = @"Tienda de Leyes";
+		self.title = @"Leyes Nuevas";
 		[backgroundEmptyView_ setTitle:@"No hay leyes disponibles para instalar." indicator:NO];
 		self.dataSource = [[BookData sharedBookData] booksAvailableforInstall];
-		downloadButton_.enabled = NO;
 	}
 	
 	[self.downloadsTableView reloadData];
@@ -229,21 +213,6 @@
 	remainingDownloads_ = 1;
 	APIBook *book = [self.dataSource objectAtIndex:[sender tag]];
 	[[BookData sharedBookData] downloadAndInstallBook:book];
-}
-
-- (void)downloadAllAction:(id)sender
-{
-	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Actualizar todas las leyes disponibles."
-															 delegate:self
-													cancelButtonTitle:@"No"
-											   destructiveButtonTitle:nil
-													otherButtonTitles:@"Si", nil];
-	[actionSheet showFromToolbar:self.navigationController.toolbar];
-}
-
-- (void)loadBooksNotificationAction:(NSNotification *)notification
-{
-	NSLog(@"%@", [BookData sharedBookData].booksFromAPI);
 }
 
 - (void)showHUD
@@ -307,10 +276,12 @@
 	cell.textLabel.text = book.title;
 	cell.detailTextLabel.text = dateStr;
 	
+	
+	
 	[cell.downloadButton setTitle:buttonTitle forState:UIControlStateNormal];
 	cell.downloadButton.tag = indexPath.row;
-	[cell.downloadButton addTarget:self action:@selector(downloadBookAction:) forControlEvents:UIControlEventTouchUpInside];
 	cell.downloadLabel.text = @"GRATIS";
+	[cell.downloadButton addTarget:self action:@selector(downloadBookAction:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
 }
@@ -336,6 +307,7 @@
 
 - (void)didFinishInstallingBook:(APIBook *)book
 {
+	NSLog(@"Finished!!!");
 	if (!isDownloadingAll_) {
 		// I should put an error in this delegate method
 		[[BookData sharedBookData] loadBookWithName:book.name];
@@ -359,7 +331,7 @@
 			NSLog(@"Hud should hide");
 			[self.dataSource removeAllObjects];
 			[self.downloadsTableView reloadData];
-			[self checkEmptyView];
+			//[self checkEmptyView];
 			[HUD_ hide:YES];
 			HUD_ = nil;
 			isDownloadingAll_ = NO;
@@ -372,21 +344,13 @@
 {
 	[backgroundLoadingView_ hide];
 	[self performSelector:@selector(segmentedControlChangedIndex:) withObject:nil];
+	[[BookData sharedBookData] downloadBooks:[BookData sharedBookData].booksAvailableForUpdate];
 }
 
 - (void)didFailToLoadBooks:(NSError *)error
 {
 	[backgroundLoadingView_ hide];
 	[self checkEmptyView];
-}
-
-#pragma mark - UIActionSheet Methods
-
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-	if (buttonIndex == 0) {
-		[self downloadAll];
-	}
 }
 
 @end

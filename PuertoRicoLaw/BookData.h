@@ -10,13 +10,14 @@
 #import <RestKit/RestKit.h>
 
 extern NSString * const BookManagerDidLoadBooksNotification;
+extern NSString * const BookManagerDidDownloadBooksNotification;
 
 @protocol BookDataUpdateDelegate;
 
 @class Book;
 @class APIBook;
 
-@interface BookData : NSObject <NSCoding, RKObjectLoaderDelegate, RKRequestDelegate>
+@interface BookData : NSObject <NSCoding, RKObjectLoaderDelegate, RKRequestDelegate, RKRequestQueueDelegate>
 
 @property (unsafe_unretained, nonatomic) id <BookDataUpdateDelegate> delegate;
 @property (unsafe_unretained, nonatomic) Book *currentBook;
@@ -38,6 +39,7 @@ extern NSString * const BookManagerDidLoadBooksNotification;
 - (void)getBooksFromAPI;
 - (void)cancelAllBookRequests;
 - (void)sortBooksAlphabetically;
+- (void)downloadBooks:(NSArray *)books;
 - (void)downloadAndInstallBook:(APIBook *)book;
 
 @end
@@ -48,6 +50,8 @@ extern NSString * const BookManagerDidLoadBooksNotification;
 - (void)willBeginLoadingBooks;
 - (void)didLoadBooks:(NSArray *)books;
 - (void)didFailToLoadBooks:(NSError *)error;
+- (void)willDownloadBooks;
+- (void)didFinishDownloadingBooks;
 - (void)willBeginInstallingBook:(APIBook *)book;
 - (void)didFinishInstallingBook:(APIBook *)book;
 

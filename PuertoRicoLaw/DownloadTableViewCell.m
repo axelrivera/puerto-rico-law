@@ -8,11 +8,13 @@
 
 #import "DownloadTableViewCell.h"
 
+#import "RLCustomButton.h"
+
 @interface DownloadTableViewCell (Private)
 
 @property (strong, readwrite, nonatomic) UILabel *textLabel;
 @property (strong, readwrite, nonatomic) UILabel *detailTextLabel;
-@property (strong, readwrite, nonatomic) UIButton *downloadButton;
+@property (strong, readwrite, nonatomic) RLCustomButton *downloadButton;
 @property (strong, readwrite, nonatomic) UILabel *downloadLabel;
 
 @end
@@ -46,11 +48,13 @@
 		self.detailTextLabel.textAlignment = UITextAlignmentLeft;
 		self.detailTextLabel.lineBreakMode = UILineBreakModeTailTruncation;
 		
-		downloadButton_ = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+		downloadButton_ = [RLCustomButton customButton];
 		[downloadButton_ setTitle:@"My Button" forState:UIControlStateNormal];
-		[downloadButton_ setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
-		downloadButton_.titleLabel.font = [UIFont boldSystemFontOfSize:12.0];
-		downloadButton_.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
+		[downloadButton_ setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+		[downloadButton_ setBackgroundColor:[UIColor colorWithRed:4.0f/255.0f green:159.0f/255.0f blue:19.0f/255.0f alpha:1.0f]];
+		[downloadButton_ setTitleShadowColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+		downloadButton_.titleLabel.shadowOffset = CGSizeMake(0.0f, -1.0f);
+		downloadButton_.titleLabel.font = [UIFont boldSystemFontOfSize:13.0];
 		[self.contentView addSubview:downloadButton_];
 		
 		downloadLabel_ = [[UILabel alloc] initWithFrame:CGRectZero];

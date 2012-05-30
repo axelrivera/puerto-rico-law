@@ -10,3 +10,4 @@ NSString *pathInTemporaryDirectory(NSString *fileName);
 NSString *bookDataPath(void);
 BOOL deletePathInDocumentDirectory(NSString *fileName);
 BOOL deletePathInBooksDirectory(NSString *fileName);
+BOOL deletePathInTemporaryDirectory(NSString *fileName);

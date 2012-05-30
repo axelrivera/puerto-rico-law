@@ -58,11 +58,7 @@
 }
 
 - (void)dealloc
-{
-	[[NSNotificationCenter defaultCenter] removeObserver:self
-													name:kUpdateBooksNotification
-												  object:nil];
-	
+{	
 	self.delegate = nil;
 }
 
@@ -71,11 +67,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(handleBookUpdate:)
-												 name:kUpdateBooksNotification
-											   object:nil];
 	
 	self.clearsSelectionOnViewWillAppear = YES;
 	

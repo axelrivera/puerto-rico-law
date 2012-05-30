@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		16024A3F1559F9B000D84546 /* DownloadsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16024A3D1559F9B000D84546 /* DownloadsViewController.m */; };
 		16024A401559F9B000D84546 /* DownloadsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16024A3E1559F9B000D84546 /* DownloadsViewController.xib */; };
+		161010E81573E08A00168704 /* RLCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 161010E71573E08A00168704 /* RLCustomButton.m */; };
 		1616E2781534A6030029E916 /* CodigoCivil.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1616E2751534A6030029E916 /* CodigoCivil.plist */; };
 		1616E2791534A6030029E916 /* Electoral.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1616E2761534A6030029E916 /* Electoral.plist */; };
 		1616E27A1534A6030029E916 /* Transito.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1616E2771534A6030029E916 /* Transito.plist */; };
@@ -193,6 +194,8 @@
 		16024A3C1559F9B000D84546 /* DownloadsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadsViewController.h; sourceTree = "<group>"; };
 		16024A3D1559F9B000D84546 /* DownloadsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadsViewController.m; sourceTree = "<group>"; };
 		16024A3E1559F9B000D84546 /* DownloadsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadsViewController.xib; sourceTree = "<group>"; };
+		161010E61573E08A00168704 /* RLCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLCustomButton.h; sourceTree = "<group>"; };
+		161010E71573E08A00168704 /* RLCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLCustomButton.m; sourceTree = "<group>"; };
 		1616E2751534A6030029E916 /* CodigoCivil.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CodigoCivil.plist; sourceTree = "<group>"; };
 		1616E2761534A6030029E916 /* Electoral.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Electoral.plist; sourceTree = "<group>"; };
 		1616E2771534A6030029E916 /* Transito.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Transito.plist; sourceTree = "<group>"; };
@@ -448,6 +451,8 @@
 		1646AB2614A3AB2000B27123 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				161010E61573E08A00168704 /* RLCustomButton.h */,
+				161010E71573E08A00168704 /* RLCustomButton.m */,
 				1646AB2714A3AB7100B27123 /* BookTableView.h */,
 				1646AB2814A3AB7100B27123 /* BookTableView.m */,
 				1646AB2A14A3B55800B27123 /* BookTableViewCell.h */,
@@ -972,6 +977,7 @@
 				162B2851155B43D3001451B7 /* DownloadTableViewCell.m in Sources */,
 				16791DF115602C44002FA16C /* RLBackgroundStatusView.m in Sources */,
 				16791DF41560A498002FA16C /* NSDateFormatter+Book.m in Sources */,
+				161010E81573E08A00168704 /* RLCustomButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

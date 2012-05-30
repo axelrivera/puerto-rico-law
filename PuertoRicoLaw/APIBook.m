@@ -7,7 +7,11 @@
 //
 
 #import "APIBook.h"
+
+#import "FileHelpers.h"
 #import "Book.h"
+#import "ZipArchive.h"
+#import "NSData+RKAdditions.h"
 
 @implementation APIBook
 
@@ -18,6 +22,7 @@
 @synthesize bookVersion = bookVersion_;
 @synthesize md5 = md5_;
 @synthesize userData = userData_;
+@synthesize fileData = fileData_;
 
 - (id)init
 {
@@ -36,6 +41,33 @@
 - (NSString *)plistFile
 {
 	return [self.name stringByAppendingPathExtension:@"plist"];
+}
+
+- (BOOL)writePlistFileToTmp
+{
+	if (self.name == nil || self.fileData == nil) {
+		return NO;
+	}
+	
+	if (![[self.fileData MD5] isEqualToString:self.md5]) {
+		NSLog(@"Hash mismatch");
+		return NO;
+	}
+	
+	NSString *tmpZipFilepath = pathInTemporaryDirectory([self zipFile]);
+	BOOL didWriteFile = [self.fileData writeToFile:tmpZipFilepath atomically:YES];
+	if (didWriteFile) {
+		ZipArchive *archive = [[ZipArchive alloc] init];
+		if ([archive UnzipOpenFile:tmpZipFilepath]) {
+			if ([archive UnzipFileTo:pathInTemporaryDirectory(@"") overWrite:YES]) {
+				[archive UnzipCloseFile];
+				deletePathInTemporaryDirectory([self zipFile]);
+				return YES;
+			}
+		}
+	}
+	NSLog(@"WTF!");
+	return NO;
 }
 
 - (NSString *)description

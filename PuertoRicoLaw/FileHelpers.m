@@ -45,3 +45,9 @@ BOOL deletePathInBooksDirectory(NSString *fileName)
 	NSString *filePath = pathInBooksDirectory(fileName);
 	return [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
 }
+
+BOOL deletePathInTemporaryDirectory(NSString *fileName)
+{
+	NSString *filePath = pathInTemporaryDirectory(fileName);
+	return [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
+}

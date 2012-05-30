@@ -19,8 +19,10 @@
 @property (strong, nonatomic) NSNumber *bookVersion;
 @property (strong, nonatomic) NSString *md5;
 @property (strong, nonatomic) id userData;
+@property (strong, nonatomic) NSData *fileData;
 
 - (NSString *)zipFile;
 - (NSString *)plistFile;
+- (BOOL)writePlistFileToTmp;
 
 @end
